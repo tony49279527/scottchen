@@ -47,7 +47,7 @@ export default function ChineseProductsOverview() {
           types: "干湿两用乳胶纸基砂纸、高抗拉强度 J-wt 软布基砂布卷、家具漆面精细抛光砂纸、目数混装套。",
           moq: "10,000 张 / 200 卷起",
           pack: "按目数纸盒套封 / 带金属切割边缘的卷装 dispenser 盒",
-          img: "/images/sanding_tools.png",
+          img: "/images/sanding_sheets.png",
         },
         {
           name: "网格打磨砂网 (无尘干燥墙磨砂网)",
@@ -55,7 +55,7 @@ export default function ChineseProductsOverview() {
           types: "碳化硅双面覆层防堵塞玻璃纤维网格砂网、无尘吸尘墙面砂纸、大卷工业砂网。",
           moq: "5,000 张起",
           pack: "独立纸卡塑封包 / 大包热收缩膜",
-          img: "/images/sanding_tools.png",
+          img: "/images/sanding_screens.png",
         },
         {
           name: "精细打磨细节砂纸棒",
@@ -63,7 +63,7 @@ export default function ChineseProductsOverview() {
           types: "弹簧张力塑料砂棒、超细 1/4\" 与 1/2\" 细节替换砂带卷、首饰精饰砂带棒、模型制作修缝器。",
           moq: "1,000 套起",
           pack: "透明塑料挂袋 / 零售吸卡纸板",
-          img: "/images/sanding_tools.png",
+          img: "/images/detail_sanding.png",
         },
       ],
     },
@@ -76,7 +76,7 @@ export default function ChineseProductsOverview() {
           types: "树脂粘接重载钢性锆刚玉纤维砂碟、角磨机打磨片、焊缝去除磨片、星型中心孔碟。",
           moq: "单目数 2,000 张起",
           pack: "25张热收缩包 / 内置白盒保护 / 重载出口标准大木箱",
-          img: "/images/sanding_tools.png",
+          img: "/images/fiber_discs.png",
         },
         {
           name: "金刚石特殊打磨抛光碟",
@@ -84,7 +84,7 @@ export default function ChineseProductsOverview() {
           types: "电镀金刚石手擦片、石材打磨磨片、大理石与花岗岩抛光耗材、瓷砖与玻璃打磨磨片。",
           moq: "500 片起",
           pack: "配警告说明书的内纸盒装",
-          img: "/images/sanding_tools.png",
+          img: "/images/diamond_polishing.png",
         },
         {
           name: "工作坊砂纸卷架展示套装",
@@ -92,7 +92,7 @@ export default function ChineseProductsOverview() {
           types: "5排砂纸卷工作坊架装组件、金属或木制排盒配锯齿切割刀口、高档五金店展示架架装。",
           moq: "300 套起",
           pack: "配提手的高强度彩盒防震包装",
-          img: "/images/sanding_tools.png",
+          img: "/images/sanding_dispenser.png",
         },
       ],
     },

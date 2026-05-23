@@ -38,7 +38,7 @@ export default function Home() {
       desc: "Silicon carbide and aluminum oxide abrasives. Available in assorted grit packs, rolls, and dispenser boxes for woodwork, metal prep, and paint prep.",
       link: "/products/sanding-grinding-accessories",
       badge: "High Volume",
-      img: "/images/sanding_tools.png",
+      img: "/images/sanding_sheets.png",
       ctaText: "View Grinding & Sanding Technical Specs",
     },
     {
@@ -46,7 +46,7 @@ export default function Home() {
       desc: "Heavy-duty zirconia alumina resin fiber discs and angle grinder attachments. Designed for rapid weld removal, rust removal, and metal prep.",
       link: "/products/sanding-grinding-accessories",
       badge: "Industrial Grade",
-      img: "/images/sanding_tools.png",
+      img: "/images/fiber_discs.png",
       ctaText: "Inspect Heavy Grinding Disc Specs",
     },
     {
@@ -54,7 +54,7 @@ export default function Home() {
       desc: "Mini sanding sticks and matchstick-style detail finishing tools. Crucial for craft, models, jewelry, and tight corner smoothing.",
       link: "/products/sanding-grinding-accessories",
       badge: "Specialty Niche",
-      img: "/images/sanding_tools.png",
+      img: "/images/detail_sanding.png",
       ctaText: "View Mini Sanding Stick Systems",
     },
     {

@@ -157,7 +157,7 @@ export default function ChineseHome() {
             <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
               <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
                 <img
-                  src="/images/sanding_tools.png"
+                  src="/images/sanding_sheets.png"
                   alt="SCOTTCHEN 研磨与砂纸配件"
                   className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
                 />

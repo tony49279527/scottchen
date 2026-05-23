@@ -47,7 +47,7 @@ export default function ProductsOverview() {
           types: "Woodworking sandpaper, automotive wet/dry sheets, furniture refinishing sanding rolls, assorted grits.",
           moq: "10,000 sheets / 200 rolls",
           pack: "Grit-assorted sleeves, cardboard roll dispenser boxes",
-          img: "/images/sanding_tools.png",
+          img: "/images/sanding_sheets.png",
         },
         {
           name: "Sanding Screens & Drywall Abrasives",
@@ -55,7 +55,7 @@ export default function ProductsOverview() {
           types: "Silicon carbide drywall mesh sanding screen, dust-free sanding screens, contractor rolls.",
           moq: "5,000 sheets",
           pack: "Individually wrapped paper covers / shrink wrap",
-          img: "/images/sanding_tools.png",
+          img: "/images/sanding_screens.png",
         },
         {
           name: "Detail Sanding Tools",
@@ -63,7 +63,7 @@ export default function ProductsOverview() {
           types: "Sanding sticks, mini matchstick details, mold polishing blocks, scale craft smoothing rods.",
           moq: "1,000 packs",
           pack: "Clear hanging bags / retail barcode header cards",
-          img: "/images/sanding_tools.png",
+          img: "/images/detail_sanding.png",
         },
       ],
     },
@@ -76,7 +76,7 @@ export default function ProductsOverview() {
           types: "Zirconia alumina fiber discs, angle grinder discs, metal weld removal, fiberglass sanding backings.",
           moq: "2,000 discs/grit",
           pack: "Shrink packs / inner white boxes / bulk export cartons",
-          img: "/images/sanding_tools.png",
+          img: "/images/fiber_discs.png",
         },
         {
           name: "Diamond & Specialty Abrasives",
@@ -84,7 +84,7 @@ export default function ProductsOverview() {
           types: "Diamond polishing sheets, stone grinding discs, marble and granite grinders, tile/porcelain finishers.",
           moq: "500 discs",
           pack: "Inner boxes with warning cards",
-          img: "/images/sanding_tools.png",
+          img: "/images/diamond_polishing.png",
         },
         {
           name: "Sanding Dispenser Kits",
@@ -92,7 +92,7 @@ export default function ProductsOverview() {
           types: "Workshop multi-roll dispenser kits, sandpaper roll refills, assorted grit rolls with racks.",
           moq: "300 racks",
           pack: "Color display box with metal tearing edge",
-          img: "/images/sanding_tools.png",
+          img: "/images/sanding_dispenser.png",
         },
       ],
     },
