@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "OEM Abrasive, Sanding & Polishing Accessory Kits | APEXFINISH",
+  description: "APEXFINISH manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/",
+  },
+};
 
 export default function Home() {
   const categories = [
@@ -44,14 +52,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>OEM Abrasive, Sanding & Polishing Accessory Kits | APEXFINISH</title>
-        <meta
-          name="description"
-          content="APEXFINISH manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/" />
-      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-industry-slate-950 via-industry-slate-900 to-industry-slate-900 py-20 lg:py-28 overflow-hidden border-b border-industry-slate-800">
         <div className="absolute inset-0 opacity-15">
@@ -75,13 +75,13 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded bg-industry-orange px-8 py-4 text-base font-extrabold tracking-wide uppercase text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/25 text-center"
                 >
                   Request OEM Quote
                 </Link>
                 <Link
-                  to="/sample-kit"
+                  href="/sample-kit"
                   className="inline-flex items-center justify-center rounded border border-industry-slate-700 bg-industry-slate-800/50 backdrop-blur-sm px-8 py-4 text-base font-bold uppercase tracking-wide text-white transition-all-custom hover:bg-industry-slate-800 text-center"
                 >
                   Get Sample Kit
@@ -244,7 +244,7 @@ export default function Home() {
               <h2 className="text-3xl font-extrabold text-white mt-3">Abrasive Accessory Kits</h2>
             </div>
             <Link
-              to="/products"
+              href="/products"
               className="text-sm font-bold text-industry-orange hover:text-industry-orange-light mt-4 md:mt-0 flex items-center transition-colors"
             >
               Explore Full Specifications Catalog &rarr;
@@ -271,7 +271,7 @@ export default function Home() {
                   </p>
                 </div>
                 <Link
-                  to={cat.link}
+                  href={cat.link}
                   className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-industry-orange group-hover:underline"
                 >
                   Configure Specifications
@@ -345,7 +345,7 @@ export default function Home() {
 
               <div className="pt-4">
                 <Link
-                  to="/oem-private-label"
+                  href="/oem-private-label"
                   className="inline-flex items-center justify-center rounded bg-industry-slate-800 border border-industry-slate-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-all-custom hover:bg-industry-orange"
                 >
                   Configure OEM Private Label Specifications
@@ -453,7 +453,7 @@ export default function Home() {
 
               <div className="pt-2">
                 <Link
-                  to="/quality-control"
+                  href="/quality-control"
                   className="text-sm font-bold text-industry-orange hover:text-industry-orange-light flex items-center"
                 >
                   Read our full Batch Testing Standards &rarr;

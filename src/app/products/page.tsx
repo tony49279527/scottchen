@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "Surface Finishing Accessories Catalog | APEXFINISH",
+  description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/products",
+  },
+};
 
 export default function ProductsOverview() {
   const categories = [
@@ -79,14 +87,6 @@ export default function ProductsOverview() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Surface Finishing Accessories Catalog | APEXFINISH</title>
-        <meta
-          name="description"
-          content="Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/products" />
-      </Helmet>
       {/* Header section */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-left sm:px-6 lg:px-8">
@@ -95,7 +95,7 @@ export default function ProductsOverview() {
             Surface Finishing Accessories Catalog
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
-            ApexFinish specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard MOQ parameters, and packaging options.
+            ApexFinish specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard B2B MOQ parameters, and packaging options.
           </p>
         </div>
       </section>
@@ -139,13 +139,13 @@ export default function ProductsOverview() {
 
                       <div className="mt-8 flex items-center justify-between border-t border-industry-slate-850 pt-4">
                         <Link
-                          to={item.url}
+                          href={item.url}
                           className="text-xs font-bold text-industry-orange hover:text-industry-orange-light uppercase tracking-wider transition-colors"
                         >
                           View Full Spec Sheet &rarr;
                         </Link>
                         <Link
-                          to="/contact"
+                          href="/contact"
                           className="text-xs font-bold text-white bg-industry-slate-800 hover:bg-industry-slate-700 px-4 py-2 rounded transition-colors"
                         >
                           Request Spec Quote

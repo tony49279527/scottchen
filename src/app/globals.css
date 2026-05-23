@@ -6,7 +6,6 @@
 }
 
 @theme {
-  /* Theme tokens updated for Vite Tailwind v4 integration */
   --color-industry-orange: #ea580c;
   --color-industry-orange-hover: #c2410c;
   --color-industry-orange-light: #f97316;

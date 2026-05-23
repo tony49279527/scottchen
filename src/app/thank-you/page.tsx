@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Thank You for Your Inquiry | APEXFINISH",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function ThankYou() {
   return (
     <div className="flex flex-col min-h-screen bg-industry-slate-900 flex-grow justify-center py-20">
-      <Helmet>
-        <title>Thank You for Your Inquiry | APEXFINISH</title>
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
       <div className="mx-auto max-w-xl px-4 text-center sm:px-6 lg:px-8">
         <div className="glass-panel p-8 rounded-lg border border-industry-slate-800 shadow-2xl space-y-6">
           
@@ -26,7 +30,7 @@ export default function ThankYou() {
             Thank You For Your Request
           </h1>
           
-          <div className="space-y-4 text-sm text-industry-slate-350 leading-relaxed text-left border-t border-industry-slate-850 pt-6">
+          <div className="space-y-4 text-sm text-industry-slate-355 leading-relaxed text-left border-t border-industry-slate-850 pt-6">
             <p>
               We have successfully received your business details and custom specifications.
             </p>
@@ -48,13 +52,13 @@ export default function ThankYou() {
 
           <div className="pt-6 border-t border-industry-slate-850 flex flex-col sm:flex-row gap-3">
             <Link
-              to="/"
+              href="/"
               className="flex-1 inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
             >
               Return to Catalog Home
             </Link>
             <Link
-              to="/products"
+              href="/products"
               className="flex-1 inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-slate-750"
             >
               Browse Specifications

@@ -1,17 +1,17 @@
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
 import RFQForm from "@/components/RFQForm";
+
+export const metadata: Metadata = {
+  title: "Request an OEM / Wholesale Quote | APEXFINISH",
+  description: "Contact APEXFINISH to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/contact",
+  },
+};
 
 export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Request an OEM / Wholesale Quote | APEXFINISH</title>
-        <meta
-          name="description"
-          content="Contact APEXFINISH to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/contact" />
-      </Helmet>
       {/* Page Header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">

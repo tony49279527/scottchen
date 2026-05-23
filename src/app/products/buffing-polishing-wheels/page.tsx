@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "OEM Buffing & Polishing Wheels | APEXFINISH",
+  description: "Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/products/buffing-polishing-wheels",
+  },
+};
 
 export default function BuffingPolishingWheels() {
   const subtypes = [
@@ -33,14 +41,6 @@ export default function BuffingPolishingWheels() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>OEM Buffing & Polishing Wheels | APEXFINISH</title>
-        <meta
-          name="description"
-          content="Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/products/buffing-polishing-wheels" />
-      </Helmet>
       {/* Page Header (Top CTA area) */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -56,13 +56,13 @@ export default function BuffingPolishingWheels() {
           
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               Request Buffing Wheel Quote
             </Link>
             <Link
-              to="/sample-kit"
+              href="/sample-kit"
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               Get Sample Wheel Kit
@@ -114,7 +114,7 @@ export default function BuffingPolishingWheels() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    to="/oem-private-label"
+                    href="/oem-private-label"
                     className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                   >
                     Configure Custom Package Options
@@ -211,7 +211,7 @@ export default function BuffingPolishingWheels() {
 
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link
-                    to="/sample-kit"
+                    href="/sample-kit"
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
                     Request Physical Sample Wheel
@@ -219,7 +219,7 @@ export default function BuffingPolishingWheels() {
                 </div>
               </div>
 
-              {/* Application Materials */}
+              {/* Substrate Compatibility */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
                   Substrate Compatibility

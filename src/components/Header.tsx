@@ -1,10 +1,12 @@
+"use client";
+
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const pathname = location.pathname;
+  const pathname = usePathname() || "";
 
   const navItems = [
     { name: "Products", href: "/products" },
@@ -22,7 +24,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <svg
                 className="h-8 w-8 text-industry-orange"
                 fill="none"
@@ -43,11 +45,11 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8" aria-label="Main navigation">
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                href={item.href}
                 className={`text-sm font-medium tracking-wide transition-colors duration-200 hover:text-white ${
                   isActive(item.href) ? "text-industry-orange" : "text-industry-slate-400"
                 }`}
@@ -60,7 +62,7 @@ export default function Header() {
           {/* CTA & Contact info */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center justify-center rounded bg-industry-orange px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
             >
               Request Quote
@@ -96,7 +98,7 @@ export default function Header() {
           {navItems.map((item) => (
             <Link
               key={item.name}
-              to={item.href}
+              href={item.href}
               onClick={() => setMobileMenuOpen(false)}
               className={`block rounded px-3 py-2 text-base font-medium transition-colors hover:bg-industry-slate-800 hover:text-white ${
                 isActive(item.href) ? "text-industry-orange bg-industry-slate-900" : "text-industry-slate-400"
@@ -107,7 +109,7 @@ export default function Header() {
           ))}
           <div className="pt-4 border-t border-industry-slate-850">
             <Link
-              to="/contact"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center rounded bg-industry-orange py-3 text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
             >

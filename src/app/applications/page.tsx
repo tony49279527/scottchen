@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "Surface Finishing Application Scenarios | APEXFINISH",
+  description: "Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/applications",
+  },
+};
 
 export default function ApplicationsOverview() {
   const applications = [
@@ -56,14 +64,6 @@ export default function ApplicationsOverview() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Surface Finishing Application Scenarios | APEXFINISH</title>
-        <meta
-          name="description"
-          content="Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/applications" />
-      </Helmet>
       {/* Page header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-left">
@@ -101,10 +101,10 @@ export default function ApplicationsOverview() {
                     {app.name}
                   </h3>
                   
-                  <p className="text-sm text-industry-slate-300 leading-relaxed pt-2">
+                  <div className="text-sm text-industry-slate-300 leading-relaxed pt-2">
                     <strong className="text-white text-xs block uppercase mb-1">Process Challenge:</strong>
                     {app.challenges}
-                  </p>
+                  </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-industry-slate-850 pt-4 text-xs font-mono">
                     <div>
@@ -120,13 +120,13 @@ export default function ApplicationsOverview() {
 
                 <div className="mt-8 flex items-center justify-between border-t border-industry-slate-850 pt-4">
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="text-xs font-bold text-industry-orange hover:text-industry-orange-light uppercase tracking-wider transition-colors"
                   >
                     Request Application Quote &rarr;
                   </Link>
                   <Link
-                    to="/sample-kit"
+                    href="/sample-kit"
                     className="text-xs font-bold text-white bg-industry-slate-850 hover:bg-industry-slate-800 px-4 py-2 rounded transition-colors"
                   >
                     Request Sample Kit

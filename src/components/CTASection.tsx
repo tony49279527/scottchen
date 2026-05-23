@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface CTASectionProps {
   title?: string;
@@ -20,13 +20,13 @@ export default function CTASection({
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Link
-            to="/contact"
+            href="/contact"
             className="w-full sm:w-auto inline-flex items-center justify-center rounded bg-industry-orange px-8 py-4 text-base font-bold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
           >
             Request OEM Quote
           </Link>
           <Link
-            to="/sample-kit"
+            href="/sample-kit"
             className="w-full sm:w-auto inline-flex items-center justify-center rounded border-2 border-industry-slate-700 bg-transparent px-8 py-3.5 text-base font-bold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-slate-800"
           >
             Get Sample Kit

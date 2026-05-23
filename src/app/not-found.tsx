@@ -1,13 +1,8 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
     <div className="flex flex-col min-h-screen bg-industry-slate-900 flex-grow justify-center py-20">
-      <Helmet>
-        <title>Page Not Found | APEXFINISH</title>
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
       <div className="mx-auto max-w-xl px-4 text-center sm:px-6 lg:px-8">
         <div className="glass-panel p-8 rounded-lg border border-industry-slate-800 shadow-2xl space-y-6">
           
@@ -37,13 +32,13 @@ export default function NotFound() {
 
           <div className="pt-6 border-t border-industry-slate-850 flex flex-col sm:flex-row gap-3">
             <Link
-              to="/"
+              href="/"
               className="flex-1 inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
             >
               Catalog Home
             </Link>
             <Link
-              to="/products"
+              href="/products"
               className="flex-1 inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-slate-750"
             >
               Browse Products

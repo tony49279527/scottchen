@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "OEM & Private Label Surface Finishing Kits | APEXFINISH",
+  description: "Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/oem-private-label",
+  },
+};
 
 export default function OEMPrivateLabel() {
   const oemCapabilities = [
@@ -45,14 +53,6 @@ export default function OEMPrivateLabel() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>OEM & Private Label Surface Finishing Kits | APEXFINISH</title>
-        <meta
-          name="description"
-          content="Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/oem-private-label" />
-      </Helmet>
       {/* Header section (Top CTA) */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -68,13 +68,13 @@ export default function OEMPrivateLabel() {
           
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               Discuss Custom Packaging
             </Link>
             <Link
-              to="/sample-kit"
+              href="/sample-kit"
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               Order Sample Pack
@@ -186,7 +186,7 @@ export default function OEMPrivateLabel() {
                   Request a quote and check the custom package selection field to receive CAD die-lines for your box designs.
                 </p>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                 >
                   Send OEM Requirements

@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import type { Metadata } from "next";
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "Manufacturing Quality Control Standards | APEXFINISH",
+  description: "Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation.",
+  alternates: {
+    canonical: "https://www.apexfinishkits.com/quality-control",
+  },
+};
 
 export default function QualityControl() {
   const qcPoints = [
@@ -40,14 +48,6 @@ export default function QualityControl() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Manufacturing Quality Control Standards | APEXFINISH</title>
-        <meta
-          name="description"
-          content="Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation."
-        />
-        <link rel="canonical" href="https://www.apexfinishkits.com/quality-control" />
-      </Helmet>
       {/* Page Header (Top CTA) */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -63,13 +63,13 @@ export default function QualityControl() {
           
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               Request Specs Audit
             </Link>
             <Link
-              to="/sample-kit"
+              href="/sample-kit"
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               Order Quality Samples
@@ -93,9 +93,9 @@ export default function QualityControl() {
                 {qcPoints.map((point) => (
                   <div key={point.title} className="glass-panel p-6 rounded-lg space-y-3">
                     <h3 className="text-base font-bold text-industry-orange">{point.title}</h3>
-                    <p className="text-sm text-industry-slate-350 leading-relaxed">
+                    <div className="text-sm text-industry-slate-350 leading-relaxed">
                       {point.desc}
-                    </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -150,7 +150,7 @@ export default function QualityControl() {
                   Request a physical sample kit to run stitch, density, and grit checks in your local testing facility.
                 </p>
                 <Link
-                  to="/sample-kit"
+                  href="/sample-kit"
                   className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                 >
                   Configure Test Sample
