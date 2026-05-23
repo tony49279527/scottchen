@@ -45,7 +45,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href={isZh ? "/zh" : "/"} className="flex items-center space-x-2">
               <svg
                 className="h-8 w-8 text-industry-orange"
                 fill="none"

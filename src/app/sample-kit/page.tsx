@@ -181,7 +181,7 @@ export default function SampleKit() {
               },
               {
                 q: "Can we request branded box and barcode label mockups alongside the physical tools?",
-                a: "Yes. Sourcing buyers can upload their logo and barcode artwork. We will print high-resolution sample packaging mockups, apply the FNSKU/UPC barcodes, and ship them so you can verify print contrast and scan readability before production."
+                a: "Yes. After you submit the sample request, our sales team can collect your logo files and barcode artwork by email, then prepare branded packaging mockups and barcode-applied samples for pre-production review."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -243,7 +243,7 @@ export default function SampleKit() {
                 "name": "Can we request branded box and barcode label mockups alongside the physical tools?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Sourcing buyers can upload their logo and barcode artwork. We will print high-resolution sample packaging mockups, apply the FNSKU/UPC barcodes, and ship them so you can verify print contrast and scan readability before production."
+                  "text": "Yes. After you submit the sample request, our sales team can collect your logo files and barcode artwork by email, then prepare branded packaging mockups and barcode-applied samples for pre-production review."
                 }
               }
             ]

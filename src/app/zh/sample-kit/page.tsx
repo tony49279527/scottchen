@@ -181,7 +181,7 @@ export default function ChineseSampleKit() {
               },
               {
                 q: "在发运磨料耗材的同时，我们能够索取彩盒印刷数码样和条码贴纸的扫码样么？",
-                a: "可以。采购经理可以把您的矢量 logo 标和 FNSKU/UPC 条码稿件上传。我们会生产带有您完整图案的高分辨率包装盒样并贴附条码，直接连同布轮磨盘一并发运，便于您在大货生产前在您本国仓储系统中实测扫码。"
+                a: "可以。您提交样品申请后，我们的商务团队会通过邮件向您索取矢量 logo 和 FNSKU/UPC 条码稿件，再安排制作带条码的包装样和物理样品，供您在量产前核验外观和扫码效果。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -240,10 +240,10 @@ export default function ChineseSampleKit() {
               },
               {
                 "@type": "Question",
-                "name": "在发运磨料耗材的同时，我们能够索取彩盒印刷数码样 and 条码贴纸的扫码样么？",
+                "name": "在发运磨料耗材的同时，我们能够索取彩盒印刷数码样和条码贴纸的扫码样么？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "可以。采购经理可以把您的矢量 logo 标和 FNSKU/UPC 条码稿件上传。我们会生产带有您完整图案的高分辨率包装盒样并贴附条码，直接连同布轮磨盘一并发运，便于您在大货生产前在您本国仓储系统中实测扫码。"
+                  "text": "可以。您提交样品申请后，我们的商务团队会通过邮件向您索取矢量 logo 和 FNSKU/UPC 条码稿件，再安排制作带条码的包装样和物理样品，供您在量产前核验外观和扫码效果。"
                 }
               }
             ]

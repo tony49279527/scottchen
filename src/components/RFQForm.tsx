@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import emailjs from "@emailjs/browser";
+import { buildQuotePayload, submitInquiry } from "@/lib/inquiryClient";
 
 interface FormFields {
   fullName: string;
@@ -24,6 +24,7 @@ export default function RFQForm() {
   const pathname = usePathname() || "";
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const [fields, setFields] = useState<FormFields>({
     fullName: "",
@@ -84,6 +85,7 @@ export default function RFQForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
 
     // Trigger validation for all fields
     const newErrors: Partial<Record<keyof FormFields, string>> = {};
@@ -122,35 +124,40 @@ export default function RFQForm() {
 
     setIsSubmitting(true);
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || process.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || process.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || process.env.VITE_EMAILJS_PUBLIC_KEY;
+    try {
+      const result = await submitInquiry(
+        buildQuotePayload(pathname, {
+          fullName: fields.fullName,
+          companyName: fields.companyName,
+          email: fields.email,
+          country: fields.country,
+          buyerType: fields.buyerType,
+          productCategory: fields.productCategory,
+          quantity: fields.quantity,
+          customPackaging: fields.customPackaging,
+          targetMarket: fields.targetMarket,
+          message: fields.message,
+        })
+      );
 
-    if (serviceId && templateId && publicKey) {
-      try {
-        await emailjs.send(
-          serviceId,
-          templateId,
-          {
-            from_name: fields.fullName,
-            company_name: fields.companyName,
-            from_email: fields.email,
-            country: fields.country,
-            buyer_type: fields.buyerType,
-            product_category: fields.productCategory,
-            quantity: fields.quantity,
-            custom_packaging: fields.customPackaging,
-            target_market: fields.targetMarket || "Not specified",
-            message: fields.message || "No message provided",
-          },
-          publicKey
+      if (!result.ok) {
+        setSubmitError(
+          isZh
+            ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
+            : "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly."
         );
-      } catch (error) {
-        console.error("EmailJS Error:", error);
+        setIsSubmitting(false);
+        return;
       }
-    } else {
-      console.warn("EmailJS credentials missing. Form submission simulated.");
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+    } catch (error) {
+      console.error("Inquiry submission failed:", error);
+      setSubmitError(
+        isZh
+          ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
+          : "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly."
+      );
+      setIsSubmitting(false);
+      return;
     }
 
     setIsSubmitting(false);
@@ -512,6 +519,14 @@ export default function RFQForm() {
 
       {/* Submit Button */}
       <div className="pt-4">
+        {submitError ? (
+          <div
+            className="mb-4 rounded border border-red-500/40 bg-red-950/40 px-4 py-3 text-sm text-red-200"
+            role="alert"
+          >
+            {submitError}
+          </div>
+        ) : null}
         <button
           type="submit"
           disabled={isSubmitting}

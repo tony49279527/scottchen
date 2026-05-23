@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## SCOTTCHEN B2B Website
 
-## Getting Started
+This repository contains the bilingual SCOTTCHEN B2B lead-generation website built with the Next.js App Router.
 
-First, run the development server:
+### Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+The site now includes a server-side inquiry endpoint at `/api/inquiry`, so deployment must run on a Node-capable target. The project is configured with `output: "standalone"`.
 
-To learn more about Next.js, take a look at the following resources:
+### Inquiry delivery
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.example` to `.env` and configure one delivery path:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Preferred: `INQUIRY_WEBHOOK_URL`
+- Fallback: `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, `INQUIRY_TO_EMAIL`
 
-## Deploy on Vercel
+If neither path is configured, the quote and sample forms will show a visible delivery error instead of faking a successful submission.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Current lead-flow behavior
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Quote and sample forms submit to a server route instead of sending directly from the browser.
+- UTM parameters, referrer, locale, and landing page are attached to each submission.
+- Chinese pages keep users inside the Chinese conversion path, including `/zh/thank-you`.
+- Shared CTA blocks now route to locale-matched contact and sample pages.

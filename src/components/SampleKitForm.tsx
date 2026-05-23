@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import emailjs from "@emailjs/browser";
+import { buildSamplePayload, submitInquiry } from "@/lib/inquiryClient";
 
 interface SampleFormFields {
   fullName: string;
@@ -25,6 +25,7 @@ export default function SampleKitForm() {
   const pathname = usePathname() || "";
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const [fields, setFields] = useState<SampleFormFields>({
     fullName: "",
@@ -60,7 +61,7 @@ export default function SampleKitForm() {
       }
       return "";
     }
-    if (!value && name !== "message" && name !== "website" && name !== "application" && name !== "targetMaterial") {
+    if (!value && name !== "message" && name !== "application" && name !== "targetMaterial") {
       return isZh ? "此项为必填项" : "This field is required";
     }
     if (name === "email" && typeof value === "string" && value) {
@@ -108,6 +109,7 @@ export default function SampleKitForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
 
     // Trigger validation
     const newErrors: Partial<Record<keyof SampleFormFields, string>> = {};
@@ -147,36 +149,41 @@ export default function SampleKitForm() {
 
     setIsSubmitting(true);
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || process.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || process.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || process.env.VITE_EMAILJS_PUBLIC_KEY;
+    try {
+      const result = await submitInquiry(
+        buildSamplePayload(pathname, {
+          fullName: fields.fullName,
+          companyName: fields.companyName,
+          email: fields.email,
+          country: fields.country,
+          website: fields.website,
+          categories: fields.categories,
+          application: fields.application,
+          targetMaterial: fields.targetMaterial,
+          estimatedQuantity: fields.estimatedQuantity,
+          oemNeeded: fields.oemNeeded,
+          message: fields.message,
+        })
+      );
 
-    if (serviceId && templateId && publicKey) {
-      try {
-        await emailjs.send(
-          serviceId,
-          templateId,
-          {
-            from_name: fields.fullName,
-            company_name: fields.companyName,
-            from_email: fields.email,
-            country: fields.country,
-            website: fields.website || "Not specified",
-            categories: fields.categories.join(", "),
-            application: fields.application || "Not specified",
-            target_material: fields.targetMaterial || "Not specified",
-            estimated_quantity: fields.estimatedQuantity,
-            oem_needed: fields.oemNeeded,
-            message: fields.message || "No message provided",
-          },
-          publicKey
+      if (!result.ok) {
+        setSubmitError(
+          isZh
+            ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
+            : "We could not deliver your sample request just now. Please try again or email sales@scottchentools.com directly."
         );
-      } catch (error) {
-        console.error("EmailJS Error:", error);
+        setIsSubmitting(false);
+        return;
       }
-    } else {
-      console.warn("EmailJS credentials missing. Form submission simulated.");
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+    } catch (error) {
+      console.error("Sample request submission failed:", error);
+      setSubmitError(
+        isZh
+          ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
+          : "We could not deliver your sample request just now. Please try again or email sales@scottchentools.com directly."
+      );
+      setIsSubmitting(false);
+      return;
     }
 
     setIsSubmitting(false);
@@ -309,17 +316,22 @@ export default function SampleKitForm() {
       {/* Website */}
       <div>
         <label htmlFor="website" className="block text-sm font-semibold text-industry-slate-300">
-          {isZh ? "公司官网 / 线上店铺 URL" : "Company Website / Store URL"}
+          {isZh ? "公司官网 / 线上店铺 URL" : "Company Website / Store URL"} <span className="text-industry-orange">*</span>
         </label>
         <input
           type="url"
           id="website"
           name="website"
           placeholder="e.g. www.mytoolbrand.com"
+          required
           value={fields.website}
           onChange={handleChange}
+          onBlur={handleBlur}
           className="mt-2 block w-full rounded border border-industry-slate-700 px-4 py-3 bg-industry-slate-950 text-white font-medium text-base min-h-[48px] focus:border-industry-orange focus:ring-1 focus:ring-industry-orange outline-none"
         />
+        {touched.website && errors.website && (
+          <p className="mt-1 text-xs text-red-500 font-medium" role="alert">{errors.website}</p>
+        )}
       </div>
 
       {/* Target Products Categories */}
@@ -549,6 +561,14 @@ export default function SampleKitForm() {
 
       {/* Submit Button */}
       <div className="pt-4">
+        {submitError ? (
+          <div
+            className="mb-4 rounded border border-red-500/40 bg-red-950/40 px-4 py-3 text-sm text-red-200"
+            role="alert"
+          >
+            {submitError}
+          </div>
+        ) : null}
         <button
           type="submit"
           disabled={isSubmitting}

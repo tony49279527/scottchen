@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import LangSync from "@/components/LangSync";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -91,6 +92,7 @@ export default function RootLayout({
       </head>
       <body className="h-full antialiased bg-industry-slate-900 text-industry-slate-200 font-sans">
         <div className="min-h-full flex flex-col">
+          <LangSync />
           <Header />
           <main className="flex-grow flex flex-col">{children}</main>
           <Footer />
