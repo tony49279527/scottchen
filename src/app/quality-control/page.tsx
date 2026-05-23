@@ -151,6 +151,37 @@ export default function QualityControl() {
                   </div>
                 ))}
               </div>
+
+              {/* Technical Whitepaper Section */}
+              <div className="glass-panel p-8 rounded-lg space-y-6 bg-industry-slate-950/40 border border-industry-slate-800">
+                <span className="text-xs font-bold font-mono tracking-widest text-industry-orange uppercase">TECHNICAL WHITE PAPER</span>
+                <h3 className="text-xl font-extrabold text-white">
+                  Industrial Code: Dynamic Balancing Calibration & Safety Tolerance for High-Speed Abrasives
+                </h3>
+                <p className="text-sm text-industry-slate-300 leading-relaxed">
+                  In high-performance industrial surfacing applications, abrasive accessories operate at high rotational velocities, generating severe centrifugal stress. Dynamic balancing is critical to eliminate operational vibrations and protect spindles under ISO 1940-1 Standards.
+                </p>
+                <div className="space-y-4 text-xs text-industry-slate-400 font-mono">
+                  <div className="border-l-2 border-industry-orange pl-3 space-y-1">
+                    <strong className="text-white">1. ISO 1940-1 Balancing Grade (Target: G6.3 / G2.5)</strong>
+                    <p className="leading-relaxed">
+                      All zirconia fiber discs and concentrated center-plate cotton wheels undergo rigid dynamic balancing testing. Our testing rig calibrates residual unbalance under a target limits grade of G6.3 to prevent spindle bearings from fatigue-induced breakdown.
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-industry-orange pl-3 space-y-1">
+                    <strong className="text-white">2. Centripetal Force Coefficients & Safety Factor</strong>
+                    <p className="leading-relaxed">
+                      Calculated under centripetal stress limit formulas (sigma = rho * omega^2 * r^2), the adhesive binder and core stitching threads must handle up to 1.5 times the maximum rated RPM without fracturing, keeping grain displacement rates below 0.02%.
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-industry-orange pl-3 space-y-1">
+                    <strong className="text-white">3. Concentricity and Sizing Tolerance Parameters</strong>
+                    <p className="leading-relaxed">
+                      Our manufacturing limits keep the inner bore diameters at a &plusmn;0.05 mm concentricity tolerance to ensure precise seating on standard tool arbor shafts. This eliminates radial runout, preventing operational chattering.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Information Column */}

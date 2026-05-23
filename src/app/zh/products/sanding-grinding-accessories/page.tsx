@@ -262,6 +262,60 @@ export default function ChineseSandingGrindingAccessories() {
                   </table>
                 </div>
               </div>
+
+              {/* Tensile Strength & Fracturing Specifications Table */}
+              <div id="tensile-table" className="space-y-4 pt-6">
+                <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
+                  砂带与磨片背基抗拉强度与磨粒附着力规格表
+                </h2>
+                <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
+                  针对工业磨削大负荷作业环境，背基基材必须承受巨大的剪切与机械拉力负荷，避免磨料崩裂及脱砂失效：
+                </p>
+                
+                <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
+                  <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
+                    <thead className="bg-industry-slate-900 text-industry-slate-400">
+                      <tr>
+                        <th className="px-4 py-3 font-semibold uppercase">磨料背基类型</th>
+                        <th className="px-4 py-3 font-semibold uppercase">基础材料规格</th>
+                        <th className="px-4 py-3 font-semibold uppercase">纵向抗拉强度 (N/50mm)</th>
+                        <th className="px-4 py-3 font-semibold uppercase">横向抗拉强度 (N/50mm)</th>
+                        <th className="px-4 py-3 font-semibold uppercase">背胶强度与颗粒受载极限</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-industry-slate-850 text-white">
+                      <tr>
+                        <td className="px-4 py-3 font-bold">硫化钢纸背基</td>
+                        <td className="px-4 py-3">0.8 毫米高密度硫化纯棉纤维板</td>
+                        <td className="px-4 py-3">&ge; 1,050 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 750 N / 50mm</td>
+                        <td className="px-4 py-3">双层酚醛树脂粘结 / 锆刚玉颗粒受压微崩自锐点 &ge; 120 N</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">乳胶防水 C-wt 纸张</td>
+                        <td className="px-4 py-3">140 g/m&sup2; 特级浸渍乳胶防水纸基</td>
+                        <td className="px-4 py-3">&ge; 350 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 220 N / 50mm</td>
+                        <td className="px-4 py-3">超韧双覆背胶 / 碳化硅微崩针锐自洁特性</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3 font-bold">柔性 J-wt 棉布基</td>
+                        <td className="px-4 py-3">180 g/m&sup2; 高抗挠聚酯棉布混纺</td>
+                        <td className="px-4 py-3">&ge; 820 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 480 N / 50mm</td>
+                        <td className="px-4 py-3">混合柔性动物胶加高韧树脂粘结 / 棕刚玉颗粒渐进式损耗控制</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">玻璃纤维网格</td>
+                        <td className="px-4 py-3">110 g/m&sup2; 无碱玻璃纤维镂空扣织网</td>
+                        <td className="px-4 py-3">&ge; 450 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 400 N / 50mm</td>
+                        <td className="px-4 py-3">酚醛树脂耐高温涂覆 / 碳化硅磨粒高附着保持率 &ge; 98%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             {/* Right Sourcing Side Panel */}

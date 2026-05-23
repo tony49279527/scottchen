@@ -262,6 +262,60 @@ export default function SandingGrindingAccessories() {
                   </table>
                 </div>
               </div>
+
+              {/* Tensile Strength & Fracturing Specifications Table */}
+              <div id="tensile-table" className="space-y-4 pt-6">
+                <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
+                  Abrasive Backing Tensile Strength & Grain Adhesion Specifications
+                </h2>
+                <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
+                  B2B surfacing operations require backing materials that withstand massive mechanical tension and shear stress without premature grain shedding or fracturing:
+                </p>
+                
+                <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
+                  <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
+                    <thead className="bg-industry-slate-900 text-industry-slate-400">
+                      <tr>
+                        <th className="px-4 py-3 font-semibold uppercase">Abrasive Backing Type</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Base Material Weight</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Longitudinal Tensile (N/50mm)</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Transverse Tensile (N/50mm)</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Bond & Grain Fracture Threshold</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-industry-slate-850 text-white">
+                      <tr>
+                        <td className="px-4 py-3 font-bold">Vulcanized Fiber Backing</td>
+                        <td className="px-4 py-3">0.8 mm High-Density Vulcanized Cotton</td>
+                        <td className="px-4 py-3">&ge; 1,050 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 750 N / 50mm</td>
+                        <td className="px-4 py-3">Phenolic resin bond / Zirconia micro-fracturing &ge; 120 N load</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">Latex C-weight Paper</td>
+                        <td className="px-4 py-3">140 g/m&sup2; Premium Latex-Impregnated</td>
+                        <td className="px-4 py-3">&ge; 350 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 220 N / 50mm</td>
+                        <td className="px-4 py-3">Double-coat resin / Silicon carbide self-sharpening fracture</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3 font-bold">Cotton J-weight Cloth</td>
+                        <td className="px-4 py-3">180 g/m&sup2; High-Flex Poly-Cotton Blend</td>
+                        <td className="px-4 py-3">&ge; 820 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 480 N / 50mm</td>
+                        <td className="px-4 py-3">Glue/resin hybrid bond / Aluminum oxide progressive attrition</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">Fiberglass Mesh</td>
+                        <td className="px-4 py-3">110 g/m&sup2; E-glass Open Interlock Mesh</td>
+                        <td className="px-4 py-3">&ge; 450 N / 50mm</td>
+                        <td className="px-4 py-3">&ge; 400 N / 50mm</td>
+                        <td className="px-4 py-3">Phenolic binder coating / SiC grain retention index &ge; 98%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             {/* Right Sourcing Side Panel */}

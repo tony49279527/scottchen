@@ -231,6 +231,60 @@ export default function ChineseBuffingPolishingWheels() {
                   </table>
                 </div>
               </div>
+
+              {/* Material Density & Thread Specifications Table */}
+              <div id="density-table" className="space-y-4 pt-6">
+                <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
+                  棉纤维经纬密度与缝线针距技术参数表
+                </h2>
+                <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
+                  针对不同金属的打磨与精抛表面精饰要求，SCOTTCHEN 精细调配经纬纱支线数与表面缝合间距：
+                </p>
+                
+                <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
+                  <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
+                    <thead className="bg-industry-slate-900 text-industry-slate-400">
+                      <tr>
+                        <th className="px-4 py-3 font-semibold uppercase">纯棉材质等级</th>
+                        <th className="px-4 py-3 font-semibold uppercase">经纬纱支密度</th>
+                        <th className="px-4 py-3 font-semibold uppercase">车缝线规格</th>
+                        <th className="px-4 py-3 font-semibold uppercase">同心缝线间距</th>
+                        <th className="px-4 py-3 font-semibold uppercase">目标加工应用</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-industry-slate-850 text-white">
+                      <tr>
+                        <td className="px-4 py-3 font-bold">特级天然无漂白纯棉布</td>
+                        <td className="px-4 py-3">21s / 21s (84 x 72 股/英寸)</td>
+                        <td className="px-4 py-3">32s / 2股 普梳纯棉车缝线</td>
+                        <td className="px-4 py-3">1/4&quot; (6.35 毫米) 密缝同心圆</td>
+                        <td className="px-4 py-3">铜件/不锈钢件重载粗抛与拉丝</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">细柔黄 flannel 双面绒布</td>
+                        <td className="px-4 py-3">32s / 32s (100 x 80 股/英寸)</td>
+                        <td className="px-4 py-3">21s / 2股 柔性车缝线</td>
+                        <td className="px-4 py-3">3/8&quot; (9.53 毫米) 宽缝同心圆</td>
+                        <td className="px-4 py-3">汽车漆面清漆层镜面抛光及高光提亮</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3 font-bold">剑麻棉线混织强化层</td>
+                        <td className="px-4 py-3">10s / 10s 粗支重磅帆布织造</td>
+                        <td className="px-4 py-3">40s / 3股 高强防割尼龙芯缝线</td>
+                        <td className="px-4 py-3">1/8&quot; (3.18 毫米) 超致密连锁交织</td>
+                        <td className="px-4 py-3">铸铁件焊缝整平与强力去毛刺</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">特柔白 open-fold 镜面绒布</td>
+                        <td className="px-4 py-3">40s / 40s (120 x 100 股/英寸)</td>
+                        <td className="px-4 py-3">16s / 2股 无捻超柔纯棉线</td>
+                        <td className="px-4 py-3">无车线 (自然层叠松装版型)</td>
+                        <td className="px-4 py-3">高档珠宝与贵金属镜面上色提亮</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             {/* Right Sourcing Side Panel */}

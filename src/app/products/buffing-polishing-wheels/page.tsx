@@ -231,6 +231,60 @@ export default function BuffingPolishingWheels() {
                   </table>
                 </div>
               </div>
+
+              {/* Material Density & Thread Specifications Table */}
+              <div id="density-table" className="space-y-4 pt-6">
+                <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
+                  Cotton Fiber Density & Stitching Specifications
+                </h2>
+                <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
+                  Different finishing applications require specialized cotton weave counts and stitching rigidity:
+                </p>
+                
+                <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
+                  <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
+                    <thead className="bg-industry-slate-900 text-industry-slate-400">
+                      <tr>
+                        <th className="px-4 py-3 font-semibold uppercase">Cotton Quality Grade</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Warp / Weft Count</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Thread ply</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Stitching Pitch Ring Spacing</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Target Application</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-industry-slate-850 text-white">
+                      <tr>
+                        <td className="px-4 py-3 font-bold">Premium Unbleached Cotton</td>
+                        <td className="px-4 py-3">21s / 21s (84 x 72 threads/inch)</td>
+                        <td className="px-4 py-3">32s / 2 ply carded cotton thread</td>
+                        <td className="px-4 py-3">1/4&quot; (6.35 mm) concentric</td>
+                        <td className="px-4 py-3">Heavy brass/stainless rough polishing</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">Fine Yellow Flannel</td>
+                        <td className="px-4 py-3">32s / 32s (100 x 80 threads/inch)</td>
+                        <td className="px-4 py-3">21s / 2 ply soft sewing thread</td>
+                        <td className="px-4 py-3">3/8&quot; (9.53 mm) loose concentric</td>
+                        <td className="px-4 py-3">Automotive clear coat high gloss shine</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3 font-bold">Reinforced Sisal-Cotton Blend</td>
+                        <td className="px-4 py-3">10s / 10s heavy canvas weave</td>
+                        <td className="px-4 py-3">40s / 3 ply high-strength nylon core</td>
+                        <td className="px-4 py-3">1/8&quot; (3.18 mm) tight interlocking</td>
+                        <td className="px-4 py-3">Iron cast heavy weld material leveling</td>
+                      </tr>
+                      <tr className="bg-industry-slate-900/40">
+                        <td className="px-4 py-3 font-bold">White Open Flannel</td>
+                        <td className="px-4 py-3">40s / 40s (120 x 100 threads/inch)</td>
+                        <td className="px-4 py-3">16s / 2 ply zero-twist soft cotton</td>
+                        <td className="px-4 py-3">None (Loose-fold layout)</td>
+                        <td className="px-4 py-3">Fine jewelry & precious metal coloring</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
 
             {/* Right Sourcing Side Panel */}

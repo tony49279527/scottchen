@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/",
     languages: {
       "en": "https://www.scottchentools.com/",
+      "zh-CN": "https://www.scottchentools.com/zh",
       "x-default": "https://www.scottchentools.com/",
     },
   },
@@ -20,42 +21,15 @@ const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.scottchentools.com/#organization",
-      "name": "SCOTTCHEN",
+      "@type": "ManufacturingBusiness",
+      "@id": "https://www.scottchentools.com/#manufacturingbusiness",
+      "name": "SCOTTCHEN Tools",
       "url": "https://www.scottchentools.com/",
       "logo": "https://www.scottchentools.com/images/hero_abrasives_kit.png",
-      "telephone": "+86-21-6100-2008",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "No. 88 Industry Ring Road",
-        "addressLocality": "Shanghai",
-        "addressRegion": "Shanghai",
-        "postalCode": "200120",
-        "addressCountry": "CN"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/scottchen-tools",
-        "https://www.youtube.com/hashtag/scottchen"
-      ],
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+86-21-6100-2008",
-          "email": "sales@scottchentools.com",
-          "contactType": "B2B Sales",
-          "availableLanguage": ["English", "Chinese"]
-        }
-      ]
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://www.scottchentools.com/#localbusiness",
-      "name": "SCOTTCHEN Tools",
       "image": "https://www.scottchentools.com/images/hero_abrasives_kit.png",
-      "url": "https://www.scottchentools.com/",
-      "email": "sales@scottchentools.com",
       "telephone": "+86-21-6100-2008",
+      "email": "sales@scottchentools.com",
+      "slogan": "Industrial OEM Abrasive, Sanding & Polishing Solutions",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
@@ -81,7 +55,20 @@ const corporateSchema = {
         ],
         "opens": "08:30",
         "closes": "18:00"
-      }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/scottchen-tools",
+        "https://www.youtube.com/hashtag/scottchen"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+86-21-6100-2008",
+          "email": "sales@scottchentools.com",
+          "contactType": "B2B Sales Support",
+          "availableLanguage": ["English", "Chinese"]
+        }
+      ]
     }
   ]
 };

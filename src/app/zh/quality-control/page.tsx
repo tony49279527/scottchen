@@ -151,6 +151,37 @@ export default function ChineseQualityControl() {
                   </div>
                 ))}
               </div>
+
+              {/* Technical Whitepaper Section */}
+              <div className="glass-panel p-8 rounded-lg space-y-6 bg-industry-slate-950/40 border border-industry-slate-800">
+                <span className="text-xs font-bold font-mono tracking-widest text-industry-orange uppercase">技术白皮书</span>
+                <h3 className="text-xl font-extrabold text-white">
+                  工业标准规程：高转速研磨抛光磨耗件动平衡校验与安全公差控制规范
+                </h3>
+                <p className="text-sm text-industry-slate-300 leading-relaxed">
+                  在高负荷工业表面加工与精整作业中，打磨头及布轮高速旋转会产生极大的离心剪切应力。为从源头消除转动震颤并保护主轴与轴承，SCOTTCHEN 全线执行符合 ISO 1940-1 的动平衡精调规范。
+                </p>
+                <div className="space-y-4 text-xs text-industry-slate-400 font-mono">
+                  <div className="border-l-2 border-industry-orange pl-3 space-y-1">
+                    <strong className="text-white">一、 ISO 1940-1 动平衡等级（目标：G6.3 / G2.5 级）</strong>
+                    <p className="leading-relaxed">
+                      工厂出产的锆刚玉重载纤维片及加固金属盘棉布轮均需通过动平衡机校验，将允许的最大残余不平衡量控制在 G6.3 级限度内，完全杜绝轴承因交变剪切力发生金属疲劳损坏。
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-industry-orange pl-3 space-y-1">
+                    <strong className="text-white">二、 离心力计算系数与超速安全系数</strong>
+                    <p className="leading-relaxed">
+                      基于离心应力公式 (sigma = rho * omega^2 * r^2) 精细核算强度，车缝线拉力与底材树脂背胶能够安全承受 1.5 倍额定转速运行而不发生基体崩裂，确保颗粒磨损掉落率低于 0.02%。
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-industry-orange pl-3 space-y-1">
+                    <strong className="text-white">三、 中心同轴度与孔径尺寸配合参数</strong>
+                    <p className="leading-relaxed">
+                      我们把中心法兰盘及定位套的内孔直径偏差收窄在 &plusmn;0.05 mm 公差区间，与 bench grinder 轴心贴合紧密无间，彻底规避因偏心抖动引起的跳动和操作震手感。
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Information Column */}
