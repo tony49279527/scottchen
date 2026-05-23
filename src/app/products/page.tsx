@@ -21,6 +21,7 @@ export default function ProductsOverview() {
           types: "Cotton spiral stitched, loose cotton flannel, airway wheels, sisal wheels, felt wheels, drill polishers.",
           moq: "500 pcs/size",
           pack: "Bulk carton / customized private label box",
+          img: "/images/buffing_wheels.png",
         },
         {
           name: "Polishing Wheel Kits",
@@ -28,6 +29,7 @@ export default function ProductsOverview() {
           types: "Drill polishing kits, bench grinder restoration kits, mixed size compound kits, retail blister packs.",
           moq: "500 sets",
           pack: "Double blister pack / custom color box / polybag",
+          img: "/images/hero_abrasives_kit.png",
         },
       ],
     },
@@ -40,6 +42,7 @@ export default function ProductsOverview() {
           types: "Woodworking sandpaper, automotive wet/dry sheets, furniture refinishing sanding rolls, assorted grits.",
           moq: "10,000 sheets / 200 rolls",
           pack: "Grit-assorted sleeves, cardboard roll dispenser boxes",
+          img: "/images/sanding_tools.png",
         },
         {
           name: "Sanding Screens & Drywall Abrasives",
@@ -47,6 +50,7 @@ export default function ProductsOverview() {
           types: "Silicon carbide drywall mesh sanding screen, dust-free sanding screens, contractor rolls.",
           moq: "5,000 sheets",
           pack: "Individually wrapped paper covers / shrink wrap",
+          img: "/images/sanding_tools.png",
         },
         {
           name: "Detail Sanding Tools",
@@ -54,6 +58,7 @@ export default function ProductsOverview() {
           types: "Sanding sticks, mini matchstick details, mold polishing blocks, scale craft smoothing rods.",
           moq: "1,000 packs",
           pack: "Clear hanging bags / retail barcode header cards",
+          img: "/images/sanding_tools.png",
         },
       ],
     },
@@ -66,6 +71,7 @@ export default function ProductsOverview() {
           types: "Zirconia alumina fiber discs, angle grinder discs, metal weld removal, fiberglass sanding backings.",
           moq: "2,000 discs/grit",
           pack: "Shrink packs / inner white boxes / bulk export cartons",
+          img: "/images/sanding_tools.png",
         },
         {
           name: "Diamond & Specialty Abrasives",
@@ -73,6 +79,7 @@ export default function ProductsOverview() {
           types: "Diamond polishing sheets, stone grinding discs, marble and granite grinders, tile/porcelain finishers.",
           moq: "500 discs",
           pack: "Inner boxes with warning cards",
+          img: "/images/sanding_tools.png",
         },
         {
           name: "Sanding Dispenser Kits",
@@ -80,6 +87,7 @@ export default function ProductsOverview() {
           types: "Workshop multi-roll dispenser kits, sandpaper roll refills, assorted grit rolls with racks.",
           moq: "300 racks",
           pack: "Color display box with metal tearing edge",
+          img: "/images/sanding_tools.png",
         },
       ],
     },
@@ -112,44 +120,55 @@ export default function ProductsOverview() {
 
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                   {familyGroup.items.map((item) => (
-                    <div key={item.name} className="glass-panel p-8 rounded-lg flex flex-col justify-between hover:border-industry-slate-700 transition-colors">
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-start">
-                          <h3 className="text-lg font-bold text-white">{item.name}</h3>
-                          <span className="text-[10px] font-mono text-industry-orange bg-industry-orange/10 border border-industry-orange/20 px-2 py-0.5 rounded">
-                            Verified B2B MOQ
-                          </span>
-                        </div>
-                        <p className="text-sm text-industry-slate-400 leading-relaxed">
-                          <strong className="text-industry-slate-300">Description / Subtypes:</strong> {item.types}
-                        </p>
-                        
-                        {/* B2B Sourcing Parameters */}
-                        <div className="grid grid-cols-2 gap-4 border-t border-industry-slate-850 pt-4 text-xs font-mono">
-                          <div>
-                            <span className="text-industry-slate-500 block">Sourcing MOQ:</span>
-                            <span className="text-white font-bold">{item.moq}</span>
-                          </div>
-                          <div>
-                            <span className="text-industry-slate-500 block">Standard Packaging:</span>
-                            <span className="text-white font-bold leading-normal">{item.pack}</span>
-                          </div>
-                        </div>
+                    <div key={item.name} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
+                      <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent opacity-60" />
                       </div>
+                      
+                      <div className="p-8 flex-grow flex flex-col justify-between">
+                        <div className="space-y-4">
+                          <div className="flex justify-between items-start">
+                            <h3 className="text-lg font-bold text-white">{item.name}</h3>
+                            <span className="text-[10px] font-mono text-industry-orange bg-industry-orange/10 border border-industry-orange/20 px-2 py-0.5 rounded">
+                              Verified B2B MOQ
+                            </span>
+                          </div>
+                          <p className="text-sm text-industry-slate-400 leading-relaxed">
+                            <strong className="text-industry-slate-300">Description / Subtypes:</strong> {item.types}
+                          </p>
+                          
+                          {/* B2B Sourcing Parameters */}
+                          <div className="grid grid-cols-2 gap-4 border-t border-industry-slate-850 pt-4 text-xs font-mono">
+                            <div>
+                              <span className="text-industry-slate-500 block">Sourcing MOQ:</span>
+                              <span className="text-white font-bold">{item.moq}</span>
+                            </div>
+                            <div>
+                              <span className="text-industry-slate-500 block">Standard Packaging:</span>
+                              <span className="text-white font-bold leading-normal">{item.pack}</span>
+                            </div>
+                          </div>
+                        </div>
 
-                      <div className="mt-8 flex items-center justify-between border-t border-industry-slate-850 pt-4">
-                        <Link
-                          href={item.url}
-                          className="text-xs font-bold text-industry-orange hover:text-industry-orange-light uppercase tracking-wider transition-colors"
-                        >
-                          View Full Spec Sheet &rarr;
-                        </Link>
-                        <Link
-                          href="/contact"
-                          className="text-xs font-bold text-white bg-industry-slate-800 hover:bg-industry-slate-700 px-4 py-2 rounded transition-colors"
-                        >
-                          Request Spec Quote
-                        </Link>
+                        <div className="mt-8 flex items-center justify-between border-t border-industry-slate-850 pt-4">
+                          <Link
+                            href={item.url}
+                            className="text-xs font-bold text-industry-orange hover:text-industry-orange-light uppercase tracking-wider transition-colors"
+                          >
+                            View Full Spec Sheet &rarr;
+                          </Link>
+                          <Link
+                            href="/contact"
+                            className="text-xs font-bold text-white bg-industry-slate-800 hover:bg-industry-slate-700 px-4 py-2 rounded transition-colors"
+                          >
+                            Request Spec Quote
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   ))}

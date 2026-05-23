@@ -17,36 +17,42 @@ export default function Home() {
       desc: "Cotton buffing wheels, bench grinder polishing wheels, and drill-mount pads. Engineered with high-strength stitching and calibrated arbor hole accuracy.",
       link: "/products/buffing-polishing-wheels",
       badge: "Core Mainstay",
+      img: "/images/buffing_wheels.png",
     },
     {
       title: "Polishing Wheel Kits",
       desc: "Scenarios-specific buffing kits complete with polishing compound bars. Ready for retail branding, online kits, and DIY automotive wheel restoration.",
       link: "/products/buffing-polishing-wheels",
       badge: "High Conversion",
+      img: "/images/hero_abrasives_kit.png",
     },
     {
       title: "Sanding Sheets & Rolls",
       desc: "Silicon carbide and aluminum oxide abrasives. Available in assorted grit packs, rolls, and dispenser boxes for woodwork, metal prep, and paint prep.",
       link: "/products/sanding-grinding-accessories",
       badge: "High Volume",
+      img: "/images/sanding_tools.png",
     },
     {
       title: "Grinding & Fiber Discs",
       desc: "Heavy-duty zirconia alumina resin fiber discs and angle grinder attachments. Designed for rapid weld removal, rust removal, and metal prep.",
       link: "/products/sanding-grinding-accessories",
       badge: "Industrial Grade",
+      img: "/images/sanding_tools.png",
     },
     {
       title: "Detail Sanding Tools",
       desc: "Mini sanding sticks and matchstick-style detail finishing tools. Crucial for craft, models, jewelry, and tight corner smoothing.",
       link: "/products/sanding-grinding-accessories",
       badge: "Specialty Niche",
+      img: "/images/sanding_tools.png",
     },
     {
       title: "OEM Surface Finishing Kits",
       desc: "Fully customized accessory configurations, barcodes, custom instruction sheets, and FBA-compliant polybag or color box packaging.",
       link: "/oem-private-label",
       badge: "100% Tailored",
+      img: "/images/oem_packaging.png",
     },
   ];
 
@@ -107,63 +113,30 @@ export default function Home() {
 
             {/* Right Graphic/Schematic Column */}
             <div className="lg:col-span-5 hidden lg:block">
-              <div className="glass-panel rounded-xl p-8 border border-industry-slate-800 shadow-2xl relative">
-                <div className="absolute top-4 right-4 flex items-center space-x-2">
+              <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
+                <div className="absolute top-4 right-4 z-10 flex items-center space-x-2 bg-industry-slate-950/85 backdrop-blur px-3 py-1 rounded border border-industry-slate-800">
                   <div className="h-2 w-2 rounded-full bg-green-500 animate-ping" />
-                  <span className="text-xs text-industry-slate-400 font-mono">SUPPLY CHAIN READY</span>
+                  <span className="text-[10px] text-industry-slate-300 font-mono tracking-wider">SUPPLY CHAIN READY</span>
                 </div>
                 
-                <h2 className="text-base font-bold text-white uppercase tracking-wider mb-6 flex items-center">
-                  <svg className="w-5 h-5 text-industry-orange mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                  Custom Kit Configurator
-                </h2>
-
-                {/* Simulated Kit Package Visual */}
-                <div className="border border-dashed border-industry-slate-700 rounded-lg p-6 bg-industry-slate-950/60 flex flex-col space-y-4">
-                  <div className="flex justify-between items-center text-xs font-mono text-industry-slate-500">
-                    <span>SKU: AF-SH-BUFF-DRILL-08</span>
-                    <span>1/4&quot; Hex Shank</span>
-                  </div>
-                  
-                  {/* Cotton wheel representation */}
-                  <div className="flex items-center space-x-3 bg-industry-slate-900 p-3 rounded border border-industry-slate-800">
-                    <div className="w-10 h-10 rounded-full border-4 border-double border-industry-slate-600 flex items-center justify-center bg-white/5 text-[9px] font-mono text-industry-slate-400">
-                      COTTON
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-white">Cotton Buffing Wheels (Dome / Cone)</div>
-                      <div className="text-[10px] text-industry-slate-400 mt-0.5">60 Ply Stitching / Density checked</div>
-                    </div>
-                  </div>
-
-                  {/* Compound bar representation */}
-                  <div className="flex items-center space-x-3 bg-industry-slate-900 p-3 rounded border border-industry-slate-800">
-                    <div className="w-10 h-6 bg-emerald-800/80 rounded flex items-center justify-center text-[9px] font-bold text-emerald-200">
-                      GREEN
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-white">Chromium Oxide Polishing Compound</div>
-                      <div className="text-[10px] text-industry-slate-400 mt-0.5">Fine metal color shine finishing</div>
-                    </div>
-                  </div>
-
-                  {/* Sandpaper roll representation */}
-                  <div className="flex items-center space-x-3 bg-industry-slate-900 p-3 rounded border border-industry-slate-800">
-                    <div className="w-10 h-6 bg-amber-900/50 rounded flex items-center justify-center text-[9px] font-bold text-amber-300 border border-amber-800">
-                      P180
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-white">Alumina Oxide Sanding Rolls</div>
-                      <div className="text-[10px] text-industry-slate-400 mt-0.5">Flexible backing for woodworking contour</div>
-                    </div>
-                  </div>
+                <div className="relative aspect-square w-full">
+                  <img
+                    src="/images/hero_abrasives_kit.png"
+                    alt="SCOTTCHEN Industrial Buffing and Sanding Kit Sourcing"
+                    className="object-cover w-full h-full opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
                 </div>
-
-                <div className="mt-6 flex justify-between items-center text-xs text-industry-slate-400 border-t border-industry-slate-800 pt-4 font-mono">
-                  <span>MOQ: 500 sets</span>
-                  <span className="text-industry-orange font-bold">RETAIL PACKAGING READY</span>
+                
+                <div className="p-6 bg-industry-slate-950/90 border-t border-industry-slate-850">
+                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-2">SCOTTCHEN Premium Accessories</h3>
+                  <p className="text-xs text-industry-slate-400 leading-relaxed">
+                    Custom combined buffing wheels, sanding rolls, and compounds in unified retail-ready boxes.
+                  </p>
+                  <div className="mt-4 flex justify-between items-center text-[10px] text-industry-slate-500 font-mono pt-3 border-t border-industry-slate-900">
+                    <span>MOQ: 500 sets</span>
+                    <span className="text-industry-orange font-bold">RETAIL PACKAGING READY</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -253,29 +226,35 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {categories.map((cat) => (
-              <div key={cat.title} className="glass-panel p-8 rounded-lg flex flex-col justify-between hover:border-industry-orange/50 transition-all-custom group">
-                <div>
-                  <div className="flex justify-between items-center mb-6">
-                    <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-industry-slate-500 bg-industry-slate-900 border border-industry-slate-800 px-2 py-1 rounded">
-                      {cat.badge}
-                    </span>
-                    <svg className="w-5 h-5 text-industry-slate-600 group-hover:text-industry-orange transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-industry-orange transition-colors">
-                    {cat.title}
-                  </h3>
-                  <p className="text-sm text-industry-slate-400 leading-relaxed mb-6">
-                    {cat.desc}
-                  </p>
+              <div key={cat.title} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-orange/50 transition-all-custom group">
+                <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
+                  <img
+                    src={cat.img}
+                    alt={cat.title}
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 opacity-80"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent opacity-60" />
+                  <span className="absolute top-3 left-3 text-[9px] font-mono font-bold tracking-widest uppercase text-industry-slate-300 bg-industry-slate-950/80 border border-industry-slate-800 px-2 py-0.5 rounded backdrop-blur">
+                    {cat.badge}
+                  </span>
                 </div>
-                <Link
-                  href={cat.link}
-                  className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-industry-orange group-hover:underline"
-                >
-                  Configure Specifications
-                </Link>
+                
+                <div className="p-8 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-industry-orange transition-colors">
+                      {cat.title}
+                    </h3>
+                    <p className="text-sm text-industry-slate-400 leading-relaxed mb-6">
+                      {cat.desc}
+                    </p>
+                  </div>
+                  <Link
+                    href={cat.link}
+                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-industry-orange group-hover:underline mt-auto"
+                  >
+                    Configure Specifications &rarr;
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -287,7 +266,16 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Graphics */}
-            <div className="lg:col-span-5 order-2 lg:order-1">
+            <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col space-y-6">
+              <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
+                <img
+                  src="/images/oem_packaging.png"
+                  alt="SCOTTCHEN Private Label Packaging Mockup"
+                  className="object-cover w-full h-48 opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent" />
+              </div>
+              
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-panel p-6 rounded-lg text-center border border-industry-slate-800">
                   <div className="text-2xl font-black text-white font-mono">100%</div>
