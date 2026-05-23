@@ -385,6 +385,104 @@ export default function BuffingPolishingWheels() {
         </div>
       </section>
 
+      {/* Amazon Retail Store Showcase */}
+      <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Shop Samples on Amazon</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Direct Amazon Store Showcase</h2>
+            <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
+              Need immediate retail quantities, sample testing, or instant shipping? Click below to buy our verified products directly on our official Amazon Store with Amazon Prime delivery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Buffing & Polishing Wheels Kit",
+                asin: "B0828K5RH1",
+                desc: "Drill adapter mounted wheels set combined with green, white, red polishing compounds for auto restoration.",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Cutting-Compounds/dp/B0828K5RH1/ref=sr_1_1?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/hero_abrasives_kit.png"
+              },
+              {
+                title: "Spiral Stitched & Loose Cotton Wheels",
+                asin: "B086KR8H5Y",
+                desc: "Concentric cotton spiral stitched wheels and soft loose flannel wheels for bench grinder buffing.",
+                url: "https://www.amazon.com/SCOTTCHEN-Abrasives-Buffing-Polishing-Grinder/dp/B086KR8H5Y/ref=sr_1_3?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "Extra Thick Cotton Buffing Wheels",
+                asin: "B07BGV23GK",
+                desc: "Super thick 100% natural cotton polishing wheel designed for rigid heavy-duty bench grinder cutting.",
+                url: "https://www.amazon.com/SCOTTCHEN-Extra-Buffing-Polishing-grinder/dp/B07BGV23GK/ref=sr_1_4?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "Lapidary & Jewelry Buffing Wheels",
+                asin: "B0DQCZYRXR",
+                desc: "Premium fine-fold unbleached cotton wheels perfect for gemstone shaping, gold, silver, and precious metals.",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Lapidary-Metalworking/dp/B0DQCZYRXR/ref=sr_1_11?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "Non-Woven Buffing Pads with Compounds",
+                asin: "B0D6V976G5",
+                desc: "Non-woven scuff conditioning wheels and polish blocks for heavy rust scraping and metallic blending.",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Compounds-Non-Woven/dp/B0D6V976G5/ref=sr_1_14?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/hero_abrasives_kit.png"
+              },
+              {
+                title: "Non-Woven Medium Abrasive Wheels",
+                asin: "B07Y564CX4",
+                desc: "Medium density non-woven abrasive wheels for rapid paint stripping and steel deburring without scoring.",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Wheels-Medium/dp/B07Y564CX4/ref=sr_1_21?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "Threaded Arbor Extension Adapters",
+                asin: "B07ZP52HCK",
+                desc: "Extended mandrel adapters designed to mount buffing wheels securely on standard tools and bench grinders.",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Extended-Extender/dp/B07ZP52HCK/ref=sr_1_24?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/detail_sanding.png"
+              }
+            ].map((prod) => (
+              <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
+                <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
+                  <img
+                    src={prod.img}
+                    alt={prod.title}
+                    className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
+                  />
+                  <span className="absolute top-2 left-2 text-[9px] font-mono bg-industry-orange/20 text-industry-orange border border-industry-orange/30 px-1.5 py-0.5 rounded font-bold">
+                    ASIN: {prod.asin}
+                  </span>
+                </div>
+                <div className="p-5 flex-grow flex flex-col justify-between space-y-4 text-left">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-bold text-white leading-snug">{prod.title}</h3>
+                    <p className="text-xs text-industry-slate-400 leading-relaxed line-clamp-3">
+                      {prod.desc}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-industry-slate-850">
+                    <a
+                      href={prod.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover transition-colors text-center"
+                    >
+                      Buy on Amazon &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

@@ -416,6 +416,139 @@ export default function SandingGrindingAccessories() {
         </div>
       </section>
 
+      {/* Amazon Retail Store Showcase */}
+      <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Shop Samples on Amazon</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Direct Amazon Store Showcase</h2>
+            <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
+              Need immediate retail quantities, sample testing, or instant shipping? Click below to buy our verified products directly on our official Amazon Store with Amazon Prime delivery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Zirconia Sanding Grinding Discs",
+                asin: "B0G3PWBTQ5",
+                desc: "Heavy-duty zirconia resin fiber grinding discs designed for rapid weld leveling and rust removal on metals.",
+                url: "https://www.amazon.com/SCOTTCHEN-Zirconia-Sanding-Grinding-Fiberglass/dp/B0G3PWBTQ5/ref=sr_1_34?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/fiber_discs.png"
+              },
+              {
+                title: "Latex Wet/Dry Sandpaper Sheets",
+                asin: "B0F4R3QBTD",
+                desc: "Silicon carbide premium wet/dry sheets with high-flex latex C-wt backing for auto body styling and polishing.",
+                url: "https://www.amazon.com/SCOTTCHEN-Sandpaper-Metalworking-Woodworker-Furniture/dp/B0F4R3QBTD/ref=sr_1_32?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_sheets.png"
+              },
+              {
+                title: "Abrasive Sanding Dispenser Box",
+                asin: "B0CW65P854",
+                desc: "Multi-roll shop sandpaper roll dispenser box containing 150-grit to 400-grit rolls with a built-in steel tearing edge.",
+                url: "https://www.amazon.com/SCOTTCHEN-Abrasive-Sanding-Dispenser-Finishing/dp/B0CW65P854/ref=sr_1_33?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_dispenser.png"
+              },
+              {
+                title: "Multi-Grit Sandpaper Rolls Pack",
+                asin: "B0CGKS2Z37",
+                desc: "Professional heavy-duty dry sanding paper rolls set suited for industrial woodturning and metal finishing.",
+                url: "https://www.amazon.com/SCOTTCHEN-Sanding-Sandpaper-Woodworking-Furniture/dp/B0CGKS2Z37/ref=sr_1_2?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_sheets.png"
+              },
+              {
+                title: "Drywall Sanding Screen (16-inch)",
+                asin: "B07HDZX5M9",
+                desc: "Premium silicon carbide open mesh sheets for drywall plaster smoothing and dust extraction compliance.",
+                url: "https://www.amazon.com/Drywall-Sanding-Screen-16in-x-12pcs/dp/B07HDZX5M9/ref=sr_1_5?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_screens.png"
+              },
+              {
+                title: "Plumbing Sanding Emery Cloth Roll",
+                asin: "B0D45B7591",
+                desc: "High-flex 180-grit plumbers cloth roll designed for sanding copper pipes and cleaning brass fittings.",
+                url: "https://www.amazon.com/SCOTTCHEN-Plumbing-Plumbers-Aluminum-180-1Roll/dp/B0D45B7591/ref=sr_1_6?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_sheets.png"
+              },
+              {
+                title: "Drywall Sanding Sheets with Holes",
+                asin: "B0C4TNHRWZ",
+                desc: "Multi-hole vacuum-compatible sanding screens covering P80 to P150 grits for dust-free sanding platforms.",
+                url: "https://www.amazon.com/SCOTTCHEN-Drywall-include-Sanding-80%EF%BC%8C100%EF%BC%8C150/dp/B0C4TNHRWZ/ref=sr_1_8?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_screens.png"
+              },
+              {
+                title: "Detail Sanding Sticks & Belts Kit",
+                asin: "B07ZQZT1Q6",
+                desc: "Mini spring-tension detail sanding tools and replacement belts for crafting tight scale channels.",
+                url: "https://www.amazon.com/SCOTTCHEN-Sanding-Sticks-Matchsticks-Detailing/dp/B07ZQZT1Q6/ref=sr_1_9?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/detail_sanding.png"
+              },
+              {
+                title: "Diamond Abrasive Sanding Sheets",
+                asin: "B0F66QL77V",
+                desc: "Electroplated diamond hand pads designed for grinding high-hardness gemstones, quartz, glass, and porcelain tiles.",
+                url: "https://www.amazon.com/SCOTTCHEN-Grinding-Polishing-Gemstone-Porcelain/dp/B0F66QL77V/ref=sr_1_12?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/diamond_polishing.png"
+              },
+              {
+                title: "Multi-Use Sanding Blocks Set",
+                asin: "B0CMXGQ8R3",
+                desc: "Ergonomic contour hand sanders set providing firm backing for auto body styling and woodwork finishing.",
+                url: "https://www.amazon.com/SCOTTCHEN-Multi-Use-Woodworking-Restoration-Automotive/dp/B0CMXGQ8R3/ref=sr_1_23?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/sanding_sheets.png"
+              },
+              {
+                title: "Diamond Granite Grinding Cup Wheel",
+                asin: "B08BFHBTCP",
+                desc: "Heavy-duty 4-inch diamond segmented cup wheel designed for aggressive granite, concrete, and stone edge leveling.",
+                url: "https://www.amazon.com/Diamond-Grinding-Abrasive-Sanding-Granite/dp/B08BFHBTCP/ref=sr_1_25?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/diamond_polishing.png"
+              },
+              {
+                title: "Diamond Edge Profiling Wheel",
+                asin: "B08BF8MZC1",
+                desc: "Vacuum-brazed diamond grinding wheel designed to shape bullnose edges on marble and quartz slabs.",
+                url: "https://www.amazon.com/Diamond-Grinding-Abrasive-Sanding-Granite/dp/B08BF8MZC1/ref=sr_1_27?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/diamond_polishing.png"
+              }
+            ].map((prod) => (
+              <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
+                <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
+                  <img
+                    src={prod.img}
+                    alt={prod.title}
+                    className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
+                  />
+                  <span className="absolute top-2 left-2 text-[9px] font-mono bg-industry-orange/20 text-industry-orange border border-industry-orange/30 px-1.5 py-0.5 rounded font-bold">
+                    ASIN: {prod.asin}
+                  </span>
+                </div>
+                <div className="p-5 flex-grow flex flex-col justify-between space-y-4 text-left">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-bold text-white leading-snug">{prod.title}</h3>
+                    <p className="text-xs text-industry-slate-400 leading-relaxed line-clamp-3">
+                      {prod.desc}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-industry-slate-850">
+                    <a
+                      href={prod.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover transition-colors text-center"
+                    >
+                      Buy on Amazon &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

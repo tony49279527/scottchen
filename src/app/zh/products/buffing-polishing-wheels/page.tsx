@@ -385,6 +385,104 @@ export default function ChineseBuffingPolishingWheels() {
         </div>
       </section>
 
+      {/* Amazon Retail Store Showcase */}
+      <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">亚马逊零售样品直达</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊官方旗舰店单品橱窗</h2>
+            <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
+              需要即时样品测试、少量零售采购或更快的货运时效？您可以点击下方直接前往我们的亚马逊官方旗舰店下单，支持 Amazon Prime 极速配送。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "抛光棉轮与固体抛光膏组合装",
+                asin: "B0828K5RH1",
+                desc: "配手电钻快速换接铁杆及大中粗高光多重固体抛光蜡条，用于金属、汽车划痕精抛与表面还原。",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Cutting-Compounds/dp/B0828K5RH1/ref=sr_1_1?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/hero_abrasives_kit.png"
+              },
+              {
+                title: "同心缝线密缝棉布轮与特柔绒布轮",
+                asin: "B086KR8H5Y",
+                desc: "配合台磨机与砂轮机，适合不同硬度金属与工件的粗磨与精细镜面色彩还原。",
+                url: "https://www.amazon.com/SCOTTCHEN-Abrasives-Buffing-Polishing-Grinder/dp/B086KR8H5Y/ref=sr_1_3?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "特厚高耐磨多层纯棉抛光布轮",
+                asin: "B07BGV23GK",
+                desc: "加厚版 100% 工业级天然棉线紧密编织布轮，具备超强的切削拉力负荷与更长使用寿命。",
+                url: "https://www.amazon.com/SCOTTCHEN-Extra-Buffing-Polishing-grinder/dp/B07BGV23GK/ref=sr_1_4?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "珠宝及贵金属专用超细柔抛光布轮",
+                asin: "B0DQCZYRXR",
+                desc: "特细普梳无漂白高密度纯棉，适合黄金、白银、高档首饰、玉石及精细亚克力的镜面色彩上色。",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Lapidary-Metalworking/dp/B0DQCZYRXR/ref=sr_1_11?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "尼龙无纺布纤维抛光碟配抛光蜡",
+                asin: "B0D6V976G5",
+                desc: "高强度无纺布纤维结合不同粒度抛光固体膏，可快速去除大面积金属表面锈斑与焊缝拉丝。",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Compounds-Non-Woven/dp/B0D6V976G5/ref=sr_1_14?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/hero_abrasives_kit.png"
+              },
+              {
+                title: "中目工业级无纺布尼龙磨片砂轮",
+                asin: "B07Y564CX4",
+                desc: "专门用于中粗度金属毛刺清理、拉丝划痕整平及除漆，打磨柔和不易伤底材。",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Wheels-Medium/dp/B07Y564CX4/ref=sr_1_21?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/buffing_wheels.png"
+              },
+              {
+                title: "台磨机/手电钻加长接杆轴心适配器",
+                asin: "B07ZP52HCK",
+                desc: "高硬度焊接钢制轴套，将标准的抛光布轮牢固锁紧于砂轮机及各种电动打磨工具上。",
+                url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Extended-Extender/dp/B07ZP52HCK/ref=sr_1_24?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
+                img: "/images/detail_sanding.png"
+              }
+            ].map((prod) => (
+              <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
+                <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
+                  <img
+                    src={prod.img}
+                    alt={prod.title}
+                    className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
+                  />
+                  <span className="absolute top-2 left-2 text-[9px] font-mono bg-industry-orange/20 text-industry-orange border border-industry-orange/30 px-1.5 py-0.5 rounded font-bold">
+                    ASIN: {prod.asin}
+                  </span>
+                </div>
+                <div className="p-5 flex-grow flex flex-col justify-between space-y-4 text-left">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-bold text-white leading-snug">{prod.title}</h3>
+                    <p className="text-xs text-industry-slate-400 leading-relaxed line-clamp-3">
+                      {prod.desc}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-industry-slate-850">
+                    <a
+                      href={prod.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover transition-colors text-center"
+                    >
+                      在亚马逊购买 &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
