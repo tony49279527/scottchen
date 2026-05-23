@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 export default function ProductsOverview() {
@@ -61,7 +62,7 @@ export default function ProductsOverview() {
         {
           name: "Diamond & Specialty Abrasives",
           url: "/products/sanding-grinding-accessories",
-          types: "Diamond polishing sheets, stone grinding discs, marble and granite grinders, tile tile/porcelain finishers.",
+          types: "Diamond polishing sheets, stone grinding discs, marble and granite grinders, tile/porcelain finishers.",
           moq: "500 discs",
           pack: "Inner boxes with warning cards",
         },
@@ -78,6 +79,14 @@ export default function ProductsOverview() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Surface Finishing Accessories Catalog | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/products" />
+      </Helmet>
       {/* Header section */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-left sm:px-6 lg:px-8">

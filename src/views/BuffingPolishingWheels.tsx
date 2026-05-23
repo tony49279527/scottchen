@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 export default function BuffingPolishingWheels() {
@@ -32,6 +33,14 @@ export default function BuffingPolishingWheels() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>OEM Buffing & Polishing Wheels | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/products/buffing-polishing-wheels" />
+      </Helmet>
       {/* Page Header (Top CTA area) */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -229,14 +238,28 @@ export default function BuffingPolishingWheels() {
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
                   Workflow Demonstrations
                 </h3>
-                <ul className="space-y-3 text-xs">
+                <ul className="space-y-4 text-xs">
                   <li>
-                    <span className="text-industry-orange font-bold block">YouTube Shorts: #AF-01</span>
-                    <span className="text-industry-slate-300">Shank buffer removing chrome wheel oxidation in 30 seconds.</span>
+                    <a 
+                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-industry-orange font-bold hover:underline block"
+                    >
+                      YouTube Shorts: #AF-01 &rarr;
+                    </a>
+                    <span className="text-industry-slate-300 block mt-1">Shank buffer removing chrome wheel oxidation in 30 seconds.</span>
                   </li>
                   <li>
-                    <span className="text-industry-orange font-bold block">YouTube Shorts: #AF-02</span>
-                    <span className="text-industry-slate-300">Loose cotton coloring brass trim using White Rouge compound block.</span>
+                    <a 
+                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-industry-orange font-bold hover:underline block"
+                    >
+                      YouTube Shorts: #AF-02 &rarr;
+                    </a>
+                    <span className="text-industry-slate-300 block mt-1">Loose cotton coloring brass trim using White Rouge compound block.</span>
                   </li>
                 </ul>
               </div>

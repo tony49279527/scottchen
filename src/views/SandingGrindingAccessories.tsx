@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 export default function SandingGrindingAccessories() {
@@ -44,7 +45,7 @@ export default function SandingGrindingAccessories() {
       desc: "Electroplated diamond discs and flexible backing pads. Specially manufactured for grinding and beveling ceramic tile, porcelain, granite, marble, gemstones, and glass.",
       features: [
         "Grits: 50, 100, 200, 400, 800, 1500, 3000 grit range",
-        "Baking: Hook and loop backing, or steel core plates",
+        "Backing: Hook and loop backing, or steel core plates",
         "Substrate: Granite, quartz, marble, tiles, gemstones",
       ],
     },
@@ -61,6 +62,14 @@ export default function SandingGrindingAccessories() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>OEM Sanding & Grinding Accessories | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Buy bulk sandpaper sheets, silicone carbide screens, zirconia grinding discs, mini sanding sticks, and custom abrasive dispenser kits. Standard B2B MOQ parameters."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/products/sanding-grinding-accessories" />
+      </Helmet>
       {/* Top CTA Area */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -260,14 +269,28 @@ export default function SandingGrindingAccessories() {
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
                   Shorts Demonstrations
                 </h3>
-                <ul className="space-y-3 text-xs">
+                <ul className="space-y-4 text-xs">
                   <li>
-                    <span className="text-industry-orange font-bold block">YouTube Shorts: #AF-03</span>
-                    <span className="text-industry-slate-300">Zirconia resin fiber disc leveling a thick weld joint in 15 seconds.</span>
+                    <a 
+                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-industry-orange font-bold hover:underline block"
+                    >
+                      YouTube Shorts: #AF-03 &rarr;
+                    </a>
+                    <span className="text-industry-slate-300 block mt-1">Zirconia resin fiber disc leveling a thick weld joint in 15 seconds.</span>
                   </li>
                   <li>
-                    <span className="text-industry-orange font-bold block">YouTube Shorts: #AF-04</span>
-                    <span className="text-industry-slate-300">Mini detail sanding sticks refining tiny tight channels in a resin plastic model.</span>
+                    <a 
+                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-industry-orange font-bold hover:underline block"
+                    >
+                      YouTube Shorts: #AF-04 &rarr;
+                    </a>
+                    <span className="text-industry-slate-300 block mt-1">Mini detail sanding sticks refining tiny tight channels in a resin plastic model.</span>
                   </li>
                 </ul>
               </div>

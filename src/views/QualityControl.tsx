@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 export default function QualityControl() {
@@ -39,6 +40,14 @@ export default function QualityControl() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Manufacturing Quality Control Standards | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/quality-control" />
+      </Helmet>
       {/* Page Header (Top CTA) */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">

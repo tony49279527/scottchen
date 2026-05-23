@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
 import SampleKitForm from "@/components/SampleKitForm";
 
 export default function SampleKit() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Request a Surface Finishing Sample Kit | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Request a free surface finishing sample kit for your tool brand, hardware distribution channel, or online retail store to evaluate quality, ply count, and grits."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/sample-kit" />
+      </Helmet>
       {/* Header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">

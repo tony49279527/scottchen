@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 export default function OEMPrivateLabel() {
@@ -44,6 +45,14 @@ export default function OEMPrivateLabel() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>OEM & Private Label Surface Finishing Kits | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/oem-private-label" />
+      </Helmet>
       {/* Header section (Top CTA) */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">

@@ -1,7 +1,6 @@
-"use client";
-
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 interface FormFields {
   fullName: string;
@@ -14,11 +13,12 @@ interface FormFields {
   customPackaging: string;
   targetMarket: string;
   message: string;
+  consent: boolean;
+  hpField: string;
 }
 
 export default function RFQForm() {
   const navigate = useNavigate();
-  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [fields, setFields] = useState<FormFields>({
@@ -32,16 +32,24 @@ export default function RFQForm() {
     customPackaging: "no",
     targetMarket: "",
     message: "",
+    consent: false,
+    hpField: "",
   });
 
-  const [errors, setErrors] = useState<Partial<FormFields>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof FormFields, string>>>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
 
-  const validateField = (name: keyof FormFields, value: string): string => {
+  const validateField = (name: keyof FormFields, value: string | boolean): string => {
+    if (name === "consent") {
+      return value ? "" : "You must consent to our privacy policy to proceed";
+    }
+    if (name === "hpField") {
+      return "";
+    }
     if (!value && name !== "message" && name !== "targetMarket") {
       return "This field is required";
     }
-    if (name === "email" && value) {
+    if (name === "email" && typeof value === "string" && value) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
         return "Please enter a valid business email address";
@@ -62,7 +70,6 @@ export default function RFQForm() {
     const value = e.target.value;
     setFields((prev) => ({ ...prev, [name]: value }));
 
-    // Clear error dynamically on typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -72,7 +79,7 @@ export default function RFQForm() {
     e.preventDefault();
 
     // Trigger validation for all fields
-    const newErrors: Partial<FormFields> = {};
+    const newErrors: Partial<Record<keyof FormFields, string>> = {};
     let hasError = false;
 
     (Object.keys(fields) as Array<keyof FormFields>).forEach((key) => {
@@ -91,7 +98,6 @@ export default function RFQForm() {
           {}
         )
       );
-      // Focus first error element
       const firstErrorKey = Object.keys(newErrors)[0];
       const element = document.getElementsByName(firstErrorKey)[0];
       if (element) {
@@ -100,12 +106,47 @@ export default function RFQForm() {
       return;
     }
 
+    if (fields.hpField) {
+      // Silently discard spam submission and navigate to thank you
+      setIsSubmitting(true);
+      await new Promise((resolve) => setTimeout(resolve, 800));
+      navigate("/thank-you");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Submit success - Redirect to thank you page
+    if (serviceId && templateId && publicKey) {
+      try {
+        await emailjs.send(
+          serviceId,
+          templateId,
+          {
+            from_name: fields.fullName,
+            company_name: fields.companyName,
+            from_email: fields.email,
+            country: fields.country,
+            buyer_type: fields.buyerType,
+            product_category: fields.productCategory,
+            quantity: fields.quantity,
+            custom_packaging: fields.customPackaging,
+            target_market: fields.targetMarket || "Not specified",
+            message: fields.message || "No message provided",
+          },
+          publicKey
+        );
+      } catch (error) {
+        console.error("EmailJS Error:", error);
+      }
+    } else {
+      console.warn("EmailJS credentials missing. Form submission simulated.");
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+    }
+
     setIsSubmitting(false);
     navigate("/thank-you");
   };
@@ -121,12 +162,24 @@ export default function RFQForm() {
   `;
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
       <div className="border-b border-industry-slate-800 pb-4 mb-6">
         <h2 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">B2B Request for Quote</h2>
         <p className="mt-1 text-sm text-industry-slate-400">
           Submit your wholesale, custom private label, or volume specifications below.
         </p>
+      </div>
+
+      {/* Honeypot hidden spam field */}
+      <div className="hidden" aria-hidden="true">
+        <input
+          type="text"
+          name="hpField"
+          tabIndex={-1}
+          autoComplete="off"
+          value={fields.hpField}
+          onChange={handleChange}
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -320,7 +373,7 @@ export default function RFQForm() {
                 onChange={handleChange}
                 className="h-5 w-5 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 focus:ring-industry-orange"
               />
-              <span className="ml-2 font-medium">Yes, custom branding required</span>
+              <span className="ml-2 font-medium">Yes, branding required</span>
             </label>
             <label className="inline-flex items-center text-white cursor-pointer select-none">
               <input
@@ -331,7 +384,7 @@ export default function RFQForm() {
                 onChange={handleChange}
                 className="h-5 w-5 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 focus:ring-industry-orange"
               />
-              <span className="ml-2 font-medium">No, standard white/bulk box is fine</span>
+              <span className="ml-2 font-medium">No, bulk white box fine</span>
             </label>
           </div>
         </div>
@@ -370,6 +423,28 @@ export default function RFQForm() {
           onChange={handleChange}
           className="mt-2 block w-full rounded border border-industry-slate-700 px-4 py-3 bg-industry-slate-950 text-white font-medium text-base min-h-[120px] focus:border-industry-orange focus:ring-1 focus:ring-industry-orange outline-none resize-y"
         />
+      </div>
+
+      {/* GDPR Consent */}
+      <div className="pt-2">
+        <label className="inline-flex items-start text-white cursor-pointer select-none">
+          <input
+            type="checkbox"
+            name="consent"
+            checked={fields.consent}
+            onChange={(e) => {
+              setFields((prev) => ({ ...prev, consent: e.target.checked }));
+              if (errors.consent) setErrors((prev) => ({ ...prev, consent: "" }));
+            }}
+            className="mt-1 h-4 w-4 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 rounded focus:ring-industry-orange"
+          />
+          <span className="ml-3 text-xs text-industry-slate-400 leading-relaxed">
+            I agree to the privacy policy and consent to being contacted by APEXFINISH for commercial quotes and custom packaging consultations. <span className="text-industry-orange">*</span>
+          </span>
+        </label>
+        {touched.consent && errors.consent && (
+          <p className="mt-1 text-xs text-red-500 font-medium" role="alert">{errors.consent}</p>
+        )}
       </div>
 
       {/* Submit Button */}

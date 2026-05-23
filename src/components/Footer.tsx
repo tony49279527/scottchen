@@ -121,12 +121,12 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-xs text-industry-slate-500 block">Connect on Professional Network:</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
+                <a href="https://www.linkedin.com/company/apexfinish-tools" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
                   LinkedIn Profile &bull; Supply Chain
                 </a>
               </li>
               <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block text-xs flex items-center space-x-1">
+                <a href="https://www.youtube.com/hashtag/apexfinish" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block text-xs flex items-center space-x-1">
                   <svg className="w-4 h-4 fill-current text-red-500 mr-1" viewBox="0 0 24 24">
                     <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
@@ -143,9 +143,24 @@ export default function Footer() {
             &copy; {currentYear} APEXFINISH. All rights reserved. Industrial supplier of Surface Finishing Accessories.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="hover:text-white cursor-pointer">B2B Supply Terms</span>
-            <span className="hover:text-white cursor-pointer">Privacy Statement</span>
-            <span className="hover:text-white cursor-pointer">Anti-CSRF & Data Policy</span>
+            <button 
+              className="hover:text-white cursor-pointer focus:outline-none focus:underline"
+              onClick={() => alert('ApexFinish B2B Supply Terms: Standard Incoterms 2020 apply. Contact sales for formal policy agreements.')}
+            >
+              B2B Supply Terms
+            </button>
+            <button 
+              className="hover:text-white cursor-pointer focus:outline-none focus:underline"
+              onClick={() => alert('ApexFinish Privacy Policy: We only collect email and corporate details for professional quoting. We do not sell data to third parties.')}
+            >
+              Privacy Statement
+            </button>
+            <button 
+              className="hover:text-white cursor-pointer focus:outline-none focus:underline"
+              onClick={() => alert('ApexFinish Anti-CSRF & Data Protection Policy: Sourcing forms are protected. Data processed securely for lead qualification.')}
+            >
+              Anti-CSRF & Data Policy
+            </button>
           </div>
         </div>
       </div>

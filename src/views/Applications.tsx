@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 export default function ApplicationsOverview() {
@@ -55,6 +56,14 @@ export default function ApplicationsOverview() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Surface Finishing Application Scenarios | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/applications" />
+      </Helmet>
       {/* Page header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-left">

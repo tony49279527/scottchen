@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
 import RFQForm from "@/components/RFQForm";
 
 export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Request an OEM / Wholesale Quote | APEXFINISH</title>
+        <meta
+          name="description"
+          content="Contact APEXFINISH to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools."
+        />
+        <link rel="canonical" href="https://www.apexfinishkits.com/contact" />
+      </Helmet>
       {/* Page Header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
@@ -62,11 +71,15 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block uppercase">Supply Chain Hub:</span>
-                    <span className="text-white font-bold">LinkedIn Profile &bull; ApexFinish</span>
+                    <a href="https://www.linkedin.com/company/apexfinish-tools" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
+                      linkedin.com/company/apexfinish-tools &rarr;
+                    </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">Direct Inquiry WhatsApp:</span>
-                    <span className="text-white font-bold">+86-138-xxxx-xxxx</span>
+                    <span className="text-industry-slate-500 block uppercase">Direct Inquiry Phone / WhatsApp:</span>
+                    <a href="tel:+862161002008" className="text-white font-bold hover:underline">
+                      +86-21-6100-2008
+                    </a>
                   </div>
                 </div>
               </div>
