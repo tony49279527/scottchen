@@ -35,5 +35,6 @@ jobs:
 
       - name: Deploy to SiteGround via Rsync
         run: |
-          # Sync dist directory to public_html path via SSH
-          rsync -avz --delete -e "ssh -p ${{ secrets.SITEGROUND_PORT }}" dist/ ${{ secrets.SITEGROUND_USER }}@${{ secrets.SITEGROUND_HOST }}:${{ secrets.SITEGROUND_PATH }}
+          # Sync out directory to public_html path via SSH
+          rsync -avz --delete -e "ssh -p ${{ secrets.SITEGROUND_PORT }}" out/ ${{ secrets.SITEGROUND_USER }}@${{ secrets.SITEGROUND_HOST }}:${{ secrets.SITEGROUND_PATH }}
+
