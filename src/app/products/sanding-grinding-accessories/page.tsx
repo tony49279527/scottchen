@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/products/sanding-grinding-accessories",
     languages: {
       "en": "https://www.scottchentools.com/products/sanding-grinding-accessories",
+      "zh-CN": "https://www.scottchentools.com/zh/products/sanding-grinding-accessories",
       "x-default": "https://www.scottchentools.com/products/sanding-grinding-accessories",
     },
   },

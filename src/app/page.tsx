@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/",
     languages: {
       "en": "https://www.scottchentools.com/",
+      "zh-CN": "https://www.scottchentools.com/zh",
       "x-default": "https://www.scottchentools.com/",
     },
   },
@@ -22,6 +23,7 @@ export default function Home() {
       link: "/products/buffing-polishing-wheels",
       badge: "Core Mainstay",
       img: "/images/buffing_wheels.png",
+      ctaText: "Explore Cotton Buffing Wheels Catalog",
     },
     {
       title: "Polishing Wheel Kits",
@@ -29,6 +31,7 @@ export default function Home() {
       link: "/products/buffing-polishing-wheels",
       badge: "High Conversion",
       img: "/images/hero_abrasives_kit.png",
+      ctaText: "Browse Polishing Wheel Kits",
     },
     {
       title: "Sanding Sheets & Rolls",
@@ -36,6 +39,7 @@ export default function Home() {
       link: "/products/sanding-grinding-accessories",
       badge: "High Volume",
       img: "/images/sanding_tools.png",
+      ctaText: "View Grinding & Sanding Technical Specs",
     },
     {
       title: "Grinding & Fiber Discs",
@@ -43,6 +47,7 @@ export default function Home() {
       link: "/products/sanding-grinding-accessories",
       badge: "Industrial Grade",
       img: "/images/sanding_tools.png",
+      ctaText: "Inspect Heavy Grinding Disc Specs",
     },
     {
       title: "Detail Sanding Tools",
@@ -50,6 +55,7 @@ export default function Home() {
       link: "/products/sanding-grinding-accessories",
       badge: "Specialty Niche",
       img: "/images/sanding_tools.png",
+      ctaText: "View Mini Sanding Stick Systems",
     },
     {
       title: "OEM Surface Finishing Kits",
@@ -57,6 +63,7 @@ export default function Home() {
       link: "/oem-private-label",
       badge: "100% Tailored",
       img: "/images/oem_packaging.png",
+      ctaText: "Configure Custom Packaging Specs",
     },
   ];
 
@@ -303,7 +310,7 @@ export default function Home() {
                     href={cat.link}
                     className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-industry-orange group-hover:underline mt-auto"
                   >
-                    Configure Specifications &rarr;
+                    {cat.ctaText} &rarr;
                   </Link>
                 </div>
               </div>

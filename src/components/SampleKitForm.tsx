@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import emailjs from "@emailjs/browser";
 
 interface SampleFormFields {
@@ -22,6 +22,8 @@ interface SampleFormFields {
 
 export default function SampleKitForm() {
   const router = useRouter();
+  const pathname = usePathname() || "";
+  const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [fields, setFields] = useState<SampleFormFields>({
@@ -45,7 +47,8 @@ export default function SampleKitForm() {
 
   const validateField = (name: keyof SampleFormFields, value: string | string[] | boolean): string => {
     if (name === "consent") {
-      return value ? "" : "You must consent to proceed";
+      if (value) return "";
+      return isZh ? "您必须同意我们的条款方可继续" : "You must consent to proceed";
     }
     if (name === "hpField") {
       return "";
@@ -53,17 +56,17 @@ export default function SampleKitForm() {
     if (name === "categories") {
       const arr = value as string[];
       if (!arr || arr.length === 0) {
-        return "Please select at least one product category";
+        return isZh ? "请至少选择一种产品类别" : "Please select at least one product category";
       }
       return "";
     }
     if (!value && name !== "message" && name !== "website" && name !== "application" && name !== "targetMaterial") {
-      return "This field is required";
+      return isZh ? "此项为必填项" : "This field is required";
     }
     if (name === "email" && typeof value === "string" && value) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
-        return "Please enter a valid business email address";
+        return isZh ? "请输入有效的公司电子邮箱" : "Please enter a valid business email address";
       }
     }
     return "";
@@ -138,7 +141,7 @@ export default function SampleKitForm() {
     if (fields.hpField) {
       setIsSubmitting(true);
       await new Promise((resolve) => setTimeout(resolve, 800));
-      router.push("/thank-you");
+      router.push(isZh ? "/zh/thank-you" : "/thank-you");
       return;
     }
 
@@ -177,7 +180,7 @@ export default function SampleKitForm() {
     }
 
     setIsSubmitting(false);
-    router.push("/thank-you");
+    router.push(isZh ? "/zh/thank-you" : "/thank-you");
   };
 
   const inputClass = (name: keyof SampleFormFields) => `
@@ -193,9 +196,13 @@ export default function SampleKitForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
       <div className="border-b border-industry-slate-800 pb-4 mb-6">
-        <h2 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">B2B Material Sample Request</h2>
+        <h2 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
+          {isZh ? "B2B 物理样品申领表格" : "B2B Material Sample Request"}
+        </h2>
         <p className="mt-1 text-sm text-industry-slate-400">
-          Verify our manufacturing standards, stitching densities, and grit ranges in your own workshop.
+          {isZh
+            ? "在您本国的车间实际核验我们的车缝密度、背胶强度及磨料级配标准。"
+            : "Verify our manufacturing standards, stitching densities, and grit ranges in your own workshop."}
         </p>
       </div>
 
@@ -215,7 +222,7 @@ export default function SampleKitForm() {
         {/* Full Name */}
         <div>
           <label htmlFor="fullName" className="block text-sm font-semibold text-industry-slate-300">
-            Full Name <span className="text-industry-orange">*</span>
+            {isZh ? "姓名" : "Full Name"} <span className="text-industry-orange">*</span>
           </label>
           <input
             type="text"
@@ -236,7 +243,7 @@ export default function SampleKitForm() {
         {/* Company Name */}
         <div>
           <label htmlFor="companyName" className="block text-sm font-semibold text-industry-slate-300">
-            Company Name <span className="text-industry-orange">*</span>
+            {isZh ? "公司名称" : "Company Name"} <span className="text-industry-orange">*</span>
           </label>
           <input
             type="text"
@@ -259,7 +266,7 @@ export default function SampleKitForm() {
         {/* Business Email */}
         <div>
           <label htmlFor="email" className="block text-sm font-semibold text-industry-slate-300">
-            Business Email <span className="text-industry-orange">*</span>
+            {isZh ? "公司电子邮箱" : "Business Email"} <span className="text-industry-orange">*</span>
           </label>
           <input
             type="email"
@@ -280,7 +287,7 @@ export default function SampleKitForm() {
         {/* Country */}
         <div>
           <label htmlFor="country" className="block text-sm font-semibold text-industry-slate-300">
-            Shipping Country <span className="text-industry-orange">*</span>
+            {isZh ? "寄送目的国" : "Shipping Country"} <span className="text-industry-orange">*</span>
           </label>
           <input
             type="text"
@@ -302,7 +309,7 @@ export default function SampleKitForm() {
       {/* Website */}
       <div>
         <label htmlFor="website" className="block text-sm font-semibold text-industry-slate-300">
-          Company Website / Store URL
+          {isZh ? "公司官网 / 线上店铺 URL" : "Company Website / Store URL"}
         </label>
         <input
           type="url"
@@ -318,18 +325,18 @@ export default function SampleKitForm() {
       {/* Target Products Categories */}
       <div>
         <label className="block text-sm font-semibold text-industry-slate-300 mb-2">
-          Select Accessories Needed in Sample Kit <span className="text-industry-orange">*</span>
+          {isZh ? "选择样品包中需要放入的耗材类别" : "Select Accessories Needed in Sample Kit"} <span className="text-industry-orange">*</span>
         </label>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 bg-industry-slate-950/60 p-4 rounded border border-industry-slate-800">
           {[
-            { label: "Spiral Stitched Buffing Wheels", val: "Buffing Wheels" },
-            { label: "Loose Flannel Coloring Wheels", val: "Loose Flannel" },
-            { label: "Shank-Mounted Polishing Buffs", val: "Shank Buffs" },
-            { label: "Abrasive Compound Bars", val: "Compounds" },
-            { label: "Sanding Sheets & Rolls", val: "Sanding Sheets" },
-            { label: "Drywall Sanding Screens", val: "Sanding Screens" },
-            { label: "Detail Mini Sanding Sticks", val: "Detail Sticks" },
-            { label: "Diamond Specialty Discs", val: "Diamond Abrasives" },
+            { label: isZh ? "螺旋车缝密缝棉布轮" : "Spiral Stitched Buffing Wheels", val: "Buffing Wheels" },
+            { label: isZh ? "松缝纯棉黄 Flannel 绒轮" : "Loose Flannel Coloring Wheels", val: "Loose Flannel" },
+            { label: isZh ? "带柄凹槽打磨抛光布头" : "Shank-Mounted Polishing Buffs", val: "Shank Buffs" },
+            { label: isZh ? "研磨抛光蜡膏条" : "Abrasive Compound Bars", val: "Compounds" },
+            { label: isZh ? "干湿两用防水乳胶砂纸片" : "Sanding Sheets & Rolls", val: "Sanding Sheets" },
+            { label: isZh ? "防堵塞镂空玻璃纤维砂网" : "Drywall Sanding Screens", val: "Sanding Screens" },
+            { label: isZh ? "精细塑料打磨棒 (Mini 砂带)" : "Detail Mini Sanding Sticks", val: "Detail Sticks" },
+            { label: isZh ? "大理石瓷砖电镀金刚石磨片" : "Diamond Specialty Discs", val: "Diamond Abrasives" },
           ].map((cat) => (
             <label key={cat.val} className="inline-flex items-center text-white cursor-pointer select-none">
               <input
@@ -353,7 +360,7 @@ export default function SampleKitForm() {
         {/* Industry Application */}
         <div>
           <label htmlFor="application" className="block text-sm font-semibold text-industry-slate-300">
-            Work Industry / Application
+            {isZh ? "应用行业场景" : "Work Industry / Application"}
           </label>
           <select
             id="application"
@@ -362,21 +369,36 @@ export default function SampleKitForm() {
             onChange={handleChange}
             className="mt-2 block w-full rounded border border-industry-slate-700 px-4 py-3 bg-industry-slate-950 text-white font-medium text-base min-h-[48px] focus:border-industry-orange focus:ring-1 focus:ring-industry-orange outline-none"
           >
-            <option value="">Select application...</option>
-            <option value="Metalworking">Metal Fabrication / Welds</option>
-            <option value="Woodworking">Woodworking / Joinery</option>
-            <option value="Automotive">Automotive Painting / Rim restore</option>
-            <option value="Jewelry">Jewelry & Precision Crafts</option>
-            <option value="Drywall/Contracting">Drywall & Renovations</option>
-            <option value="Retail Brand Catalog">OEM Retail Brand Catalog</option>
-            <option value="Other">Other Application</option>
+            {isZh ? (
+              <>
+                <option value="">请选择应用领域...</option>
+                <option value="Metalworking">金属加工 / 结构焊道去毛刺</option>
+                <option value="Woodworking">家具制造 / 实木板抛磨涂装</option>
+                <option value="Automotive">汽车钣金喷漆 / 铝合金毂修复</option>
+                <option value="Jewelry">首饰精抛 / 3D打印微细件</option>
+                <option value="Drywall/Contracting">工装石膏板墙面接缝批灰</option>
+                <option value="Retail Brand Catalog">贴牌专有零售渠道选品</option>
+                <option value="Other">其他研磨应用</option>
+              </>
+            ) : (
+              <>
+                <option value="">Select application...</option>
+                <option value="Metalworking">Metal Fabrication / Welds</option>
+                <option value="Woodworking">Woodworking / Joinery</option>
+                <option value="Automotive">Automotive Painting / Rim restore</option>
+                <option value="Jewelry">Jewelry & Precision Crafts</option>
+                <option value="Drywall/Contracting">Drywall & Renovations</option>
+                <option value="Retail Brand Catalog">OEM Retail Brand Catalog</option>
+                <option value="Other">Other Application</option>
+              </>
+            )}
           </select>
         </div>
 
         {/* Target Material */}
         <div>
           <label htmlFor="targetMaterial" className="block text-sm font-semibold text-industry-slate-300">
-            Target Material Substrate
+            {isZh ? "主要被磨打磨底材" : "Target Material Substrate"}
           </label>
           <select
             id="targetMaterial"
@@ -385,13 +407,27 @@ export default function SampleKitForm() {
             onChange={handleChange}
             className="mt-2 block w-full rounded border border-industry-slate-700 px-4 py-3 bg-industry-slate-950 text-white font-medium text-base min-h-[48px] focus:border-industry-orange focus:ring-1 focus:ring-industry-orange outline-none"
           >
-            <option value="">Select target substrate...</option>
-            <option value="Stainless Steel">Stainless Steel / Steel Alloys</option>
-            <option value="Aluminum / Copper">Aluminum, Brass, Soft metals</option>
-            <option value="Hardwood / Softwood">Hardwoods or Softwoods</option>
-            <option value="Drywall Plaster">Plaster / Drywall joints</option>
-            <option value="Glass / Gems / Ceramic">Ceramics, Tiles, Stone, Glass</option>
-            <option value="Multi-substrate catalog">Multi-substrate tool catalog</option>
+            {isZh ? (
+              <>
+                <option value="">请选择被打磨底材...</option>
+                <option value="Stainless Steel">不锈钢 / 碳钢 / 铁艺焊缝</option>
+                <option value="Aluminum / Copper">铝合金、黄铜等有色软金属</option>
+                <option value="Hardwood / Softwood">实木板、红木家具、板材</option>
+                <option value="Drywall Plaster">粉墙腻子、石膏抹灰层</option>
+                <option value="Glass / Gems / Ceramic">瓷砖坡口、钢化玻璃、玉石石材</option>
+                <option value="Multi-substrate catalog">跨多类底材的工具商目录</option>
+              </>
+            ) : (
+              <>
+                <option value="">Select target substrate...</option>
+                <option value="Stainless Steel">Stainless Steel / Steel Alloys</option>
+                <option value="Aluminum / Copper">Aluminum, Brass, Soft metals</option>
+                <option value="Hardwood / Softwood">Hardwoods or Softwoods</option>
+                <option value="Drywall Plaster">Plaster / Drywall joints</option>
+                <option value="Glass / Gems / Ceramic">Ceramics, Tiles, Stone, Glass</option>
+                <option value="Multi-substrate catalog">Multi-substrate tool catalog</option>
+              </>
+            )}
           </select>
         </div>
       </div>
@@ -400,7 +436,7 @@ export default function SampleKitForm() {
         {/* Expected annual purchase quantity */}
         <div>
           <label htmlFor="estimatedQuantity" className="block text-sm font-semibold text-industry-slate-300">
-            Expected Annual Purchase Volume <span className="text-industry-orange">*</span>
+            {isZh ? "年度大货意向采购量" : "Expected Annual Purchase Volume"} <span className="text-industry-orange">*</span>
           </label>
           <select
             id="estimatedQuantity"
@@ -411,11 +447,23 @@ export default function SampleKitForm() {
             onBlur={handleBlur}
             className={inputClass("estimatedQuantity")}
           >
-            <option value="">Select annual estimate...</option>
-            <option value="Small Batch (<1000 Kits/Year)">Small Batch (&lt;1000 Kits/Year)</option>
-            <option value="Medium OEM (1000-5000 Kits/Year)">Medium OEM (1000-5000 Kits/Year)</option>
-            <option value="High Volume Container (5000+ Kits/Year)">High Volume Container (5000+ Kits/Year)</option>
-            <option value="Testing Phase Sourcing">Testing Phase Sourcing (Unsure yet)</option>
+            {isZh ? (
+              <>
+                <option value="">请选择年度柜量...</option>
+                <option value="Small Batch (<1000 Kits/Year)">小批量补充采购 (&lt;1000 套/年)</option>
+                <option value="Medium OEM (1000-5000 Kits/Year)">常规贴牌量 (1000-5000 套/年)</option>
+                <option value="High Volume Container (5000+ Kits/Year)">整柜集中大规模订柜 (5000 套以上/年)</option>
+                <option value="Testing Phase Sourcing">新项目前期研发评估 (暂不确定)</option>
+              </>
+            ) : (
+              <>
+                <option value="">Select annual estimate...</option>
+                <option value="Small Batch (<1000 Kits/Year)">Small Batch (&lt;1000 Kits/Year)</option>
+                <option value="Medium OEM (1000-5000 Kits/Year)">Medium OEM (1000-5000 Kits/Year)</option>
+                <option value="High Volume Container (5000+ Kits/Year)">High Volume Container (5000+ Kits/Year)</option>
+                <option value="Testing Phase Sourcing">Testing Phase Sourcing (Unsure yet)</option>
+              </>
+            )}
           </select>
           {touched.estimatedQuantity && errors.estimatedQuantity && (
             <p className="mt-1 text-xs text-red-500 font-medium" role="alert">{errors.estimatedQuantity}</p>
@@ -425,7 +473,7 @@ export default function SampleKitForm() {
         {/* OEM custom packaging needed */}
         <div>
           <label className="block text-sm font-semibold text-industry-slate-300">
-            Do You Need Custom Branding / Mockups? <span className="text-industry-orange">*</span>
+            {isZh ? "您是否需要印刷您自主品牌的彩盒样？" : "Do You Need Custom Branding / Mockups?"} <span className="text-industry-orange">*</span>
           </label>
           <div className="mt-4 flex space-x-6">
             <label className="inline-flex items-center text-white cursor-pointer select-none">
@@ -437,7 +485,7 @@ export default function SampleKitForm() {
                 onChange={handleChange}
                 className="h-5 w-5 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 focus:ring-industry-orange"
               />
-              <span className="ml-2 font-medium">Yes, branding required</span>
+              <span className="ml-2 font-medium">{isZh ? "是，需要贴牌打印样" : "Yes, branding required"}</span>
             </label>
             <label className="inline-flex items-center text-white cursor-pointer select-none">
               <input
@@ -448,7 +496,7 @@ export default function SampleKitForm() {
                 onChange={handleChange}
                 className="h-5 w-5 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 focus:ring-industry-orange"
               />
-              <span className="ml-2 font-medium">No, bulk white box ok</span>
+              <span className="ml-2 font-medium">{isZh ? "否，常规大货工业散装样" : "No, bulk white box ok"}</span>
             </label>
           </div>
         </div>
@@ -457,13 +505,17 @@ export default function SampleKitForm() {
       {/* Message */}
       <div>
         <label htmlFor="message" className="block text-sm font-semibold text-industry-slate-300">
-          List Specific Sizes, Stitch Options or Grits Required
+          {isZh ? "列明特定的打磨外径、层缝线或者特定目数规格需求" : "List Specific Sizes, Stitch Options or Grits Required"}
         </label>
         <textarea
           id="message"
           name="message"
           rows={4}
-          placeholder="e.g. Please include: 2x Dome cotton buffers (1/4 hex shank), 1x Concentric Spiral stitched 6-inch wheel, 5x Drywall Sanding screens P120."
+          placeholder={
+            isZh
+              ? "如：请在箱中装入：2个带柄凹槽打磨布头 (1/4寸六角快速接头)，1个多层车缝棉布轮，5张批灰打磨镂空网格砂片 P120。"
+              : "e.g. Please include: 2x Dome cotton buffers (1/4 hex shank), 1x Concentric Spiral stitched 6-inch wheel, 5x Drywall Sanding screens P120."
+          }
           value={fields.message}
           onChange={handleChange}
           className="mt-2 block w-full rounded border border-industry-slate-700 px-4 py-3 bg-industry-slate-950 text-white font-medium text-base min-h-[120px] focus:border-industry-orange focus:ring-1 focus:ring-industry-orange outline-none resize-y"
@@ -484,7 +536,10 @@ export default function SampleKitForm() {
             className="mt-1 h-4 w-4 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 rounded focus:ring-industry-orange"
           />
           <span className="ml-3 text-xs text-industry-slate-400 leading-relaxed">
-            I agree to the privacy policy and consent to being contacted by SCOTTCHEN for commercial quotes and custom packaging consultations. <span className="text-industry-orange">*</span>
+            {isZh
+              ? "我同意本站的隐私条款，同意将我的公司资料授权 SCOTTCHEN 的质检测试团队寄送样品大货并联系我。"
+              : "I agree to the privacy policy and consent to being contacted by SCOTTCHEN for commercial quotes and custom packaging consultations."}{" "}
+            <span className="text-industry-orange">*</span>
           </span>
         </label>
         {touched.consent && errors.consent && (
@@ -505,10 +560,10 @@ export default function SampleKitForm() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
-              Processing Material Sourcing Details...
+              {isZh ? "正在处理样品申请资料..." : "Processing Material Sourcing Details..."}
             </>
           ) : (
-            "Request Free Product Samples"
+            isZh ? "提交免费样品申领申请" : "Request Free Product Samples"
           )}
         </button>
       </div>

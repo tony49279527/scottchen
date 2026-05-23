@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/oem-private-label",
     languages: {
       "en": "https://www.scottchentools.com/oem-private-label",
+      "zh-CN": "https://www.scottchentools.com/zh/oem-private-label",
       "x-default": "https://www.scottchentools.com/oem-private-label",
     },
   },

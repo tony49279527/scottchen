@@ -1,0 +1,394 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import CTASection from "@/components/CTASection";
+
+export const metadata: Metadata = {
+  title: "Scottchen (SCOTTCHEN) 磨料磨具与抛光轮 OEM/ODM 制造工厂",
+  description: "Scottchen (SCOTTCHEN) 专业制造高品质工业抛光轮、抛光布轮、气道布轮、页轮砂碟及定制五金磨具套装。提供贴牌包装与亚马逊 FBA 条码合规服务，起订量低，全球出运。",
+  alternates: {
+    canonical: "https://www.scottchentools.com/zh",
+    languages: {
+      "en": "https://www.scottchentools.com/",
+      "zh-CN": "https://www.scottchentools.com/zh",
+      "x-default": "https://www.scottchentools.com/",
+    },
+  },
+};
+
+export default function ChineseHome() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-industry-slate-950 py-24 sm:py-32 border-b border-industry-slate-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+            
+            {/* Left: Heading text */}
+            <div className="text-left lg:col-span-7 space-y-6">
+              <span className="inline-flex items-center rounded bg-industry-orange/15 px-3 py-1 text-xs font-bold tracking-wider text-industry-orange uppercase border border-industry-orange/20">
+                工业级抛光轮与磨料磨具生产厂家
+              </span>
+              <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
+                专注抛光轮及磨料磨具
+                <span className="block text-industry-orange mt-2">B2B OEM/ODM 贴牌定制</span>
+              </h1>
+              <p className="text-lg text-industry-slate-300 leading-relaxed max-w-2xl">
+                Scottchen (SCOTTCHEN) 为全球工具品牌商、五金分销商及跨境电商卖家提供一站式零售包装定制、叶轮砂碟组合与高品质布轮制造。支持低起订量，FBA 贴标出运。
+              </p>
+              
+              <div className="pt-4 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/zh/contact"
+                  className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] text-center shadow-lg shadow-industry-orange/20"
+                >
+                  获取定制询价
+                </Link>
+                <Link
+                  href="/zh/products"
+                  className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800/80 px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-slate-750 text-center"
+                >
+                  浏览产品规格书
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Graphic showcase */}
+            <div className="lg:col-span-5 relative">
+              <div className="glass-panel p-2 rounded-2xl border border-industry-slate-800 shadow-2xl overflow-hidden bg-industry-slate-900/40 relative group">
+                <div className="absolute inset-0 bg-gradient-to-tr from-industry-orange/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+                <img
+                  src="/images/hero_abrasives_kit.png"
+                  alt="SCOTTCHEN 抛光轮与打磨工具组合装"
+                  className="object-cover w-full h-80 sm:h-96 rounded-xl opacity-90 group-hover:scale-[1.01] transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B 快速指引</span>
+                <h2 className="text-2xl font-black text-white mt-1">供应链核心参数</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  为全球采购经理与电商运营提供的数字化质检及合规参数。
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>柔性低起订量:</strong> 抛光轮 500 件起，套装 500 套起即可定制零售彩盒与专属印标。</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>行业高精度公差:</strong> 中心孔孔径公差控制在 &plusmn;0.05 mm 以内，防抖动防偏心，轴心贴合紧密。</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>跨境电商条码合规:</strong> 直接在工厂提供高清晰度 FNSKU/UPC 条码贴标，通过扫码测试，出仓即入亚马逊 FBA。</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>港口及国际货运:</strong> 工厂临近上海港与宁波港，支持 FOB/CIF 交易以及国际空海运门到门双清关 (DDP)。</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Categories Section */}
+      <section className="py-20 bg-industry-slate-900">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-12">
+          <div>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">核心产品线</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">专业生产两大类别磨料磨具</h2>
+            <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
+              我们为工业研磨和镜面抛光作业提供高度一致的规格，并接受自由组合包装，以配合特定的行业工作流。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            
+            {/* Category Card 1 */}
+            <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
+              <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
+                <img
+                  src="/images/buffing_wheels.png"
+                  alt="SCOTTCHEN 布轮与抛光轮"
+                  className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent opacity-60" />
+              </div>
+              <div className="p-8 text-left space-y-4">
+                <span className="text-[10px] font-mono text-industry-orange uppercase font-bold tracking-wider">镜面还原与表面精饰</span>
+                <h3 className="text-2xl font-bold text-white">抛光轮及抛光耗材系列</h3>
+                <p className="text-sm text-industry-slate-400 leading-relaxed">
+                  提供密缝棉布轮、松缝黄 flannel 轮、气道布轮、剑麻重切削轮及带柄迷你抛光布轮。出产的 100g 到 500g 绿蜡、白蜡、红蜡等抛光膏，配方均与布轮特性深度调校，可实现完美的镜面抛光效果。
+                </p>
+                <div className="pt-4 flex justify-between items-center">
+                  <Link href="/zh/products/buffing-polishing-wheels" className="text-xs font-bold uppercase tracking-wider text-industry-orange hover:text-industry-orange-hover">
+                    查看抛光轮规格书 &rarr;
+                  </Link>
+                  <span className="text-[10px] font-mono text-industry-slate-500">MOQ: 500 件起</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Category Card 2 */}
+            <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
+              <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
+                <img
+                  src="/images/sanding_tools.png"
+                  alt="SCOTTCHEN 研磨与砂纸配件"
+                  className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent opacity-60" />
+              </div>
+              <div className="p-8 text-left space-y-4">
+                <span className="text-[10px] font-mono text-industry-orange uppercase font-bold tracking-wider">材料去除与表面打磨</span>
+                <h3 className="text-2xl font-bold text-white">砂纸、砂网及锆刚玉砂碟系列</h3>
+                <p className="text-sm text-industry-slate-400 leading-relaxed">
+                  包含干湿两用 C-wt 晚香玉纸砂纸卷、网格防堵塞玻璃纤维砂网、锆刚玉重切削纤维砂碟（配 7/8&quot; 星型中心孔），以及手部细节打磨棒和各种混合目数的零售砂纸套装。
+                </p>
+                <div className="pt-4 flex justify-between items-center">
+                  <Link href="/zh/products/sanding-grinding-accessories" className="text-xs font-bold uppercase tracking-wider text-industry-orange hover:text-industry-orange-hover">
+                    查看磨料研磨规格书 &rarr;
+                  </Link>
+                  <span className="text-[10px] font-mono text-industry-slate-500">MOQ: 10,000 张 / 1,000 套起</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Applications Section */}
+      <section className="py-20 bg-industry-slate-950">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-12">
+          <div>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">行业应用工作流</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">量身定制的打磨与抛光工具包</h2>
+            <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
+              无论您的目标客户是木工工匠、金属加工车间还是汽车美容店，我们都能合理配置目数和棉轮硬度以达到最佳效果。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: "金属加工去毛刺", desc: "专为角磨机和台式砂轮机配置，结合强韧的锆刚玉砂碟和密缝线缝棉轮，快速去除金属焊缝与锈迹。", label: "金工工作流" },
+              { title: "木工与家具打磨", desc: "配套提供从粗砂 P80 到细砂 P320 的乳胶干磨砂纸、砂布卷，配合塑料精细砂纸棒解决复杂造型细节。", label: "木工工作流" },
+              { title: "汽车还原与抛光", desc: "带柄圆顶、圆柱形打磨轮能完美贴合深槽轮毂。配套绿铬镜面抛光膏，快速去除氧化层，还原轮毂镜面光泽。", label: "汽车美容工作流" },
+              { title: "跨境电商专属套装", desc: "结合零售泡壳挂卡或彩色瓦楞彩盒设计，提供预先捆绑好的 1/4 适配柄、棉布轮与抛光膏组合，开箱即售。", label: "电商热销类目" }
+            ].map((app, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg text-left space-y-3 hover:border-industry-slate-800 transition-colors">
+                <span className="text-[10px] font-mono font-bold text-industry-orange uppercase bg-industry-orange/10 px-2 py-0.5 rounded border border-industry-orange/20">
+                  {app.label}
+                </span>
+                <h3 className="text-base font-bold text-white pt-2">{app.title}</h3>
+                <p className="text-xs text-industry-slate-400 leading-relaxed">
+                  {app.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-6">
+            <Link
+              href="/zh/applications"
+              className="inline-flex justify-center items-center rounded bg-industry-slate-850 hover:bg-industry-slate-800 text-xs font-bold uppercase tracking-wider text-white py-3 px-6 transition-colors"
+            >
+              浏览所有应用场景配置 &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* OEM Capabilities & Quality Controls */}
+      <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left: QA Inspection Image */}
+            <div className="lg:col-span-5">
+              <div className="glass-panel p-2 rounded-2xl border border-industry-slate-800 shadow-2xl overflow-hidden bg-industry-slate-950/40 relative">
+                <img
+                  src="/images/quality_inspection.png"
+                  alt="SCOTTCHEN 抛光轮动态平衡和缝线拉力质检"
+                  className="object-cover w-full h-80 rounded-xl opacity-90"
+                />
+              </div>
+            </div>
+
+            {/* Right: Technical QA info */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">严格出厂质检标准</span>
+              <h2 className="text-3xl font-extrabold text-white">高精度制造与条码合规，消灭客诉隐患</h2>
+              <p className="text-sm text-industry-slate-400 leading-relaxed">
+                在 Scottchen (SCOTTCHEN)，我们深知工具配件的一致性对品牌声誉至关重要。一个重心偏移的抛光轮或目数混杂的砂纸，都会导致买家差评或退货。
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+                <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
+                  <span className="text-white font-bold block mb-1">物理尺寸控制</span>
+                  <p className="text-industry-slate-400 leading-relaxed text-[11px]">
+                    中心孔采用金属加强圈或梯级垫片，孔径控制在 &plusmn;0.05 mm，彻底消除高转速下的震动偏心风险。
+                  </p>
+                </div>
+                <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
+                  <span className="text-white font-bold block mb-1">动平衡破坏性测试</span>
+                  <p className="text-industry-slate-400 leading-relaxed text-[11px]">
+                    锆刚玉纤维砂碟和带柄打磨头通过 1.5 倍极限转速下的动态平衡测试，避免磨耗不均与操作手部疲劳。
+                  </p>
+                </div>
+                <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
+                  <span className="text-white font-bold block mb-1">缝线与织物拉力</span>
+                  <p className="text-industry-slate-400 leading-relaxed text-[11px]">
+                    棉线拉力强度验证，多层叠合紧密，高速转动时不脱线、不松边，大幅延长工业布轮的使用寿命。
+                  </p>
+                </div>
+                <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
+                  <span className="text-white font-bold block mb-1">彩盒与泡壳条码审计</span>
+                  <p className="text-industry-slate-400 leading-relaxed text-[11px]">
+                    应用高对比度条码检查仪，逐批审计 FNSKU 或 UPC，确保存储入库时一次通过扫描。
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 flex gap-4">
+                <Link href="/zh/quality-control" className="text-xs font-bold text-industry-orange hover:text-industry-orange-hover uppercase tracking-wider">
+                  了解详细生产质量体系 &rarr;
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-850">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">技术答疑与合作流程</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">常见问题解答</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              面向采购商、分销商及电商买家的技术规范、定制流程和货运政策。
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "你们抛光轮的最小起订量 (MOQ) 是多少？交期多久？",
+                a: "对于台磨机适用的标准棉布轮、气道布轮及带柄砂轮，定制零售彩盒或泡壳彩卡的标准 MOQ 是单规格 500 件起。若仅需散装白盒简易包装，MOQ 可降至 300 件。生产交期通常在收到定金及包装设计定稿后的 25 到 35 天。"
+              },
+              {
+                q: "如何保证运送到国外亚马逊 FBA 仓库的包装与条码合规？",
+                a: "我们为大量在线卖家提供 FBA-Ready 包装支持。我们会将您的 FNSKU/UPC 条码以 300DPI 分辨率直接印于彩盒上，或使用耐磨涂层标签进行手工贴标。并在每箱贴附标准警告标签及纸箱标，确保 100% 顺利扫码入仓。"
+              },
+              {
+                q: "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
+                a: "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4&quot; 铁柄或六角快速接头的夹持盘和迷你抛光磨头。"
+              },
+              {
+                q: "砂纸和砂网有什么区别？我们如何为客户选择？",
+                a: "传统砂纸适用于木工常规打磨及汽车漆面抛光，干湿两用乳胶纸基具有很好的柔韧度；而网格砂网由玻璃纤维编织而成，双面涂覆碳化硅，具有极好的防堵塞排灰性能，常用于大面积石膏板墙面打磨，可配合吸尘设备实现无尘作业。"
+              },
+              {
+                q: "你们可以提供免费的样品测试吗？",
+                a: "可以。我们为经过核实的五金商户、工具品牌商及大型零售卖家提供免费的样品评估包。您可以通过我们网站上的样品申领表格选择需要的布轮规格、目数。国际快递费用（DHL/FedEx）需由买家承担，但此费用将在后续的第一笔大货合同中 100% 予以扣减。"
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.scottchentools.com/zh#faqpage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "你们抛光轮的最小起订量 (MOQ) 是多少？交期多久？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "对于台磨机适用的标准棉布轮、气道布轮及带柄砂轮，定制零售彩盒或泡壳彩卡的标准 MOQ 是单规格 500 件起。若仅需散装白盒简易包装，MOQ 可降至 300 件。生产交期通常在收到定金及包装设计定稿后的 25 到 35 天。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "如何保证运送到国外亚马逊 FBA 仓库的包装与条码合规？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "我们为大量在线卖家提供 FBA-Ready 包装支持。我们会将您的 FNSKU/UPC 条码以 300DPI 分辨率直接印于彩盒上，或使用耐磨涂层标签进行手工贴标。并在每箱贴附标准警告标签及纸箱标，确保 100% 顺利扫码入仓。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4\" 铁柄或六角快速接头的夹持盘 and 迷你抛光磨头。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "砂纸和砂网有什么区别？我们如何为客户选择？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "传统砂纸适用于木工常规打磨及汽车漆面抛光，干湿两用乳胶纸基具有很好的柔韧度；而网格砂网由玻璃纤维编织而成，双面涂覆碳化硅，具有极好的防堵塞排灰性能，常用于大面积石膏板墙面打磨，可配合吸尘设备实现无尘作业。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "你们可以提供免费的样品测试吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可以。我们为经过核实的五金商户、工具品牌商及大型零售卖家提供免费的样品评估包。您可以通过我们网站上的样品申领表格选择需要的布轮规格、目数。国际快递费用（DHL/FedEx）需由买家承担，但此费用将在后续的第一笔大货合同中 100% 予以扣减。"
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Persistent CTA Banner */}
+      <CTASection />
+    </div>
+  );
+}

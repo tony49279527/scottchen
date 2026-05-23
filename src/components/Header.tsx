@@ -8,13 +8,34 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname() || "";
 
-  const navItems = [
-    { name: "Products", href: "/products" },
-    { name: "OEM Solutions", href: "/oem-private-label" },
-    { name: "Applications", href: "/applications" },
-    { name: "Quality Control", href: "/quality-control" },
-    { name: "Sample Kit", href: "/sample-kit" },
-  ];
+  const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+
+  const navItems = isZh
+    ? [
+        { name: "产品目录", href: "/zh/products" },
+        { name: "OEM定制", href: "/zh/oem-private-label" },
+        { name: "应用场景", href: "/zh/applications" },
+        { name: "质量控制", href: "/zh/quality-control" },
+        { name: "样品申领", href: "/zh/sample-kit" },
+      ]
+    : [
+        { name: "Products", href: "/products" },
+        { name: "OEM Solutions", href: "/oem-private-label" },
+        { name: "Applications", href: "/applications" },
+        { name: "Quality Control", href: "/quality-control" },
+        { name: "Sample Kit", href: "/sample-kit" },
+      ];
+
+  const getLanguageToggleLink = (targetLang: "en" | "zh") => {
+    if (targetLang === "zh") {
+      if (isZh) return pathname;
+      return `/zh${pathname === "/" ? "" : pathname}`;
+    } else {
+      if (!isZh) return pathname;
+      const cleanPath = pathname.replace(/^\/zh/, "");
+      return cleanPath === "" ? "/" : cleanPath;
+    }
+  };
 
   const isActive = (path: string) => pathname === path || (path !== "/" && pathname.startsWith(path));
 
@@ -59,13 +80,28 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA & Contact info */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* CTA & Contact info & Lang Switcher */}
+          <div className="hidden md:flex items-center space-x-6">
+            <div className="flex items-center space-x-2 text-xs font-mono border border-industry-slate-800/80 bg-industry-slate-900/60 px-2.5 py-1.5 rounded-md">
+              <Link
+                href={getLanguageToggleLink("en")}
+                className={`transition-colors hover:text-white ${!isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+              >
+                EN
+              </Link>
+              <span className="text-industry-slate-800">|</span>
+              <Link
+                href={getLanguageToggleLink("zh")}
+                className={`transition-colors hover:text-white ${isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+              >
+                中文
+              </Link>
+            </div>
             <Link
-              href="/contact"
+              href={isZh ? "/zh/contact" : "/contact"}
               className="inline-flex items-center justify-center rounded bg-industry-orange px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
             >
-              Request Quote
+              {isZh ? "在线询盘" : "Request Quote"}
             </Link>
           </div>
 
@@ -107,13 +143,33 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-          <div className="pt-4 border-t border-industry-slate-850">
+          <div className="pt-4 border-t border-industry-slate-850 space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono text-industry-slate-500">{isZh ? "切换语言:" : "Language:"}</span>
+              <div className="flex items-center space-x-3 text-sm font-mono bg-industry-slate-900 border border-industry-slate-800 px-3 py-1 rounded">
+                <Link
+                  href={getLanguageToggleLink("en")}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`transition-colors hover:text-white ${!isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                >
+                  EN
+                </Link>
+                <span className="text-industry-slate-800">|</span>
+                <Link
+                  href={getLanguageToggleLink("zh")}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`transition-colors hover:text-white ${isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                >
+                  中文
+                </Link>
+              </div>
+            </div>
             <Link
-              href="/contact"
+              href={isZh ? "/zh/contact" : "/contact"}
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center rounded bg-industry-orange py-3 text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
             >
-              Request Quote
+              {isZh ? "在线询盘" : "Request Quote"}
             </Link>
           </div>
         </div>

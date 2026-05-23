@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,6 +25,15 @@ const corporateSchema = {
       "name": "SCOTTCHEN",
       "url": "https://www.scottchentools.com/",
       "logo": "https://www.scottchentools.com/images/hero_abrasives_kit.png",
+      "telephone": "+86-21-6100-2008",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 88 Industry Ring Road",
+        "addressLocality": "Shanghai",
+        "addressRegion": "Shanghai",
+        "postalCode": "200120",
+        "addressCountry": "CN"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/scottchen-tools",
         "https://www.youtube.com/hashtag/scottchen"
@@ -31,6 +41,7 @@ const corporateSchema = {
       "contactPoint": [
         {
           "@type": "ContactPoint",
+          "telephone": "+86-21-6100-2008",
           "email": "sales@scottchentools.com",
           "contactType": "B2B Sales",
           "availableLanguage": ["English", "Chinese"]
@@ -44,10 +55,32 @@ const corporateSchema = {
       "image": "https://www.scottchentools.com/images/hero_abrasives_kit.png",
       "url": "https://www.scottchentools.com/",
       "email": "sales@scottchentools.com",
+      "telephone": "+86-21-6100-2008",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "No. 88 Industry Ring Road",
+        "addressLocality": "Shanghai",
+        "addressRegion": "Shanghai",
+        "postalCode": "200120",
         "addressCountry": "CN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.2304,
+        "longitude": 121.4737
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:30",
+        "closes": "18:00"
       }
     }
   ]
@@ -74,6 +107,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow flex flex-col">{children}</main>
           <Footer />
+          <CookieConsent />
         </div>
       </body>
     </html>

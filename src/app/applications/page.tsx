@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/applications",
     languages: {
       "en": "https://www.scottchentools.com/applications",
+      "zh-CN": "https://www.scottchentools.com/zh/applications",
       "x-default": "https://www.scottchentools.com/applications",
     },
   },

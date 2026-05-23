@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/sample-kit",
     languages: {
       "en": "https://www.scottchentools.com/sample-kit",
+      "zh-CN": "https://www.scottchentools.com/zh/sample-kit",
       "x-default": "https://www.scottchentools.com/sample-kit",
     },
   },

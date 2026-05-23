@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     canonical: "https://www.scottchentools.com/quality-control",
     languages: {
       "en": "https://www.scottchentools.com/quality-control",
+      "zh-CN": "https://www.scottchentools.com/zh/quality-control",
       "x-default": "https://www.scottchentools.com/quality-control",
     },
   },

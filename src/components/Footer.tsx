@@ -1,9 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname() || "";
+  const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+
+  const getLanguageToggleLink = (targetLang: "en" | "zh") => {
+    if (targetLang === "zh") {
+      if (isZh) return pathname;
+      return `/zh${pathname === "/" ? "" : pathname}`;
+    } else {
+      if (!isZh) return pathname;
+      const cleanPath = pathname.replace(/^\/zh/, "");
+      return cleanPath === "" ? "/" : cleanPath;
+    }
+  };
 
   return (
     <footer className="bg-industry-slate-950 border-t border-industry-slate-800 text-industry-slate-400 py-12 mt-auto">
@@ -11,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand Info Column */}
           <div className="flex flex-col space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href={isZh ? "/zh" : "/"} className="flex items-center space-x-2">
               <svg
                 className="h-7 w-7 text-industry-orange"
                 fill="none"
@@ -30,7 +44,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-industry-slate-400 leading-relaxed max-w-xs">
-              OEM Abrasive, Sanding & Polishing Accessory Kits for Tool Brands, Hardware Distributors and Online Sellers.
+              {isZh
+                ? "OEM磨料磨具、砂纸及抛光轮定制工具包，面向全球工具品牌、五金分销商和跨境电商卖家。"
+                : "OEM Abrasive, Sanding & Polishing Accessory Kits for Tool Brands, Hardware Distributors and Online Sellers."}
             </p>
             <div className="pt-2 text-xs text-industry-slate-500 font-mono">
               Process: Grind &bull; Sand &bull; Finish &bull; Polish
@@ -39,31 +55,33 @@ export default function Footer() {
 
           {/* Product Categories Column */}
           <div>
-            <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">Abrasive Products</h3>
+            <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">
+              {isZh ? "磨料磨具产品" : "Abrasive Products"}
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/products/buffing-polishing-wheels" className="hover:text-white transition-colors duration-200">
-                  Buffing & Polishing Wheels
+                <Link href={isZh ? "/zh/products/buffing-polishing-wheels" : "/products/buffing-polishing-wheels"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "抛光轮及布轮" : "Buffing & Polishing Wheels"}
                 </Link>
               </li>
               <li>
-                <Link href="/products/buffing-polishing-wheels" className="hover:text-white transition-colors duration-200">
-                  Polishing Wheel Kits
+                <Link href={isZh ? "/zh/products/buffing-polishing-wheels" : "/products/buffing-polishing-wheels"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "气道抛光轮套装" : "Polishing Wheel Kits"}
                 </Link>
               </li>
               <li>
-                <Link href="/products/sanding-grinding-accessories" className="hover:text-white transition-colors duration-200">
-                  Sanding Sheets & Rolls
+                <Link href={isZh ? "/zh/products/sanding-grinding-accessories" : "/products/sanding-grinding-accessories"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "砂纸与砂纸卷" : "Sanding Sheets & Rolls"}
                 </Link>
               </li>
               <li>
-                <Link href="/products/sanding-grinding-accessories" className="hover:text-white transition-colors duration-200">
-                  Grinding & Fiber Discs
+                <Link href={isZh ? "/zh/products/sanding-grinding-accessories" : "/products/sanding-grinding-accessories"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "磨片与锆刚玉砂碟" : "Grinding & Fiber Discs"}
                 </Link>
               </li>
               <li>
-                <Link href="/products/sanding-grinding-accessories" className="hover:text-white transition-colors duration-200">
-                  Detail Sanding Tools
+                <Link href={isZh ? "/zh/products/sanding-grinding-accessories" : "/products/sanding-grinding-accessories"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "精细打磨棒" : "Detail Sanding Tools"}
                 </Link>
               </li>
             </ul>
@@ -71,31 +89,33 @@ export default function Footer() {
 
           {/* Applications Column */}
           <div>
-            <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">Industries & Uses</h3>
+            <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">
+              {isZh ? "行业与应用" : "Industries & Uses"}
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/applications" className="hover:text-white transition-colors duration-200">
-                  Metalworking Prep & Polish
+                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "金属粗磨与去毛刺" : "Metalworking Prep & Polish"}
                 </Link>
               </li>
               <li>
-                <Link href="/applications" className="hover:text-white transition-colors duration-200">
-                  Woodworking & Furniture
+                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "木工打磨与家具翻新" : "Woodworking & Furniture"}
                 </Link>
               </li>
               <li>
-                <Link href="/applications" className="hover:text-white transition-colors duration-200">
-                  Automotive Restoration
+                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "汽车还原与抛光" : "Automotive Restoration"}
                 </Link>
               </li>
               <li>
-                <Link href="/applications" className="hover:text-white transition-colors duration-200">
-                  Online Tool Seller Kits
+                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "电商定制配套方案" : "Online Tool Seller Kits"}
                 </Link>
               </li>
               <li>
-                <Link href="/quality-control" className="hover:text-white transition-colors duration-200">
-                  Quality Control Inspections
+                <Link href={isZh ? "/zh/quality-control" : "/quality-control"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "出厂质检与动态平衡" : "Quality Control Inspections"}
                 </Link>
               </li>
             </ul>
@@ -103,28 +123,36 @@ export default function Footer() {
 
           {/* B2B Inquiries & Channels Column */}
           <div>
-            <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">Direct B2B Channels</h3>
+            <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">
+              {isZh ? "B2B 询盘通道" : "Direct B2B Channels"}
+            </h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors duration-200 block">
-                  <span className="font-semibold text-industry-orange">Request Custom Quote</span>
+                <Link href={isZh ? "/zh/contact" : "/contact"} className="hover:text-white transition-colors duration-200 block">
+                  <span className="font-semibold text-industry-orange">
+                    {isZh ? "在线获取定制报价" : "Request Custom Quote"}
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="/sample-kit" className="hover:text-white transition-colors duration-200 block">
-                  Request Sample Testing Kit
+                <Link href={isZh ? "/zh/sample-kit" : "/sample-kit"} className="hover:text-white transition-colors duration-200 block">
+                  {isZh ? "免费申领样品测试包" : "Request Sample Testing Kit"}
                 </Link>
               </li>
               <li className="pt-2 border-t border-industry-slate-800">
-                <span className="text-xs text-industry-slate-500 block">Email Inquiry:</span>
+                <span className="text-xs text-industry-slate-500 block">
+                  {isZh ? "商业邮件联系:" : "Email Inquiry:"}
+                </span>
                 <a href="mailto:sales@scottchentools.com" className="text-white hover:underline">
                   sales@scottchentools.com
                 </a>
               </li>
               <li>
-                <span className="text-xs text-industry-slate-500 block">Connect on Professional Network:</span>
+                <span className="text-xs text-industry-slate-500 block">
+                  {isZh ? "专业社交网络:" : "Connect on Professional Network:"}
+                </span>
                 <a href="https://www.linkedin.com/company/scottchen-tools" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
-                  LinkedIn Profile &bull; Supply Chain
+                  LinkedIn &bull; Supply Chain
                 </a>
               </li>
               <li>
@@ -141,28 +169,34 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="border-t border-industry-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-industry-slate-500">
-          <div>
-            &copy; {currentYear} SCOTTCHEN. All rights reserved. Industrial supplier of Surface Finishing Accessories.
+          <div className="mb-4 md:mb-0">
+            &copy; {currentYear} SCOTTCHEN. All rights reserved. {isZh ? "磨料磨具及抛光轮专业生产厂家。" : "Industrial supplier of Surface Finishing Accessories."}
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <button 
-              className="hover:text-white cursor-pointer focus:outline-none focus:underline"
-              onClick={() => alert('Scottchen B2B Supply Terms: Standard Incoterms 2020 apply. Contact sales for formal policy agreements.')}
-            >
-              B2B Supply Terms
-            </button>
-            <button 
-              className="hover:text-white cursor-pointer focus:outline-none focus:underline"
-              onClick={() => alert('Scottchen Privacy Policy: We only collect email and corporate details for professional quoting. We do not sell data to third parties.')}
-            >
-              Privacy Statement
-            </button>
-            <button 
-              className="hover:text-white cursor-pointer focus:outline-none focus:underline"
-              onClick={() => alert('Scottchen Anti-CSRF & Data Protection Policy: Sourcing forms are protected. Data processed securely for lead qualification.')}
-            >
-              Anti-CSRF & Data Policy
-            </button>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 items-center justify-center">
+            <div className="flex items-center space-x-2 text-[10px] font-mono border border-industry-slate-800 bg-industry-slate-900/40 px-2 py-1 rounded">
+              <Link
+                href={getLanguageToggleLink("en")}
+                className={`transition-colors hover:text-white ${!isZh ? "text-industry-orange font-bold" : "text-industry-slate-500"}`}
+              >
+                EN
+              </Link>
+              <span className="text-industry-slate-800">|</span>
+              <Link
+                href={getLanguageToggleLink("zh")}
+                className={`transition-colors hover:text-white ${isZh ? "text-industry-orange font-bold" : "text-industry-slate-500"}`}
+              >
+                中文
+              </Link>
+            </div>
+            <Link href="/terms" className="hover:text-white transition-colors">
+              {isZh ? "服务条款" : "Terms of Service"}
+            </Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              {isZh ? "隐私政策" : "Privacy Policy"}
+            </Link>
+            <Link href="/cookie-policy" className="hover:text-white transition-colors">
+              {isZh ? "Cookie 政策" : "Cookie Policy"}
+            </Link>
           </div>
         </div>
       </div>
