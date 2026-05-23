@@ -38,6 +38,15 @@ export default function SampleKit() {
             {/* Right: Sourcing guidelines */}
             <div className="lg:col-span-4 space-y-6">
               
+              <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
+                <img
+                  src="/images/sample_kit.png"
+                  alt="SCOTTCHEN Sample Testing Kit Box"
+                  className="object-cover w-full h-56 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+              </div>
+
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
                   Sample Sourcing FAQs

@@ -66,14 +66,29 @@ export default function ApplicationsOverview() {
     <div className="flex flex-col min-h-screen">
       {/* Page header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-left">
-          <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">APPLICATION WORKFLOWS</span>
-          <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-            Scenario-Specific Surface Finishing
-          </h1>
-          <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
-            We build accessory combinations matched to specific substrates. Align your catalog with the exact workflows of your target buyers.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7 text-left">
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">APPLICATION WORKFLOWS</span>
+              <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
+                Scenario-Specific Surface Finishing
+              </h1>
+              <p className="mt-4 text-base text-industry-slate-400 leading-relaxed">
+                We build accessory combinations matched to specific substrates. Align your catalog with the exact workflows of your target buyers.
+              </p>
+            </div>
+            
+            <div className="lg:col-span-5 hidden lg:block">
+              <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
+                <img
+                  src="/images/applications_banner.png"
+                  alt="Industrial finishing application scenarios"
+                  className="object-cover w-full h-48 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
