@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation.",
   alternates: {
     canonical: "https://www.scottchentools.com/quality-control",
+    languages: {
+      "en": "https://www.scottchentools.com/quality-control",
+      "x-default": "https://www.scottchentools.com/quality-control",
+    },
   },
 };
 
@@ -74,6 +78,53 @@ export default function QualityControl() {
             >
               Order Quality Samples
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">Quality Inspection Standards</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Rigorous manufacturing verification, dimensional tolerances, and ecommerce labeling QA.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Precision Machined Arbors:</strong> Center bore sizing limits kept strictly within a &plusmn;0.05 mm range to prevent dangerous spindle vibration.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Dynamic Balance Checks:</strong> Grinding discs and drill arbors tested at 1.5x operating speed for dynamic stability and user safety.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Grit Calibration:</strong> Optical checks prevent grain contamination in sandpaper, ensuring scratch-free finishes on high-gloss jobs.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Labeling & Audit Support:</strong> Barcode scanners test print contrast of retail/FBA stickers. Third-party testing companies (SGS, TUV) welcomed.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -171,6 +222,107 @@ export default function QualityControl() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Technical tolerance boundaries, material test reports, and quality checking methodologies.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is your standard inner bore diameter tolerance on polishing wheels?",
+                a: "We maintain a strict &plusmn;0.05 mm center-hole tolerance limit for all industrial and retail wheels. This ensures a flush, tight fit on bench grinder shafts or drill adapters, eliminating rotational wobbling and minimizing friction vibration at high operating speeds."
+              },
+              {
+                q: "How do you verify the density and ply count of cotton polishing wheels?",
+                a: "Each production run undergoes structural weight and ply count verification. Plies are counted manually and double-checked against dynamic width guidelines under compression. This ensures the wheels meet the exact catalog thickness (e.g., 30 Ply, 40 Ply, 50 Ply) without hollow spacing."
+              },
+              {
+                q: "Do you run speed tests on grinding and fiber discs to prevent safety failures?",
+                a: "Yes. All zirconia grinding and fiber discs are subjected to rotational stress checking. We randomly test production batches at 1.5 times the maximum rated RPM to verify safety parameters and check that grain-bonding resin does not crack under heat."
+              },
+              {
+                q: "How do you prevent grit contamination in sandpapers and polishing compounds?",
+                a: "We maintain isolated milling and mixing environments for coarse and fine grit materials. Raw silicon carbide and aluminum oxide grains are optically filtered. We inspect grit surfaces under magnification to confirm that zero larger grains compromise fine polishing batches."
+              },
+              {
+                q: "Can we hire third-party inspection firms to audit the shipment before loading?",
+                a: "Absolutely. Sourcing managers can schedule SGS, TUV, V-Trust, or any certified local testing agent to inspect inventory in our warehouses. We provide access to checking equipment and provide full internal test logs with every shipment."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.scottchentools.com/quality-control#faqpage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is your standard inner bore diameter tolerance on polishing wheels?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We maintain a strict &plusmn;0.05 mm center-hole tolerance limit for all industrial and retail wheels. This ensures a flush, tight fit on bench grinder shafts or drill adapters, eliminating rotational wobbling and minimizing friction vibration at high operating speeds."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you verify the density and ply count of cotton polishing wheels?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Each production run undergoes structural weight and ply count verification. Plies are counted manually and double-checked against dynamic width guidelines under compression. This ensures the wheels meet the exact catalog thickness (e.g., 30 Ply, 40 Ply, 50 Ply) without hollow spacing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you run speed tests on grinding and fiber discs to prevent safety failures?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. All zirconia grinding and fiber discs are subjected to rotational stress checking. We randomly test production batches at 1.5 times the maximum rated RPM to verify safety parameters and check that grain-bonding resin does not crack under heat."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you prevent grit contamination in sandpapers and polishing compounds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We maintain isolated milling and mixing environments for coarse and fine grit materials. Raw silicon carbide and aluminum oxide grains are optically filtered. We inspect grit surfaces under magnification to confirm that zero larger grains compromise fine polishing batches."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can we hire third-party inspection firms to audit the shipment before loading?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. Sourcing managers can schedule SGS, TUV, V-Trust, or any certified local testing agent to inspect inventory in our warehouses. We provide access to checking equipment and provide full internal test logs with every shipment."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

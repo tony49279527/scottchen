@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
   alternates: {
     canonical: "https://www.scottchentools.com/products",
+    languages: {
+      "en": "https://www.scottchentools.com/products",
+      "x-default": "https://www.scottchentools.com/products",
+    },
   },
 };
 
@@ -108,6 +112,53 @@ export default function ProductsOverview() {
         </div>
       </section>
 
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">Catalog Parameters</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Consolidated technical and compliance checklist for global procurement managers.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Product Families:</strong> Concentrated B2B supply of cotton buffing wheels, sanding rolls, open-mesh screens, and zirconia fiber grinding discs.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Standard MOQs:</strong> Polishing wheels: 500 pcs; compound kits: 500 sets; sandpapers: 10,000 sheets; fiber discs: 2,000 pcs/grit.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Packaging Configurations:</strong> Pre-assembled grit sleeves, kraft dispenser boxes, double blisters, or FBA shrink cartons.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Import Readiness:</strong> Complete barcode labels (FNSKU/UPC), custom warnings, and third-party QA pre-shipment clearance.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Catalog Matrix */}
       <section className="py-16 bg-industry-slate-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -178,6 +229,94 @@ export default function ProductsOverview() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Technical compliance parameters, customization specs, and shipment logistics details for bulk importers.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What options do you support for custom catalog configurations?",
+                a: "We allow complete customization of B2B kit configurations. Sourcing agents can determine specific ply counts for cotton buffing wheels, select compound wax bars by chemical formulations, and bundle diverse sandpaper grits (from P60 to P2500) within a single color box or blister layout."
+              },
+              {
+                q: "What testing certificates do you provide for grinding and fiber discs?",
+                a: "All zirconia grinding and fiber discs are subjected to speed stress evaluations up to 1.5x of operating rating. We provide dynamic balance spindle check sheets and grit distribution reports with every shipment batch."
+              },
+              {
+                q: "How do you prevent layout shifts and damage to custom color boxes?",
+                a: "We pack retail bundles using double-walled corrugated shipping cartons, with corner guards and heavy poly-strapping. We support full wood or plastic palletization with shrink-wrap bands for export container shipments."
+              },
+              {
+                q: "Do you support custom bore/arbor hole size inserts?",
+                a: "Yes. We offer standard telescoping cardboard inserts, brass arbors, and zinc flange plates. Sizing options include 1/2\", 5/8\", 3/4\", and 1\" bore diameters, as well as 1/4\" round and hex shanks for impact drills."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What options do you support for custom catalog configurations?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We allow complete customization of B2B kit configurations. Sourcing agents can determine specific ply counts for cotton buffing wheels, select compound wax bars by chemical formulations, and bundle diverse sandpaper grits (from P60 to P2500) within a single color box or blister layout."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What testing certificates do you provide for grinding and fiber discs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "All zirconia grinding and fiber discs are subjected to speed stress evaluations up to 1.5x of operating rating. We provide dynamic balance spindle check sheets and grit distribution reports with every shipment batch."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you prevent layout shifts and damage to custom color boxes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We pack retail bundles using double-walled corrugated shipping cartons, with corner guards and heavy poly-strapping. We support full wood or plastic palletization with shrink-wrap bands for export container shipments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you support custom bore/arbor hole size inserts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We offer standard telescoping cardboard inserts, brass arbors, and zinc flange plates. Sizing options include 1/2\", 5/8\", 3/4\", and 1\" bore diameters, as well as 1/4\" round and hex shanks for impact drills."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

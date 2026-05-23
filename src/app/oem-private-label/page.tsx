@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits.",
   alternates: {
     canonical: "https://www.scottchentools.com/oem-private-label",
+    languages: {
+      "en": "https://www.scottchentools.com/oem-private-label",
+      "x-default": "https://www.scottchentools.com/oem-private-label",
+    },
   },
 };
 
@@ -79,6 +83,53 @@ export default function OEMPrivateLabel() {
             >
               Order Sample Pack
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">OEM Capabilities</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Logistics, branding capabilities, and compliance standards for custom-packaged kits.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Configurable Bundles:</strong> Combine buffing wheels, compound bars, sandpapers, arbors, or detail sticks into workflow-specific kits.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Retail-Ready Packaging:</strong> Select double blister packs, corrugated boxes, eco-friendly kraft wraps, or hang-tag bags.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>100% Barcode Compliance:</strong> Pre-applied FNSKU, UPC, and regulatory warnings with verified scannability to prevent FBA receipt errors.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Fulfillment Sourcing:</strong> Low MOQ of 500 sets for custom combinations, 25-35 day production, and direct shipping options to international hubs.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -207,6 +258,107 @@ export default function OEMPrivateLabel() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Private label packaging rules, barcode compatibility, lead times, and shipping processes for B2B distributors.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is the typical minimum order quantity (MOQ) for custom private label kits?",
+                a: "Our standard MOQ is 500 sets for custom-configured kits (e.g., buffing wheels paired with compounds in a custom box) and 1,000 sets for blister card setups. This lower MOQ threshold helps online sellers launch new product variations with minimized stock investment."
+              },
+              {
+                q: "Do you supply free packaging dielines and design structural mockups?",
+                a: "Yes. Once a custom kit configuration is selected, our engineers provide detailed CAD packaging dieline templates (PDF/DXF format) for your designer to layout the artwork. We also offer physical and digital mockups for validation before launching mass production."
+              },
+              {
+                q: "How do you guarantee barcode scannability and compliance for Amazon FBA warehouses?",
+                a: "We test all printed barcodes (UPC, FNSKU, ASIN) with specialized scanner hardware to ensure high readability scores under standard warehouse lighting. Barcodes are printed with high-resolution ink directly on the package, or on premium smudge-resistant synthetic stickers."
+              },
+              {
+                q: "What options do you support for multi-language instruction manuals and packaging inserts?",
+                a: "We support full-color offset printing for product warning sheets, step-by-step polishing guides, and Grit-to-Substrate charts. Standard inserts are printed on 128gsm glossy art paper, folded to fit neatly into the blister cavity or color box."
+              },
+              {
+                q: "Can you ship custom kits directly to international fulfillment centers (DDP)?",
+                a: "Yes. We offer complete logistics coordination, including LCL/FCL ocean freight, air cargo, and door-to-door courier services (DDU/DDP terms) directly to Amazon FBA fulfillment centers or regional distributor warehouses worldwide, including barcode labelling and customs prep."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.scottchentools.com/oem-private-label#faqpage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the typical minimum order quantity (MOQ) for custom private label kits?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our standard MOQ is 500 sets for custom-configured kits (e.g., buffing wheels paired with compounds in a custom box) and 1,000 sets for blister card setups. This lower MOQ threshold helps online sellers launch new product variations with minimized stock investment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you supply free packaging dielines and design structural mockups?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Once a custom kit configuration is selected, our engineers provide detailed CAD packaging dieline templates (PDF/DXF format) for your designer to layout the artwork. We also offer physical and digital mockups for validation before launching mass production."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you guarantee barcode scannability and compliance for Amazon FBA warehouses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We test all printed barcodes (UPC, FNSKU, ASIN) with specialized scanner hardware to ensure high readability scores under standard warehouse lighting. Barcodes are printed with high-resolution ink directly on the package, or on premium smudge-resistant synthetic stickers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What options do you support for multi-language instruction manuals and packaging inserts?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We support full-color offset printing for product warning sheets, step-by-step polishing guides, and Grit-to-Substrate charts. Standard inserts are printed on 128gsm glossy art paper, folded to fit neatly into the blister cavity or color box."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you ship custom kits directly to international fulfillment centers (DDP)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We offer complete logistics coordination, including LCL/FCL ocean freight, air cargo, and door-to-door courier services (DDU/DDP terms) directly to Amazon FBA fulfillment centers or regional distributor warehouses worldwide, including barcode labelling and customs prep."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

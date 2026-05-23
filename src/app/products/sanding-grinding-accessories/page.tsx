@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "Buy bulk sandpaper sheets, silicone carbide screens, zirconia grinding discs, mini sanding sticks, and custom abrasive dispenser kits. Standard B2B MOQ parameters.",
   alternates: {
     canonical: "https://www.scottchentools.com/products/sanding-grinding-accessories",
+    languages: {
+      "en": "https://www.scottchentools.com/products/sanding-grinding-accessories",
+      "x-default": "https://www.scottchentools.com/products/sanding-grinding-accessories",
+    },
   },
 };
 
@@ -96,6 +100,53 @@ export default function SandingGrindingAccessories() {
             >
               Get Sample Abrasive Kit
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">Abrasives Specifications</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Consolidated technical parameters, backing weights, and packaging MOQs for volume buyers.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Full Grit Spectrum:</strong> Dry/wet sandpaper from coarse P60 to ultra-fine P2500, with dynamic latex paper or tear-resistant cloth backings.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Heavy Duty Discs:</strong> Vulcanized zirconia fiber grinding discs with 7/8&quot; bore holes and center star hubs for standard angle grinders.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Clog-Free mesh:</strong> Fiberglass open-weave drywall screens coated on both sides with premium silicon carbide to prevent compound loading.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Volume MOQs:</strong> 10,000 sheets for sandpaper, 5,000 pcs for fiber discs, and 1,000 sets for dispenser boxes or detail sticks. Lead time: 20-30 days.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -309,6 +360,167 @@ export default function SandingGrindingAccessories() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Technical parameters, backing weights, grain types, and logistics for B2B sanding and grinding accessories.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What backing weights and materials are available for Scottchen sandpaper sheets?",
+                a: "We offer C-weight latex-impregnated paper backing for wet/dry hand sanding sheets (which prevents tearing when soaked), and heavy J-weight flexible cotton cloth backing for sander rolls, ensuring higher tensile strength during contour sanding and machine operation."
+              },
+              {
+                q: "Why do you use silicon carbide for drywall sanding screens instead of aluminum oxide?",
+                a: "Silicon carbide grains are harder and fracture under pressure to expose fresh, sharp cutting edges. The sharp grain profile combined with the open-weave fiberglass mesh prevents clogging from gypsum plaster, allowing dust to pass through easily while maintaining a fast, flat cut."
+              },
+              {
+                q: "What center hole dimensions and backing options do you support for grinding discs?",
+                a: "Our zirconia fiber discs come in standard 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) arbor hole. Sourcing agents can choose either a standard circular bore or a pre-cut star center hub. All discs are bonded on 0.8mm thick vulcanized fiber backing for maximum structural stability."
+              },
+              {
+                q: "Can we mix multiple grits in a custom-labeled dispenser box?",
+                a: "Yes. Our workshop sanding dispenser kits are customizable. You can specify a custom assortment of 4 or 5 sandpaper rolls (e.g., P150, P240, P320, P400) inside a single cardboard container with a metal tearing edge. We apply your private label design, warning logos, and UPC barcodes directly to the box."
+              },
+              {
+                q: "What is the minimum order quantity (MOQ) for detail sanding sticks?",
+                a: "For our spring-tensioned detail sanding sticks and replacement micro-grit belts, the standard MOQ is 1,000 retail packs. Each pack typically includes 1 detail stick and a customized selection of 15 replacement belts spanning different grits."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": "https://www.scottchentools.com/products/sanding-grinding-accessories#productgroup",
+                "name": "SCOTTCHEN Sanding & Grinding Accessories Catalog",
+                "description": "Industrial-grade abrasives including latex-backed wet/dry sandpaper sheets, non-clogging silicon carbide drywall sanding screens, zirconia fiber discs, and detail sanding rods.",
+                "url": "https://www.scottchentools.com/products/sanding-grinding-accessories",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "SCOTTCHEN"
+                },
+                "manufacturer": {
+                  "@type": "Organization",
+                  "name": "SCOTTCHEN"
+                },
+                "hasVariant": [
+                  {
+                    "@type": "Product",
+                    "name": "Latex Wet/Dry Sandpaper Sheets",
+                    "description": "Premium silicon carbide sheets on latex C-weight backing for automotive styling and wet prep.",
+                    "sku": "SC-SANDPAPER-SHEETS",
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "USD",
+                      "lowPrice": "0.12",
+                      "highPrice": "0.35",
+                      "offerCount": "12"
+                    }
+                  },
+                  {
+                    "@type": "Product",
+                    "name": "Zirconia Vulcanized Fiber Grinding Discs",
+                    "description": "Heavy weld-leveling zirconia discs with 7/8-inch star hubs on 0.8mm vulcanized backing.",
+                    "sku": "SC-ZIRCONIA-DISCS",
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "USD",
+                      "lowPrice": "0.22",
+                      "highPrice": "0.85",
+                      "offerCount": "8"
+                    }
+                  },
+                  {
+                    "@type": "Product",
+                    "name": "Fiberglass Mesh Drywall Sanding Screens",
+                    "description": "Double-sided silicon carbide mesh sheets for clog-free dust-extracted drywall sanding.",
+                    "sku": "SC-DRYWALL-MESH",
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "USD",
+                      "lowPrice": "0.15",
+                      "highPrice": "0.45",
+                      "offerCount": "6"
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "@id": "https://www.scottchentools.com/products/sanding-grinding-accessories#faqpage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What backing weights and materials are available for Scottchen sandpaper sheets?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer C-weight latex-impregnated paper backing for wet/dry hand sanding sheets (which prevents tearing when soaked), and heavy J-weight flexible cotton cloth backing for sander rolls, ensuring higher tensile strength during contour sanding and machine operation."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Why do you use silicon carbide for drywall sanding screens instead of aluminum oxide?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Silicon carbide grains are harder and fracture under pressure to expose fresh, sharp cutting edges. The sharp grain profile combined with the open-weave fiberglass mesh prevents clogging from gypsum plaster, allowing dust to pass through easily while maintaining a fast, flat cut."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What center hole dimensions and backing options do you support for grinding discs?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our zirconia fiber discs come in standard 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) arbor hole. Sourcing agents can choose either a standard circular bore or a pre-cut star center hub. All discs are bonded on 0.8mm thick vulcanized fiber backing for maximum structural stability."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can we mix multiple grits in a custom-labeled dispenser box?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. Our workshop sanding dispenser kits are customizable. You can specify a custom assortment of 4 or 5 sandpaper rolls (e.g., P150, P240, P320, P400) inside a single cardboard container with a metal tearing edge. We apply your private label design, warning logos, and UPC barcodes directly to the box."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the minimum order quantity (MOQ) for detail sanding sticks?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "For our spring-tensioned detail sanding sticks and replacement micro-grit belts, the standard MOQ is 1,000 retail packs. Each pack typically includes 1 detail stick and a customized selection of 15 replacement belts spanning different grits."
+                    }
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

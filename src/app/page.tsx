@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "SCOTTCHEN manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
   alternates: {
     canonical: "https://www.scottchentools.com/",
+    languages: {
+      "en": "https://www.scottchentools.com/",
+      "x-default": "https://www.scottchentools.com/",
+    },
   },
 };
 
@@ -138,6 +142,53 @@ export default function Home() {
                     <span className="text-industry-orange font-bold">RETAIL PACKAGING READY</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-800/60">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800/80 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">Sourcing Snapshot</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Fast checklist for tool brand procurement, importers, and hardware distributors.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Flexible MOQs:</strong> Starting at 500 sets for custom kits; bulk components from 500 pcs.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Fulfillment Ready:</strong> Complete private labeling, FNSKU barcodes, and carton packaging for FBA.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Proven QC:</strong> Bore tolerances within &plusmn;0.05 mm; dynamic balancing up to 13,000 RPM.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Global Supply:</strong> Standard B2B lead times of 20-35 days via FOB, CIF, or DDP courier modes.</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -484,6 +535,118 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B INQUIRIES & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Clear technical guidelines, shipping metrics, and minimum order compliance snapshots for sourcing buyers.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is the minimum order quantity (MOQ) for custom private label kits?",
+                a: "Our MOQ starts at 500 sets for custom combined kits (e.g. custom combined buffing wheels, compound wax bars, and sanding adapter arbors in a single box). For bulk raw component sourcing, MOQs start from 500 pcs per size or 10,000 sheets for sandpaper sheets."
+              },
+              {
+                q: "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
+                a: "Yes, we are a direct manufacturer specializing in FBA compliance. We print and apply FNSKU barcode labels directly, bundle instruction sheets, print safety cards, and structure outbound shipping cartons to meet Amazon warehouse rules."
+              },
+              {
+                q: "Can I request physical samples for laboratory testing before ordering?",
+                a: "Yes. We offer free product samples to verified commercial businesses (tool brands, distributors, retail store chains). Shipping courier freight fees apply and are fully credited back upon the first bulk contract agreement."
+              },
+              {
+                q: "What quality tolerances do you guarantee for buffing wheels?",
+                a: "We maintain arbor hole inner diameter tolerances within ±0.05 mm to prevent wheel wobbling or vibration on bench grinders. All wheel plies (up to 60 ply) are stitched with high-tensile thread and balanced for safety."
+              },
+              {
+                q: "What is your standard B2B production lead time?",
+                a: "Standard production lead time is 25 to 35 days for custom private label kits, and 20 days for raw bulk catalog items, following advance payment and artwork packaging approvals."
+              },
+              {
+                q: "What shipping terms and export ports do you support?",
+                a: "We support FOB, CIF, and door-to-door DDP courier options. Most cargo is shipped via Shanghai or Ningbo ports. We handle custom declarations, export clearances, and logistics container loading."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the minimum order quantity (MOQ) for custom private label kits?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our MOQ starts at 500 sets for custom combined kits (e.g. custom combined buffing wheels, compound wax bars, and sanding adapter arbors in a single box). For bulk raw component sourcing, MOQs start from 500 pcs per size or 10,000 sheets for sandpaper sheets."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we are a direct manufacturer specializing in FBA compliance. We print and apply FNSKU barcode labels directly, bundle instruction sheets, print safety cards, and structure outbound shipping cartons to meet Amazon warehouse rules."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I request physical samples for laboratory testing before ordering?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We offer free product samples to verified commercial businesses (tool brands, distributors, retail store chains). Shipping courier freight fees apply and are fully credited back upon the first bulk contract agreement."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What quality tolerances do you guarantee for buffing wheels?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We maintain arbor hole inner diameter tolerances within ±0.05 mm to prevent wheel wobbling or vibration on bench grinders. All wheel plies (up to 60 ply) are stitched with high-tensile thread and balanced for safety."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is your standard B2B production lead time?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard production lead time is 25 to 35 days for custom private label kits, and 20 days for raw bulk catalog items, following advance payment and artwork packaging approvals."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What shipping terms and export ports do you support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We support FOB, CIF, and door-to-door DDP courier options. Most cargo is shipped via Shanghai or Ningbo ports. We handle custom declarations, export clearances, and logistics container loading."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

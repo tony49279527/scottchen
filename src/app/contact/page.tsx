@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description: "Contact SCOTTCHEN to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools.",
   alternates: {
     canonical: "https://www.scottchentools.com/contact",
+    languages: {
+      "en": "https://www.scottchentools.com/contact",
+      "x-default": "https://www.scottchentools.com/contact",
+    },
   },
 };
 

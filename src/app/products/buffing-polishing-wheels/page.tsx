@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500.",
   alternates: {
     canonical: "https://www.scottchentools.com/products/buffing-polishing-wheels",
+    languages: {
+      "en": "https://www.scottchentools.com/products/buffing-polishing-wheels",
+      "x-default": "https://www.scottchentools.com/products/buffing-polishing-wheels",
+    },
   },
 };
 
@@ -67,6 +71,53 @@ export default function BuffingPolishingWheels() {
             >
               Get Sample Wheel Kit
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">Buffing Wheel Specifications</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Key procurement, sizing, and compatibility details for wholesale polishing wheel orders.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Calibrated Ply & Sizes:</strong> Available from 3&quot; to 10&quot; diameters, with ply options ranging from 30 Ply to 80 Ply for varied polishing aggressiveness.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Flexible Bore Configuration:</strong> Standard 1/2&quot;, 5/8&quot;, 3/4&quot;, and 1&quot; telescoping arbor hole inserts, plus 1/4&quot; hex/round shanks for drill mounts.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Compound Synergy:</strong> Custom-formulated wax-binded color compound bars (Green Chrome, White Rouge, Red Tripoli, Black Emery) in 100g to 500g sizes.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Logistics & MOQs:</strong> 500 pcs for standard wheels, 1,000 pcs for shank buffers, with a 25-35 day batch lead time. Free samples available.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -278,6 +329,167 @@ export default function BuffingPolishingWheels() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Technical specifications, material grades, and customization logistics for B2B polishing wheel bulk orders.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is the difference between spiral-stitched and loose-flannel buffing wheels?",
+                a: "Spiral-stitched buffing wheels feature concentric circles of heavy-duty stitching, creating a rigid surface suited for medium-to-heavy cut polishing and metal prep. Loose-flannel wheels are only stitched at the arbor center, allowing the soft cotton layers to flare out, which is perfect for ultra-high gloss coloring and mirror-finishing on soft metals, plastics, or jewelry."
+              },
+              {
+                q: "How do I match Scottchen buffing wheels with the correct compound bar color?",
+                a: "For heavy metal cutting and oxidation removal, use our Black Emery compound with spiral-stitched wheels. For medium cutting on brass or copper, use Red Tripoli compound. White Rouge is designed for high-gloss coloring on steel, chrome, and hard metals, while Green Chromium Oxide is used for final mirror finishes on stainless steel and aluminum, typically paired with soft loose flannel wheels."
+              },
+              {
+                q: "Do you supply telescoping arbor hole inserts and custom shanks?",
+                a: "Yes. Our standard bench grinder wheels feature telescoping plastic inserts that support 1/2\", 5/8\", 3/4\", and 1\" arbor spindles. For hand drills and impact drivers, we supply buffing accessories with pre-mounted, non-slip 1/4\" hex shanks or round arbors, dynamically balanced to prevent vibration at high RPMs."
+              },
+              {
+                q: "What are the standard packaging options for retail-ready distribution?",
+                a: "We offer heat-sealed shrink wrap with barcode labels, double-sided blister cards, and custom-printed high-density color boxes. All packaging can be pre-printed with your logo, custom warnings, usage instructions, and FNSKU/UPC barcodes, meeting complete retail or Amazon FBA compliance rules."
+              },
+              {
+                q: "What is the typical minimum order quantity (MOQ) and production lead time?",
+                a: "Our standard MOQ is 500 pieces per size for bench grinder buffing wheels, and 1,000 pieces per shape for shank-mounted drill buffing pads. Batch production typically takes 25 to 35 days, depending on custom branding requirements. Free pre-production samples are available for quality verification."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": "https://www.scottchentools.com/products/buffing-polishing-wheels#productgroup",
+                "name": "SCOTTCHEN Buffing & Polishing Wheels Catalog",
+                "description": "Industrial-grade cotton buffing wheels, spiral stitched polishing pads, loose flannel wheels, and compound bars. Tailored for metal restoration, automotive deburring, and catalog distribution.",
+                "url": "https://www.scottchentools.com/products/buffing-polishing-wheels",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "SCOTTCHEN"
+                },
+                "manufacturer": {
+                  "@type": "Organization",
+                  "name": "SCOTTCHEN"
+                },
+                "hasVariant": [
+                  {
+                    "@type": "Product",
+                    "name": "Spiral Stitched Cotton Buffing Wheel",
+                    "description": "Concentric stitched, high-tensile cotton wheel for aggressive cutting and heavy metal prep.",
+                    "sku": "SC-SPIRAL-COTTON",
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "USD",
+                      "lowPrice": "1.10",
+                      "highPrice": "4.50",
+                      "offerCount": "15"
+                    }
+                  },
+                  {
+                    "@type": "Product",
+                    "name": "Loose Cotton Flannel Coloring Wheel",
+                    "description": "Fine-weave loose flannel wheel for final coloring, coloring trim, and mirror finishes.",
+                    "sku": "SC-LOOSE-FLANNEL",
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "USD",
+                      "lowPrice": "0.90",
+                      "highPrice": "3.80",
+                      "offerCount": "10"
+                    }
+                  },
+                  {
+                    "@type": "Product",
+                    "name": "Shank Mounted Drill Buffing Wheels",
+                    "description": "1/4-inch hex shank mounted mushroom, dome, cylindrical and goblet shapes for recessed polishing.",
+                    "sku": "SC-SHANK-BUFFER",
+                    "offers": {
+                      "@type": "AggregateOffer",
+                      "priceCurrency": "USD",
+                      "lowPrice": "0.75",
+                      "highPrice": "2.20",
+                      "offerCount": "20"
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "@id": "https://www.scottchentools.com/products/buffing-polishing-wheels#faqpage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is the difference between spiral-stitched and loose-flannel buffing wheels?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Spiral-stitched buffing wheels feature concentric circles of heavy-duty stitching, creating a rigid surface suited for medium-to-heavy cut polishing and metal prep. Loose-flannel wheels are only stitched at the arbor center, allowing the soft cotton layers to flare out, which is perfect for ultra-high gloss coloring and mirror-finishing on soft metals, plastics, or jewelry."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How do I match Scottchen buffing wheels with the correct compound bar color?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "For heavy metal cutting and oxidation removal, use our Black Emery compound with spiral-stitched wheels. For medium cutting on brass or copper, use Red Tripoli compound. White Rouge is designed for high-gloss coloring on steel, chrome, and hard metals, while Green Chromium Oxide is used for final mirror finishes on stainless steel and aluminum, typically paired with soft loose flannel wheels."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you supply telescoping arbor hole inserts and custom shanks?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. Our standard bench grinder wheels feature telescoping plastic inserts that support 1/2\", 5/8\", 3/4\", and 1\" arbor spindles. For hand drills and impact drivers, we supply buffing accessories with pre-mounted, non-slip 1/4\" hex shanks or round arbors, dynamically balanced to prevent vibration at high RPMs."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are the standard packaging options for retail-ready distribution?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer heat-sealed shrink wrap with barcode labels, double-sided blister cards, and custom-printed high-density color boxes. All packaging can be pre-printed with your logo, custom warnings, usage instructions, and FNSKU/UPC barcodes, meeting complete retail or Amazon FBA compliance rules."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the typical minimum order quantity (MOQ) and production lead time?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our standard MOQ is 500 pieces per size for bench grinder buffing wheels, and 1,000 pieces per shape for shank-mounted drill buffing pads. Batch production typically takes 25 to 35 days, depending on custom branding requirements. Free pre-production samples are available for quality verification."
+                    }
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner (Bottom CTA area) */}
       <CTASection />

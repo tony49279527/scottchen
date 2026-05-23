@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description: "Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing.",
   alternates: {
     canonical: "https://www.scottchentools.com/applications",
+    languages: {
+      "en": "https://www.scottchentools.com/applications",
+      "x-default": "https://www.scottchentools.com/applications",
+    },
   },
 };
 
@@ -92,6 +96,53 @@ export default function ApplicationsOverview() {
         </div>
       </section>
 
+      {/* Key Takeaways / B2B Quick Facts */}
+      <section className="py-8 bg-industry-slate-900 border-b border-industry-slate-850">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40 relative">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="md:w-1/3">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
+                <h2 className="text-2xl font-black text-white mt-1">Application Workflows</h2>
+                <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
+                  Tailored accessory configurations for metal, wood, automotive, jewelry, and drywall trades.
+                </p>
+              </div>
+              <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Metalworking Synergy:</strong> Pairing high-stress zirconia fiber discs for weld leveling with spiral-stitched wheels and emery waxes for deburring.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Wood & Drywall:</strong> Clog-free drywall mesh screens (silicon carbide) and J-weight cloth rolls configured for workshop dispenser racks.</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Automotive & Jewelry:</strong> 1/4&quot; hex shank-mounted domes and cylinders for recessed alloy polishing alongside spring-tensioned micro sanding belts.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-industry-slate-200"><strong>Distribution Kits:</strong> Customizable tool pairings in private labeled double blisters or FBA-compliant boxes with low MOQs (500 sets).</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Applications Matrix */}
       <section className="py-16 bg-industry-slate-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -152,6 +203,107 @@ export default function ApplicationsOverview() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-industry-slate-950 border-t border-industry-slate-900">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
+            <p className="mt-4 text-sm text-industry-slate-400">
+              Tool matching, substrate solutions, packaging specs, and bulk configurations for custom applications.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "How do I choose between cotton buffing wheels and zirconia fiber discs for metalworking?",
+                a: "Zirconia fiber discs are engineered for aggressive material removal, weld leveling, and rust grinding. Once the surface is mechanically prepped and flat, cotton buffing wheels paired with abrasive compounds (like Black Emery or White Rouge) are used to deburr, clean, and color the metal to a reflective finish."
+              },
+              {
+                q: "What are the default grit options included in woodworking and sanding paper kits?",
+                a: "For woodworking and refinishing, our kits typically range from coarse P80 and P120 (for shaping and varnish stripping) up to P180, P240, and P320 (for pre-stain grain smoothing). Sourcing agents can customize this mix for their specific market target."
+              },
+              {
+                q: "Are the drywall sanding screens compatible with automated dust-extraction tools?",
+                a: "Yes. Our silicon carbide drywall mesh screens feature an open fiberglass design that allows standard vacuum sanders to draw dust directly through the screen. We cut mesh sheets to standard 9x11\" and 3.25x11\" dimensions to fit popular orbital and manual hand sanders."
+              },
+              {
+                q: "Can we configure automotive wheel-polishing kits with custom shanks and compound weights?",
+                a: "Yes. We offer standard 1/4\" round and hex shank adapter fittings for power drills and impact drivers, and can bundle these with 100g or 250g compound bars. We package these into custom-molded blister packs featuring your branding."
+              },
+              {
+                q: "Do you offer private labeled, application-specific kits for ecommerce store launches?",
+                a: "Yes, this is our specialty. Sourcing managers can define a targeted workflow (like 'Boat Gelcoat Repair' or 'Knife Mirror Polishing') and choose the exact combination of wheels, pads, and abrasives. We provide custom color box packaging with barcodes, pre-sorted and ready for ecommerce fulfillment."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
+                <h3 className="text-base font-bold text-white flex items-start">
+                  <span className="text-industry-orange mr-2 shrink-0">Q:</span>
+                  <span>{faq.q}</span>
+                </h3>
+                <p className="text-sm text-industry-slate-400 mt-2 pl-5 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.scottchentools.com/applications#faqpage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I choose between cotton buffing wheels and zirconia fiber discs for metalworking?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Zirconia fiber discs are engineered for aggressive material removal, weld leveling, and rust grinding. Once the surface is mechanically prepped and flat, cotton buffing wheels paired with abrasive compounds (like Black Emery or White Rouge) are used to deburr, clean, and color the metal to a reflective finish."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the default grit options included in woodworking and sanding paper kits?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For woodworking and refinishing, our kits typically range from coarse P80 and P120 (for shaping and varnish stripping) up to P180, P240, and P320 (for pre-stain grain smoothing). Sourcing agents can customize this mix for their specific market target."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the drywall sanding screens compatible with automated dust-extraction tools?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Our silicon carbide drywall mesh screens feature an open fiberglass design that allows standard vacuum sanders to draw dust directly through the screen. We cut mesh sheets to standard 9x11\" and 3.25x11\" dimensions to fit popular orbital and manual hand sanders."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can we configure automotive wheel-polishing kits with custom shanks and compound weights?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We offer standard 1/4\" round and hex shank adapter fittings for power drills and impact drivers, and can bundle these with 100g or 250g compound bars. We package these into custom-molded blister packs featuring your branding."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer private labeled, application-specific kits for ecommerce store launches?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, this is our specialty. Sourcing managers can define a targeted workflow (like 'Boat Gelcoat Repair' or 'Knife Mirror Polishing') and choose the exact combination of wheels, pads, and abrasives. We provide custom color box packaging with barcodes, pre-sorted and ready for ecommerce fulfillment."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />
