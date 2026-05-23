@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Surface Finishing Accessories Catalog | APEXFINISH",
+  title: "Surface Finishing Accessories Catalog | SCOTTCHEN",
   description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/products",
+    canonical: "https://www.scottchentools.com/products",
   },
 };
 
@@ -95,7 +95,7 @@ export default function ProductsOverview() {
             Surface Finishing Accessories Catalog
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
-            ApexFinish specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard B2B MOQ parameters, and packaging options.
+            Scottchen specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard B2B MOQ parameters, and packaging options.
           </p>
         </div>
       </section>

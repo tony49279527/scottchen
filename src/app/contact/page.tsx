@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import RFQForm from "@/components/RFQForm";
 
 export const metadata: Metadata = {
-  title: "Request an OEM / Wholesale Quote | APEXFINISH",
-  description: "Contact APEXFINISH to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools.",
+  title: "Request an OEM / Wholesale Quote | SCOTTCHEN",
+  description: "Contact SCOTTCHEN to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/contact",
+    canonical: "https://www.scottchentools.com/contact",
   },
 };
 
@@ -59,20 +59,20 @@ export default function Contact() {
                   <div>
                     <span className="text-industry-slate-500 block uppercase">Sales Office Address:</span>
                     <span className="text-white font-bold leading-normal">
-                      ApexFinish Tool Accessories Ltd.<br />
+                      Scottchen Tool Accessories Ltd.<br />
                       No. 88 Industry Ring Road, Shanghai, China
                     </span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block uppercase">Business Email:</span>
-                    <a href="mailto:sales@apexfinishkits.com" className="text-white font-bold hover:underline">
-                      sales@apexfinishkits.com
+                    <a href="mailto:sales@scottchentools.com" className="text-white font-bold hover:underline">
+                      sales@scottchentools.com
                     </a>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block uppercase">Supply Chain Hub:</span>
-                    <a href="https://www.linkedin.com/company/apexfinish-tools" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
-                      linkedin.com/company/apexfinish-tools &rarr;
+                    <a href="https://www.linkedin.com/company/scottchen-tools" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
+                      linkedin.com/company/scottchen-tools &rarr;
                     </a>
                   </div>
                   <div>

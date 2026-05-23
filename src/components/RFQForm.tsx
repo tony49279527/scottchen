@@ -440,7 +440,7 @@ export default function RFQForm() {
             className="mt-1 h-4 w-4 accent-industry-orange border-industry-slate-700 bg-industry-slate-950 rounded focus:ring-industry-orange"
           />
           <span className="ml-3 text-xs text-industry-slate-400 leading-relaxed">
-            I agree to the privacy policy and consent to being contacted by APEXFINISH for commercial quotes and custom packaging consultations. <span className="text-industry-orange">*</span>
+            I agree to the privacy policy and consent to being contacted by SCOTTCHEN for commercial quotes and custom packaging consultations. <span className="text-industry-orange">*</span>
           </span>
         </label>
         {touched.consent && errors.consent && (

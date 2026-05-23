@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.apexfinishkits.com/sitemap.xml
+Sitemap: https://www.scottchentools.com/sitemap.xml

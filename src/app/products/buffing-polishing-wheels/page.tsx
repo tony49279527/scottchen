@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "OEM Buffing & Polishing Wheels | APEXFINISH",
+  title: "OEM Buffing & Polishing Wheels | SCOTTCHEN",
   description: "Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/products/buffing-polishing-wheels",
+    canonical: "https://www.scottchentools.com/products/buffing-polishing-wheels",
   },
 };
 
@@ -241,7 +241,7 @@ export default function BuffingPolishingWheels() {
                 <ul className="space-y-4 text-xs">
                   <li>
                     <a 
-                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      href="https://www.youtube.com/hashtag/scottchen" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-industry-orange font-bold hover:underline block"
@@ -252,7 +252,7 @@ export default function BuffingPolishingWheels() {
                   </li>
                   <li>
                     <a 
-                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      href="https://www.youtube.com/hashtag/scottchen" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-industry-orange font-bold hover:underline block"

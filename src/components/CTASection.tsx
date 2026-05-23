@@ -33,7 +33,7 @@ export default function CTASection({
           </Link>
           <a
             href="/catalog.pdf"
-            download="APEXFINISH_B2B_Catalog.pdf"
+            download="SCOTTCHEN_B2B_Catalog.pdf"
             className="w-full sm:w-auto inline-flex items-center justify-center text-sm font-semibold text-industry-slate-400 hover:text-white transition-all-custom underline underline-offset-4 py-2"
           >
             Download Specifications Catalog

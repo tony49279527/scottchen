@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "OEM & Private Label Surface Finishing Kits | APEXFINISH",
+  title: "OEM & Private Label Surface Finishing Kits | SCOTTCHEN",
   description: "Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/oem-private-label",
+    canonical: "https://www.scottchentools.com/oem-private-label",
   },
 };
 

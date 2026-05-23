@@ -39,7 +39,7 @@ export default function Header() {
                 />
               </svg>
               <span className="text-xl font-black tracking-wider text-white">
-                APEX<span className="text-industry-orange">FINISH</span>
+                SCOTT<span className="text-industry-orange">CHEN</span>
               </span>
             </Link>
           </div>

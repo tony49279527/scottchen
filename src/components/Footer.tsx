@@ -26,7 +26,7 @@ export default function Footer() {
                 />
               </svg>
               <span className="text-lg font-black tracking-wider text-white">
-                APEX<span className="text-industry-orange">FINISH</span>
+                SCOTT<span className="text-industry-orange">CHEN</span>
               </span>
             </Link>
             <p className="text-sm text-industry-slate-400 leading-relaxed max-w-xs">
@@ -117,18 +117,18 @@ export default function Footer() {
               </li>
               <li className="pt-2 border-t border-industry-slate-800">
                 <span className="text-xs text-industry-slate-500 block">Email Inquiry:</span>
-                <a href="mailto:sales@apexfinishkits.com" className="text-white hover:underline">
-                  sales@apexfinishkits.com
+                <a href="mailto:sales@scottchentools.com" className="text-white hover:underline">
+                  sales@scottchentools.com
                 </a>
               </li>
               <li>
                 <span className="text-xs text-industry-slate-500 block">Connect on Professional Network:</span>
-                <a href="https://www.linkedin.com/company/apexfinish-tools" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
+                <a href="https://www.linkedin.com/company/scottchen-tools" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
                   LinkedIn Profile &bull; Supply Chain
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/hashtag/apexfinish" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block text-xs flex items-center space-x-1">
+                <a href="https://www.youtube.com/hashtag/scottchen" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block text-xs flex items-center space-x-1">
                   <svg className="w-4 h-4 fill-current text-red-500 mr-1" viewBox="0 0 24 24">
                     <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
@@ -142,24 +142,24 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-industry-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-industry-slate-500">
           <div>
-            &copy; {currentYear} APEXFINISH. All rights reserved. Industrial supplier of Surface Finishing Accessories.
+            &copy; {currentYear} SCOTTCHEN. All rights reserved. Industrial supplier of Surface Finishing Accessories.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <button 
               className="hover:text-white cursor-pointer focus:outline-none focus:underline"
-              onClick={() => alert('ApexFinish B2B Supply Terms: Standard Incoterms 2020 apply. Contact sales for formal policy agreements.')}
+              onClick={() => alert('Scottchen B2B Supply Terms: Standard Incoterms 2020 apply. Contact sales for formal policy agreements.')}
             >
               B2B Supply Terms
             </button>
             <button 
               className="hover:text-white cursor-pointer focus:outline-none focus:underline"
-              onClick={() => alert('ApexFinish Privacy Policy: We only collect email and corporate details for professional quoting. We do not sell data to third parties.')}
+              onClick={() => alert('Scottchen Privacy Policy: We only collect email and corporate details for professional quoting. We do not sell data to third parties.')}
             >
               Privacy Statement
             </button>
             <button 
               className="hover:text-white cursor-pointer focus:outline-none focus:underline"
-              onClick={() => alert('ApexFinish Anti-CSRF & Data Protection Policy: Sourcing forms are protected. Data processed securely for lead qualification.')}
+              onClick={() => alert('Scottchen Anti-CSRF & Data Protection Policy: Sourcing forms are protected. Data processed securely for lead qualification.')}
             >
               Anti-CSRF & Data Policy
             </button>

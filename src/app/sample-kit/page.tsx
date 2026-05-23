@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import SampleKitForm from "@/components/SampleKitForm";
 
 export const metadata: Metadata = {
-  title: "Request a Surface Finishing Sample Kit | APEXFINISH",
+  title: "Request a Surface Finishing Sample Kit | SCOTTCHEN",
   description: "Request a free surface finishing sample kit for your tool brand, hardware distribution channel, or online retail store to evaluate quality, ply count, and grits.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/sample-kit",
+    canonical: "https://www.scottchentools.com/sample-kit",
   },
 };
 

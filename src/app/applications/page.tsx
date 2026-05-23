@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Surface Finishing Application Scenarios | APEXFINISH",
+  title: "Surface Finishing Application Scenarios | SCOTTCHEN",
   description: "Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/applications",
+    canonical: "https://www.scottchentools.com/applications",
   },
 };
 

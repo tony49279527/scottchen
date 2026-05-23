@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Quality Control Standards | APEXFINISH",
+  title: "Manufacturing Quality Control Standards | SCOTTCHEN",
   description: "Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/quality-control",
+    canonical: "https://www.scottchentools.com/quality-control",
   },
 };
 

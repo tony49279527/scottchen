@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "OEM Sanding & Grinding Accessories | APEXFINISH",
+  title: "OEM Sanding & Grinding Accessories | SCOTTCHEN",
   description: "Buy bulk sandpaper sheets, silicone carbide screens, zirconia grinding discs, mini sanding sticks, and custom abrasive dispenser kits. Standard B2B MOQ parameters.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/products/sanding-grinding-accessories",
+    canonical: "https://www.scottchentools.com/products/sanding-grinding-accessories",
   },
 };
 
@@ -272,7 +272,7 @@ export default function SandingGrindingAccessories() {
                 <ul className="space-y-4 text-xs">
                   <li>
                     <a 
-                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      href="https://www.youtube.com/hashtag/scottchen" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-industry-orange font-bold hover:underline block"
@@ -283,7 +283,7 @@ export default function SandingGrindingAccessories() {
                   </li>
                   <li>
                     <a 
-                      href="https://www.youtube.com/hashtag/apexfinish" 
+                      href="https://www.youtube.com/hashtag/scottchen" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-industry-orange font-bold hover:underline block"

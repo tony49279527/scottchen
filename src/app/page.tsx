@@ -3,10 +3,10 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "OEM Abrasive, Sanding & Polishing Accessory Kits | APEXFINISH",
-  description: "APEXFINISH manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
+  title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
+  description: "SCOTTCHEN manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
   alternates: {
-    canonical: "https://www.apexfinishkits.com/",
+    canonical: "https://www.scottchentools.com/",
   },
 };
 
