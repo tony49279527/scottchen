@@ -26,6 +26,7 @@ export function getAttributionFields(pathname: string): AttributionFields {
     utmCampaign: readUtmParam("utm_campaign"),
     utmTerm: readUtmParam("utm_term"),
     utmContent: readUtmParam("utm_content"),
+    formStartedAt: new Date().toISOString(),
   };
 }
 
@@ -73,4 +74,3 @@ export function buildSamplePayload(
     ...getAttributionFields(pathname),
   };
 }
-

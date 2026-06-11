@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 import { buildQuotePayload, submitInquiry } from "@/lib/inquiryClient";
 
 interface FormFields {
@@ -25,6 +26,7 @@ export default function RFQForm() {
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [formStartedAt] = useState(() => new Date().toISOString());
 
   const [fields, setFields] = useState<FormFields>({
     fullName: "",
@@ -61,6 +63,10 @@ export default function RFQForm() {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
         return isZh ? "请输入有效的公司电子邮箱" : "Please enter a valid business email address";
+      }
+      const freeDomains = /@(gmail|hotmail|outlook|yahoo|163|126|qq|foxmail|icloud|protonmail|aol)\./i;
+      if (freeDomains.test(value)) {
+        return isZh ? "请填写公司域名邮箱，不要使用免费个人邮箱" : "Please use a business email address instead of a free personal mailbox";
       }
     }
     return "";
@@ -126,31 +132,57 @@ export default function RFQForm() {
 
     try {
       const result = await submitInquiry(
-        buildQuotePayload(pathname, {
-          fullName: fields.fullName,
-          companyName: fields.companyName,
-          email: fields.email,
-          country: fields.country,
-          buyerType: fields.buyerType,
-          productCategory: fields.productCategory,
-          quantity: fields.quantity,
-          customPackaging: fields.customPackaging,
-          targetMarket: fields.targetMarket,
-          message: fields.message,
-        })
+        {
+          ...buildQuotePayload(pathname, {
+            fullName: fields.fullName,
+            companyName: fields.companyName,
+            email: fields.email,
+            country: fields.country,
+            buyerType: fields.buyerType,
+            productCategory: fields.productCategory,
+            quantity: fields.quantity,
+            customPackaging: fields.customPackaging,
+            targetMarket: fields.targetMarket,
+            message: fields.message,
+          }),
+          formStartedAt,
+        }
       );
 
       if (!result.ok) {
+        trackEvent({
+          event: "quote_submit_error",
+          locale: isZh ? "zh-CN" : "en",
+          formType: "quote",
+          category: fields.productCategory,
+          buyerType: fields.buyerType,
+        });
         setSubmitError(
-          isZh
-            ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
-            : "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly."
+          result.message ||
+            (isZh
+              ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
+              : "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly.")
         );
         setIsSubmitting(false);
         return;
       }
+
+      trackEvent({
+        event: "quote_submit_success",
+        locale: isZh ? "zh-CN" : "en",
+        formType: "quote",
+        category: fields.productCategory,
+        buyerType: fields.buyerType,
+      });
     } catch (error) {
       console.error("Inquiry submission failed:", error);
+      trackEvent({
+        event: "quote_submit_error",
+        locale: isZh ? "zh-CN" : "en",
+        formType: "quote",
+        category: fields.productCategory,
+        buyerType: fields.buyerType,
+      });
       setSubmitError(
         isZh
           ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"

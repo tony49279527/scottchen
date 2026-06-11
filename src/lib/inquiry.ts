@@ -9,6 +9,7 @@ export interface AttributionFields {
   utmCampaign: string;
   utmTerm: string;
   utmContent: string;
+  formStartedAt: string;
 }
 
 export interface QuoteInquiryPayload extends AttributionFields {
@@ -47,3 +48,15 @@ export interface InquiryApiResponse {
   message?: string;
 }
 
+export interface InquiryAnalyticsEvent {
+  event:
+    | "quote_submit_success"
+    | "quote_submit_error"
+    | "sample_submit_success"
+    | "sample_submit_error"
+    | "catalog_download";
+  locale: "en" | "zh-CN";
+  formType?: InquiryType;
+  category?: string;
+  buyerType?: string;
+}

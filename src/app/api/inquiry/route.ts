@@ -1,59 +1,18 @@
 import type { InquiryPayload } from "@/lib/inquiry";
+import {
+  computeLeadScore,
+  getLeadTier,
+  isQuotePayload,
+  normalizeCountry,
+  validatePayload,
+  isSubmissionTooFast,
+} from "@/lib/inquiryServer";
 
 const WEBHOOK_TIMEOUT_MS = 10000;
 const RESEND_TIMEOUT_MS = 10000;
-
-function isQuotePayload(payload: InquiryPayload): payload is Extract<InquiryPayload, { type: "quote" }> {
-  return payload.type === "quote";
-}
-
-function isSamplePayload(payload: InquiryPayload): payload is Extract<InquiryPayload, { type: "sample" }> {
-  return payload.type === "sample";
-}
-
-function isNonEmptyString(value: unknown): value is string {
-  return typeof value === "string" && value.trim().length > 0;
-}
-
-function validatePayload(payload: InquiryPayload): string | null {
-  const baseChecks = [
-    payload.fullName,
-    payload.companyName,
-    payload.email,
-    payload.country,
-    payload.landingPage,
-    payload.locale,
-  ];
-
-  if (baseChecks.some((value) => !isNonEmptyString(value))) {
-    return "Missing required contact fields.";
-  }
-
-  if (isQuotePayload(payload)) {
-    if (
-      !isNonEmptyString(payload.buyerType) ||
-      !isNonEmptyString(payload.productCategory) ||
-      !isNonEmptyString(payload.quantity) ||
-      !isNonEmptyString(payload.customPackaging)
-    ) {
-      return "Missing required quote fields.";
-    }
-  }
-
-  if (isSamplePayload(payload)) {
-    if (
-      !isNonEmptyString(payload.website) ||
-      !Array.isArray(payload.categories) ||
-      payload.categories.length === 0 ||
-      !isNonEmptyString(payload.estimatedQuantity) ||
-      !isNonEmptyString(payload.oemNeeded)
-    ) {
-      return "Missing required sample request fields.";
-    }
-  }
-
-  return null;
-}
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
+const RATE_LIMIT_MAX = 8;
+const rateLimitStore = new Map<string, number[]>();
 
 function escapeHtml(value: string): string {
   return value
@@ -81,7 +40,44 @@ function buildEmailSubject(payload: InquiryPayload): string {
   return `[SCOTTCHEN SAMPLE] ${payload.companyName} | ${payload.categories.join(", ")}`;
 }
 
-function buildEmailHtml(payload: InquiryPayload, clientIp: string, userAgent: string): string {
+function buildAutoReplySubject(payload: InquiryPayload) {
+  return isQuotePayload(payload)
+    ? "SCOTTCHEN inquiry received"
+    : "SCOTTCHEN sample request received";
+}
+
+function buildAutoReplyHtml(payload: InquiryPayload) {
+  const isZh = payload.locale === "zh-CN";
+
+  return `
+    <div style="font-family:Arial,sans-serif;color:#111827;line-height:1.6;">
+      <p>${isZh ? "您好，" : "Hello,"}</p>
+      <p>
+        ${
+          isZh
+            ? "我们已经收到您的询盘资料。销售与工程团队会根据您提交的产品类别、包装需求和预估采购量进行审核，并在 24 个工作小时内回复。"
+            : "We have received your inquiry details. Our sales and engineering team will review your product category, packaging requirements, and expected volume, then reply within 24 business hours."
+        }
+      </p>
+      <p>
+        ${
+          isZh
+            ? "如需补充 logo、条码文件或详细规格图，请直接回复此邮件。"
+            : "If you need to share logo files, barcode assets, or detailed spec drawings, reply directly to this email."
+        }
+      </p>
+      <p>SCOTTCHEN Tools</p>
+    </div>
+  `;
+}
+
+function buildEmailHtml(
+  payload: InquiryPayload,
+  clientIp: string,
+  userAgent: string,
+  leadScore: number,
+  leadTier: string
+): string {
   const commonRows = [
     buildRows("Inquiry Type", payload.type),
     buildRows("Full Name", payload.fullName),
@@ -96,6 +92,8 @@ function buildEmailHtml(payload: InquiryPayload, clientIp: string, userAgent: st
     buildRows("UTM Campaign", payload.utmCampaign || "-"),
     buildRows("UTM Term", payload.utmTerm || "-"),
     buildRows("UTM Content", payload.utmContent || "-"),
+    buildRows("Lead Score", String(leadScore)),
+    buildRows("Lead Tier", leadTier),
   ];
 
   const typeSpecificRows = isQuotePayload(payload)
@@ -136,7 +134,25 @@ function buildEmailHtml(payload: InquiryPayload, clientIp: string, userAgent: st
   `;
 }
 
-async function sendViaWebhook(payload: InquiryPayload, clientIp: string, userAgent: string) {
+function pruneRateLimit(now: number, hits: number[]) {
+  return hits.filter((timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS);
+}
+
+function isRateLimited(key: string, now = Date.now()) {
+  const hits = pruneRateLimit(now, rateLimitStore.get(key) || []);
+  hits.push(now);
+  rateLimitStore.set(key, hits);
+
+  return hits.length > RATE_LIMIT_MAX;
+}
+
+async function sendViaWebhook(
+  payload: InquiryPayload,
+  clientIp: string,
+  userAgent: string,
+  leadScore: number,
+  leadTier: string
+) {
   const webhookUrl = process.env.INQUIRY_WEBHOOK_URL;
 
   if (!webhookUrl) {
@@ -156,6 +172,8 @@ async function sendViaWebhook(payload: InquiryPayload, clientIp: string, userAge
         ...payload,
         clientIp,
         userAgent,
+        leadScore,
+        leadTier,
         submittedAt: new Date().toISOString(),
       }),
       signal: controller.signal,
@@ -171,10 +189,18 @@ async function sendViaWebhook(payload: InquiryPayload, clientIp: string, userAge
   }
 }
 
-async function sendViaResend(payload: InquiryPayload, clientIp: string, userAgent: string) {
+async function sendViaResend(
+  payload: InquiryPayload,
+  clientIp: string,
+  userAgent: string,
+  leadScore: number,
+  leadTier: string
+) {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.INQUIRY_TO_EMAIL;
   const from = process.env.INQUIRY_FROM_EMAIL;
+  const autoReplyEnabled = process.env.INQUIRY_AUTO_REPLY_ENABLED === "true";
+  const autoReplyFrom = process.env.INQUIRY_AUTO_REPLY_FROM || from;
 
   if (!apiKey || !to || !from) {
     return false;
@@ -195,7 +221,7 @@ async function sendViaResend(payload: InquiryPayload, clientIp: string, userAgen
         to: [to],
         reply_to: payload.email,
         subject: buildEmailSubject(payload),
-        html: buildEmailHtml(payload, clientIp, userAgent),
+        html: buildEmailHtml(payload, clientIp, userAgent, leadScore, leadTier),
       }),
       signal: controller.signal,
     });
@@ -203,6 +229,28 @@ async function sendViaResend(payload: InquiryPayload, clientIp: string, userAgen
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(`Resend responded with ${response.status}: ${errorText}`);
+    }
+
+    if (autoReplyEnabled) {
+      const autoReplyResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: autoReplyFrom,
+          to: [payload.email],
+          subject: buildAutoReplySubject(payload),
+          html: buildAutoReplyHtml(payload),
+        }),
+        signal: controller.signal,
+      });
+
+      if (!autoReplyResponse.ok) {
+        const errorText = await autoReplyResponse.text();
+        throw new Error(`Resend auto-reply responded with ${autoReplyResponse.status}: ${errorText}`);
+      }
     }
 
     return true;
@@ -243,11 +291,29 @@ export async function POST(request: Request) {
     request.headers.get("x-real-ip") ||
     "";
   const userAgent = request.headers.get("user-agent") || "";
+  payload.country = normalizeCountry(payload.country);
+
+  if (isSubmissionTooFast(payload.formStartedAt)) {
+    return Response.json(
+      { ok: false, message: "Submission was blocked. Please try again." },
+      { status: 429 }
+    );
+  }
+
+  if (clientIp && isRateLimited(`${clientIp}:${payload.type}`)) {
+    return Response.json(
+      { ok: false, message: "Too many submissions. Please try again later." },
+      { status: 429 }
+    );
+  }
+
+  const leadScore = computeLeadScore(payload);
+  const leadTier = getLeadTier(leadScore);
 
   try {
     const delivered =
-      (await sendViaWebhook(payload, clientIp, userAgent)) ||
-      (await sendViaResend(payload, clientIp, userAgent));
+      (await sendViaWebhook(payload, clientIp, userAgent, leadScore, leadTier)) ||
+      (await sendViaResend(payload, clientIp, userAgent, leadScore, leadTier));
 
     if (!delivered) {
       return Response.json(
@@ -273,4 +339,3 @@ export async function POST(request: Request) {
     );
   }
 }
-

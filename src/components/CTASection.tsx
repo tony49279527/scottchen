@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 interface CTASectionProps {
   title?: string;
@@ -42,6 +43,12 @@ export default function CTASection({
           <a
             href="/catalog.pdf"
             download="SCOTTCHEN_B2B_Catalog.pdf"
+            onClick={() =>
+              trackEvent({
+                event: "catalog_download",
+                locale: isZh ? "zh-CN" : "en",
+              })
+            }
             className="w-full sm:w-auto inline-flex items-center justify-center text-sm font-semibold text-industry-slate-400 hover:text-white transition-all-custom underline underline-offset-4 py-2"
           >
             {isZh ? "下载规格目录" : "Download Specifications Catalog"}

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node .next/standalone/server.js"
+    "start": "node .next/standalone/server.js",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^16.2.6",

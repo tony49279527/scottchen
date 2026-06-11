@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 import { buildSamplePayload, submitInquiry } from "@/lib/inquiryClient";
 
 interface SampleFormFields {
@@ -26,6 +27,7 @@ export default function SampleKitForm() {
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [formStartedAt] = useState(() => new Date().toISOString());
 
   const [fields, setFields] = useState<SampleFormFields>({
     fullName: "",
@@ -68,6 +70,21 @@ export default function SampleKitForm() {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
         return isZh ? "请输入有效的公司电子邮箱" : "Please enter a valid business email address";
+      }
+      const freeDomains = /@(gmail|hotmail|outlook|yahoo|163|126|qq|foxmail|icloud|protonmail|aol)\./i;
+      if (freeDomains.test(value)) {
+        return isZh ? "请填写公司域名邮箱，不要使用免费个人邮箱" : "Please use a business email address instead of a free personal mailbox";
+      }
+    }
+    if (name === "website" && typeof value === "string" && value) {
+      const normalized = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+      try {
+        const url = new URL(normalized);
+        if (!url.hostname.includes(".")) {
+          return isZh ? "请输入有效的公司官网或店铺网址" : "Please enter a valid company website or store URL";
+        }
+      } catch {
+        return isZh ? "请输入有效的公司官网或店铺网址" : "Please enter a valid company website or store URL";
       }
     }
     return "";
@@ -151,32 +168,54 @@ export default function SampleKitForm() {
 
     try {
       const result = await submitInquiry(
-        buildSamplePayload(pathname, {
-          fullName: fields.fullName,
-          companyName: fields.companyName,
-          email: fields.email,
-          country: fields.country,
-          website: fields.website,
-          categories: fields.categories,
-          application: fields.application,
-          targetMaterial: fields.targetMaterial,
-          estimatedQuantity: fields.estimatedQuantity,
-          oemNeeded: fields.oemNeeded,
-          message: fields.message,
-        })
+        {
+          ...buildSamplePayload(pathname, {
+            fullName: fields.fullName,
+            companyName: fields.companyName,
+            email: fields.email,
+            country: fields.country,
+            website: fields.website,
+            categories: fields.categories,
+            application: fields.application,
+            targetMaterial: fields.targetMaterial,
+            estimatedQuantity: fields.estimatedQuantity,
+            oemNeeded: fields.oemNeeded,
+            message: fields.message,
+          }),
+          formStartedAt,
+        }
       );
 
       if (!result.ok) {
+        trackEvent({
+          event: "sample_submit_error",
+          locale: isZh ? "zh-CN" : "en",
+          formType: "sample",
+          category: fields.categories.join(", "),
+        });
         setSubmitError(
-          isZh
-            ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
-            : "We could not deliver your sample request just now. Please try again or email sales@scottchentools.com directly."
+          result.message ||
+            (isZh
+              ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
+              : "We could not deliver your sample request just now. Please try again or email sales@scottchentools.com directly.")
         );
         setIsSubmitting(false);
         return;
       }
+      trackEvent({
+        event: "sample_submit_success",
+        locale: isZh ? "zh-CN" : "en",
+        formType: "sample",
+        category: fields.categories.join(", "),
+      });
     } catch (error) {
       console.error("Sample request submission failed:", error);
+      trackEvent({
+        event: "sample_submit_error",
+        locale: isZh ? "zh-CN" : "en",
+        formType: "sample",
+        category: fields.categories.join(", "),
+      });
       setSubmitError(
         isZh
           ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
