@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import SampleKitForm from "@/components/SampleKitForm";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Request a Surface Finishing Sample Kit | SCOTTCHEN",
-  description: "Request a free surface finishing sample kit for your tool brand, hardware distribution channel, or online retail store to evaluate quality, ply count, and grits.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/sample-kit",
-    languages: {
-      "en": "https://www.scottchentools.com/sample-kit",
-      "zh-CN": "https://www.scottchentools.com/zh/sample-kit",
-      "x-default": "https://www.scottchentools.com/sample-kit",
-    },
-  },
-};
+  description: "Request a surface finishing sample kit for your tool brand, hardware distribution channel, or online retail store to evaluate quality, ply count, and grits.",
+  path: "/sample-kit",
+  alternatePath: "/zh/sample-kit",
+});
 
 export default function SampleKit() {
   return (
@@ -54,7 +49,7 @@ export default function SampleKit() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Freight Deduction Policy:</strong> International shipping handled via DHL/FedEx/UPS; freight costs fully credited on the first bulk contract.</span>
+                    <span className="text-industry-slate-200"><strong>Sample & Freight Terms:</strong> Any sample, courier, or qualifying order-credit terms are confirmed in writing before dispatch.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -92,7 +87,11 @@ export default function SampleKit() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/sample_kit.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/sample_kit.webp"
                   alt="SCOTTCHEN Sample Testing Kit Box"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -137,7 +136,7 @@ export default function SampleKit() {
                   Verification Criteria
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  To prevent retail consumer abuse, sample kit requests require a valid business name, website, and commercial email address. We review all applications within 24 hours.
+                  Sample kit requests require a valid business name, website or store URL, and contact email. We typically review complete applications within one business day.
                 </p>
                 <div className="bg-industry-slate-950 p-3 rounded border border-industry-slate-800 text-[10px] font-mono text-industry-orange">
                   Commercial channels verified: Tool Brands, Distributors, Online Store Owners, Detailing Suppliers.
@@ -165,11 +164,11 @@ export default function SampleKit() {
             {[
               {
                 q: "Who is eligible to receive a free surface finishing sample kit?",
-                a: "Abrasive, sanding, and buffing wheel samples are provided free of charge to verified commercial entities, including tool brand manufacturers, hardware catalog distributors, online retail sellers, and industrial detailing supply chains."
+                a: "Sample requests are reviewed for commercial buyers, including tool brands, hardware distributors, online sellers, and industrial supply channels. Availability and any sample charge depend on the requested configuration."
               },
               {
                 q: "How are international shipping and courier freight charges handled for samples?",
-                a: "We ship sample kits globally using DHL, FedEx, UPS, or TNT. The recipient covers the courier shipping charges. However, we credit 100% of these shipping expenses back to you upon signing your first bulk container contract."
+                a: "Sample kits can be shipped through international couriers. The recipient normally covers courier charges. Any credit against a qualifying bulk order must be stated in the written quotation."
               },
               {
                 q: "Can I request custom wheel plies, shank shapes, or sanding grits in my sample pack?",
@@ -211,7 +210,7 @@ export default function SampleKit() {
                 "name": "Who is eligible to receive a free surface finishing sample kit?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Abrasive, sanding, and buffing wheel samples are provided free of charge to verified commercial entities, including tool brand manufacturers, hardware catalog distributors, online retail sellers, and industrial detailing supply chains."
+                  "text": "Sample requests are reviewed for commercial buyers, including tool brands, hardware distributors, online sellers, and industrial supply channels. Availability and any sample charge depend on the requested configuration."
                 }
               },
               {
@@ -219,7 +218,7 @@ export default function SampleKit() {
                 "name": "How are international shipping and courier freight charges handled for samples?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We ship sample kits globally using DHL, FedEx, UPS, or TNT. The recipient covers the courier shipping charges. However, we credit 100% of these shipping expenses back to you upon signing your first bulk container contract."
+                  "text": "Sample kits can be shipped through international couriers. The recipient normally covers courier charges. Any credit against a qualifying bulk order must be stated in the written quotation."
                 }
               },
               {

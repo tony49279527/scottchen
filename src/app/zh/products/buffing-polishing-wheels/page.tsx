@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "工业棉布轮、气道抛光轮及抛光膏 OEM 厂家 | SCOTTCHEN",
-  description: "定制高密度密缝线缝布轮、松缝 flannel 镜面轮、ベンチグラインダー 台式砂轮机棉轮、带柄迷你布轮及精细抛光膏。支持 MOQ 500，出厂物理公差 &plusmn;0.05 mm 严控。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/products/buffing-polishing-wheels",
-    languages: {
-      "en": "https://www.scottchentools.com/products/buffing-polishing-wheels",
-      "zh-CN": "https://www.scottchentools.com/zh/products/buffing-polishing-wheels",
-      "x-default": "https://www.scottchentools.com/products/buffing-polishing-wheels",
-    },
-  },
-};
+  description: "定制高密度密缝布轮、松缝镜面轮、台式砂轮机棉轮、带柄迷你布轮及精细抛光膏。支持 MOQ 500，并按确认的规格表进行批次质量控制。",
+  path: "/zh/products/buffing-polishing-wheels",
+  alternatePath: "/products/buffing-polishing-wheels",
+  locale: "zh-CN",
+});
 
 export default function ChineseBuffingPolishingWheels() {
   const subtypes = [
@@ -24,7 +20,7 @@ export default function ChineseBuffingPolishingWheels() {
     },
     {
       name: "松缝黄/白 flannel 镜面色彩抛光轮",
-      desc: "多层 100% 精梳软毛 flannel 叠合，仅围绕中心孔进行同心车线固定。布轮边缘呈自然蓬松状，能在高转速下完全散开，配合绿铬镜面抛光膏（青棒）可完美呈现极其细腻的金属镜面反光及上色（Coloring）效果，避免灼烧涂层。",
+      desc: "多层精梳软毛 flannel 叠合，仅围绕中心孔进行同心车线固定。松缝边缘适合配合相应抛光膏进行精饰和上色；具体效果取决于工件材质、转速、压力与工艺参数。",
       features: ["选料工艺: 100% 细柔绒毛精梳纯棉 flannel 织物", "缝制手法: 仅轴心一圈车线固定，边缘全松缝呈现", "适用材质: 珠宝饰品精饰、汽车轮毂最终上色、高光亚克力/有机树脂"],
     },
     {
@@ -70,7 +66,7 @@ export default function ChineseBuffingPolishingWheels() {
               href="/zh/sample-kit"
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
-              免费申请打样样品包
+              申请打样样品包
             </Link>
           </div>
         </div>
@@ -114,7 +110,7 @@ export default function ChineseBuffingPolishingWheels() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>批量起订与货运:</strong> 棉轮单规格 500 件起，带柄电钻磨头 1,000 件起，25-35 天快速批量制造，免费打样评估。</span>
+                    <span className="text-industry-slate-200"><strong>批量起订与货运:</strong> 棉轮单规格 500 件起，带柄电钻磨头 1,000 件起；交期和样品条件按具体配置报价。</span>
                   </li>
                 </ul>
               </div>
@@ -292,7 +288,11 @@ export default function ChineseBuffingPolishingWheels() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/buffing_wheels.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN 抛光棉轮与麻轮系列"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -311,12 +311,12 @@ export default function ChineseBuffingPolishingWheels() {
                     <span className="text-white font-bold">25 - 35 天（开单确认设计稿后）</span>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block">免费样品政策:</span>
-                    <span className="text-white font-bold">免费样品评估包（买家付国际空运快递费）</span>
+                    <span className="text-industry-slate-500 block">样品政策:</span>
+                    <span className="text-white font-bold">样品和国际快递条件按配置书面确认</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">高等级用料挑选:</span>
-                    <span className="text-white font-bold leading-normal">100% 工业级天然棉线，特柔黄/白绒布，多层防崩丝折边帆布。</span>
+                    <span className="text-white font-bold leading-normal">可按确认规格选用天然棉线、黄/白绒布及多层折边帆布。</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">轴心加强盘:</span>
@@ -348,35 +348,16 @@ export default function ChineseBuffingPolishingWheels() {
                 </div>
               </div>
 
-              {/* YouTube Shorts Demo Links */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  工作视频实机演示
+                  现有零售产品参考
                 </h3>
-                <ul className="space-y-4 text-xs">
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      手电钻抛光头测试: #AF-01 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">迷你带柄布轮在 30 秒内去除汽车轮毂深槽中沉积的氧化层。</span>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      黄铜上色抛光: #AF-02 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">松缝黄布轮配合白蜡，对铜饰件进行最终高反光镜面上色。</span>
-                  </li>
-                </ul>
+                <p className="text-xs leading-relaxed text-industry-slate-300">
+                  可先查看 SCOTTCHEN 现有零售产品，了解布轮、抛光膏和工具包的常见组合，再提交 B2B 定制要求。
+                </p>
+                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
+                  查看 SCOTTCHEN 零售产品站 &rarr;
+                </a>
               </div>
 
             </div>
@@ -390,9 +371,9 @@ export default function ChineseBuffingPolishingWheels() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">亚马逊零售样品直达</span>
-            <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊官方旗舰店单品橱窗</h2>
+            <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊零售商品参考</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              需要即时样品测试、少量零售采购或更快的货运时效？您可以点击下方直接前往我们的亚马逊官方旗舰店下单，支持 Amazon Prime 极速配送。
+              下方为部分亚马逊零售商品链接，可用于了解现有产品形式。库存、价格、卖家状态和 Prime 资格均由亚马逊平台管理，可能随时变化。
             </p>
           </div>
 
@@ -403,54 +384,58 @@ export default function ChineseBuffingPolishingWheels() {
                 asin: "B0828K5RH1",
                 desc: "配手电钻快速换接铁杆及大中粗高光多重固体抛光蜡条，用于金属、汽车划痕精抛与表面还原。",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Cutting-Compounds/dp/B0828K5RH1/ref=sr_1_1?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/hero_abrasives_kit.png"
+                img: "/images/hero_abrasives_kit.webp"
               },
               {
                 title: "同心缝线密缝棉布轮与特柔绒布轮",
                 asin: "B086KR8H5Y",
                 desc: "配合台磨机与砂轮机，适合不同硬度金属与工件的粗磨与精细镜面色彩还原。",
                 url: "https://www.amazon.com/SCOTTCHEN-Abrasives-Buffing-Polishing-Grinder/dp/B086KR8H5Y/ref=sr_1_3?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "特厚高耐磨多层纯棉抛光布轮",
                 asin: "B07BGV23GK",
                 desc: "加厚版 100% 工业级天然棉线紧密编织布轮，具备超强的切削拉力负荷与更长使用寿命。",
                 url: "https://www.amazon.com/SCOTTCHEN-Extra-Buffing-Polishing-grinder/dp/B07BGV23GK/ref=sr_1_4?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "珠宝及贵金属专用超细柔抛光布轮",
                 asin: "B0DQCZYRXR",
                 desc: "特细普梳无漂白高密度纯棉，适合黄金、白银、高档首饰、玉石及精细亚克力的镜面色彩上色。",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Lapidary-Metalworking/dp/B0DQCZYRXR/ref=sr_1_11?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "尼龙无纺布纤维抛光碟配抛光蜡",
                 asin: "B0D6V976G5",
                 desc: "高强度无纺布纤维结合不同粒度抛光固体膏，可快速去除大面积金属表面锈斑与焊缝拉丝。",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Compounds-Non-Woven/dp/B0D6V976G5/ref=sr_1_14?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/hero_abrasives_kit.png"
+                img: "/images/hero_abrasives_kit.webp"
               },
               {
                 title: "中目工业级无纺布尼龙磨片砂轮",
                 asin: "B07Y564CX4",
                 desc: "专门用于中粗度金属毛刺清理、拉丝划痕整平及除漆，打磨柔和不易伤底材。",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Wheels-Medium/dp/B07Y564CX4/ref=sr_1_21?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "台磨机/手电钻加长接杆轴心适配器",
                 asin: "B07ZP52HCK",
                 desc: "高硬度焊接钢制轴套，将标准的抛光布轮牢固锁紧于砂轮机及各种电动打磨工具上。",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Extended-Extender/dp/B07ZP52HCK/ref=sr_1_24?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/detail_sanding.png"
+                img: "/images/detail_sanding.webp"
               }
             ].map((prod) => (
               <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                 <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
                   <img
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
                     src={prod.img}
                     alt={prod.title}
                     className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
@@ -514,7 +499,7 @@ export default function ChineseBuffingPolishingWheels() {
               },
               {
                 q: "样品包的寄送流程是怎样的？",
-                a: "对于经过商户资质认证的工具品牌商和五金分销商，样品本身的材料是完全免费的。您只需要在线提交申领，选择您需要的直径、厚度层数及配蜡克重。快递费（DHL/FedEx）由买家自理，但在您正式签订第一笔货柜合同时，该样品快递费将 100% 予以扣减返还。"
+                a: "经核实的工具品牌和五金分销商可以申请样品，并填写所需直径、层数和配蜡克重。样品费、国际快递费及可能适用的订单抵扣条件会在发出前书面确认。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -557,40 +542,19 @@ export default function ChineseBuffingPolishingWheels() {
                     "@type": "Product",
                     "name": "Spiral Stitched Cotton Buffing Wheel (密缝棉布轮)",
                     "description": "密缝线缝，高硬度大打磨力，适于金属拉丝及去锈。",
-                    "sku": "SC-SPIRAL-COTTON-ZH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "1.10",
-                      "highPrice": "4.50",
-                      "offerCount": "15"
-                    }
+                    "sku": "SC-SPIRAL-COTTON-ZH"
                   },
                   {
                     "@type": "Product",
                     "name": "Loose Cotton Flannel Coloring Wheel (松缝 flannel 绒布轮)",
                     "description": "特柔松缝，在高速下自然撑开，适于极高亮镜面上色及精细打磨。",
-                    "sku": "SC-LOOSE-FLANNEL-ZH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.90",
-                      "highPrice": "3.80",
-                      "offerCount": "10"
-                    }
+                    "sku": "SC-LOOSE-FLANNEL-ZH"
                   },
                   {
                     "@type": "Product",
                     "name": "Mounted Drill Buffing Wheels (带柄迷你手电钻布轮)",
                     "description": "焊接 1/4英寸 六角/圆形适配铁柄，专攻深槽、死角和汽车排气管打磨。",
-                    "sku": "SC-SHANK-BUFFER-ZH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.75",
-                      "highPrice": "2.20",
-                      "offerCount": "20"
-                    }
+                    "sku": "SC-SHANK-BUFFER-ZH"
                   }
                 ]
               },
@@ -635,7 +599,7 @@ export default function ChineseBuffingPolishingWheels() {
                     "name": "样品包的寄送流程是怎样的？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "对于经过商户资质认证的工具品牌商和五金分销商，样品本身的材料是完全免费的。您只需要在线提交申领，选择您需要的直径、厚度层数及配蜡克重。快递费（DHL/FedEx）由买家自理，但在您正式签订第一笔货柜合同时，该样品快递费将 100% 予以扣减返还。"
+                      "text": "经核实的工具品牌和五金分销商可以申请样品，并填写所需直径、层数和配蜡克重。样品费、国际快递费及可能适用的订单抵扣条件会在发出前书面确认。"
                     }
                   }
                 ]

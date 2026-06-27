@@ -62,11 +62,7 @@ export default function RFQForm() {
     if (name === "email" && typeof value === "string" && value) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
-        return isZh ? "请输入有效的公司电子邮箱" : "Please enter a valid business email address";
-      }
-      const freeDomains = /@(gmail|hotmail|outlook|yahoo|163|126|qq|foxmail|icloud|protonmail|aol)\./i;
-      if (freeDomains.test(value)) {
-        return isZh ? "请填写公司域名邮箱，不要使用免费个人邮箱" : "Please use a business email address instead of a free personal mailbox";
+        return isZh ? "请输入有效的电子邮箱" : "Please enter a valid email address";
       }
     }
     return "";
@@ -562,7 +558,7 @@ export default function RFQForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center rounded bg-industry-orange py-4 text-base font-extrabold tracking-wider uppercase text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.01] shadow-lg shadow-industry-orange/20 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center rounded bg-industry-orange-cta py-4 text-base font-extrabold tracking-wider uppercase text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.01] shadow-lg shadow-industry-orange/20 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

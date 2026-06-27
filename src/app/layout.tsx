@@ -1,14 +1,54 @@
 import type { Metadata } from "next";
+import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Analytics from "@/components/Analytics";
-import LangSync from "@/components/LangSync";
+import AttributionTracker from "@/components/AttributionTracker";
+import DocumentShell from "@/components/DocumentShell";
+import {
+  absoluteUrl,
+  RETAIL_SITE_URL,
+  SITE_EMAIL,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site";
 import "./globals.css";
 
+const bodyFont = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-site-sans",
+  display: "swap",
+});
+
+const displayFont = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-site-display",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
   description: "SCOTTCHEN manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "Industrial Manufacturing",
+  referrer: "strict-origin-when-cross-origin",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: {
     canonical: "https://www.scottchentools.com/",
     languages: {
@@ -17,60 +57,67 @@ export const metadata: Metadata = {
       "x-default": "https://www.scottchentools.com/",
     },
   },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
+    description:
+      "Retail-ready surface finishing kits, custom assortments, private label packaging and B2B sourcing support.",
+    url: SITE_URL,
+    locale: "en_US",
+    alternateLocale: ["zh_CN"],
+    images: [
+      {
+        url: absoluteUrl("/opengraph-image"),
+        width: 1200,
+        height: 630,
+        alt: "SCOTTCHEN OEM abrasive, sanding and polishing solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OEM Abrasive, Sanding & Polishing Kits | SCOTTCHEN",
+    description:
+      "Retail-ready surface finishing kits, private label packaging and B2B sourcing support.",
+    images: [absoluteUrl("/opengraph-image")],
+  },
 };
 
 const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ManufacturingBusiness",
-      "@id": "https://www.scottchentools.com/#manufacturingbusiness",
-      "name": "SCOTTCHEN Tools",
-      "url": "https://www.scottchentools.com/",
-      "logo": "https://www.scottchentools.com/images/hero_abrasives_kit.png",
-      "image": "https://www.scottchentools.com/images/hero_abrasives_kit.png",
-      "telephone": "+86-21-6100-2008",
-      "email": "sales@scottchentools.com",
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      "name": "SCOTTCHEN",
+      "url": SITE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "url": absoluteUrl("/icon.svg"),
+      },
+      "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
+      "email": SITE_EMAIL,
       "slogan": "Industrial OEM Abrasive, Sanding & Polishing Solutions",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "No. 88 Industry Ring Road",
-        "addressLocality": "Shanghai",
-        "addressRegion": "Shanghai",
-        "postalCode": "200120",
-        "addressCountry": "CN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 31.2304,
-        "longitude": 121.4737
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:30",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/scottchen-tools",
-        "https://www.youtube.com/hashtag/scottchen"
-      ],
+      "sameAs": [RETAIL_SITE_URL],
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+86-21-6100-2008",
-          "email": "sales@scottchentools.com",
-          "contactType": "B2B Sales Support",
+          "email": SITE_EMAIL,
+          "contactType": "sales",
           "availableLanguage": ["English", "Chinese"]
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": SITE_NAME,
+      "publisher": {
+        "@id": `${SITE_URL}/#organization`
+      },
+      "inLanguage": ["en", "zh-CN"]
     }
   ]
 };
@@ -81,26 +128,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <DocumentShell
+      className={`${bodyFont.variable} ${displayFont.variable} h-full`}
+      bodyClassName="h-full antialiased bg-industry-slate-900 text-industry-slate-200 font-sans"
+      head={
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(corporateSchema) }}
         />
-      </head>
-      <body className="h-full antialiased bg-industry-slate-900 text-industry-slate-200 font-sans">
-        <Analytics />
-        <div className="min-h-full flex flex-col">
-          <LangSync />
-          <Header />
-          <main className="flex-grow flex flex-col">{children}</main>
-          <Footer />
-          <CookieConsent />
-        </div>
-      </body>
-    </html>
+      }
+    >
+      <Analytics />
+      <div className="min-h-full flex flex-col">
+        <AttributionTracker />
+        <Header />
+        <main className="flex-grow flex flex-col">{children}</main>
+        <Footer />
+        <CookieConsent />
+      </div>
+    </DocumentShell>
   );
 }

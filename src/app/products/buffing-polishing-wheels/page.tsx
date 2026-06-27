@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "OEM Buffing & Polishing Wheels | SCOTTCHEN",
   description: "Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/products/buffing-polishing-wheels",
-    languages: {
-      "en": "https://www.scottchentools.com/products/buffing-polishing-wheels",
-      "zh-CN": "https://www.scottchentools.com/zh/products/buffing-polishing-wheels",
-      "x-default": "https://www.scottchentools.com/products/buffing-polishing-wheels",
-    },
-  },
-};
+  path: "/products/buffing-polishing-wheels",
+  alternatePath: "/zh/products/buffing-polishing-wheels",
+});
 
 export default function BuffingPolishingWheels() {
   const subtypes = [
@@ -292,7 +287,11 @@ export default function BuffingPolishingWheels() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/buffing_wheels.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN Buffing & Polishing Wheels"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -312,7 +311,7 @@ export default function BuffingPolishingWheels() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Sample Policy:</span>
-                    <span className="text-white font-bold">Free sample kit (Verification shipping applies)</span>
+                    <span className="text-white font-bold">Sample and freight terms confirmed per configuration</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Material Selection:</span>
@@ -348,35 +347,17 @@ export default function BuffingPolishingWheels() {
                 </div>
               </div>
 
-              {/* YouTube Shorts Demo Links */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Workflow Demonstrations
+                  Retail Product Reference
                 </h3>
-                <ul className="space-y-4 text-xs">
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      YouTube Shorts: #AF-01 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">Shank buffer removing chrome wheel oxidation in 30 seconds.</span>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      YouTube Shorts: #AF-02 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">Loose cotton coloring brass trim using White Rouge compound block.</span>
-                  </li>
-                </ul>
+                <p className="text-xs leading-relaxed text-industry-slate-300">
+                  Review current SCOTTCHEN retail products to understand existing wheel,
+                  compound, and kit configurations before requesting a custom B2B version.
+                </p>
+                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
+                  View the SCOTTCHEN retail store &rarr;
+                </a>
               </div>
 
             </div>
@@ -390,9 +371,9 @@ export default function BuffingPolishingWheels() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Shop Samples on Amazon</span>
-            <h2 className="text-3xl font-extrabold text-white mt-3">Direct Amazon Store Showcase</h2>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Amazon Retail Listing References</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Need immediate retail quantities, sample testing, or instant shipping? Click below to buy our verified products directly on our official Amazon Store with Amazon Prime delivery.
+              Use the selected Amazon listings below as retail product references. Availability, pricing, seller status, and Prime eligibility are controlled by Amazon and may change.
             </p>
           </div>
 
@@ -403,54 +384,58 @@ export default function BuffingPolishingWheels() {
                 asin: "B0828K5RH1",
                 desc: "Drill adapter mounted wheels set combined with green, white, red polishing compounds for auto restoration.",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Cutting-Compounds/dp/B0828K5RH1/ref=sr_1_1?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/hero_abrasives_kit.png"
+                img: "/images/hero_abrasives_kit.webp"
               },
               {
                 title: "Spiral Stitched & Loose Cotton Wheels",
                 asin: "B086KR8H5Y",
                 desc: "Concentric cotton spiral stitched wheels and soft loose flannel wheels for bench grinder buffing.",
                 url: "https://www.amazon.com/SCOTTCHEN-Abrasives-Buffing-Polishing-Grinder/dp/B086KR8H5Y/ref=sr_1_3?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "Extra Thick Cotton Buffing Wheels",
                 asin: "B07BGV23GK",
                 desc: "Super thick 100% natural cotton polishing wheel designed for rigid heavy-duty bench grinder cutting.",
                 url: "https://www.amazon.com/SCOTTCHEN-Extra-Buffing-Polishing-grinder/dp/B07BGV23GK/ref=sr_1_4?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "Lapidary & Jewelry Buffing Wheels",
                 asin: "B0DQCZYRXR",
                 desc: "Premium fine-fold unbleached cotton wheels perfect for gemstone shaping, gold, silver, and precious metals.",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Lapidary-Metalworking/dp/B0DQCZYRXR/ref=sr_1_11?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "Non-Woven Buffing Pads with Compounds",
                 asin: "B0D6V976G5",
                 desc: "Non-woven scuff conditioning wheels and polish blocks for heavy rust scraping and metallic blending.",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Compounds-Non-Woven/dp/B0D6V976G5/ref=sr_1_14?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/hero_abrasives_kit.png"
+                img: "/images/hero_abrasives_kit.webp"
               },
               {
                 title: "Non-Woven Medium Abrasive Wheels",
                 asin: "B07Y564CX4",
                 desc: "Medium density non-woven abrasive wheels for rapid paint stripping and steel deburring without scoring.",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Wheels-Medium/dp/B07Y564CX4/ref=sr_1_21?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/buffing_wheels.png"
+                img: "/images/buffing_wheels.webp"
               },
               {
                 title: "Threaded Arbor Extension Adapters",
                 asin: "B07ZP52HCK",
                 desc: "Extended mandrel adapters designed to mount buffing wheels securely on standard tools and bench grinders.",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Extended-Extender/dp/B07ZP52HCK/ref=sr_1_24?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/detail_sanding.png"
+                img: "/images/detail_sanding.webp"
               }
             ].map((prod) => (
               <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                 <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
                   <img
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
                     src={prod.img}
                     alt={prod.title}
                     className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
@@ -556,40 +541,19 @@ export default function BuffingPolishingWheels() {
                     "@type": "Product",
                     "name": "Spiral Stitched Cotton Buffing Wheel",
                     "description": "Concentric stitched, high-tensile cotton wheel for aggressive cutting and heavy metal prep.",
-                    "sku": "SC-SPIRAL-COTTON",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "1.10",
-                      "highPrice": "4.50",
-                      "offerCount": "15"
-                    }
+                    "sku": "SC-SPIRAL-COTTON"
                   },
                   {
                     "@type": "Product",
                     "name": "Loose Cotton Flannel Coloring Wheel",
                     "description": "Fine-weave loose flannel wheel for final coloring, coloring trim, and mirror finishes.",
-                    "sku": "SC-LOOSE-FLANNEL",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.90",
-                      "highPrice": "3.80",
-                      "offerCount": "10"
-                    }
+                    "sku": "SC-LOOSE-FLANNEL"
                   },
                   {
                     "@type": "Product",
                     "name": "Shank Mounted Drill Buffing Wheels",
                     "description": "1/4-inch hex shank mounted mushroom, dome, cylindrical and goblet shapes for recessed polishing.",
-                    "sku": "SC-SHANK-BUFFER",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.75",
-                      "highPrice": "2.20",
-                      "offerCount": "20"
-                    }
+                    "sku": "SC-SHANK-BUFFER"
                   }
                 ]
               },

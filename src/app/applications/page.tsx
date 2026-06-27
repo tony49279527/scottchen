@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Surface Finishing Application Scenarios | SCOTTCHEN",
   description: "Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/applications",
-    languages: {
-      "en": "https://www.scottchentools.com/applications",
-      "zh-CN": "https://www.scottchentools.com/zh/applications",
-      "x-default": "https://www.scottchentools.com/applications",
-    },
-  },
-};
+  path: "/applications",
+  alternatePath: "/zh/applications",
+});
 
 export default function ApplicationsOverview() {
   const applications = [
@@ -86,7 +81,11 @@ export default function ApplicationsOverview() {
             <div className="lg:col-span-5 hidden lg:block">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
                 <img
-                  src="/images/applications_banner.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/applications_banner.webp"
                   alt="Industrial finishing application scenarios"
                   className="object-cover w-full h-48 opacity-90"
                 />

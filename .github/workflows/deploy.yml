@@ -1,40 +1,30 @@
-name: Build and Deploy Static Site to SiteGround
+name: Build Verification
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 jobs:
-  build-and-deploy:
+  verify:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: "npm"
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build Static Site
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Build standalone application
         run: npm run build
-
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SITEGROUND_SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          # Add SiteGround host to known_hosts to prevent verification prompts
-          ssh-keyscan -p ${{ secrets.SITEGROUND_PORT }} -H "${{ secrets.SITEGROUND_HOST }}" >> ~/.ssh/known_hosts
-
-      - name: Deploy to SiteGround via Rsync
-        run: |
-          # Sync out directory to public_html path via SSH
-          rsync -avz --delete -e "ssh -p ${{ secrets.SITEGROUND_PORT }}" out/ ${{ secrets.SITEGROUND_USER }}@${{ secrets.SITEGROUND_HOST }}:${{ secrets.SITEGROUND_PATH }}
-

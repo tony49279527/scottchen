@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "OEM & 私有品牌抛光工具包定制方案 | SCOTTCHEN",
   description: "提供私有品牌彩盒挂卡设计、FNSKU/UPC条码贴标、亚马逊FBA合规发货支持，为您的表面抛磨抛光轮及砂纸套装打造一站式零售代工服务。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/oem-private-label",
-    languages: {
-      "en": "https://www.scottchentools.com/oem-private-label",
-      "zh-CN": "https://www.scottchentools.com/zh/oem-private-label",
-      "x-default": "https://www.scottchentools.com/oem-private-label",
-    },
-  },
-};
+  path: "/zh/oem-private-label",
+  alternatePath: "/oem-private-label",
+  locale: "zh-CN",
+});
 
 export default function ChineseOEMPrivateLabel() {
   const oemCapabilities = [
@@ -34,7 +30,7 @@ export default function ChineseOEMPrivateLabel() {
     },
     {
       title: "3. 专业条码审计与合规标识",
-      desc: "我们在出厂集装箱装柜前，100% 确保您的每批大货彻底符合目标电商平台及进口国海关的各项标识合规。绝不在货抵国外后再进行二次手工改贴。",
+      desc: "我们会在出货前依据买家提供的条码、警示语和原产地要求核对标签版式，并记录确认结果。最终平台和进口合规仍以目的国及平台当期规则为准。",
       details: [
         "FNSKU / UPC 条码：直接印刷或采用耐磨标签粘贴于最小零售包上，无缝满足亚马逊 FBA 扫码入库。",
         "多语言技术说明书：提供清晰的配合工具型号对照表、磨料目数-底材推荐卡，有效避免由于买家误用导致的退单。",
@@ -196,7 +192,11 @@ export default function ChineseOEMPrivateLabel() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/oem_packaging.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/oem_packaging.webp"
                   alt="SCOTTCHEN OEM 代工零售挂卡与彩盒外包装"
                   className="object-cover w-full h-56 opacity-90"
                 />

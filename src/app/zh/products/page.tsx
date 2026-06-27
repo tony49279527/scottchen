@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "磨料磨具与抛光轮规格目录 | SCOTTCHEN",
   description: "浏览我们的技术参数、标准 B2B 起订量 (MOQ) 及包装选项。涵盖缝线棉轮、松缝布轮、气道轮、锆刚玉砂碟、防堵塞砂网及细节砂棒组合。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/products",
-    languages: {
-      "en": "https://www.scottchentools.com/products",
-      "zh-CN": "https://www.scottchentools.com/zh/products",
-      "x-default": "https://www.scottchentools.com/products",
-    },
-  },
-};
+  path: "/zh/products",
+  alternatePath: "/products",
+  locale: "zh-CN",
+});
 
 export default function ChineseProductsOverview() {
   const categories = [
@@ -26,7 +22,7 @@ export default function ChineseProductsOverview() {
           types: "同心圆密缝棉布轮、松缝黄 flannel 细轮、气道折叠轮、剑麻重切削轮、羊毛毡轮、带柄打磨轮。",
           moq: "单规格 500 件起",
           pack: "出口大箱 / 定制零售彩色挂盒",
-          img: "/images/buffing_wheels.png",
+          img: "/images/buffing_wheels.webp",
         },
         {
           name: "抛光轮与抛光膏组合装",
@@ -34,7 +30,7 @@ export default function ChineseProductsOverview() {
           types: "带柄圆柱/圆顶布轮套装、台磨机镜面还原套装、多规格复合抛光膏套装（绿/白/红/黑蜡）、吸塑插卡零售装。",
           moq: "500 套起",
           pack: "双吸塑吸卡 / 提手彩盒 / OPP挂袋",
-          img: "/images/hero_abrasives_kit.png",
+          img: "/images/hero_abrasives_kit.webp",
         },
       ],
     },
@@ -47,7 +43,7 @@ export default function ChineseProductsOverview() {
           types: "干湿两用乳胶纸基砂纸、高抗拉强度 J-wt 软布基砂布卷、家具漆面精细抛光砂纸、目数混装套。",
           moq: "10,000 张 / 200 卷起",
           pack: "按目数纸盒套封 / 带金属切割边缘的卷装 dispenser 盒",
-          img: "/images/sanding_sheets.png",
+          img: "/images/sanding_sheets.webp",
         },
         {
           name: "网格打磨砂网 (无尘干燥墙磨砂网)",
@@ -55,7 +51,7 @@ export default function ChineseProductsOverview() {
           types: "碳化硅双面覆层防堵塞玻璃纤维网格砂网、无尘吸尘墙面砂纸、大卷工业砂网。",
           moq: "5,000 张起",
           pack: "独立纸卡塑封包 / 大包热收缩膜",
-          img: "/images/sanding_screens.png",
+          img: "/images/sanding_screens.webp",
         },
         {
           name: "精细打磨细节砂纸棒",
@@ -63,7 +59,7 @@ export default function ChineseProductsOverview() {
           types: "弹簧张力塑料砂棒、超细 1/4\" 与 1/2\" 细节替换砂带卷、首饰精饰砂带棒、模型制作修缝器。",
           moq: "1,000 套起",
           pack: "透明塑料挂袋 / 零售吸卡纸板",
-          img: "/images/detail_sanding.png",
+          img: "/images/detail_sanding.webp",
         },
       ],
     },
@@ -76,7 +72,7 @@ export default function ChineseProductsOverview() {
           types: "树脂粘接重载钢性锆刚玉纤维砂碟、角磨机打磨片、焊缝去除磨片、星型中心孔碟。",
           moq: "单目数 2,000 张起",
           pack: "25张热收缩包 / 内置白盒保护 / 重载出口标准大木箱",
-          img: "/images/fiber_discs.png",
+          img: "/images/fiber_discs.webp",
         },
         {
           name: "金刚石特殊打磨抛光碟",
@@ -84,7 +80,7 @@ export default function ChineseProductsOverview() {
           types: "电镀金刚石手擦片、石材打磨磨片、大理石与花岗岩抛光耗材、瓷砖与玻璃打磨磨片。",
           moq: "500 片起",
           pack: "配警告说明书的内纸盒装",
-          img: "/images/diamond_polishing.png",
+          img: "/images/diamond_polishing.webp",
         },
         {
           name: "工作坊砂纸卷架展示套装",
@@ -92,7 +88,7 @@ export default function ChineseProductsOverview() {
           types: "5排砂纸卷工作坊架装组件、金属或木制排盒配锯齿切割刀口、高档五金店展示架架装。",
           moq: "300 套起",
           pack: "配提手的高强度彩盒防震包装",
-          img: "/images/sanding_dispenser.png",
+          img: "/images/sanding_dispenser.webp",
         },
       ],
     },
@@ -175,6 +171,10 @@ export default function ChineseProductsOverview() {
                     <div key={item.name} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                       <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
                         <img
+                          width={1024}
+                          height={1024}
+                          loading="lazy"
+                          decoding="async"
                           src={item.img}
                           alt={item.name}
                           className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
@@ -187,7 +187,7 @@ export default function ChineseProductsOverview() {
                           <div className="flex justify-between items-start">
                             <h3 className="text-lg font-bold text-white">{item.name}</h3>
                             <span className="text-[10px] font-mono text-industry-orange bg-industry-orange/10 border border-industry-orange/20 px-2 py-0.5 rounded">
-                              已验证 B2B 起订量
+                              参考 B2B 起订量
                             </span>
                           </div>
                           <p className="text-sm text-industry-slate-400 leading-relaxed">
@@ -250,7 +250,7 @@ export default function ChineseProductsOverview() {
               },
               {
                 q: "你们对锆刚玉纤维砂片和切割片提供哪些质量检测证书？",
-                a: "所有的锆刚玉纤维砂碟和切割打磨片出厂前，必须在旋转试验机上通过 1.5 倍额定转速的强度跑合测试，确保切削安全。每次发货均附带动态平衡主轴检测表及磨料粒径均匀分布检测报告。"
+                a: "需要提供的报告取决于产品、目的国和双方确认的质检计划。买家应在下单前明确适用标准、测试方法、抽样水平和所需证据。"
               },
               {
                 q: "如何防止在海运集装箱运输过程中彩盒受潮或受压变形？",
@@ -297,7 +297,7 @@ export default function ChineseProductsOverview() {
                 "name": "你们对锆刚玉纤维砂片和切割片提供哪些质量检测证书？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "所有的锆刚玉纤维砂碟和切割打磨片出厂前，必须在旋转试验机上通过 1.5 倍额定转速的强度跑合测试，确保切削安全。每次发货均附带动态平衡主轴检测表及磨料粒径均匀分布检测报告。"
+                  "text": "需要提供的报告取决于产品、目的国和双方确认的质检计划。买家应在下单前明确适用标准、测试方法、抽样水平和所需证据。"
                 }
               },
               {

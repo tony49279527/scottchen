@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import RFQForm from "@/components/RFQForm";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Request an OEM / Wholesale Quote | SCOTTCHEN",
   description: "Contact SCOTTCHEN to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/contact",
-    languages: {
-      "en": "https://www.scottchentools.com/contact",
-      "zh-CN": "https://www.scottchentools.com/zh/contact",
-      "x-default": "https://www.scottchentools.com/contact",
-    },
-  },
-};
+  path: "/contact",
+  alternatePath: "/zh/contact",
+});
 
 export default function Contact() {
   return (
@@ -48,26 +43,19 @@ export default function Contact() {
                   Quote Response Time
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  Our supply chain sales team reviews B2B specifications and will email product options, packaging suggestions, and price sheets within <strong>24 business hours</strong>.
+                  Our team reviews B2B specifications and typically emails product options, packaging suggestions, and next steps within <strong>one business day</strong>.
                 </p>
                 <div className="text-xs font-mono text-industry-orange">
-                  Response SLA: &lt; 24h guaranteed
+                  Target response time: within 1 business day
                 </div>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Direct Contact Info
+                  Verified Contact Routes
                 </h3>
                 
                 <div className="space-y-4 text-xs font-mono text-industry-slate-400">
-                  <div>
-                    <span className="text-industry-slate-500 block uppercase">Sales Office Address:</span>
-                    <span className="text-white font-bold leading-normal">
-                      Scottchen Tool Accessories Ltd.<br />
-                      No. 88 Industry Ring Road, Shanghai, China
-                    </span>
-                  </div>
                   <div>
                     <span className="text-industry-slate-500 block uppercase">Business Email:</span>
                     <a href="mailto:sales@scottchentools.com" className="text-white font-bold hover:underline">
@@ -75,16 +63,16 @@ export default function Contact() {
                     </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">Supply Chain Hub:</span>
-                    <a href="https://www.linkedin.com/company/scottchen-tools" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
-                      linkedin.com/company/scottchen-tools &rarr;
+                    <span className="text-industry-slate-500 block uppercase">Existing Product Store:</span>
+                    <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
+                      scottchen.online &rarr;
                     </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">Direct Inquiry Phone / WhatsApp:</span>
-                    <a href="tel:+862161002008" className="text-white font-bold hover:underline">
-                      +86-21-6100-2008
-                    </a>
+                    <span className="text-industry-slate-500 block uppercase">Files After Submission:</span>
+                    <span className="text-white font-bold leading-normal">
+                      Reply by email with drawings, artwork, barcode files, or specification sheets.
+                    </span>
                   </div>
                 </div>
               </div>

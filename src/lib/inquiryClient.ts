@@ -14,18 +14,36 @@ function readUtmParam(name: string): string {
   return new URLSearchParams(window.location.search).get(name) || "";
 }
 
+function readStoredAttribution() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  try {
+    return JSON.parse(
+      sessionStorage.getItem("scottchen_attribution") || "null"
+    ) as Partial<AttributionFields> | null;
+  } catch {
+    return null;
+  }
+}
+
 export function getAttributionFields(pathname: string): AttributionFields {
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+  const stored = readStoredAttribution();
 
   return {
-    landingPage: typeof window === "undefined" ? pathname : window.location.href,
+    landingPage:
+      stored?.landingPage ||
+      (typeof window === "undefined" ? pathname : window.location.href),
     locale: isZh ? "zh-CN" : "en",
-    referrer: typeof document === "undefined" ? "" : document.referrer,
-    utmSource: readUtmParam("utm_source"),
-    utmMedium: readUtmParam("utm_medium"),
-    utmCampaign: readUtmParam("utm_campaign"),
-    utmTerm: readUtmParam("utm_term"),
-    utmContent: readUtmParam("utm_content"),
+    referrer:
+      stored?.referrer || (typeof document === "undefined" ? "" : document.referrer),
+    utmSource: readUtmParam("utm_source") || stored?.utmSource || "",
+    utmMedium: readUtmParam("utm_medium") || stored?.utmMedium || "",
+    utmCampaign: readUtmParam("utm_campaign") || stored?.utmCampaign || "",
+    utmTerm: readUtmParam("utm_term") || stored?.utmTerm || "",
+    utmContent: readUtmParam("utm_content") || stored?.utmContent || "",
     formStartedAt: new Date().toISOString(),
   };
 }

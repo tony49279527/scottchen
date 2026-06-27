@@ -1,53 +1,48 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Manufacturing Quality Control Standards | SCOTTCHEN",
   description: "Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/quality-control",
-    languages: {
-      "en": "https://www.scottchentools.com/quality-control",
-      "zh-CN": "https://www.scottchentools.com/zh/quality-control",
-      "x-default": "https://www.scottchentools.com/quality-control",
-    },
-  },
-};
+  path: "/quality-control",
+  alternatePath: "/zh/quality-control",
+});
 
 export default function QualityControl() {
   const qcPoints = [
     {
       title: "1. Raw Material Verification",
-      desc: "For cotton buffing wheels, we inspect yarn grades to ensure they are 100% carded natural cotton fibers, free from synthetic blends that melt under high-speed grinding. For sandpapers, we verify backing weight parameters (C-weight, J-weight, and waterproof latex) to guarantee flexibility without tearing.",
+      desc: "For cotton buffing wheels, we inspect declared yarn grades and construction. For sandpapers, we verify backing weight parameters (C-weight, J-weight, and waterproof latex) against the approved specification.",
     },
     {
       title: "2. Cotton Wheel Ply & Density Audits",
-      desc: "Cotton wheels are sold by ply count. A wheel with lower density or fewer plies will compress under pressure, reducing polishing efficiency. We count plies systematically: 30 Ply, 40 Ply, 50 Ply, or 60 Ply targets. We maintain density consistency across batch manufacturing runs.",
+      desc: "Cotton wheels are sold by ply count. A wheel with lower density or fewer plies can compress under pressure and reduce polishing efficiency. Agreed 30, 40, 50, or 60 ply targets can be checked using the approved sampling plan.",
     },
     {
       title: "3. Stitching Tensile Strength Testing",
-      desc: "Concentric spiral stitching locks cotton layers together. If threads snap, the wheel can fray or disintegrate at high RPMs, posing safety risks. We test stitching threads under a tensile load tester before manufacturing runs.",
+      desc: "Concentric spiral stitching locks cotton layers together. Stitching construction, thread condition, and any agreed tensile requirement are checked against the approved specification and reference sample.",
     },
     {
       title: "4. Arbor Hole Bore Sizing Tolerance",
-      desc: "A loose arbor hole causes wheel wobbling on bench grinders, leading to vibration, uneven wear, and dangerous spindle stress. We check inner diameters to ensure they fit a &plusmn; 0.05 mm tolerance scope. Adapters and metal plates must fit flush.",
+      desc: "A loose or off-center arbor hole can cause wheel wobble, uneven wear, and spindle stress. Bore dimensions and fit criteria are checked against the approved SKU drawing and reference sample.",
     },
     {
       title: "5. Grit Calibration & Uniformity",
-      desc: "A single oversized abrasive grain in a P400 grit sheet will leave deep scratches on furniture or metal surfaces, ruining final coatings. We verify sandpaper grit distribution under optical microscope checks to ensure uniformity.",
+      desc: "Oversized abrasive grains can leave deep scratches on furniture or metal surfaces. Grit identity and surface distribution can be checked using the agreed test method and acceptance criteria.",
     },
     {
       title: "6. Disc Dynamic Balance Verification",
-      desc: "Angle grinder zirconia fiber discs operate at up to 13,000 RPM. Out-of-balance discs cause extreme vibration, hand fatigue, and grinder motor damage. Random batch discs are tested on dynamic balancing spinner spindles.",
+      desc: "High-speed abrasive accessories require clear labeled operating limits and suitable inspection criteria. Where applicable, the agreed quality plan can include runout or balance checks using a defined fixture and sampling method.",
     },
     {
       title: "7. Adhesion & Resin Backing Checks",
-      desc: "We perform flex adhesion tests on sandpapers and grinding discs. If the adhesive binder is weak, grains will shed (de-grit) instantly upon contact with workpieces, rendering the tool useless.",
+      desc: "Backing flexibility and abrasive adhesion can be sampled using an agreed bend, peel, or application check. Acceptance criteria are recorded in the SKU quality plan.",
     },
     {
       title: "8. Barcode Scanner Audits",
-      desc: "For online sellers sending batches to Amazon FBA, an unreadable FNSKU barcode sticker triggers inventory blockages. We audit barcode print quality using scanner checking rigs to verify clarity, contrast, and alignment before loading export containers.",
+      desc: "For online sellers sending batches to Amazon FBA, barcode readability is an important release check. FNSKU or UPC labels can be scan-checked before shipment; final acceptance remains subject to the platform's current rules.",
     },
   ];
 
@@ -101,13 +96,13 @@ export default function QualityControl() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Precision Machined Arbors:</strong> Center bore sizing limits kept strictly within a &plusmn;0.05 mm range to prevent dangerous spindle vibration.</span>
+                    <span className="text-industry-slate-200"><strong>Dimensional Inspection:</strong> Center bore, outer diameter, thickness, and fit criteria are checked against the approved drawing and reference sample.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Dynamic Balance Checks:</strong> Grinding discs and drill arbors tested at 1.5x operating speed for dynamic stability and user safety.</span>
+                    <span className="text-industry-slate-200"><strong>Applicable Performance Checks:</strong> Runout, balance, fit, or speed-related tests are defined per SKU and recorded in the agreed quality plan.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -154,30 +149,30 @@ export default function QualityControl() {
 
               {/* Technical Whitepaper Section */}
               <div className="glass-panel p-8 rounded-lg space-y-6 bg-industry-slate-950/40 border border-industry-slate-800">
-                <span className="text-xs font-bold font-mono tracking-widest text-industry-orange uppercase">TECHNICAL WHITE PAPER</span>
+                <span className="text-xs font-bold font-mono tracking-widest text-industry-orange uppercase">INSPECTION PLAN</span>
                 <h3 className="text-xl font-extrabold text-white">
-                  Industrial Code: Dynamic Balancing Calibration & Safety Tolerance for High-Speed Abrasives
+                  Specification, Test Method, and Release Record
                 </h3>
                 <p className="text-sm text-industry-slate-300 leading-relaxed">
-                  In high-performance industrial surfacing applications, abrasive accessories operate at high rotational velocities, generating severe centrifugal stress. Dynamic balancing is critical to eliminate operational vibrations and protect spindles under ISO 1940-1 Standards.
+                  Different abrasive accessories require different acceptance methods. Before production, the buyer and supplier should confirm the applicable dimensions, operating limits, sampling level, test method, and evidence required for each SKU.
                 </p>
                 <div className="space-y-4 text-xs text-industry-slate-400 font-mono">
                   <div className="border-l-2 border-industry-orange pl-3 space-y-1">
-                    <strong className="text-white">1. ISO 1940-1 Balancing Grade (Target: G6.3 / G2.5)</strong>
+                    <strong className="text-white">1. Approved Specification and Reference Sample</strong>
                     <p className="leading-relaxed">
-                      All zirconia fiber discs and concentrated center-plate cotton wheels undergo rigid dynamic balancing testing. Our testing rig calibrates residual unbalance under a target limits grade of G6.3 to prevent spindle bearings from fatigue-induced breakdown.
+                      Record dimensions, materials, construction, tool compatibility, labeled operating limits, packaging, and any agreed tolerance. Keep an identified approval sample where practical.
                     </p>
                   </div>
                   <div className="border-l-2 border-industry-orange pl-3 space-y-1">
-                    <strong className="text-white">2. Centripetal Force Coefficients & Safety Factor</strong>
+                    <strong className="text-white">2. Applicable Test Method</strong>
                     <p className="leading-relaxed">
-                      Calculated under centripetal stress limit formulas (sigma = rho * omega^2 * r^2), the adhesive binder and core stitching threads must handle up to 1.5 times the maximum rated RPM without fracturing, keeping grain displacement rates below 0.02%.
+                      Depending on the product, checks may include dimensions, fit, visible construction, runout, balance, backing adhesion, grit assortment, barcode readability, and pack-out verification.
                     </p>
                   </div>
                   <div className="border-l-2 border-industry-orange pl-3 space-y-1">
-                    <strong className="text-white">3. Concentricity and Sizing Tolerance Parameters</strong>
+                    <strong className="text-white">3. Batch Traceability and Release</strong>
                     <p className="leading-relaxed">
-                      Our manufacturing limits keep the inner bore diameters at a &plusmn;0.05 mm concentricity tolerance to ensure precise seating on standard tool arbor shafts. This eliminates radial runout, preventing operational chattering.
+                      Link inspection results to the lot, purchase order, approved artwork, and sampling record. Define how nonconforming product is contained, reviewed, and corrected before release.
                     </p>
                   </div>
                 </div>
@@ -189,7 +184,11 @@ export default function QualityControl() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/quality_inspection.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/quality_inspection.webp"
                   alt="SCOTTCHEN Quality Control Inspection Rig"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -198,28 +197,28 @@ export default function QualityControl() {
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Tolerance Limits
+                  Typical QC Fields
                 </h3>
                 <ul className="space-y-3 text-xs font-mono">
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">Arbor Hole Diameter:</span>
-                    <span className="text-white font-bold">&plusmn; 0.05 mm</span>
+                    <span className="text-industry-slate-500">Dimensions & Fit:</span>
+                    <span className="text-white font-bold">Approved drawing</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">Outer Dia Tolerance:</span>
-                    <span className="text-white font-bold">&plusmn; 1.0 mm</span>
+                    <span className="text-industry-slate-500">Construction:</span>
+                    <span className="text-white font-bold">Reference sample</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">Grit Size Accuracy:</span>
-                    <span className="text-white font-bold">99% Uniformity</span>
+                    <span className="text-industry-slate-500">Operating Limit:</span>
+                    <span className="text-white font-bold">SKU label/spec</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">Stitch ring offset:</span>
-                    <span className="text-white font-bold">&plusmn; 0.5 mm</span>
+                    <span className="text-industry-slate-500">Barcode & Pack:</span>
+                    <span className="text-white font-bold">Approved artwork</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">Max Operating RPM:</span>
-                    <span className="text-white font-bold">Tested at 1.5x rating</span>
+                    <span className="text-industry-slate-500">Sampling & Evidence:</span>
+                    <span className="text-white font-bold">Agreed QC plan</span>
                   </li>
                 </ul>
               </div>
@@ -269,24 +268,24 @@ export default function QualityControl() {
           <div className="space-y-6">
             {[
               {
-                q: "What is your standard inner bore diameter tolerance on polishing wheels?",
-                a: "We maintain a strict &plusmn;0.05 mm center-hole tolerance limit for all industrial and retail wheels. This ensures a flush, tight fit on bench grinder shafts or drill adapters, eliminating rotational wobbling and minimizing friction vibration at high operating speeds."
+                q: "How is the inner bore tolerance confirmed for polishing wheels?",
+                a: "The bore dimension and tolerance are confirmed per SKU in the approved drawing or specification. The inspection method, gauge, and sampling level should be agreed before production."
               },
               {
                 q: "How do you verify the density and ply count of cotton polishing wheels?",
-                a: "Each production run undergoes structural weight and ply count verification. Plies are counted manually and double-checked against dynamic width guidelines under compression. This ensures the wheels meet the exact catalog thickness (e.g., 30 Ply, 40 Ply, 50 Ply) without hollow spacing."
+                a: "The approved specification records ply count, construction, and relevant weight or thickness criteria. Production samples can then be checked against those agreed values and the retained reference sample."
               },
               {
                 q: "Do you run speed tests on grinding and fiber discs to prevent safety failures?",
-                a: "Yes. All zirconia grinding and fiber discs are subjected to rotational stress checking. We randomly test production batches at 1.5 times the maximum rated RPM to verify safety parameters and check that grain-bonding resin does not crack under heat."
+                a: "Speed-related checks depend on the product design, labeled operating limit, and applicable standard. The required test method, sampling frequency, and report should be confirmed in the quality plan before ordering."
               },
               {
                 q: "How do you prevent grit contamination in sandpapers and polishing compounds?",
-                a: "We maintain isolated milling and mixing environments for coarse and fine grit materials. Raw silicon carbide and aluminum oxide grains are optically filtered. We inspect grit surfaces under magnification to confirm that zero larger grains compromise fine polishing batches."
+                a: "The quality plan can define material segregation, line-clearance, supplier-lot control, and surface inspection requirements. Fine finishing products should be evaluated against an approved sample on the intended substrate."
               },
               {
                 q: "Can we hire third-party inspection firms to audit the shipment before loading?",
-                a: "Absolutely. Sourcing managers can schedule SGS, TUV, V-Trust, or any certified local testing agent to inspect inventory in our warehouses. We provide access to checking equipment and provide full internal test logs with every shipment."
+                a: "Third-party pre-shipment inspection can be discussed during quotation. The buyer should confirm the inspection company, scope, timing, access requirements, and responsibility for inspection fees in writing."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -313,10 +312,10 @@ export default function QualityControl() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What is your standard inner bore diameter tolerance on polishing wheels?",
+                "name": "How is the inner bore tolerance confirmed for polishing wheels?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We maintain a strict &plusmn;0.05 mm center-hole tolerance limit for all industrial and retail wheels. This ensures a flush, tight fit on bench grinder shafts or drill adapters, eliminating rotational wobbling and minimizing friction vibration at high operating speeds."
+                  "text": "The bore dimension and tolerance are confirmed per SKU in the approved drawing or specification. The inspection method, gauge, and sampling level should be agreed before production."
                 }
               },
               {
@@ -324,7 +323,7 @@ export default function QualityControl() {
                 "name": "How do you verify the density and ply count of cotton polishing wheels?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Each production run undergoes structural weight and ply count verification. Plies are counted manually and double-checked against dynamic width guidelines under compression. This ensures the wheels meet the exact catalog thickness (e.g., 30 Ply, 40 Ply, 50 Ply) without hollow spacing."
+                  "text": "The approved specification records ply count, construction, and relevant weight or thickness criteria. Production samples can then be checked against those agreed values and the retained reference sample."
                 }
               },
               {
@@ -332,7 +331,7 @@ export default function QualityControl() {
                 "name": "Do you run speed tests on grinding and fiber discs to prevent safety failures?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. All zirconia grinding and fiber discs are subjected to rotational stress checking. We randomly test production batches at 1.5 times the maximum rated RPM to verify safety parameters and check that grain-bonding resin does not crack under heat."
+                  "text": "Speed-related checks depend on the product design, labeled operating limit, and applicable standard. The required test method, sampling frequency, and report should be confirmed in the quality plan before ordering."
                 }
               },
               {
@@ -340,7 +339,7 @@ export default function QualityControl() {
                 "name": "How do you prevent grit contamination in sandpapers and polishing compounds?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We maintain isolated milling and mixing environments for coarse and fine grit materials. Raw silicon carbide and aluminum oxide grains are optically filtered. We inspect grit surfaces under magnification to confirm that zero larger grains compromise fine polishing batches."
+                  "text": "The quality plan can define material segregation, line-clearance, supplier-lot control, and surface inspection requirements. Fine finishing products should be evaluated against an approved sample on the intended substrate."
                 }
               },
               {
@@ -348,7 +347,7 @@ export default function QualityControl() {
                 "name": "Can we hire third-party inspection firms to audit the shipment before loading?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Absolutely. Sourcing managers can schedule SGS, TUV, V-Trust, or any certified local testing agent to inspect inventory in our warehouses. We provide access to checking equipment and provide full internal test logs with every shipment."
+                  "text": "Third-party pre-shipment inspection can be discussed during quotation. The buyer should confirm the inspection company, scope, timing, access requirements, and responsibility for inspection fees in writing."
                 }
               }
             ]

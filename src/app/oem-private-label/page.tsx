@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "OEM & Private Label Surface Finishing Kits | SCOTTCHEN",
   description: "Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/oem-private-label",
-    languages: {
-      "en": "https://www.scottchentools.com/oem-private-label",
-      "zh-CN": "https://www.scottchentools.com/zh/oem-private-label",
-      "x-default": "https://www.scottchentools.com/oem-private-label",
-    },
-  },
-};
+  path: "/oem-private-label",
+  alternatePath: "/zh/oem-private-label",
+});
 
 export default function OEMPrivateLabel() {
   const oemCapabilities = [
@@ -34,7 +29,7 @@ export default function OEMPrivateLabel() {
     },
     {
       title: "3. Professional Labeling & Barcode Compliance",
-      desc: "We ensure your batches are 100% compliant with target ecommerce platforms and importing customs requirements before loading shipping containers. No manually taped stickers after arrival.",
+      desc: "We review supplied barcode, warning, and country-of-origin requirements before shipment and document the approved label layout. Final marketplace and import compliance remains subject to the buyer's current destination rules.",
       details: [
         "FNSKU Barcodes: We print and apply FNSKU barcode stickers directly onto retail packaging for Amazon FBA inventory.",
         "Instruction Cards: Clear user manuals, tool compatibility tables, and substrate usage guides to reduce avoidable consumer returns.",
@@ -120,7 +115,7 @@ export default function OEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>100% Barcode Compliance:</strong> Pre-applied FNSKU, UPC, and regulatory warnings with verified scannability to prevent FBA receipt errors.</span>
+                    <span className="text-industry-slate-200"><strong>Barcode Verification:</strong> FNSKU, UPC, and required warning labels can be applied and scan-checked against buyer-supplied data before shipment.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -196,7 +191,11 @@ export default function OEMPrivateLabel() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/oem_packaging.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/oem_packaging.webp"
                   alt="SCOTTCHEN OEM Private Label Packaging Mockup"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -282,7 +281,7 @@ export default function OEMPrivateLabel() {
                 a: "Yes. Once a custom kit configuration is selected, our engineers provide detailed CAD packaging dieline templates (PDF/DXF format) for your designer to layout the artwork. We also offer physical and digital mockups for validation before launching mass production."
               },
               {
-                q: "How do you guarantee barcode scannability and compliance for Amazon FBA warehouses?",
+                q: "How do you verify barcode scannability for marketplace fulfillment?",
                 a: "We test all printed barcodes (UPC, FNSKU, ASIN) with specialized scanner hardware to ensure high readability scores under standard warehouse lighting. Barcodes are printed with high-resolution ink directly on the package, or on premium smudge-resistant synthetic stickers."
               },
               {
@@ -334,7 +333,7 @@ export default function OEMPrivateLabel() {
               },
               {
                 "@type": "Question",
-                "name": "How do you guarantee barcode scannability and compliance for Amazon FBA warehouses?",
+                "name": "How do you verify barcode scannability for marketplace fulfillment?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "We test all printed barcodes (UPC, FNSKU, ASIN) with specialized scanner hardware to ensure high readability scores under standard warehouse lighting. Barcodes are printed with high-resolution ink directly on the package, or on premium smudge-resistant synthetic stickers."

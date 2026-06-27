@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Scottchen (SCOTTCHEN) 磨料磨具与抛光轮 OEM/ODM 制造工厂",
   description: "Scottchen (SCOTTCHEN) 专业制造高品质工业抛光轮、抛光布轮、气道布轮、页轮砂碟及定制五金磨具套装。提供贴牌包装与亚马逊 FBA 条码合规服务，起订量低，全球出运。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh",
-    languages: {
-      "en": "https://www.scottchentools.com/",
-      "zh-CN": "https://www.scottchentools.com/zh",
-      "x-default": "https://www.scottchentools.com/",
-    },
-  },
-};
+  path: "/zh",
+  alternatePath: "/",
+  locale: "zh-CN",
+});
 
 export default function ChineseHome() {
   return (
@@ -39,7 +35,7 @@ export default function ChineseHome() {
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/zh/contact"
-                  className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] text-center shadow-lg shadow-industry-orange/20"
+                  className="inline-flex justify-center items-center rounded bg-industry-orange-cta px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] text-center shadow-lg shadow-industry-orange/20"
                 >
                   获取定制询价
                 </Link>
@@ -57,7 +53,11 @@ export default function ChineseHome() {
               <div className="glass-panel p-2 rounded-2xl border border-industry-slate-800 shadow-2xl overflow-hidden bg-industry-slate-900/40 relative group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-industry-orange/10 via-transparent to-transparent opacity-60 pointer-events-none" />
                 <img
-                  src="/images/hero_abrasives_kit.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/hero_abrasives_kit.webp"
                   alt="SCOTTCHEN 抛光轮与打磨工具组合装"
                   className="object-cover w-full h-80 sm:h-96 rounded-xl opacity-90 group-hover:scale-[1.01] transition-transform duration-300"
                 />
@@ -92,7 +92,7 @@ export default function ChineseHome() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>行业高精度公差:</strong> 中心孔孔径公差控制在 &plusmn;0.05 mm 以内，防抖动防偏心，轴心贴合紧密。</span>
+                    <span className="text-industry-slate-200"><strong>规格化质量控制:</strong> 中心孔、外径、结构和适用性能要求按 SKU 图纸、封样和双方确认的质检计划执行。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -100,13 +100,13 @@ export default function ChineseHome() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>跨境电商条码合规:</strong> 直接在工厂提供高清晰度 FNSKU/UPC 条码贴标，通过扫码测试，出仓即入亚马逊 FBA。</span>
+                    <span className="text-industry-slate-200"><strong>条码与包装审核:</strong> 可按买家提供的数据制作 FNSKU/UPC 标签并进行扫描抽检，最终要求以平台当期规则为准。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>港口及国际货运:</strong> 工厂临近上海港与宁波港，支持 FOB/CIF 交易以及国际空海运门到门双清关 (DDP)。</span>
+                    <span className="text-industry-slate-200"><strong>国际货运:</strong> 可根据目的地讨论 FOB、CIF 或门到门方案，具体港口、责任和费用写入报价单。</span>
                   </li>
                 </ul>
               </div>
@@ -132,7 +132,11 @@ export default function ChineseHome() {
             <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
               <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
                 <img
-                  src="/images/buffing_wheels.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN 布轮与抛光轮"
                   className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
                 />
@@ -157,7 +161,11 @@ export default function ChineseHome() {
             <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
               <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
                 <img
-                  src="/images/sanding_sheets.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/sanding_sheets.webp"
                   alt="SCOTTCHEN 研磨与砂纸配件"
                   className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
                 />
@@ -232,7 +240,11 @@ export default function ChineseHome() {
             <div className="lg:col-span-5">
               <div className="glass-panel p-2 rounded-2xl border border-industry-slate-800 shadow-2xl overflow-hidden bg-industry-slate-950/40 relative">
                 <img
-                  src="/images/quality_inspection.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/quality_inspection.webp"
                   alt="SCOTTCHEN 抛光轮动态平衡和缝线拉力质检"
                   className="object-cover w-full h-80 rounded-xl opacity-90"
                 />
@@ -242,7 +254,7 @@ export default function ChineseHome() {
             {/* Right: Technical QA info */}
             <div className="lg:col-span-7 space-y-6">
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">严格出厂质检标准</span>
-              <h2 className="text-3xl font-extrabold text-white">高精度制造与条码合规，消灭客诉隐患</h2>
+              <h2 className="text-3xl font-extrabold text-white">规格化质检与条码审核，降低客诉风险</h2>
               <p className="text-sm text-industry-slate-400 leading-relaxed">
                 在 Scottchen (SCOTTCHEN)，我们深知工具配件的一致性对品牌声誉至关重要。一个重心偏移的抛光轮或目数混杂的砂纸，都会导致买家差评或退货。
               </p>
@@ -251,25 +263,25 @@ export default function ChineseHome() {
                 <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
                   <span className="text-white font-bold block mb-1">物理尺寸控制</span>
                   <p className="text-industry-slate-400 leading-relaxed text-[11px]">
-                    中心孔采用金属加强圈或梯级垫片，孔径控制在 &plusmn;0.05 mm，彻底消除高转速下的震动偏心风险。
+                    中心孔、外径、厚度和装配要求按确认图纸及封样进行检查，降低偏心跳动和装配异常风险。
                   </p>
                 </div>
                 <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
-                  <span className="text-white font-bold block mb-1">动平衡破坏性测试</span>
+                  <span className="text-white font-bold block mb-1">适用性能检查</span>
                   <p className="text-industry-slate-400 leading-relaxed text-[11px]">
-                    锆刚玉纤维砂碟和带柄打磨头通过 1.5 倍极限转速下的动态平衡测试，避免磨耗不均与操作手部疲劳。
+                    跳动、平衡、装配和转速相关测试按产品设计、标示限制及双方确认的质检计划执行。
                   </p>
                 </div>
                 <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
                   <span className="text-white font-bold block mb-1">缝线与织物拉力</span>
                   <p className="text-industry-slate-400 leading-relaxed text-[11px]">
-                    棉线拉力强度验证，多层叠合紧密，高速转动时不脱线、不松边，大幅延长工业布轮的使用寿命。
+                    层数、缝线、织物结构和适用的拉力要求依据确认规格与封样进行抽检并记录。
                   </p>
                 </div>
                 <div className="bg-industry-slate-950/50 p-4 rounded border border-industry-slate-800">
                   <span className="text-white font-bold block mb-1">彩盒与泡壳条码审计</span>
                   <p className="text-industry-slate-400 leading-relaxed text-[11px]">
-                    应用高对比度条码检查仪，逐批审计 FNSKU 或 UPC，确保存储入库时一次通过扫描。
+                    可按买家提供的数据对 FNSKU 或 UPC 进行出货前扫描抽检，并保留约定的检查记录。
                   </p>
                 </div>
               </div>
@@ -304,7 +316,7 @@ export default function ChineseHome() {
               },
               {
                 q: "如何保证运送到国外亚马逊 FBA 仓库的包装与条码合规？",
-                a: "我们为大量在线卖家提供 FBA-Ready 包装支持。我们会将您的 FNSKU/UPC 条码以 300DPI 分辨率直接印于彩盒上，或使用耐磨涂层标签进行手工贴标。并在每箱贴附标准警告标签及纸箱标，确保 100% 顺利扫码入仓。"
+                a: "我们可按买家提供的 FNSKU/UPC 数据制作彩盒或标签，并在出货前进行扫描抽检。警告标签、纸箱标和最终入仓要求需依据平台当期规则确认。"
               },
               {
                 q: "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
@@ -315,8 +327,8 @@ export default function ChineseHome() {
                 a: "传统砂纸适用于木工常规打磨及汽车漆面抛光，干湿两用乳胶纸基具有很好的柔韧度；而网格砂网由玻璃纤维编织而成，双面涂覆碳化硅，具有极好的防堵塞排灰性能，常用于大面积石膏板墙面打磨，可配合吸尘设备实现无尘作业。"
               },
               {
-                q: "你们可以提供免费的样品测试吗？",
-                a: "可以。我们为经过核实的五金商户、工具品牌商及大型零售卖家提供免费的样品评估包。您可以通过我们网站上的样品申领表格选择需要的布轮规格、目数。国际快递费用（DHL/FedEx）需由买家承担，但此费用将在后续的第一笔大货合同中 100% 予以扣减。"
+                q: "你们可以提供样品测试吗？",
+                a: "可以。经核实的商业采购商可以申请样品。样品和国际快递费用取决于具体规格，并在发出前书面确认；如有合格订单抵扣政策，也会写入报价单。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -355,7 +367,7 @@ export default function ChineseHome() {
                 "name": "如何保证运送到国外亚马逊 FBA 仓库的包装与条码合规？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "我们为大量在线卖家提供 FBA-Ready 包装支持。我们会将您的 FNSKU/UPC 条码以 300DPI 分辨率直接印于彩盒上，或使用耐磨涂层标签进行手工贴标。并在每箱贴附标准警告标签及纸箱标，确保 100% 顺利扫码入仓。"
+                  "text": "我们可按买家提供的 FNSKU/UPC 数据制作彩盒或标签，并在出货前进行扫描抽检。警告标签、纸箱标和最终入仓要求需依据平台当期规则确认。"
                 }
               },
               {
@@ -376,10 +388,10 @@ export default function ChineseHome() {
               },
               {
                 "@type": "Question",
-                "name": "你们可以提供免费的样品测试吗？",
+                "name": "你们可以提供样品测试吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "可以。我们为经过核实的五金商户、工具品牌商及大型零售卖家提供免费的样品评估包。您可以通过我们网站上的样品申领表格选择需要的布轮规格、目数。国际快递费用（DHL/FedEx）需由买家承担，但此费用将在后续的第一笔大货合同中 100% 予以扣减。"
+                  "text": "可以。经核实的商业采购商可以申请样品。样品和国际快递费用取决于具体规格，并在发出前书面确认；如有合格订单抵扣政策，也会写入报价单。"
                 }
               }
             ]

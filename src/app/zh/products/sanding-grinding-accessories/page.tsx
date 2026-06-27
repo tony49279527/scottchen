@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "OEM 砂纸、砂带与锆刚玉砂碟配件系列 | SCOTTCHEN",
   description: "批量采购标准砂纸张、防堵塞碳化硅网格砂网、高切削力锆刚玉纤维砂碟、精细打磨砂纸棒及定制砂带盒装。支持低起订量贴牌服务。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/products/sanding-grinding-accessories",
-    languages: {
-      "en": "https://www.scottchentools.com/products/sanding-grinding-accessories",
-      "zh-CN": "https://www.scottchentools.com/zh/products/sanding-grinding-accessories",
-      "x-default": "https://www.scottchentools.com/products/sanding-grinding-accessories",
-    },
-  },
-};
+  path: "/zh/products/sanding-grinding-accessories",
+  alternatePath: "/products/sanding-grinding-accessories",
+  locale: "zh-CN",
+});
 
 export default function ChineseSandingGrindingAccessories() {
   const subtypes = [
@@ -193,7 +189,7 @@ export default function ChineseSandingGrindingAccessories() {
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg text-center space-y-4">
                 <h3 className="text-lg font-bold text-white uppercase">自撕盒装砂卷及零售混合挂卡</h3>
                 <p className="text-sm text-industry-slate-400 max-w-lg mx-auto">
-                  我们在包装线上提供直接贴合跨境电商标准的泡壳热缩、纸卡以及印刷自撕彩盒，保证 FNSKU 条码清晰可扫。
+                  可按买家确认的包装资料制作泡壳热缩、纸卡及印刷自撕彩盒，并在出货前对 FNSKU 条码进行扫描抽检。
                 </p>
                 <div className="pt-2">
                   <Link
@@ -323,7 +319,11 @@ export default function ChineseSandingGrindingAccessories() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/sanding_tools.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/sanding_tools.webp"
                   alt="SCOTTCHEN 研磨砂纸配件"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -360,7 +360,7 @@ export default function ChineseSandingGrindingAccessories() {
                     href="/zh/sample-kit"
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
-                    免费获取大货目数样品
+                    申请大货目数样品
                   </Link>
                 </div>
               </div>
@@ -379,35 +379,16 @@ export default function ChineseSandingGrindingAccessories() {
                 </div>
               </div>
 
-              {/* YouTube Shorts Demo Links */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  视频展示与工作流
+                  现有零售产品参考
                 </h3>
-                <ul className="space-y-4 text-xs">
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      YouTube 视频演示: #AF-03 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">锆刚玉重载磨碟在 15 秒内瞬间拉平 10mm 钢梁粗糙焊缝。</span>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      YouTube 视频演示: #AF-04 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">精细塑料砂纸笔对 ABS 模型极细凹槽进行无损合缝线打磨。</span>
-                  </li>
-                </ul>
+                <p className="text-xs leading-relaxed text-industry-slate-300">
+                  可先查看 SCOTTCHEN 现有零售产品，了解砂纸、磨片和工具包的常见组合，再提交 B2B 定制要求。
+                </p>
+                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
+                  查看 SCOTTCHEN 零售产品站 &rarr;
+                </a>
               </div>
 
             </div>
@@ -421,9 +402,9 @@ export default function ChineseSandingGrindingAccessories() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">亚马逊零售样品直达</span>
-            <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊官方旗舰店单品橱窗</h2>
+            <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊零售商品参考</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              需要即时样品测试、少量零售采购或更快的货运时效？您可以点击下方直接前往我们的亚马逊官方旗舰店下单，支持 Amazon Prime 极速配送。
+              下方为部分亚马逊零售商品链接，可用于了解现有产品形式。库存、价格、卖家状态和 Prime 资格均由亚马逊平台管理，可能随时变化。
             </p>
           </div>
 
@@ -434,89 +415,93 @@ export default function ChineseSandingGrindingAccessories() {
                 asin: "B0G3PWBTQ5",
                 desc: "高强度树脂锆刚玉纤维碟片，专为大负荷金属焊缝打磨、表面去斑与强力去锈而设计。",
                 url: "https://www.amazon.com/SCOTTCHEN-Zirconia-Sanding-Grinding-Fiberglass/dp/B0G3PWBTQ5/ref=sr_1_34?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/fiber_discs.png"
+                img: "/images/fiber_discs.webp"
               },
               {
                 title: "特级干湿两用乳胶防水砂纸张",
                 asin: "B0F4R3QBTD",
                 desc: "优质碳化硅磨粒配合柔韧浸渍乳胶 C-wt 纸张背基，专用于汽车车身打磨、修整与镜面抛光。",
                 url: "https://www.amazon.com/SCOTTCHEN-Sandpaper-Metalworking-Woodworker-Furniture/dp/B0F4R3QBTD/ref=sr_1_32?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "工作坊多卷装拉扣砂纸分配箱",
                 asin: "B0CW65P854",
                 desc: "5排装工业级砂纸卷盒，涵盖 P150 至 P400 常用目数，配有盒装防尘金属锯齿切割锋刃。",
                 url: "https://www.amazon.com/SCOTTCHEN-Abrasive-Sanding-Dispenser-Finishing/dp/B0CW65P854/ref=sr_1_33?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_dispenser.png"
+                img: "/images/sanding_dispenser.webp"
               },
               {
                 title: "粗中细混装重载纸基砂纸卷",
                 asin: "B0CGKS2Z37",
                 desc: "专业高抗拉强度干磨砂纸卷套组，专攻高转速木旋、金属打磨及手工拉丝成型。",
                 url: "https://www.amazon.com/SCOTTCHEN-Sanding-Sandpaper-Woodworking-Furniture/dp/B0CGKS2Z37/ref=sr_1_2?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "16英寸大规格石膏板防堵塞砂网",
                 asin: "B07HDZX5M9",
                 desc: "特级碳化硅双面覆层玻璃纤维网格砂网，镂空编织，提供极佳的排灰除尘与无尘打磨体验。",
                 url: "https://www.amazon.com/Drywall-Sanding-Screen-16in-x-12pcs/dp/B07HDZX5M9/ref=sr_1_5?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_screens.png"
+                img: "/images/sanding_screens.webp"
               },
               {
                 title: "管道工专用超柔高负荷砂布卷",
                 asin: "B0D45B7591",
                 desc: "180目高抗挠聚酯棉布基砂带卷，专用于黄铜管道焊前除污及铜管件细部除锈打磨。",
                 url: "https://www.amazon.com/SCOTTCHEN-Plumbing-Plumbers-Aluminum-180-1Roll/dp/B0D45B7591/ref=sr_1_6?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "带定位吸尘孔无尘干燥墙磨砂纸",
                 asin: "B0C4TNHRWZ",
                 desc: "带有多孔分布的网格自粘砂纸片，涵盖 P80 至 P150 目数，适配主流墙面无尘打磨机。",
                 url: "https://www.amazon.com/SCOTTCHEN-Drywall-include-Sanding-80%EF%BC%8C100%EF%BC%8C150/dp/B0C4TNHRWZ/ref=sr_1_8?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_screens.png"
+                img: "/images/sanding_screens.webp"
               },
               {
                 title: "细节精细打磨弹簧张力砂棒套装",
                 asin: "B07ZQZT1Q6",
                 desc: "细节打磨抛光塑柄工具配超窄目数替换砂带，适于比例模型修缝、手办及珠宝雕刻。",
                 url: "https://www.amazon.com/SCOTTCHEN-Sanding-Sticks-Matchsticks-Detailing/dp/B07ZQZT1Q6/ref=sr_1_9?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/detail_sanding.png"
+                img: "/images/detail_sanding.webp"
               },
               {
                 title: "掌上电镀高硬度金刚石手擦片",
                 asin: "B0F66QL77V",
                 desc: "电镀高纯度金刚石颗粒，适合对超硬岩石、玉石宝石、石英石、玻璃及精细瓷砖边缘去毛刺。",
                 url: "https://www.amazon.com/SCOTTCHEN-Grinding-Polishing-Gemstone-Porcelain/dp/B0F66QL77V/ref=sr_1_12?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/diamond_polishing.png"
+                img: "/images/diamond_polishing.webp"
               },
               {
                 title: "多功能人体工学手持打磨砂块组合",
                 asin: "B0CMXGQ8R3",
                 desc: "高回弹硬质发泡手磨砂纸托，为汽车钣金修补与木器精细抛光提供均匀稳定的受力面。",
                 url: "https://www.amazon.com/SCOTTCHEN-Multi-Use-Woodworking-Restoration-Automotive/dp/B0CMXGQ8R3/ref=sr_1_23?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "金刚石波段碗型砂轮打磨轮片",
                 asin: "B08BFHBTCP",
                 desc: "超重载波浪双排金刚石磨碗，专用于花岗岩、混凝土、大理石墙角磨削与边缘整平。",
                 url: "https://www.amazon.com/Diamond-Grinding-Abrasive-Sanding-Granite/dp/B08BFHBTCP/ref=sr_1_25?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/diamond_polishing.png"
+                img: "/images/diamond_polishing.webp"
               },
               {
                 title: "真空钎焊金刚石圆角封边磨盘",
                 asin: "B08BF8MZC1",
                 desc: "高浓度钎焊金刚石磨盘，专用于石材台面、大理石及石英板材的半圆或罗马圆角封边打磨。",
                 url: "https://www.amazon.com/Diamond-Grinding-Abrasive-Sanding-Granite/dp/B08BF8MZC1/ref=sr_1_27?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/diamond_polishing.png"
+                img: "/images/diamond_polishing.webp"
               }
             ].map((prod) => (
               <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                 <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
                   <img
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
                     src={prod.img}
                     alt={prod.title}
                     className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
@@ -622,40 +607,19 @@ export default function ChineseSandingGrindingAccessories() {
                     "@type": "Product",
                     "name": "干湿两用乳胶纸基砂纸片",
                     "description": "高品质碳化硅磨粒贴附于 C-weight 乳胶纸基上，适合汽车车漆打磨与湿抛光。",
-                    "sku": "SC-SANDPAPER-SHEETS-ZH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.12",
-                      "highPrice": "0.35",
-                      "offerCount": "12"
-                    }
+                    "sku": "SC-SANDPAPER-SHEETS-ZH"
                   },
                   {
                     "@type": "Product",
                     "name": "锆刚玉硫化纤维钢纸磨片",
                     "description": "重负荷焊缝粗磨及除锈锆刚玉砂盘，带 7/8 英寸十字中心定位星型定位盘。",
-                    "sku": "SC-ZIRCONIA-DISCS-ZH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.22",
-                      "highPrice": "0.85",
-                      "offerCount": "8"
-                    }
+                    "sku": "SC-ZIRCONIA-DISCS-ZH"
                   },
                   {
                     "@type": "Product",
                     "name": "防堵塞墙面石膏板网格镂空砂网",
                     "description": "双面涂覆优质碳化硅的镂空网格砂片，专为石膏板大面积抹灰批灰除粉吸尘设计。",
-                    "sku": "SC-DRYWALL-MESH-ZH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.15",
-                      "highPrice": "0.45",
-                      "offerCount": "6"
-                    }
+                    "sku": "SC-DRYWALL-MESH-ZH"
                   }
                 ]
               },

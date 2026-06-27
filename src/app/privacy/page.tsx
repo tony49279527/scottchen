@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy | SCOTTCHEN",
   description: "Learn about how SCOTTCHEN collects, stores, protects and manages B2B commercial inquiry data and sample request information.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/privacy",
-    languages: {
-      "en": "https://www.scottchentools.com/privacy",
-      "zh-CN": "https://www.scottchentools.com/zh/privacy",
-      "x-default": "https://www.scottchentools.com/privacy",
-    },
-  },
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPolicy() {
   return (
@@ -37,17 +31,17 @@ export default function PrivacyPolicy() {
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">1. Overview</h2>
               <p>
-                Scottchen Tool Accessories Ltd. (&quot;SCOTTCHEN&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting the privacy and security of your corporate data. We operate primarily as a business-to-business (B2B) manufacturer. The data we collect is exclusively used to provide wholesale quotes, evaluate physical sample compatibility, and design custom tool packaging solutions for verified commercial buyers.
+                SCOTTCHEN (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses submitted business information to respond to wholesale quote requests, evaluate sample requests, and discuss custom product or packaging requirements.
               </p>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">2. What Information We Collect</h2>
               <p>
-                We collect information directly when you submit an RFQ form or request a free sample pack on our website. This includes:
+                We collect information directly when you submit an RFQ form or request a sample pack on our website. This includes:
               </p>
               <ul className="list-disc pl-5 space-y-2.5 font-mono text-xs text-industry-slate-400">
-                <li><strong>Contact details:</strong> Full name, professional business email address, and corporate contact phone number.</li>
+                <li><strong>Contact details:</strong> Full name and email address.</li>
                 <li><strong>Business metadata:</strong> Registered company name, corporate website URL, target geographic markets, and standard business profile type (e.g., brand manager, distributor, or online seller).</li>
                 <li><strong>Technical specifications:</strong> Targeted tool categories, custom ply counts, bore sizes, sandpaper grits, packaging preferences, and estimated batch volumes.</li>
               </ul>
@@ -72,7 +66,7 @@ export default function PrivacyPolicy() {
                 We do not sell, rent, or lease your corporate database contacts to any third-party advertising companies. Your inquiry parameters are shared only with essential supply chain logistics partners (e.g., customs brokers, shipping carriers, and pre-shipment auditing agencies like SGS or V-Trust) to arrange delivery contracts.
               </p>
               <p>
-                We retain B2B inquiries for a standard period of five (5) years to maintain catalog history and support follow-up tooling customizations, unless you explicitly request erasure.
+                We retain inquiry information only as long as reasonably needed to respond, maintain commercial records, and meet applicable legal obligations. You may request deletion where applicable.
               </p>
             </div>
 
@@ -86,7 +80,7 @@ export default function PrivacyPolicy() {
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">6. Cookies</h2>
               <p>
-                Our site uses essential, security-optimized cookies to prevent Cross-Site Request Forgery (CSRF) and remember cookie consent status. We do not load invasive marketing or third-party behavioral trackers. Refer to our <a href="/cookie-policy" className="text-industry-orange hover:underline font-bold">Cookie Policy</a> for detailed settings.
+                The site stores your analytics preference locally in your browser. If Google Analytics is configured, it loads only after you consent. We do not use advertising or retargeting pixels. Refer to our <a href="/cookie-policy" className="text-industry-orange hover:underline font-bold">Cookie Policy</a> for details.
               </p>
             </div>
 
@@ -96,9 +90,7 @@ export default function PrivacyPolicy() {
                 For direct inquiries regarding data safety, data audits, or wholesale supply contracts, please reach out to our team:
               </p>
               <div className="bg-industry-slate-950 p-6 rounded border border-industry-slate-800 font-mono text-xs text-industry-slate-400 space-y-2">
-                <div><span className="text-white font-bold">Company:</span> Scottchen Tool Accessories Ltd.</div>
-                <div><span className="text-white font-bold">Address:</span> No. 88 Industry Ring Road, Shanghai, 200120, China</div>
-                <div><span className="text-white font-bold">Telephone:</span> +86-21-6100-2008</div>
+                <div><span className="text-white font-bold">Brand:</span> SCOTTCHEN</div>
                 <div><span className="text-white font-bold">Email:</span> <a href="mailto:sales@scottchentools.com" className="text-industry-orange hover:underline">sales@scottchentools.com</a></div>
               </div>
             </div>

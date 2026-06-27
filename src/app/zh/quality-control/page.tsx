@@ -1,53 +1,49 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "磨具制造厂出厂质量控制与标准体系 | SCOTTCHEN",
   description: "了解SCOTTCHEN系统化的出厂质量控制检测流程：缝线拉力强度、中心孔公差精控、磨片动平衡测试以及条码贴标清晰度扫描审计。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/quality-control",
-    languages: {
-      "en": "https://www.scottchentools.com/quality-control",
-      "zh-CN": "https://www.scottchentools.com/zh/quality-control",
-      "x-default": "https://www.scottchentools.com/quality-control",
-    },
-  },
-};
+  path: "/zh/quality-control",
+  alternatePath: "/quality-control",
+  locale: "zh-CN",
+});
 
 export default function ChineseQualityControl() {
   const qcPoints = [
     {
-      title: "1. 原原材料进厂校验",
-      desc: "对于抛光棉布轮，我们严格检测棉纱等级，确保选用 100% 精梳天然纯棉纤维，杜绝在高速研磨时发生受热熔化的化纤混纺成分。对于砂纸类磨料，我们抽检背纸克重参数（C-wt、J-wt 纸重及乳胶纸基），确保良好的物理韧度不发生崩裂掉砂。",
+      title: "1. 原材料进厂校验",
+      desc: "对于抛光棉布轮，可按确认规格核对棉纱材质、织物结构与来料标识。对于砂纸类磨料，可抽检 C-weight、J-weight 或乳胶纸基等背基参数，并记录批次结果。",
     },
     {
       title: "2. 棉布轮叠合层数与密度抽检",
-      desc: "棉布轮通常以层数 (Ply) 作为厚度基准。一个虚标厚度或低密度的布轮在受压打磨时会发生松懈偏移，极大削弱表面精抛效率。我们采用高精度数片机构对 30 Ply, 40 Ply, 50 Ply 或 60 Ply 进行逐批计数，保证生产的每一批产品密度完全一致。",
+      desc: "棉布轮通常以层数 (Ply) 作为厚度基准。30、40、50 或 60 Ply 等目标层数可依据确认的抽样方案进行计数，并与图纸、封样和允收标准比对。",
     },
     {
       title: "3. 缝线环绕抗拉力强度测试",
-      desc: "同心圆螺旋缝线是锁紧棉层、防止布轮散架的关键。若线径断裂，在高转速 (RPM) 作业下布轮会发生甩线或飞边解体，危及操作人员的人身安全。我们在每班开工前，采用抗拉力检测仪对缝合棉线进行强力测试。",
+      desc: "同心圆螺旋缝线用于锁紧棉层。缝线结构、线材状态以及双方约定的拉力要求，可按确认的检验方法和封样进行检查。",
     },
     {
       title: "4. 中心孔径与铁盘公差精准控制",
-      desc: "一个松动偏心的中心孔径会导致布轮在台式砂轮机转轴上产生剧烈的抖动偏心，造成操作手部麻木、磨耗不均并损坏磨床轴心。我们引入通止规检测，将中心孔孔径公差牢牢控制在 &plusmn;0.05 mm 以内，使定位套环贴合密实。",
+      desc: "松动或偏心的中心孔会导致布轮在台式砂轮机上产生跳动。中心孔、外径、厚度和装配要求应依据双方确认的图纸与封样进行检验。",
     },
     {
       title: "5. 砂粒均匀度与光学粒度标定",
-      desc: "在 P400 级超细砂纸中如果混入一颗粗大磨粒，就会在实木家具或镜面钢板上留下无法挽回的刺眼划痕，废掉整道喷漆工序。我们通过光学显微放大，对砂面颗粒均匀度进行监控，完全隔绝粗矿粒污染。",
+      desc: "异常粗粒可能在家具或金属表面留下明显划痕。砂粒标识与表面分布可依据双方确认的测试方法、抽样水平和允收标准进行检查。",
     },
     {
       title: "6. 纤维砂碟动平衡与防甩偏测试",
-      desc: "角磨机锆刚玉砂碟的常规工作转速高达 13,000 RPM。动平衡失调的碟片在旋转时产生巨大振颤，加速轴承磨损并导致手臂瞬间酸痛。我们对下线成品进行随机抽样，装入动平衡机进行动态离心偏移量测试。",
+      desc: "高速磨料磨具需要清晰标示工作限制并设置合适的检验标准。在适用时，双方确认的质检计划可规定跳动或平衡检查所使用的夹具、方法和抽样水平。",
     },
     {
       title: "7. 粘接强度与耐温树脂附着检测",
-      desc: "我们对砂碟和自粘魔术贴砂碟进行弯折拉扯剥离试验。如果粘接胶水耐温性能不佳，在干打磨发热时就会产生严重掉砂或起皮脱胶，我们坚决使用高耐温改性树脂粘接剂。",
+      desc: "砂碟和自粘砂碟的背基柔韧性与磨料附着力，可按约定进行弯折、剥离或应用测试；具体允收条件写入对应 SKU 质检计划。",
     },
     {
       title: "8. 电商标签及外箱条码扫码审计",
-      desc: "对于向亚马逊 FBA 仓库供货的跨境电商卖家，条码无法读取是一场灾难。我们在出货封箱前，采用工业级高对比度条码检验设备对彩盒上印刷的 FNSKU、UPC 等条码进行反射度读取测试，确保 100% 入仓一次通过。",
+      desc: "对于向亚马逊 FBA 仓库供货的跨境电商卖家，条码可读性非常重要。我们可在出货封箱前对彩盒上的 FNSKU、UPC 等条码进行扫描检查；最终入仓结果仍以平台当期规则为准。",
     },
   ];
 
@@ -101,13 +97,13 @@ export default function ChineseQualityControl() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>精控中心定位孔:</strong> 抛光轮内径孔径公差控制在 &plusmn;0.05 mm 极限偏差内，完全防止高速运转抖动。</span>
+                    <span className="text-industry-slate-200"><strong>尺寸与装配检查:</strong> 中心孔、外径、厚度和装配要求依据确认图纸及封样进行检验。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>破坏性超速测试:</strong> 锆刚玉重载盘及带柄小布轮在 1.5 倍额定转速离心机中进行飞散抽检，保障安全防线。</span>
+                    <span className="text-industry-slate-200"><strong>适用性能检查:</strong> 跳动、平衡、装配或转速相关测试按 SKU 和双方确认的质检计划执行并记录。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -154,30 +150,30 @@ export default function ChineseQualityControl() {
 
               {/* Technical Whitepaper Section */}
               <div className="glass-panel p-8 rounded-lg space-y-6 bg-industry-slate-950/40 border border-industry-slate-800">
-                <span className="text-xs font-bold font-mono tracking-widest text-industry-orange uppercase">技术白皮书</span>
+                <span className="text-xs font-bold font-mono tracking-widest text-industry-orange uppercase">检验计划</span>
                 <h3 className="text-xl font-extrabold text-white">
-                  工业标准规程：高转速研磨抛光磨耗件动平衡校验与安全公差控制规范
+                  规格确认、检验方法与批次放行记录
                 </h3>
                 <p className="text-sm text-industry-slate-300 leading-relaxed">
-                  在高负荷工业表面加工与精整作业中，打磨头及布轮高速旋转会产生极大的离心剪切应力。为从源头消除转动震颤并保护主轴与轴承，SCOTTCHEN 全线执行符合 ISO 1940-1 的动平衡精调规范。
+                  不同磨料磨具适用的验收方法并不相同。量产前应逐 SKU 确认尺寸、工作限制、抽样水平、检验方法和需要提供的证据。
                 </p>
                 <div className="space-y-4 text-xs text-industry-slate-400 font-mono">
                   <div className="border-l-2 border-industry-orange pl-3 space-y-1">
-                    <strong className="text-white">一、 ISO 1940-1 动平衡等级（目标：G6.3 / G2.5 级）</strong>
+                    <strong className="text-white">一、确认规格与封样</strong>
                     <p className="leading-relaxed">
-                      工厂出产的锆刚玉重载纤维片及加固金属盘棉布轮均需通过动平衡机校验，将允许的最大残余不平衡量控制在 G6.3 级限度内，完全杜绝轴承因交变剪切力发生金属疲劳损坏。
+                      记录尺寸、材料、结构、工具适配、标示工作限制、包装和双方认可的公差；在适用时保留有明确标识的确认样品。
                     </p>
                   </div>
                   <div className="border-l-2 border-industry-orange pl-3 space-y-1">
-                    <strong className="text-white">二、 离心力计算系数与超速安全系数</strong>
+                    <strong className="text-white">二、适用检验方法</strong>
                     <p className="leading-relaxed">
-                      基于离心应力公式 (sigma = rho * omega^2 * r^2) 精细核算强度，车缝线拉力与底材树脂背胶能够安全承受 1.5 倍额定转速运行而不发生基体崩裂，确保颗粒磨损掉落率低于 0.02%。
+                      根据产品类型，可检查尺寸、装配、外观结构、跳动、平衡、底基粘接、目数组合、条码可读性和包装装量。
                     </p>
                   </div>
                   <div className="border-l-2 border-industry-orange pl-3 space-y-1">
-                    <strong className="text-white">三、 中心同轴度与孔径尺寸配合参数</strong>
+                    <strong className="text-white">三、批次追溯与放行</strong>
                     <p className="leading-relaxed">
-                      我们把中心法兰盘及定位套的内孔直径偏差收窄在 &plusmn;0.05 mm 公差区间，与 bench grinder 轴心贴合紧密无间，彻底规避因偏心抖动引起的跳动和操作震手感。
+                      检验记录应关联生产批次、订单、确认包装稿和抽样记录，并提前约定不合格品的隔离、评审和纠正方式。
                     </p>
                   </div>
                 </div>
@@ -189,7 +185,11 @@ export default function ChineseQualityControl() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/quality_inspection.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/quality_inspection.webp"
                   alt="SCOTTCHEN 抛光轮中心孔及动平衡检测"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -198,28 +198,28 @@ export default function ChineseQualityControl() {
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  工厂出厂公差界限
+                  常用质检字段
                 </h3>
                 <ul className="space-y-3 text-xs font-mono">
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">中心孔孔径公差:</span>
-                    <span className="text-white font-bold">&plusmn; 0.05 mm</span>
+                    <span className="text-industry-slate-500">尺寸与装配:</span>
+                    <span className="text-white font-bold">确认图纸</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">外圆直径偏差:</span>
-                    <span className="text-white font-bold">&plusmn; 1.0 mm</span>
+                    <span className="text-industry-slate-500">产品结构:</span>
+                    <span className="text-white font-bold">确认封样</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">目数颗粒均匀率:</span>
-                    <span className="text-white font-bold">99% 均匀一致</span>
+                    <span className="text-industry-slate-500">工作限制:</span>
+                    <span className="text-white font-bold">SKU 标签/规格</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">车缝缝线环距偏差:</span>
-                    <span className="text-white font-bold">&plusmn; 0.5 mm</span>
+                    <span className="text-industry-slate-500">条码与包装:</span>
+                    <span className="text-white font-bold">确认包装稿</span>
                   </li>
                   <li className="flex justify-between">
-                    <span className="text-industry-slate-500">极限安全破坏转速:</span>
-                    <span className="text-white font-bold">1.5倍额定转速无损</span>
+                    <span className="text-industry-slate-500">抽样与证据:</span>
+                    <span className="text-white font-bold">双方确认计划</span>
                   </li>
                 </ul>
               </div>
@@ -269,24 +269,24 @@ export default function ChineseQualityControl() {
           <div className="space-y-6">
             {[
               {
-                q: "SCOTTCHEN 对台式抛光布轮的中心孔（Bore）有什么公差限制？",
-                a: "对于台磨机和手持钻适配的所有布轮产品，我们执行严苛的 &plusmn;0.05 mm 孔径公差限制。这保证了装机后的牢固同轴度，在运转时没有偏斜导致的摆动，最大程度降低由于震动对磨床主轴和轴承造成的径向损耗。"
+                q: "台式抛光布轮的中心孔公差如何确认？",
+                a: "中心孔尺寸和公差应按 SKU 写入双方确认的图纸或规格表。量产前还应确认检验量具、方法和抽样水平。"
               },
               {
                 q: "如何确立棉布轮层数 (Ply) 的真实性与叠合密度？",
-                a: "每一生产批次在裁布成型后均需称重。我们配有专业的层数计数机构，确保交货厚度完全匹配规格书（如 30 Ply, 40 Ply, 50 Ply 叠合层），在受挤压时布质坚韧饱满，绝不通过松散排布来克扣原料。"
+                a: "确认规格应记录层数、结构以及适用的重量或厚度标准。生产样品可依据这些约定值和保留封样进行检查。"
               },
               {
                 q: "纤维打磨砂盘的动平衡安全测试是怎么实施的？",
-                a: "角磨机锆刚玉纤维片转速极快。我们在工厂端使用动态离心动平衡测试转轴，随机提取批量大货，加速到 1.5 倍的额定极限安全转速以做破坏性抗裂测试，防止树脂底胶受热龟裂或碟片变形甩偏造成安全意外。"
+                a: "转速相关检验取决于产品设计、标示工作限制和适用标准。下单前应在质检计划中确认测试方法、抽样频率和需要提供的报告。"
               },
               {
                 q: "你们怎么防范大货磨料或研磨膏（蜡条）发生目数污染与粗颗粒渗漏？",
-                a: "我们在出产车间实施完全物理隔离。粗目数抛光蜡（Emery 研磨蜡）和极细镜面蜡（如绿蜡、白蜡）的原料搅拌与注模区域完全独立；砂纸原砂的研磨筛选环境配有高目数气流除尘，防止任何大于标称目数的颗粒掺杂其中刮伤高光表面。"
+                a: "质检计划可约定物料隔离、换线清场、供应批次管理和表面检查。精细抛光产品还应在实际底材上与确认样进行效果比较。"
               },
               {
                 q: "我们可以安排我们本国的第三方验货公司装柜前去仓库检验么？",
-                a: "完全支持。我们无缝对接 SGS、TUV、V-Trust 或您派遣的任意第三方常驻检测人员。我们免费提供厂区里的精密通止卡规、拉力测试仪和动平衡架以供检验，并在发运前提供完整的内质检报告底单。"
+                a: "第三方出货前验货可在报价阶段协商。买家应书面确认验货公司、范围、时间、现场要求和验货费用承担方式。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -313,10 +313,10 @@ export default function ChineseQualityControl() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "SCOTTCHEN 对台式抛光布轮的中心孔（Bore）有什么公差限制？",
+                "name": "台式抛光布轮的中心孔公差如何确认？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "对于台磨机和手持钻适配的所有布轮产品，我们执行严苛的 &plusmn;0.05 mm 孔径公差限制。这保证了装机后的牢固同轴度，在运转时没有偏斜导致的摆动，最大程度降低由于震动对磨床主轴和轴承造成的径向损耗。"
+                  "text": "中心孔尺寸和公差应按 SKU 写入双方确认的图纸或规格表。量产前还应确认检验量具、方法和抽样水平。"
                 }
               },
               {
@@ -324,7 +324,7 @@ export default function ChineseQualityControl() {
                 "name": "如何确立棉布轮层数 (Ply) 的真实性与叠合密度？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "每一生产批次在裁布成型后均需称重。我们配有专业的层数计数机构，确保交货厚度完全匹配规格书（如 30 Ply, 40 Ply, 50 Ply 叠合层），在受挤压时布质坚韧饱满，绝不通过松散排布来克扣原料。"
+                  "text": "确认规格应记录层数、结构以及适用的重量或厚度标准。生产样品可依据这些约定值和保留封样进行检查。"
                 }
               },
               {
@@ -332,7 +332,7 @@ export default function ChineseQualityControl() {
                 "name": "纤维打磨砂盘的动平衡安全测试是怎么实施的？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "角磨机锆刚玉纤维片转速极快。我们在工厂端使用动态离心动平衡测试转轴，随机提取批量大货，加速到 1.5 倍的额定极限安全转速以做破坏性抗裂测试，防止树脂底胶受热龟裂或碟片变形甩偏造成安全意外。"
+                  "text": "转速相关检验取决于产品设计、标示工作限制和适用标准。下单前应在质检计划中确认测试方法、抽样频率和需要提供的报告。"
                 }
               },
               {
@@ -340,7 +340,7 @@ export default function ChineseQualityControl() {
                 "name": "你们怎么防范大货磨料或研磨膏（蜡条）发生目数污染与粗颗粒渗漏？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "我们在出产车间实施完全物理隔离。粗目数抛光蜡（Emery 研磨蜡）和极细镜面蜡（如绿蜡、白蜡）的原料搅拌与注模区域完全独立；砂纸原砂的研磨筛选环境配有高目数气流除尘，防止任何大于标称目数的颗粒掺杂其中刮伤高光表面。"
+                  "text": "质检计划可约定物料隔离、换线清场、供应批次管理和表面检查。精细抛光产品还应在实际底材上与确认样进行效果比较。"
                 }
               },
               {
@@ -348,7 +348,7 @@ export default function ChineseQualityControl() {
                 "name": "我们可以安排我们本国的第三方验货公司装柜前去仓库检验么？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "完全支持。我们无缝对接 SGS、TUV、V-Trust 或您派遣的任意第三方常驻检测人员。我们免费提供厂区里的精密通止卡规、拉力测试仪和动平衡架以供检验，并在发运前提供完整的内质检报告底单。"
+                  "text": "第三方出货前验货可在报价阶段协商。买家应书面确认验货公司、范围、时间、现场要求和验货费用承担方式。"
                 }
               }
             ]

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { alternateLocalePath } from "@/lib/site";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,14 +28,7 @@ export default function Header() {
       ];
 
   const getLanguageToggleLink = (targetLang: "en" | "zh") => {
-    if (targetLang === "zh") {
-      if (isZh) return pathname;
-      return `/zh${pathname === "/" ? "" : pathname}`;
-    } else {
-      if (!isZh) return pathname;
-      const cleanPath = pathname.replace(/^\/zh/, "");
-      return cleanPath === "" ? "/" : cleanPath;
-    }
+    return alternateLocalePath(pathname, targetLang);
   };
 
   const isActive = (path: string) => pathname === path || (path !== "/" && pathname.startsWith(path));
@@ -99,7 +93,7 @@ export default function Header() {
             </div>
             <Link
               href={isZh ? "/zh/contact" : "/contact"}
-              className="inline-flex items-center justify-center rounded bg-industry-orange px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
+              className="inline-flex items-center justify-center rounded bg-industry-orange-cta px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
             >
               {isZh ? "在线询盘" : "Request Quote"}
             </Link>
@@ -112,6 +106,8 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-industry-slate-400 hover:bg-industry-slate-800 hover:text-white focus:outline-none"
               aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-label={isZh ? "打开主导航" : "Open main menu"}
             >
               <span className="sr-only">Open main menu</span>
               {mobileMenuOpen ? (
@@ -130,7 +126,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-industry-slate-800 bg-industry-slate-950 px-4 pt-2 pb-6 space-y-3">
+        <div id="mobile-navigation" className="md:hidden border-t border-industry-slate-800 bg-industry-slate-950 px-4 pt-2 pb-6 space-y-3">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -167,7 +163,7 @@ export default function Header() {
             <Link
               href={isZh ? "/zh/contact" : "/contact"}
               onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-center rounded bg-industry-orange py-3 text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
+              className="block w-full text-center rounded bg-industry-orange-cta py-3 text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
             >
               {isZh ? "在线询盘" : "Request Quote"}
             </Link>

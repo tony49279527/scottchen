@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Cookie Policy | SCOTTCHEN",
-  description: "Read the Cookie Policy of SCOTTCHEN to learn about the essential and secure cookies we use to run our B2B catalog quoting forms safely.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/cookie-policy",
-    languages: {
-      "en": "https://www.scottchentools.com/cookie-policy",
-      "zh-CN": "https://www.scottchentools.com/zh/cookie-policy",
-      "x-default": "https://www.scottchentools.com/cookie-policy",
-    },
-  },
-};
+  description: "Learn how SCOTTCHEN stores analytics consent preferences and uses optional website measurement only after visitor approval.",
+  path: "/cookie-policy",
+});
 
 export default function CookiePolicy() {
   return (
@@ -37,49 +31,49 @@ export default function CookiePolicy() {
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">1. What Are Cookies?</h2>
               <p>
-                Cookies are tiny text files stored in your web browser directory when you load certain websites. They allow web servers to recognize your browser, keep track of form sessions, and defend interactive portal scripts from cross-site injection attacks.
+                Cookies and similar browser storage technologies can remember preferences or help measure how a website is used. This page explains the limited browser storage used by this site.
               </p>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">2. What Cookies We Use</h2>
               <p>
-                Unlike typical retail stores or consumer websites, we do not load invasive marketing track cookies, behavioral profile tracers, or retargeting scripts. We utilize only two categories of cookies:
+                We do not use advertising, retargeting, or cross-site profiling cookies. The site uses the following browser storage:
               </p>
               
               <div className="space-y-4 pt-2">
                 <div className="border border-industry-slate-800 rounded bg-industry-slate-950/40 p-4">
                   <h3 className="font-bold text-white text-xs uppercase mb-1.5 flex items-center">
                     <span className="h-2 w-2 rounded-full bg-emerald-500 mr-2" />
-                    Essential Technical Cookies (Strictly Necessary)
+                    Consent Preference (Local Storage)
                   </h3>
                   <p className="text-xs text-industry-slate-400">
-                    These are required to enable secure B2B request submissions. They hold temporary tokens that protect our contact forms against spam submittals and Cross-Site Request Forgery (CSRF). Blocking these cookies will prevent RFQ submissions on our pages.
+                    Your analytics choice is stored in your browser so the consent panel does not appear on every page. This preference does not identify you and is not required to submit an RFQ.
                   </p>
                 </div>
                 <div className="border border-industry-slate-800 rounded bg-industry-slate-950/40 p-4">
                   <h3 className="font-bold text-white text-xs uppercase mb-1.5 flex items-center">
                     <span className="h-2 w-2 rounded-full bg-industry-orange mr-2" />
-                    Preference Cookies (Functional)
+                    Google Analytics (Optional)
                   </h3>
                   <p className="text-xs text-industry-slate-400">
-                    We use a small persistent preference cookie to store your cookie consent selection. This avoids loading the floating consent alert banner repeatedly when you navigate from products to application scenes.
+                    If analytics is configured and you select “Allow Analytics,” Google Analytics may set measurement cookies and receive usage information such as page views, device type, and approximate location. Analytics scripts are not loaded before consent.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">3. Cookieless Privacy Approach</h2>
+              <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">3. Data Minimization</h2>
               <p>
-                Our server configurations align with strict data minimization principles. We do not load Google Analytics cookies, Facebook pixel tags, or programmatic ad platform trackers on our global or Chinese page sub-routes. Your visitor activity remains entirely private and untracked, ensuring high-speed catalog performance.
+                We do not use Facebook Pixel, programmatic advertising tags, or cross-site behavioral profiles. Declining analytics does not affect product pages, catalog downloads, or inquiry forms.
               </p>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">4. How to Manage Cookies</h2>
               <p>
-                You can configure, block, or delete cookies at any time through your browser settings. Be advised that blocking essential cookies will make it impossible to submit pricing sheets and sample specifications through our online forms. To disable cookies:
+                You can decline analytics in the consent panel and can clear stored choices or cookies through your browser settings at any time:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-xs text-industry-slate-400 font-mono">
                 <li><strong>Google Chrome:</strong> Settings &rarr; Privacy and security &rarr; Cookies and other site data.</li>
@@ -92,7 +86,7 @@ export default function CookiePolicy() {
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">5. Updates to This Policy</h2>
               <p>
-                We may periodically update our technical cookie usage as we refine B2B form encryptions. Any updates will be reflected on this page with an adjusted effective date.
+                We may update this policy when measurement or website functionality changes. Material changes will be reflected on this page with an updated effective date.
               </p>
             </div>
 
@@ -102,8 +96,7 @@ export default function CookiePolicy() {
                 If you have questions regarding our essential cookie usage or data security layers, please reach our compliance team:
               </p>
               <div className="bg-industry-slate-950 p-6 rounded border border-industry-slate-800 font-mono text-xs text-industry-slate-400 space-y-2">
-                <div><span className="text-white font-bold">Office:</span> Scottchen Tool Accessories Ltd.</div>
-                <div><span className="text-white font-bold">Address:</span> No. 88 Industry Ring Road, Shanghai, 200120, China</div>
+                <div><span className="text-white font-bold">Brand:</span> SCOTTCHEN</div>
                 <div><span className="text-white font-bold">Email:</span> <a href="mailto:sales@scottchentools.com" className="text-industry-orange hover:underline">sales@scottchentools.com</a></div>
               </div>
             </div>

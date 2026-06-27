@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import SampleKitForm from "@/components/SampleKitForm";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "免费申领表面打磨与抛光轮样品测试包 | SCOTTCHEN",
-  description: "为五金工具品牌商、渠道分销商或跨境电商大卖家提供免费抛光轮布轮、锆刚玉纤维砂碟及防堵塞网格砂网物理样品，以评估缝合拉力、纸质韧性及磨料粒度。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/sample-kit",
-    languages: {
-      "en": "https://www.scottchentools.com/sample-kit",
-      "zh-CN": "https://www.scottchentools.com/zh/sample-kit",
-      "x-default": "https://www.scottchentools.com/sample-kit",
-    },
-  },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "申请表面打磨与抛光轮样品测试包 | SCOTTCHEN",
+  description: "五金工具品牌商、渠道分销商或跨境电商卖家可申请抛光轮、锆刚玉纤维砂碟及防堵塞砂网样品，以评估结构、底基和磨料粒度。",
+  path: "/zh/sample-kit",
+  alternatePath: "/sample-kit",
+  locale: "zh-CN",
+});
 
 export default function ChineseSampleKit() {
   return (
@@ -22,7 +18,7 @@ export default function ChineseSampleKit() {
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">产品质量校验评估</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-            免费申领表面抛磨耗材样品测试包
+            申请表面抛磨耗材样品测试包
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
             在大批量订柜前，实际检测我们的车缝线密度、防拉扯布纸韧度、磨料目数级配是否完全符合您的质量要求。
@@ -39,7 +35,7 @@ export default function ChineseSampleKit() {
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">评估快指</span>
                 <h2 className="text-2xl font-black text-white mt-1">样品评估规则</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  为全球采购商提供的免费样品申领、国际运费扣减政策以及规格定制说明。
+                  为全球采购商提供样品审核、国际运费和规格定制说明。
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -48,13 +44,13 @@ export default function ChineseSampleKit() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>商用免费评估:</strong> 抛光棉轮、砂纸磨碟以及细节打磨笔等实体大货样品，对核实过的五金品牌及卖家免费提供。</span>
+                    <span className="text-industry-slate-200"><strong>商业样品审核:</strong> 经核实的品牌和渠道采购商可申请抛光轮、砂纸磨碟及细节打磨工具样品，具体费用按配置确认。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>首单扣减快递费:</strong> 国际快递使用 DHL/FedEx/UPS 派送。样品快递费将在您签署首笔量产合同大货中 100% 抵扣。</span>
+                    <span className="text-industry-slate-200"><strong>样品与运费条款:</strong> 样品费、国际快递费及可能适用的订单抵扣政策会在发出前书面确认。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -92,7 +88,11 @@ export default function ChineseSampleKit() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/sample_kit.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/sample_kit.webp"
                   alt="SCOTTCHEN 抛磨耗材样品测试箱"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -106,7 +106,7 @@ export default function ChineseSampleKit() {
                 
                 <div className="space-y-4 text-xs">
                   <div>
-                    <h4 className="font-bold text-white uppercase">样品物理耗材真的免费吗？</h4>
+                    <h4 className="font-bold text-white uppercase">样品费用如何确认？</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
                       是的。棉布轮、砂碟磨碟、砂纸纸样对于核实身份的商业实体（工具分销商、网店卖家、五金供应链商）是完全免收材料费的。
                     </p>
@@ -114,7 +114,7 @@ export default function ChineseSampleKit() {
                   <div>
                     <h4 className="font-bold text-white uppercase">样品国际运费怎么安排？</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      我们通过 DHL、FedEx、UPS 等快速国际物流发货。采购商需承担快递发货费（亦可通过您的快递到付账号发运）。该运费会在首笔大货量产合同中获得全额返还扣减。
+                      我们可通过 DHL、FedEx、UPS 等国际快递发货。采购商通常承担快递费用，也可提供到付账号；如报价中包含合格订单抵扣条款，则按书面报价执行。
                     </p>
                   </div>
                   <div>
@@ -137,7 +137,7 @@ export default function ChineseSampleKit() {
                   商业资格审核条件
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  为了把有限的高价值物理样机包合理分发，申请需要填写有效的公司商业名称、网店或品牌官网网址以及合法的商业电子邮箱。我们会在 24 小时内完成审核反馈。
+                  样品申请需要填写有效的公司名称、网店或品牌官网网址以及联系邮箱。资料完整的申请通常会在一个工作日内完成初步审核。
                 </p>
                 <div className="bg-industry-slate-950 p-3 rounded border border-industry-slate-800 text-[10px] font-mono text-industry-orange">
                   已审核的商用渠道包括：五金工具品牌、跨国批发分销商、亚马逊/Shopify 店主、工业抛磨耗材供货链经理。
@@ -164,12 +164,12 @@ export default function ChineseSampleKit() {
           <div className="space-y-6">
             {[
               {
-                q: "哪些采购群体有资格申请免费的表面抛光打磨样品箱？",
-                a: "磨盘磨具、棉布轮和打磨笔样品只面向有真实采购意向的商业客户免费发运，包括自有五金工具品牌持有者、建材五金渠道批发经理、跨境电商网店采购及汽配抛磨大宗分销买手。"
+                q: "哪些采购群体可以申请表面抛光打磨样品箱？",
+                a: "样品申请主要面向有真实采购需求的商业客户，包括五金工具品牌、建材五金渠道、跨境电商采购和工业耗材分销商。样品可用性及费用按具体配置确认。"
               },
               {
                 q: "对于样品产生的国际快递派送费用，SCOTTCHEN 是如何进行优惠扣减的？",
-                a: "样品大货采用 DHL、FedEx、UPS、TNT 或国际 EMS 快递。起航运费由买家承担（或提供您的账号到付）。样品派送产生的每一分快递费用，都将 100% 记录在案，并在您签订首笔集装箱量产大货时全额返还扣减。"
+                a: "样品可采用 DHL、FedEx、UPS、TNT 或国际 EMS 快递。运费通常由买家承担或使用到付账号；任何订单抵扣安排必须以书面报价为准。"
               },
               {
                 q: "我能否在样品中要求特定的棉布层数、适配器孔径或者特制砂纸粒度？",
@@ -208,10 +208,10 @@ export default function ChineseSampleKit() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "哪些采购群体有资格申请免费的表面抛光打磨样品箱？",
+                "name": "哪些采购群体可以申请表面抛光打磨样品箱？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "磨盘磨具、棉布轮和打磨笔样品只面向有真实采购意向的商业客户免费发运，包括自有五金工具品牌持有者、建材五金渠道批发经理、跨境电商网店采购及汽配抛磨大宗分销买手。"
+                  "text": "样品申请主要面向有真实采购需求的商业客户，包括五金工具品牌、建材五金渠道、跨境电商采购和工业耗材分销商。样品可用性及费用按具体配置确认。"
                 }
               },
               {
@@ -219,7 +219,7 @@ export default function ChineseSampleKit() {
                 "name": "对于样品产生的国际快递派送费用，SCOTTCHEN 是如何进行优惠扣减的？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "样品大货采用 DHL、FedEx、UPS、TNT 或国际 EMS 快递。起航运费由买家承担（或提供您的账号到付）。样品派送产生的每一分快递费用，都将 100% 记录在案，并在您签订首笔集装箱量产大货时全额返还扣减。"
+                  "text": "样品可采用 DHL、FedEx、UPS、TNT 或国际 EMS 快递。运费通常由买家承担或使用到付账号；任何订单抵扣安排必须以书面报价为准。"
                 }
               },
               {

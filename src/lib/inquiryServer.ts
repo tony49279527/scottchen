@@ -56,6 +56,10 @@ export function isBusinessEmail(email: string): boolean {
   return !FREE_EMAIL_DOMAINS.has(domain);
 }
 
+export function isValidEmail(email: string): boolean {
+  return emailRegex.test(email);
+}
+
 export function isLikelyBusinessWebsite(value: string): boolean {
   if (!isNonEmptyString(value)) {
     return false;
@@ -95,8 +99,8 @@ export function validatePayload(payload: InquiryPayload): string | null {
     return "Missing required contact fields.";
   }
 
-  if (!isBusinessEmail(payload.email)) {
-    return "Please use a business email address.";
+  if (!isValidEmail(payload.email)) {
+    return "Please enter a valid email address.";
   }
 
   if (isQuotePayload(payload)) {
@@ -164,4 +168,3 @@ export function isSubmissionTooFast(formStartedAt: string, now = Date.now()): bo
 
   return now - started < 1500;
 }
-

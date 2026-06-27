@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "磨具抛光工具包应用场景工作流 | SCOTTCHEN",
   description: "了解针对不同材质与底材量身定制的磨料磨具配件配置：金属研磨去毛刺、木工抛光、汽车轮毂镜面还原、珠宝模型打磨等一站式B2B搭配方案。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/applications",
-    languages: {
-      "en": "https://www.scottchentools.com/applications",
-      "zh-CN": "https://www.scottchentools.com/zh/applications",
-      "x-default": "https://www.scottchentools.com/applications",
-    },
-  },
-};
+  path: "/zh/applications",
+  alternatePath: "/applications",
+  locale: "zh-CN",
+});
 
 export default function ChineseApplicationsOverview() {
   const applications = [
@@ -86,7 +82,11 @@ export default function ChineseApplicationsOverview() {
             <div className="lg:col-span-5 hidden lg:block">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
                 <img
-                  src="/images/applications_banner.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/applications_banner.webp"
                   alt="SCOTTCHEN 研磨抛光应用场景"
                   className="object-cover w-full h-48 opacity-90"
                 />

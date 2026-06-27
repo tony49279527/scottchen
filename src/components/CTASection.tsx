@@ -30,7 +30,7 @@ export default function CTASection({
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Link
             href={isZh ? "/zh/contact" : "/contact"}
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded bg-industry-orange px-8 py-4 text-base font-bold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded bg-industry-orange-cta px-8 py-4 text-base font-bold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
           >
             {isZh ? "获取 OEM 报价" : "Request OEM Quote"}
           </Link>
@@ -56,7 +56,7 @@ export default function CTASection({
         </div>
         <div className="mt-6 flex justify-center items-center space-x-6 text-xs text-industry-slate-500 font-mono">
           <span>
-            &bull; {isZh ? "已验证企业可申请样品" : "Free Global Sample Shipping for Verified Businesses"}
+            &bull; {isZh ? "已验证企业可申请产品样品" : "Product Samples Available for Verified Businesses"}
           </span>
           <span>&bull; {isZh ? "支持 FBA 包装方案" : "FBA Packaging Ready"}</span>
           <span>&bull; {isZh ? "支持混合 SKU 打样" : "Mixed SKU Testing Orders"}</span>

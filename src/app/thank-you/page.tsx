@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Thank You for Your Inquiry | SCOTTCHEN",
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
+  description: "Your SCOTTCHEN B2B inquiry has been received.",
+  path: "/thank-you",
+  alternatePath: "/zh/thank-you",
+  noIndex: true,
+});
 
 export default function ThankYou() {
   return (
@@ -45,7 +46,7 @@ export default function ThankYou() {
                 <strong>B2B Quote Generation:</strong> We compile bulk contract options, packaging toolings cost, and lead times.
               </li>
               <li>
-                <strong>Contact:</strong> We will email you or contact your WhatsApp/LinkedIn within <strong>24 business hours</strong>.
+                <strong>Contact:</strong> We typically reply to the email provided within <strong>one business day</strong>.
               </li>
             </ul>
           </div>

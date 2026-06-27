@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "OEM Sanding & Grinding Accessories | SCOTTCHEN",
-  description: "Buy bulk sandpaper sheets, silicone carbide screens, zirconia grinding discs, mini sanding sticks, and custom abrasive dispenser kits. Standard B2B MOQ parameters.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/products/sanding-grinding-accessories",
-    languages: {
-      "en": "https://www.scottchentools.com/products/sanding-grinding-accessories",
-      "zh-CN": "https://www.scottchentools.com/zh/products/sanding-grinding-accessories",
-      "x-default": "https://www.scottchentools.com/products/sanding-grinding-accessories",
-    },
-  },
-};
+  description: "Buy bulk sandpaper sheets, silicon carbide screens, zirconia grinding discs, mini sanding sticks, and custom abrasive dispenser kits. Standard B2B MOQ parameters.",
+  path: "/products/sanding-grinding-accessories",
+  alternatePath: "/zh/products/sanding-grinding-accessories",
+});
 
 export default function SandingGrindingAccessories() {
   const subtypes = [
@@ -323,7 +318,11 @@ export default function SandingGrindingAccessories() {
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
                 <img
-                  src="/images/sanding_tools.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/sanding_tools.webp"
                   alt="SCOTTCHEN Sanding & Grinding Accessories"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -379,35 +378,17 @@ export default function SandingGrindingAccessories() {
                 </div>
               </div>
 
-              {/* YouTube Shorts Demo Links */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Shorts Demonstrations
+                  Retail Product Reference
                 </h3>
-                <ul className="space-y-4 text-xs">
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      YouTube Shorts: #AF-03 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">Zirconia resin fiber disc leveling a thick weld joint in 15 seconds.</span>
-                  </li>
-                  <li>
-                    <a 
-                      href="https://www.youtube.com/hashtag/scottchen" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-industry-orange font-bold hover:underline block"
-                    >
-                      YouTube Shorts: #AF-04 &rarr;
-                    </a>
-                    <span className="text-industry-slate-300 block mt-1">Mini detail sanding sticks refining tiny tight channels in a resin plastic model.</span>
-                  </li>
-                </ul>
+                <p className="text-xs leading-relaxed text-industry-slate-300">
+                  Review current SCOTTCHEN retail products to understand existing abrasive,
+                  sanding, and kit configurations before requesting a custom B2B version.
+                </p>
+                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
+                  View the SCOTTCHEN retail store &rarr;
+                </a>
               </div>
 
             </div>
@@ -421,9 +402,9 @@ export default function SandingGrindingAccessories() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Shop Samples on Amazon</span>
-            <h2 className="text-3xl font-extrabold text-white mt-3">Direct Amazon Store Showcase</h2>
+            <h2 className="text-3xl font-extrabold text-white mt-3">Amazon Retail Listing References</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Need immediate retail quantities, sample testing, or instant shipping? Click below to buy our verified products directly on our official Amazon Store with Amazon Prime delivery.
+              Use the selected Amazon listings below as retail product references. Availability, pricing, seller status, and Prime eligibility are controlled by Amazon and may change.
             </p>
           </div>
 
@@ -434,89 +415,93 @@ export default function SandingGrindingAccessories() {
                 asin: "B0G3PWBTQ5",
                 desc: "Heavy-duty zirconia resin fiber grinding discs designed for rapid weld leveling and rust removal on metals.",
                 url: "https://www.amazon.com/SCOTTCHEN-Zirconia-Sanding-Grinding-Fiberglass/dp/B0G3PWBTQ5/ref=sr_1_34?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/fiber_discs.png"
+                img: "/images/fiber_discs.webp"
               },
               {
                 title: "Latex Wet/Dry Sandpaper Sheets",
                 asin: "B0F4R3QBTD",
                 desc: "Silicon carbide premium wet/dry sheets with high-flex latex C-wt backing for auto body styling and polishing.",
                 url: "https://www.amazon.com/SCOTTCHEN-Sandpaper-Metalworking-Woodworker-Furniture/dp/B0F4R3QBTD/ref=sr_1_32?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "Abrasive Sanding Dispenser Box",
                 asin: "B0CW65P854",
                 desc: "Multi-roll shop sandpaper roll dispenser box containing 150-grit to 400-grit rolls with a built-in steel tearing edge.",
                 url: "https://www.amazon.com/SCOTTCHEN-Abrasive-Sanding-Dispenser-Finishing/dp/B0CW65P854/ref=sr_1_33?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_dispenser.png"
+                img: "/images/sanding_dispenser.webp"
               },
               {
                 title: "Multi-Grit Sandpaper Rolls Pack",
                 asin: "B0CGKS2Z37",
                 desc: "Professional heavy-duty dry sanding paper rolls set suited for industrial woodturning and metal finishing.",
                 url: "https://www.amazon.com/SCOTTCHEN-Sanding-Sandpaper-Woodworking-Furniture/dp/B0CGKS2Z37/ref=sr_1_2?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "Drywall Sanding Screen (16-inch)",
                 asin: "B07HDZX5M9",
                 desc: "Premium silicon carbide open mesh sheets for drywall plaster smoothing and dust extraction compliance.",
                 url: "https://www.amazon.com/Drywall-Sanding-Screen-16in-x-12pcs/dp/B07HDZX5M9/ref=sr_1_5?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_screens.png"
+                img: "/images/sanding_screens.webp"
               },
               {
                 title: "Plumbing Sanding Emery Cloth Roll",
                 asin: "B0D45B7591",
                 desc: "High-flex 180-grit plumbers cloth roll designed for sanding copper pipes and cleaning brass fittings.",
                 url: "https://www.amazon.com/SCOTTCHEN-Plumbing-Plumbers-Aluminum-180-1Roll/dp/B0D45B7591/ref=sr_1_6?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "Drywall Sanding Sheets with Holes",
                 asin: "B0C4TNHRWZ",
                 desc: "Multi-hole vacuum-compatible sanding screens covering P80 to P150 grits for dust-free sanding platforms.",
                 url: "https://www.amazon.com/SCOTTCHEN-Drywall-include-Sanding-80%EF%BC%8C100%EF%BC%8C150/dp/B0C4TNHRWZ/ref=sr_1_8?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_screens.png"
+                img: "/images/sanding_screens.webp"
               },
               {
                 title: "Detail Sanding Sticks & Belts Kit",
                 asin: "B07ZQZT1Q6",
                 desc: "Mini spring-tension detail sanding tools and replacement belts for crafting tight scale channels.",
                 url: "https://www.amazon.com/SCOTTCHEN-Sanding-Sticks-Matchsticks-Detailing/dp/B07ZQZT1Q6/ref=sr_1_9?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/detail_sanding.png"
+                img: "/images/detail_sanding.webp"
               },
               {
                 title: "Diamond Abrasive Sanding Sheets",
                 asin: "B0F66QL77V",
                 desc: "Electroplated diamond hand pads designed for grinding high-hardness gemstones, quartz, glass, and porcelain tiles.",
                 url: "https://www.amazon.com/SCOTTCHEN-Grinding-Polishing-Gemstone-Porcelain/dp/B0F66QL77V/ref=sr_1_12?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/diamond_polishing.png"
+                img: "/images/diamond_polishing.webp"
               },
               {
                 title: "Multi-Use Sanding Blocks Set",
                 asin: "B0CMXGQ8R3",
                 desc: "Ergonomic contour hand sanders set providing firm backing for auto body styling and woodwork finishing.",
                 url: "https://www.amazon.com/SCOTTCHEN-Multi-Use-Woodworking-Restoration-Automotive/dp/B0CMXGQ8R3/ref=sr_1_23?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/sanding_sheets.png"
+                img: "/images/sanding_sheets.webp"
               },
               {
                 title: "Diamond Granite Grinding Cup Wheel",
                 asin: "B08BFHBTCP",
                 desc: "Heavy-duty 4-inch diamond segmented cup wheel designed for aggressive granite, concrete, and stone edge leveling.",
                 url: "https://www.amazon.com/Diamond-Grinding-Abrasive-Sanding-Granite/dp/B08BFHBTCP/ref=sr_1_25?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/diamond_polishing.png"
+                img: "/images/diamond_polishing.webp"
               },
               {
                 title: "Diamond Edge Profiling Wheel",
                 asin: "B08BF8MZC1",
                 desc: "Vacuum-brazed diamond grinding wheel designed to shape bullnose edges on marble and quartz slabs.",
                 url: "https://www.amazon.com/Diamond-Grinding-Abrasive-Sanding-Granite/dp/B08BF8MZC1/ref=sr_1_27?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
-                img: "/images/diamond_polishing.png"
+                img: "/images/diamond_polishing.webp"
               }
             ].map((prod) => (
               <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                 <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
                   <img
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
                     src={prod.img}
                     alt={prod.title}
                     className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
@@ -622,40 +607,19 @@ export default function SandingGrindingAccessories() {
                     "@type": "Product",
                     "name": "Latex Wet/Dry Sandpaper Sheets",
                     "description": "Premium silicon carbide sheets on latex C-weight backing for automotive styling and wet prep.",
-                    "sku": "SC-SANDPAPER-SHEETS",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.12",
-                      "highPrice": "0.35",
-                      "offerCount": "12"
-                    }
+                    "sku": "SC-SANDPAPER-SHEETS"
                   },
                   {
                     "@type": "Product",
                     "name": "Zirconia Vulcanized Fiber Grinding Discs",
                     "description": "Heavy weld-leveling zirconia discs with 7/8-inch star hubs on 0.8mm vulcanized backing.",
-                    "sku": "SC-ZIRCONIA-DISCS",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.22",
-                      "highPrice": "0.85",
-                      "offerCount": "8"
-                    }
+                    "sku": "SC-ZIRCONIA-DISCS"
                   },
                   {
                     "@type": "Product",
                     "name": "Fiberglass Mesh Drywall Sanding Screens",
                     "description": "Double-sided silicon carbide mesh sheets for clog-free dust-extracted drywall sanding.",
-                    "sku": "SC-DRYWALL-MESH",
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "USD",
-                      "lowPrice": "0.15",
-                      "highPrice": "0.45",
-                      "offerCount": "6"
-                    }
+                    "sku": "SC-DRYWALL-MESH"
                   }
                 ]
               },

@@ -7,7 +7,8 @@
 
 @theme {
   --color-industry-orange: #ea580c;
-  --color-industry-orange-hover: #c2410c;
+  --color-industry-orange-cta: #c2410c;
+  --color-industry-orange-hover: #9a3412;
   --color-industry-orange-light: #f97316;
   
   --color-industry-slate-950: #070a13;
@@ -16,6 +17,7 @@
   --color-industry-slate-800: #1e293b;
   --color-industry-slate-750: #27354b;
   --color-industry-slate-700: #334155;
+  --color-industry-slate-500: #7c8ca1;
   --color-industry-slate-400: #94a3b8;
   --color-industry-slate-350: #b2c1d3;
   --color-industry-slate-300: #cbd5e1;
@@ -24,7 +26,7 @@
   --color-bg-card: rgba(15, 23, 42, 0.7);
   --color-border-card: rgba(51, 65, 85, 0.4);
   
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: var(--font-site-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 html {
@@ -36,6 +38,12 @@ body {
   background-color: var(--color-industry-slate-900);
   color: var(--color-industry-slate-200);
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-site-display), var(--font-site-sans), "PingFang SC", sans-serif;
 }
 
 .glass-panel {

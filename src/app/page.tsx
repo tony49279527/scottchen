@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
   description: "SCOTTCHEN manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/",
-    languages: {
-      "en": "https://www.scottchentools.com/",
-      "zh-CN": "https://www.scottchentools.com/zh",
-      "x-default": "https://www.scottchentools.com/",
-    },
-  },
-};
+  path: "/",
+  alternatePath: "/zh",
+});
 
 export default function Home() {
   const categories = [
@@ -22,15 +17,15 @@ export default function Home() {
       desc: "Cotton buffing wheels, bench grinder polishing wheels, and drill-mount pads. Engineered with high-strength stitching and calibrated arbor hole accuracy.",
       link: "/products/buffing-polishing-wheels",
       badge: "Core Mainstay",
-      img: "/images/buffing_wheels.png",
+      img: "/images/buffing_wheels.webp",
       ctaText: "Explore Cotton Buffing Wheels Catalog",
     },
     {
       title: "Polishing Wheel Kits",
-      desc: "Scenarios-specific buffing kits complete with polishing compound bars. Ready for retail branding, online kits, and DIY automotive wheel restoration.",
+      desc: "Scenario-specific buffing kits complete with polishing compound bars. Ready for retail branding, online kits, and DIY automotive wheel restoration.",
       link: "/products/buffing-polishing-wheels",
       badge: "High Conversion",
-      img: "/images/hero_abrasives_kit.png",
+      img: "/images/hero_abrasives_kit.webp",
       ctaText: "Browse Polishing Wheel Kits",
     },
     {
@@ -38,7 +33,7 @@ export default function Home() {
       desc: "Silicon carbide and aluminum oxide abrasives. Available in assorted grit packs, rolls, and dispenser boxes for woodwork, metal prep, and paint prep.",
       link: "/products/sanding-grinding-accessories",
       badge: "High Volume",
-      img: "/images/sanding_sheets.png",
+      img: "/images/sanding_sheets.webp",
       ctaText: "View Grinding & Sanding Technical Specs",
     },
     {
@@ -46,7 +41,7 @@ export default function Home() {
       desc: "Heavy-duty zirconia alumina resin fiber discs and angle grinder attachments. Designed for rapid weld removal, rust removal, and metal prep.",
       link: "/products/sanding-grinding-accessories",
       badge: "Industrial Grade",
-      img: "/images/fiber_discs.png",
+      img: "/images/fiber_discs.webp",
       ctaText: "Inspect Heavy Grinding Disc Specs",
     },
     {
@@ -54,15 +49,15 @@ export default function Home() {
       desc: "Mini sanding sticks and matchstick-style detail finishing tools. Crucial for craft, models, jewelry, and tight corner smoothing.",
       link: "/products/sanding-grinding-accessories",
       badge: "Specialty Niche",
-      img: "/images/detail_sanding.png",
+      img: "/images/detail_sanding.webp",
       ctaText: "View Mini Sanding Stick Systems",
     },
     {
       title: "OEM Surface Finishing Kits",
       desc: "Fully customized accessory configurations, barcodes, custom instruction sheets, and FBA-compliant polybag or color box packaging.",
       link: "/oem-private-label",
-      badge: "100% Tailored",
-      img: "/images/oem_packaging.png",
+      badge: "Made to Order",
+      img: "/images/oem_packaging.webp",
       ctaText: "Configure Custom Packaging Specs",
     },
   ];
@@ -93,7 +88,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-industry-orange px-8 py-4 text-base font-extrabold tracking-wide uppercase text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/25 text-center"
+                  className="inline-flex items-center justify-center rounded bg-industry-orange-cta px-8 py-4 text-base font-extrabold tracking-wide uppercase text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/25 text-center"
                 >
                   Request OEM Quote
                 </Link>
@@ -132,7 +127,11 @@ export default function Home() {
                 
                 <div className="relative aspect-square w-full">
                   <img
-                    src="/images/hero_abrasives_kit.png"
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    src="/images/hero_abrasives_kit.webp"
                     alt="SCOTTCHEN Industrial Buffing and Sanding Kit Sourcing"
                     className="object-cover w-full h-full opacity-90"
                   />
@@ -187,7 +186,7 @@ export default function Home() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Proven QC:</strong> Bore tolerances within &plusmn;0.05 mm; dynamic balancing up to 13,000 RPM.</span>
+                    <span className="text-industry-slate-200"><strong>Specification-Based QC:</strong> Dimensions, fit, construction, and applicable performance checks recorded against the approved SKU specification.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -251,7 +250,7 @@ export default function Home() {
               },
             ].map((wf) => (
               <div key={wf.name} className={`glass-panel p-6 rounded-lg flex flex-col space-y-4 relative ${wf.color}`}>
-                <div className="absolute top-4 right-4 text-3xl font-black text-industry-slate-800 font-mono">{wf.step}</div>
+                <div className="absolute top-4 right-4 text-3xl font-black text-industry-slate-500 font-mono">{wf.step}</div>
                 <div className="text-lg font-black text-white tracking-wider">{wf.name}</div>
                 <div>
                   <div className="text-xs text-industry-slate-400 font-mono">Substrate: {wf.substrate}</div>
@@ -287,6 +286,10 @@ export default function Home() {
               <div key={cat.title} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-orange/50 transition-all-custom group">
                 <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
                   <img
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
                     src={cat.img}
                     alt={cat.title}
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 opacity-80"
@@ -327,7 +330,11 @@ export default function Home() {
             <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col space-y-6">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
                 <img
-                  src="/images/oem_packaging.png"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  src="/images/oem_packaging.webp"
                   alt="SCOTTCHEN Private Label Packaging Mockup"
                   className="object-cover w-full h-48 opacity-80"
                 />
@@ -336,7 +343,7 @@ export default function Home() {
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-panel p-6 rounded-lg text-center border border-industry-slate-800">
-                  <div className="text-2xl font-black text-white font-mono">100%</div>
+                  <div className="text-2xl font-black text-white font-mono">CUSTOM</div>
                   <div className="text-xs text-industry-slate-400 font-semibold mt-1">Custom Kit Combination</div>
                   <p className="text-[11px] text-industry-slate-500 mt-2">Buffer pads + sandpaper roll grids + compounds in one box.</p>
                 </div>
@@ -511,16 +518,16 @@ export default function Home() {
             <div className="lg:col-span-5">
               <div className="border border-industry-slate-800 bg-industry-slate-950 p-8 rounded-xl flex flex-col space-y-4">
                 <div className="text-xs font-mono text-industry-slate-500 flex justify-between">
-                  <span>QC COMPLIANCE DEPT</span>
-                  <span>STANDARDS MET</span>
+                  <span>QC PLAN</span>
+                  <span>SKU SPECIFICATION</span>
                 </div>
                 
                 {/* Visual representation of a density inspection */}
                 <div className="bg-industry-slate-900 p-4 rounded border border-industry-slate-850 space-y-3">
-                  <div className="text-xs font-bold text-white uppercase tracking-wide">Buffing Wheel Density Check</div>
+                  <div className="text-xs font-bold text-white uppercase tracking-wide">Buffing Wheel Construction Check</div>
                   <div className="flex items-center space-x-2">
                     <span className="text-xs text-industry-slate-400 font-mono">Cotton Ply Count:</span>
-                    <span className="text-xs text-white font-mono font-bold">60 Ply Calibrated</span>
+                    <span className="text-xs text-white font-mono font-bold">Per approved SKU</span>
                   </div>
                   <div className="w-full bg-industry-slate-800 rounded-full h-2">
                     <div className="bg-industry-orange h-2 rounded-full" style={{ width: "98%" }} />
@@ -528,10 +535,10 @@ export default function Home() {
                 </div>
 
                 <div className="bg-industry-slate-900 p-4 rounded border border-industry-slate-850 space-y-3">
-                  <div className="text-xs font-bold text-white uppercase tracking-wide">Arbor Hole Inner Sizing Tolerance</div>
+                  <div className="text-xs font-bold text-white uppercase tracking-wide">Arbor Hole and Fit Criteria</div>
                   <div className="flex items-center space-x-2">
-                    <span className="text-xs text-industry-slate-400 font-mono">Tolerance Scope:</span>
-                    <span className="text-xs text-green-400 font-mono font-bold">&plusmn; 0.05 mm</span>
+                    <span className="text-xs text-industry-slate-400 font-mono">Acceptance:</span>
+                    <span className="text-xs text-green-400 font-mono font-bold">Approved drawing</span>
                   </div>
                   <div className="w-full bg-industry-slate-800 rounded-full h-2">
                     <div className="bg-green-500 h-2 rounded-full" style={{ width: "95%" }} />
@@ -566,11 +573,11 @@ export default function Home() {
               },
               {
                 q: "Can I request physical samples for laboratory testing before ordering?",
-                a: "Yes. We offer free product samples to verified commercial businesses (tool brands, distributors, retail store chains). Shipping courier freight fees apply and are fully credited back upon the first bulk contract agreement."
+                a: "Verified commercial buyers can request product samples. Sample and courier charges depend on the requested configuration and are confirmed before dispatch; qualifying credits, if offered, are stated in the quotation."
               },
               {
-                q: "What quality tolerances do you guarantee for buffing wheels?",
-                a: "We maintain arbor hole inner diameter tolerances within ±0.05 mm to prevent wheel wobbling or vibration on bench grinders. All wheel plies (up to 60 ply) are stitched with high-tensile thread and balanced for safety."
+                q: "How are buffing wheel tolerances confirmed?",
+                a: "Dimensions, bore fit, construction, and any runout or balance criteria are confirmed in the approved SKU specification. Production checks and acceptance records are then matched to that agreed standard."
               },
               {
                 q: "What is your standard B2B production lead time?",
@@ -623,15 +630,15 @@ export default function Home() {
                 "name": "Can I request physical samples for laboratory testing before ordering?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We offer free product samples to verified commercial businesses (tool brands, distributors, retail store chains). Shipping courier freight fees apply and are fully credited back upon the first bulk contract agreement."
+                  "text": "Verified commercial buyers can request product samples. Sample and courier charges depend on the requested configuration and are confirmed before dispatch; qualifying credits, if offered, are stated in the quotation."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What quality tolerances do you guarantee for buffing wheels?",
+                "name": "How are buffing wheel tolerances confirmed?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We maintain arbor hole inner diameter tolerances within ±0.05 mm to prevent wheel wobbling or vibration on bench grinders. All wheel plies (up to 60 ply) are stitched with high-tensile thread and balanced for safety."
+                  "text": "Dimensions, bore fit, construction, and any runout or balance criteria are confirmed in the approved SKU specification. Production checks and acceptance records are then matched to that agreed standard."
                 }
               },
               {

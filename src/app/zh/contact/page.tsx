@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import RFQForm from "@/components/RFQForm";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "索取 OEM / 磨料磨具批发大货报价 | SCOTTCHEN",
   description: "联系 SCOTTCHEN 索取抛光布轮、打磨耗材大货批发价格表、交期进度、定制彩盒刀模图及国际物流集装箱出口方案。",
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/contact",
-    languages: {
-      "en": "https://www.scottchentools.com/contact",
-      "zh-CN": "https://www.scottchentools.com/zh/contact",
-      "x-default": "https://www.scottchentools.com/contact",
-    },
-  },
-};
+  path: "/zh/contact",
+  alternatePath: "/contact",
+  locale: "zh-CN",
+});
 
 export default function ChineseContact() {
   return (
@@ -51,23 +47,16 @@ export default function ChineseContact() {
                   我们的供应链销售团队会在收到 B2B 询盘参数后进行精细核算，并在 <strong>24小时（工作日）</strong>内通过电子邮件向您发送产品组合报价、交期安排及物流价格表。
                 </p>
                 <div className="text-xs font-mono text-industry-orange">
-                  询盘答复时效：工作日 &lt; 24小时 100% 反馈
+                  目标答复时效：1 个工作日内
                 </div>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  直连联系渠道
+                  可验证联系渠道
                 </h3>
                 
                 <div className="space-y-4 text-xs font-mono text-industry-slate-400">
-                  <div>
-                    <span className="text-industry-slate-500 block uppercase">销售中心地址:</span>
-                    <span className="text-white font-bold leading-normal">
-                      Scottchen (SCOTTCHEN) 磨耗工具有限公司<br />
-                      中国上海市工业环路88号
-                    </span>
-                  </div>
                   <div>
                     <span className="text-industry-slate-500 block uppercase">商业询盘邮箱:</span>
                     <a href="mailto:sales@scottchentools.com" className="text-white font-bold hover:underline">
@@ -75,16 +64,16 @@ export default function ChineseContact() {
                     </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">供应链领英:</span>
-                    <a href="https://www.linkedin.com/company/scottchen-tools" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
-                      linkedin.com/company/scottchen-tools &rarr;
+                    <span className="text-industry-slate-500 block uppercase">现有产品零售站:</span>
+                    <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
+                      scottchen.online &rarr;
                     </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">商业直通热线 / WhatsApp:</span>
-                    <a href="tel:+862161002008" className="text-white font-bold hover:underline">
-                      +86-21-6100-2008
-                    </a>
+                    <span className="text-industry-slate-500 block uppercase">提交询盘后补充文件:</span>
+                    <span className="text-white font-bold leading-normal">
+                      可直接通过回复邮件发送图纸、包装设计、条码文件或详细规格表。
+                    </span>
                   </div>
                 </div>
               </div>

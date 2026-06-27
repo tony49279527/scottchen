@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "感谢您的询盘 | SCOTTCHEN",
-  robots: {
-    index: false,
-    follow: true,
-  },
-  alternates: {
-    canonical: "https://www.scottchentools.com/zh/thank-you",
-    languages: {
-      en: "https://www.scottchentools.com/thank-you",
-      "zh-CN": "https://www.scottchentools.com/zh/thank-you",
-      "x-default": "https://www.scottchentools.com/thank-you",
-    },
-  },
-};
+  description: "您的 SCOTTCHEN B2B 询盘已成功提交。",
+  path: "/zh/thank-you",
+  alternatePath: "/thank-you",
+  locale: "zh-CN",
+  noIndex: true,
+});
 
 export default function ChineseThankYouPage() {
   return (
@@ -49,7 +43,7 @@ export default function ChineseThankYouPage() {
                 <strong>报价整理：</strong>我们会汇总 MOQ、交期、打样与包装方案。
               </li>
               <li>
-                <strong>商务回复：</strong>我们会在 <strong>24 个工作小时内</strong> 通过邮件或电话与您联系。
+                <strong>商务回复：</strong>我们通常会在 <strong>一个工作日内</strong> 回复您填写的邮箱。
               </li>
             </ul>
           </div>
@@ -73,4 +67,3 @@ export default function ChineseThankYouPage() {
     </div>
   );
 }
-

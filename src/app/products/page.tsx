@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Surface Finishing Accessories Catalog | SCOTTCHEN",
   description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
-  alternates: {
-    canonical: "https://www.scottchentools.com/products",
-    languages: {
-      "en": "https://www.scottchentools.com/products",
-      "zh-CN": "https://www.scottchentools.com/zh/products",
-      "x-default": "https://www.scottchentools.com/products",
-    },
-  },
-};
+  path: "/products",
+  alternatePath: "/zh/products",
+});
 
 export default function ProductsOverview() {
   const categories = [
@@ -26,7 +21,7 @@ export default function ProductsOverview() {
           types: "Cotton spiral stitched, loose cotton flannel, airway wheels, sisal wheels, felt wheels, drill polishers.",
           moq: "500 pcs/size",
           pack: "Bulk carton / customized private label box",
-          img: "/images/buffing_wheels.png",
+          img: "/images/buffing_wheels.webp",
         },
         {
           name: "Polishing Wheel Kits",
@@ -34,7 +29,7 @@ export default function ProductsOverview() {
           types: "Drill polishing kits, bench grinder restoration kits, mixed size compound kits, retail blister packs.",
           moq: "500 sets",
           pack: "Double blister pack / custom color box / polybag",
-          img: "/images/hero_abrasives_kit.png",
+          img: "/images/hero_abrasives_kit.webp",
         },
       ],
     },
@@ -47,7 +42,7 @@ export default function ProductsOverview() {
           types: "Woodworking sandpaper, automotive wet/dry sheets, furniture refinishing sanding rolls, assorted grits.",
           moq: "10,000 sheets / 200 rolls",
           pack: "Grit-assorted sleeves, cardboard roll dispenser boxes",
-          img: "/images/sanding_sheets.png",
+          img: "/images/sanding_sheets.webp",
         },
         {
           name: "Sanding Screens & Drywall Abrasives",
@@ -55,7 +50,7 @@ export default function ProductsOverview() {
           types: "Silicon carbide drywall mesh sanding screen, dust-free sanding screens, contractor rolls.",
           moq: "5,000 sheets",
           pack: "Individually wrapped paper covers / shrink wrap",
-          img: "/images/sanding_screens.png",
+          img: "/images/sanding_screens.webp",
         },
         {
           name: "Detail Sanding Tools",
@@ -63,7 +58,7 @@ export default function ProductsOverview() {
           types: "Sanding sticks, mini matchstick details, mold polishing blocks, scale craft smoothing rods.",
           moq: "1,000 packs",
           pack: "Clear hanging bags / retail barcode header cards",
-          img: "/images/detail_sanding.png",
+          img: "/images/detail_sanding.webp",
         },
       ],
     },
@@ -76,7 +71,7 @@ export default function ProductsOverview() {
           types: "Zirconia alumina fiber discs, angle grinder discs, metal weld removal, fiberglass sanding backings.",
           moq: "2,000 discs/grit",
           pack: "Shrink packs / inner white boxes / bulk export cartons",
-          img: "/images/fiber_discs.png",
+          img: "/images/fiber_discs.webp",
         },
         {
           name: "Diamond & Specialty Abrasives",
@@ -84,7 +79,7 @@ export default function ProductsOverview() {
           types: "Diamond polishing sheets, stone grinding discs, marble and granite grinders, tile/porcelain finishers.",
           moq: "500 discs",
           pack: "Inner boxes with warning cards",
-          img: "/images/diamond_polishing.png",
+          img: "/images/diamond_polishing.webp",
         },
         {
           name: "Sanding Dispenser Kits",
@@ -92,7 +87,7 @@ export default function ProductsOverview() {
           types: "Workshop multi-roll dispenser kits, sandpaper roll refills, assorted grit rolls with racks.",
           moq: "300 racks",
           pack: "Color display box with metal tearing edge",
-          img: "/images/sanding_dispenser.png",
+          img: "/images/sanding_dispenser.webp",
         },
       ],
     },
@@ -175,6 +170,10 @@ export default function ProductsOverview() {
                     <div key={item.name} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                       <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
                         <img
+                          width={1024}
+                          height={1024}
+                          loading="lazy"
+                          decoding="async"
                           src={item.img}
                           alt={item.name}
                           className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
@@ -187,7 +186,7 @@ export default function ProductsOverview() {
                           <div className="flex justify-between items-start">
                             <h3 className="text-lg font-bold text-white">{item.name}</h3>
                             <span className="text-[10px] font-mono text-industry-orange bg-industry-orange/10 border border-industry-orange/20 px-2 py-0.5 rounded">
-                              Verified B2B MOQ
+                              Reference B2B MOQ
                             </span>
                           </div>
                           <p className="text-sm text-industry-slate-400 leading-relaxed">
@@ -250,7 +249,7 @@ export default function ProductsOverview() {
               },
               {
                 q: "What testing certificates do you provide for grinding and fiber discs?",
-                a: "All zirconia grinding and fiber discs are subjected to speed stress evaluations up to 1.5x of operating rating. We provide dynamic balance spindle check sheets and grit distribution reports with every shipment batch."
+                a: "Required reports depend on the product, destination, and agreed quality plan. Buyers should specify the applicable standard, test method, sampling level, and evidence required before placing the order."
               },
               {
                 q: "How do you prevent layout shifts and damage to custom color boxes?",
@@ -295,7 +294,7 @@ export default function ProductsOverview() {
                 "name": "What testing certificates do you provide for grinding and fiber discs?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "All zirconia grinding and fiber discs are subjected to speed stress evaluations up to 1.5x of operating rating. We provide dynamic balance spindle check sheets and grit distribution reports with every shipment batch."
+                  "text": "Required reports depend on the product, destination, and agreed quality plan. Buyers should specify the applicable standard, test method, sampling level, and evidence required before placing the order."
                 }
               },
               {

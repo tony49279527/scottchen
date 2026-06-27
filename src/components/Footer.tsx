@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { alternateLocalePath, RETAIL_SITE_URL } from "@/lib/site";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,14 +10,7 @@ export default function Footer() {
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
 
   const getLanguageToggleLink = (targetLang: "en" | "zh") => {
-    if (targetLang === "zh") {
-      if (isZh) return pathname;
-      return `/zh${pathname === "/" ? "" : pathname}`;
-    } else {
-      if (!isZh) return pathname;
-      const cleanPath = pathname.replace(/^\/zh/, "");
-      return cleanPath === "" ? "/" : cleanPath;
-    }
+    return alternateLocalePath(pathname, targetLang);
   };
 
   return (
@@ -118,6 +112,11 @@ export default function Footer() {
                   {isZh ? "出厂质检与动态平衡" : "Quality Control Inspections"}
                 </Link>
               </li>
+              <li>
+                <Link href={isZh ? "/zh/resources/abrasive-sourcing-checklist" : "/resources/abrasive-sourcing-checklist"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "磨料磨具采购检查清单" : "Abrasive Sourcing Checklist"}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -149,18 +148,10 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-xs text-industry-slate-500 block">
-                  {isZh ? "专业社交网络:" : "Connect on Professional Network:"}
+                  {isZh ? "SCOTTCHEN 零售产品站:" : "SCOTTCHEN Retail Store:"}
                 </span>
-                <a href="https://www.linkedin.com/company/scottchen-tools" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
-                  LinkedIn &bull; Supply Chain
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/hashtag/scottchen" target="_blank" rel="noopener noreferrer" className="text-white hover:underline block text-xs flex items-center space-x-1">
-                  <svg className="w-4 h-4 fill-current text-red-500 mr-1" viewBox="0 0 24 24">
-                    <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                  <span>YouTube Shorts &bull; Demos</span>
+                <a href={RETAIL_SITE_URL} target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
+                  scottchen.online
                 </a>
               </li>
             </ul>
