@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Sanding & Grinding Accessories | SCOTTCHEN",
-  description: "Buy bulk sandpaper sheets, silicon carbide screens, zirconia grinding discs, mini sanding sticks, and custom abrasive dispenser kits. Standard B2B MOQ parameters.",
+  description: "Source bulk sandpaper sheets, silicon carbide screens, zirconia grinding discs, mini sanding sticks and custom abrasive dispenser kits with reference B2B MOQ parameters.",
   path: "/products/sanding-grinding-accessories",
   alternatePath: "/zh/products/sanding-grinding-accessories",
 });
@@ -32,7 +33,7 @@ export default function SandingGrindingAccessories() {
     },
     {
       name: "Drywall Sanding Screens & Mesh Sheets",
-      desc: "Open-mesh structure coated on both sides with premium silicon carbide. Prevents clogging during drywall compound sanding and plaster smoothing. Fully compatible with dust extraction sanders.",
+      desc: "Open-mesh structure coated on both sides with silicon carbide. The open structure helps reduce loading during drywall sanding; equipment fit must be confirmed by size, attachment and extraction layout.",
       features: [
         "Material: Heavy fiberglass mesh substrate",
         "Grits: P80, P120, P150, P180, P220",
@@ -132,13 +133,13 @@ export default function SandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Clog-Free mesh:</strong> Fiberglass open-weave drywall screens coated on both sides with premium silicon carbide to prevent compound loading.</span>
+                    <span className="text-industry-slate-200"><strong>Open Mesh:</strong> Fiberglass screens with silicon carbide coating allow dust to pass through and can reduce loading under suitable operating conditions.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Volume MOQs:</strong> 10,000 sheets for sandpaper, 5,000 pcs for fiber discs, and 1,000 sets for dispenser boxes or detail sticks. Lead time: 20-30 days.</span>
+                    <span className="text-industry-slate-200"><strong>Reference MOQs:</strong> 10,000 sheets for sandpaper, 5,000 fiber discs and 1,000 sets for dispenser boxes or detail sticks; final quantity and lead time are quoted per SKU.</span>
                   </li>
                 </ul>
               </div>
@@ -455,7 +456,7 @@ export default function SandingGrindingAccessories() {
               {
                 title: "Drywall Sanding Sheets with Holes",
                 asin: "B0C4TNHRWZ",
-                desc: "Multi-hole vacuum-compatible sanding screens covering P80 to P150 grits for dust-free sanding platforms.",
+                desc: "Multi-hole vacuum-compatible sanding screens covering P80 to P150 grits for vacuum-assisted sanding platforms.",
                 url: "https://www.amazon.com/SCOTTCHEN-Drywall-include-Sanding-80%EF%BC%8C100%EF%BC%8C150/dp/B0C4TNHRWZ/ref=sr_1_8?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
                 img: "/images/sanding_screens.webp"
               },
@@ -553,19 +554,19 @@ export default function SandingGrindingAccessories() {
               },
               {
                 q: "Why do you use silicon carbide for drywall sanding screens instead of aluminum oxide?",
-                a: "Silicon carbide grains are harder and fracture under pressure to expose fresh, sharp cutting edges. The sharp grain profile combined with the open-weave fiberglass mesh prevents clogging from gypsum plaster, allowing dust to pass through easily while maintaining a fast, flat cut."
+                a: "Silicon carbide has a sharp grain profile, while the open-weave fiberglass mesh allows gypsum dust to pass through. This combination can reduce loading under suitable pressure and extraction conditions; cut rate and finish should be verified on the target substrate."
               },
               {
                 q: "What center hole dimensions and backing options do you support for grinding discs?",
-                a: "Our zirconia fiber discs come in standard 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) arbor hole. Sourcing agents can choose either a standard circular bore or a pre-cut star center hub. All discs are bonded on 0.8mm thick vulcanized fiber backing for maximum structural stability."
+                a: "Available configurations can include 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) circular or star center. Backing material, thickness, labeled operating limit and tool compatibility must be confirmed in the approved SKU specification."
               },
               {
                 q: "Can we mix multiple grits in a custom-labeled dispenser box?",
-                a: "Yes. Our workshop sanding dispenser kits are customizable. You can specify a custom assortment of 4 or 5 sandpaper rolls (e.g., P150, P240, P320, P400) inside a single cardboard container with a metal tearing edge. We apply your private label design, warning logos, and UPC barcodes directly to the box."
+                a: "Yes. A dispenser box can be quoted with 4 or 5 selected roll grits and an integrated tearing edge. Buyer-approved branding, warnings and UPC data can be applied after artwork and sample review."
               },
               {
                 q: "What is the minimum order quantity (MOQ) for detail sanding sticks?",
-                a: "For our spring-tensioned detail sanding sticks and replacement micro-grit belts, the standard MOQ is 1,000 retail packs. Each pack typically includes 1 detail stick and a customized selection of 15 replacement belts spanning different grits."
+                a: "A 1,000-pack quantity is a common RFQ starting point for spring-tensioned detail sanding sticks. Pack composition, grit mix, packaging, actual MOQ and lead time are confirmed in the quotation."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -590,16 +591,12 @@ export default function SandingGrindingAccessories() {
             "@graph": [
               {
                 "@type": "ProductGroup",
-                "@id": "https://www.scottchentools.com/products/sanding-grinding-accessories#productgroup",
+                "@id": absoluteUrl("/products/sanding-grinding-accessories#productgroup"),
                 "name": "SCOTTCHEN Sanding & Grinding Accessories Catalog",
-                "description": "Industrial-grade abrasives including latex-backed wet/dry sandpaper sheets, non-clogging silicon carbide drywall sanding screens, zirconia fiber discs, and detail sanding rods.",
-                "url": "https://www.scottchentools.com/products/sanding-grinding-accessories",
+                "description": "Industrial abrasive options including latex-backed wet/dry sandpaper sheets, open-mesh silicon carbide drywall sanding screens, zirconia fiber discs, and detail sanding rods.",
+                "url": absoluteUrl("/products/sanding-grinding-accessories"),
                 "brand": {
                   "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@type": "Organization",
                   "name": "SCOTTCHEN"
                 },
                 "hasVariant": [
@@ -618,14 +615,14 @@ export default function SandingGrindingAccessories() {
                   {
                     "@type": "Product",
                     "name": "Fiberglass Mesh Drywall Sanding Screens",
-                    "description": "Double-sided silicon carbide mesh sheets for clog-free dust-extracted drywall sanding.",
+                    "description": "Double-sided silicon carbide mesh sheets designed to reduce clogging during vacuum-assisted drywall sanding.",
                     "sku": "SC-DRYWALL-MESH"
                   }
                 ]
               },
               {
                 "@type": "FAQPage",
-                "@id": "https://www.scottchentools.com/products/sanding-grinding-accessories#faqpage",
+                "@id": absoluteUrl("/products/sanding-grinding-accessories#faqpage"),
                 "mainEntity": [
                   {
                     "@type": "Question",
@@ -640,7 +637,7 @@ export default function SandingGrindingAccessories() {
                     "name": "Why do you use silicon carbide for drywall sanding screens instead of aluminum oxide?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Silicon carbide grains are harder and fracture under pressure to expose fresh, sharp cutting edges. The sharp grain profile combined with the open-weave fiberglass mesh prevents clogging from gypsum plaster, allowing dust to pass through easily while maintaining a fast, flat cut."
+                      "text": "Silicon carbide has a sharp grain profile, while the open-weave fiberglass mesh allows gypsum dust to pass through. This combination can reduce loading under suitable pressure and extraction conditions; cut rate and finish should be verified on the target substrate."
                     }
                   },
                   {
@@ -648,7 +645,7 @@ export default function SandingGrindingAccessories() {
                     "name": "What center hole dimensions and backing options do you support for grinding discs?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Our zirconia fiber discs come in standard 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) arbor hole. Sourcing agents can choose either a standard circular bore or a pre-cut star center hub. All discs are bonded on 0.8mm thick vulcanized fiber backing for maximum structural stability."
+                      "text": "Available configurations can include 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) circular or star center. Backing material, thickness, labeled operating limit and tool compatibility must be confirmed in the approved SKU specification."
                     }
                   },
                   {
@@ -656,7 +653,7 @@ export default function SandingGrindingAccessories() {
                     "name": "Can we mix multiple grits in a custom-labeled dispenser box?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes. Our workshop sanding dispenser kits are customizable. You can specify a custom assortment of 4 or 5 sandpaper rolls (e.g., P150, P240, P320, P400) inside a single cardboard container with a metal tearing edge. We apply your private label design, warning logos, and UPC barcodes directly to the box."
+                      "text": "Yes. A dispenser box can be quoted with 4 or 5 selected roll grits and an integrated tearing edge. Buyer-approved branding, warnings and UPC data can be applied after artwork and sample review."
                     }
                   },
                   {
@@ -664,7 +661,7 @@ export default function SandingGrindingAccessories() {
                     "name": "What is the minimum order quantity (MOQ) for detail sanding sticks?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "For our spring-tensioned detail sanding sticks and replacement micro-grit belts, the standard MOQ is 1,000 retail packs. Each pack typically includes 1 detail stick and a customized selection of 15 replacement belts spanning different grits."
+                      "text": "A 1,000-pack quantity is a common RFQ starting point for spring-tensioned detail sanding sticks. Pack composition, grit mix, packaging, actual MOQ and lead time are confirmed in the quotation."
                     }
                   }
                 ]

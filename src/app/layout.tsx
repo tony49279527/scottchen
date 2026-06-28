@@ -31,7 +31,7 @@ const displayFont = Barlow_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
-  description: "SCOTTCHEN manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
+  description: "SCOTTCHEN supplies retail-ready surface finishing accessory kits with private-label packaging, custom grit assortments and B2B sourcing support.",
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.scottchentools.com/",
+    canonical: SITE_URL,
     languages: {
-      "en": "https://www.scottchentools.com/",
-      "zh-CN": "https://www.scottchentools.com/zh",
-      "x-default": "https://www.scottchentools.com/",
+      "en": SITE_URL,
+      "zh-CN": absoluteUrl("/zh"),
+      "x-default": SITE_URL,
     },
   },
   openGraph: {
@@ -99,6 +99,14 @@ const corporateSchema = {
       "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
       "email": SITE_EMAIL,
       "slogan": "Industrial OEM Abrasive, Sanding & Polishing Solutions",
+      "description":
+        "B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.",
+      "knowsAbout": [
+        "Coated abrasives",
+        "Cotton buffing wheels",
+        "Private-label tool accessory kits",
+        "Retail packaging and barcode preparation"
+      ],
       "sameAs": [RETAIL_SITE_URL],
       "contactPoint": [
         {

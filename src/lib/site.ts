@@ -1,7 +1,12 @@
 export const SITE_NAME = "SCOTTCHEN";
-export const SITE_URL = "https://www.scottchentools.com";
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://scottchen-b2b-530847966105.asia-east1.run.app";
+
+export const SITE_URL = configuredSiteUrl.replace(/\/+$/, "");
 export const SITE_EMAIL = "sales@scottchentools.com";
 export const RETAIL_SITE_URL = "https://scottchen.online";
+export const SITE_UPDATED = "2026-06-28";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, SITE_URL).toString();
@@ -17,7 +22,9 @@ const localizedPaths = new Set([
   "/quality-control",
   "/sample-kit",
   "/contact",
+  "/supplier-profile",
   "/resources/abrasive-sourcing-checklist",
+  "/resources/abrasive-material-selection-guide",
   "/thank-you",
 ]);
 

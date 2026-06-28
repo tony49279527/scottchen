@@ -17,6 +17,8 @@ OUTPUT = ROOT / "output" / "pdf" / "scottchen-b2b-catalog.pdf"
 PUBLIC = ROOT / "public" / "catalog.pdf"
 IMAGES = ROOT / "public" / "images"
 CATALOG_ASSETS = ROOT / "tmp" / "pdfs" / "catalog-assets"
+B2B_SITE_URL = "https://scottchen-b2b-530847966105.asia-east1.run.app"
+B2B_SITE_LABEL = "scottchen-b2b-530847966105.asia-east1.run.app"
 
 PAGE_W, PAGE_H = A4
 NAVY = HexColor("#070A13")
@@ -207,7 +209,17 @@ def draw_cover(c):
     c.drawString(42, y - 54, "GRIND  /  SAND  /  FINISH  /  POLISH")
     c.setFillColor(white)
     c.setFont("Helvetica-Bold", 9.5)
-    c.drawString(42, 62, "www.scottchentools.com")
+    c.drawString(42, 62, B2B_SITE_LABEL)
+    c.linkURL(
+        B2B_SITE_URL,
+        (
+            42,
+            59,
+            42 + stringWidth(B2B_SITE_LABEL, "Helvetica-Bold", 9.5),
+            72,
+        ),
+        relative=0,
+    )
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 8)
     c.drawString(42, 47, "sales@scottchentools.com")
@@ -274,6 +286,9 @@ def draw_oem(c):
         "A complete RFQ should define the product configuration and the packaging outcome together.",
     )
     draw_image_cover(c, catalog_image("oem_packaging"), 36, y - 245, 220, 225)
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 6.8)
+    c.drawString(36, y - 254, "Illustrative workflow visual; not evidence of a specific facility.")
     x = 278
     y_text = paragraph(c, "Configuration Scope", SECTION, x, y - 8, PAGE_W - x - 36)
     y_text = bullet_list(
@@ -321,6 +336,9 @@ def draw_quality(c):
         "Quality requirements should be tied to the approved sample and written specification for each product.",
     )
     draw_image_cover(c, catalog_image("quality_inspection"), 330, y - 240, PAGE_W - 366, 220)
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica", 6.8)
+    c.drawString(330, y - 249, "Illustrative workflow visual; not a facility claim.")
     left_y = paragraph(c, "Suggested Checks", SECTION, 36, y - 8, 270)
     left_y = bullet_list(
         c,
@@ -430,8 +448,18 @@ def draw_rfq(c):
     c.drawString(56, y - 129, "sales@scottchentools.com")
     c.setFillColor(white)
     c.setFont("Helvetica-Bold", 10)
-    website = "www.scottchentools.com/contact"
+    website = f"{B2B_SITE_LABEL}/contact"
     c.drawString(56, y - 149, website)
+    c.linkURL(
+        f"{B2B_SITE_URL}/contact",
+        (
+            56,
+            y - 153,
+            56 + stringWidth(website, "Helvetica-Bold", 10),
+            y - 139,
+        ),
+        relative=0,
+    )
     c.setStrokeColor(ORANGE)
     c.line(
         56,

@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨料磨具与抛光轮规格目录 | SCOTTCHEN",
-  description: "浏览我们的技术参数、标准 B2B 起订量 (MOQ) 及包装选项。涵盖缝线棉轮、松缝布轮、气道轮、锆刚玉砂碟、防堵塞砂网及细节砂棒组合。",
+  description: "浏览技术参数、参考 B2B 起订量及包装选项，涵盖缝线棉轮、松缝布轮、气道轮、锆刚玉砂碟、开放式砂网及细节砂棒组合。",
   path: "/zh/products",
   alternatePath: "/products",
   locale: "zh-CN",
@@ -46,9 +47,9 @@ export default function ChineseProductsOverview() {
           img: "/images/sanding_sheets.webp",
         },
         {
-          name: "网格打磨砂网 (无尘干燥墙磨砂网)",
+          name: "网格打磨砂网（吸尘设备兼容）",
           url: "/zh/products/sanding-grinding-accessories",
-          types: "碳化硅双面覆层防堵塞玻璃纤维网格砂网、无尘吸尘墙面砂纸、大卷工业砂网。",
+          types: "碳化硅双面覆层玻璃纤维网格砂网、吸尘设备兼容墙面砂纸、大卷工业砂网。",
           moq: "5,000 张起",
           pack: "独立纸卡塑封包 / 大包热收缩膜",
           img: "/images/sanding_screens.webp",
@@ -127,7 +128,7 @@ export default function ChineseProductsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>完整产品线:</strong> 涵盖缝线棉轮、松缝 flannel 轮、干磨 latex 纸砂纸、无尘玻璃纤维网格砂网、锆刚玉重切削砂碟等。</span>
+                    <span className="text-industry-slate-200"><strong>完整产品线:</strong> 涵盖缝线棉轮、松缝 flannel 轮、干磨 latex 纸砂纸、开放式玻璃纤维网格砂网、锆刚玉重切削砂碟等。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -147,7 +148,7 @@ export default function ChineseProductsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>出港合规与货运:</strong> 支持 FNSKU 标签粘贴，提供多国警告标签，支持第三方质检出港，海运口岸上海/宁波临近。</span>
+                    <span className="text-industry-slate-200"><strong>标签与货运范围:</strong> 可应用买家提供的 FNSKU 数据，并讨论第三方验货及上海/宁波港口方案；最终范围写入报价。</span>
                   </li>
                 </ul>
               </div>
@@ -253,12 +254,12 @@ export default function ChineseProductsOverview() {
                 a: "需要提供的报告取决于产品、目的国和双方确认的质检计划。买家应在下单前明确适用标准、测试方法、抽样水平和所需证据。"
               },
               {
-                q: "如何防止在海运集装箱运输过程中彩盒受潮或受压变形？",
-                a: "我们所有出口彩盒均打包入双层五层瓦楞加强瓦楞纸箱中，四角加厚护角板，并使用高强度 PP 打包带十字封箱。托盘打底出运时，加覆重拉伸缠绕膜防水防潮，以防集装箱内潮湿环境和重压受损。"
+                q: "海运纸箱和托盘要求如何确认？",
+                a: "可依据产品重量和运输条件，在包装规格中约定瓦楞结构、护角、打包带、托盘材料和缠绕膜。最终装箱方式及任何运输测试按项目报价确认。"
               },
               {
                 q: "你们抛光布轮支持哪些规格的中心轴孔尺寸？",
-                a: "支持。我们提供标准的 telescoping 轴套（纸管、塑料）或带黄铜圈、铁垫片加强型的中心轴孔。直径涵盖 1/2英寸、5/8英寸、3/4英寸、1英寸，以及用于 power drills 和 impact 气动螺丝批的 1/4&quot; 圆柄或六角快换手柄柄部适配器。"
+                a: "支持。我们提供标准的 telescoping 轴套（纸管、塑料）或带黄铜圈、铁垫片加强型的中心轴孔。直径涵盖 1/2英寸、5/8英寸、3/4英寸、1英寸，以及用于 power drills 和 impact 气动螺丝批的 1/4\" 圆柄或六角快换手柄柄部适配器。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -282,7 +283,7 @@ export default function ChineseProductsOverview() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/zh/products#faqpage",
+            "@id": absoluteUrl("/zh/products#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
@@ -302,10 +303,10 @@ export default function ChineseProductsOverview() {
               },
               {
                 "@type": "Question",
-                "name": "如何防止在海运集装箱运输过程中彩盒受潮或受压变形？",
+                "name": "海运纸箱和托盘要求如何确认？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "我们所有出口彩盒均打包入双层五层瓦楞加强瓦楞纸箱中，四角加厚护角板，并使用高强度 PP 打包带十字封箱。托盘打底出运时，加覆重拉伸缠绕膜防水防潮，以防集装箱内潮湿环境和重压受损。"
+                  "text": "可依据产品重量和运输条件，在包装规格中约定瓦楞结构、护角、打包带、托盘材料和缠绕膜。最终装箱方式及任何运输测试按项目报价确认。"
                 }
               },
               {

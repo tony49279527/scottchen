@@ -117,6 +117,11 @@ export default function Footer() {
                   {isZh ? "磨料磨具采购检查清单" : "Abrasive Sourcing Checklist"}
                 </Link>
               </li>
+              <li>
+                <Link href={isZh ? "/zh/resources/abrasive-material-selection-guide" : "/resources/abrasive-material-selection-guide"} className="hover:text-white transition-colors duration-200">
+                  {isZh ? "磨料选材与粒度指南" : "Abrasive Material Selection Guide"}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -135,7 +140,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={isZh ? "/zh/sample-kit" : "/sample-kit"} className="hover:text-white transition-colors duration-200 block">
-                  {isZh ? "免费申领样品测试包" : "Request Sample Testing Kit"}
+                  {isZh ? "申请商业样品测试包" : "Request Sample Testing Kit"}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/supplier-profile" : "/supplier-profile"} className="hover:text-white transition-colors duration-200 block">
+                  {isZh ? "供应商信息与采购核验" : "Supplier Profile & Due Diligence"}
                 </Link>
               </li>
               <li className="pt-2 border-t border-industry-slate-800">
@@ -161,7 +171,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-industry-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-industry-slate-500">
           <div className="mb-4 md:mb-0">
-            &copy; {currentYear} SCOTTCHEN. All rights reserved. {isZh ? "磨料磨具及抛光轮专业生产厂家。" : "Industrial supplier of Surface Finishing Accessories."}
+            &copy; {currentYear} SCOTTCHEN. All rights reserved. {isZh ? "磨料磨具及抛光轮 B2B 供应。" : "Industrial supplier of Surface Finishing Accessories."}
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center justify-center">
             <div className="flex items-center space-x-2 text-[10px] font-mono border border-industry-slate-800 bg-industry-slate-900/40 px-2 py-1 rounded">

@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Scottchen (SCOTTCHEN) 磨料磨具与抛光轮 OEM/ODM 制造工厂",
-  description: "Scottchen (SCOTTCHEN) 专业制造高品质工业抛光轮、抛光布轮、气道布轮、页轮砂碟及定制五金磨具套装。提供贴牌包装与亚马逊 FBA 条码合规服务，起订量低，全球出运。",
+  title: "SCOTTCHEN 磨料磨具与抛光轮 OEM/ODM 供应",
+  description: "SCOTTCHEN 提供工业抛光轮、抛光布轮、气道布轮、砂碟及定制五金磨具套装的 B2B 供应、贴牌包装和条码准备支持。",
   path: "/zh",
   alternatePath: "/",
   locale: "zh-CN",
@@ -22,14 +23,14 @@ export default function ChineseHome() {
             {/* Left: Heading text */}
             <div className="text-left lg:col-span-7 space-y-6">
               <span className="inline-flex items-center rounded bg-industry-orange/15 px-3 py-1 text-xs font-bold tracking-wider text-industry-orange uppercase border border-industry-orange/20">
-                工业级抛光轮与磨料磨具生产厂家
+                工业级抛光轮与磨料磨具 B2B 供应
               </span>
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
                 专注抛光轮及磨料磨具
                 <span className="block text-industry-orange mt-2">B2B OEM/ODM 贴牌定制</span>
               </h1>
               <p className="text-lg text-industry-slate-300 leading-relaxed max-w-2xl">
-                Scottchen (SCOTTCHEN) 为全球工具品牌商、五金分销商及跨境电商卖家提供一站式零售包装定制、叶轮砂碟组合与高品质布轮制造。支持低起订量，FBA 贴标出运。
+                SCOTTCHEN 为工具品牌商、五金分销商及跨境电商卖家提供零售包装定制、砂碟组合与布轮产品供应，并按项目确认起订量、标签和出运要求。
               </p>
               
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
@@ -46,6 +47,12 @@ export default function ChineseHome() {
                   浏览产品规格书
                 </Link>
               </div>
+              <Link
+                href="/zh/supplier-profile"
+                className="inline-block text-sm font-bold text-industry-orange hover:text-industry-orange-hover"
+              >
+                查看供应商范围、公开核验状态与询价要求 &rarr;
+              </Link>
             </div>
 
             {/* Right: Graphic showcase */}
@@ -86,7 +93,7 @@ export default function ChineseHome() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>柔性低起订量:</strong> 抛光轮 500 件起，套装 500 套起即可定制零售彩盒与专属印标。</span>
+                    <span className="text-industry-slate-200"><strong>参考起订量:</strong> 许多抛光轮或定制套装询价从 500 件/套起，实际 MOQ 取决于 SKU、包装和印刷方式。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -146,7 +153,7 @@ export default function ChineseHome() {
                 <span className="text-[10px] font-mono text-industry-orange uppercase font-bold tracking-wider">镜面还原与表面精饰</span>
                 <h3 className="text-2xl font-bold text-white">抛光轮及抛光耗材系列</h3>
                 <p className="text-sm text-industry-slate-400 leading-relaxed">
-                  提供密缝棉布轮、松缝黄 flannel 轮、气道布轮、剑麻重切削轮及带柄迷你抛光布轮。出产的 100g 到 500g 绿蜡、白蜡、红蜡等抛光膏，配方均与布轮特性深度调校，可实现完美的镜面抛光效果。
+                  提供密缝棉布轮、松缝黄 flannel 轮、气道布轮、剑麻重切削轮及带柄迷你抛光布轮。100g 到 500g 绿蜡、白蜡、红蜡等抛光膏可按目标表面效果与布轮结构搭配，实际结果需通过基材样件测试确认。
                 </p>
                 <div className="pt-4 flex justify-between items-center">
                   <Link href="/zh/products/buffing-polishing-wheels" className="text-xs font-bold uppercase tracking-wider text-industry-orange hover:text-industry-orange-hover">
@@ -205,7 +212,7 @@ export default function ChineseHome() {
             {[
               { title: "金属加工去毛刺", desc: "专为角磨机和台式砂轮机配置，结合强韧的锆刚玉砂碟和密缝线缝棉轮，快速去除金属焊缝与锈迹。", label: "金工工作流" },
               { title: "木工与家具打磨", desc: "配套提供从粗砂 P80 到细砂 P320 的乳胶干磨砂纸、砂布卷，配合塑料精细砂纸棒解决复杂造型细节。", label: "木工工作流" },
-              { title: "汽车还原与抛光", desc: "带柄圆顶、圆柱形打磨轮能完美贴合深槽轮毂。配套绿铬镜面抛光膏，快速去除氧化层，还原轮毂镜面光泽。", label: "汽车美容工作流" },
+              { title: "汽车还原与抛光", desc: "带柄圆顶、圆柱形打磨轮可用于处理深槽轮毂。配套抛光膏用于氧化层处理和表面精饰，效果需通过基材测试确认。", label: "汽车美容工作流" },
               { title: "跨境电商专属套装", desc: "结合零售泡壳挂卡或彩色瓦楞彩盒设计，提供预先捆绑好的 1/4 适配柄、棉布轮与抛光膏组合，开箱即售。", label: "电商热销类目" }
             ].map((app, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg text-left space-y-3 hover:border-industry-slate-800 transition-colors">
@@ -245,15 +252,18 @@ export default function ChineseHome() {
                   loading="lazy"
                   decoding="async"
                   src="/images/quality_inspection.webp"
-                  alt="SCOTTCHEN 抛光轮动态平衡和缝线拉力质检"
+                  alt="磨料磨具质量计划示意图"
                   className="object-cover w-full h-80 rounded-xl opacity-90"
                 />
+                <span className="absolute bottom-4 left-5 text-[10px] text-industry-slate-300">
+                  流程示意图，不代表特定工厂或实验室实景
+                </span>
               </div>
             </div>
 
             {/* Right: Technical QA info */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">严格出厂质检标准</span>
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">采购质检计划</span>
               <h2 className="text-3xl font-extrabold text-white">规格化质检与条码审核，降低客诉风险</h2>
               <p className="text-sm text-industry-slate-400 leading-relaxed">
                 在 Scottchen (SCOTTCHEN)，我们深知工具配件的一致性对品牌声誉至关重要。一个重心偏移的抛光轮或目数混杂的砂纸，都会导致买家差评或退货。
@@ -288,7 +298,7 @@ export default function ChineseHome() {
 
               <div className="pt-4 flex gap-4">
                 <Link href="/zh/quality-control" className="text-xs font-bold text-industry-orange hover:text-industry-orange-hover uppercase tracking-wider">
-                  了解详细生产质量体系 &rarr;
+                  了解详细质量规划 &rarr;
                 </Link>
               </div>
             </div>
@@ -312,19 +322,19 @@ export default function ChineseHome() {
             {[
               {
                 q: "你们抛光轮的最小起订量 (MOQ) 是多少？交期多久？",
-                a: "对于台磨机适用的标准棉布轮、气道布轮及带柄砂轮，定制零售彩盒或泡壳彩卡的标准 MOQ 是单规格 500 件起。若仅需散装白盒简易包装，MOQ 可降至 300 件。生产交期通常在收到定金及包装设计定稿后的 25 到 35 天。"
+                a: "500 件或 500 套是许多项目的询价起点，纸类磨料可能需要更大批量。实际 MOQ 和生产目标取决于 SKU、数量、包装、印刷、样品及产能，并在报价与订单计划中确认。"
               },
               {
-                q: "如何保证运送到国外亚马逊 FBA 仓库的包装与条码合规？",
+                q: "发往海外仓的包装与条码如何检查？",
                 a: "我们可按买家提供的 FNSKU/UPC 数据制作彩盒或标签，并在出货前进行扫描抽检。警告标签、纸箱标和最终入仓要求需依据平台当期规则确认。"
               },
               {
                 q: "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
-                a: "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4&quot; 铁柄或六角快速接头的夹持盘和迷你抛光磨头。"
+                a: "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4\" 铁柄或六角快速接头的夹持盘和迷你抛光磨头。"
               },
               {
                 q: "砂纸和砂网有什么区别？我们如何为客户选择？",
-                a: "传统砂纸适用于木工常规打磨及汽车漆面抛光，干湿两用乳胶纸基具有很好的柔韧度；而网格砂网由玻璃纤维编织而成，双面涂覆碳化硅，具有极好的防堵塞排灰性能，常用于大面积石膏板墙面打磨，可配合吸尘设备实现无尘作业。"
+                a: "传统砂纸可用于木工打磨及汽车漆面精饰，干湿两用乳胶纸基具有较好柔韧度；网格砂网采用开放式结构，有助于排灰并减少堵塞，常用于石膏板墙面打磨。实际集尘效果取决于打磨机、吸尘设备和操作条件。"
               },
               {
                 q: "你们可以提供样品测试吗？",
@@ -352,19 +362,19 @@ export default function ChineseHome() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/zh#faqpage",
+            "@id": absoluteUrl("/zh#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
                 "name": "你们抛光轮的最小起订量 (MOQ) 是多少？交期多久？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "对于台磨机适用的标准棉布轮、气道布轮及带柄砂轮，定制零售彩盒或泡壳彩卡的标准 MOQ 是单规格 500 件起。若仅需散装白盒简易包装，MOQ 可降至 300 件。生产交期通常在收到定金及包装设计定稿后的 25 到 35 天。"
+                  "text": "500 件或 500 套是许多项目的询价起点，纸类磨料可能需要更大批量。实际 MOQ 和生产目标取决于 SKU、数量、包装、印刷、样品及产能，并在报价与订单计划中确认。"
                 }
               },
               {
                 "@type": "Question",
-                "name": "如何保证运送到国外亚马逊 FBA 仓库的包装与条码合规？",
+                "name": "发往海外仓的包装与条码如何检查？",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "我们可按买家提供的 FNSKU/UPC 数据制作彩盒或标签，并在出货前进行扫描抽检。警告标签、纸箱标和最终入仓要求需依据平台当期规则确认。"
@@ -375,7 +385,7 @@ export default function ChineseHome() {
                 "name": "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4\" 铁柄或六角快速接头的夹持盘 and 迷你抛光磨头。"
+                  "text": "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4\" 铁柄或六角快速接头的夹持盘和迷你抛光磨头。"
                 }
               },
               {
@@ -383,7 +393,7 @@ export default function ChineseHome() {
                 "name": "砂纸和砂网有什么区别？我们如何为客户选择？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "传统砂纸适用于木工常规打磨及汽车漆面抛光，干湿两用乳胶纸基具有很好的柔韧度；而网格砂网由玻璃纤维编织而成，双面涂覆碳化硅，具有极好的防堵塞排灰性能，常用于大面积石膏板墙面打磨，可配合吸尘设备实现无尘作业。"
+                  "text": "传统砂纸可用于木工打磨及汽车漆面精饰，干湿两用乳胶纸基具有较好柔韧度；网格砂网采用开放式结构，有助于排灰并减少堵塞，常用于石膏板墙面打磨。实际集尘效果取决于打磨机、吸尘设备和操作条件。"
                 }
               },
               {

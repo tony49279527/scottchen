@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Surface Finishing Application Scenarios | SCOTTCHEN",
-  description: "Discover custom accessory configurations matched to specific substrate workflows: Metalworking deburring, Woodworking smoothing, Automotive restoration, Jewelry finishing.",
+  description: "Compare surface-finishing accessory configurations for metalworking, woodworking, automotive restoration, jewelry and drywall workflows.",
   path: "/applications",
   alternatePath: "/zh/applications",
 });
@@ -47,8 +48,8 @@ export default function ApplicationsOverview() {
     {
       id: "drywall",
       name: "Drywall & Contractor Renovation",
-      tag: "Mesh Sanding Screens for Dust-Free Operation",
-      challenges: "Plaster and joint compounds clog typical sandpaper grains instantly, reducing performance. Open-mesh fiberglass screens are necessary to let dust pass through to vacuum systems.",
+      tag: "Mesh Sanding Screens for Vacuum-Assisted Work",
+      challenges: "Plaster and joint compounds can load conventional sandpaper quickly. Open-mesh fiberglass screens allow dust to pass through and may improve extraction when matched to a compatible vacuum sanding system.",
       products: "Drywall mesh sanding screen sheets, mesh rolls, contractor pack consumables.",
       packaging: "Bulk contract cases, paper-wrapped retail packs of 10 sheets.",
     },
@@ -120,7 +121,7 @@ export default function ApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Wood & Drywall:</strong> Clog-free drywall mesh screens (silicon carbide) and J-weight cloth rolls configured for workshop dispenser racks.</span>
+                    <span className="text-industry-slate-200"><strong>Wood & Drywall:</strong> Open-mesh drywall screens and J-weight cloth rolls can be configured for compatible tools and workshop dispenser racks.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -134,7 +135,7 @@ export default function ApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Distribution Kits:</strong> Customizable tool pairings in private labeled double blisters or FBA-compliant boxes with low MOQs (500 sets).</span>
+                    <span className="text-industry-slate-200"><strong>Distribution Kits:</strong> Configurable tool pairings in private-label blisters or color boxes; 500 sets is a reference MOQ, subject to the quoted specification.</span>
                   </li>
                 </ul>
               </div>
@@ -258,7 +259,7 @@ export default function ApplicationsOverview() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/applications#faqpage",
+            "@id": absoluteUrl("/applications#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",

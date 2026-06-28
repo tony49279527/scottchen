@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Buffing & Polishing Wheels | SCOTTCHEN",
-  description: "Calibrated cotton buffing wheels, spiral stitched pads, bench grinder buffers, shank-mounted buffers, and premium compound bars. Fully configurable MOQ 500.",
+  description: "Source cotton buffing wheels, spiral-stitched pads, bench-grinder buffers, shank-mounted buffers and compound bars with a reference MOQ of 500 pieces.",
   path: "/products/buffing-polishing-wheels",
   alternatePath: "/zh/products/buffing-polishing-wheels",
 });
@@ -24,7 +25,7 @@ export default function BuffingPolishingWheels() {
     },
     {
       name: "Bench Grinder Polishing Wheels (Extra Thick)",
-      desc: "Reinforced wheels designed to fit standard 6-inch and 8-inch bench grinders. Engineered to withstand high pressure without deformation. Double-stitched seams ensure fibers do not detach prematurely.",
+      desc: "Reinforced 6-inch and 8-inch wheel options for compatible bench grinders. Construction, bore fit, labeled operating limit and acceptance checks must be confirmed in the approved SKU specification.",
       features: ["Diameter: 6\" (150mm), 8\" (200mm), 10\" (250mm)", "Thickness: 1/2\" to 2.5\" laminated layers", "Bore inserts: Metal flange center plates or telescope plastic sleeves"],
     },
     {
@@ -109,7 +110,7 @@ export default function BuffingPolishingWheels() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Logistics & MOQs:</strong> 500 pcs for standard wheels, 1,000 pcs for shank buffers, with a 25-35 day batch lead time. Free samples available.</span>
+                    <span className="text-industry-slate-200"><strong>Reference Order Terms:</strong> Many inquiries start at 500 standard wheels or 1,000 shank-mounted pieces; MOQ, sample charges and lead time are confirmed by configuration.</span>
                   </li>
                 </ul>
               </div>
@@ -403,7 +404,7 @@ export default function BuffingPolishingWheels() {
               {
                 title: "Lapidary & Jewelry Buffing Wheels",
                 asin: "B0DQCZYRXR",
-                desc: "Premium fine-fold unbleached cotton wheels perfect for gemstone shaping, gold, silver, and precious metals.",
+                desc: "Fine-fold unbleached cotton wheels suited to finishing gemstones, gold, silver, and other precious-metal workpieces after process testing.",
                 url: "https://www.amazon.com/SCOTTCHEN-Buffing-Polishing-Lapidary-Metalworking/dp/B0DQCZYRXR/ref=sr_1_11?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
                 img: "/images/buffing_wheels.webp"
               },
@@ -483,7 +484,7 @@ export default function BuffingPolishingWheels() {
             {[
               {
                 q: "What is the difference between spiral-stitched and loose-flannel buffing wheels?",
-                a: "Spiral-stitched buffing wheels feature concentric circles of heavy-duty stitching, creating a rigid surface suited for medium-to-heavy cut polishing and metal prep. Loose-flannel wheels are only stitched at the arbor center, allowing the soft cotton layers to flare out, which is perfect for ultra-high gloss coloring and mirror-finishing on soft metals, plastics, or jewelry."
+                a: "Spiral-stitched buffing wheels feature concentric circles of stitching, creating a firmer surface for medium-to-heavy cut polishing and metal preparation. Loose-flannel wheels are stitched at the arbor center so the softer layers can flare out for coloring and final finishing. Confirm the wheel, compound, substrate, pressure, and speed with a workpiece test."
               },
               {
                 q: "How do I match Scottchen buffing wheels with the correct compound bar color?",
@@ -491,15 +492,15 @@ export default function BuffingPolishingWheels() {
               },
               {
                 q: "Do you supply telescoping arbor hole inserts and custom shanks?",
-                a: "Yes. Our standard bench grinder wheels feature telescoping plastic inserts that support 1/2\", 5/8\", 3/4\", and 1\" arbor spindles. For hand drills and impact drivers, we supply buffing accessories with pre-mounted, non-slip 1/4\" hex shanks or round arbors, dynamically balanced to prevent vibration at high RPMs."
+                a: "We can provide telescoping inserts and 1/4\" hex or round shank options. Buyers must confirm spindle or chuck dimensions, tool type, the product's labeled maximum speed, and the tool manufacturer's limits in the approved specification before use."
               },
               {
                 q: "What are the standard packaging options for retail-ready distribution?",
-                a: "We offer heat-sealed shrink wrap with barcode labels, double-sided blister cards, and custom-printed high-density color boxes. All packaging can be pre-printed with your logo, custom warnings, usage instructions, and FNSKU/UPC barcodes, meeting complete retail or Amazon FBA compliance rules."
+                a: "Available formats include shrink wrap, blister cards, and printed color boxes. Buyer-approved logos, warnings, instructions, and FNSKU or UPC data can be applied and sample-scanned; final acceptance depends on the retailer or marketplace's current rules."
               },
               {
                 q: "What is the typical minimum order quantity (MOQ) and production lead time?",
-                a: "Our standard MOQ is 500 pieces per size for bench grinder buffing wheels, and 1,000 pieces per shape for shank-mounted drill buffing pads. Batch production typically takes 25 to 35 days, depending on custom branding requirements. Free pre-production samples are available for quality verification."
+                a: "Reference MOQs are 500 pieces per size for bench-grinder wheels and 1,000 pieces per shape for shank-mounted pads. Quantity, lead time, sample charges, and packaging scope are confirmed in the written quotation."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -524,16 +525,12 @@ export default function BuffingPolishingWheels() {
             "@graph": [
               {
                 "@type": "ProductGroup",
-                "@id": "https://www.scottchentools.com/products/buffing-polishing-wheels#productgroup",
+                "@id": absoluteUrl("/products/buffing-polishing-wheels#productgroup"),
                 "name": "SCOTTCHEN Buffing & Polishing Wheels Catalog",
                 "description": "Industrial-grade cotton buffing wheels, spiral stitched polishing pads, loose flannel wheels, and compound bars. Tailored for metal restoration, automotive deburring, and catalog distribution.",
-                "url": "https://www.scottchentools.com/products/buffing-polishing-wheels",
+                "url": absoluteUrl("/products/buffing-polishing-wheels"),
                 "brand": {
                   "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@type": "Organization",
                   "name": "SCOTTCHEN"
                 },
                 "hasVariant": [
@@ -559,14 +556,14 @@ export default function BuffingPolishingWheels() {
               },
               {
                 "@type": "FAQPage",
-                "@id": "https://www.scottchentools.com/products/buffing-polishing-wheels#faqpage",
+                "@id": absoluteUrl("/products/buffing-polishing-wheels#faqpage"),
                 "mainEntity": [
                   {
                     "@type": "Question",
                     "name": "What is the difference between spiral-stitched and loose-flannel buffing wheels?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Spiral-stitched buffing wheels feature concentric circles of heavy-duty stitching, creating a rigid surface suited for medium-to-heavy cut polishing and metal prep. Loose-flannel wheels are only stitched at the arbor center, allowing the soft cotton layers to flare out, which is perfect for ultra-high gloss coloring and mirror-finishing on soft metals, plastics, or jewelry."
+                      "text": "Spiral-stitched buffing wheels feature concentric circles of stitching, creating a firmer surface for medium-to-heavy cut polishing and metal preparation. Loose-flannel wheels are stitched at the arbor center so the softer layers can flare out for coloring and final finishing. Confirm the wheel, compound, substrate, pressure, and speed with a workpiece test."
                     }
                   },
                   {
@@ -582,7 +579,7 @@ export default function BuffingPolishingWheels() {
                     "name": "Do you supply telescoping arbor hole inserts and custom shanks?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes. Our standard bench grinder wheels feature telescoping plastic inserts that support 1/2\", 5/8\", 3/4\", and 1\" arbor spindles. For hand drills and impact drivers, we supply buffing accessories with pre-mounted, non-slip 1/4\" hex shanks or round arbors, dynamically balanced to prevent vibration at high RPMs."
+                      "text": "We can provide telescoping inserts and 1/4\" hex or round shank options. Buyers must confirm spindle or chuck dimensions, tool type, the product's labeled maximum speed, and the tool manufacturer's limits in the approved specification before use."
                     }
                   },
                   {
@@ -590,7 +587,7 @@ export default function BuffingPolishingWheels() {
                     "name": "What are the standard packaging options for retail-ready distribution?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We offer heat-sealed shrink wrap with barcode labels, double-sided blister cards, and custom-printed high-density color boxes. All packaging can be pre-printed with your logo, custom warnings, usage instructions, and FNSKU/UPC barcodes, meeting complete retail or Amazon FBA compliance rules."
+                      "text": "Available formats include shrink wrap, blister cards, and printed color boxes. Buyer-approved logos, warnings, instructions, and FNSKU or UPC data can be applied and sample-scanned; final acceptance depends on the retailer or marketplace's current rules."
                     }
                   },
                   {
@@ -598,7 +595,7 @@ export default function BuffingPolishingWheels() {
                     "name": "What is the typical minimum order quantity (MOQ) and production lead time?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Our standard MOQ is 500 pieces per size for bench grinder buffing wheels, and 1,000 pieces per shape for shank-mounted drill buffing pads. Batch production typically takes 25 to 35 days, depending on custom branding requirements. Free pre-production samples are available for quality verification."
+                      "text": "Reference MOQs are 500 pieces per size for bench-grinder wheels and 1,000 pieces per shape for shank-mounted pads. Quantity, lead time, sample charges, and packaging scope are confirmed in the written quotation."
                     }
                   }
                 ]

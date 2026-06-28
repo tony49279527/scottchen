@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SampleKitForm from "@/components/SampleKitForm";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "申请表面打磨与抛光轮样品测试包 | SCOTTCHEN",
@@ -21,7 +22,7 @@ export default function ChineseSampleKit() {
             申请表面抛磨耗材样品测试包
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-            在大批量订柜前，实际检测我们的车缝线密度、防拉扯布纸韧度、磨料目数级配是否完全符合您的质量要求。
+            在批量采购前，实际检查车缝线密度、背基韧度和磨料粒度与采购要求的匹配程度。
           </p>
         </div>
       </section>
@@ -64,7 +65,7 @@ export default function ChineseSampleKit() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>快捷加工处理:</strong> 常规库存储备样品在 3-5 天内包装出厂，附带您的私有品牌彩盒与高清条码的包装样需 7-10 天。</span>
+                    <span className="text-industry-slate-200"><strong>书面样品计划:</strong> 备货、定制规格、包装稿件和快递要求审核后，再书面确认处理周期与发运目标。</span>
                   </li>
                 </ul>
               </div>
@@ -108,7 +109,7 @@ export default function ChineseSampleKit() {
                   <div>
                     <h4 className="font-bold text-white uppercase">样品费用如何确认？</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      是的。棉布轮、砂碟磨碟、砂纸纸样对于核实身份的商业实体（工具分销商、网店卖家、五金供应链商）是完全免收材料费的。
+                      费用取决于产品、数量、定制规格和包装范围。样品费与快递条款会在发出前书面确认，不默认承诺免费。
                     </p>
                   </div>
                   <div>
@@ -126,7 +127,7 @@ export default function ChineseSampleKit() {
                   <div>
                     <h4 className="font-bold text-white uppercase">样品发货的周期大概多久？</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      仓库储备规格的耗材通常在 3 到 5 个工作日内打包并贴单发运。若需附加您的 logo 图标做包装样，需要 7 到 10 个工作日进行印刷打板。
+                      我们会在核对库存、定制工作、包装稿件和收货地后给出时间计划，并以书面样品方案中的发运目标为准。
                     </p>
                   </div>
                 </div>
@@ -177,7 +178,7 @@ export default function ChineseSampleKit() {
               },
               {
                 q: "样品的加工周期和跨国快递路途大概要多久？",
-                a: "普通的储备规格一般在 3 至 5 天内拼配出厂并上传运单号。涉及为您印刷定制品牌图案、或制作专属贴膜条码的物理样板，需要 7 到 10 个工作日进行盒样裁切印刷打样。"
+                a: "加工与运输时间会在核对库存、定制工作、包装稿件和收货地后报价，并以书面样品方案中的发运目标为准。"
               },
               {
                 q: "在发运磨料耗材的同时，我们能够索取彩盒印刷数码样和条码贴纸的扫码样么？",
@@ -204,7 +205,7 @@ export default function ChineseSampleKit() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/zh/sample-kit#faqpage",
+            "@id": absoluteUrl("/zh/sample-kit#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
@@ -235,7 +236,7 @@ export default function ChineseSampleKit() {
                 "name": "样品的加工周期和跨国快递路途大概要多久？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "普通的储备规格一般在 3 至 5 天内拼配出厂并上传运单号。涉及为您印刷定制品牌图案、或制作专属贴膜条码的物理样板，需要 7 到 10 个工作日进行盒样裁切印刷打样。"
+                  "text": "加工与运输时间会在核对库存、定制工作、包装稿件和收货地后报价，并以书面样品方案中的发运目标为准。"
                 }
               },
               {

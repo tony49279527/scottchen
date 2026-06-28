@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "磨具制造厂出厂质量控制与标准体系 | SCOTTCHEN",
-  description: "了解SCOTTCHEN系统化的出厂质量控制检测流程：缝线拉力强度、中心孔公差精控、磨片动平衡测试以及条码贴标清晰度扫描审计。",
+  title: "磨料磨具产品质量控制与验货计划 | SCOTTCHEN",
+  description: "了解磨料磨具项目可约定的层数、缝线、中心孔尺寸、工作限制、条码数据和出货前证据检查。",
   path: "/zh/quality-control",
   alternatePath: "/quality-control",
   locale: "zh-CN",
@@ -53,12 +54,12 @@ export default function ChineseQualityControl() {
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">信任与出厂验证</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">买家质量规划</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              工业级磨具出厂质量控制与标准体系
+              磨料磨具产品质量控制与验货计划
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              我们对棉轮孔径、缝线强度、磨料粒度一致性以及商用条码扫码率执行严格的批量化测试。
+              逐 SKU 约定尺寸、结构、工作限制、磨料粒度、包装和出货前证据。
             </p>
           </div>
           
@@ -67,7 +68,7 @@ export default function ChineseQualityControl() {
               href="/zh/contact"
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
-              申请获取质检报告
+              申请确认质检范围
             </Link>
             <Link
               href="/zh/sample-kit"
@@ -86,9 +87,9 @@ export default function ChineseQualityControl() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="md:w-1/3">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">质检数据</span>
-                <h2 className="text-2xl font-black text-white mt-1">生产过程管控规范</h2>
+                <h2 className="text-2xl font-black text-white mt-1">质量计划关键字段</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  严苛的出厂质检规程，为全球分销商提供安心无客诉的供应链支撑。
+                  用于确认产品规格、抽样方法、检验记录和批次放行要求。
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -111,13 +112,13 @@ export default function ChineseQualityControl() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>光学粒度校正:</strong> 严密的分离筛选环境，杜绝在极细目砂纸中混入大粗颗粒，保护最终高光表面。</span>
+                    <span className="text-industry-slate-200"><strong>粒度与表面检查:</strong> 可在质检计划中约定物料隔离和表面检查，再依据封样及目标基材进行实际测试。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>国际第三方监装:</strong> 大货入箱贴标符合国际物流抗压标准。支持 SGS、TUV 等指定验货机构进厂检验。</span>
+                    <span className="text-industry-slate-200"><strong>标签与第三方验货:</strong> 买家条码数据可进行样品扫码；第三方验货的地点、时间、范围、准入和费用在报价阶段确认。</span>
                   </li>
                 </ul>
               </div>
@@ -134,7 +135,7 @@ export default function ChineseQualityControl() {
             {/* Left Content column */}
             <div className="lg:col-span-8 space-y-8">
               <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                出厂前抽检测试项目
+                可约定的抽检项目
               </h2>
 
               <div className="grid grid-cols-1 gap-6">
@@ -190,10 +191,13 @@ export default function ChineseQualityControl() {
                   loading="lazy"
                   decoding="async"
                   src="/images/quality_inspection.webp"
-                  alt="SCOTTCHEN 抛光轮中心孔及动平衡检测"
+                  alt="磨料磨具质检规划示意图"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
+                  流程示意图，不代表特定工厂或实验室实景
+                </span>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
@@ -229,10 +233,10 @@ export default function ChineseQualityControl() {
                   船前第三方检验
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  我们全力支持采购代表或派遣第三方质检机构（如 SGS、V-Trust 验货服务）在集装箱装柜前进入工厂成品仓库进行批次复检，并提供完善的厂内批次检测单据。
+                  买家可申请第三方或内部出货前检验。验货机构、地点、抽样水平、证据、时间、现场准入和费用必须在报价及质检计划中确认。
                 </p>
                 <p className="text-xs text-industry-orange font-mono font-bold">
-                  高一致性是 SCOTTCHEN 对全球分销体系的庄严承诺。
+                  未列入订单范围的测试或报告不能视为默认包含。
                 </p>
               </div>
 
@@ -309,7 +313,7 @@ export default function ChineseQualityControl() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/zh/quality-control#faqpage",
+            "@id": absoluteUrl("/zh/quality-control#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",

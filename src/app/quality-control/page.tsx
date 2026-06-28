@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Manufacturing Quality Control Standards | SCOTTCHEN",
-  description: "Learn about our systematic testing for abrasive tools: ply density checks, stitch tensile tests, arbor hole sizing tolerance verification, and barcode print validation.",
+  title: "Abrasive Product Quality Control Planning | SCOTTCHEN",
+  description: "Plan SKU-level abrasive product checks for ply count, stitching, bore dimensions, operating limits, barcode data and pre-shipment evidence.",
   path: "/quality-control",
   alternatePath: "/zh/quality-control",
 });
@@ -52,12 +53,12 @@ export default function QualityControl() {
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">TRUST & VERIFICATION</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">BUYER QUALITY PLANNING</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              Manufacturing Quality Control & Standards
+              Abrasive Product Quality Control Planning
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              We execute batch-level checks on arbor tolerances, stitching strength, grit uniformity, and barcode readability.
+              Define SKU-level checks for dimensions, construction, operating limits, grit, packaging and pre-shipment evidence.
             </p>
           </div>
           
@@ -66,13 +67,13 @@ export default function QualityControl() {
               href="/contact"
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
-              Request Specs Audit
+              Request QC Scope
             </Link>
             <Link
               href="/sample-kit"
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
-              Order Quality Samples
+              Request Test Samples
             </Link>
           </div>
         </div>
@@ -85,9 +86,9 @@ export default function QualityControl() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="md:w-1/3">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
-                <h2 className="text-2xl font-black text-white mt-1">Quality Inspection Standards</h2>
+                <h2 className="text-2xl font-black text-white mt-1">Quality Plan Snapshot</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  Rigorous manufacturing verification, dimensional tolerances, and ecommerce labeling QA.
+                  Example fields for a buyer-approved specification, sampling plan and release record.
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -110,13 +111,13 @@ export default function QualityControl() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Grit Calibration:</strong> Optical checks prevent grain contamination in sandpaper, ensuring scratch-free finishes on high-gloss jobs.</span>
+                    <span className="text-industry-slate-200"><strong>Grit & Surface Review:</strong> Material segregation and surface checks can be defined in the quality plan, followed by testing against the approved sample and intended substrate.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Labeling & Audit Support:</strong> Barcode scanners test print contrast of retail/FBA stickers. Third-party testing companies (SGS, TUV) welcomed.</span>
+                    <span className="text-industry-slate-200"><strong>Labeling & Audit Scope:</strong> Buyer-supplied barcode data can be sample-scanned; third-party inspection access, timing and fees are agreed during quotation.</span>
                   </li>
                 </ul>
               </div>
@@ -133,7 +134,7 @@ export default function QualityControl() {
             {/* Left Content column */}
             <div className="lg:col-span-8 space-y-8">
               <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                Batch Quality Checks
+                Checks That Can Be Specified
               </h2>
 
               <div className="grid grid-cols-1 gap-6">
@@ -189,10 +190,13 @@ export default function QualityControl() {
                   loading="lazy"
                   decoding="async"
                   src="/images/quality_inspection.webp"
-                  alt="SCOTTCHEN Quality Control Inspection Rig"
+                  alt="Illustrative abrasive quality-planning workspace"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
+                  Illustrative workflow visual, not a facility claim
+                </span>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
@@ -228,10 +232,12 @@ export default function QualityControl() {
                   Pre-Shipment Inspections
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  We support third-party inspection audits (SGS, V-Trust, etc.) before container loading at our factory warehouse. We provide internal inspection reports with every production batch shipment.
+                  A buyer may request third-party or internal pre-shipment inspection.
+                  Inspection company, location, sampling level, evidence, timing, access
+                  and fees must be confirmed in the quotation and quality plan.
                 </p>
                 <p className="text-xs text-industry-orange font-mono font-bold">
-                  Safety and consistency are non-negotiable for tool brands.
+                  Do not accept unlisted tests or reports as included in the order.
                 </p>
               </div>
 
@@ -308,7 +314,7 @@ export default function QualityControl() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/quality-control#faqpage",
+            "@id": absoluteUrl("/quality-control#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",

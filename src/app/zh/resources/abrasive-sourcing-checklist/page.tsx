@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "磨料磨具采购检查清单：规格、样品与质检 | SCOTTCHEN",
@@ -73,20 +74,26 @@ export default function ChineseAbrasiveSourcingChecklist() {
     description: "面向进口商、工具品牌和渠道采购人员的磨料磨具 RFQ 实用清单。",
     inLanguage: "zh-CN",
     mainEntityOfPage: absoluteUrl("/zh/resources/abrasive-sourcing-checklist"),
-    publisher: { "@id": "https://www.scottchentools.com/#organization" },
+    author: { "@id": absoluteUrl("/#organization") },
+    publisher: { "@id": absoluteUrl("/#organization") },
     datePublished: "2026-06-27",
-    dateModified: "2026-06-27",
+    dateModified: SITE_UPDATED,
   };
 
   return (
     <div className="flex min-h-screen flex-col">
       <section className="border-b border-industry-slate-800 bg-industry-slate-950 py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <nav className="mb-6 text-xs text-industry-slate-400" aria-label="面包屑导航">
-            <Link href="/zh" className="hover:text-white">首页</Link>
-            <span className="mx-2">/</span>
-            <span>采购资源</span>
-          </nav>
+          <Breadcrumbs
+            ariaLabel="面包屑导航"
+            items={[
+              { label: "首页", href: "/zh" },
+              {
+                label: "磨料磨具采购检查清单",
+                href: "/zh/resources/abrasive-sourcing-checklist",
+              },
+            ]}
+          />
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-industry-orange-light">
             采购实务指南
           </span>
@@ -96,6 +103,10 @@ export default function ChineseAbrasiveSourcingChecklist() {
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-industry-slate-300">
             用这份清单把模糊的产品需求转化为可比较的 RFQ、有效的样品计划和可执行的出货质量标准。
           </p>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
+            <span>SCOTTCHEN 采购团队发布</span>
+            <span>2026 年 6 月 28 日复核</span>
+          </div>
         </div>
       </section>
 
@@ -123,7 +134,10 @@ export default function ChineseAbrasiveSourcingChecklist() {
             </article>
           ))}
 
-          <div className="grid gap-5 pt-4 sm:grid-cols-3">
+          <div className="grid gap-5 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link href="/zh/resources/abrasive-material-selection-guide" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
+              阅读磨料选材指南 →
+            </Link>
             <Link href="/zh/products" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
               查看产品系列 →
             </Link>

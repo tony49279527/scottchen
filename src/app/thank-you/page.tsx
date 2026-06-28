@@ -40,7 +40,7 @@ export default function ThankYou() {
             </p>
             <ul className="space-y-2 pl-4 list-disc text-xs text-industry-slate-400 font-mono">
               <li>
-                <strong>Specification Review:</strong> An engineer checks your sizing, grit assortments, and backing papers to ensure manufacturing compatibility.
+                <strong>Specification Review:</strong> The submitted sizing, grit assortment, backing and tool interface are reviewed before a configuration is quoted.
               </li>
               <li>
                 <strong>B2B Quote Generation:</strong> We compile bulk contract options, packaging toolings cost, and lead times.

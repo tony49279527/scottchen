@@ -47,7 +47,7 @@ export default function ProductsOverview() {
         {
           name: "Sanding Screens & Drywall Abrasives",
           url: "/products/sanding-grinding-accessories",
-          types: "Silicon carbide drywall mesh sanding screen, dust-free sanding screens, contractor rolls.",
+          types: "Silicon carbide drywall mesh sanding screens, vacuum-compatible screens, contractor rolls.",
           moq: "5,000 sheets",
           pack: "Individually wrapped paper covers / shrink wrap",
           img: "/images/sanding_screens.webp",
@@ -132,7 +132,7 @@ export default function ProductsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Standard MOQs:</strong> Polishing wheels: 500 pcs; compound kits: 500 sets; sandpapers: 10,000 sheets; fiber discs: 2,000 pcs/grit.</span>
+                    <span className="text-industry-slate-200"><strong>Reference MOQs:</strong> Polishing wheels: 500 pcs; compound kits: 500 sets; sandpapers: 10,000 sheets; fiber discs: 2,000 pcs/grit. Final minimums are quoted per SKU.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -252,8 +252,8 @@ export default function ProductsOverview() {
                 a: "Required reports depend on the product, destination, and agreed quality plan. Buyers should specify the applicable standard, test method, sampling level, and evidence required before placing the order."
               },
               {
-                q: "How do you prevent layout shifts and damage to custom color boxes?",
-                a: "We pack retail bundles using double-walled corrugated shipping cartons, with corner guards and heavy poly-strapping. We support full wood or plastic palletization with shrink-wrap bands for export container shipments."
+                q: "How are shipping cartons and pallet requirements confirmed?",
+                a: "The packaging specification can define corrugated construction, corner protection, strapping, pallet material and wrap requirements according to product weight and transport conditions. Final pack-out and any transport test are quoted per project."
               },
               {
                 q: "Do you support custom bore/arbor hole size inserts?",
@@ -299,10 +299,10 @@ export default function ProductsOverview() {
               },
               {
                 "@type": "Question",
-                "name": "How do you prevent layout shifts and damage to custom color boxes?",
+                "name": "How are shipping cartons and pallet requirements confirmed?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We pack retail bundles using double-walled corrugated shipping cartons, with corner guards and heavy poly-strapping. We support full wood or plastic palletization with shrink-wrap bands for export container shipments."
+                  "text": "The packaging specification can define corrugated construction, corner protection, strapping, pallet material and wrap requirements according to product weight and transport conditions. Final pack-out and any transport test are quoted per project."
                 }
               },
               {

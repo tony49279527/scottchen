@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
-  description: "SCOTTCHEN manufactures retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility. Low MOQs.",
+  description: "SCOTTCHEN supplies retail-ready surface finishing accessory kits with private-label packaging, custom grit assortments and B2B sourcing support.",
   path: "/",
   alternatePath: "/zh",
 });
@@ -54,7 +54,7 @@ export default function Home() {
     },
     {
       title: "OEM Surface Finishing Kits",
-      desc: "Fully customized accessory configurations, barcodes, custom instruction sheets, and FBA-compliant polybag or color box packaging.",
+      desc: "Custom accessory configurations, buyer-supplied barcode data, instruction sheets, and marketplace-oriented polybag or color-box packaging.",
       link: "/oem-private-label",
       badge: "Made to Order",
       img: "/images/oem_packaging.webp",
@@ -99,6 +99,12 @@ export default function Home() {
                   Get Sample Kit
                 </Link>
               </div>
+              <Link
+                href="/supplier-profile"
+                className="w-fit text-sm font-bold text-industry-orange hover:text-industry-orange-hover"
+              >
+                Review supplier scope, verification status, and RFQ requirements &rarr;
+              </Link>
 
               {/* Trust badges */}
               <div className="grid grid-cols-3 gap-4 pt-8 border-t border-industry-slate-800 max-w-lg">
@@ -172,13 +178,13 @@ export default function Home() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Flexible MOQs:</strong> Starting at 500 sets for custom kits; bulk components from 500 pcs.</span>
+                    <span className="text-industry-slate-200"><strong>Reference MOQs:</strong> Many custom-kit inquiries start at 500 sets; the quoted minimum depends on SKU, packaging and print method.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Fulfillment Ready:</strong> Complete private labeling, FNSKU barcodes, and carton packaging for FBA.</span>
+                    <span className="text-industry-slate-200"><strong>Fulfillment Preparation:</strong> Buyer-supplied FNSKU data, carton marks and packaging requirements can be included in the approved pack specification.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -192,7 +198,7 @@ export default function Home() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Global Supply:</strong> Standard B2B lead times of 20-35 days via FOB, CIF, or DDP courier modes.</span>
+                    <span className="text-industry-slate-200"><strong>Quoted Delivery Plan:</strong> Production timing, Incoterms rule, named place and logistics responsibilities are confirmed per project.</span>
                   </li>
                 </ul>
               </div>
@@ -229,7 +235,7 @@ export default function Home() {
                 name: "SAND",
                 tool: "Orbital / Sheets & Rolls",
                 substrate: "Wood, Paint, Primer, Drywall",
-                desc: "C-weight backing sandpapers, mesh drywall screen sheets, and detail sticks. Calibrated grit consistency ensures uniform scratch patterns.",
+                desc: "C-weight backing sandpapers, mesh drywall screen sheets, and detail sticks. Grit, backing and scratch pattern are confirmed against the approved sample.",
                 color: "border-t-2 border-amber-500",
               },
               {
@@ -335,10 +341,13 @@ export default function Home() {
                   loading="lazy"
                   decoding="async"
                   src="/images/oem_packaging.webp"
-                  alt="SCOTTCHEN Private Label Packaging Mockup"
+                  alt="Illustrative SCOTTCHEN private-label packaging concept"
                   className="object-cover w-full h-48 opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent" />
+                <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
+                  Illustrative packaging concept
+                </span>
               </div>
               
               <div className="grid grid-cols-2 gap-4">
@@ -349,8 +358,8 @@ export default function Home() {
                 </div>
                 <div className="glass-panel p-6 rounded-lg text-center border border-industry-slate-800">
                   <div className="text-2xl font-black text-white font-mono">FBA</div>
-                  <div className="text-xs text-industry-slate-400 font-semibold mt-1">Amazon Ready</div>
-                  <p className="text-[11px] text-industry-slate-500 mt-2">FNSKU barcode labeling, warning sheets, and carton layout specs.</p>
+                  <div className="text-xs text-industry-slate-400 font-semibold mt-1">Marketplace Preparation</div>
+                  <p className="text-[11px] text-industry-slate-500 mt-2">Buyer-supplied FNSKU data, warning sheets, and carton specifications.</p>
                 </div>
                 <div className="glass-panel p-6 rounded-lg text-center border border-industry-slate-800">
                   <div className="text-2xl font-black text-white font-mono">POLY/BOX</div>
@@ -392,7 +401,7 @@ export default function Home() {
                   <svg className="h-5 w-5 text-industry-orange mr-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span><strong>Seller Platform Compliance:</strong> Print product safety inserts, user instructions, barcode labels, and ensure carton packing rules are met.</span>
+                  <span><strong>Seller Platform Preparation:</strong> Add buyer-approved safety inserts, instructions, barcode data and carton requirements for review against current channel rules.</span>
                 </li>
               </ul>
 
@@ -565,11 +574,11 @@ export default function Home() {
             {[
               {
                 q: "What is the minimum order quantity (MOQ) for custom private label kits?",
-                a: "Our MOQ starts at 500 sets for custom combined kits (e.g. custom combined buffing wheels, compound wax bars, and sanding adapter arbors in a single box). For bulk raw component sourcing, MOQs start from 500 pcs per size or 10,000 sheets for sandpaper sheets."
+                a: "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation."
               },
               {
                 q: "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
-                a: "Yes, we are a direct manufacturer specializing in FBA compliance. We print and apply FNSKU barcode labels directly, bundle instruction sheets, print safety cards, and structure outbound shipping cartons to meet Amazon warehouse rules."
+                a: "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification."
               },
               {
                 q: "Can I request physical samples for laboratory testing before ordering?",
@@ -580,12 +589,12 @@ export default function Home() {
                 a: "Dimensions, bore fit, construction, and any runout or balance criteria are confirmed in the approved SKU specification. Production checks and acceptance records are then matched to that agreed standard."
               },
               {
-                q: "What is your standard B2B production lead time?",
-                a: "Standard production lead time is 25 to 35 days for custom private label kits, and 20 days for raw bulk catalog items, following advance payment and artwork packaging approvals."
+                q: "How is the B2B production lead time confirmed?",
+                a: "The production target is quoted after quantity, materials, customization, artwork approval, sample status and capacity are reviewed. It becomes a commitment only when stated in the written order schedule."
               },
               {
                 q: "What shipping terms and export ports do you support?",
-                a: "We support FOB, CIF, and door-to-door DDP courier options. Most cargo is shipped via Shanghai or Ningbo ports. We handle custom declarations, export clearances, and logistics container loading."
+                a: "FOB, CIF or a door-to-door option may be quoted depending on destination and service availability. The Incoterms rule, named place, port, importer-of-record role, taxes and customs responsibilities are confirmed in writing."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -614,7 +623,7 @@ export default function Home() {
                 "name": "What is the minimum order quantity (MOQ) for custom private label kits?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our MOQ starts at 500 sets for custom combined kits (e.g. custom combined buffing wheels, compound wax bars, and sanding adapter arbors in a single box). For bulk raw component sourcing, MOQs start from 500 pcs per size or 10,000 sheets for sandpaper sheets."
+                  "text": "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation."
                 }
               },
               {
@@ -622,7 +631,7 @@ export default function Home() {
                 "name": "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, we are a direct manufacturer specializing in FBA compliance. We print and apply FNSKU barcode labels directly, bundle instruction sheets, print safety cards, and structure outbound shipping cartons to meet Amazon warehouse rules."
+                  "text": "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification."
                 }
               },
               {
@@ -643,10 +652,10 @@ export default function Home() {
               },
               {
                 "@type": "Question",
-                "name": "What is your standard B2B production lead time?",
+                "name": "How is the B2B production lead time confirmed?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Standard production lead time is 25 to 35 days for custom private label kits, and 20 days for raw bulk catalog items, following advance payment and artwork packaging approvals."
+                  "text": "The production target is quoted after quantity, materials, customization, artwork approval, sample status and capacity are reviewed. It becomes a commitment only when stated in the written order schedule."
                 }
               },
               {
@@ -654,7 +663,7 @@ export default function Home() {
                 "name": "What shipping terms and export ports do you support?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We support FOB, CIF, and door-to-door DDP courier options. Most cargo is shipped via Shanghai or Ningbo ports. We handle custom declarations, export clearances, and logistics container loading."
+                  "text": "FOB, CIF or a door-to-door option may be quoted depending on destination and service availability. The Incoterms rule, named place, port, importer-of-record role, taxes and customs responsibilities are confirmed in writing."
                 }
               }
             ]

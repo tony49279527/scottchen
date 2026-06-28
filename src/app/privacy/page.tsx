@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Effective Date: May 23, 2026. This policy outlines how SCOTTCHEN manages business inquiry data in compliance with international privacy rules.
+            Effective Date: June 28, 2026. This policy describes how the SCOTTCHEN website handles business inquiry and sample-request information.
           </p>
         </div>
       </section>
@@ -44,6 +44,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Contact details:</strong> Full name and email address.</li>
                 <li><strong>Business metadata:</strong> Registered company name, corporate website URL, target geographic markets, and standard business profile type (e.g., brand manager, distributor, or online seller).</li>
                 <li><strong>Technical specifications:</strong> Targeted tool categories, custom ply counts, bore sizes, sandpaper grits, packaging preferences, and estimated batch volumes.</li>
+                <li><strong>Request context:</strong> Locale, landing page, referrer, UTM parameters, submission time, IP address, browser user agent, and internal lead-routing score.</li>
               </ul>
             </div>
 
@@ -53,17 +54,17 @@ export default function PrivacyPolicy() {
                 We use collected information solely for B2B transaction routing, specifically:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-industry-slate-350">
-                <li>Analyzing material dimensions and dynamic speed testing tolerances to verify product manufacturing feasibility.</li>
-                <li>Drafting formal wholesale price sheets, custom carton die-lines, and production batch lead times.</li>
-                <li>Fulfilling sample shipping parcels via international couriers (DHL, FedEx, UPS) and coordinating freight charge credit terms.</li>
-                <li>Ensuring compliance with platform-specific packaging guidelines (such as Amazon FNSKU/UPC barcode visibility standards).</li>
+                <li>Reviewing product, packaging and tool-interface requirements before preparing a quotation.</li>
+                <li>Routing the inquiry to the configured email or business webhook and preventing automated abuse.</li>
+                <li>Discussing samples, logistics, artwork and buyer-supplied barcode requirements if the project progresses.</li>
+                <li>Measuring site usage through consent-based analytics when that feature is configured and accepted.</li>
               </ul>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">4. Data Sharing and Retention</h2>
               <p>
-                We do not sell, rent, or lease your corporate database contacts to any third-party advertising companies. Your inquiry parameters are shared only with essential supply chain logistics partners (e.g., customs brokers, shipping carriers, and pre-shipment auditing agencies like SGS or V-Trust) to arrange delivery contracts.
+                We do not sell or rent inquiry contact data for third-party advertising. Information may be processed by service providers used for website hosting, inquiry delivery, security, consent-based analytics, and, if a project proceeds, the logistics or inspection providers needed for the requested service.
               </p>
               <p>
                 We retain inquiry information only as long as reasonably needed to respond, maintain commercial records, and meet applicable legal obligations. You may request deletion where applicable.
@@ -71,9 +72,9 @@ export default function PrivacyPolicy() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">5. GDPR and International Rights</h2>
+              <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">5. Privacy Requests and Applicable Rights</h2>
               <p>
-                If you are accessing this site from the European Economic Area (EEA), you possess standard rights under General Data Protection Regulation (GDPR) rules. You have the right to request access to the personal data we store, request rectification of inaccurate records, object to B2B quoting communications, or request immediate deletion of your inquiry details. Contact our data compliance officer at <a href="mailto:sales@scottchentools.com" className="text-industry-orange hover:underline font-bold font-mono">sales@scottchentools.com</a> to exercise these rights.
+                Depending on your location and applicable law, you may have rights to request access, correction, deletion, restriction, objection, or a copy of personal information. Requests can be sent to <a href="mailto:sales@scottchentools.com" className="text-industry-orange hover:underline font-bold font-mono">sales@scottchentools.com</a>. We may need to verify the requester and may retain records where legally required or needed to establish, exercise, or defend claims.
               </p>
             </div>
 

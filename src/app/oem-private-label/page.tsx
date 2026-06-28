@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM & Private Label Surface Finishing Kits | SCOTTCHEN",
-  description: "Get custom branding, retail-ready packaging design, barcode labeling, and FBA-compliant fulfillment support for your custom industrial tool accessory kits.",
+  description: "Plan custom branding, retail packaging, buyer-supplied barcode labeling and warehouse-delivery requirements for industrial tool accessory kits.",
   path: "/oem-private-label",
   alternatePath: "/zh/oem-private-label",
 });
@@ -14,7 +15,7 @@ export default function OEMPrivateLabel() {
   const oemCapabilities = [
     {
       title: "1. Custom Product Combinations",
-      desc: "Do not get locked into standard factory directories. We let you mix and match different product families in a single custom kit box. Combine cotton wheels, compound wax bars, hex arbors, mini detail sticks, or assorted grit sandpapers to map to a precise workflow like metal restoration or woodworking prep.",
+      desc: "Move beyond a fixed catalog by combining product families in one quoted kit. Cotton wheels, compound bars, hex arbors, detail sticks or assorted sandpapers can be scoped around a workflow such as metal restoration or woodworking preparation.",
       examples: "Example: 1x 6-inch cotton wheel + 1x 6-inch loose flannel wheel + 2x compound bars (green and white) + 1x drill adapter arbor shank.",
     },
     {
@@ -31,14 +32,14 @@ export default function OEMPrivateLabel() {
       title: "3. Professional Labeling & Barcode Compliance",
       desc: "We review supplied barcode, warning, and country-of-origin requirements before shipment and document the approved label layout. Final marketplace and import compliance remains subject to the buyer's current destination rules.",
       details: [
-        "FNSKU Barcodes: We print and apply FNSKU barcode stickers directly onto retail packaging for Amazon FBA inventory.",
+        "FNSKU / UPC Data: Buyer-supplied symbols can be printed or applied to retail packaging and sample-scanned before production approval.",
         "Instruction Cards: Clear user manuals, tool compatibility tables, and substrate usage guides to reduce avoidable consumer returns.",
         "Warning & Regulatory Stickers: Standard compliance markings, warnings, and country-of-origin labels on cartons.",
       ],
     },
     {
-      title: "4. Online Seller & FBA-Ready Fulfillment",
-      desc: "For online tool accessory sellers (Amazon, Shopify, Walmart, eBay), fulfillment efficiency is critical. We build kits designed to survive courier handling: drop-test checks on boxes, optimized weight sizes to fit low-tier storage rates, and pre-packaged box sets ready to receive shipping labels directly.",
+      title: "4. Online Seller Fulfillment Planning",
+      desc: "For online sellers, the project specification can include carton dimensions, pack weight, agreed handling tests and shipping-label space. Marketplace fee tiers and warehouse acceptance must be checked against the channel's current rules.",
     },
   ];
 
@@ -47,8 +48,8 @@ export default function OEMPrivateLabel() {
     { step: "02", title: "Select Kit Combination", desc: "Work with our engineers to configure your accessory selection, grits, and custom inserts." },
     { step: "03", title: "Design Packaging", desc: "We provide structural die-lines for color boxes or blister backing cards. You provide artwork." },
     { step: "04", title: "Approve Mockups", desc: "We produce physical packaging mockups and barcode placements for visual validation before production." },
-    { step: "05", title: "Batch Production", desc: "Standard production lead time is 25-35 days, including batch QA checks (balancing, tolerances)." },
-    { step: "06", title: "FBA / Warehouse Delivery", desc: "We handle container loading and door-to-door courier shipping direct to FBA or local distribution centers." },
+    { step: "05", title: "Batch Production", desc: "The quotation confirms production timing and the agreed batch checks after specification and artwork approval." },
+    { step: "06", title: "Warehouse Delivery", desc: "Loading, freight, delivery point and customs responsibilities are confirmed with the selected Incoterms rule and logistics plan." },
   ];
 
   return (
@@ -62,7 +63,7 @@ export default function OEMPrivateLabel() {
               OEM & Private Label Surface Finishing Kits
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              We help tool brands and online sellers construct retail-ready accessory bundles with custom packaging, branding, and barcode compliance.
+              We help tool brands and online sellers plan retail-ready accessory bundles with custom packaging, branding, and buyer-supplied barcode data.
             </p>
           </div>
           
@@ -121,7 +122,7 @@ export default function OEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Fulfillment Sourcing:</strong> Low MOQ of 500 sets for custom combinations, 25-35 day production, and direct shipping options to international hubs.</span>
+                    <span className="text-industry-slate-200"><strong>Quoted Project Scope:</strong> A 500-set reference MOQ, production schedule, inspection scope and international delivery assumptions are confirmed for each configuration.</span>
                   </li>
                 </ul>
               </div>
@@ -196,10 +197,13 @@ export default function OEMPrivateLabel() {
                   loading="lazy"
                   decoding="async"
                   src="/images/oem_packaging.webp"
-                  alt="SCOTTCHEN OEM Private Label Packaging Mockup"
+                  alt="Illustrative private-label packaging concept"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
+                  Illustrative packaging concept
+                </span>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
@@ -209,19 +213,19 @@ export default function OEMPrivateLabel() {
                 <div className="space-y-3 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">Sourcing MOQ:</span>
-                    <span className="text-white font-bold">500 Kits / custom combo</span>
+                    <span className="text-white font-bold">Reference: 500 boxed kits</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Package Toolings:</span>
-                    <span className="text-white font-bold">Free dieline design files</span>
+                    <span className="text-white font-bold">Dieline scope confirmed in quote</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Mockup lead time:</span>
-                    <span className="text-white font-bold">5-7 Days after art submission</span>
+                    <span className="text-white font-bold">Quoted after artwork review</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Import Compliance:</span>
-                    <span className="text-white font-bold">CE, Warning Label templates provided</span>
+                    <span className="text-white font-bold">Buyer-approved warning content</span>
                   </div>
                 </div>
               </div>
@@ -274,23 +278,23 @@ export default function OEMPrivateLabel() {
             {[
               {
                 q: "What is the typical minimum order quantity (MOQ) for custom private label kits?",
-                a: "Our standard MOQ is 500 sets for custom-configured kits (e.g., buffing wheels paired with compounds in a custom box) and 1,000 sets for blister card setups. This lower MOQ threshold helps online sellers launch new product variations with minimized stock investment."
+                a: "A common starting point is 500 sets for boxed custom kits and 1,000 sets for some blister-card configurations. The actual MOQ depends on the product mix, print process, packaging structure and material suppliers, and is confirmed in the quotation."
               },
               {
-                q: "Do you supply free packaging dielines and design structural mockups?",
-                a: "Yes. Once a custom kit configuration is selected, our engineers provide detailed CAD packaging dieline templates (PDF/DXF format) for your designer to layout the artwork. We also offer physical and digital mockups for validation before launching mass production."
+                q: "Can packaging dielines and structural mockups be included?",
+                a: "Yes. After the kit configuration is fixed, the project can include PDF or DXF dielines plus digital or physical mockups. Deliverables, revision rounds, sample charges and ownership are confirmed in the quotation."
               },
               {
                 q: "How do you verify barcode scannability for marketplace fulfillment?",
-                a: "We test all printed barcodes (UPC, FNSKU, ASIN) with specialized scanner hardware to ensure high readability scores under standard warehouse lighting. Barcodes are printed with high-resolution ink directly on the package, or on premium smudge-resistant synthetic stickers."
+                a: "We can apply buyer-supplied UPC or FNSKU data and perform sample scan checks before shipment. Barcode size, quiet zones, contrast, substrate and placement should follow GS1 guidance and the marketplace's current requirements; a formal verification grade must be separately specified."
               },
               {
                 q: "What options do you support for multi-language instruction manuals and packaging inserts?",
-                a: "We support full-color offset printing for product warning sheets, step-by-step polishing guides, and Grit-to-Substrate charts. Standard inserts are printed on 128gsm glossy art paper, folded to fit neatly into the blister cavity or color box."
+                a: "Warning sheets, process guides and grit-to-substrate charts can be printed in agreed languages. Paper stock, weight, dimensions, translation responsibility and fold pattern are confirmed in the packaging specification."
               },
               {
                 q: "Can you ship custom kits directly to international fulfillment centers (DDP)?",
-                a: "Yes. We offer complete logistics coordination, including LCL/FCL ocean freight, air cargo, and door-to-door courier services (DDU/DDP terms) directly to Amazon FBA fulfillment centers or regional distributor warehouses worldwide, including barcode labelling and customs prep."
+                a: "Direct warehouse delivery may be quoted through a logistics provider after the destination, importer-of-record requirements, product classification and service availability are reviewed. The selected Incoterms rule, named place, taxes, customs responsibilities and exclusions must be stated in writing."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -313,22 +317,22 @@ export default function OEMPrivateLabel() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/oem-private-label#faqpage",
+            "@id": absoluteUrl("/oem-private-label#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
                 "name": "What is the typical minimum order quantity (MOQ) for custom private label kits?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our standard MOQ is 500 sets for custom-configured kits (e.g., buffing wheels paired with compounds in a custom box) and 1,000 sets for blister card setups. This lower MOQ threshold helps online sellers launch new product variations with minimized stock investment."
+                  "text": "A common starting point is 500 sets for boxed custom kits and 1,000 sets for some blister-card configurations. The actual MOQ depends on the product mix, print process, packaging structure and material suppliers, and is confirmed in the quotation."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do you supply free packaging dielines and design structural mockups?",
+                "name": "Can packaging dielines and structural mockups be included?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Once a custom kit configuration is selected, our engineers provide detailed CAD packaging dieline templates (PDF/DXF format) for your designer to layout the artwork. We also offer physical and digital mockups for validation before launching mass production."
+                  "text": "Yes. After the kit configuration is fixed, the project can include PDF or DXF dielines plus digital or physical mockups. Deliverables, revision rounds, sample charges and ownership are confirmed in the quotation."
                 }
               },
               {
@@ -336,7 +340,7 @@ export default function OEMPrivateLabel() {
                 "name": "How do you verify barcode scannability for marketplace fulfillment?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We test all printed barcodes (UPC, FNSKU, ASIN) with specialized scanner hardware to ensure high readability scores under standard warehouse lighting. Barcodes are printed with high-resolution ink directly on the package, or on premium smudge-resistant synthetic stickers."
+                  "text": "We can apply buyer-supplied UPC or FNSKU data and perform sample scan checks before shipment. Barcode size, quiet zones, contrast, substrate and placement should follow GS1 guidance and the marketplace's current requirements; a formal verification grade must be separately specified."
                 }
               },
               {
@@ -344,7 +348,7 @@ export default function OEMPrivateLabel() {
                 "name": "What options do you support for multi-language instruction manuals and packaging inserts?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We support full-color offset printing for product warning sheets, step-by-step polishing guides, and Grit-to-Substrate charts. Standard inserts are printed on 128gsm glossy art paper, folded to fit neatly into the blister cavity or color box."
+                  "text": "Warning sheets, process guides and grit-to-substrate charts can be printed in agreed languages. Paper stock, weight, dimensions, translation responsibility and fold pattern are confirmed in the packaging specification."
                 }
               },
               {
@@ -352,7 +356,7 @@ export default function OEMPrivateLabel() {
                 "name": "Can you ship custom kits directly to international fulfillment centers (DDP)?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We offer complete logistics coordination, including LCL/FCL ocean freight, air cargo, and door-to-door courier services (DDU/DDP terms) directly to Amazon FBA fulfillment centers or regional distributor warehouses worldwide, including barcode labelling and customs prep."
+                  "text": "Direct warehouse delivery may be quoted through a logistics provider after the destination, importer-of-record requirements, product classification and service availability are reviewed. The selected Incoterms rule, named place, taxes, customs responsibilities and exclusions must be stated in writing."
                 }
               }
             ]

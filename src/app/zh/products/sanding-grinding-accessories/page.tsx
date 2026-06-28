@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM 砂纸、砂带与锆刚玉砂碟配件系列 | SCOTTCHEN",
@@ -33,7 +34,7 @@ export default function ChineseSandingGrindingAccessories() {
     },
     {
       name: "防堵塞石膏板网格砂网",
-      desc: "双面涂覆优质碳化硅磨料的玻璃纤维网格底材。网状镂空结构能在墙面批灰打磨和石膏板抚平时彻底避免积粉堵塞，完美适配带吸尘孔的打磨机。",
+      desc: "双面涂覆碳化硅磨料的玻璃纤维网格底材。开放式结构有助于墙面批灰和石膏板打磨时排灰并减少堵塞，设备兼容性需按尺寸与孔位确认。",
       features: [
         "网格基材: 高抗拉强度玻璃纤维网格",
         "目数配置: P80, P120, P150, P180, P220",
@@ -125,7 +126,7 @@ export default function ChineseSandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>重载金属抛磨碟:</strong> 锆刚玉硫化纤维钢纸砂碟配 7/8&quot; 星型花心定位中心孔，无震偏无偏心，安全贴合角磨机。</span>
+                    <span className="text-industry-slate-200"><strong>重载金属抛磨碟:</strong> 锆刚玉硫化纤维钢纸砂碟可选 7/8&quot; 圆孔或星型中心孔；装配、最高转速与工具兼容性须按批准规格确认。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -133,13 +134,13 @@ export default function ChineseSandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>防塞镂空网格:</strong> 玻纤双面涂覆优质碳化硅，石膏粉尘自空隙瞬间排出，彻底避免热量积聚与耗材堵塞失效。</span>
+                    <span className="text-industry-slate-200"><strong>开放式网格:</strong> 玻纤双面涂覆碳化硅，开放结构有助于排出石膏粉尘并减少堵塞；实际集尘效果取决于设备和工况。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>采购参数:</strong> 砂纸 10,000 张起订，纤维砂碟 5,000 张起订，混合砂纸架或细节打磨笔 1,000 套起。交期 20-30 天。</span>
+                    <span className="text-industry-slate-200"><strong>参考起订量:</strong> 砂纸 10,000 张、纤维砂碟 5,000 张、混合砂纸架或细节打磨笔 1,000 套；实际数量和交期按 SKU 报价。</span>
                   </li>
                 </ul>
               </div>
@@ -347,7 +348,7 @@ export default function ChineseSandingGrindingAccessories() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">自粘防滑机制:</span>
-                    <span className="text-white font-bold leading-normal">砂纸纸张可选自粘拉扣魔术贴，确保高速打磨不位移。</span>
+                    <span className="text-white font-bold leading-normal">可选自粘或拉扣背基；粘接强度、底盘适配和最高转速按规格确认。</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">交货港口与贸易术语:</span>
@@ -441,7 +442,7 @@ export default function ChineseSandingGrindingAccessories() {
               {
                 title: "16英寸大规格石膏板防堵塞砂网",
                 asin: "B07HDZX5M9",
-                desc: "特级碳化硅双面覆层玻璃纤维网格砂网，镂空编织，提供极佳的排灰除尘与无尘打磨体验。",
+                desc: "碳化硅双面覆层玻璃纤维网格砂网，开放式编织有助于排灰，并可配合兼容的吸尘设备使用。",
                 url: "https://www.amazon.com/Drywall-Sanding-Screen-16in-x-12pcs/dp/B07HDZX5M9/ref=sr_1_5?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
                 img: "/images/sanding_screens.webp"
               },
@@ -453,9 +454,9 @@ export default function ChineseSandingGrindingAccessories() {
                 img: "/images/sanding_sheets.webp"
               },
               {
-                title: "带定位吸尘孔无尘干燥墙磨砂纸",
+                title: "带定位吸尘孔的墙面打磨砂纸",
                 asin: "B0C4TNHRWZ",
-                desc: "带有多孔分布的网格自粘砂纸片，涵盖 P80 至 P150 目数，适配主流墙面无尘打磨机。",
+                desc: "带有多孔分布的网格自粘砂纸片，涵盖 P80 至 P150 目数；设备兼容性需按底盘尺寸和孔位确认。",
                 url: "https://www.amazon.com/SCOTTCHEN-Drywall-include-Sanding-80%EF%BC%8C100%EF%BC%8C150/dp/B0C4TNHRWZ/ref=sr_1_8?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
                 img: "/images/sanding_screens.webp"
               },
@@ -549,15 +550,15 @@ export default function ChineseSandingGrindingAccessories() {
             {[
               {
                 q: "SCOTTCHEN 砂纸张提供哪些背基纸重和基材材质？",
-                a: "我们为手磨、精细打磨砂纸提供 C-weight 涂油乳胶纸背基（在水磨湿磨时泡水不软烂、不脱砂）；为机械砂光机使用的纸卷则提供高抗拉力 J-weight 聚酯软布基，确保高速摩擦打磨或异形曲面研磨时不发生撕裂。"
+                a: "可提供用于手工湿磨的 C-weight 乳胶纸背基，以及用于曲面或机械打磨的柔性布基选项。耐水性、抗拉强度、粘接和工具适用性需按批准规格及样品测试确认。"
               },
               {
                 q: "为什么在墙面打磨时推荐碳化硅网格砂网，而不是普通氧化铝砂纸？",
-                a: "碳化硅矿砂硬度极高且带有天然自锐性，能够保持平整切削。而镂空的玻璃纤维网格底材则允许打磨产生的石膏或腻子粉尘直接漏出，不积存在表面，彻底解决堵塞失效问题，配合吸尘打磨手板能实现无尘绿色施工。"
+                a: "碳化硅磨粒与开放式玻璃纤维网格组合可让石膏或腻子粉尘穿过网面，有助于减少表面堵塞。配合匹配的吸尘打磨设备可改善集尘效果，但不能视为无尘，结果取决于设备、密封和操作条件。"
               },
               {
                 q: "纤维磨片支持哪些中心定位孔形式？有哪些加固措施？",
-                a: "锆刚玉硫化纸磨盘拥有 4.5\"、5\" 及 7\" 标准外径，配备 standard 7/8&quot; (22.23mm) 中心定位孔。采购商可选择圆形平面孔或带十字星型切口定位心。整个碟片选用 0.8mm 高韧硫化钢纸做底基，在重负荷打磨去毛刺时提供稳固支撑。"
+                a: "锆刚玉硫化纸磨盘拥有 4.5\"、5\" 及 7\" 标准外径，配备 7/8\" (22.23mm) 中心定位孔。采购商可选择圆形平面孔或带十字星型切口定位心。背基材质、厚度、标示工作限制和工具兼容性必须写入批准规格。"
               },
               {
                 q: "砂纸卷可以按照我们设计的彩盒样式进行多目数混合定制么？",
@@ -590,16 +591,12 @@ export default function ChineseSandingGrindingAccessories() {
             "@graph": [
               {
                 "@type": "ProductGroup",
-                "@id": "https://www.scottchentools.com/zh/products/sanding-grinding-accessories#productgroup",
+                "@id": absoluteUrl("/zh/products/sanding-grinding-accessories#productgroup"),
                 "name": "SCOTTCHEN 研磨、打磨及砂纸配件大货产品目录",
                 "description": "工业级抛磨耗材，包含乳胶防水干湿两用砂纸、玻璃纤维网格墙面砂网、高切削锆刚玉纤维钢纸磨片及细节塑料砂带笔。",
-                "url": "https://www.scottchentools.com/zh/products/sanding-grinding-accessories",
+                "url": absoluteUrl("/zh/products/sanding-grinding-accessories"),
                 "brand": {
                   "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@type": "Organization",
                   "name": "SCOTTCHEN"
                 },
                 "hasVariant": [
@@ -625,14 +622,14 @@ export default function ChineseSandingGrindingAccessories() {
               },
               {
                 "@type": "FAQPage",
-                "@id": "https://www.scottchentools.com/zh/products/sanding-grinding-accessories#faqpage",
+                "@id": absoluteUrl("/zh/products/sanding-grinding-accessories#faqpage"),
                 "mainEntity": [
                   {
                     "@type": "Question",
                     "name": "SCOTTCHEN 砂纸张提供哪些背基纸重和基材材质？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "我们为手磨、精细打磨砂纸提供 C-weight 涂油乳胶纸背基（在水磨湿磨时泡水不软烂、不脱砂）；为机械砂光机使用的纸卷则提供高抗拉力 J-weight 聚酯软布基，确保高速摩擦打磨或异形曲面研磨时不发生撕裂。"
+                      "text": "可提供用于手工湿磨的 C-weight 乳胶纸背基，以及用于曲面或机械打磨的柔性布基选项。耐水性、抗拉强度、粘接和工具适用性需按批准规格及样品测试确认。"
                     }
                   },
                   {
@@ -640,7 +637,7 @@ export default function ChineseSandingGrindingAccessories() {
                     "name": "为什么在墙面打磨时推荐碳化硅网格砂网，而不是普通氧化铝砂纸？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "碳化硅矿砂硬度极高且带有天然自锐性，能够保持平整切削。而镂空的玻璃纤维网格底材则允许打磨产生的石膏或腻子粉尘直接漏出，不积存在表面，彻底解决堵塞失效问题，配合吸尘打磨手板能实现无尘绿色施工。"
+                      "text": "碳化硅磨粒与开放式玻璃纤维网格组合可让石膏或腻子粉尘穿过网面，有助于减少表面堵塞。配合匹配的吸尘打磨设备可改善集尘效果，但不能视为无尘，结果取决于设备、密封和操作条件。"
                     }
                   },
                   {
@@ -648,7 +645,7 @@ export default function ChineseSandingGrindingAccessories() {
                     "name": "纤维磨片支持哪些中心定位孔形式？有哪些加固措施？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "锆刚玉硫化纸磨盘拥有 4.5\"、5\" 及 7\" 标准外径，配备 standard 7/8&quot; (22.23mm) 中心定位孔。采购商可选择圆形平面孔或带十字星型切口定位心。整个碟片选用 0.8mm 高韧硫化钢纸做底基，在重负荷打磨去毛刺时提供稳固支撑。"
+                      "text": "锆刚玉硫化纸磨盘拥有 4.5\"、5\" 及 7\" 标准外径，配备 7/8\" (22.23mm) 中心定位孔。采购商可选择圆形平面孔或带十字星型切口定位心。背基材质、厚度、标示工作限制和工具兼容性必须写入批准规格。"
                     }
                   },
                   {

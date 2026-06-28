@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "Abrasive Sourcing Checklist for Importers | SCOTTCHEN",
@@ -73,20 +74,25 @@ export default function AbrasiveSourcingChecklist() {
       "A practical checklist for sourcing buffing wheels, sanding products, grinding discs and private label finishing kits.",
     inLanguage: "en",
     mainEntityOfPage: absoluteUrl("/resources/abrasive-sourcing-checklist"),
-    publisher: { "@id": "https://www.scottchentools.com/#organization" },
+    author: { "@id": absoluteUrl("/#organization") },
+    publisher: { "@id": absoluteUrl("/#organization") },
     datePublished: "2026-06-27",
-    dateModified: "2026-06-27",
+    dateModified: SITE_UPDATED,
   };
 
   return (
     <div className="flex min-h-screen flex-col">
       <section className="border-b border-industry-slate-800 bg-industry-slate-950 py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <nav className="mb-6 text-xs text-industry-slate-400" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span className="mx-2">/</span>
-            <span>Buyer Resources</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              {
+                label: "Abrasive Sourcing Checklist",
+                href: "/resources/abrasive-sourcing-checklist",
+              },
+            ]}
+          />
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-industry-orange-light">
             Procurement Field Guide
           </span>
@@ -97,6 +103,10 @@ export default function AbrasiveSourcingChecklist() {
             Use this checklist to turn a broad product request into a comparable RFQ,
             representative sample plan, and measurable pre-shipment quality standard.
           </p>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
+            <span>Published by SCOTTCHEN sourcing team</span>
+            <span>Reviewed 28 June 2026</span>
+          </div>
         </div>
       </section>
 
@@ -124,7 +134,10 @@ export default function AbrasiveSourcingChecklist() {
             </article>
           ))}
 
-          <div className="grid gap-5 pt-4 sm:grid-cols-3">
+          <div className="grid gap-5 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Link href="/resources/abrasive-material-selection-guide" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
+              Read material selection guide →
+            </Link>
             <Link href="/products" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
               Review product families →
             </Link>

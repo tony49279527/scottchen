@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SampleKitForm from "@/components/SampleKitForm";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Request a Surface Finishing Sample Kit | SCOTTCHEN",
@@ -43,7 +44,7 @@ export default function SampleKit() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Free Tools for Businesses:</strong> Polishing wheels, sandpaper grits, and mini detail stick samples provided free to verified buyers.</span>
+                    <span className="text-industry-slate-200"><strong>Commercial Sample Review:</strong> Availability and charges are confirmed after the requested products, quantities, and packaging scope are reviewed.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,7 +64,7 @@ export default function SampleKit() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Rapid Processing:</strong> Standard sample configurations packed in 3-5 days. Custom package mockups with barcodes take 7-10 days.</span>
+                    <span className="text-industry-slate-200"><strong>Written Sample Plan:</strong> Processing time is quoted after stock, custom specification, artwork, and courier requirements are reviewed.</span>
                   </li>
                 </ul>
               </div>
@@ -105,27 +106,27 @@ export default function SampleKit() {
                 
                 <div className="space-y-4 text-xs">
                   <div>
-                    <h4 className="font-bold text-white uppercase">Is the sample kit free?</h4>
+                    <h4 className="font-bold text-white uppercase">How are sample charges confirmed?</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      Yes, the abrasive, sanding, and buffing wheel components are free for verified businesses (distributors, online sellers, tool brands).
+                      Charges depend on the products, quantities, custom specifications, and packaging requested. We confirm sample and courier terms in writing before dispatch.
                     </p>
                   </div>
                   <div>
                     <h4 className="font-bold text-white uppercase">How is shipping handled?</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      We ship samples internationally via DHL, FedEx, or UPS. Sourcing buyers are responsible for courier freight charges, which are deducted from the first bulk contract.
+                      We can ship samples through international couriers. The recipient normally covers freight or provides a courier account; any later order credit must be stated in the written quotation.
                     </p>
                   </div>
                   <div>
                     <h4 className="font-bold text-white uppercase">Can I request specific grits?</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      Absolutely. Please list your exact sizing (diameters, shanks), stitch specifications, grit selections, and backing papers in the message field.
+                      Yes. Please list your exact sizing (diameters, shanks), stitch specifications, grit selections, and backing papers in the message field.
                     </p>
                   </div>
                   <div>
                     <h4 className="font-bold text-white uppercase">How long does it take?</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      Standard sample configurations are packed and dispatched within 3-5 working days. Custom packaging mockups require 7-10 days.
+                      Timing is quoted after stock availability, custom work, artwork, and courier destination are reviewed. The written sample plan controls the dispatch target.
                     </p>
                   </div>
                 </div>
@@ -163,7 +164,7 @@ export default function SampleKit() {
           <div className="space-y-6">
             {[
               {
-                q: "Who is eligible to receive a free surface finishing sample kit?",
+                q: "Who can request a commercial surface finishing sample kit?",
                 a: "Sample requests are reviewed for commercial buyers, including tool brands, hardware distributors, online sellers, and industrial supply channels. Availability and any sample charge depend on the requested configuration."
               },
               {
@@ -176,7 +177,7 @@ export default function SampleKit() {
               },
               {
                 q: "What is the typical transit and processing time for sample delivery?",
-                a: "Standard stock components are cataloged and shipped within 3 to 5 business days. Custom configurations or physical packaging mockups featuring your brand artwork require 7 to 10 working days for structural setup and printing."
+                a: "Processing and transit timing is quoted after stock availability, custom work, artwork, and courier destination are reviewed. The written sample plan controls the dispatch target."
               },
               {
                 q: "Can we request branded box and barcode label mockups alongside the physical tools?",
@@ -203,11 +204,11 @@ export default function SampleKit() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/sample-kit#faqpage",
+            "@id": absoluteUrl("/sample-kit#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Who is eligible to receive a free surface finishing sample kit?",
+                "name": "Who can request a commercial surface finishing sample kit?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Sample requests are reviewed for commercial buyers, including tool brands, hardware distributors, online sellers, and industrial supply channels. Availability and any sample charge depend on the requested configuration."
@@ -234,7 +235,7 @@ export default function SampleKit() {
                 "name": "What is the typical transit and processing time for sample delivery?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Standard stock components are cataloged and shipped within 3 to 5 business days. Custom configurations or physical packaging mockups featuring your brand artwork require 7 to 10 working days for structural setup and printing."
+                  "text": "Processing and transit timing is quoted after stock availability, custom work, artwork, and courier destination are reviewed. The written sample plan controls the dispatch target."
                 }
               },
               {

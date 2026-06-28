@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具抛光工具包应用场景工作流 | SCOTTCHEN",
@@ -17,15 +18,15 @@ export default function ChineseApplicationsOverview() {
       id: "metalworking",
       name: "金属打磨、去焊缝与表面处理",
       tag: "重负荷焊道抛磨与除锈除氧化层",
-      challenges: "钢板焊接接头、生锈的管状铁艺以及粗糙的铸件，在涂装前都需要进行高强度研磨。普通砂纸在金属锐角边缘极易破裂，因此必须选用高拉伸强度的钢纸（硫化纤维）基体磨片进行高切削力作业。",
+      challenges: "钢板焊接接头、生锈管件和粗糙铸件在涂装前通常需要较高切削力。锐角会加速普通纸基磨料损耗，可把硫化纤维背基磨片作为选型起点，并通过工件测试确认。",
       products: "锆刚玉重载纤维砂碟、密缝线缝棉轮、红/黑 Emery 粗磨研磨蜡条。",
       packaging: "大货散装瓦楞箱，单包 25 张强力热缩包装。",
     },
     {
       id: "woodworking",
       name: "木工家具打磨与油漆翻新",
-      tag: "精准级配目数，确保木纹平滑致密",
-      challenges: "高档实木家具制造、木蜡油涂刷前处理以及曲面异形打磨，需要连续过渡的砂纸目数，以防留下深浅不一的划痕。砂纸背基必须兼备极好的韧性，能服帖地包覆在圆弧桌腿或雕花槽线表面。",
+      tag: "连续目数级配与木纹表面准备",
+      challenges: "实木家具、木蜡油前处理和曲面打磨通常需要连续过渡的目数，以控制划痕变化。背基柔韧度、砂粒和目数应在目标木材及涂层工艺上测试。",
       products: "棕刚玉氧化铝砂卷、C-weight 乳胶纸砂纸、细节迷你塑料打磨棒。",
       packaging: "带自撕金属切齿的高韧纸瓦楞卷装分装盒，多目数混合挂卡袋装。",
     },
@@ -33,7 +34,7 @@ export default function ChineseApplicationsOverview() {
       id: "automotive",
       name: "汽配轮毂修复与金属饰条抛光",
       tag: "异形狭缝打磨与镁铝合金深度镜面还原",
-      challenges: "铝合金轮毂、不锈钢排气管出口和车身镀铬条有大量的深槽、盲角，需要适配手电钻的带柄抛光轮。研磨膏蜡必须完美贴合铝镁合金，实现高亮镜面的同时绝不残留二次划痕阴影。",
+      challenges: "铝合金轮毂、不锈钢排气管出口和车身镀铬条有大量深槽、盲角，需要适配具体工具和工件的带柄抛光轮。研磨膏蜡与布轮组合应先在基材样件上验证切削力、光泽和划痕表现。",
       products: "带柄圆台/圆柱形高密度打磨布轮、绿铬高镜面抛光膏、精细碳化硅干湿两用砂纸。",
       packaging: "双吸塑吸卡零售纸板挂卡（带柄轮接头）。",
     },
@@ -49,7 +50,7 @@ export default function ChineseApplicationsOverview() {
       id: "drywall",
       name: "石膏板墙面打磨与装修施工",
       tag: "镂空玻璃纤维网格防堵塞吸尘打磨",
-      challenges: "白灰、腻子和石膏接缝层粉尘极大，会瞬间填满普通砂纸的砂粒空隙，导致打磨效率急剧下降。必须选用双面涂料的镂空网格，使粉尘随吸尘管道直接排出。",
+      challenges: "白灰、腻子和石膏接缝层容易使普通砂纸快速积灰。开放式网格可让粉尘穿过，并在匹配的吸尘设备和密封条件下改善集尘效果。",
       products: "碳化硅双面网格砂网、墙面打磨砂卷、工装大包装耗材。",
       packaging: "大包工程简易箱，单袋 10 张纸卡塑封零售包。",
     },
@@ -75,7 +76,7 @@ export default function ChineseApplicationsOverview() {
                 针对不同底材的表面研磨与抛光搭配
               </h1>
               <p className="mt-4 text-base text-industry-slate-400 leading-relaxed">
-                我们为不同的材质构建专属耗材组合。将您的产品目录与目标买家的打磨抛光工作流深度对齐，轻松斩获大额批量订单。
+                我们为不同材质规划耗材组合，帮助品牌和分销商把产品目录、工具兼容性与目标买家的实际工作流对齐。
               </p>
             </div>
             
@@ -135,7 +136,7 @@ export default function ChineseApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>分销零售配套:</strong> 接受品牌商定制吸塑、彩卡、礼盒，500套超低起订，全面审计平台条码合规。</span>
+                    <span className="text-industry-slate-200"><strong>分销零售配套:</strong> 可讨论吸塑、彩卡和礼盒方案；参考起订量为 500 套，最终数量、条码扫描检查及平台要求写入报价与包装确认稿。</span>
                   </li>
                 </ul>
               </div>
@@ -232,11 +233,11 @@ export default function ChineseApplicationsOverview() {
               },
               {
                 q: "汽车轮毂和不锈钢排气管抛光的柄装棉轮有什么转速和适配要求？",
-                a: "我们提供标准 1/4\" 圆柄和快速六角接柄，完美适配市场上主流的手电钻、冲击批或气动磨笔。建议的安全工作转速在 3,000 至 4,500 RPM 之间。轮毂圆筒、圆顶形状棉轮能完美贴合深轮辐和镀铬死角，抛除氧化层。"
+                a: "可提供 1/4\" 圆柄或六角接柄选项，但必须核对夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。形状、材料及转速需通过样件测试确认，不应使用未经书面确认的通用转速。"
               },
               {
-                q: "我们可以根据特定的网店主打场景（比如“高档餐刀镜面修复”）进行完全贴牌设计吗？",
-                a: "这是我们最核心的服务！采购商可以自定义工作场景，我们提供从布轮密度硬度配置、抛光膏蜡目数组合，到外包装彩盒印刷排版以及高清条码贴标的一站式服务，大箱贴外箱唛直接发货，让您无忧上线销售。"
+                q: "我们可以根据特定的网店主打场景进行贴牌设计吗？",
+                a: "可以。采购商可定义目标工作场景，再共同确认布轮结构、抛光膏组合、彩盒稿件、条码数据和外箱标识。量产与上线条件以双方批准的规格、样品及平台当期规则为准。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -259,7 +260,7 @@ export default function ChineseApplicationsOverview() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/zh/applications#faqpage",
+            "@id": absoluteUrl("/zh/applications#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
@@ -290,15 +291,15 @@ export default function ChineseApplicationsOverview() {
                 "name": "汽车轮毂和不锈钢排气管抛光的柄装棉轮有什么转速和适配要求？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "我们提供标准 1/4\" 圆柄和快速六角接柄，完美适配市场上主流的手电钻、冲击批或气动磨笔。建议的安全工作转速在 3,000 至 4,500 RPM 之间。轮毂圆筒、圆顶形状棉轮能完美贴合深轮辐和镀铬死角，抛除氧化层。"
+                  "text": "可提供 1/4\" 圆柄或六角接柄选项，但必须核对夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。形状、材料及转速需通过样件测试确认，不应使用未经书面确认的通用转速。"
                 }
               },
               {
                 "@type": "Question",
-                "name": "我们可以根据特定的网店主打场景（比如“高档餐刀镜面修复”）进行完全贴牌设计吗？",
+                "name": "我们可以根据特定的网店主打场景进行贴牌设计吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "这是我们最核心的服务！采购商可以自定义工作场景，我们提供从布轮密度硬度配置、抛光膏蜡目数组合，到外包装彩盒印刷排版以及高清条码贴标的一站式服务，大箱贴外箱唛直接发货，让您无忧上线销售。"
+                  "text": "可以。采购商可定义目标工作场景，再共同确认布轮结构、抛光膏组合、彩盒稿件、条码数据和外箱标识。量产与上线条件以双方批准的规格、样品及平台当期规则为准。"
                 }
               }
             ]

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/lib/site";
 
-const lastModified = new Date("2026-06-27");
+const lastModified = new Date("2026-06-28");
 
 const localizedRoutes = [
   { en: "/", zh: "/zh", priority: 1 },
@@ -21,9 +21,15 @@ const localizedRoutes = [
   { en: "/quality-control", zh: "/zh/quality-control", priority: 0.8 },
   { en: "/sample-kit", zh: "/zh/sample-kit", priority: 0.9 },
   { en: "/contact", zh: "/zh/contact", priority: 0.9 },
+  { en: "/supplier-profile", zh: "/zh/supplier-profile", priority: 0.8 },
   {
     en: "/resources/abrasive-sourcing-checklist",
     zh: "/zh/resources/abrasive-sourcing-checklist",
+    priority: 0.8,
+  },
+  {
+    en: "/resources/abrasive-material-selection-guide",
+    zh: "/zh/resources/abrasive-material-selection-guide",
     priority: 0.8,
   },
 ] as const;

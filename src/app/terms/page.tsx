@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "B2B Supply Terms & Service | SCOTTCHEN",
-  description: "Read the SCOTTCHEN B2B supply terms, MOQ policies, customized tooling parameters, quality tolerances, and Incoterms 2020 delivery rules.",
+  title: "Website & B2B Inquiry Terms | SCOTTCHEN",
+  description: "Read the terms for using the SCOTTCHEN B2B website, requesting quotes and samples, and confirming project-specific commercial terms.",
   path: "/terms",
 });
 
@@ -15,10 +15,10 @@ export default function TermsOfService() {
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">COMMERCIAL CONTRACT BASE</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-            B2B Supply Terms & Service
+            Website & B2B Inquiry Terms
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Effective Date: May 23, 2026. General terms governing bulk price sheets, tooling mockups, dynamic testing, and container logistics.
+            Effective Date: June 28, 2026. These website terms cover pre-contract inquiries; a signed quotation or contract controls any supply project.
           </p>
         </div>
       </section>
@@ -31,17 +31,20 @@ export default function TermsOfService() {
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">1. Scope and Eligibility</h2>
               <p>
-                These terms govern all commercial requests for quotes, physical material sampling, custom carton structural planning, and bulk manufacturing batches arranged between Scottchen Tool Accessories Ltd. (&quot;SCOTTCHEN&quot;) and business entities seeking supply catalog integrations (&quot;Buyer&quot;).
+                These terms govern use of this website and pre-contract requests made to the SCOTTCHEN brand, including quotation, sample, product specification and packaging discussions.
               </p>
               <p>
-                This website is dedicated solely to B2B sourcing and trade evaluation. Individual consumers seeking small-volume retail orders are referred to authorized distributor retail listings on third-party platforms (e.g., Amazon, Walmart).
+                This website is dedicated to B2B sourcing and trade evaluation. Individual consumers seeking small-volume orders should use the linked SCOTTCHEN retail reference or the relevant third-party marketplace listing.
+              </p>
+              <p>
+                Submitting a form does not create a purchase, supply, agency or exclusivity agreement. The legal contracting entity and binding terms must be identified in the project quotation or contract.
               </p>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">2. Minimum Order Quantities (MOQs)</h2>
               <p>
-                To maintain production-line optimization and raw material economies of scale, standard batch minimums apply to all custom contracts:
+                Quantities shown on this website are reference RFQ starting points, not binding minimums. Actual MOQ depends on the SKU, materials, packaging and print process and must be stated in the quotation.
               </p>
               <ul className="list-disc pl-5 space-y-2 font-mono text-xs text-industry-slate-400">
                 <li><strong>Cotton Buffing & Airway Wheels:</strong> 500 pieces per size/stitch style.</li>
@@ -63,14 +66,14 @@ export default function TermsOfService() {
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">4. Packaging, Branding & Barcodes</h2>
               <p>
-                For private label contracts, the Buyer is responsible for submitting digital artwork and logo vectors on the structural CAD die-lines provided by our design team. Slipped print alignments or unreadable FNSKU/UPC barcode scans caused by poor artwork files supplied by the Buyer are exempt from standard factory warranty returns. We run resolution scanners to verify barcode print contrast before container sealing.
+                Responsibilities for artwork, trademarks, translations, warnings, barcode data, dielines, sample approval and revision rounds are confirmed per project. Any barcode scan check is limited to the method and sample defined in the quality plan; retailer or marketplace acceptance is not guaranteed by this website.
               </p>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">5. Sizing & Quality Tolerances</h2>
               <p>
-                Abrasives and polishing wheels are precision-manufactured within high-durability B2B safety guidelines:
+                Product requirements and acceptance criteria must be recorded in the approved SKU specification, reference sample and quality plan:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-industry-slate-350">
                 <li><strong>Bore Center Arbor Tolerance:</strong> The applicable tolerance is confirmed in the signed specification sheet for each SKU.</li>
@@ -90,19 +93,19 @@ export default function TermsOfService() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">7. Disputes and Jurisdiction</h2>
+              <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">7. Contracting Entity and Governing Terms</h2>
               <p>
-                These terms and any bulk sales contracts established under them shall be governed by and interpreted under the commercial trading laws of China, with Shanghai designated as the exclusive legal jurisdiction for resolving trade disputes.
+                The supplier&apos;s legal name, registered address, payment beneficiary, governing law, dispute process and any warranty or remedy must be stated in the signed quotation or contract. This website does not independently establish those terms.
               </p>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">8. Contact Sourcing Desk</h2>
               <p>
-                If you have legal or technical questions about our manufacturing standards, B2B logistics rules, or payment methods, please reach our sales office:
+                For questions about this website or to request project-specific legal and technical details, contact:
               </p>
               <div className="bg-industry-slate-950 p-6 rounded border border-industry-slate-800 font-mono text-xs text-industry-slate-400 space-y-2">
-                <div><span className="text-white font-bold">Office:</span> Scottchen Tool Accessories Ltd.</div>
+                <div><span className="text-white font-bold">Brand:</span> SCOTTCHEN</div>
                 <div><span className="text-white font-bold">Email:</span> <a href="mailto:sales@scottchentools.com" className="text-industry-orange hover:underline">sales@scottchentools.com</a></div>
               </div>
             </div>

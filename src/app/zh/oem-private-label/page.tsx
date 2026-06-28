@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM & 私有品牌抛光工具包定制方案 | SCOTTCHEN",
-  description: "提供私有品牌彩盒挂卡设计、FNSKU/UPC条码贴标、亚马逊FBA合规发货支持，为您的表面抛磨抛光轮及砂纸套装打造一站式零售代工服务。",
+  description: "提供私有品牌彩盒挂卡、买家提供的 FNSKU/UPC 条码贴标与仓库交付需求规划，用于表面抛磨抛光轮及砂纸套装项目。",
   path: "/zh/oem-private-label",
   alternatePath: "/oem-private-label",
   locale: "zh-CN",
@@ -15,15 +16,15 @@ export default function ChineseOEMPrivateLabel() {
   const oemCapabilities = [
     {
       title: "1. 柔性化产品自由组合",
-      desc: "绝不受限于常规单一产品目录！我们支持您在一个定制工具箱内跨类别自由搭配。您可以将棉布轮、抛光膏蜡条、带柄中心轴、塑料细节打磨棒或多目数砂纸包进行自由组合，从而针对木工打磨、金属还原或车身抛光等具体工作流定制专属套装。",
+      desc: "采购商可在一个定制工具箱内跨类别搭配棉布轮、抛光膏蜡条、带柄中心轴、塑料细节打磨棒或多目数砂纸包，并按木工打磨、金属还原或车身抛光等工作流确认组合。",
       examples: "示例：1个6寸缝线棉轮 + 1个6寸松缝黄绒轮 + 2条抛光膏（绿蜡与白蜡）+ 1根电钻接柄轴。",
     },
     {
       title: "2. 多样化零售包装定制",
       desc: "包装的档次决定了产品的溢价。我们提供以下不同包装形态的结构打样与设计方案：",
       details: [
-        "双泡壳挂卡包装：极高的产品视觉通透度，适合建材超市货架及五金店挂钩展示。",
-        "彩色瓦楞彩盒：具备极高抗压强度，适合重负荷锆刚玉砂碟、金刚石磨片或自撕纸砂卷架。",
+        "双泡壳挂卡包装：便于货架展示产品，适合建材超市及五金店挂钩陈列。",
+        "彩色瓦楞彩盒：可按产品重量和运输要求确定纸板结构，适合砂碟、磨片或砂卷架。",
         "环保牛皮纸盒：极简轻量，特别适合跨境电商线上卖家，能有效降低运输重力体积及塑料废弃物。",
         "带卡头精装吊卡袋：高性价比，适合精细打磨砂纸笔或混合目数裁切好的砂纸片套装。",
       ],
@@ -32,14 +33,14 @@ export default function ChineseOEMPrivateLabel() {
       title: "3. 专业条码审计与合规标识",
       desc: "我们会在出货前依据买家提供的条码、警示语和原产地要求核对标签版式，并记录确认结果。最终平台和进口合规仍以目的国及平台当期规则为准。",
       details: [
-        "FNSKU / UPC 条码：直接印刷或采用耐磨标签粘贴于最小零售包上，无缝满足亚马逊 FBA 扫码入库。",
+        "FNSKU / UPC 数据：可把买家提供的条码印刷或粘贴于零售包装，并在量产批准前进行样品扫码检查。",
         "多语言技术说明书：提供清晰的配合工具型号对照表、磨料目数-底材推荐卡，有效避免由于买家误用导致的退单。",
         "安全警告与出口警示标：外箱粘贴标准警告图标、防潮图示及原产地标 (Made in China)。",
       ],
     },
     {
       title: "4. 专为跨境电商优化的物流封装",
-      desc: "针对亚马逊、Shopify、Walmart等线上五金工具大卖家，防损与仓储计费极其关键。我们对包装进行1.5米六面防摔跌落测试，优化纸盒物理尺寸使其落在最合算的轻小或标准仓储计费区间内，大箱直接成套出运，免除仓配前置二次加工。",
+      desc: "针对线上卖家，项目规格可纳入纸箱尺寸、包装重量、双方同意的搬运测试和运单标签区域。仓储费档位与入仓条件须按渠道当期规则复核。",
     },
   ];
 
@@ -48,8 +49,8 @@ export default function ChineseOEMPrivateLabel() {
     { step: "02", title: "挑选套装搭配", desc: "与我们的工程师紧密协作，敲定所需的耗材规格、粒度级配和吸塑/泡棉内衬设计。" },
     { step: "03", title: "刀模线图设计", desc: "我们提供高精度的 CAD 刀模设计图（PDF/DXF），您的美工人员可直接排版印刷稿。" },
     { step: "04", title: "彩盒样品验证", desc: "在大货量产前，制作包装数码样以及条码贴标位置确认图，供您视觉及扫码核验。" },
-    { step: "05", title: "严格批量制造", desc: "标准交期通常在 25 到 35 天，包含动平衡抽检、孔径尺寸通规控制等出厂质检标准。" },
-    { step: "06", title: "FBA及港口出运", desc: "完成货柜装运，可配合专业的货代提供 DDU/DDP 门到门双清海空运，直接发往海外仓。" },
+    { step: "05", title: "批量制造", desc: "规格和包装稿确认后，报价单会写明生产时间及双方同意的批次检查项目。" },
+    { step: "06", title: "仓库交付", desc: "装运、运费、交货点和清关责任按选定的 Incoterms 规则及物流方案书面确认。" },
   ];
 
   return (
@@ -63,7 +64,7 @@ export default function ChineseOEMPrivateLabel() {
               OEM 贴牌与抛光工具包定制服务
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              我们助力全球五金品牌、跨境工具大卖家打造具有专有彩盒、丰富配套和条码完全合规的零售端磨耗耗材套装。
+              我们协助五金品牌和跨境工具卖家规划专有彩盒、产品组合及买家提供的条码数据，并在量产前确认包装样。
             </p>
           </div>
           
@@ -116,13 +117,13 @@ export default function ChineseOEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>条码扫码审计:</strong> 工厂端直接审计并粘贴清晰的 FNSKU、UPC 以及安全合规标识，坚决杜绝因漏扫导致的入库异常。</span>
+                    <span className="text-industry-slate-200"><strong>条码扫码检查:</strong> 可应用买家提供的 FNSKU、UPC 和警示信息并进行样品扫码；正式等级验证与平台验收要求需单独约定。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>柔性代工供应链:</strong> 定制工具包 500 套即可起订彩盒设计。25-35 天快捷量产，无缝承接上海/宁波双港口订柜发货。</span>
+                    <span className="text-industry-slate-200"><strong>项目书面范围:</strong> 500 套为参考起订点，实际数量、生产计划、检验范围和国际交付假设按配置写入报价单。</span>
                   </li>
                 </ul>
               </div>
@@ -197,10 +198,13 @@ export default function ChineseOEMPrivateLabel() {
                   loading="lazy"
                   decoding="async"
                   src="/images/oem_packaging.webp"
-                  alt="SCOTTCHEN OEM 代工零售挂卡与彩盒外包装"
+                  alt="私有品牌包装概念示意图"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
+                  包装概念示意图
+                </span>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
@@ -210,19 +214,19 @@ export default function ChineseOEMPrivateLabel() {
                 <div className="space-y-3 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">标准代工起订量:</span>
-                    <span className="text-white font-bold">500 套起（支持跨类别混装）</span>
+                    <span className="text-white font-bold">参考：盒装套件 500 套</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">包装结构模版:</span>
-                    <span className="text-white font-bold">免费提供 CAD 刀模展开图纸</span>
+                    <span className="text-white font-bold">刀模交付范围写入报价</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">数码盒打样周期:</span>
-                    <span className="text-white font-bold">提供艺术稿排版后 5-7 天</span>
+                    <span className="text-white font-bold">包装稿审核后报价确认</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">安全法律标识支持:</span>
-                    <span className="text-white font-bold">提供多国文字标准的警告说明模版</span>
+                    <span className="text-white font-bold">使用买家批准的警示内容</span>
                   </div>
                 </div>
               </div>
@@ -275,7 +279,7 @@ export default function ChineseOEMPrivateLabel() {
             {[
               {
                 q: "为什么大货的最小起订量 (MOQ) 可以控制在 500 套？",
-                a: "我们在彩印及泡壳代工段进行了柔性化优化。对于台式磨轮、抛光膏混合的盒装，我们和高质彩印厂达成了500套即可开机的代工协议。这极大降低了线上五金卖家新品上市或定制特殊目数配方的试错成本。"
+                a: "盒装定制套装常以 500 套作为询价起点，部分泡壳方案可能从 1,000 套起。实际 MOQ 取决于产品组合、印刷方式、包装结构和材料供应商，并以报价单为准。"
               },
               {
                 q: "你们提供的 CAD 包装展开刀模线格式是什么？怎么排版？",
@@ -283,15 +287,15 @@ export default function ChineseOEMPrivateLabel() {
               },
               {
                 q: "如何规避亚马逊 FBA 扫码入库由于条码模糊而被拒收的客诉？",
-                a: "我们在贴装线上应用了 300DPI 热敏高清工业级打印，或直接精细四色套印条码。条码采用全阻光的抗磨哑光涂层合成纸贴纸，在批量装箱前，逐箱用条码阅读器进行反射率与清晰度等级测试，坚决杜绝脏墨或破损条码出厂。"
+                a: "可应用买家提供的 UPC 或 FNSKU 数据，并在出货前进行样品扫码检查。条码尺寸、静区、对比度、承印材料和位置应遵循 GS1 指南及平台当期要求；如需正式验证等级，必须在质检范围中单独约定。"
               },
               {
                 q: "纸箱和说明书支持哪些防爆和多国语言印刷规格？",
-                a: "对于外箱，我们选用双波纹（五层）高强度瓦楞纸箱，彻底防止重负荷磨片运输中发生破损。说明书或内贴纸采用标准 128g 双铜纸进行高速折页，支持英文、德文、法文、西班牙文等主流外贸语种翻译排版。"
+                a: "可按产品重量和运输测试要求选用双瓦楞纸箱，以降低重负荷磨片运输中的破损风险。说明书或内页的纸张、克重、语言和折页方式均需在包装规格中确认。"
               },
               {
                 q: "你们可以把定制工具包直接 DDP（完税后交货）发到我们国外的海外仓吗？",
-                a: "可以。我们有丰富的跨国跨境电商大货物流经验。我们可以全权协助您对接海运整柜/拼箱、跨国铁运和国际空运大货，提供包办出口退税、进口报关缴税并门到门派送（DDP 完税交货），直接清关交付给您的亚马逊 FBA 仓库或指定海外散货站。"
+                a: "在核对目的地、进口商要求、产品归类和物流服务可用性后，可由物流服务商评估仓库直送方案。选定的 Incoterms 规则、指定地点、税费、清关责任和除外事项必须书面列明。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -314,14 +318,14 @@ export default function ChineseOEMPrivateLabel() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "@id": "https://www.scottchentools.com/zh/oem-private-label#faqpage",
+            "@id": absoluteUrl("/zh/oem-private-label#faqpage"),
             "mainEntity": [
               {
                 "@type": "Question",
                 "name": "为什么大货的最小起订量 (MOQ) 可以控制在 500 套？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "我们在彩印及泡壳代工段进行了柔性化优化。对于台式磨轮、抛光膏混合的盒装，我们和高质彩印厂达成了500套即可开机的代工协议。这极大降低了线上五金卖家新品上市或定制特殊目数配方的试错成本。"
+                  "text": "盒装定制套装常以 500 套作为询价起点，部分泡壳方案可能从 1,000 套起。实际 MOQ 取决于产品组合、印刷方式、包装结构和材料供应商，并以报价单为准。"
                 }
               },
               {
@@ -337,7 +341,7 @@ export default function ChineseOEMPrivateLabel() {
                 "name": "如何规避亚马逊 FBA 扫码入库由于条码模糊而被拒收的客诉？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "我们在贴装线上应用了 300DPI 热敏高清工业级打印，或直接精细四色套印条码。条码采用全阻光的抗磨哑光涂层合成纸贴纸，在批量装箱前，逐箱用条码阅读器进行反射率与清晰度等级测试，坚决杜绝脏墨或破损条码出厂。"
+                  "text": "可应用买家提供的 UPC 或 FNSKU 数据，并在出货前进行样品扫码检查。条码尺寸、静区、对比度、承印材料和位置应遵循 GS1 指南及平台当期要求；如需正式验证等级，必须在质检范围中单独约定。"
                 }
               },
               {
@@ -345,7 +349,7 @@ export default function ChineseOEMPrivateLabel() {
                 "name": "纸箱和说明书支持哪些防爆和多国语言印刷规格？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "对于外箱，我们选用双波纹（五层）高强度瓦楞纸箱，彻底防止重负荷磨片运输中发生破损。说明书或内贴纸采用标准 128g 双铜纸进行高速折页，支持英文、德文、法文、西班牙文等主流外贸语种翻译排版。"
+                  "text": "可按产品重量和运输测试要求选用双瓦楞纸箱，以降低重负荷磨片运输中的破损风险。说明书或内页的纸张、克重、语言和折页方式均需在包装规格中确认。"
                 }
               },
               {
@@ -353,7 +357,7 @@ export default function ChineseOEMPrivateLabel() {
                 "name": "你们可以把定制工具包直接 DDP（完税后交货）发到我们国外的海外仓吗？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "可以。我们有丰富的跨国跨境电商大货物流经验。我们可以全权协助您对接海运整柜/拼箱、跨国铁运和国际空运大货，提供包办出口退税、进口报关缴税并门到门派送（DDP 完税交货），直接清关交付给您的亚马逊 FBA 仓库或指定海外散货站。"
+                  "text": "在核对目的地、进口商要求、产品归类和物流服务可用性后，可由物流服务商评估仓库直送方案。选定的 Incoterms 规则、指定地点、税费、清关责任和除外事项必须书面列明。"
                 }
               }
             ]

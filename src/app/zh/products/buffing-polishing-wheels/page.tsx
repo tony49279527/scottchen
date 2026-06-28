@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "工业棉布轮、气道抛光轮及抛光膏 OEM 厂家 | SCOTTCHEN",
@@ -31,7 +32,7 @@ export default function ChineseBuffingPolishingWheels() {
     {
       name: "带柄圆顶及圆柱迷你布轮 (Mounted Buffs)",
       desc: "配备 1/4\" 金属固定柄的圆顶、圆柱、圆锥和蘑菇形抛光布轮。专门用于手电钻及冲击批打磨，针对深孔、轮毂内凹死角、排气管管道及不规则曲面提供优异的通过性与去氧化能力。",
-      features: ["适配手柄: 1/4&quot; (6.35mm) 标准六角快装柄或圆形不锈钢接柄", "外观形态: 提供 T型布碟、圆柱形、圆锥形、圆顶形、蘑菇形", "MOQ 要求: 单一器形 1,000 件起批，或定制整套多形态彩盒"],
+      features: ["适配手柄: 1/4\" (6.35mm) 标准六角快装柄或圆形不锈钢接柄", "外观形态: 提供 T型布碟、圆柱形、圆锥形、圆顶形、蘑菇形", "MOQ 要求: 单一器形 1,000 件起批，或定制整套多形态彩盒"],
     },
     {
       name: "彩色抛光蜡 / 抛光膏条装系列 (Compound Bars)",
@@ -396,7 +397,7 @@ export default function ChineseBuffingPolishingWheels() {
               {
                 title: "特厚高耐磨多层纯棉抛光布轮",
                 asin: "B07BGV23GK",
-                desc: "加厚版 100% 工业级天然棉线紧密编织布轮，具备超强的切削拉力负荷与更长使用寿命。",
+                desc: "加厚版天然棉布轮，用于需要较高挺度的切削与表面处理；切削表现和寿命需按工件、压力、转速与抛光膏组合测试。",
                 url: "https://www.amazon.com/SCOTTCHEN-Extra-Buffing-Polishing-grinder/dp/B07BGV23GK/ref=sr_1_4?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
                 img: "/images/buffing_wheels.webp"
               },
@@ -483,7 +484,7 @@ export default function ChineseBuffingPolishingWheels() {
             {[
               {
                 q: "Spiral Stitched（密缝）棉线布轮和 Loose Flannel（松缝绒布）轮有什么本质区别？",
-                a: "密缝布轮在表面进行一圈圈致密的缝线，使得布轮在高压打磨时保持极高的硬度与挺度，具备较强的磨削力，适合中粗加工和金属拉丝；而松缝绒布轮仅在中心轴孔有一圈车线，绒布层自然向外撑开，质地极软，适合精抛上色和实现无划痕镜面反光。"
+                a: "密缝布轮通过多圈缝线形成较高挺度，可作为中粗加工和金属表面处理的起点；松缝绒布轮仅在中心固定，适合上色与最终精饰。轮体、抛光膏、基材、压力和转速必须通过样件测试确认。"
               },
               {
                 q: "如何合理匹配不同的抛光轮与抛光膏颜色？",
@@ -491,11 +492,11 @@ export default function ChineseBuffingPolishingWheels() {
               },
               {
                 q: "你们提供用于台磨机和手电钻的轴套和转接铁杆吗？",
-                a: "提供。我们的台磨机超厚棉布轮内配伸缩轴套，兼容 1/2英寸、5/8英寸、3/4英寸、1英寸的砂轮机轴。针对手电钻，所有的 Mounted 迷你抛光布轮出厂均焊接有 1/4&quot; 六角铁柄或圆柄，动平衡校正极佳，保障高转速电钻操作安全。"
+                a: "可提供伸缩轴套以及 1/4\" 六角柄或圆柄选项。使用前必须在批准规格中核对轴径或夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。"
               },
               {
                 q: "你们对零售货架包装提供哪些合规支持？",
-                a: "我们可以按买家图纸制作全套双面透明泡壳吸卡、悬挂彩色卡纸袋和定制加强瓦楞硬纸彩盒。所有包装均可以印制您的品牌、多国安全警示文字及 300DPI 极速识别 FNSKU/UPC 条形码贴标，直接达到海外各大超市和亚马逊 FBA 入仓要求。"
+                a: "可按买家确认稿制作泡壳、彩卡、纸袋和瓦楞彩盒，并应用品牌、安全警示及 FNSKU/UPC 数据后进行样品扫码检查。最终零售或平台入仓要求以渠道当期规则为准。"
               },
               {
                 q: "样品包的寄送流程是怎样的？",
@@ -525,16 +526,12 @@ export default function ChineseBuffingPolishingWheels() {
             "@graph": [
               {
                 "@type": "ProductGroup",
-                "@id": "https://www.scottchentools.com/zh/products/buffing-polishing-wheels#productgroup",
+                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#productgroup"),
                 "name": "SCOTTCHEN 工业级抛光轮及棉布轮规格目录",
                 "description": "专业出口纯棉密缝布轮、松缝黄 flannel 绒布轮、带柄迷你打磨轮及多规格固体抛光蜡条。专为金属打磨、镜面色彩还原及五金分销商定制设计。",
-                "url": "https://www.scottchentools.com/zh/products/buffing-polishing-wheels",
+                "url": absoluteUrl("/zh/products/buffing-polishing-wheels"),
                 "brand": {
                   "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@type": "Organization",
                   "name": "SCOTTCHEN"
                 },
                 "hasVariant": [
@@ -560,14 +557,14 @@ export default function ChineseBuffingPolishingWheels() {
               },
               {
                 "@type": "FAQPage",
-                "@id": "https://www.scottchentools.com/zh/products/buffing-polishing-wheels#faqpage",
+                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#faqpage"),
                 "mainEntity": [
                   {
                     "@type": "Question",
                     "name": "Spiral Stitched（密缝）棉线布轮和 Loose Flannel（松缝绒布）轮有什么本质区别？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "密缝布轮在表面进行一圈圈致密的缝线，使得布轮在高压打磨时保持极高的硬度与挺度，具备较强的磨削力，适合中粗加工和金属拉丝；而松缝绒布轮仅在中心轴孔有一圈车线，绒布层自然向外撑开，质地极软，适合精抛上色和实现无划痕镜面反光。"
+                      "text": "密缝布轮通过多圈缝线形成较高挺度，可作为中粗加工和金属表面处理的起点；松缝绒布轮仅在中心固定，适合上色与最终精饰。轮体、抛光膏、基材、压力和转速必须通过样件测试确认。"
                     }
                   },
                   {
@@ -575,7 +572,7 @@ export default function ChineseBuffingPolishingWheels() {
                     "name": "如何合理匹配不同的抛光轮与抛光膏颜色？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "若要粗切削金属去斑去锈，使用密缝布轮配合黑 Emery 砂蜡；中度切削 and 拉丝黄铜使用红 Tripoli 蜡；若要对不锈钢和一般钢件进行镜面还原，使用白蜡配合密缝棉轮；若要对铝材或高级铜饰品进行无痕镜面色彩提亮，使用绿蜡配合松缝 flannel 绒布轮。"
+                      "text": "若要粗切削金属去斑去锈，使用密缝布轮配合黑 Emery 砂蜡；中度切削和拉丝黄铜使用红 Tripoli 蜡；若要对不锈钢和一般钢件进行镜面还原，使用白蜡配合密缝棉轮；若要对铝材或高级铜饰品进行无痕镜面色彩提亮，使用绿蜡配合松缝 flannel 绒布轮。"
                     }
                   },
                   {
@@ -583,7 +580,7 @@ export default function ChineseBuffingPolishingWheels() {
                     "name": "你们提供用于台磨机和手电钻的轴套和转接铁杆吗？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "提供。我们的台磨机超厚棉布轮内配伸缩轴套，兼容 1/2英寸、5/8英寸、3/4英寸、1英寸的砂轮机轴。针对手电钻，所有的 Mounted 迷你抛光布轮出厂均焊接有 1/4\" 六角铁柄或圆柄，动平衡校正极佳，保障高转速电钻操作安全。"
+                      "text": "可提供伸缩轴套以及 1/4\" 六角柄或圆柄选项。使用前必须在批准规格中核对轴径或夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。"
                     }
                   },
                   {
@@ -591,7 +588,7 @@ export default function ChineseBuffingPolishingWheels() {
                     "name": "你们对零售货架包装提供哪些合规支持？",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "我们可以按买家图纸制作全套双面透明泡壳吸卡、悬挂彩色卡纸袋和定制加强瓦楞硬纸彩盒。所有包装均可以印制您的品牌、多国安全警示文字及 300DPI 极速识别 FNSKU/UPC 条形码贴标，直接达到海外各大超市和亚马逊 FBA 入仓要求。"
+                      "text": "可按买家确认稿制作泡壳、彩卡、纸袋和瓦楞彩盒，并应用品牌、安全警示及 FNSKU/UPC 数据后进行样品扫码检查。最终零售或平台入仓要求以渠道当期规则为准。"
                     }
                   },
                   {
