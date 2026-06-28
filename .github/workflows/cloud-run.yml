@@ -45,13 +45,39 @@ jobs:
         shell: bash
         run: |
           IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${SERVICE}:${GITHUB_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          gcloud builds submit \
+          BUILD_ID="$(gcloud builds submit \
             --project="${PROJECT_ID}" \
             --region="${REGION}" \
             --tag="${IMAGE}" \
-            --suppress-logs \
+            --async \
+            --format="value(id)" \
             --quiet \
-            .
+            .)"
+
+          echo "Cloud Build: ${BUILD_ID}"
+          for attempt in {1..120}; do
+            STATUS="$(gcloud builds describe "${BUILD_ID}" \
+              --project="${PROJECT_ID}" \
+              --region="${REGION}" \
+              --format="value(status)")"
+
+            case "${STATUS}" in
+              SUCCESS)
+                echo "Container build completed successfully."
+                exit 0
+                ;;
+              FAILURE|INTERNAL_ERROR|TIMEOUT|CANCELLED|EXPIRED)
+                echo "Container build failed with status: ${STATUS}"
+                exit 1
+                ;;
+              *)
+                sleep 5
+                ;;
+            esac
+          done
+
+          echo "Timed out waiting for Cloud Build."
+          exit 1
 
       - name: Deploy Cloud Run service
         shell: bash
