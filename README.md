@@ -64,4 +64,19 @@ Use `npm run typecheck` for a fast TypeScript pass.
 
 Webhook payloads now include contact fields, inquiry fields, `utm_*`, `referrer`, `landingPage`, `locale`, `clientIp`, `userAgent`, `submittedAt`, `leadScore`, and `leadTier`.
 
-The GitHub Actions workflow currently verifies type checking and production builds only. It intentionally does not deploy. Cloud Run deployment will be added after production environment values and the Google Cloud project are confirmed.
+### Cloud Run deployment
+
+`Dockerfile` builds the Next.js standalone server for Cloud Run on port `8080`.
+Pushes to `main` are deployed by `.github/workflows/cloud-run.yml` through
+Workload Identity Federation, so no long-lived Google Cloud service account key
+is stored in GitHub.
+
+Production infrastructure:
+
+- Google Cloud project: `scottchen-b2b-prod-2026`
+- Region: `asia-east1`
+- Cloud Run service: `scottchen-b2b`
+- Artifact Registry repository: `cloud-run`
+
+The inquiry endpoint requires `INQUIRY_WEBHOOK_URL` or the `RESEND_*` values to
+be configured on the Cloud Run service before form submissions can be delivered.

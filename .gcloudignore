@@ -1,0 +1,15 @@
+.gcloudignore
+.git
+.github
+.next
+node_modules
+out
+dist
+coverage
+docs
+output
+tmp
+.env*
+gha-creds-*.json
+*.log
+.DS_Store
