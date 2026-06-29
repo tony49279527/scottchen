@@ -31,7 +31,7 @@ export default function ThankYou() {
             Thank You For Your Request
           </h1>
           
-          <div className="space-y-4 text-sm text-industry-slate-355 leading-relaxed text-left border-t border-industry-slate-850 pt-6">
+          <div className="space-y-4 text-sm text-industry-slate-350 leading-relaxed text-left border-t border-industry-slate-850 pt-6">
             <p>
               We have successfully received your business details and custom specifications.
             </p>

@@ -44,6 +44,7 @@ If neither path is configured, the quote and sample forms will show a visible de
 - The inquiry endpoint now applies basic in-memory rate limiting and lead scoring.
 - First-touch landing page, referrer, and UTM attribution persist while a visitor navigates to the form.
 - Google Analytics loads only after explicit visitor consent.
+- Light and dark themes follow the visitor's system setting on first load and persist an explicit theme choice locally.
 
 ### SEO and content
 

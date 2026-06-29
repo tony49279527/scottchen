@@ -30,7 +30,7 @@ export default function ChineseThankYouPage() {
             感谢您的提交
           </h1>
 
-          <div className="space-y-4 text-sm text-industry-slate-355 leading-relaxed text-left border-t border-industry-slate-850 pt-6">
+          <div className="space-y-4 text-sm text-industry-slate-350 leading-relaxed text-left border-t border-industry-slate-850 pt-6">
             <p>我们已经收到您的公司资料与产品需求。</p>
             <p>
               <strong>接下来会发生什么？</strong>

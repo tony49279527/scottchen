@@ -3,6 +3,11 @@
 :root {
   --background: #0b0f19;
   --foreground: #f8fafc;
+  --surface-glass: rgba(15, 23, 42, 0.7);
+  --border-glass: rgba(51, 65, 85, 0.4);
+  --scroll-track: #070a13;
+  --scroll-thumb: #334155;
+  --scroll-thumb-border: #1e293b;
 }
 
 @theme {
@@ -29,9 +34,44 @@
   --font-sans: var(--font-site-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --background: #f4f1ea;
+  --foreground: #172033;
+
+  --color-industry-orange: #c2410c;
+  --color-industry-orange-cta: #b93806;
+  --color-industry-orange-hover: #8f2f0e;
+  --color-industry-orange-light: #b93806;
+
+  --color-industry-slate-950: #fffefb;
+  --color-industry-slate-900: #f4f1ea;
+  --color-industry-slate-850: #e9e5dc;
+  --color-industry-slate-800: #d8d2c7;
+  --color-industry-slate-750: #c9c1b5;
+  --color-industry-slate-700: #aaa196;
+  --color-industry-slate-500: #64748b;
+  --color-industry-slate-400: #475569;
+  --color-industry-slate-350: #334155;
+  --color-industry-slate-300: #293548;
+  --color-industry-slate-200: #1e293b;
+
+  --color-bg-card: rgba(255, 254, 251, 0.82);
+  --color-border-card: rgba(120, 113, 108, 0.24);
+  --surface-glass: rgba(255, 254, 251, 0.82);
+  --border-glass: rgba(120, 113, 108, 0.24);
+  --scroll-track: #f4f1ea;
+  --scroll-thumb: #aaa196;
+  --scroll-thumb-border: #e9e5dc;
+}
+
 html {
   scrollbar-width: thin;
-  scrollbar-color: #334155 #070a13;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
 }
 
 body {
@@ -47,10 +87,10 @@ h3 {
 }
 
 .glass-panel {
-  background: rgba(15, 23, 42, 0.7);
+  background: var(--surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(51, 65, 85, 0.4);
+  border: 1px solid var(--border-glass);
 }
 
 ::-webkit-scrollbar {
@@ -59,19 +99,100 @@ h3 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070a13;
+  background: var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: var(--scroll-thumb);
   border-radius: 4px;
-  border: 1px solid #1e293b;
+  border: 1px solid var(--scroll-thumb-border);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ea580c;
+  background: var(--color-industry-orange);
 }
 
 .transition-all-custom {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html[data-theme="light"] .text-white {
+  color: #172033;
+}
+
+html[data-theme="light"] .hover\:text-white:hover {
+  color: #172033;
+}
+
+html[data-theme="light"] :is(
+  .bg-industry-orange,
+  .bg-industry-orange-cta,
+  .bg-industry-orange-hover
+).text-white,
+html[data-theme="light"] :is(
+  .bg-industry-orange,
+  .bg-industry-orange-cta,
+  .bg-industry-orange-hover
+) .text-white {
+  color: #ffffff;
+}
+
+html[data-theme="light"] :is(
+  .hover\:bg-industry-orange,
+  .hover\:bg-industry-orange-cta,
+  .hover\:bg-industry-orange-hover
+):hover:is(.text-white, .hover\:text-white) {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .theme-toggle-control {
+  color: var(--color-industry-slate-300);
+}
+
+html[data-theme="light"] .bg-red-950\/40 {
+  background-color: rgba(254, 226, 226, 0.72);
+}
+
+html[data-theme="light"] .text-red-200 {
+  color: #991b1b;
+}
+
+html[data-theme="light"] .bg-emerald-950 {
+  background-color: #d1fae5;
+}
+
+html[data-theme="light"] .border-emerald-800 {
+  border-color: #6ee7b7;
+}
+
+html[data-theme="light"] .text-emerald-400 {
+  color: #047857;
+}
+
+html[data-theme="light"] .bg-amber-950 {
+  background-color: #fef3c7;
+}
+
+html[data-theme="light"] .border-amber-800 {
+  border-color: #fcd34d;
+}
+
+html[data-theme="light"] .text-amber-400 {
+  color: #b45309;
+}
+
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after {
+    transition-duration: 0ms;
+  }
 }

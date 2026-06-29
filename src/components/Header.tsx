@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { alternateLocalePath } from "@/lib/site";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -75,7 +76,8 @@ export default function Header() {
           </nav>
 
           {/* CTA & Contact info & Lang Switcher */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle isZh={isZh} />
             <div className="flex items-center space-x-2 text-xs font-mono border border-industry-slate-800/80 bg-industry-slate-900/60 px-2.5 py-1.5 rounded-md">
               <Link
                 href={getLanguageToggleLink("en")}
@@ -100,7 +102,8 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex md:hidden">
+          <div className="flex items-center gap-1 md:hidden">
+            <ThemeToggle isZh={isZh} />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

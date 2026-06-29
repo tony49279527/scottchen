@@ -3,7 +3,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Cookie Policy | SCOTTCHEN",
-  description: "Learn how SCOTTCHEN stores analytics consent preferences and uses optional website measurement only after visitor approval.",
+  description: "Learn how SCOTTCHEN stores site preferences and uses optional website measurement only after visitor approval.",
   path: "/cookie-policy",
 });
 
@@ -18,7 +18,7 @@ export default function CookiePolicy() {
             Cookie Policy
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Effective Date: May 23, 2026. This policy explains what cookies are, how we use them on our B2B forms, and how you can manage them.
+            Effective Date: June 29, 2026. This policy explains what browser storage is used, how optional analytics works, and how you can manage your preferences.
           </p>
         </div>
       </section>
@@ -49,6 +49,15 @@ export default function CookiePolicy() {
                   </h3>
                   <p className="text-xs text-industry-slate-400">
                     Your analytics choice is stored in your browser so the consent panel does not appear on every page. This preference does not identify you and is not required to submit an RFQ.
+                  </p>
+                </div>
+                <div className="border border-industry-slate-800 rounded bg-industry-slate-950/40 p-4">
+                  <h3 className="font-bold text-white text-xs uppercase mb-1.5 flex items-center">
+                    <span className="h-2 w-2 rounded-full bg-industry-slate-500 mr-2" />
+                    Display Theme (Local Storage)
+                  </h3>
+                  <p className="text-xs text-industry-slate-400">
+                    Your light or dark display choice is stored locally so the site can preserve your preferred appearance. It is not sent with inquiry forms and does not identify you.
                   </p>
                 </div>
                 <div className="border border-industry-slate-800 rounded bg-industry-slate-950/40 p-4">
