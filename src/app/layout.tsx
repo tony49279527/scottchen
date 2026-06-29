@@ -133,8 +133,13 @@ const corporateSchema = {
         "@type": "PostalAddress",
         "addressLocality": "Shanghai",
         "addressCountry": "CN",
+        "addressRegion": "Shanghai",
       },
       "areaServed": ["Worldwide", "North America", "Europe", "Asia", "Australia"],
+      "brand": {
+        "@type": "Brand",
+        "name": "SCOTTCHEN"
+      },
       "sameAs": [
         RETAIL_SITE_URL,
         "https://www.amazon.com/stores/SCOTTCHEN",

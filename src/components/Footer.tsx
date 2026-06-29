@@ -13,11 +13,12 @@ export default function Footer() {
     return alternateLocalePath(pathname, targetLang);
   };
 
+  const p = (en: string, zh: string) => isZh ? zh : en;
+
   return (
     <footer className="bg-industry-slate-950 border-t border-industry-slate-800 text-industry-slate-400 py-12 mt-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand Info Column */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="flex flex-col space-y-4">
             <Link href={isZh ? "/zh" : "/"} className="flex items-center space-x-2">
               <svg
@@ -39,126 +40,156 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-industry-slate-400 leading-relaxed max-w-xs">
               {isZh
-                ? "OEM磨料磨具、砂纸及抛光轮定制工具包，面向全球工具品牌、五金分销商和跨境电商卖家。"
-                : "OEM Abrasive, Sanding & Polishing Accessory Kits for Tool Brands, Hardware Distributors and Online Sellers."}
+                ? "上海OEM/ODM磨料磨具制造商，专业生产抛光轮、砂纸片、百叶片、砂带、切割片及磨具套装，服务全球工具品牌、五金分销商和跨境电商卖家。成立于2014年。"
+                : "Shanghai-based OEM/ODM manufacturer of buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, and private-label abrasive accessory kits serving global tool brands, hardware distributors, and e-commerce sellers since 2014."}
             </p>
+            <div className="pt-2 text-xs text-industry-slate-500 space-y-1">
+              <div className="flex items-center gap-1.5">
+                <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Shanghai, China</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:sales@scottchentools.com" className="hover:text-white transition-colors">sales@scottchentools.com</a>
+              </div>
+            </div>
             <div className="pt-2 text-xs text-industry-slate-500 font-mono">
               Process: Grind &bull; Sand &bull; Finish &bull; Polish
             </div>
           </div>
 
-          {/* Product Categories Column */}
           <div>
             <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">
-              {isZh ? "磨料磨具产品" : "Abrasive Products"}
+              {p("Abrasive Products", "磨料磨具产品")}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href={isZh ? "/zh/products/buffing-polishing-wheels" : "/products/buffing-polishing-wheels"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "抛光轮及布轮" : "Buffing & Polishing Wheels"}
+                <Link href={isZh ? "/zh/buffing-wheels" : "/buffing-wheels"} className="hover:text-white transition-colors">
+                  {p("Buffing & Polishing Wheels", "抛光轮与布轮")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/products/buffing-polishing-wheels" : "/products/buffing-polishing-wheels"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "气道抛光轮套装" : "Polishing Wheel Kits"}
+                <Link href={isZh ? "/zh/sanding-discs" : "/sanding-discs"} className="hover:text-white transition-colors">
+                  {p("Sanding Discs", "砂纸片/砂碟")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/products/sanding-grinding-accessories" : "/products/sanding-grinding-accessories"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "砂纸与砂纸卷" : "Sanding Sheets & Rolls"}
+                <Link href={isZh ? "/zh/flap-discs" : "/flap-discs"} className="hover:text-white transition-colors">
+                  {p("Flap Discs", "百叶片")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/products/sanding-grinding-accessories" : "/products/sanding-grinding-accessories"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "磨片与锆刚玉砂碟" : "Grinding & Fiber Discs"}
+                <Link href={isZh ? "/zh/sanding-belts" : "/sanding-belts"} className="hover:text-white transition-colors">
+                  {p("Sanding Belts", "砂带")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/products/sanding-grinding-accessories" : "/products/sanding-grinding-accessories"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "精细打磨棒" : "Detail Sanding Tools"}
+                <Link href={isZh ? "/zh/cutting-wheels" : "/cutting-wheels"} className="hover:text-white transition-colors">
+                  {p("Cutting Wheels", "切割片")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/abrasive-kits" : "/abrasive-kits"} className="hover:text-white transition-colors">
+                  {p("Abrasive Accessory Kits", "磨具套装")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/products" : "/products"} className="text-industry-orange hover:underline text-xs font-bold uppercase tracking-wide">
+                  {p("View All Products →", "查看全部产品 →")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Applications Column */}
           <div>
             <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">
-              {isZh ? "行业与应用" : "Industries & Uses"}
+              {p("B2B Services", "B2B 服务")}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "金属粗磨与去毛刺" : "Metalworking Prep & Polish"}
+                <Link href={isZh ? "/zh/oem-private-label" : "/oem-private-label"} className="hover:text-white transition-colors">
+                  {p("OEM / Private Label", "OEM定制/贴牌代工")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "木工打磨与家具翻新" : "Woodworking & Furniture"}
+                <Link href={isZh ? "/zh/wholesale-abrasives" : "/wholesale-abrasives"} className="hover:text-white transition-colors">
+                  {p("Wholesale Program", "批发合作")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "汽车还原与抛光" : "Automotive Restoration"}
+                <Link href={isZh ? "/zh/china-abrasive-manufacturer" : "/china-abrasive-manufacturer"} className="hover:text-white transition-colors">
+                  {p("Our Shanghai Factory", "上海工厂介绍")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "电商定制配套方案" : "Online Tool Seller Kits"}
+                <Link href={isZh ? "/zh/applications" : "/applications"} className="hover:text-white transition-colors">
+                  {p("Applications", "应用场景")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/quality-control" : "/quality-control"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "出厂质检与动态平衡" : "Quality Control Inspections"}
+                <Link href={isZh ? "/zh/quality-control" : "/quality-control"} className="hover:text-white transition-colors">
+                  {p("Quality Control", "质量控制")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/resources/abrasive-sourcing-checklist" : "/resources/abrasive-sourcing-checklist"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "磨料磨具采购检查清单" : "Abrasive Sourcing Checklist"}
-                </Link>
-              </li>
-              <li>
-                <Link href={isZh ? "/zh/resources/abrasive-material-selection-guide" : "/resources/abrasive-material-selection-guide"} className="hover:text-white transition-colors duration-200">
-                  {isZh ? "磨料选材与粒度指南" : "Abrasive Material Selection Guide"}
+                <Link href={isZh ? "/zh/supplier-profile" : "/supplier-profile"} className="hover:text-white transition-colors">
+                  {p("Supplier Profile", "供应商档案")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* B2B Inquiries & Channels Column */}
           <div>
             <h3 className="text-white text-sm font-bold tracking-wider uppercase mb-4">
-              {isZh ? "B2B 询盘通道" : "Direct B2B Channels"}
+              {p("Get Started", "联系我们")}
             </h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href={isZh ? "/zh/contact" : "/contact"} className="hover:text-white transition-colors duration-200 block">
+                <Link href={isZh ? "/zh/contact" : "/contact"} className="hover:text-white transition-colors block">
                   <span className="font-semibold text-industry-orange">
-                    {isZh ? "在线获取定制报价" : "Request Custom Quote"}
+                    {p("Request Custom Quote", "在线获取定制报价")}
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/sample-kit" : "/sample-kit"} className="hover:text-white transition-colors duration-200 block">
-                  {isZh ? "申请商业样品测试包" : "Request Sample Testing Kit"}
+                <Link href={isZh ? "/zh/sample-kit" : "/sample-kit"} className="hover:text-white transition-colors block">
+                  {p("Request Sample Kit", "申请商业样品")}
                 </Link>
               </li>
               <li>
-                <Link href={isZh ? "/zh/supplier-profile" : "/supplier-profile"} className="hover:text-white transition-colors duration-200 block">
-                  {isZh ? "供应商信息与采购核验" : "Supplier Profile & Due Diligence"}
+                <Link href={isZh ? "/zh/resources/abrasive-sourcing-checklist" : "/resources/abrasive-sourcing-checklist"} className="hover:text-white transition-colors block">
+                  {p("Sourcing Checklist (PDF)", "采购检查清单")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/resources/abrasive-material-selection-guide" : "/resources/abrasive-material-selection-guide"} className="hover:text-white transition-colors block">
+                  {p("Material Selection Guide", "磨料选型指南")}
                 </Link>
               </li>
               <li className="pt-2 border-t border-industry-slate-800">
-                <span className="text-xs text-industry-slate-500 block">
-                  {isZh ? "商业邮件联系:" : "Email Inquiry:"}
+                <span className="text-xs text-industry-slate-500 block mb-1">
+                  {p("Business Email:", "商业邮件:")}
                 </span>
-                <a href="mailto:sales@scottchentools.com" className="text-white hover:underline">
+                <a href="mailto:sales@scottchentools.com" className="text-white hover:underline block">
                   sales@scottchentools.com
                 </a>
               </li>
               <li>
-                <span className="text-xs text-industry-slate-500 block">
-                  {isZh ? "SCOTTCHEN 零售产品站:" : "SCOTTCHEN Retail Store:"}
+                <span className="text-xs text-industry-slate-500 block mb-1">
+                  {p("Response Time:", "回复时效:")}
+                </span>
+                <span className="text-white block">
+                  {p("Within 1 business day", "1个工作日内回复")}
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-industry-slate-500 block mb-1">
+                  {p("Retail Store:", "零售产品站:")}
                 </span>
                 <a href={RETAIL_SITE_URL} target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
                   scottchen.online
@@ -168,10 +199,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-industry-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-industry-slate-500">
-          <div className="mb-4 md:mb-0">
-            &copy; {currentYear} SCOTTCHEN. All rights reserved. {isZh ? "磨料磨具及抛光轮 B2B 供应。" : "Industrial supplier of Surface Finishing Accessories."}
+        <div className="border-t border-industry-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-industry-slate-500 gap-4">
+          <div>
+            &copy; {currentYear} SCOTTCHEN. {p("All rights reserved.", "保留所有权利。")} {isZh ? "上海磨料磨具B2B工厂，出口全球。" : "Shanghai-based B2B abrasive manufacturer, exporting worldwide."}
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center justify-center">
             <div className="flex items-center space-x-2 text-[10px] font-mono border border-industry-slate-800 bg-industry-slate-900/40 px-2 py-1 rounded">
@@ -189,14 +219,17 @@ export default function Footer() {
                 中文
               </Link>
             </div>
+            <Link href={isZh ? "/zh" : "/"} className="hover:text-white transition-colors">
+              {isZh ? "首页" : "Home"}
+            </Link>
             <Link href="/terms" className="hover:text-white transition-colors">
-              {isZh ? "服务条款" : "Terms of Service"}
+              {isZh ? "服务条款" : "Terms"}
             </Link>
             <Link href="/privacy" className="hover:text-white transition-colors">
-              {isZh ? "隐私政策" : "Privacy Policy"}
+              {isZh ? "隐私政策" : "Privacy"}
             </Link>
             <Link href="/cookie-policy" className="hover:text-white transition-colors">
-              {isZh ? "Cookie 政策" : "Cookie Policy"}
+              {isZh ? "Cookie政策" : "Cookies"}
             </Link>
           </div>
         </div>
