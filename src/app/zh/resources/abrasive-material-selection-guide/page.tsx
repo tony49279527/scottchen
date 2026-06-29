@@ -80,7 +80,6 @@ export default function ChineseAbrasiveMaterialSelectionGuide() {
             ariaLabel="面包屑导航"
             items={[
               { label: "首页", href: "/zh" },
-              { label: "采购资源", href: "/zh/resources/abrasive-sourcing-checklist" },
               {
                 label: "磨料选型指南",
                 href: "/zh/resources/abrasive-material-selection-guide",

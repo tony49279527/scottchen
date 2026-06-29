@@ -96,32 +96,56 @@ const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ManufacturingBusiness"],
       "@id": `${SITE_URL}/#organization`,
       "name": "SCOTTCHEN",
       "url": SITE_URL,
       "logo": {
         "@type": "ImageObject",
         "url": absoluteUrl("/icon.svg"),
+        "width": 512,
+        "height": 512,
       },
       "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
       "email": SITE_EMAIL,
       "slogan": "Industrial OEM Abrasive, Sanding & Polishing Solutions",
       "description":
-        "B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.",
+        "SCOTTCHEN is a Shanghai-based OEM manufacturer of abrasive tools, buffing and polishing wheels, sanding discs, and private-label surface finishing accessory kits for global B2B buyers.",
+      "foundingDate": "2014",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
       "knowsAbout": [
-        "Coated abrasives",
-        "Cotton buffing wheels",
+        "Coated abrasives manufacturing",
+        "Cotton buffing wheels and polishing wheels",
+        "Sanding discs and flap discs",
         "Private-label tool accessory kits",
-        "Retail packaging and barcode preparation"
+        "Retail packaging and FBA barcode preparation",
+        "OEM/ODM abrasive tool sourcing"
       ],
-      "sameAs": [RETAIL_SITE_URL],
+      "makesProduct": [
+        "Buffing wheels",
+        "Polishing wheels",
+        "Sanding discs",
+        "Flap discs",
+        "Abrasive accessory kits",
+        "Polishing compounds"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Shanghai",
+        "addressCountry": "CN",
+      },
+      "areaServed": ["Worldwide", "North America", "Europe", "Asia", "Australia"],
+      "sameAs": [
+        RETAIL_SITE_URL,
+        "https://www.amazon.com/stores/SCOTTCHEN",
+      ],
       "contactPoint": [
         {
           "@type": "ContactPoint",
           "email": SITE_EMAIL,
           "contactType": "sales",
-          "availableLanguage": ["English", "Chinese"]
+          "availableLanguage": ["English", "Chinese"],
+          "areaServed": "Worldwide",
         }
       ]
     },
@@ -129,11 +153,19 @@ const corporateSchema = {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       "url": SITE_URL,
-      "name": SITE_NAME,
+      "name": `${SITE_NAME} - OEM Abrasive Tools Manufacturer`,
       "publisher": {
         "@id": `${SITE_URL}/#organization`
       },
-      "inLanguage": ["en", "zh-CN"]
+      "inLanguage": ["en", "zh-CN"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${SITE_URL}/products?q={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
 };

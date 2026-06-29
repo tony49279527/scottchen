@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -71,6 +72,7 @@ export default function ChineseApplicationsOverview() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 text-left">
+              <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "应用场景", href: "/zh/applications" }]} />
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">行业应用工作流</span>
               <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
                 针对不同底材的表面研磨与抛光搭配

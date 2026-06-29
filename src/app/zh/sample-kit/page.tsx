@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import SampleKitForm from "@/components/SampleKitForm";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -17,6 +18,7 @@ export default function ChineseSampleKit() {
       {/* Header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "样品申领", href: "/zh/sample-kit" }]} />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">产品质量校验评估</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             申请表面抛磨耗材样品测试包

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -53,6 +54,7 @@ export default function QualityControl() {
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Quality Control", href: "/quality-control" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">BUYER QUALITY PLANNING</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
               Abrasive Product Quality Control Planning

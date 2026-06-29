@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -15,6 +16,7 @@ export default function ThankYou() {
     <div className="flex flex-col min-h-screen bg-industry-slate-900 flex-grow justify-center py-20">
       <div className="mx-auto max-w-xl px-4 text-center sm:px-6 lg:px-8">
         <div className="glass-panel p-8 rounded-lg border border-industry-slate-800 shadow-2xl space-y-6">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Thank You", href: "/thank-you" }]} />
           
           {/* Success Icon */}
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-950 border border-emerald-800 text-emerald-400">

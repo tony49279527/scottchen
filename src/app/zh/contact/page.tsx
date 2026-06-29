@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import RFQForm from "@/components/RFQForm";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -16,6 +17,7 @@ export default function ChineseContact() {
       {/* Page Header */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "联系我们", href: "/zh/contact" }]} />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B 在线询盘通道</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             在线索取 OEM 代工 / 大货批发报价

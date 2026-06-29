@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -13,6 +14,7 @@ export default function TermsOfService() {
       {/* Header section */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Terms", href: "/terms" }]} />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">COMMERCIAL CONTRACT BASE</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             Website & B2B Inquiry Terms

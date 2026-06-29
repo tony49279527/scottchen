@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -70,6 +71,7 @@ export default function ApplicationsOverview() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 text-left">
+              <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Applications", href: "/applications" }]} />
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">APPLICATION WORKFLOWS</span>
               <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
                 Scenario-Specific Surface Finishing

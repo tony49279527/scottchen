@@ -1,12 +1,32 @@
 export const SITE_NAME = "SCOTTCHEN";
-const configuredSiteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://scottchen-b2b-530847966105.asia-east1.run.app";
 
-export const SITE_URL = configuredSiteUrl.replace(/\/+$/, "");
+const PRODUCTION_SITE_URL = "https://www.scottchentools.com";
+
+const rawConfiguredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+function resolveSiteUrl(): string {
+  if (!rawConfiguredSiteUrl) {
+    return PRODUCTION_SITE_URL;
+  }
+  const trimmed = rawConfiguredSiteUrl.replace(/\/+$/, "");
+  if (
+    trimmed.includes("run.app") ||
+    trimmed.includes("localhost") ||
+    trimmed.match(/^https?:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/)
+  ) {
+    if (process.env.NODE_ENV === "production" && !process.env.NEXT_PUBLIC_ALLOW_NON_CANONICAL) {
+      return PRODUCTION_SITE_URL;
+    }
+    return trimmed;
+  }
+  return trimmed;
+}
+
+export const SITE_URL = resolveSiteUrl();
 export const SITE_EMAIL = "sales@scottchentools.com";
 export const RETAIL_SITE_URL = "https://scottchen.online";
-export const SITE_UPDATED = "2026-06-28";
+export const SITE_UPDATED = "2026-06-29";
+export const PRODUCTION_DOMAIN = "www.scottchentools.com";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, SITE_URL).toString();

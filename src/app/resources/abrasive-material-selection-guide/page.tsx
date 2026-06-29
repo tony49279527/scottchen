@@ -79,9 +79,8 @@ export default function AbrasiveMaterialSelectionGuide() {
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Buyer Resources", href: "/resources/abrasive-sourcing-checklist" },
               {
-                label: "Material Selection Guide",
+                label: "Abrasive Material Selection Guide",
                 href: "/resources/abrasive-material-selection-guide",
               },
             ]}

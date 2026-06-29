@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -76,6 +77,7 @@ export default function ChineseSandingGrindingAccessories() {
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
+            <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "产品目录", href: "/zh/products" }, { label: "研磨砂纸配件", href: "/zh/products/sanding-grinding-accessories" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">参数与 OEM 定制选项</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
               砂纸、研磨与打磨耗材配件
@@ -522,7 +524,7 @@ export default function ChineseSandingGrindingAccessories() {
                     <a
                       href={prod.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="sponsored noopener noreferrer"
                       className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-2 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover transition-colors text-center"
                     >
                       在亚马逊购买 &rarr;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -100,6 +101,7 @@ export default function ChineseProductsOverview() {
       {/* Header section */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-left sm:px-6 lg:px-8">
+          <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "产品目录", href: "/zh/products" }]} />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">技术规格目录</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             表面处理研磨抛光配件规格目录
