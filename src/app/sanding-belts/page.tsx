@@ -378,25 +378,12 @@ export default function SandingBeltsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/sanding-belts#productgroup"),
-                "name": "SCOTTCHEN Sanding Belts & Abrasive Belts",
-                "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
-                "url": absoluteUrl("/sanding-belts"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/sanding-belts#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/sanding-belts#productgroup"),
+            "name": "SCOTTCHEN Sanding Belts & Abrasive Belts",
+            "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
+            "url": absoluteUrl("/sanding-belts"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

@@ -313,25 +313,12 @@ export default function ZhAbrasiveKitsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/abrasive-kits#productgroup"),
-                "name": "SCOTTCHEN磨具套装、抛光工具套装、砂磨套装",
-                "description": "专业磨具套装OEM厂家，抛光轮套装、砂纸套装、DIY五金工具组合套装，零售包装，FBA贴标，MOQ 500套起。",
-                "url": absoluteUrl("/zh/abrasive-kits"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/abrasive-kits#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/zh/abrasive-kits#productgroup"),
+            "name": "SCOTTCHEN磨具套装、抛光工具套装、砂磨套装",
+            "description": "专业磨具套装OEM厂家，抛光轮套装、砂纸套装、DIY五金工具组合套装，零售包装，FBA贴标，MOQ 500套起。",
+            "url": absoluteUrl("/zh/abrasive-kits"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

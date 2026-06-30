@@ -340,25 +340,12 @@ export default function ZhCuttingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
-                "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
-                "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，MPA EN12413认证双网增强，MOQ 1000片起。",
-                "url": absoluteUrl("/zh/cutting-wheels"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/cutting-wheels#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
+            "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
+            "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，MPA EN12413认证双网增强，MOQ 1000片起。",
+            "url": absoluteUrl("/zh/cutting-wheels"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

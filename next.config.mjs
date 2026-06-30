@@ -33,6 +33,15 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: "/((?!api/|_next/|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|webp|gif|ico|css|js|pdf|woff2?)$).*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
     ];
   },
 };

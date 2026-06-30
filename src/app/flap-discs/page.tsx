@@ -362,25 +362,12 @@ export default function FlapDiscsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/flap-discs#productgroup"),
-                "name": "SCOTTCHEN Flap Discs",
-                "description": "OEM Type 27 and Type 29 flap discs in zirconia alumina, ceramic, and aluminum oxide on fiberglass backing plates.",
-                "url": absoluteUrl("/flap-discs"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/flap-discs#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/flap-discs#productgroup"),
+            "name": "SCOTTCHEN Flap Discs",
+            "description": "OEM Type 27 and Type 29 flap discs in zirconia alumina, ceramic, and aluminum oxide on fiberglass backing plates.",
+            "url": absoluteUrl("/flap-discs"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

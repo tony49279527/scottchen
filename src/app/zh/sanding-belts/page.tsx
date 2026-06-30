@@ -343,25 +343,12 @@ export default function ZhSandingBeltsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
-                "name": "SCOTTCHEN环形砂带、砂带、砂带套",
-                "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
-                "url": absoluteUrl("/zh/sanding-belts"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/sanding-belts#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
+            "name": "SCOTTCHEN环形砂带、砂带、砂带套",
+            "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
+            "url": absoluteUrl("/zh/sanding-belts"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

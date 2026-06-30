@@ -353,25 +353,12 @@ export default function ZhBuffingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
-                "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
-                "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
-                "url": absoluteUrl("/zh/buffing-wheels"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/buffing-wheels#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
+            "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
+            "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
+            "url": absoluteUrl("/zh/buffing-wheels"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

@@ -611,66 +611,6 @@ export default function Home() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the minimum order quantity (MOQ) for custom private label kits?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I request physical samples for laboratory testing before ordering?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Verified commercial buyers can request product samples. Sample and courier charges depend on the requested configuration and are confirmed before dispatch; qualifying credits, if offered, are stated in the quotation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How are buffing wheel tolerances confirmed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Dimensions, bore fit, construction, and any runout or balance criteria are confirmed in the approved SKU specification. Production checks and acceptance records are then matched to that agreed standard."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How is the B2B production lead time confirmed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The production target is quoted after quantity, materials, customization, artwork approval, sample status and capacity are reviewed. It becomes a commitment only when stated in the written order schedule."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What shipping terms and export ports do you support?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "FOB, CIF or a door-to-door option may be quoted depending on destination and service availability. The Incoterms rule, named place, port, importer-of-record role, taxes and customs responsibilities are confirmed in writing."
-                }
-              }
-            ]
-          })
-        }}
-      />
-
       {/* Persistent CTA Banner */}
       <CTASection />
     </div>

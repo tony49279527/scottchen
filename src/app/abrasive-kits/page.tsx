@@ -296,25 +296,12 @@ export default function AbrasiveKitsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/abrasive-kits#productgroup"),
-                "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
-                "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
-                "url": absoluteUrl("/abrasive-kits"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/abrasive-kits#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/abrasive-kits#productgroup"),
+            "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
+            "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
+            "url": absoluteUrl("/abrasive-kits"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

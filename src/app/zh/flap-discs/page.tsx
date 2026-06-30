@@ -347,25 +347,12 @@ export default function ZhFlapDiscsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/flap-discs#productgroup"),
-                "name": "SCOTTCHEN百叶片、百叶轮、平面砂布轮",
-                "description": "专业百叶片生产厂家，T27/T29锆刚玉陶瓷氧化铝百叶片批发，MPA认证，MOQ 500片起。",
-                "url": absoluteUrl("/zh/flap-discs"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/flap-discs#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/zh/flap-discs#productgroup"),
+            "name": "SCOTTCHEN百叶片、百叶轮、平面砂布轮",
+            "description": "专业百叶片生产厂家，T27/T29锆刚玉陶瓷氧化铝百叶片批发，MPA认证，MOQ 500片起。",
+            "url": absoluteUrl("/zh/flap-discs"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

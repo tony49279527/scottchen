@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
-const SITE_UPDATED = new Date("2026-06-29");
+const LAST_MODIFIED = new Date(SITE_UPDATED);
 
 const localizedRoutes = [
   { en: "/", zh: "/zh", priority: 1.0, changefreq: "weekly" as const },
@@ -102,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return [en, zh].map((p) => ({
       url: absoluteUrl(p),
-      lastModified: SITE_UPDATED,
+      lastModified: LAST_MODIFIED,
       changeFrequency: changefreq,
       priority,
       alternates: { languages },
@@ -113,7 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localizedEntries,
     ...standaloneRoutes.map(({ path: p, priority }) => ({
       url: absoluteUrl(p),
-      lastModified: SITE_UPDATED,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "yearly" as const,
       priority,
     })),

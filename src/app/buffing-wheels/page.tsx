@@ -411,25 +411,12 @@ export default function BuffingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/buffing-wheels#productgroup"),
-                "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
-                "description": "Wholesale cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, sisal-cotton treated buffs, and polishing compound bars from Shanghai OEM manufacturer.",
-                "url": absoluteUrl("/buffing-wheels"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/buffing-wheels#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/buffing-wheels#productgroup"),
+            "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
+            "description": "Wholesale cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, sisal-cotton treated buffs, and polishing compound bars from Shanghai OEM manufacturer.",
+            "url": absoluteUrl("/buffing-wheels"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />

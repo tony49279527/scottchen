@@ -377,25 +377,12 @@ export default function CuttingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/cutting-wheels#productgroup"),
-                "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
-                "description": "EN12413-compliant cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement.",
-                "url": absoluteUrl("/cutting-wheels"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/cutting-wheels#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
-            ],
+            "@type": "ProductGroup",
+            "@id": absoluteUrl("/cutting-wheels#productgroup"),
+            "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
+            "description": "EN12413-compliant cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement.",
+            "url": absoluteUrl("/cutting-wheels"),
+            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
           }),
         }}
       />
