@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Abrasive Kit Wholesale | Polishing & Sanding Accessory Kits Private Label | SCOTTCHEN",
   description: "OEM private label abrasive kits. Buffing wheel kits, sanding disc kits, polishing compound sets. Retail-ready packaging, FBA compliant. MOQ 500 sets from China manufacturer.",
   path: "/abrasive-kits",
+  alternatePath: "/zh/abrasive-kits",
 });
 
 export default function AbrasiveKitsPage() {

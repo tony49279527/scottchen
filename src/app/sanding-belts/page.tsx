@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Sanding Belt Supplier | Wholesale Abrasive Sanding Belts Manufacturer | SCOTTCHEN",
   description: "Wholesale sanding belts for knife making, woodworking, metal fabrication. Custom sizes, aluminum oxide & zirconia belts from China OEM factory. Precision butt joint.",
   path: "/sanding-belts",
+  alternatePath: "/zh/sanding-belts",
 });
 
 export default function SandingBeltsPage() {

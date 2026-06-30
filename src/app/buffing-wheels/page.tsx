@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Buffing Wheel Manufacturer | Cotton Buffing & Polishing Wheels Wholesale | SCOTTCHEN",
   description: "Shanghai-based OEM buffing wheel manufacturer since 2014. Wholesale cotton buffing and polishing wheels for metal finishing. MOQ 500pcs, ISO 9001 certified factory.",
   path: "/buffing-wheels",
+  alternatePath: "/zh/buffing-wheels",
 });
 
 export default function BuffingWheelsPage() {

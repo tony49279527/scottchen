@@ -6,8 +6,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Sanding & Grinding Accessories | SCOTTCHEN",
-  description: "Source bulk sandpaper sheets, silicon carbide screens, zirconia grinding discs, mini sanding sticks and custom abrasive dispenser kits with reference B2B MOQ parameters.",
+  title: "OEM Sandpaper & Grinding Disc Supplier | SCOTTCHEN",
+  description: "Source OEM sandpaper sheets, sanding rolls, silicon carbide screens, zirconia grinding discs, mini sanding sticks and dispenser kits with MOQ and QC parameters.",
   path: "/products/sanding-grinding-accessories",
   alternatePath: "/zh/products/sanding-grinding-accessories",
 });
@@ -74,31 +74,39 @@ export default function SandingGrindingAccessories() {
     <div className="flex flex-col min-h-screen">
       {/* Top CTA Area */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="max-w-2xl">
-            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Products", href: "/products" }, { label: "Sanding & Grinding Accessories", href: "/products/sanding-grinding-accessories" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS & OEM OPTIONS</span>
-            <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              Sanding & Grinding Accessories
-            </h1>
-            <p className="mt-3 text-base text-industry-slate-400">
-              Bulk sandpapers, zirconia resin fiber discs, mesh drywall screen sheets, and detail mini sanding stick kits.
-            </p>
-          </div>
-          
-          <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link
-              href="/contact"
-              className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
-            >
-              Request Abrasives Quote
-            </Link>
-            <Link
-              href="/sample-kit"
-              className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
-            >
-              Get Sample Abrasive Kit
-            </Link>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Products", href: "/products" },
+              { label: "Sanding & Grinding Accessories", href: "/products/sanding-grinding-accessories" },
+            ]}
+          />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS & OEM OPTIONS</span>
+              <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
+                Sanding & Grinding Accessories
+              </h1>
+              <p className="mt-3 text-base text-industry-slate-400">
+                Bulk sandpapers, zirconia resin fiber discs, mesh drywall screen sheets, and detail mini sanding stick kits.
+              </p>
+            </div>
+
+            <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <Link
+                href="/contact"
+                className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
+              >
+                Request Abrasives Quote
+              </Link>
+              <Link
+                href="/sample-kit"
+                className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
+              >
+                Get Sample Abrasive Kit
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -146,6 +154,55 @@ export default function SandingGrindingAccessories() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-industry-slate-850 bg-industry-slate-950 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="lg:col-span-1">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-industry-orange-light">
+                Procurement Evidence Pack
+              </span>
+              <h2 className="mt-3 text-2xl font-extrabold text-white">
+                Sanding and grinding facts for comparable RFQs
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-industry-slate-400">
+                These fields help buyers compare abrasive suppliers and define sample
+                tests for sandpaper, discs, mesh screens and detail tools.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
+              {[
+                ["Primary products", "Wet/dry sandpaper sheets, continuous sanding rolls, fiberglass mesh sanding screens, zirconia fiber discs, detail sanding sticks and dispenser kits."],
+                ["Reference MOQ", "10,000 sheets for sandpaper, 5,000 fiber discs, 1,000 detail-stick sets and project-specific minimums for dispenser boxes."],
+                ["Quoted lead time", "Common planning range is 20 to 30 days after SKU, grit mix, packaging and sample approval."],
+                ["Specification controls", "Grain type, FEPA P-grit range, backing material, dimensions, arbor hole, attachment method and pack quantity are defined by SKU."],
+                ["Quality checks", "Backing tensile strength, grain adhesion, dimensional fit, grit assortment, barcode scan and carton configuration can be checked against the approved specification."],
+                ["Next verification step", "Use the material selection guide for grain and backing choices, then request a sample abrasive kit with substrate and tool details."],
+              ].map(([label, value]) => (
+                <div key={label} className="glass-panel rounded-lg p-5">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-industry-orange-light">
+                    {label}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-industry-slate-300">
+                    {value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/resources/oem-abrasive-supplier-evaluation">
+              Evaluate supplier fit
+            </Link>
+            <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/resources/abrasive-material-selection-guide">
+              Open material guide
+            </Link>
+            <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href="/sample-kit">
+              Request sample abrasive kit
+            </Link>
           </div>
         </div>
       </section>
@@ -597,28 +654,80 @@ export default function SandingGrindingAccessories() {
                 "name": "SCOTTCHEN Sanding & Grinding Accessories Catalog",
                 "description": "Industrial abrasive options including latex-backed wet/dry sandpaper sheets, open-mesh silicon carbide drywall sanding screens, zirconia fiber discs, and detail sanding rods.",
                 "url": absoluteUrl("/products/sanding-grinding-accessories"),
+                "image": absoluteUrl("/images/sanding_tools.webp"),
                 "brand": {
                   "@type": "Brand",
                   "name": "SCOTTCHEN"
                 },
+                "manufacturer": {
+                  "@id": absoluteUrl("/#organization")
+                },
+                "category": "Sandpaper, grinding discs and abrasive accessory kits",
+                "material": "Silicon carbide, aluminum oxide, zirconia alumina, fiberglass mesh, latex paper, vulcanized fiber and cloth backing",
+                "additionalProperty": [
+                  {
+                    "@type": "PropertyValue",
+                    "name": "Reference MOQ",
+                    "value": "10,000 sheets for sandpaper, 5,000 fiber discs and 1,000 detail-stick sets"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "Quoted lead time",
+                    "value": "20 to 30 days after SKU, grit mix, packaging and sample approval"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "Specification controls",
+                    "value": "Grain type, FEPA P-grit range, backing material, dimensions, arbor hole, attachment method and pack quantity"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "Common applications",
+                    "value": "Wood, drywall, carbon steel, high-alloy welds, fiberglass, ceramic, porcelain, marble, tile, gemstones and glass"
+                  }
+                ],
                 "hasVariant": [
                   {
                     "@type": "Product",
                     "name": "Latex Wet/Dry Sandpaper Sheets",
                     "description": "Premium silicon carbide sheets on latex C-weight backing for automotive styling and wet prep.",
-                    "sku": "SC-SANDPAPER-SHEETS"
+                    "sku": "SC-SANDPAPER-SHEETS",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "Silicon carbide or aluminum oxide on C-weight latex paper or flexible J-weight cloth backing",
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "Grit range", "value": "P60 to P2500" },
+                      { "@type": "PropertyValue", "name": "Sizing", "value": "9 inch x 11 inch sheets or 2 inch to 4.5 inch roll wraps" }
+                    ]
                   },
                   {
                     "@type": "Product",
                     "name": "Zirconia Vulcanized Fiber Grinding Discs",
                     "description": "Heavy weld-leveling zirconia discs with 7/8-inch star hubs on 0.8mm vulcanized backing.",
-                    "sku": "SC-ZIRCONIA-DISCS"
+                    "sku": "SC-ZIRCONIA-DISCS",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "Zirconia alumina on vulcanized fiber backing",
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "Diameter", "value": "4.5 inch, 5 inch or 7 inch outer diameter" },
+                      { "@type": "PropertyValue", "name": "Arbor hole", "value": "7/8 inch or 22.23 mm center round or star center hub" }
+                    ]
                   },
                   {
                     "@type": "Product",
                     "name": "Fiberglass Mesh Drywall Sanding Screens",
                     "description": "Double-sided silicon carbide mesh sheets designed to reduce clogging during vacuum-assisted drywall sanding.",
-                    "sku": "SC-DRYWALL-MESH"
+                    "sku": "SC-DRYWALL-MESH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "Fiberglass mesh substrate with silicon carbide coating",
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "Grit range", "value": "P80, P120, P150, P180 and P220" },
+                      { "@type": "PropertyValue", "name": "Sizing", "value": "Precut 9 x 11 sheets, 3.25 x 11 blocks or custom rolls" }
+                    ]
                   }
                 ]
               },

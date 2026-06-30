@@ -51,8 +51,10 @@ const localizedPaths = new Set([
   "/sample-kit",
   "/contact",
   "/supplier-profile",
+  "/resources",
   "/resources/abrasive-sourcing-checklist",
   "/resources/abrasive-material-selection-guide",
+  "/resources/oem-abrasive-supplier-evaluation",
   "/thank-you",
 ]);
 

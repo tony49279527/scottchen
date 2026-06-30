@@ -141,6 +141,26 @@ export default function Footer() {
                   {p("Supplier Profile", "供应商档案")}
                 </Link>
               </li>
+              <li>
+                <Link href={isZh ? "/zh/resources" : "/resources"} className="hover:text-white transition-colors">
+                  {p("B2B Sourcing Resources", "B2B 采购资源中心")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/resources/oem-abrasive-supplier-evaluation" : "/resources/oem-abrasive-supplier-evaluation"} className="hover:text-white transition-colors">
+                  {p("Supplier Evaluation Guide", "供应商评估指南")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/resources/abrasive-sourcing-checklist" : "/resources/abrasive-sourcing-checklist"} className="hover:text-white transition-colors">
+                  {p("Abrasive Sourcing Checklist", "磨料磨具采购检查清单")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/resources/abrasive-material-selection-guide" : "/resources/abrasive-material-selection-guide"} className="hover:text-white transition-colors">
+                  {p("Abrasive Material Selection Guide", "磨料选材与粒度指南")}
+                </Link>
+              </li>
             </ul>
           </div>
 

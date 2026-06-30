@@ -9,6 +9,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Wholesale Abrasive Tools | Bulk Sanding & Polishing Supplies Supplier | SCOTTCHEN",
   description: "Wholesale abrasive tools and bulk sanding & polishing supplies for distributors, retailers, and industrial buyers. Factory-direct pricing from China manufacturer. MOQ 500pcs, FOB Shanghai.",
   path: "/wholesale-abrasives",
+  alternatePath: "/zh/wholesale-abrasives",
 });
 
 export default function WholesaleAbrasivesPage() {

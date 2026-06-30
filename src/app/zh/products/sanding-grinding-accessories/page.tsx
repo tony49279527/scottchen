@@ -75,31 +75,40 @@ export default function ChineseSandingGrindingAccessories() {
     <div className="flex flex-col min-h-screen">
       {/* Top CTA Area */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="max-w-2xl">
-            <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "产品目录", href: "/zh/products" }, { label: "研磨砂纸配件", href: "/zh/products/sanding-grinding-accessories" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">参数与 OEM 定制选项</span>
-            <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              砂纸、研磨与打磨耗材配件
-            </h1>
-            <p className="mt-3 text-base text-industry-slate-400">
-              大货批发抗水砂纸、锆刚玉钢纸砂碟、防堵塞网格砂布以及工坊自撕砂带卷架套装。
-            </p>
-          </div>
-          
-          <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link
-              href="/zh/contact"
-              className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
-            >
-              获取磨料报价
-            </Link>
-            <Link
-              href="/zh/sample-kit"
-              className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
-            >
-              申领样品测试包
-            </Link>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs
+            ariaLabel="面包屑导航"
+            items={[
+              { label: "首页", href: "/zh" },
+              { label: "产品目录", href: "/zh/products" },
+              { label: "砂纸与磨片配件", href: "/zh/products/sanding-grinding-accessories" },
+            ]}
+          />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">参数与 OEM 定制选项</span>
+              <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
+                砂纸、研磨与打磨耗材配件
+              </h1>
+              <p className="mt-3 text-base text-industry-slate-400">
+                大货批发抗水砂纸、锆刚玉钢纸砂碟、防堵塞网格砂布以及工坊自撕砂带卷架套装。
+              </p>
+            </div>
+
+            <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <Link
+                href="/zh/contact"
+                className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
+              >
+                获取磨料报价
+              </Link>
+              <Link
+                href="/zh/sample-kit"
+                className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
+              >
+                申领样品测试包
+              </Link>
+            </div>
           </div>
         </div>
       </section>

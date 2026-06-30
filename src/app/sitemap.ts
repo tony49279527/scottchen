@@ -72,6 +72,7 @@ const localizedRoutes = [
   { en: "/sample-kit", zh: "/zh/sample-kit", priority: 0.8, changefreq: "monthly" as const },
   { en: "/contact", zh: "/zh/contact", priority: 0.9, changefreq: "monthly" as const },
   { en: "/supplier-profile", zh: "/zh/supplier-profile", priority: 0.7, changefreq: "monthly" as const },
+  { en: "/resources", zh: "/zh/resources", priority: 0.8, changefreq: "monthly" as const },
   {
     en: "/resources/abrasive-sourcing-checklist",
     zh: "/zh/resources/abrasive-sourcing-checklist",
@@ -82,6 +83,12 @@ const localizedRoutes = [
     en: "/resources/abrasive-material-selection-guide",
     zh: "/zh/resources/abrasive-material-selection-guide",
     priority: 0.7,
+    changefreq: "monthly" as const,
+  },
+  {
+    en: "/resources/oem-abrasive-supplier-evaluation",
+    zh: "/zh/resources/oem-abrasive-supplier-evaluation",
+    priority: 0.85,
     changefreq: "monthly" as const,
   },
 ] as const;

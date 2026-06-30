@@ -101,7 +101,13 @@ export default function ChineseProductsOverview() {
       {/* Header section */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-left sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "产品目录", href: "/zh/products" }]} />
+          <Breadcrumbs
+            ariaLabel="面包屑导航"
+            items={[
+              { label: "首页", href: "/zh" },
+              { label: "产品目录", href: "/zh/products" },
+            ]}
+          />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">技术规格目录</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             表面处理研磨抛光配件规格目录
@@ -109,6 +115,44 @@ export default function ChineseProductsOverview() {
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
             Scottchen (SCOTTCHEN) 专注于为五金品牌商和高采购量零售商提供定制化研磨抛光套装方案。在此您可以浏览我们的核心规格、标准起订量 (MOQ) 与出运包装规范。
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-industry-slate-850 bg-industry-slate-950 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                title: "评估供应商匹配度",
+                body: "入围供应商前，比较产品范围、样品、质检证据、包装准备度和商务核验边界。",
+                href: "/zh/resources/oem-abrasive-supplier-evaluation",
+              },
+              {
+                title: "准备可比较 RFQ",
+                body: "用采购检查清单写清尺寸、背基、目数、包装数量、样品计划和验货要求。",
+                href: "/zh/resources/abrasive-sourcing-checklist",
+              },
+              {
+                title: "选择磨粒与背基",
+                body: "查看磨粒类别、背基材料、FEPA P 目数、条码检查和交付条款。",
+                href: "/zh/resources/abrasive-material-selection-guide",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                className="glass-panel rounded-xl p-6 hover:border-industry-orange"
+                href={item.href}
+              >
+                <h2 className="text-lg font-bold text-white">{item.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-industry-slate-400">
+                  {item.body}
+                </p>
+                <span className="mt-4 inline-block text-sm font-bold text-industry-orange-light">
+                  打开指南 &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

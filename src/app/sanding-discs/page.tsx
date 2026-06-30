@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Sanding Disc Wholesale | Aluminum Oxide Sanding Discs Supplier | SCOTTCHEN",
   description: "Bulk sanding discs at wholesale prices. Aluminum oxide, zirconia, silicon carbide sanding discs from China OEM manufacturer. MOQ 500pcs, anti-clog coating, private label.",
   path: "/sanding-discs",
+  alternatePath: "/zh/sanding-discs",
 });
 
 export default function SandingDiscsPage() {

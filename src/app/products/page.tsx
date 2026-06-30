@@ -99,7 +99,12 @@ export default function ProductsOverview() {
       {/* Header section */}
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
         <div className="mx-auto max-w-7xl px-4 text-left sm:px-6 lg:px-8">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Products", href: "/products" }]} />
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Products", href: "/products" },
+            ]}
+          />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS CATALOG</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             Surface Finishing Accessories Catalog
@@ -107,6 +112,44 @@ export default function ProductsOverview() {
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
             Scottchen specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard B2B MOQ parameters, and packaging options.
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-industry-slate-850 bg-industry-slate-950 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                title: "Evaluate supplier fit",
+                body: "Compare product scope, samples, QC evidence, packaging readiness and commercial verification before shortlisting.",
+                href: "/resources/oem-abrasive-supplier-evaluation",
+              },
+              {
+                title: "Prepare a comparable RFQ",
+                body: "Use the sourcing checklist to define dimensions, backing, grit, pack quantity, sample plan and inspection requirements.",
+                href: "/resources/abrasive-sourcing-checklist",
+              },
+              {
+                title: "Select grain and backing",
+                body: "Review grain families, backing materials, FEPA P-grit wording, barcode checks and delivery terms.",
+                href: "/resources/abrasive-material-selection-guide",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                className="glass-panel rounded-xl p-6 hover:border-industry-orange"
+                href={item.href}
+              >
+                <h2 className="text-lg font-bold text-white">{item.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-industry-slate-400">
+                  {item.body}
+                </p>
+                <span className="mt-4 inline-block text-sm font-bold text-industry-orange-light">
+                  Open guide &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

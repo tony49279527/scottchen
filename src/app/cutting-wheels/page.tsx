@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Cutting Disc Manufacturer | Cut-Off Wheels & Cutting Discs Wholesale | SCOTTCHEN",
   description: "China OEM cutting disc manufacturer. Thin cut-off wheels for metal & stainless steel. 4.5'/5'/7'/9' sizes. EN12413 compliant, contaminant-free. MOQ 1000 pieces.",
   path: "/cutting-wheels",
+  alternatePath: "/zh/cutting-wheels",
 });
 
 export default function CuttingWheelsPage() {

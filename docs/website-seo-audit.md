@@ -238,7 +238,33 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 7. 当前 Google 账户尚未验证 `scottchentools.com`。完成域名所有权验证后，将根域和 `www` 映射到 Cloud Run，并验证 HTTPS、重定向、canonical、hreflang 和 sitemap。
 8. 将当前进程内询盘限流升级为 Cloud Armor、API Gateway 或共享存储方案；Cloud Run 多实例之间不会共享内存计数。
 
-## 九、上线后 30/60/90 天计划
+## 九、2026-06-30 方法论落地优化
+
+本轮按“技术与索引健康、页面与信息架构、内容质量与可抽取事实、实体信任、结构化数据、GEO 查询覆盖、转化路径”七个维度继续优化。重点不是增加泛化文章，而是把买家会问的问题、供应商核验证据和页面机器可读性落实到站点结构中。
+
+### 已完成
+
+- 新增英文和中文资源中心：`/resources`、`/zh/resources`。
+- 新增英文和中文供应商评估指南：`/resources/oem-abrasive-supplier-evaluation`、`/zh/resources/oem-abrasive-supplier-evaluation`。
+- 供应商评估页覆盖产品发现、产品比较、采购决策、应用场景和品牌实体五类 Query Fan-out 问题。
+- 新增 Article、ItemList、FAQPage、CollectionPage 结构化数据，并与页面可见内容保持一致。
+- 产品目录页新增采购资源导流，帮助买家从产品浏览进入供应商评估、RFQ 检查和选材指南。
+- 英文核心产品详情页新增采购证据包，明确主要产品、参考 MOQ、交期、包装、质量检查和下一步核验路径。
+- 英文核心产品详情页 ProductGroup JSON-LD 增加 manufacturer、image、category、material、additionalProperty 和变体属性。
+- 中英文产品目录页和产品详情页补充 BreadcrumbList，增强层级理解和内部链接。
+- 顶部导航新增 Resources / 采购资源，页脚新增资源中心和供应商评估指南链接。
+- sitemap、hreflang 本地路径映射、`llms.txt` 和站点更新时间同步到 2026-06-30。
+- Organization schema 增加产品范围、OfferCatalog、站点更新时间和更完整的 knowsAbout。
+
+### 当前仍依赖业务侧提供
+
+- 法定公司名称、注册地址、可公开联系方式和真实生产地点。
+- 原创工厂、团队、质检设备、包装流程、批次报告和证书照片。
+- 可公开的真实案例、渠道伙伴、客户评价和外部品牌提及。
+- 每个产品族的真实规格书、测试方法、证书编号、有效期和适用范围。
+- Search Console、Bing Webmaster、GA4 和询盘投递系统权限，用于上线后观测真实 SEO/GEO 表现。
+
+## 十、上线后 30/60/90 天计划
 
 ### 第 1-30 天
 
@@ -261,7 +287,7 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 - 优化有展现但点击率低的标题和描述。
 - 对有流量但没有询盘的页面调整 CTA、表单和样品权益。
 
-## 十、核心指标
+## 十一、核心指标
 
 ### 商业指标
 
@@ -281,7 +307,7 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 - 相关工业和渠道网站的引用域名
 - 移动端 Core Web Vitals 通过率
 
-## 十一、已完成验证
+## 十二、已完成验证
 
 - `npm run typecheck`
 - `npm run build`

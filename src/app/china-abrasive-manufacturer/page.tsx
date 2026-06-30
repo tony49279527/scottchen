@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "China Abrasive Manufacturer | OEM Abrasive Tools Supplier & Factory | SCOTTCHEN",
   description: "SCOTTCHEN is a Shanghai-based China abrasive manufacturer and OEM supplier of buffing wheels, sanding discs, flap discs, and private label abrasive kits since 2014.",
   path: "/china-abrasive-manufacturer",
+  alternatePath: "/zh/china-abrasive-manufacturer",
 });
 
 export default function ChinaAbrasiveManufacturerPage() {

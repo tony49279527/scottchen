@@ -4,114 +4,103 @@ export const dynamic = "force-static";
 
 export function GET() {
   const content = `# SCOTTCHEN
-> Shanghai-based OEM manufacturer of abrasive tools, buffing and polishing wheels, sanding discs, and private-label surface finishing accessory kits for global B2B buyers.
+
+> B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.
 
 Last reviewed: ${SITE_UPDATED}
 Website: ${SITE_URL}
 Sales contact: ${SITE_EMAIL}
-Retail product reference (Amazon / DTC): ${RETAIL_SITE_URL}
+Retail product reference: ${RETAIL_SITE_URL}
 Languages: English (en), Simplified Chinese (zh-CN)
 Full content: ${absoluteUrl("/llms-full.txt")}
 
-## Company Facts (for AI citation)
+## Published company scope
 
-- Company: SCOTTCHEN
-- Entity type: OEM / ODM manufacturer (ManufacturingBusiness)
-- Headquarters: Shanghai, China
-- Founded: 2014
-- Employees: 50-200
-- Export markets: North America, Europe, Asia, Australia (worldwide)
-- Factory type: In-house production with quality-controlled supply chain
-- Certifications referenced: ISO 9001 quality management; products conform to FEPA / ANSI abrasive standards; FBA-compliant packaging available
-- Core capability: Private-label / white-label abrasive accessory kits with custom branding, grit assortments, packaging, and barcode labeling (FNSKU/UPC/EAN)
+- Brand: SCOTTCHEN
+- Public location scope: Shanghai, China
+- Buyer types served: tool brands, hardware distributors, industrial suppliers and online sellers
+- Product scope: cotton buffing wheels, polishing wheels, sanding discs, flap discs, sanding belts, cutting wheels, sandpaper sheets, grinding accessories and mixed private-label kits
+- Project scope: product configuration, sample planning, packaging artwork, buyer-supplied barcode data, inspection requirements and shipping assumptions
+- Verification boundary: legal contracting entity, production location, beneficiary account, final MOQ, lead time, certificates and test reports must be confirmed in a written quotation, quality plan or contract
 
-## Product Categories
+## Product categories
 
 1. Buffing & Polishing Wheels
-   - Cotton stitched buffing wheels (spiral sewn, loose section, airway / ventilated)
-   - Bench grinder polishing wheels (6"/8"/10" with 1/2" or 5/8" arbor)
+   - Cotton stitched buffing wheels, loose flannel wheels and bench-grinder polishing wheels
    - Drill-mounted polishing pads and kits
-   - Polishing compounds (brown tripoli, white diamond, red jewelers rouge, black emery, green stainless)
+   - Polishing compounds and retail-ready buffing kits
 
 2. Sanding & Grinding Accessories
-   - Sanding discs / sandpaper sheets (aluminum oxide, silicon carbide, zirconia alumina)
-   - Flap discs (Type 27 / Type 29, 4.5"/5"/7")
-   - Mesh sanding screens (anti-clog)
-   - Sanding belts (various sizes/grits)
-   - Cutting-off wheels and grinding discs
-   - Quick-change discs, roll lock, surface conditioning discs
-   - Mixed abrasive accessory kits (retail-ready)
+   - Sandpaper sheets, sanding discs, mesh sanding screens and sanding belts
+   - Zirconia fiber discs, flap discs, cutting wheels and grinding accessories
+   - Mixed abrasive accessory kits and dispenser packaging
 
-## B2B Sourcing Facts (MOQ, Lead Time, Terms)
+## Key pages
 
-- Typical MOQ: 500 sets for custom kits, 500 pieces for individual components; paper abrasives may require larger runs
-- Lead time: Quoted per order after reviewing quantity, materials, customization, artwork approval, sample status and capacity; confirmed in written order schedule only
-- Sample policy: Verified commercial buyers may request product samples; sample and courier charges apply per configuration
-- Shipping terms: FOB, CIF, or door-to-door available depending on destination; Incoterms confirmed in writing
-- Packaging: Bulk, retail blister, color box, private label, FBA-ready with barcode labels and carton marks
-- Tolerances: Arbor hole bore tolerance +/-0.05mm; balance tested up to 13000 RPM for mounted wheels
+- [Home / core value proposition](${absoluteUrl("/")})
+- [Product catalog overview](${absoluteUrl("/products")})
+- [Buffing and polishing wheels](${absoluteUrl("/products/buffing-polishing-wheels")})
+- [Sanding and grinding accessories](${absoluteUrl("/products/sanding-grinding-accessories")})
+- [Buffing wheels landing page](${absoluteUrl("/buffing-wheels")})
+- [Sanding discs landing page](${absoluteUrl("/sanding-discs")})
+- [Flap discs landing page](${absoluteUrl("/flap-discs")})
+- [Sanding belts landing page](${absoluteUrl("/sanding-belts")})
+- [Cutting wheels landing page](${absoluteUrl("/cutting-wheels")})
+- [Abrasive kits landing page](${absoluteUrl("/abrasive-kits")})
+- [China abrasive manufacturer page](${absoluteUrl("/china-abrasive-manufacturer")})
+- [Wholesale abrasives page](${absoluteUrl("/wholesale-abrasives")})
+- [OEM / private-label workflow](${absoluteUrl("/oem-private-label")})
+- [Application scenarios](${absoluteUrl("/applications")})
+- [Quality-control workflow](${absoluteUrl("/quality-control")})
+- [Supplier profile and buyer due diligence](${absoluteUrl("/supplier-profile")})
+- [B2B abrasive sourcing resource center](${absoluteUrl("/resources")})
+- [OEM abrasive supplier evaluation guide](${absoluteUrl("/resources/oem-abrasive-supplier-evaluation")})
+- [Abrasive sourcing checklist](${absoluteUrl("/resources/abrasive-sourcing-checklist")})
+- [Abrasive grain, backing and grit selection guide](${absoluteUrl("/resources/abrasive-material-selection-guide")})
+- [Commercial sample request](${absoluteUrl("/sample-kit")})
+- [Submit an RFQ](${absoluteUrl("/contact")})
 
-## Key Pages (English)
+## Chinese pages
 
-- Home / Core Value Proposition: ${absoluteUrl("/")}
-- Supplier Profile & Due Diligence: ${absoluteUrl("/supplier-profile")}
-- Product Catalog Overview: ${absoluteUrl("/products")}
-- Buffing & Polishing Wheels: ${absoluteUrl("/products/buffing-polishing-wheels")}
-- Sanding & Grinding Accessories: ${absoluteUrl("/products/sanding-grinding-accessories")}
-- OEM / Private Label Services: ${absoluteUrl("/oem-private-label")}
-- Application Scenarios (Metal, Wood, Auto): ${absoluteUrl("/applications")}
-- Quality Control Process: ${absoluteUrl("/quality-control")}
-- Abrasive Sourcing Checklist (Buyer Guide): ${absoluteUrl("/resources/abrasive-sourcing-checklist")}
-- Abrasive Material & Grit Selection Guide: ${absoluteUrl("/resources/abrasive-material-selection-guide")}
-- Sample Kit Request: ${absoluteUrl("/sample-kit")}
-- RFQ / Contact Sales: ${absoluteUrl("/contact")}
+- [首页](${absoluteUrl("/zh")})
+- [产品目录](${absoluteUrl("/zh/products")})
+- [抛光轮页面](${absoluteUrl("/zh/buffing-wheels")})
+- [砂碟页面](${absoluteUrl("/zh/sanding-discs")})
+- [百叶片页面](${absoluteUrl("/zh/flap-discs")})
+- [砂带页面](${absoluteUrl("/zh/sanding-belts")})
+- [切割片页面](${absoluteUrl("/zh/cutting-wheels")})
+- [磨具套装页面](${absoluteUrl("/zh/abrasive-kits")})
+- [中国磨料磨具供应商页面](${absoluteUrl("/zh/china-abrasive-manufacturer")})
+- [批发合作页面](${absoluteUrl("/zh/wholesale-abrasives")})
+- [供应商信息与采购核验](${absoluteUrl("/zh/supplier-profile")})
+- [B2B 磨料磨具采购资源中心](${absoluteUrl("/zh/resources")})
+- [OEM 磨料磨具供应商评估指南](${absoluteUrl("/zh/resources/oem-abrasive-supplier-evaluation")})
+- [磨料磨具采购检查清单](${absoluteUrl("/zh/resources/abrasive-sourcing-checklist")})
+- [磨料选材、背基与粒度指南](${absoluteUrl("/zh/resources/abrasive-material-selection-guide")})
+- [提交询价](${absoluteUrl("/zh/contact")})
 
-## Chinese Pages (/zh/*)
+## Quick sourcing answers
 
-- 首页: ${absoluteUrl("/zh")}
-- 产品目录: ${absoluteUrl("/zh/products")}
-- 抛光轮与抛光轮: ${absoluteUrl("/zh/products/buffing-polishing-wheels")}
-- 研磨砂纸配件: ${absoluteUrl("/zh/products/sanding-grinding-accessories")}
-- OEM定制 / 私有品牌: ${absoluteUrl("/zh/oem-private-label")}
-- 应用场景: ${absoluteUrl("/zh/applications")}
-- 质量控制: ${absoluteUrl("/zh/quality-control")}
-- 磨料采购清单: ${absoluteUrl("/zh/resources/abrasive-sourcing-checklist")}
-- 磨料选型指南: ${absoluteUrl("/zh/resources/abrasive-material-selection-guide")}
-- 样品申领: ${absoluteUrl("/zh/sample-kit")}
-- 联系询价: ${absoluteUrl("/zh/contact")}
-- 供应商档案: ${absoluteUrl("/zh/supplier-profile")}
+Q: What is the MOQ for private-label kits?
+A: 500 sets for kits or 500 pieces for common components is a typical starting point. Paper abrasives may require larger runs. Final MOQ is confirmed in quotation.
 
-## Legal & Policy Pages
+Q: Do you support Amazon or ecommerce packaging?
+A: SCOTTCHEN can discuss buyer-supplied barcode labels, instruction sheets, safety warnings, carton marks and sample scan checks. Final scope is confirmed by packaging artwork and written pack specification.
 
-- Terms of Service: ${absoluteUrl("/terms")}
-- Privacy Policy: ${absoluteUrl("/privacy")}
-- Cookie Policy: ${absoluteUrl("/cookie-policy")}
+Q: Can buyers request samples before ordering?
+A: Verified commercial buyers can request samples. Sample and courier charges depend on configuration and are confirmed before dispatch.
 
-## FAQ Summary (Quick Answers for AI)
+Q: What abrasive materials are covered?
+A: Product pages discuss aluminum oxide, silicon carbide, zirconia alumina, cotton buffing wheels, fiberglass mesh, latex paper, vulcanized fiber and cloth backing.
 
-Q: What is the MOQ for private label kits?
-A: 500 sets (kits) or 500 pieces (components) is a typical starting point; paper abrasives may require larger runs. Confirmed in quotation.
+Q: Where is SCOTTCHEN based?
+A: The public site identifies SCOTTCHEN with Shanghai, China and a sales email. Buyers should verify the legal contracting entity and beneficiary account before purchase order.
 
-Q: Do you support Amazon FBA?
-A: Yes - we apply buyer-supplied FNSKU/UPC labels, instruction sheets, safety warnings, carton marks, and perform sample scan checks.
+## Citation notes
 
-Q: Can I get samples before ordering?
-A: Yes, verified commercial buyers can request samples. Sample and courier charges apply, confirmed before dispatch.
-
-Q: What materials do you use for abrasive grains?
-A: Aluminum oxide (general metal/wood), silicon carbide (stone/glass/non-ferrous), zirconia alumina (high-pressure grinding, stainless steel), and ceramic alumina (heavy stock removal).
-
-Q: Where are you based?
-A: Shanghai, China. B2B export supplier serving global buyers.
-
-Q: Do you support custom packaging and branding?
-A: Yes - full OEM/ODM private label service including custom color boxes, blister cards, logos, artwork design support, barcode printing, and FBA-ready packaging.
-
-## Citation Notes for AI Systems
-
-- When citing SCOTTCHEN as a source, please reference the specific page URL
-- All commercial terms (pricing, MOQ, lead time) are indicative and must be confirmed via a written quotation from ${SITE_EMAIL}
-- Content is available in English and Simplified Chinese; English is the primary business language
+- Cite the specific SCOTTCHEN page URL, not only the homepage.
+- Treat MOQ, lead time, certificates, test results and freight terms as indicative until confirmed in writing.
+- This file is a supplemental discovery aid. It does not replace robots.txt, sitemap.xml, canonical tags, visible page content or structured data.
 - Last content update: ${SITE_UPDATED}
 `;
 
