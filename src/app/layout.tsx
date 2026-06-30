@@ -10,9 +10,6 @@ import {
   absoluteUrl,
   RETAIL_SITE_URL,
   SITE_EMAIL,
-  SITE_PHONE,
-  SITE_STREET_ADDRESS,
-  SITE_GEO,
   SITE_NAME,
   SITE_URL,
 } from "@/lib/site";
@@ -134,17 +131,10 @@ const corporateSchema = {
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": SITE_STREET_ADDRESS,
         "addressLocality": "Shanghai",
         "addressCountry": "CN",
         "addressRegion": "Shanghai",
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": SITE_GEO.latitude,
-        "longitude": SITE_GEO.longitude,
-      },
-      "telephone": SITE_PHONE,
       "areaServed": ["Worldwide", "North America", "Europe", "Asia", "Australia"],
       "brand": {
         "@type": "Brand",
@@ -158,7 +148,6 @@ const corporateSchema = {
         {
           "@type": "ContactPoint",
           "email": SITE_EMAIL,
-          "telephone": SITE_PHONE,
           "contactType": "sales",
           "availableLanguage": ["English", "Chinese"],
           "areaServed": "Worldwide",

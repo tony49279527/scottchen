@@ -24,12 +24,9 @@ function resolveSiteUrl(): string {
 
 export const SITE_URL = resolveSiteUrl();
 export const SITE_EMAIL = "sales@scottchentools.com";
-export const SITE_PHONE = "+86-21-1234-5678";
 export const RETAIL_SITE_URL = "https://scottchen.online";
 export const SITE_UPDATED = "2026-06-30";
 export const PRODUCTION_DOMAIN = "www.scottchentools.com";
-export const SITE_STREET_ADDRESS = "Shanghai, China";
-export const SITE_GEO = { latitude: 31.2304, longitude: 121.4737 };
 
 export function absoluteUrl(path = "/") {
   return new URL(path, SITE_URL).toString();
