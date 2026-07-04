@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
+import { absoluteUrl, SITE_UPDATED, SITE_URL } from "@/lib/site";
 
 const LAST_MODIFIED = new Date(SITE_UPDATED);
 
@@ -99,16 +99,18 @@ const standaloneRoutes = [
   { path: "/cookie-policy", priority: 0.2 },
 ] as const;
 
+const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const localizedEntries = localizedRoutes.flatMap(({ en, zh, priority, changefreq }) => {
     const languages = {
-      en: absoluteUrl(en),
-      "zh-CN": absoluteUrl(zh),
-      "x-default": absoluteUrl(en),
+      en: sitemapUrl(en),
+      "zh-CN": sitemapUrl(zh),
+      "x-default": sitemapUrl(en),
     };
 
     return [en, zh].map((p) => ({
-      url: absoluteUrl(p),
+      url: sitemapUrl(p),
       lastModified: LAST_MODIFIED,
       changeFrequency: changefreq,
       priority,
