@@ -225,17 +225,17 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 4. 可公开的测试方法、样品结果、出货报告和客户案例。
 5. 由行业协会、渠道伙伴、现有零售站和客户产生的真实品牌提及与链接。
 
-截至 2026-06-28，`site:scottchentools.com` 未发现有效收录。当前不应把“页面已部署”理解为“已获得自然搜索曝光”。
+截至 2026-07-04，Google Search Console 已验证 `scottchentools.com`，`https://www.scottchentools.com/sitemap.xml` 提交成功，发现 47 个页面，首页 URL 检查显示已被 Google 编入索引。Pages 报告仍需等待 Google 完成处理。
 
 ## 八、上线后仍必须完成
 
-1. 配置 `INQUIRY_WEBHOOK_URL`，或完整配置 `RESEND_*`。
-2. 验证 `sales@scottchentools.com` 能正常收发邮件。
-3. 配置并检查 SPF、DKIM 和 DMARC。
+1. 配置 `INQUIRY_WEBHOOK_URL`，或完整配置 `RESEND_*`。2026-07-04 复核发现 Cloud Run 生产环境仍未配置询盘投递变量。
+2. 验证 `sales@scottchentools.com` 能正常收发邮件。2026-07-04 公开 DNS 未发现 MX 记录。
+3. 配置并检查 SPF、DKIM 和 DMARC。2026-07-04 公开 DNS 未发现 SPF 或 DMARC 记录。
 4. 在生产环境完整提交一次报价表和样品表。
-5. 在自定义域名上线前保持 Cloud Run 为唯一 canonical；域名切换时一次性更新环境变量并验证全站。
+5. 自定义域名已经切换为 `https://www.scottchentools.com`，需持续保持 canonical、hreflang、sitemap 和 Cloud Run 环境变量一致。
 6. 由企业负责人复核所有商业能力、MOQ、交期和质量承诺。
-7. 当前 Google 账户尚未验证 `scottchentools.com`。完成域名所有权验证后，将根域和 `www` 映射到 Cloud Run，并验证 HTTPS、重定向、canonical、hreflang 和 sitemap。
+7. Google Search Console 已完成域名验证和 sitemap 提交；仍需在 Pages 报告出结果后处理未收录原因。
 8. 将当前进程内询盘限流升级为 Cloud Armor、API Gateway 或共享存储方案；Cloud Run 多实例之间不会共享内存计数。
 
 ## 九、2026-06-30 方法论落地优化
@@ -263,6 +263,15 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 - 可公开的真实案例、渠道伙伴、客户评价和外部品牌提及。
 - 每个产品族的真实规格书、测试方法、证书编号、有效期和适用范围。
 - Search Console、Bing Webmaster、GA4 和询盘投递系统权限，用于上线后观测真实 SEO/GEO 表现。
+
+### 2026-07-04 追加完成
+
+- Google Search Console sitemap 状态已变为 `Success`，发现 47 个页面。
+- 首页 URL 检查显示已在 Google 索引中。
+- 新增 IndexNow key 文件并向 IndexNow 提交 47 个 sitemap URL，接口返回 `202`。
+- Cloud Run 生产环境复核：当前仅配置 `NEXT_PUBLIC_SITE_URL`，仍缺询盘投递和 GA4 变量。
+- 公开 DNS 复核：域名使用 Cloudflare nameserver，但没有 MX、SPF、DMARC 记录。
+- 新增 [生产运营清单](./production-ops-checklist.md)，用于后续配置询盘、邮箱、GA4 和搜索平台。
 
 ## 十、上线后 30/60/90 天计划
 
