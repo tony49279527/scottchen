@@ -94,9 +94,10 @@ const localizedRoutes = [
 ] as const;
 
 const standaloneRoutes = [
-  { path: "/terms", priority: 0.2 },
-  { path: "/privacy", priority: 0.2 },
-  { path: "/cookie-policy", priority: 0.2 },
+  { path: "/catalog.pdf", priority: 0.6, changefreq: "monthly" as const },
+  { path: "/terms", priority: 0.2, changefreq: "yearly" as const },
+  { path: "/privacy", priority: 0.2, changefreq: "yearly" as const },
+  { path: "/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
 ] as const;
 
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
@@ -120,10 +121,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...localizedEntries,
-    ...standaloneRoutes.map(({ path: p, priority }) => ({
+    ...standaloneRoutes.map(({ path: p, priority, changefreq }) => ({
       url: absoluteUrl(p),
       lastModified: LAST_MODIFIED,
-      changeFrequency: "yearly" as const,
+      changeFrequency: changefreq,
       priority,
     })),
   ];
