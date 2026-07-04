@@ -24,6 +24,8 @@ export default function RFQForm() {
   const router = useRouter();
   const pathname = usePathname() || "";
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+  const supportEmail = "sales@scottchentools.com";
+  const supportMailto = `mailto:${supportEmail}?subject=${encodeURIComponent("SCOTTCHEN RFQ request")}`;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [formStartedAt] = useState(() => new Date().toISOString());
@@ -66,6 +68,19 @@ export default function RFQForm() {
       }
     }
     return "";
+  };
+
+  const deliveryErrorMessage = () =>
+    isZh
+      ? "在线询盘暂时未能送达。请直接发送邮件给我们，或稍后再试。"
+      : "Online inquiry delivery is temporarily unavailable. Please email us directly or try again later.";
+
+  const readableSubmitError = (message?: string) => {
+    if (!message || message.includes("Inquiry delivery is not configured")) {
+      return deliveryErrorMessage();
+    }
+
+    return message;
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -153,12 +168,7 @@ export default function RFQForm() {
           category: fields.productCategory,
           buyerType: fields.buyerType,
         });
-        setSubmitError(
-          result.message ||
-            (isZh
-              ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
-              : "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly.")
-        );
+        setSubmitError(readableSubmitError(result.message));
         setIsSubmitting(false);
         return;
       }
@@ -180,9 +190,7 @@ export default function RFQForm() {
         buyerType: fields.buyerType,
       });
       setSubmitError(
-        isZh
-          ? "询盘暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
-          : "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly."
+        deliveryErrorMessage()
       );
       setIsSubmitting(false);
       return;
@@ -552,7 +560,10 @@ export default function RFQForm() {
             className="mb-4 rounded border border-red-500/40 bg-red-950/40 px-4 py-3 text-sm text-red-200"
             role="alert"
           >
-            {submitError}
+            <p>{submitError}</p>
+            <a className="mt-2 inline-block font-semibold text-red-100 underline underline-offset-4" href={supportMailto}>
+              {supportEmail}
+            </a>
           </div>
         ) : null}
         <button

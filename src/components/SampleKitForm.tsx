@@ -25,6 +25,8 @@ export default function SampleKitForm() {
   const router = useRouter();
   const pathname = usePathname() || "";
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+  const supportEmail = "sales@scottchentools.com";
+  const supportMailto = `mailto:${supportEmail}?subject=${encodeURIComponent("SCOTTCHEN sample request")}`;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [formStartedAt] = useState(() => new Date().toISOString());
@@ -84,6 +86,19 @@ export default function SampleKitForm() {
       }
     }
     return "";
+  };
+
+  const deliveryErrorMessage = () =>
+    isZh
+      ? "在线样品申请暂时未能送达。请直接发送邮件给我们，或稍后再试。"
+      : "Online sample request delivery is temporarily unavailable. Please email us directly or try again later.";
+
+  const readableSubmitError = (message?: string) => {
+    if (!message || message.includes("Inquiry delivery is not configured")) {
+      return deliveryErrorMessage();
+    }
+
+    return message;
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -189,12 +204,7 @@ export default function SampleKitForm() {
           formType: "sample",
           category: fields.categories.join(", "),
         });
-        setSubmitError(
-          result.message ||
-            (isZh
-              ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
-              : "We could not deliver your sample request just now. Please try again or email sales@scottchentools.com directly.")
-        );
+        setSubmitError(readableSubmitError(result.message));
         setIsSubmitting(false);
         return;
       }
@@ -213,9 +223,7 @@ export default function SampleKitForm() {
         category: fields.categories.join(", "),
       });
       setSubmitError(
-        isZh
-          ? "样品申请暂时未能送达，请稍后重试，或直接发送邮件至 sales@scottchentools.com。"
-          : "We could not deliver your sample request just now. Please try again or email sales@scottchentools.com directly."
+        deliveryErrorMessage()
       );
       setIsSubmitting(false);
       return;
@@ -601,7 +609,10 @@ export default function SampleKitForm() {
             className="mb-4 rounded border border-red-500/40 bg-red-950/40 px-4 py-3 text-sm text-red-200"
             role="alert"
           >
-            {submitError}
+            <p>{submitError}</p>
+            <a className="mt-2 inline-block font-semibold text-red-100 underline underline-offset-4" href={supportMailto}>
+              {supportEmail}
+            </a>
           </div>
         ) : null}
         <button
