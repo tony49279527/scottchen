@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "SCOTTCHEN 磨料磨具与抛光轮 OEM/ODM 供应",
@@ -10,6 +11,29 @@ export const metadata: Metadata = createPageMetadata({
   alternatePath: "/",
   locale: "zh-CN",
 });
+
+const homeFaqs = [
+  {
+    q: "你们抛光轮的最小起订量 (MOQ) 是多少？交期多久？",
+    a: "500 件或 500 套是许多项目的询价起点，纸类磨料可能需要更大批量。实际 MOQ 和生产目标取决于 SKU、数量、包装、印刷、样品及产能，并在报价与订单计划中确认。",
+  },
+  {
+    q: "发往海外仓的包装与条码如何检查？",
+    a: "我们可按买家提供的 FNSKU/UPC 数据制作彩盒或标签，并在出货前进行扫描抽检。警告标签、纸箱标和最终入仓要求需依据平台当期规则确认。",
+  },
+  {
+    q: "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
+    a: "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4\" 铁柄或六角快速接头的夹持盘和迷你抛光磨头。",
+  },
+  {
+    q: "砂纸和砂网有什么区别？我们如何为客户选择？",
+    a: "传统砂纸可用于木工打磨及汽车漆面精饰，干湿两用乳胶纸基具有较好柔韧度；网格砂网采用开放式结构，有助于排灰并减少堵塞，常用于石膏板墙面打磨。实际集尘效果取决于打磨机、吸尘设备和操作条件。",
+  },
+  {
+    q: "你们可以提供样品测试吗？",
+    a: "可以。经核实的商业采购商可以申请样品。样品和国际快递费用取决于具体规格，并在发出前书面确认；如有合格订单抵扣政策，也会写入报价单。",
+  },
+] as const;
 
 export default function ChineseHome() {
   return (
@@ -318,28 +342,7 @@ export default function ChineseHome() {
           </div>
 
           <div className="space-y-6">
-            {[
-              {
-                q: "你们抛光轮的最小起订量 (MOQ) 是多少？交期多久？",
-                a: "500 件或 500 套是许多项目的询价起点，纸类磨料可能需要更大批量。实际 MOQ 和生产目标取决于 SKU、数量、包装、印刷、样品及产能，并在报价与订单计划中确认。"
-              },
-              {
-                q: "发往海外仓的包装与条码如何检查？",
-                a: "我们可按买家提供的 FNSKU/UPC 数据制作彩盒或标签，并在出货前进行扫描抽检。警告标签、纸箱标和最终入仓要求需依据平台当期规则确认。"
-              },
-              {
-                q: "抛光轮中心孔 (Bore) 可以定制吗？如何适配不同的轴心？",
-                a: "可以。我们提供包括 1/2英寸、5/8英寸、3/4英寸和 1英寸的中心孔。对于 bench grinder，我们提供 telescoping 阶梯塑料轴套或厚质纸套以实现多尺寸向下兼容。另外也提供带 1/4\" 铁柄或六角快速接头的夹持盘和迷你抛光磨头。"
-              },
-              {
-                q: "砂纸和砂网有什么区别？我们如何为客户选择？",
-                a: "传统砂纸可用于木工打磨及汽车漆面精饰，干湿两用乳胶纸基具有较好柔韧度；网格砂网采用开放式结构，有助于排灰并减少堵塞，常用于石膏板墙面打磨。实际集尘效果取决于打磨机、吸尘设备和操作条件。"
-              },
-              {
-                q: "你们可以提供样品测试吗？",
-                a: "可以。经核实的商业采购商可以申请样品。样品和国际快递费用取决于具体规格，并在发出前书面确认；如有合格订单抵扣政策，也会写入报价单。"
-              }
-            ].map((faq, idx) => (
+            {homeFaqs.map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
                 <h3 className="text-base font-bold text-white flex items-start">
                   <span className="text-industry-orange mr-2 shrink-0">Q:</span>
@@ -353,6 +356,43 @@ export default function ChineseHome() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": absoluteUrl("/zh#webpage"),
+                url: absoluteUrl("/zh"),
+                name: "SCOTTCHEN 磨料磨具与抛光轮 OEM/ODM 供应",
+                description:
+                  "SCOTTCHEN 提供工业抛光轮、抛光布轮、气道布轮、砂碟及定制五金磨具套装的 B2B 供应、贴牌包装和条码准备支持。",
+                dateModified: SITE_UPDATED,
+                inLanguage: "zh-CN",
+                isPartOf: { "@id": absoluteUrl("/#website") },
+                about: { "@id": absoluteUrl("/#organization") },
+                primaryImageOfPage: absoluteUrl("/images/hero_abrasives_kit.webp"),
+              },
+              {
+                "@type": "FAQPage",
+                "@id": absoluteUrl("/zh#faqpage"),
+                inLanguage: "zh-CN",
+                mainEntity: homeFaqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.q,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.a,
+                  },
+                })),
+              },
+            ],
+          }),
+        }}
+      />
 
       <CTASection />
     </div>

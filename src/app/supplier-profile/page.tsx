@@ -39,25 +39,66 @@ const verificationItems = [
 export default function SupplierProfile() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": absoluteUrl("/supplier-profile#about"),
-    url: absoluteUrl("/supplier-profile"),
-    name: "SCOTTCHEN Supplier Profile",
-    dateModified: SITE_UPDATED,
-    mainEntity: {
-      "@type": "Organization",
-      "@id": `${absoluteUrl("/")}#organization`,
-      name: SITE_NAME,
-      url: absoluteUrl("/"),
-      email: SITE_EMAIL,
-      sameAs: [RETAIL_SITE_URL],
-      knowsAbout: [
-        "Coated abrasives",
-        "Cotton buffing wheels",
-        "Private-label tool accessory kits",
-        "Retail packaging preparation",
-      ],
-    },
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": absoluteUrl("/supplier-profile#about"),
+        url: absoluteUrl("/supplier-profile"),
+        name: "SCOTTCHEN Supplier Profile",
+        description:
+          "Published B2B scope, contact channel, verification boundary and buyer due-diligence checklist for SCOTTCHEN.",
+        inLanguage: "en",
+        dateModified: SITE_UPDATED,
+        isPartOf: { "@id": absoluteUrl("/#website") },
+        about: { "@id": absoluteUrl("/#organization") },
+        mainEntity: { "@id": absoluteUrl("/#organization") },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${absoluteUrl("/")}#organization`,
+        name: SITE_NAME,
+        url: absoluteUrl("/"),
+        email: SITE_EMAIL,
+        sameAs: [RETAIL_SITE_URL],
+        areaServed: "Worldwide",
+        knowsAbout: [
+          "Coated abrasives",
+          "Cotton buffing wheels",
+          "Private-label tool accessory kits",
+          "Retail packaging preparation",
+        ],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: SITE_EMAIL,
+            contactType: "B2B sales and OEM quotation",
+            availableLanguage: ["English", "Chinese"],
+            areaServed: "Worldwide",
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/supplier-profile#published-facts"),
+        name: "Published SCOTTCHEN supplier facts",
+        itemListElement: facts.map(([label, value], index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: label,
+          description: value,
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/supplier-profile#buyer-verification-checklist"),
+        name: "Buyer verification checklist before purchase order",
+        itemListElement: verificationItems.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item,
+        })),
+      },
+    ],
   };
 
   return (

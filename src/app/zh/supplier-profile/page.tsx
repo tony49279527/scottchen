@@ -40,21 +40,61 @@ const verificationItems = [
 export default function ChineseSupplierProfile() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": absoluteUrl("/zh/supplier-profile#about"),
-    url: absoluteUrl("/zh/supplier-profile"),
-    name: "SCOTTCHEN B2B 供应商档案",
-    inLanguage: "zh-CN",
-    dateModified: SITE_UPDATED,
-    mainEntity: {
-      "@type": "Organization",
-      "@id": `${absoluteUrl("/")}#organization`,
-      name: SITE_NAME,
-      url: absoluteUrl("/"),
-      email: SITE_EMAIL,
-      sameAs: [RETAIL_SITE_URL],
-      knowsAbout: ["涂附磨具", "棉布抛光轮", "贴牌工具配件套装", "零售包装与条码准备"],
-    },
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": absoluteUrl("/zh/supplier-profile#about"),
+        url: absoluteUrl("/zh/supplier-profile"),
+        name: "SCOTTCHEN B2B 供应商档案",
+        description:
+          "SCOTTCHEN 的 B2B 范围、联系渠道、供应商核验边界和买家尽调清单。",
+        inLanguage: "zh-CN",
+        dateModified: SITE_UPDATED,
+        isPartOf: { "@id": absoluteUrl("/#website") },
+        about: { "@id": absoluteUrl("/#organization") },
+        mainEntity: { "@id": absoluteUrl("/#organization") },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${absoluteUrl("/")}#organization`,
+        name: SITE_NAME,
+        url: absoluteUrl("/"),
+        email: SITE_EMAIL,
+        sameAs: [RETAIL_SITE_URL],
+        areaServed: "Worldwide",
+        knowsAbout: ["涂附磨具", "棉布抛光轮", "贴牌工具配件套装", "零售包装与条码准备"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: SITE_EMAIL,
+            contactType: "B2B 销售与 OEM 报价",
+            availableLanguage: ["Chinese", "English"],
+            areaServed: "Worldwide",
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/zh/supplier-profile#published-facts"),
+        name: "SCOTTCHEN 已公开供应商事实",
+        itemListElement: facts.map(([label, value], index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: label,
+          description: value,
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/zh/supplier-profile#buyer-verification-checklist"),
+        name: "采购订单前买家尽调清单",
+        itemListElement: verificationItems.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item,
+        })),
+      },
+    ],
   };
 
   return (

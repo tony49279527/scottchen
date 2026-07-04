@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
@@ -9,6 +10,33 @@ export const metadata: Metadata = createPageMetadata({
   path: "/",
   alternatePath: "/zh",
 });
+
+const homeFaqs = [
+  {
+    q: "What is the minimum order quantity (MOQ) for custom private label kits?",
+    a: "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation.",
+  },
+  {
+    q: "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
+    a: "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification.",
+  },
+  {
+    q: "Can I request physical samples for laboratory testing before ordering?",
+    a: "Verified commercial buyers can request product samples. Sample and courier charges depend on the requested configuration and are confirmed before dispatch; qualifying credits, if offered, are stated in the quotation.",
+  },
+  {
+    q: "How are buffing wheel tolerances confirmed?",
+    a: "Dimensions, bore fit, construction, and any runout or balance criteria are confirmed in the approved SKU specification. Production checks and acceptance records are then matched to that agreed standard.",
+  },
+  {
+    q: "How is the B2B production lead time confirmed?",
+    a: "The production target is quoted after quantity, materials, customization, artwork approval, sample status and capacity are reviewed. It becomes a commitment only when stated in the written order schedule.",
+  },
+  {
+    q: "What shipping terms and export ports do you support?",
+    a: "FOB, CIF or a door-to-door option may be quoted depending on destination and service availability. The Incoterms rule, named place, port, importer-of-record role, taxes and customs responsibilities are confirmed in writing.",
+  },
+] as const;
 
 export default function Home() {
   const categories = [
@@ -571,32 +599,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-6">
-            {[
-              {
-                q: "What is the minimum order quantity (MOQ) for custom private label kits?",
-                a: "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation."
-              },
-              {
-                q: "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
-                a: "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification."
-              },
-              {
-                q: "Can I request physical samples for laboratory testing before ordering?",
-                a: "Verified commercial buyers can request product samples. Sample and courier charges depend on the requested configuration and are confirmed before dispatch; qualifying credits, if offered, are stated in the quotation."
-              },
-              {
-                q: "How are buffing wheel tolerances confirmed?",
-                a: "Dimensions, bore fit, construction, and any runout or balance criteria are confirmed in the approved SKU specification. Production checks and acceptance records are then matched to that agreed standard."
-              },
-              {
-                q: "How is the B2B production lead time confirmed?",
-                a: "The production target is quoted after quantity, materials, customization, artwork approval, sample status and capacity are reviewed. It becomes a commitment only when stated in the written order schedule."
-              },
-              {
-                q: "What shipping terms and export ports do you support?",
-                a: "FOB, CIF or a door-to-door option may be quoted depending on destination and service availability. The Incoterms rule, named place, port, importer-of-record role, taxes and customs responsibilities are confirmed in writing."
-              }
-            ].map((faq, idx) => (
+            {homeFaqs.map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
                 <h3 className="text-base font-bold text-white flex items-start">
                   <span className="text-industry-orange mr-2 shrink-0">Q:</span>
@@ -610,6 +613,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": absoluteUrl("/#webpage"),
+                url: absoluteUrl("/"),
+                name: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
+                description:
+                  "SCOTTCHEN supplies retail-ready surface finishing accessory kits with private-label packaging, custom grit assortments and B2B sourcing support.",
+                dateModified: SITE_UPDATED,
+                inLanguage: "en",
+                isPartOf: { "@id": absoluteUrl("/#website") },
+                about: { "@id": absoluteUrl("/#organization") },
+                primaryImageOfPage: absoluteUrl("/images/hero_abrasives_kit.webp"),
+              },
+              {
+                "@type": "FAQPage",
+                "@id": absoluteUrl("/#faqpage"),
+                mainEntity: homeFaqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.q,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.a,
+                  },
+                })),
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

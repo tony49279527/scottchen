@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RFQForm from "@/components/RFQForm";
 import { createPageMetadata } from "@/lib/seo";
+import {
+  absoluteUrl,
+  RETAIL_SITE_URL,
+  SITE_EMAIL,
+  SITE_NAME,
+  SITE_UPDATED,
+} from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "索取 OEM / 磨料磨具批发大货报价 | SCOTTCHEN",
@@ -11,7 +18,61 @@ export const metadata: Metadata = createPageMetadata({
   locale: "zh-CN",
 });
 
+const rfqSpecificationItems = [
+  "产品类别与目标应用场景",
+  "抛光轮外径、叠层数、中心孔或柄部尺寸",
+  "磨粒类别、目数清单、背基材料和组合比例",
+  "贴牌包装形式、刀模、条码和外箱唛头要求",
+  "目标数量、目的市场、Incoterms 规则和优先出运方案",
+] as const;
+
 export default function ChineseContact() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": absoluteUrl("/zh/contact#contactpage"),
+        url: absoluteUrl("/zh/contact"),
+        name: "索取 OEM / 磨料磨具批发大货报价 | SCOTTCHEN",
+        description:
+          "SCOTTCHEN 面向磨料、砂纸和抛光配件套装的 B2B 询价页面，覆盖贴牌包装、批发采购和 OEM 项目报价。",
+        inLanguage: "zh-CN",
+        dateModified: SITE_UPDATED,
+        isPartOf: { "@id": absoluteUrl("/#website") },
+        about: { "@id": absoluteUrl("/#organization") },
+        mainEntity: { "@id": absoluteUrl("/#organization") },
+      },
+      {
+        "@type": "Organization",
+        "@id": absoluteUrl("/#organization"),
+        name: SITE_NAME,
+        url: absoluteUrl("/"),
+        email: SITE_EMAIL,
+        sameAs: [RETAIL_SITE_URL],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: SITE_EMAIL,
+            contactType: "B2B 销售与 OEM 报价",
+            availableLanguage: ["Chinese", "English"],
+            areaServed: "Worldwide",
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/zh/contact#rfq-specification-checklist"),
+        name: "SCOTTCHEN 询盘建议提供的规格信息",
+        itemListElement: rfqSpecificationItems.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item,
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
@@ -88,11 +149,9 @@ export default function ChineseContact() {
                   为了最快速度为您定制高品质的报价，建议在留言中写明：
                 </p>
                 <ul className="space-y-1.5 text-xs text-industry-slate-400 pl-4 list-disc font-mono">
-                  <li>棉轮的具体外径与叠层数 (Ply)</li>
-                  <li>中心轴径内孔尺寸规格</li>
-                  <li>砂纸所需的目数配比及纸重底基</li>
-                  <li>包装盒/泡壳印刷的 CAD 刀模需求</li>
-                  <li>首批大货预估采购柜量/数量</li>
+                  {rfqSpecificationItems.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -101,6 +160,7 @@ export default function ChineseContact() {
           </div>
         </div>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </div>
   );
 }

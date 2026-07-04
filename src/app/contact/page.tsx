@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RFQForm from "@/components/RFQForm";
 import { createPageMetadata } from "@/lib/seo";
+import {
+  absoluteUrl,
+  RETAIL_SITE_URL,
+  SITE_EMAIL,
+  SITE_NAME,
+  SITE_UPDATED,
+} from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Request an OEM / Wholesale Quote | SCOTTCHEN",
@@ -10,7 +17,61 @@ export const metadata: Metadata = createPageMetadata({
   alternatePath: "/zh/contact",
 });
 
+const rfqSpecificationItems = [
+  "Product category and target application",
+  "Wheel diameter, ply count, arbor hole or shank sizing",
+  "Abrasive grain, grit list, backing material and assortment ratio",
+  "Private-label packaging format, dieline, barcode and carton mark requirements",
+  "Target quantity, destination market, Incoterms rule and preferred shipment plan",
+] as const;
+
 export default function Contact() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": absoluteUrl("/contact#contactpage"),
+        url: absoluteUrl("/contact"),
+        name: "Request an OEM / Wholesale Quote | SCOTTCHEN",
+        description:
+          "B2B RFQ page for OEM abrasive, sanding and polishing accessory kits, private-label packaging and wholesale sourcing requests.",
+        inLanguage: "en",
+        dateModified: SITE_UPDATED,
+        isPartOf: { "@id": absoluteUrl("/#website") },
+        about: { "@id": absoluteUrl("/#organization") },
+        mainEntity: { "@id": absoluteUrl("/#organization") },
+      },
+      {
+        "@type": "Organization",
+        "@id": absoluteUrl("/#organization"),
+        name: SITE_NAME,
+        url: absoluteUrl("/"),
+        email: SITE_EMAIL,
+        sameAs: [RETAIL_SITE_URL],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: SITE_EMAIL,
+            contactType: "B2B sales and OEM quotation",
+            availableLanguage: ["English", "Chinese"],
+            areaServed: "Worldwide",
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/contact#rfq-specification-checklist"),
+        name: "RFQ specification details requested by SCOTTCHEN",
+        itemListElement: rfqSpecificationItems.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item,
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
@@ -87,11 +148,9 @@ export default function Contact() {
                   To speed up quote generation, please specify:
                 </p>
                 <ul className="space-y-1.5 text-xs text-industry-slate-400 pl-4 list-disc font-mono">
-                  <li>Exact wheel diameters & ply count</li>
-                  <li>Arbor hole center bore sizing</li>
-                  <li>Sandpaper grit list and backing</li>
-                  <li>Dieline requirements for color boxes</li>
-                  <li>Estimated shipment volumes</li>
+                  {rfqSpecificationItems.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -100,6 +159,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </div>
   );
 }
