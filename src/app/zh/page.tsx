@@ -376,19 +376,6 @@ export default function ChineseHome() {
                 about: { "@id": absoluteUrl("/#organization") },
                 primaryImageOfPage: absoluteUrl("/images/hero_abrasives_kit.webp"),
               },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh#faqpage"),
-                inLanguage: "zh-CN",
-                mainEntity: homeFaqs.map((faq) => ({
-                  "@type": "Question",
-                  name: faq.q,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: faq.a,
-                  },
-                })),
-              },
             ],
           }),
         }}
