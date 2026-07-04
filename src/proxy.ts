@@ -16,7 +16,7 @@ const isPreviewHost = (host: string): boolean => {
   );
 };
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const host = request.headers.get("host") || "";
   const hostname = host.split(":")[0].toLowerCase();
 
