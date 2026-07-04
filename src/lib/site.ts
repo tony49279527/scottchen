@@ -25,7 +25,7 @@ function resolveSiteUrl(): string {
 export const SITE_URL = resolveSiteUrl();
 export const SITE_EMAIL = "sales@scottchentools.com";
 export const RETAIL_SITE_URL = "https://scottchen.online";
-export const SITE_UPDATED = "2026-06-30";
+export const SITE_UPDATED = "2026-07-04";
 export const PRODUCTION_DOMAIN = "www.scottchentools.com";
 
 export function absoluteUrl(path = "/") {
