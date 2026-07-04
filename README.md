@@ -69,6 +69,10 @@ Use `npm run typecheck` for a fast TypeScript pass.
 
 Webhook payloads now include contact fields, inquiry fields, `utm_*`, `referrer`, `landingPage`, `locale`, `clientIp`, `userAgent`, `submittedAt`, `leadScore`, and `leadTier`.
 
+Run `npm run indexnow` after a production content update to submit sitemap URLs
+to IndexNow. The hosted key file is available at
+`https://www.scottchentools.com/bba16f0343d10f111540909669eb16cc.txt`.
+
 ### Cloud Run deployment
 
 `Dockerfile` builds the Next.js standalone server for Cloud Run on port `8080`.
