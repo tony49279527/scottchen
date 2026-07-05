@@ -28,7 +28,7 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "geolocation=(), camera=(), microphone=(), interest-cohort=(), payment=(), usb=()" },
           {
             key: "Content-Security-Policy",
-            value: isProd ? cspDirectives : cspDirectives.replace("'unsafe-eval'", ""),
+            value: isProd ? cspDirectives.replace(" 'unsafe-eval'", "") : cspDirectives,
           },
         ],
       },
