@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/prepare-standalone.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "seo:smoke": "node scripts/seo-smoke-check.mjs",
-    "start": "node .next/standalone/server.js",
+    "start": "next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

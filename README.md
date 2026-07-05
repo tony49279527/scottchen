@@ -18,9 +18,14 @@ npm run build
 npm run start
 ```
 
-The site now includes a server-side inquiry endpoint at `/api/inquiry`, so deployment must run on a Node-capable target. The project is configured with `output: "standalone"`.
+The site includes a server-side inquiry endpoint at `/api/inquiry`, so deployment must run on a Node-capable target such as Vercel's Next.js runtime.
+For Vercel, keep the framework preset as Next.js and use the repository defaults:
 
-The `postbuild` step copies `public` and `.next/static` into the standalone bundle. This keeps CSS, fonts, images, the catalog, and metadata routes available when `npm run start` launches the production server.
+- Install command: `npm ci`
+- Build command: `npm run build`
+- Output directory: handled by Vercel's Next.js adapter
+
+Set `NEXT_PUBLIC_SITE_URL=https://www.scottchentools.com` after the production domain is attached to the Vercel project.
 
 ### Inquiry delivery
 
@@ -77,23 +82,18 @@ Run `npm run seo:smoke` to verify production robots.txt, sitemap.xml,
 IndexNow key file, URL status codes, noindex state, and canonical consistency.
 GitHub Actions also runs this check daily.
 
-### Cloud Run deployment
+### Vercel deployment
 
-`Dockerfile` builds the Next.js standalone server for Cloud Run on port `8080`.
-Pushes to `main` are deployed by `.github/workflows/cloud-run.yml` through
-Workload Identity Federation, so no long-lived Google Cloud service account key
-is stored in GitHub.
+Deploy this project as a Vercel Next.js application. The checked-in
+`vercel.json` pins the install and build commands and sets the public canonical
+site URL.
 
-Production infrastructure:
+Required Vercel environment variables:
 
-- Google Cloud project: `scottchen-b2b-prod-2026`
-- Region: `asia-east1`
-- Cloud Run service: `scottchen-b2b`
-- Artifact Registry repository: `cloud-run`
+- `NEXT_PUBLIC_SITE_URL=https://www.scottchentools.com`
+- `INQUIRY_WEBHOOK_URL` or `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, and `INQUIRY_TO_EMAIL`
+- Optional: `INQUIRY_AUTO_REPLY_ENABLED`, `INQUIRY_AUTO_REPLY_FROM`, `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 
-The canonical host defaults to the deterministic Cloud Run URL. Set
-`NEXT_PUBLIC_SITE_URL` to the final HTTPS origin only after the custom domain is
-verified, mapped, and serving every route correctly.
-
-The inquiry endpoint requires `INQUIRY_WEBHOOK_URL` or the `RESEND_*` values to
-be configured on the Cloud Run service before form submissions can be delivered.
+After the first Vercel deployment is live, point `www.scottchentools.com` to
+the domain target shown in the Vercel Domains panel. Keep the apex
+`scottchentools.com` redirecting to `www.scottchentools.com`.
