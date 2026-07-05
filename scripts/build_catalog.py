@@ -17,8 +17,8 @@ OUTPUT = ROOT / "output" / "pdf" / "scottchen-b2b-catalog.pdf"
 PUBLIC = ROOT / "public" / "catalog.pdf"
 IMAGES = ROOT / "public" / "images"
 CATALOG_ASSETS = ROOT / "tmp" / "pdfs" / "catalog-assets"
-B2B_SITE_URL = "https://scottchen-b2b-530847966105.asia-east1.run.app"
-B2B_SITE_LABEL = "scottchen-b2b-530847966105.asia-east1.run.app"
+B2B_SITE_URL = "https://www.scottchentools.com"
+B2B_SITE_LABEL = "www.scottchentools.com"
 
 PAGE_W, PAGE_H = A4
 NAVY = HexColor("#070A13")

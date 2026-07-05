@@ -93,7 +93,7 @@ const localizedRoutes = [
   },
 ] as const;
 
-const standaloneRoutes = [
+const utilityRoutes = [
   { path: "/catalog.pdf", priority: 0.6, changefreq: "monthly" as const },
   { path: "/terms", priority: 0.2, changefreq: "yearly" as const },
   { path: "/privacy", priority: 0.2, changefreq: "yearly" as const },
@@ -121,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...localizedEntries,
-    ...standaloneRoutes.map(({ path: p, priority, changefreq }) => ({
+    ...utilityRoutes.map(({ path: p, priority, changefreq }) => ({
       url: absoluteUrl(p),
       lastModified: LAST_MODIFIED,
       changeFrequency: changefreq,

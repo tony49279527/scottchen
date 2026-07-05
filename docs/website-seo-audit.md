@@ -19,21 +19,20 @@
 
 本轮已完成所有可由代码安全解决的高优先级问题。当前生产构建已通过类型检查、编译、页面抓取、资源抓取、移动端布局、元数据、结构化数据、表单 API 和 PDF 渲染检查。
 
-截至 2026-06-28，网站已部署到 Google Cloud Run：
+截至 2026-07-05，项目已改为 Vercel Next.js 部署取向：
 
-- 项目：`scottchen-b2b-prod-2026`
-- 区域：`asia-east1`
-- 服务：`scottchen-b2b`
-- 临时生产地址：[Cloud Run 服务](https://scottchen-b2b-530847966105.asia-east1.run.app)
-- 自动部署：GitHub `main` 分支通过 Workload Identity Federation 构建并发布，不使用长期服务账号密钥。
+- 自托管/容器部署文件、旧云端自动部署工作流和 standalone 后处理脚本已移除。
+- `start` 脚本改为 `next start`，Vercel 构建保持 `npm run build`。
+- `middleware.ts` 已迁移为 Next.js 16 推荐的 `proxy.ts`。
+- `NEXT_PUBLIC_SITE_URL` 应在 Vercel 生产环境设置为 `https://www.scottchentools.com`。
 
-本轮深度复核又发现一个上线后的 P0 问题：页面 canonical、hreflang、sitemap 和结构化数据仍指向无法访问的 `www.scottchentools.com`。这会让搜索引擎把可访问的 Cloud Run 页面归并到一个不可抓取主机。代码现已统一使用真实 Cloud Run 地址，并支持通过 `NEXT_PUBLIC_SITE_URL` 在正式域名验证和映射完成后一次性切换。
+域名迁移时，应先完成 Vercel 首次生产部署，再将 `www.scottchentools.com` 的 DNS 指向 Vercel Domains 面板给出的目标。
 
 ## 二、评分
 
 | 评估项 | 优化前 | 当前 | 说明 |
 | --- | ---: | ---: | --- |
-| 移动端性能 | 60/100 | 97/100 | Cloud Run Lighthouse 生产模式 |
+| 移动端性能 | 60/100 | 97/100 | 旧生产模式 Lighthouse；迁移 Vercel 后需重测 |
 | 无障碍 | 96/100 | 100/100 | 已修复对比度和导航控件 |
 | 最佳实践 | 96/100 | 100/100 | 已补图标并消除控制台错误 |
 | Lighthouse SEO | 100/100 | 100/100 | 只代表基础 SEO 标签通过 |
@@ -42,13 +41,13 @@
 | 内容架构 | 70/100 | 89/100 | 商业页、采购清单、引用型选材指南和双语内链 |
 | GEO/生成式搜索基础 | 20/100 | 84/100 | 实体页、答案优先内容、来源引用、AI 抓取和 llms.txt |
 | 企业可信度证据 | 35/100 | 62/100 | 已透明披露核验边界，仍缺法定主体、地址和真实工厂证据 |
-| 站外权威度 | 15/100 | 15/100 | Cloud Run 已上线，正式域名尚未切换、收录和获得外链 |
+| 站外权威度 | 15/100 | 15/100 | 正式域名需在 Vercel 上线后重新提交收录并积累外链 |
 
 Lighthouse SEO 100 分不是排名能力 100 分。它不会评估搜索需求、竞争程度、内容原创性、企业可信度、外链和询盘质量。
 
 ## 三、性能结果
 
-Cloud Run 移动端 Lighthouse 发布后实测：
+旧生产环境移动端 Lighthouse 实测：
 
 | 指标 | 优化前 | 当前 | 建议目标 |
 | --- | ---: | ---: | ---: |
@@ -67,12 +66,12 @@ Cloud Run 移动端 Lighthouse 发布后实测：
 ### P0：上线阻断问题
 
 1. 生产启动后缺少样式和静态文件。
-   - 已修复：`postbuild` 自动把 `public` 和 `.next/static` 放入 standalone 包。
-   - 已验证：`npm run start` 可正常显示桌面和移动端样式。
+   - Vercel 迁移后：已移除容器部署包和 postbuild 静态复制。
+   - 已验证：`npm run build` 和 `next start` 可正常服务页面。
 
 2. GitHub Actions 使用过时的 SiteGround 静态部署。
-   - 已修复：保留类型检查与生产构建，并增加 GitHub 到 Cloud Run 的自动部署工作流。
-   - GitHub 使用短期 OIDC 身份，不在仓库中保存 Google Cloud 服务账号密钥。
+   - Vercel 迁移后：已删除旧云端自动部署工作流。
+   - 保留 GitHub Actions 的类型检查与生产构建验证。
 
 3. 询盘没有配置投递渠道时可能造成“假成功”。
    - 已修复：未配置 Webhook 或 Resend 时返回明确的 503 和前端错误提示。
@@ -229,14 +228,14 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 
 ## 八、上线后仍必须完成
 
-1. 配置 `INQUIRY_WEBHOOK_URL`，或完整配置 `RESEND_*`。2026-07-04 复核发现 Cloud Run 生产环境仍未配置询盘投递变量。
+1. 配置 `INQUIRY_WEBHOOK_URL`，或完整配置 `RESEND_*`。2026-07-05 复核发现 Vercel 生产环境仍未配置询盘投递变量。
 2. 验证 `sales@scottchentools.com` 能正常收发邮件。2026-07-04 公开 DNS 未发现 MX 记录。
 3. 配置并检查 SPF、DKIM 和 DMARC。2026-07-04 公开 DNS 未发现 SPF 或 DMARC 记录。
 4. 在生产环境完整提交一次报价表和样品表。
-5. 自定义域名已经切换为 `https://www.scottchentools.com`，需持续保持 canonical、hreflang、sitemap 和 Cloud Run 环境变量一致。
+5. Vercel 生产环境需保持 `NEXT_PUBLIC_SITE_URL=https://www.scottchentools.com`，并在 DNS 切换后验证全站 canonical、hreflang 和 sitemap。
 6. 由企业负责人复核所有商业能力、MOQ、交期和质量承诺。
 7. Google Search Console 已完成域名验证和 sitemap 提交；仍需在 Pages 报告出结果后处理未收录原因。
-8. 将当前进程内询盘限流升级为 Cloud Armor、API Gateway 或共享存储方案；Cloud Run 多实例之间不会共享内存计数。
+8. 将当前进程内询盘限流升级为 Vercel KV、Upstash Redis 或其他共享存储方案；无服务器多实例之间不会共享内存计数。
 
 ## 九、2026-06-30 方法论落地优化
 
