@@ -34,25 +34,33 @@ export default function Header() {
         { name: "Abrasive Kits", href: "/abrasive-kits" },
       ];
 
-  const navItems = isZh
+  const primaryNavItems = isZh
     ? [
-        { name: "OEM定制", href: "/zh/oem-private-label" },
-        { name: "应用场景", href: "/zh/applications" },
-        { name: "质量控制", href: "/zh/quality-control" },
-        { name: "采购资源", href: "/zh/resources" },
+        { name: "OEM", href: "/zh/oem-private-label" },
+        { name: "应用", href: "/zh/applications" },
+        { name: "质检", href: "/zh/quality-control" },
+        { name: "资源", href: "/zh/resources" },
+      ]
+    : [
+        { name: "OEM", href: "/oem-private-label" },
+        { name: "Applications", href: "/applications" },
+        { name: "Quality", href: "/quality-control" },
+        { name: "Resources", href: "/resources" },
+      ];
+
+  const secondaryNavItems = isZh
+    ? [
         { name: "样品申领", href: "/zh/sample-kit" },
         { name: "关于工厂", href: "/zh/china-abrasive-manufacturer" },
         { name: "批发合作", href: "/zh/wholesale-abrasives" },
       ]
     : [
-        { name: "OEM Solutions", href: "/oem-private-label" },
-        { name: "Applications", href: "/applications" },
-        { name: "Quality Control", href: "/quality-control" },
-        { name: "Resources", href: "/resources" },
         { name: "Sample Kit", href: "/sample-kit" },
         { name: "Our Factory", href: "/china-abrasive-manufacturer" },
         { name: "Wholesale", href: "/wholesale-abrasives" },
       ];
+
+  const mobileNavItems = [...primaryNavItems, ...secondaryNavItems];
 
   const getLanguageToggleLink = (targetLang: "en" | "zh") => {
     return alternateLocalePath(pathname, targetLang);
@@ -65,14 +73,29 @@ export default function Header() {
     setMobileProductsOpen(false);
   };
 
+  const desktopLinkClass = (active: boolean) =>
+    `inline-flex h-9 items-center whitespace-nowrap rounded-md px-2.5 text-[13px] font-semibold tracking-wide transition-colors duration-200 hover:bg-industry-slate-900/70 hover:text-white ${
+      active ? "text-industry-orange" : "text-industry-slate-400"
+    }`;
+
+  const productsActive =
+    isActive(`${prefix}/products`) ||
+    isActive(`${prefix}/buffing-wheels`) ||
+    isActive(`${prefix}/sanding-discs`) ||
+    isActive(`${prefix}/flap-discs`) ||
+    isActive(`${prefix}/sanding-belts`) ||
+    isActive(`${prefix}/cutting-wheels`) ||
+    isActive(`${prefix}/abrasive-kits`);
+  const secondaryActive = secondaryNavItems.some((item) => isActive(item.href));
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-industry-slate-800/80 bg-industry-slate-950/70 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center">
+        <div className="flex h-16 items-center justify-between gap-3 lg:h-18">
+          <div className="flex shrink-0 items-center">
             <Link href={isZh ? "/zh" : "/"} className="flex items-center space-x-2">
               <svg
-                className="h-8 w-8 text-industry-orange"
+                className="h-7 w-7 text-industry-orange lg:h-8 lg:w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -84,62 +107,91 @@ export default function Header() {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="text-xl font-black tracking-wider text-white">
+              <span className="text-lg font-black tracking-wider text-white lg:text-xl">
                 SCOTT<span className="text-industry-orange">CHEN</span>
               </span>
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-6" aria-label="Main navigation">
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex xl:gap-2" aria-label="Main navigation">
             <Link
               href={`${prefix}/products`}
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 hover:text-white ${
-                isActive(`${prefix}/products`) || isActive(`${prefix}/buffing-wheels`) || isActive(`${prefix}/sanding-discs`) || isActive(`${prefix}/flap-discs`) || isActive(`${prefix}/sanding-belts`) || isActive(`${prefix}/cutting-wheels`) || isActive(`${prefix}/abrasive-kits`)
-                  ? "text-industry-orange"
-                  : "text-industry-slate-400"
-              }`}
+              className={desktopLinkClass(productsActive)}
             >
               {isZh ? "产品" : "Products"}
             </Link>
-            {navItems.map((item) => (
+            {primaryNavItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium tracking-wide transition-colors duration-200 hover:text-white ${
-                  isActive(item.href) ? "text-industry-orange" : "text-industry-slate-400"
-                }`}
+                className={desktopLinkClass(isActive(item.href))}
               >
                 {item.name}
               </Link>
             ))}
+            <div className="group relative">
+              <button
+                type="button"
+                className={`${desktopLinkClass(secondaryActive)} gap-1.5`}
+                aria-haspopup="true"
+              >
+                {isZh ? "更多" : "More"}
+                <svg
+                  aria-hidden="true"
+                  className="h-3.5 w-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-52 -translate-x-1/2 rounded-md border border-industry-slate-800 bg-industry-slate-950 p-2 opacity-0 shadow-2xl shadow-black/20 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                {secondaryNavItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block rounded px-3 py-2 text-sm font-semibold transition-colors hover:bg-industry-slate-850 hover:text-white ${
+                      isActive(item.href) ? "text-industry-orange" : "text-industry-slate-300"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden shrink-0 items-center gap-2 lg:flex">
             <ThemeToggle isZh={isZh} />
-            <div className="flex items-center space-x-2 text-xs font-mono border border-industry-slate-800/80 bg-industry-slate-900/60 px-2.5 py-1.5 rounded-md">
+            <div className="flex h-10 items-center rounded-md border border-industry-slate-800/80 bg-industry-slate-900/60 p-1 text-xs font-mono">
               <Link
                 href={getLanguageToggleLink("en")}
-                className={`transition-colors hover:text-white ${!isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                className={`inline-flex h-8 w-8 items-center justify-center rounded transition-colors hover:bg-industry-slate-850 hover:text-white ${!isZh ? "bg-industry-slate-850 text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                aria-label="Switch to English"
+                title="English"
               >
                 EN
               </Link>
-              <span className="text-industry-slate-800">|</span>
               <Link
                 href={getLanguageToggleLink("zh")}
-                className={`transition-colors hover:text-white ${isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                className={`inline-flex h-8 w-8 items-center justify-center rounded transition-colors hover:bg-industry-slate-850 hover:text-white ${isZh ? "bg-industry-slate-850 text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                aria-label="切换到中文"
+                title="中文"
               >
-                中文
+                中
               </Link>
             </div>
             <Link
               href={isZh ? "/zh/contact" : "/contact"}
-              className="inline-flex items-center justify-center rounded bg-industry-orange-cta px-5 py-2.5 text-sm font-bold tracking-wide text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/20"
+              className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded bg-industry-orange-cta px-4 text-[13px] font-bold tracking-wide text-white shadow-lg shadow-industry-orange/20 transition-all-custom hover:scale-[1.02] hover:bg-industry-orange-hover"
             >
               {isZh ? "在线询盘" : "Request Quote"}
             </Link>
           </div>
 
-          <div className="flex items-center gap-1 md:hidden">
+          <div className="flex items-center gap-1 lg:hidden">
             <ThemeToggle isZh={isZh} />
             <button
               type="button"
@@ -165,7 +217,7 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div id="mobile-navigation" className="md:hidden border-t border-industry-slate-800 bg-industry-slate-950 px-4 pt-2 pb-6 space-y-1">
+        <div id="mobile-navigation" className="border-t border-industry-slate-800 bg-industry-slate-950 px-4 pb-6 pt-2 space-y-1 lg:hidden">
           <button
             type="button"
             onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -200,7 +252,7 @@ export default function Header() {
               ))}
             </div>
           )}
-          {navItems.map((item) => (
+          {mobileNavItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
