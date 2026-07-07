@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "SCOTTCHEN Supplier Profile for B2B Buyers",
   description:
-    "Review SCOTTCHEN's published B2B product scope, private-label workflow, contact channels, buyer verification checklist and terms that require written confirmation.",
+    "Review SCOTTCHEN's B2B product scope, private-label workflow, contact channels and the buyer verification checklist for RFQ preparation.",
   path: "/supplier-profile",
   alternatePath: "/zh/supplier-profile",
 });

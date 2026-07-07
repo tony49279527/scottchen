@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SampleKitForm from "@/components/SampleKitForm";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Request a Surface Finishing Sample Kit | SCOTTCHEN",
@@ -200,58 +199,6 @@ export default function SampleKit() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/sample-kit#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Who can request a commercial surface finishing sample kit?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sample requests are reviewed for commercial buyers, including tool brands, hardware distributors, online sellers, and industrial supply channels. Availability and any sample charge depend on the requested configuration."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How are international shipping and courier freight charges handled for samples?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sample kits can be shipped through international couriers. The recipient normally covers courier charges. Any credit against a qualifying bulk order must be stated in the written quotation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can I request custom wheel plies, shank shapes, or sanding grits in my sample pack?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Please specify your desired dimensions (e.g., 6-inch 40 Ply cotton wheel, 1/4\" hex shank Adaptor, drywall mesh screens from P80 to P240) in the contact form, and our technicians will configure the kit accordingly."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What is the typical transit and processing time for sample delivery?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Processing and transit timing is quoted after stock availability, custom work, artwork, and courier destination are reviewed. The written sample plan controls the dispatch target."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can we request branded box and barcode label mockups alongside the physical tools?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. After you submit the sample request, our sales team can collect your logo files and barcode artwork by email, then prepare branded packaging mockups and barcode-applied samples for pre-production review."
-                }
-              }
-            ]
-          })
-        }}
-      />
     </div>
   );
 }

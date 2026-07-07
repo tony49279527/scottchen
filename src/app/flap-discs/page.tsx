@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Flap Disc Manufacturer | Type 27/29 Flap Discs Wholesale | SCOTTCHEN",
-  description: "OEM flap disc manufacturer from China. Type 27 & Type 29 flap discs in zirconia alumina and ceramic. 4.5'/5'/7' sizes. MOQ 500 pieces, fiberglass backing, vibration-free.",
+  title: "Flap Disc Manufacturer | Type 27 & 29 Wholesale | SCOTTCHEN",
+  description: "OEM flap disc manufacturer in China. Type 27 and 29 zirconia or ceramic flap discs in 4.5, 5 and 7 inch sizes with fiberglass backing. MOQ 500 pcs.",
   path: "/flap-discs",
   alternatePath: "/zh/flap-discs",
 });
@@ -369,6 +369,7 @@ export default function FlapDiscsPage() {
             "description": "OEM Type 27 and Type 29 flap discs in zirconia alumina, ceramic, and aluminum oxide on fiberglass backing plates.",
             "url": absoluteUrl("/flap-discs"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

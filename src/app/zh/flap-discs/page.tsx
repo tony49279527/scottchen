@@ -298,7 +298,7 @@ export default function ZhFlapDiscsPage() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  src="/images/hero_flap_discs.webp"
+                  src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN百叶片厂家批发 - T27/T29锆刚玉陶瓷百叶轮"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -353,6 +353,7 @@ export default function ZhFlapDiscsPage() {
             "description": "专业百叶片生产厂家，T27/T29锆刚玉陶瓷氧化铝百叶片批发，MPA认证，MOQ 500片起。",
             "url": absoluteUrl("/zh/flap-discs"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

@@ -6,8 +6,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Wholesale Abrasive Tools | Bulk Sanding & Polishing Supplies Supplier | SCOTTCHEN",
-  description: "Wholesale abrasive tools and bulk sanding & polishing supplies for distributors, retailers, and industrial buyers. Factory-direct pricing from China manufacturer. MOQ 500pcs, FOB Shanghai.",
+  title: "Wholesale Abrasive Tools & Bulk Supplies | SCOTTCHEN",
+  description: "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers and industrial buyers. Factory-direct, FOB Shanghai.",
   path: "/wholesale-abrasives",
   alternatePath: "/zh/wholesale-abrasives",
 });
@@ -305,15 +305,6 @@ export default function WholesaleAbrasivesPage() {
                 "name": "SCOTTCHEN Wholesale Abrasive Tools",
                 "description": "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers, and industrial buyers from China manufacturer.",
                 "url": absoluteUrl("/wholesale-abrasives"),
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/wholesale-abrasives#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
               },
             ],
           }),

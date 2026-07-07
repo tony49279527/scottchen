@@ -322,49 +322,31 @@ export default function ChineseProductsOverview() {
         </div>
       </section>
 
-      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/zh/products#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "你们对定制化的打磨抛光工具组合套装提供哪些包装形式？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "我们提供高度柔性的打磨打样套装定制。您可以自定义棉布轮的缝线圈数、选配定制抛光膏的化学成份，亦可在一个展示彩盒或吸塑卡版里，打包混合各种目数的砂纸（从粗砂 P60 到极细 P2500）。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "你们对锆刚玉纤维砂片和切割片提供哪些质量检测证书？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "需要提供的报告取决于产品、目的国和双方确认的质检计划。买家应在下单前明确适用标准、测试方法、抽样水平和所需证据。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "海运纸箱和托盘要求如何确认？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可依据产品重量和运输条件，在包装规格中约定瓦楞结构、护角、打包带、托盘材料和缠绕膜。最终装箱方式及任何运输测试按项目报价确认。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "你们抛光布轮支持哪些规格的中心轴孔尺寸？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "支持。我们提供标准的 telescoping 轴套（纸管、塑料）或带黄铜圈、铁垫片加强型的中心轴孔。直径涵盖 1/2英寸、5/8英寸、3/4英寸、1英寸，以及用于 power drills 和 impact 气动螺丝批的 1/4\" 圆柄或六角快换手柄柄部适配器。"
-                }
-              }
-            ]
-          })
+            "@type": "CollectionPage",
+            "@id": absoluteUrl("/zh/products#collection"),
+            name: "磨料磨具与抛光轮规格目录",
+            url: absoluteUrl("/zh/products"),
+            inLanguage: "zh-CN",
+            isPartOf: { "@id": absoluteUrl("/#website") },
+            about: { "@id": absoluteUrl("/#organization") },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: categories
+                .flatMap((family) => family.items)
+                .map((item, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  name: item.name,
+                  description: item.types,
+                  url: absoluteUrl(item.url),
+                })),
+            },
+          }),
         }}
       />
 

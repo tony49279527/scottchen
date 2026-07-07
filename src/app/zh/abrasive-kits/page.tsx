@@ -319,6 +319,7 @@ export default function ZhAbrasiveKitsPage() {
             "description": "专业磨具套装OEM厂家，抛光轮套装、砂纸套装、DIY五金工具组合套装，零售包装，FBA贴标，MOQ 500套起。",
             "url": absoluteUrl("/zh/abrasive-kits"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

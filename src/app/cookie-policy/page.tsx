@@ -6,6 +6,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Cookie Policy | SCOTTCHEN",
   description: "Learn how SCOTTCHEN stores site preferences and uses optional website measurement only after visitor approval.",
   path: "/cookie-policy",
+  alternatePath: "/zh/cookie-policy",
 });
 
 export default function CookiePolicy() {

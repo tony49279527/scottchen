@@ -16,6 +16,9 @@ const cspDirectives = [
 
 const nextConfig = {
   poweredByHeader: false,
+  images: {
+    qualities: [68, 72, 75],
+  },
   async headers() {
     return [
       {

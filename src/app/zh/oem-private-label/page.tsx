@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM & 私有品牌抛光工具包定制方案 | SCOTTCHEN",
@@ -314,58 +313,6 @@ export default function ChineseOEMPrivateLabel() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/zh/oem-private-label#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "为什么大货的最小起订量 (MOQ) 可以控制在 500 套？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "盒装定制套装常以 500 套作为询价起点，部分泡壳方案可能从 1,000 套起。实际 MOQ 取决于产品组合、印刷方式、包装结构和材料供应商，并以报价单为准。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "你们提供的 CAD 包装展开刀模线格式是什么？怎么排版？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "一旦确定了最终的棉轮规格与抛光膏目数组合，我们的包装结构工程师就会为您定制高精度的刀模底图文件（提供 PDF 和 DXF 格式），上面标有清晰的裁切实线、折叠虚线和出血边缘，您的美工只需在 Adobe Illustrator (AI) 里直接套版输出即可。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "如何规避亚马逊 FBA 扫码入库由于条码模糊而被拒收的客诉？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可应用买家提供的 UPC 或 FNSKU 数据，并在出货前进行样品扫码检查。条码尺寸、静区、对比度、承印材料和位置应遵循 GS1 指南及平台当期要求；如需正式验证等级，必须在质检范围中单独约定。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "纸箱和说明书支持哪些防爆和多国语言印刷规格？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可按产品重量和运输测试要求选用双瓦楞纸箱，以降低重负荷磨片运输中的破损风险。说明书或内页的纸张、克重、语言和折页方式均需在包装规格中确认。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "你们可以把定制工具包直接 DDP（完税后交货）发到我们国外的海外仓吗？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "在核对目的地、进口商要求、产品归类和物流服务可用性后，可由物流服务商评估仓库直送方案。选定的 Incoterms 规则、指定地点、税费、清关责任和除外事项必须书面列明。"
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

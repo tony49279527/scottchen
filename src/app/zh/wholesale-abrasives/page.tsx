@@ -303,15 +303,6 @@ export default function ZhWholesaleAbrasivesPage() {
                 "description": "磨料磨具工厂直供批发，面向经销商、零售商、工业买家，中国厂家直供价格。",
                 "url": absoluteUrl("/zh/wholesale-abrasives"),
               },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/wholesale-abrasives#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
             ],
           }),
         }}

@@ -319,15 +319,6 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                 "description": "上海中国磨料磨具生产厂家，生产抛光轮、砂纸片、百叶片、切割片、砂带、磨具套装。",
                 "address": { "@type": "PostalAddress", "addressLocality": "上海", "addressCountry": "CN" },
               },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/china-abrasive-manufacturer#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
             ],
           }),
         }}

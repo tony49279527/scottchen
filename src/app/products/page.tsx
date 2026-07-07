@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Surface Finishing Accessories Catalog | SCOTTCHEN",
@@ -324,42 +325,26 @@ export default function ProductsOverview() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What options do you support for custom catalog configurations?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We allow complete customization of B2B kit configurations. Sourcing agents can determine specific ply counts for cotton buffing wheels, select compound wax bars by chemical formulations, and bundle diverse sandpaper grits (from P60 to P2500) within a single color box or blister layout."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What testing certificates do you provide for grinding and fiber discs?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Required reports depend on the product, destination, and agreed quality plan. Buyers should specify the applicable standard, test method, sampling level, and evidence required before placing the order."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How are shipping cartons and pallet requirements confirmed?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The packaging specification can define corrugated construction, corner protection, strapping, pallet material and wrap requirements according to product weight and transport conditions. Final pack-out and any transport test are quoted per project."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you support custom bore/arbor hole size inserts?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. We offer standard telescoping cardboard inserts, brass arbors, and zinc flange plates. Sizing options include 1/2\", 5/8\", 3/4\", and 1\" bore diameters, as well as 1/4\" round and hex shanks for impact drills."
-                }
-              }
-            ]
-          })
+            "@type": "CollectionPage",
+            "@id": absoluteUrl("/products#collection"),
+            name: "Surface Finishing Accessories Catalog",
+            url: absoluteUrl("/products"),
+            inLanguage: "en",
+            isPartOf: { "@id": absoluteUrl("/#website") },
+            about: { "@id": absoluteUrl("/#organization") },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: categories
+                .flatMap((family) => family.items)
+                .map((item, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  name: item.name,
+                  description: item.types,
+                  url: absoluteUrl(item.url),
+                })),
+            },
+          }),
         }}
       />
 

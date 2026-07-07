@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "China Abrasive Manufacturer | OEM Abrasive Tools Supplier & Factory | SCOTTCHEN",
-  description: "SCOTTCHEN is a Shanghai-based China abrasive manufacturer and OEM supplier of buffing wheels, sanding discs, flap discs, and private label abrasive kits since 2014.",
+  title: "China Abrasive Manufacturer & OEM Supplier | SCOTTCHEN",
+  description: "SCOTTCHEN is a Shanghai abrasive manufacturer supplying OEM buffing wheels, sanding discs, flap discs and private-label abrasive kits since 2014.",
   path: "/china-abrasive-manufacturer",
   alternatePath: "/zh/china-abrasive-manufacturer",
 });
@@ -325,15 +325,6 @@ export default function ChinaAbrasiveManufacturerPage() {
                 "foundingDate": "2014",
                 "description": "Shanghai-based China abrasive manufacturer producing buffing wheels, sanding discs, flap discs, cutting wheels, sanding belts, and private label abrasive kits.",
                 "address": { "@type": "PostalAddress", "addressLocality": "Shanghai", "addressCountry": "CN" },
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/china-abrasive-manufacturer#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
               },
             ],
           }),

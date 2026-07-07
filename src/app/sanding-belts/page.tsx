@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Sanding Belt Supplier | Wholesale Abrasive Sanding Belts Manufacturer | SCOTTCHEN",
-  description: "Wholesale sanding belts for knife making, woodworking, metal fabrication. Custom sizes, aluminum oxide & zirconia belts from China OEM factory. Precision butt joint.",
+  title: "Sanding Belt Supplier & OEM Belt Manufacturer | SCOTTCHEN",
+  description: "Wholesale sanding belts for knife making, woodworking and metal fabrication. Custom sizes in aluminum oxide and zirconia from a China OEM factory.",
   path: "/sanding-belts",
   alternatePath: "/zh/sanding-belts",
 });
@@ -385,6 +385,7 @@ export default function SandingBeltsPage() {
             "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
             "url": absoluteUrl("/sanding-belts"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

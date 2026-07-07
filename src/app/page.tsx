@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
@@ -160,6 +161,14 @@ export default function Home() {
                 </div>
                 
                 <div className="relative aspect-square w-full">
+                  {/* Hero column is hidden below lg; media-scoped preload speeds up the
+                      desktop LCP image without downloading it on mobile. */}
+                  <link
+                    rel="preload"
+                    as="image"
+                    href="/images/hero_abrasives_kit.webp"
+                    media="(min-width: 1024px)"
+                  />
                   <img
                     width={1024}
                     height={1024}
@@ -319,12 +328,14 @@ export default function Home() {
             {categories.map((cat) => (
               <div key={cat.title} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-orange/50 transition-all-custom group">
                 <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
-                  <img
+                  <Image
                     width={1024}
                     height={1024}
                     loading="lazy"
                     decoding="async"
                     src={cat.img}
+                    sizes="(min-width: 1024px) 28vw, (min-width: 768px) 42vw, 92vw"
+                    quality={68}
                     alt={cat.title}
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 opacity-80"
                   />
@@ -363,12 +374,14 @@ export default function Home() {
             {/* Left Graphics */}
             <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col space-y-6">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/oem_packaging.webp"
+                  sizes="(min-width: 1024px) 36vw, 92vw"
+                  quality={68}
                   alt="Illustrative SCOTTCHEN private-label packaging concept"
                   className="object-cover w-full h-48 opacity-80"
                 />

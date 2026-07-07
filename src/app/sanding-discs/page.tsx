@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Sanding Disc Wholesale | Aluminum Oxide Sanding Discs Supplier | SCOTTCHEN",
-  description: "Bulk sanding discs at wholesale prices. Aluminum oxide, zirconia, silicon carbide sanding discs from China OEM manufacturer. MOQ 500pcs, anti-clog coating, private label.",
+  title: "Sanding Disc Wholesale Supplier & OEM Factory | SCOTTCHEN",
+  description: "Bulk aluminum oxide, zirconia and silicon carbide sanding discs from a China OEM factory. MOQ 500 pcs, anti-clog coating and private-label packs.",
   path: "/sanding-discs",
   alternatePath: "/zh/sanding-discs",
 });
@@ -379,6 +379,7 @@ export default function SandingDiscsPage() {
             "description": "Wholesale aluminum oxide, zirconia, silicon carbide, ceramic, and mesh sanding discs in hook-and-loop, PSA, fiber, and quick-change types.",
             "url": absoluteUrl("/sanding-discs"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

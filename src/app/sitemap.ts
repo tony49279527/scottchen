@@ -91,13 +91,13 @@ const localizedRoutes = [
     priority: 0.85,
     changefreq: "monthly" as const,
   },
+  { en: "/terms", zh: "/zh/terms", priority: 0.2, changefreq: "yearly" as const },
+  { en: "/privacy", zh: "/zh/privacy", priority: 0.2, changefreq: "yearly" as const },
+  { en: "/cookie-policy", zh: "/zh/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
 ] as const;
 
 const utilityRoutes = [
   { path: "/catalog.pdf", priority: 0.6, changefreq: "monthly" as const },
-  { path: "/terms", priority: 0.2, changefreq: "yearly" as const },
-  { path: "/privacy", priority: 0.2, changefreq: "yearly" as const },
-  { path: "/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
 ] as const;
 
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));

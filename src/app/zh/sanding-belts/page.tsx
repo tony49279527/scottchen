@@ -294,7 +294,7 @@ export default function ZhSandingBeltsPage() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  src="/images/hero_sanding_belts.webp"
+                  src="/images/sanding_tools.webp"
                   alt="SCOTTCHEN砂带厂家批发 - 环形砂带手提带制刀砂带定制"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -349,6 +349,7 @@ export default function ZhSandingBeltsPage() {
             "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
             "url": absoluteUrl("/zh/sanding-belts"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

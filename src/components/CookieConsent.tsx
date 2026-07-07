@@ -54,11 +54,11 @@ export default function CookieConsent() {
             {isZh ? (
               <>
                 如果您同意，我们会使用 Google Analytics 了解哪些页面和询盘入口最有帮助。拒绝不会影响网站或询盘表单使用。查看{" "}
-                <Link href="/cookie-policy" className="text-industry-orange-light hover:underline font-bold">
+                <Link href="/zh/cookie-policy" className="text-industry-orange-light hover:underline font-bold">
                   Cookie 政策
                 </Link>{" "}
                 与{" "}
-                <Link href="/privacy" className="text-industry-orange-light hover:underline font-bold">
+                <Link href="/zh/privacy" className="text-industry-orange-light hover:underline font-bold">
                   隐私政策
                 </Link>{" "}
                 以了解详情。
@@ -80,7 +80,7 @@ export default function CookieConsent() {
         </div>
         <div className="flex flex-wrap justify-end gap-3 pt-2">
           <Link
-            href="/privacy"
+            href={isZh ? "/zh/privacy" : "/privacy"}
             className="text-xs font-bold text-industry-slate-300 hover:text-white uppercase tracking-wider py-2 px-3 border border-industry-slate-700 rounded transition-colors text-center"
           >
             {isZh ? "隐私详情" : "Privacy Policy"}

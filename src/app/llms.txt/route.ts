@@ -59,6 +59,9 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [Abrasive grain, backing and grit selection guide](${absoluteUrl("/resources/abrasive-material-selection-guide")})
 - [Commercial sample request](${absoluteUrl("/sample-kit")})
 - [Submit an RFQ](${absoluteUrl("/contact")})
+- [Website and B2B inquiry terms](${absoluteUrl("/terms")})
+- [Privacy policy](${absoluteUrl("/privacy")})
+- [Cookie policy](${absoluteUrl("/cookie-policy")})
 
 ## Chinese pages
 
@@ -78,6 +81,9 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [磨料磨具采购检查清单](${absoluteUrl("/zh/resources/abrasive-sourcing-checklist")})
 - [磨料选材、背基与粒度指南](${absoluteUrl("/zh/resources/abrasive-material-selection-guide")})
 - [提交询价](${absoluteUrl("/zh/contact")})
+- [网站与 B2B 询盘条款](${absoluteUrl("/zh/terms")})
+- [隐私政策](${absoluteUrl("/zh/privacy")})
+- [Cookie 政策](${absoluteUrl("/zh/cookie-policy")})
 
 ## Quick sourcing answers
 

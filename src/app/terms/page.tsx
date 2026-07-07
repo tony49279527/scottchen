@@ -6,6 +6,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Website & B2B Inquiry Terms | SCOTTCHEN",
   description: "Read the terms for using the SCOTTCHEN B2B website, requesting quotes and samples, and confirming project-specific commercial terms.",
   path: "/terms",
+  alternatePath: "/zh/terms",
 });
 
 export default function TermsOfService() {

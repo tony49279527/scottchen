@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具抛光工具包应用场景工作流 | SCOTTCHEN",
@@ -256,58 +255,6 @@ export default function ChineseApplicationsOverview() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/zh/applications#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "在金属研磨抛光中，如何配合使用锆刚玉纤维磨片与棉布抛光轮？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "锆刚玉钢纸磨片带有极高的自锐性，切削速度快，适合焊接后削平粗大焊道、去粗毛刺或表面除锈。在表面平整及预打磨完成后，再使用车缝棉布轮或气道布轮配合抛光膏（如红/白/绿蜡），逐级把金属表面还原出拉丝或镜面效果。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "木工家具砂纸与精细打磨棒的常规目数是如何级配配置的？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "对于实木及家具打磨，我们搭配的套装通常是：粗磨 P80 和 P120（用于塑形或脱除旧漆防腐层），中打磨 P180 和 P240（去除粗大划痕），以及精细平滑 P320（刷木漆前处理）。细节打磨棒则配以超精细环形砂带，专门伸入雕刻死角磨平毛刺。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "镂空墙面网格砂网可以配合市场上主流的吸尘抛磨设备使用吗？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可以。我们的镂空网状基材采用双面涂覆优质碳化硅，具有密集的排灰小孔。我们裁切成标准的 9x11\" 及 3.25x11\" 等多种工装尺寸，可以直接粘贴于带吸尘孔的拉扣打磨手板或自动轨道石膏磨平机上，粉尘会穿透网格瞬间吸走。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "汽车轮毂和不锈钢排气管抛光的柄装棉轮有什么转速和适配要求？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可提供 1/4\" 圆柄或六角接柄选项，但必须核对夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。形状、材料及转速需通过样件测试确认，不应使用未经书面确认的通用转速。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "我们可以根据特定的网店主打场景进行贴牌设计吗？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可以。采购商可定义目标工作场景，再共同确认布轮结构、抛光膏组合、彩盒稿件、条码数据和外箱标识。量产与上线条件以双方批准的规格、样品及平台当期规则为准。"
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

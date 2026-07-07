@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
@@ -82,12 +83,15 @@ export default function ChineseHome() {
             <div className="lg:col-span-5 relative">
               <div className="glass-panel p-2 rounded-2xl border border-industry-slate-800 shadow-2xl overflow-hidden bg-industry-slate-900/40 relative group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-industry-orange/10 via-transparent to-transparent opacity-60 pointer-events-none" />
-                <img
+                <Image
                   width={1024}
                   height={1024}
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
                   decoding="async"
                   src="/images/hero_abrasives_kit.webp"
+                  sizes="(min-width: 1024px) 40vw, 92vw"
+                  quality={72}
                   alt="SCOTTCHEN 抛光轮与打磨工具组合装"
                   className="object-cover w-full h-80 sm:h-96 rounded-xl opacity-90 group-hover:scale-[1.01] transition-transform duration-300"
                 />
@@ -161,12 +165,14 @@ export default function ChineseHome() {
             {/* Category Card 1 */}
             <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
               <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/buffing_wheels.webp"
+                  sizes="(min-width: 768px) 42vw, 92vw"
+                  quality={68}
                   alt="SCOTTCHEN 布轮与抛光轮"
                   className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
                 />
@@ -190,12 +196,14 @@ export default function ChineseHome() {
             {/* Category Card 2 */}
             <div className="glass-panel rounded-xl overflow-hidden hover:border-industry-slate-700 transition-colors flex flex-col justify-between group">
               <div className="h-64 w-full overflow-hidden border-b border-industry-slate-800 relative bg-industry-slate-950">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/sanding_sheets.webp"
+                  sizes="(min-width: 768px) 42vw, 92vw"
+                  quality={68}
                   alt="SCOTTCHEN 研磨与砂纸配件"
                   className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-90"
                 />
@@ -269,12 +277,14 @@ export default function ChineseHome() {
             {/* Left: QA Inspection Image */}
             <div className="lg:col-span-5">
               <div className="glass-panel p-2 rounded-2xl border border-industry-slate-800 shadow-2xl overflow-hidden bg-industry-slate-950/40 relative">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/quality_inspection.webp"
+                  sizes="(min-width: 1024px) 36vw, 92vw"
+                  quality={68}
                   alt="磨料磨具质量计划示意图"
                   className="object-cover w-full h-80 rounded-xl opacity-90"
                 />

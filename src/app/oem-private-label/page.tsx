@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM & Private Label Surface Finishing Kits | SCOTTCHEN",
@@ -313,58 +312,6 @@ export default function OEMPrivateLabel() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/oem-private-label#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the typical minimum order quantity (MOQ) for custom private label kits?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A common starting point is 500 sets for boxed custom kits and 1,000 sets for some blister-card configurations. The actual MOQ depends on the product mix, print process, packaging structure and material suppliers, and is confirmed in the quotation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can packaging dielines and structural mockups be included?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. After the kit configuration is fixed, the project can include PDF or DXF dielines plus digital or physical mockups. Deliverables, revision rounds, sample charges and ownership are confirmed in the quotation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do you verify barcode scannability for marketplace fulfillment?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We can apply buyer-supplied UPC or FNSKU data and perform sample scan checks before shipment. Barcode size, quiet zones, contrast, substrate and placement should follow GS1 guidance and the marketplace's current requirements; a formal verification grade must be separately specified."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What options do you support for multi-language instruction manuals and packaging inserts?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Warning sheets, process guides and grit-to-substrate charts can be printed in agreed languages. Paper stock, weight, dimensions, translation responsibility and fold pattern are confirmed in the packaging specification."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can you ship custom kits directly to international fulfillment centers (DDP)?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Direct warehouse delivery may be quoted through a logistics provider after the destination, importer-of-record requirements, product classification and service availability are reviewed. The selected Incoterms rule, named place, taxes, customs responsibilities and exclusions must be stated in writing."
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

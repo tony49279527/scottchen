@@ -1,29 +1,34 @@
 # SCOTTCHEN Production Operations Checklist
 
-Last checked: 2026-07-04
+Last checked: 2026-07-07
 
 ## Current Verified State
 
 - Production domain: `https://www.scottchentools.com`
-- Cloud Run service: `scottchen-b2b`
-- Google Cloud project: `scottchen-b2b-prod-2026`
-- Region: `asia-east1`
+- Production hosting: Vercel project `context27149/scottchen`
 - Current public DNS nameservers: Cloudflare (`anderson.ns.cloudflare.com`, `meera.ns.cloudflare.com`)
 - Google Search Console: sitemap submitted successfully, 47 pages discovered, homepage indexed
 - IndexNow: key file published and 47 sitemap URLs submitted successfully
-- Cloud Run environment currently includes only `NEXT_PUBLIC_SITE_URL=https://www.scottchentools.com`
+- Vercel Production environment includes `NEXT_PUBLIC_SITE_URL`, `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, and `INQUIRY_TO_EMAIL`
+- Vercel Preview and Development environments include `NEXT_PUBLIC_SITE_URL`
+- Current local sitemap after the July 7 optimization contains 51 URLs; submit the updated sitemap after deployment.
 
 ## Highest Priority
 
 ### 1. Enable inquiry delivery
 
-Current production status: not configured. The website form endpoint is live, but real delivery needs one of these paths:
+Current production status: Resend delivery variables are configured in Vercel Production. The website form endpoint is live; verify real delivery after the next deployment with a controlled test inquiry.
 
-- Preferred: `INQUIRY_WEBHOOK_URL`
-- Email fallback: `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, `INQUIRY_TO_EMAIL`
-- Optional auto reply: `INQUIRY_AUTO_REPLY_ENABLED=true`, `INQUIRY_AUTO_REPLY_FROM`
+Configured path:
 
-After configuring Cloud Run, submit both:
+- Email delivery: `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, `INQUIRY_TO_EMAIL`
+
+Optional additions:
+
+- Webhook delivery: `INQUIRY_WEBHOOK_URL`
+- Auto reply: `INQUIRY_AUTO_REPLY_ENABLED=true`, `INQUIRY_AUTO_REPLY_FROM`
+
+After deploying the latest build, submit both:
 
 - RFQ form: `https://www.scottchentools.com/contact`
 - Sample form: `https://www.scottchentools.com/sample-kit`
@@ -57,9 +62,9 @@ dig +short TXT _dmarc.scottchentools.com
 
 ### 3. Configure GA4 measurement
 
-Current production status: `NEXT_PUBLIC_GA_MEASUREMENT_ID` is not configured on Cloud Run.
+Current production status: `NEXT_PUBLIC_GA_MEASUREMENT_ID` is not configured in Vercel Production.
 
-After a GA4 property exists, set:
+After a GA4 property exists, set the Vercel Production environment variable:
 
 ```bash
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX

@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Abrasive Kit Wholesale | Polishing & Sanding Accessory Kits Private Label | SCOTTCHEN",
-  description: "OEM private label abrasive kits. Buffing wheel kits, sanding disc kits, polishing compound sets. Retail-ready packaging, FBA compliant. MOQ 500 sets from China manufacturer.",
+  title: "Private Label Abrasive & Polishing Kits Wholesale | SCOTTCHEN",
+  description: "OEM private-label abrasive kits: buffing wheel kits, sanding disc kits and compound sets in retail-ready packaging. MOQ 500 sets from a China factory.",
   path: "/abrasive-kits",
   alternatePath: "/zh/abrasive-kits",
 });
@@ -303,6 +303,7 @@ export default function AbrasiveKitsPage() {
             "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
             "url": absoluteUrl("/abrasive-kits"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

@@ -8,7 +8,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "B2B Abrasive Sourcing Resource Center | SCOTTCHEN",
   description:
-    "Buyer guides for evaluating abrasive suppliers, writing comparable RFQs, selecting grains and backing, planning samples, and checking private-label packaging evidence.",
+    "Buyer guides for evaluating abrasive suppliers, writing comparable RFQs, selecting grains and backing, and planning samples and packaging checks.",
   path: "/resources",
   alternatePath: "/zh/resources",
 });

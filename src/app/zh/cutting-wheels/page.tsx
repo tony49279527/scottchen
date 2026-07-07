@@ -291,7 +291,7 @@ export default function ZhCuttingWheelsPage() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  src="/images/hero_cutting_discs.webp"
+                  src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN树脂切割片厂家批发 - 金属不锈钢超薄切割片"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -346,6 +346,7 @@ export default function ZhCuttingWheelsPage() {
             "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，MPA EN12413认证双网增强，MOQ 1000片起。",
             "url": absoluteUrl("/zh/cutting-wheels"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

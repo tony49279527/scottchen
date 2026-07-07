@@ -304,7 +304,7 @@ export default function ZhBuffingWheelsPage() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  src="/images/hero_buffing_wheels.webp"
+                  src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN抛光布轮厂家批发 - 硬质线布轮软布轮气道轮"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -359,6 +359,7 @@ export default function ZhBuffingWheelsPage() {
             "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
             "url": absoluteUrl("/zh/buffing-wheels"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

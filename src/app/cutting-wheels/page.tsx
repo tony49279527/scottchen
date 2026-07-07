@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Cutting Disc Manufacturer | Cut-Off Wheels & Cutting Discs Wholesale | SCOTTCHEN",
-  description: "China OEM cutting disc manufacturer. Thin cut-off wheels for metal & stainless steel. 4.5'/5'/7'/9' sizes. EN12413 compliant, contaminant-free. MOQ 1000 pieces.",
+  title: "Cutting Disc & Cut-Off Wheel Manufacturer | SCOTTCHEN",
+  description: "China OEM cutting disc manufacturer. Thin cut-off wheels for metal and stainless steel in 4.5 to 9 inch sizes. EN12413 compliant, MOQ 1,000 pieces.",
   path: "/cutting-wheels",
   alternatePath: "/zh/cutting-wheels",
 });
@@ -384,6 +384,7 @@ export default function CuttingWheelsPage() {
             "description": "EN12413-compliant cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement.",
             "url": absoluteUrl("/cutting-wheels"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />

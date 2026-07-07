@@ -730,52 +730,6 @@ export default function SandingGrindingAccessories() {
                     ]
                   }
                 ]
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/products/sanding-grinding-accessories#faqpage"),
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What backing weights and materials are available for Scottchen sandpaper sheets?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We offer C-weight latex-impregnated paper backing for wet/dry hand sanding sheets (which prevents tearing when soaked), and heavy J-weight flexible cotton cloth backing for sander rolls, ensuring higher tensile strength during contour sanding and machine operation."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Why do you use silicon carbide for drywall sanding screens instead of aluminum oxide?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Silicon carbide has a sharp grain profile, while the open-weave fiberglass mesh allows gypsum dust to pass through. This combination can reduce loading under suitable pressure and extraction conditions; cut rate and finish should be verified on the target substrate."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What center hole dimensions and backing options do you support for grinding discs?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Available configurations can include 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) circular or star center. Backing material, thickness, labeled operating limit and tool compatibility must be confirmed in the approved SKU specification."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can we mix multiple grits in a custom-labeled dispenser box?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes. A dispenser box can be quoted with 4 or 5 selected roll grits and an integrated tearing edge. Buyer-approved branding, warnings and UPC data can be applied after artwork and sample review."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What is the minimum order quantity (MOQ) for detail sanding sticks?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "A 1,000-pack quantity is a common RFQ starting point for spring-tensioned detail sanding sticks. Pack composition, grit mix, packaging, actual MOQ and lead time are confirmed in the quotation."
-                    }
-                  }
-                ]
               }
             ]
           })

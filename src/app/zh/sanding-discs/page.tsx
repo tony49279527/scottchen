@@ -308,7 +308,7 @@ export default function ZhSandingDiscsPage() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  src="/images/hero_sanding_discs.webp"
+                  src="/images/sanding_screens.webp"
                   alt="SCOTTCHEN砂纸片批发 - 植绒拉绒片背胶钢纸磨片网砂厂家"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -363,6 +363,7 @@ export default function ZhSandingDiscsPage() {
             "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
             "url": absoluteUrl("/zh/sanding-discs"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "manufacturer": { "@id": absoluteUrl("/#organization") },
           }),
         }}
       />
