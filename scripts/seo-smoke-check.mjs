@@ -2,6 +2,10 @@ const DEFAULT_SITE_URL = "https://www.scottchentools.com";
 const DEFAULT_INDEXNOW_KEY = "bba16f0343d10f111540909669eb16cc";
 const MAX_TITLE_LENGTH = 70;
 const MAX_DESCRIPTION_LENGTH = 160;
+const FETCH_RETRY_ATTEMPTS = Number(process.env.SEO_SMOKE_FETCH_RETRIES || 3);
+const FETCH_RETRY_DELAY_MS = 350;
+const FETCH_TIMEOUT_MS = Number(process.env.SEO_SMOKE_FETCH_TIMEOUT_MS || 15000);
+const ASSET_CHECK_CONCURRENCY = Number(process.env.SEO_SMOKE_ASSET_CONCURRENCY || 8);
 
 const args = process.argv.slice(2);
 
@@ -37,6 +41,65 @@ function fail(message) {
   throw new Error(message);
 }
 
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function retryDelayFor(attempt) {
+  return FETCH_RETRY_DELAY_MS * 2 ** attempt;
+}
+
+function shouldRetryResponse(response) {
+  return response.status === 408 || response.status === 429 || response.status >= 500;
+}
+
+async function mapWithConcurrency(items, limit, mapper) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (nextIndex < items.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+    }
+  });
+
+  await Promise.all(workers);
+  return results;
+}
+
+async function fetchWithRetry(url, init) {
+  let lastError;
+
+  for (let attempt = 0; attempt <= FETCH_RETRY_ATTEMPTS; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, { ...init, signal: controller.signal });
+      clearTimeout(timeout);
+
+      if (!shouldRetryResponse(response) || attempt === FETCH_RETRY_ATTEMPTS) {
+        return response;
+      }
+
+      await response.arrayBuffer().catch(() => {});
+      await wait(retryDelayFor(attempt));
+    } catch (error) {
+      clearTimeout(timeout);
+      lastError = error;
+      if (attempt === FETCH_RETRY_ATTEMPTS) {
+        break;
+      }
+      await wait(retryDelayFor(attempt));
+    }
+  }
+
+  const message = lastError instanceof Error ? lastError.message : String(lastError);
+  fail(`${url} fetch failed after ${FETCH_RETRY_ATTEMPTS + 1} attempts: ${message}`);
+}
+
 function decodeXmlText(value) {
   return value
     .replaceAll("&amp;", "&")
@@ -53,7 +116,7 @@ function decodeHtmlText(value) {
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       "User-Agent": "SCOTTCHEN SEO smoke check",
     },
@@ -153,14 +216,25 @@ function extractImageUrls(html, pageUrl) {
 }
 
 async function checkAsset(url) {
-  const response = await fetch(fetchUrlFor(url), {
-    headers: {
-      "User-Agent": "SCOTTCHEN SEO smoke check",
-    },
-  });
+  const fetchedUrl = fetchUrlFor(url);
+  let assetCheck = assetCheckCache.get(fetchedUrl);
 
-  await response.arrayBuffer();
-  return response.ok ? null : { url, fetchedUrl: fetchUrlFor(url), status: response.status };
+  if (!assetCheck) {
+    assetCheck = (async () => {
+      const response = await fetchWithRetry(fetchedUrl, {
+        headers: {
+          "User-Agent": "SCOTTCHEN SEO smoke check",
+        },
+      });
+
+      await response.arrayBuffer();
+      return response.ok ? null : { fetchedUrl, status: response.status };
+    })();
+    assetCheckCache.set(fetchedUrl, assetCheck);
+  }
+
+  const issue = await assetCheck;
+  return issue ? { ...issue, url } : null;
 }
 
 const robotsUrl = new URL("/robots.txt", fetchOrigin).toString();
@@ -203,10 +277,11 @@ if (uniqueUrls.size !== urls.length) {
 const issues = [];
 let htmlPageCount = 0;
 let checkedImageCount = 0;
+const assetCheckCache = new Map();
 
 for (const url of urls) {
   const fetchUrl = fetchUrlFor(url);
-  const response = await fetch(fetchUrl, {
+  const response = await fetchWithRetry(fetchUrl, {
     redirect: "manual",
     headers: {
       "User-Agent": "SCOTTCHEN SEO smoke check",
@@ -248,9 +323,11 @@ for (const url of urls) {
       });
     }
 
-    for (const imageUrl of extractImageUrls(html, url)) {
-      checkedImageCount += 1;
-      const imageIssue = await checkAsset(imageUrl);
+    const imageUrls = extractImageUrls(html, url);
+    checkedImageCount += imageUrls.length;
+    const imageIssues = await mapWithConcurrency(imageUrls, ASSET_CHECK_CONCURRENCY, checkAsset);
+
+    for (const imageIssue of imageIssues) {
       if (imageIssue) {
         issues.push({ ...imageIssue, page: url, issue: "Image request failed" });
       }

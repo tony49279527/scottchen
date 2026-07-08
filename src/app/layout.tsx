@@ -2,9 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CookieConsent from "@/components/CookieConsent";
-import Analytics from "@/components/Analytics";
-import AttributionTracker from "@/components/AttributionTracker";
+import DeferredClientShell from "@/components/DeferredClientShell";
 import DocumentShell from "@/components/DocumentShell";
 import {
   absoluteUrl,
@@ -213,13 +211,11 @@ export default function RootLayout({
         />
       }
     >
-      <Analytics />
       <div className="min-h-full flex flex-col">
-        <AttributionTracker />
         <Header />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
-        <CookieConsent />
+        <DeferredClientShell />
       </div>
     </DocumentShell>
   );
