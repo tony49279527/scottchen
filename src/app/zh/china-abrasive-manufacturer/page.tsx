@@ -117,6 +117,8 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               <Image
                 width={1024}
                 height={768}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 loading="lazy"
                 src="/images/quality_inspection.webp"
                 alt="SCOTTCHEN上海磨料磨具工厂质量检测车间"

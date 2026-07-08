@@ -264,6 +264,8 @@ export default function ZhAbrasiveKitsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/hero_abrasives_kit.webp"
                   alt="SCOTTCHEN磨具套装批发 - 抛光套装砂纸套装五金工具套装贴牌"

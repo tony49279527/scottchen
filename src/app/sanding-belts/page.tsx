@@ -331,6 +331,8 @@ export default function SandingBeltsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/sanding_tools.webp"
                   alt="SCOTTCHEN Abrasive Sanding Belts Wholesale"

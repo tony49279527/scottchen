@@ -297,6 +297,8 @@ export default function ZhFlapDiscsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN百叶片厂家批发 - T27/T29锆刚玉陶瓷百叶轮"

@@ -307,6 +307,8 @@ export default function ZhSandingDiscsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/sanding_screens.webp"
                   alt="SCOTTCHEN砂纸片批发 - 植绒拉绒片背胶钢纸磨片网砂厂家"

@@ -345,6 +345,8 @@ export default function BuffingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN Cotton Buffing Wheels and Polishing Wheels"

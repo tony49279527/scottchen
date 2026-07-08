@@ -122,6 +122,8 @@ export default function ChinaAbrasiveManufacturerPage() {
               <Image
                 width={1024}
                 height={768}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 loading="lazy"
                 src="/images/quality_inspection.webp"
                 alt="SCOTTCHEN Shanghai Abrasive Manufacturing Factory Quality Inspection"

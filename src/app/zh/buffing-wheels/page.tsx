@@ -303,6 +303,8 @@ export default function ZhBuffingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN抛光布轮厂家批发 - 硬质线布轮软布轮气道轮"

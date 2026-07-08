@@ -290,6 +290,8 @@ export default function ZhCuttingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN树脂切割片厂家批发 - 金属不锈钢超薄切割片"
