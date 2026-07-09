@@ -1,23 +1,28 @@
 # SCOTTCHEN Production Operations Checklist
 
-Last checked: 2026-07-07
+Last checked: 2026-07-09
 
 ## Current Verified State
 
 - Production domain: `https://www.scottchentools.com`
 - Production hosting: Vercel project `context27149/scottchen`
 - Current public DNS nameservers: Cloudflare (`anderson.ns.cloudflare.com`, `meera.ns.cloudflare.com`)
-- Google Search Console: sitemap submitted successfully, 47 pages discovered, homepage indexed
-- IndexNow: key file published and 47 sitemap URLs submitted successfully
+- Google Search Console: sitemap submitted successfully, 47 pages discovered, homepage indexed. API access is not yet available for this domain.
+- PageSpeed Insights API: daily quota exhausted during the 2026-07-09 review; production Lighthouse was used as the direct measurement fallback.
+- Production Lighthouse on 2026-07-09: mobile Performance 97, Accessibility 100, Best Practices 100, SEO 100; desktop Performance 97, Accessibility 100, Best Practices 100, SEO 100.
+- IndexNow: key file published and sitemap URLs submitted successfully
 - Vercel Production environment includes `NEXT_PUBLIC_SITE_URL`, `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, and `INQUIRY_TO_EMAIL`
+- Vercel Production environment does not currently include `INQUIRY_WEBHOOK_URL`, `INQUIRY_BACKUP_WEBHOOK_URL`, or `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 - Vercel Preview and Development environments include `NEXT_PUBLIC_SITE_URL`
-- Current local sitemap after the July 7 optimization contains 51 URLs; submit the updated sitemap after deployment.
+- Current production sitemap contains 51 URLs.
 
 ## Highest Priority
 
 ### 1. Enable inquiry delivery
 
 Current production status: Resend delivery variables are configured in Vercel Production. The website form endpoint is live; verify real delivery after the next deployment with a controlled test inquiry.
+
+The application does not store inquiries in its own database. Configure a backup webhook if the business needs a durable lead record outside email.
 
 Configured path:
 
@@ -26,6 +31,7 @@ Configured path:
 Optional additions:
 
 - Webhook delivery: `INQUIRY_WEBHOOK_URL`
+- Backup lead copy: `INQUIRY_BACKUP_WEBHOOK_URL`
 - Auto reply: `INQUIRY_AUTO_REPLY_ENABLED=true`, `INQUIRY_AUTO_REPLY_FROM`
 
 After deploying the latest build, submit both:

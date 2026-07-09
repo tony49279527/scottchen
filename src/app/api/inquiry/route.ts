@@ -9,10 +9,13 @@ import {
 } from "@/lib/inquiryServer";
 
 const WEBHOOK_TIMEOUT_MS = 10000;
+const BACKUP_WEBHOOK_TIMEOUT_MS = 3000;
 const RESEND_TIMEOUT_MS = 10000;
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_MAX = 8;
 const rateLimitStore = new Map<string, number[]>();
+
+type PrimaryDeliveryChannel = "webhook" | "resend";
 
 function escapeHtml(value: string): string {
   return value
@@ -146,12 +149,70 @@ function isRateLimited(key: string, now = Date.now()) {
   return hits.length > RATE_LIMIT_MAX;
 }
 
+function hasResendDeliveryConfig() {
+  return Boolean(
+    process.env.RESEND_API_KEY &&
+      process.env.INQUIRY_TO_EMAIL &&
+      process.env.INQUIRY_FROM_EMAIL
+  );
+}
+
+function buildWebhookPayload(
+  payload: InquiryPayload,
+  clientIp: string,
+  userAgent: string,
+  leadScore: number,
+  leadTier: string,
+  submittedAt: string,
+  extra?: Record<string, string>
+) {
+  return {
+    ...payload,
+    clientIp,
+    userAgent,
+    leadScore,
+    leadTier,
+    submittedAt,
+    ...extra,
+  };
+}
+
+async function postJsonWithTimeout(
+  url: string,
+  body: unknown,
+  timeoutMs: number,
+  errorLabel: string
+) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      throw new Error(`${errorLabel} responded with ${response.status}`);
+    }
+
+    return true;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 async function sendViaWebhook(
   payload: InquiryPayload,
   clientIp: string,
   userAgent: string,
   leadScore: number,
-  leadTier: string
+  leadTier: string,
+  submittedAt: string
 ) {
   const webhookUrl = process.env.INQUIRY_WEBHOOK_URL;
 
@@ -159,34 +220,53 @@ async function sendViaWebhook(
     return false;
   }
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), WEBHOOK_TIMEOUT_MS);
+  return postJsonWithTimeout(
+    webhookUrl,
+    buildWebhookPayload(
+      payload,
+      clientIp,
+      userAgent,
+      leadScore,
+      leadTier,
+      submittedAt
+    ),
+    WEBHOOK_TIMEOUT_MS,
+    "Webhook"
+  );
+}
 
-  try {
-    const response = await fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...payload,
-        clientIp,
-        userAgent,
-        leadScore,
-        leadTier,
-        submittedAt: new Date().toISOString(),
-      }),
-      signal: controller.signal,
-    });
+async function sendViaBackupWebhook(
+  payload: InquiryPayload,
+  clientIp: string,
+  userAgent: string,
+  leadScore: number,
+  leadTier: string,
+  submittedAt: string,
+  primaryDelivery: PrimaryDeliveryChannel
+) {
+  const backupWebhookUrl = process.env.INQUIRY_BACKUP_WEBHOOK_URL;
 
-    if (!response.ok) {
-      throw new Error(`Webhook responded with ${response.status}`);
-    }
-
-    return true;
-  } finally {
-    clearTimeout(timeout);
+  if (!backupWebhookUrl || backupWebhookUrl === process.env.INQUIRY_WEBHOOK_URL) {
+    return false;
   }
+
+  return postJsonWithTimeout(
+    backupWebhookUrl,
+    buildWebhookPayload(
+      payload,
+      clientIp,
+      userAgent,
+      leadScore,
+      leadTier,
+      submittedAt,
+      {
+        deliveryRole: "backup",
+        primaryDelivery,
+      }
+    ),
+    BACKUP_WEBHOOK_TIMEOUT_MS,
+    "Backup webhook"
+  );
 }
 
 async function sendViaResend(
@@ -309,21 +389,67 @@ export async function POST(request: Request) {
 
   const leadScore = computeLeadScore(payload);
   const leadTier = getLeadTier(leadScore);
+  const submittedAt = new Date().toISOString();
 
   try {
-    const delivered =
-      (await sendViaWebhook(payload, clientIp, userAgent, leadScore, leadTier)) ||
-      (await sendViaResend(payload, clientIp, userAgent, leadScore, leadTier));
+    const hasWebhookConfig = Boolean(process.env.INQUIRY_WEBHOOK_URL);
+    const hasResendConfig = hasResendDeliveryConfig();
+    let primaryDelivery: PrimaryDeliveryChannel | null = null;
 
-    if (!delivered) {
+    if (hasWebhookConfig) {
+      try {
+        if (
+          await sendViaWebhook(
+            payload,
+            clientIp,
+            userAgent,
+            leadScore,
+            leadTier,
+            submittedAt
+          )
+        ) {
+          primaryDelivery = "webhook";
+        }
+      } catch (error) {
+        console.error("Inquiry webhook delivery failed:", error);
+      }
+    }
+
+    if (!primaryDelivery && hasResendConfig) {
+      try {
+        if (await sendViaResend(payload, clientIp, userAgent, leadScore, leadTier)) {
+          primaryDelivery = "resend";
+        }
+      } catch (error) {
+        console.error("Inquiry email delivery failed:", error);
+      }
+    }
+
+    if (!primaryDelivery) {
+      const deliveryConfigured = hasWebhookConfig || hasResendConfig;
       return Response.json(
         {
           ok: false,
-          message:
-            "Inquiry delivery is not configured. Set INQUIRY_WEBHOOK_URL or RESEND_* environment variables.",
+          message: deliveryConfigured
+            ? "We could not deliver your inquiry just now. Please try again or email sales@scottchentools.com directly."
+            : "Inquiry delivery is not configured. Set INQUIRY_WEBHOOK_URL or RESEND_* environment variables.",
         },
-        { status: 503 }
+        { status: deliveryConfigured ? 502 : 503 }
       );
+    }
+
+    try {
+      await sendViaBackupWebhook(
+        payload,
+        clientIp,
+        userAgent,
+        leadScore,
+        leadTier,
+        submittedAt,
+        primaryDelivery
+      );
+    } catch (error) {
+      console.error("Inquiry backup webhook delivery failed:", error);
     }
 
     return Response.json({ ok: true });
