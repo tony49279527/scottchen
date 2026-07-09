@@ -17,6 +17,7 @@ const cspDirectives = [
 const nextConfig = {
   poweredByHeader: false,
   images: {
+    formats: ["image/avif", "image/webp"],
     qualities: [68, 72, 75],
   },
   async headers() {

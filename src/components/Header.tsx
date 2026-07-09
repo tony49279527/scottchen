@@ -196,7 +196,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-industry-slate-400 hover:bg-industry-slate-800 hover:text-white focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md p-2 text-industry-slate-400 hover:bg-industry-slate-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-industry-orange focus-visible:ring-offset-2 focus-visible:ring-offset-industry-slate-950"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
               aria-label={isZh ? "打开主导航" : "Open main menu"}

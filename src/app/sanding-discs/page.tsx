@@ -380,8 +380,15 @@ export default function SandingDiscsPage() {
             "name": "SCOTTCHEN Sanding Discs",
             "description": "Wholesale aluminum oxide, zirconia, silicon carbide, ceramic, and mesh sanding discs in hook-and-loop, PSA, fiber, and quick-change types.",
             "url": absoluteUrl("/sanding-discs"),
+            "image": absoluteUrl("/images/sanding_screens.webp"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
             "manufacturer": { "@id": absoluteUrl("/#organization") },
+            "category": "Sanding discs and sandpaper discs",
+            "material": "Aluminum oxide, zirconia, silicon carbide, ceramic, mesh screen",
+            "additionalProperty": [
+              { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 discs per common size and grit" },
+              { "@type": "PropertyValue", "name": "Attachment types", "value": "Hook-and-loop, PSA, fiber, quick-change" }
+            ],
           }),
         }}
       />

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -161,8 +162,8 @@ export default function Home() {
                 </div>
                 
                 <div className="relative aspect-square w-full">
-                  {/* Hero column is hidden below lg; media-scoped preload speeds up the
-                      desktop LCP image without downloading it on mobile. */}
+                  {/* Hero column is hidden below lg; media-scoped preload + eager
+                      loading keep desktop LCP fast without mobile downloads. */}
                   <link
                     rel="preload"
                     as="image"
@@ -172,7 +173,8 @@ export default function Home() {
                   <img
                     width={1024}
                     height={1024}
-                    loading="lazy"
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
                     src="/images/hero_abrasives_kit.webp"
                     alt="SCOTTCHEN Industrial Buffing and Sanding Kit Sourcing"
@@ -646,6 +648,7 @@ export default function Home() {
                 about: { "@id": absoluteUrl("/#organization") },
                 primaryImageOfPage: absoluteUrl("/images/hero_abrasives_kit.webp"),
               },
+              buildFaqPageSchema(homeFaqs),
             ],
           }),
         }}

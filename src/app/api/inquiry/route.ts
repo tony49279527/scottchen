@@ -373,6 +373,11 @@ export async function POST(request: Request) {
   const userAgent = request.headers.get("user-agent") || "";
   payload.country = normalizeCountry(payload.country);
 
+  // Honeypot: bots that fill hidden fields get a fake success without delivery.
+  if (typeof payload.hpField === "string" && payload.hpField.trim() !== "") {
+    return Response.json({ ok: true });
+  }
+
   if (isSubmissionTooFast(payload.formStartedAt)) {
     return Response.json(
       { ok: false, message: "Submission was blocked. Please try again." },

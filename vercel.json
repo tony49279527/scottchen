@@ -7,5 +7,13 @@
     "env": {
       "NEXT_PUBLIC_SITE_URL": "https://www.scottchentools.com"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "scottchentools.com" }],
+      "destination": "https://www.scottchentools.com/:path*",
+      "permanent": true
+    }
+  ]
 }

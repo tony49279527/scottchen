@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "磨具批发_磨料磨具批发供货_五金工具分销合作_SCOTTCHEN",
+  title: "磨具批发与五金分销合作 | SCOTTCHEN",
   description: "SCOTTCHEN磨具厂家直供批发，面向经销商、五金店、电商卖家、工业采购商提供磨料磨具批量采购服务，支持混批、柜货、贴牌、一件代发。",
   path: "/zh/wholesale-abrasives",
   locale: "zh-CN",

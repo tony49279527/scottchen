@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -386,6 +387,7 @@ export default function ChineseHome() {
                 about: { "@id": absoluteUrl("/#organization") },
                 primaryImageOfPage: absoluteUrl("/images/hero_abrasives_kit.webp"),
               },
+              buildFaqPageSchema(homeFaqs),
             ],
           }),
         }}

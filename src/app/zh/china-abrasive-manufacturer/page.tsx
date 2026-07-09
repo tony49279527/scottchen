@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "中国磨料磨具厂家_上海磨具OEM工厂_磨具批发出口_SCOTTCHEN",
+  title: "中国磨料磨具厂家与上海OEM工厂 | SCOTTCHEN",
   description: "SCOTTCHEN是位于上海的中国磨料磨具专业生产厂家，成立于2014年，为全球客户提供抛光轮、砂纸片、百叶片等磨具的OEM/ODM代工与出口服务。",
   path: "/zh/china-abrasive-manufacturer",
   locale: "zh-CN",

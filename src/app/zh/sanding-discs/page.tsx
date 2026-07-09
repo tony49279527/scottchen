@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "砂纸片批发_砂碟厂家_圆形砂纸盘OEM定制_SCOTTCHEN",
+  title: "砂纸片批发与砂碟厂家 | SCOTTCHEN",
   description: "上海砂纸片生产厂家，提供植绒砂纸片、背胶砂纸、钢纸磨片、网格砂纸、网砂等产品批发，氧化铝/碳化硅/锆刚玉材质齐全，MOQ 500片起。",
   path: "/zh/sanding-discs",
   locale: "zh-CN",
@@ -364,8 +364,15 @@ export default function ZhSandingDiscsPage() {
             "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
             "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
             "url": absoluteUrl("/zh/sanding-discs"),
+            "image": absoluteUrl("/images/sanding_screens.webp"),
             "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
             "manufacturer": { "@id": absoluteUrl("/#organization") },
+            "category": "砂纸片与砂碟",
+            "material": "氧化铝、锆刚玉、碳化硅、陶瓷、网砂",
+            "additionalProperty": [
+              { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" },
+              { "@type": "PropertyValue", "name": "背基/连接方式", "value": "植绒、背胶、钢纸、快换" }
+            ],
           }),
         }}
       />
