@@ -9,7 +9,7 @@ Last checked: 2026-07-09
 - Current public DNS nameservers: Cloudflare (`anderson.ns.cloudflare.com`, `meera.ns.cloudflare.com`)
 - Google Search Console: sitemap submitted successfully, 47 pages discovered, homepage indexed. API access is not yet available for this domain.
 - PageSpeed Insights API: daily quota exhausted during the 2026-07-09 review; production Lighthouse was used as the direct measurement fallback.
-- Production Lighthouse on 2026-07-09: mobile Performance 97, Accessibility 100, Best Practices 100, SEO 100; desktop Performance 97, Accessibility 100, Best Practices 100, SEO 100.
+- Production Lighthouse on 2026-07-09 after deployment: mobile Performance 98, Accessibility 100, Best Practices 100, SEO 100; desktop Performance 93, Accessibility 100, Best Practices 100, SEO 100.
 - IndexNow: key file published and sitemap URLs submitted successfully
 - Vercel Production environment includes `NEXT_PUBLIC_SITE_URL`, `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, and `INQUIRY_TO_EMAIL`
 - Vercel Production environment does not currently include `INQUIRY_WEBHOOK_URL`, `INQUIRY_BACKUP_WEBHOOK_URL`, or `NEXT_PUBLIC_GA_MEASUREMENT_ID`
