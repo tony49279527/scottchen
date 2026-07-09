@@ -7,9 +7,9 @@ Last checked: 2026-07-09
 - Production domain: `https://www.scottchentools.com`
 - Production hosting: Vercel project `context27149/scottchen`
 - Current public DNS nameservers: Cloudflare (`anderson.ns.cloudflare.com`, `meera.ns.cloudflare.com`)
-- Google Search Console: sitemap submitted successfully, 47 pages discovered, homepage indexed. API access is not yet available for this domain.
-- PageSpeed Insights API: daily quota exhausted during the 2026-07-09 review; production Lighthouse was used as the direct measurement fallback.
-- Production Lighthouse on 2026-07-09 after deployment: mobile Performance 98, Accessibility 100, Best Practices 100, SEO 100; desktop Performance 93, Accessibility 100, Best Practices 100, SEO 100.
+- Google Search Console: sitemap submitted successfully, 47 pages discovered, homepage indexed from the last manual UI check. API access was retried on 2026-07-09 with local ADC and is still blocked by quota project/API configuration (`searchconsole.googleapis.com` 403).
+- PageSpeed Insights API: public API returned 429 during the 2026-07-09 review because the Google consumer project has daily query limit `0`; production Lighthouse was used as the direct measurement fallback.
+- Production Lighthouse on 2026-07-09 daily review: mobile Performance 97, Accessibility 100, Best Practices 100, SEO 100; desktop Performance 89, Accessibility 100, Best Practices 100, SEO 100.
 - IndexNow: key file published and sitemap URLs submitted successfully
 - Vercel Production environment includes `NEXT_PUBLIC_SITE_URL`, `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, and `INQUIRY_TO_EMAIL`
 - Vercel Production environment does not currently include `INQUIRY_WEBHOOK_URL`, `INQUIRY_BACKUP_WEBHOOK_URL`, or `NEXT_PUBLIC_GA_MEASUREMENT_ID`
@@ -41,20 +41,19 @@ After deploying the latest build, submit both:
 
 Expected result: the business receives one internal notification per form submission, and the website redirects to the thank-you page only after successful delivery.
 
-### 2. Activate business email for `sales@scottchentools.com`
+### 2. Verify business email delivery for `sales@scottchentools.com`
 
 Current DNS status:
 
-- No MX record found for `scottchentools.com`
-- No SPF TXT record found for `scottchentools.com`
-- No DMARC TXT record found for `_dmarc.scottchentools.com`
+- Cloudflare Email Routing MX records are published for `scottchentools.com`.
+- SPF TXT is published as `v=spf1 include:_spf.mx.cloudflare.net ~all`.
+- DMARC TXT is published as `v=DMARC1; p=none;`.
 
-Required action in Cloudflare DNS:
+Required follow-up:
 
-- Add MX records from the selected mailbox provider.
-- Add SPF TXT record from the selected mailbox/sending provider.
-- Add DKIM records from the selected mailbox/sending provider.
-- Add DMARC TXT record after SPF/DKIM are in place.
+- Confirm that inbound mail to `sales@scottchentools.com` reaches the intended mailbox.
+- Add or verify DKIM records if the mailbox or sender provider requires them.
+- Move DMARC beyond `p=none` only after SPF/DKIM alignment is confirmed.
 
 Do not invent these values. Copy the exact MX, SPF and DKIM records from the email provider dashboard.
 
@@ -92,6 +91,7 @@ Completed:
 
 Next check:
 
+- Configure a usable Search Console API quota project or OAuth client so automated daily reviews can pull search analytics, sitemap status, URL Inspection samples, and indexing data.
 - Revisit the Pages report after Google finishes processing.
 - Inspect core URLs: `/products`, `/contact`, `/sample-kit`, `/supplier-profile`, and the main product pages.
 
@@ -100,12 +100,13 @@ Next check:
 Completed:
 
 - IndexNow key file is live at `https://www.scottchentools.com/bba16f0343d10f111540909669eb16cc.txt`.
-- 47 sitemap URLs were submitted to IndexNow and accepted with status `202`.
+- 47 sitemap URLs were previously submitted to IndexNow and accepted with status `202`.
 
 Still useful:
 
 - Add the domain to Bing Webmaster Tools if access is available.
 - Submit `https://www.scottchentools.com/sitemap.xml` there as well.
+- Re-run `npm run indexnow` after the next production content deployment so the current 51-URL sitemap is resubmitted intentionally.
 
 ## Ongoing Hardening
 
