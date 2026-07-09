@@ -182,7 +182,7 @@ export default function Home() {
                 </div>
                 
                 <div className="p-6 bg-industry-slate-950/90 border-t border-industry-slate-850">
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-2">SCOTTCHEN Premium Accessories</h3>
+                  <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-2">SCOTTCHEN Premium Accessories</h2>
                   <p className="text-xs text-industry-slate-400 leading-relaxed">
                     Custom combined buffing wheels, sanding rolls, and compounds in unified retail-ready boxes.
                   </p>
