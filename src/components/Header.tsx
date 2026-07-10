@@ -40,12 +40,14 @@ export default function Header() {
         { name: "应用", href: "/zh/applications" },
         { name: "质检", href: "/zh/quality-control" },
         { name: "资源", href: "/zh/resources" },
+        { name: "关于", href: "/zh/about" },
       ]
     : [
         { name: "OEM", href: "/oem-private-label" },
         { name: "Applications", href: "/applications" },
         { name: "Quality", href: "/quality-control" },
         { name: "Resources", href: "/resources" },
+        { name: "About", href: "/about" },
       ];
 
   const secondaryNavItems = isZh
@@ -53,11 +55,15 @@ export default function Header() {
         { name: "样品申领", href: "/zh/sample-kit" },
         { name: "关于工厂", href: "/zh/china-abrasive-manufacturer" },
         { name: "批发合作", href: "/zh/wholesale-abrasives" },
+        { name: "供应商档案", href: "/zh/supplier-profile" },
+        { name: "联系我们", href: "/zh/contact" },
       ]
     : [
         { name: "Sample Kit", href: "/sample-kit" },
         { name: "Our Factory", href: "/china-abrasive-manufacturer" },
         { name: "Wholesale", href: "/wholesale-abrasives" },
+        { name: "Supplier Profile", href: "/supplier-profile" },
+        { name: "Contact", href: "/contact" },
       ];
 
   const mobileNavItems = [...primaryNavItems, ...secondaryNavItems];
@@ -66,7 +72,8 @@ export default function Header() {
     return alternateLocalePath(pathname, targetLang);
   };
 
-  const isActive = (path: string) => pathname === path || (path !== "/" && path !== "/zh" && pathname.startsWith(path));
+  const isActive = (path: string) =>
+    pathname === path || (path !== "/" && path !== "/zh" && pathname.startsWith(path));
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -113,13 +120,41 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex xl:gap-2" aria-label="Main navigation">
-            <Link
-              href={`${prefix}/products`}
-              className={desktopLinkClass(productsActive)}
-            >
-              {isZh ? "产品" : "Products"}
-            </Link>
+          <nav
+            className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex xl:gap-2"
+            aria-label="Main navigation"
+          >
+            <div className="group relative">
+              <Link
+                href={`${prefix}/products`}
+                className={`${desktopLinkClass(productsActive)} gap-1.5`}
+              >
+                {isZh ? "产品" : "Products"}
+                <svg
+                  aria-hidden="true"
+                  className="h-3.5 w-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              <div className="invisible absolute left-0 top-full z-50 mt-2 w-56 rounded-md border border-industry-slate-800 bg-industry-slate-950 p-2 opacity-0 shadow-2xl shadow-black/20 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                {productLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block rounded px-3 py-2 text-sm font-semibold transition-colors hover:bg-industry-slate-850 hover:text-white ${
+                      isActive(item.href) ? "text-industry-orange" : "text-industry-slate-300"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
             {primaryNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -217,7 +252,10 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div id="mobile-navigation" className="border-t border-industry-slate-800 bg-industry-slate-950 px-4 pb-6 pt-2 space-y-1 lg:hidden">
+        <div
+          id="mobile-navigation"
+          className="space-y-1 border-t border-industry-slate-800 bg-industry-slate-950 px-4 pb-6 pt-2 lg:hidden"
+        >
           <button
             type="button"
             onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
@@ -237,7 +275,7 @@ export default function Header() {
             </svg>
           </button>
           {mobileProductsOpen && (
-            <div className="pl-4 space-y-1 border-l border-industry-slate-800 ml-3">
+            <div className="ml-3 space-y-1 border-l border-industry-slate-800 pl-4">
               {productLinks.map((item) => (
                 <Link
                   key={item.href}
@@ -264,14 +302,16 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-          <div className="pt-4 border-t border-industry-slate-800 space-y-4">
+          <div className="space-y-4 border-t border-industry-slate-800 pt-4">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-mono text-industry-slate-500">{isZh ? "切换语言:" : "Language:"}</span>
-              <div className="flex items-center space-x-3 text-sm font-mono bg-industry-slate-900 border border-industry-slate-800 px-3 py-1 rounded">
+              <span className="text-xs font-mono text-industry-slate-500">
+                {isZh ? "切换语言:" : "Language:"}
+              </span>
+              <div className="flex items-center space-x-3 rounded border border-industry-slate-800 bg-industry-slate-900 px-3 py-1 text-sm font-mono">
                 <Link
                   href={getLanguageToggleLink("en")}
                   onClick={closeMobileMenu}
-                  className={`transition-colors hover:text-white ${!isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                  className={`transition-colors hover:text-white ${!isZh ? "font-bold text-industry-orange" : "text-industry-slate-400"}`}
                 >
                   EN
                 </Link>
@@ -279,7 +319,7 @@ export default function Header() {
                 <Link
                   href={getLanguageToggleLink("zh")}
                   onClick={closeMobileMenu}
-                  className={`transition-colors hover:text-white ${isZh ? "text-industry-orange font-bold" : "text-industry-slate-400"}`}
+                  className={`transition-colors hover:text-white ${isZh ? "font-bold text-industry-orange" : "text-industry-slate-400"}`}
                 >
                   中文
                 </Link>
@@ -288,7 +328,7 @@ export default function Header() {
             <Link
               href={isZh ? "/zh/contact" : "/contact"}
               onClick={closeMobileMenu}
-              className="block w-full text-center rounded bg-industry-orange-cta py-3 text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
+              className="block w-full rounded bg-industry-orange-cta py-3 text-center text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
             >
               {isZh ? "在线询盘" : "Request Quote"}
             </Link>

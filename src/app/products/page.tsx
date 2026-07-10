@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Surface Finishing Accessories Catalog | SCOTTCHEN",
+  title: "OEM Abrasive Products Catalog — Buffing Wheels, Sanding Discs, Flap Discs | SCOTTCHEN China Manufacturer",
   description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
   path: "/products",
   alternatePath: "/zh/products",
@@ -109,6 +109,9 @@ export default function ProductsOverview() {
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS CATALOG</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             Surface Finishing Accessories Catalog
+            <span className="mt-2 block text-base font-semibold text-industry-slate-400 sm:text-lg">
+              OEM abrasive products from a Shanghai manufacturer — buffing wheels, sanding discs, flap discs, belts, cutting wheels & kits
+            </span>
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
             Scottchen specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard B2B MOQ parameters, and packaging options.

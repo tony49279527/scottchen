@@ -11,7 +11,9 @@ const cspDirectives = [
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
-  "object-src 'none'",
+  // Allow same-origin PDF/object preview (catalog.pdf). Blocking object-src
+  // entirely makes many browsers render /catalog.pdf as a blank page.
+  "object-src 'self'",
 ].join("; ");
 
 const nextConfig = {
@@ -43,6 +45,15 @@ const nextConfig = {
             key: "Cache-Control",
             value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
           },
+        ],
+      },
+      {
+        source: "/catalog.pdf",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          { key: "Content-Disposition", value: 'inline; filename="SCOTTCHEN_B2B_Catalog.pdf"' },
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
         ],
       },
     ];

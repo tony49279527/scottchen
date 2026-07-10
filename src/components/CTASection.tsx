@@ -42,7 +42,8 @@ export default function CTASection({
           </Link>
           <a
             href="/catalog.pdf"
-            download="SCOTTCHEN_B2B_Catalog.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() =>
               trackEvent({
                 event: "catalog_download",
@@ -51,7 +52,7 @@ export default function CTASection({
             }
             className="w-full sm:w-auto inline-flex items-center justify-center text-sm font-semibold text-industry-slate-400 hover:text-white transition-all-custom underline underline-offset-4 py-2"
           >
-            {isZh ? "下载规格目录" : "Download Specifications Catalog"}
+            {isZh ? "打开规格目录 PDF" : "Open Specifications Catalog"}
           </a>
         </div>
         <div className="mt-6 flex justify-center items-center space-x-6 text-xs text-industry-slate-500 font-mono">

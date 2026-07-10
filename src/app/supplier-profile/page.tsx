@@ -156,12 +156,14 @@ export default function SupplierProfile() {
           </div>
 
           <aside className="rounded-xl border border-industry-orange/30 bg-industry-orange/5 p-7 lg:col-span-2">
-            <h2 className="text-xl font-bold text-white">Important scope note</h2>
+            <h2 className="text-xl font-bold text-white">How we confirm supplier details</h2>
             <p className="mt-4 text-sm leading-relaxed text-industry-slate-300">
               SCOTTCHEN is the product brand used across this B2B site and the linked
-              retail reference. A website profile is not a substitute for legal supplier
-              documents. The contracting entity, production location and beneficiary
-              account must be confirmed on the project quotation or contract.
+              retail reference. For formal due diligence, we provide quotation-level
+              confirmation of the contracting entity, production location, and payment
+              beneficiary, plus certificates and inspection documents for qualified
+              buyers upon request. Use this profile as a starting point, then verify
+              details on the written quotation or contract before PO placement.
             </p>
             <p className="mt-4 text-xs leading-relaxed text-industry-slate-400">
               Last reviewed: 28 June 2026

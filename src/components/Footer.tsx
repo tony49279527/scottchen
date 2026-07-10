@@ -122,6 +122,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href={isZh ? "/zh/about" : "/about"} className="hover:text-white transition-colors">
+                  {p("About SCOTTCHEN", "关于 SCOTTCHEN")}
+                </Link>
+              </li>
+              <li>
                 <Link href={isZh ? "/zh/china-abrasive-manufacturer" : "/china-abrasive-manufacturer"} className="hover:text-white transition-colors">
                   {p("Our Shanghai Factory", "上海工厂介绍")}
                 </Link>
@@ -180,6 +185,16 @@ export default function Footer() {
                 <Link href={isZh ? "/zh/sample-kit" : "/sample-kit"} className="hover:text-white transition-colors block">
                   {p("Request Sample Kit", "申请商业样品")}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="/catalog.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors block"
+                >
+                  {p("Specifications Catalog (PDF)", "规格目录 PDF")}
+                </a>
               </li>
               <li>
                 <Link href={isZh ? "/zh/resources/abrasive-sourcing-checklist" : "/resources/abrasive-sourcing-checklist"} className="hover:text-white transition-colors block">

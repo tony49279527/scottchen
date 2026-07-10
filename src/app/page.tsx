@@ -7,8 +7,8 @@ import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
-  description: "SCOTTCHEN supplies retail-ready surface finishing accessory kits with private-label packaging, custom grit assortments and B2B sourcing support.",
+  title: "Shanghai OEM Abrasive Manufacturer | Buffing Wheels, Sanding Kits & Private Label | SCOTTCHEN",
+  description: "Shanghai-based OEM abrasive manufacturer since 2014. Custom buffing wheels, sanding discs, flap discs and private-label kits for tool brands, distributors and Amazon sellers. FOB Shanghai.",
   path: "/",
   alternatePath: "/zh",
 });
@@ -106,7 +106,7 @@ export default function Home() {
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
               <span className="inline-flex items-center rounded-md bg-industry-orange/10 px-3 py-1 text-xs font-bold tracking-wider text-industry-orange uppercase border border-industry-orange/20 w-fit">
-                B2B Sourcing & Private Label
+                Shanghai OEM · Since 2014 · B2B Private Label
               </span>
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
                 OEM Abrasive, Sanding & Polishing Accessory Kits
@@ -114,6 +114,17 @@ export default function Home() {
               <p className="text-lg text-industry-slate-300 leading-relaxed max-w-2xl">
                 We help tool brands, hardware distributors, and online sellers build retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility.
               </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono uppercase tracking-wider text-industry-slate-400">
+                <span>Shanghai factory base</span>
+                <span className="text-industry-slate-700">·</span>
+                <span>Export markets worldwide</span>
+                <span className="text-industry-slate-700">·</span>
+                <span>MOQ from 500 kits</span>
+                <span className="text-industry-slate-700">·</span>
+                <Link href="/about" className="text-industry-orange hover:underline">
+                  About SCOTTCHEN
+                </Link>
+              </div>
               
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 <Link
@@ -129,30 +140,39 @@ export default function Home() {
                   Get Sample Kit
                 </Link>
               </div>
-              <Link
-                href="/supplier-profile"
-                className="w-fit text-sm font-bold text-industry-orange hover:text-industry-orange-hover"
-              >
-                Review supplier scope, verification status, and RFQ requirements &rarr;
-              </Link>
+              <div className="flex flex-wrap gap-4 text-sm font-bold">
+                <Link
+                  href="/supplier-profile"
+                  className="text-industry-orange hover:text-industry-orange-hover"
+                >
+                  Review supplier scope & RFQ checklist &rarr;
+                </Link>
+                <a
+                  href="/catalog.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-industry-slate-300 hover:text-white underline underline-offset-4"
+                >
+                  Open specifications catalog
+                </a>
+              </div>
 
               {/* Trust badges */}
               <div className="grid grid-cols-3 gap-4 pt-8 border-t border-industry-slate-800 max-w-lg">
                 <div>
-                  <div className="text-xl font-bold text-white">Small-Batch Testing</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">MOQs starting at 500 kits</div>
+                  <div className="text-xl font-bold text-white">Since 2014</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">Shanghai OEM manufacturing</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-white">Online Seller Friendly</div>
+                  <div className="text-xl font-bold text-white">FBA Prep</div>
                   <div className="text-xs text-industry-slate-400 mt-1">FNSKU barcode & carton labels</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-white">Application Sized</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">Grits matched to substrate</div>
+                  <div className="text-xl font-bold text-white">MOQ 500</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">Small-batch kit testing</div>
                 </div>
               </div>
             </div>
-
             {/* Right Graphic/Schematic Column */}
             <div className="lg:col-span-5 hidden lg:block">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">

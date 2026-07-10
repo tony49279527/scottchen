@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "磨料磨具与抛光轮规格目录 | SCOTTCHEN",
+  title: "OEM 磨料磨具产品目录 — 抛光轮、砂纸片、百叶片 | SCOTTCHEN 中国厂家",
   description: "浏览技术参数、参考 B2B 起订量及包装选项，涵盖缝线棉轮、松缝布轮、气道轮、锆刚玉砂碟、开放式砂网及细节砂棒组合。",
   path: "/zh/products",
   alternatePath: "/products",
@@ -110,10 +110,10 @@ export default function ChineseProductsOverview() {
           />
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">技术规格目录</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-            表面处理研磨抛光配件规格目录
+            OEM 磨料磨具产品目录
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
-            Scottchen (SCOTTCHEN) 专注于为五金品牌商和高采购量零售商提供定制化研磨抛光套装方案。在此您可以浏览我们的核心规格、标准起订量 (MOQ) 与出运包装规范。
+            上海厂家直供：抛光轮、砂纸片、百叶片、砂带、切割片与贴牌套装。浏览核心规格、标准起订量 (MOQ) 与出运包装规范，便于准备可比较 RFQ。
           </p>
         </div>
       </section>

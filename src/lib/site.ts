@@ -34,6 +34,7 @@ export function absoluteUrl(path = "/") {
 
 const localizedPaths = new Set([
   "/",
+  "/about",
   "/products",
   "/products/buffing-polishing-wheels",
   "/products/sanding-grinding-accessories",

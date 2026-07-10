@@ -152,9 +152,9 @@ export default function ChineseSupplierProfile() {
           </div>
 
           <aside className="rounded-xl border border-industry-orange/30 bg-industry-orange/5 p-7 lg:col-span-2">
-            <h2 className="text-xl font-bold text-white">范围说明</h2>
+            <h2 className="text-xl font-bold text-white">如何确认供应商信息</h2>
             <p className="mt-4 text-sm leading-relaxed text-industry-slate-300">
-              SCOTTCHEN 是本站及所链接零售参考站使用的产品品牌。网站档案不能替代法定供应商文件；签约主体、生产地点及收款账户必须以具体项目的报价单或合同为准。
+              SCOTTCHEN 是本站及所链接零售参考站使用的产品品牌。正式尽调时，我们会在报价层面确认签约主体、生产地点与收款账户，并向合格采购商按需提供证书与验货文件。请将本档案作为起点，下单前以书面报价单或合同核验最终信息。
             </p>
             <p className="mt-4 text-xs leading-relaxed text-industry-slate-400">
               最近复核：2026 年 6 月 28 日

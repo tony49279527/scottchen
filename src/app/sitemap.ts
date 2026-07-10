@@ -5,6 +5,7 @@ const LAST_MODIFIED = new Date(SITE_UPDATED);
 
 const localizedRoutes = [
   { en: "/", zh: "/zh", priority: 1.0, changefreq: "weekly" as const },
+  { en: "/about", zh: "/zh/about", priority: 0.85, changefreq: "monthly" as const },
   { en: "/products", zh: "/zh/products", priority: 0.9, changefreq: "weekly" as const },
   {
     en: "/products/buffing-polishing-wheels",

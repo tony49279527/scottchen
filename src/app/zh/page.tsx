@@ -48,7 +48,7 @@ export default function ChineseHome() {
             {/* Left: Heading text */}
             <div className="text-left lg:col-span-7 space-y-6">
               <span className="inline-flex items-center rounded bg-industry-orange/15 px-3 py-1 text-xs font-bold tracking-wider text-industry-orange uppercase border border-industry-orange/20">
-                工业级抛光轮与磨料磨具 B2B 供应
+                上海 OEM · 成立于 2014 · B2B 贴牌定制
               </span>
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
                 专注抛光轮及磨料磨具
@@ -57,6 +57,17 @@ export default function ChineseHome() {
               <p className="text-lg text-industry-slate-300 leading-relaxed max-w-2xl">
                 SCOTTCHEN 为工具品牌商、五金分销商及跨境电商卖家提供零售包装定制、砂碟组合与布轮产品供应，并按项目确认起订量、标签和出运要求。
               </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono uppercase tracking-wider text-industry-slate-400">
+                <span>上海工厂基地</span>
+                <span className="text-industry-slate-700">·</span>
+                <span>服务全球出口市场</span>
+                <span className="text-industry-slate-700">·</span>
+                <span>MOQ 起订 500 套</span>
+                <span className="text-industry-slate-700">·</span>
+                <Link href="/zh/about" className="text-industry-orange hover:underline">
+                  关于 SCOTTCHEN
+                </Link>
+              </div>
               
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <Link
@@ -66,18 +77,42 @@ export default function ChineseHome() {
                   获取定制询价
                 </Link>
                 <Link
-                  href="/zh/products"
+                  href="/zh/sample-kit"
                   className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800/80 px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-slate-750 text-center"
                 >
-                  浏览产品规格书
+                  申领样品包
                 </Link>
               </div>
-              <Link
-                href="/zh/supplier-profile"
-                className="inline-block text-sm font-bold text-industry-orange hover:text-industry-orange-hover"
-              >
-                查看供应商范围、公开核验状态与询价要求 &rarr;
-              </Link>
+              <div className="flex flex-wrap gap-4 text-sm font-bold">
+                <Link
+                  href="/zh/supplier-profile"
+                  className="text-industry-orange hover:text-industry-orange-hover"
+                >
+                  查看供应商范围与询价要求 &rarr;
+                </Link>
+                <a
+                  href="/catalog.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-industry-slate-300 hover:text-white underline underline-offset-4"
+                >
+                  打开规格目录 PDF
+                </a>
+              </div>
+              <div className="grid grid-cols-3 gap-4 pt-8 border-t border-industry-slate-800 max-w-lg">
+                <div>
+                  <div className="text-xl font-bold text-white">成立于 2014</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">上海 OEM 制造</div>
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-white">FBA 预备</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">FNSKU 条码与外箱标</div>
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-white">MOQ 500</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">支持小批量试单</div>
+                </div>
+              </div>
             </div>
 
             {/* Right: Graphic showcase */}

@@ -131,6 +131,22 @@ export default function ChinaAbrasiveManufacturerPage() {
                 className="w-full h-80 object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
+                <p className="text-xs font-semibold text-white">
+                  Quality inspection at our Shanghai abrasive manufacturing facility
+                </p>
+                <p className="text-[11px] text-industry-slate-300 leading-relaxed">
+                  Additional production-line and warehouse photos, ISO certificates, and third-party audit reports are available to qualified buyers on request or during a factory visit / video tour.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <Link href="/contact" className="text-[11px] font-bold text-industry-orange hover:underline">
+                    Request factory visit / video tour →
+                  </Link>
+                  <Link href="/about" className="text-[11px] font-bold text-industry-slate-300 hover:text-white hover:underline">
+                    About SCOTTCHEN →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
