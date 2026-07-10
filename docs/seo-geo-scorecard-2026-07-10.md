@@ -104,5 +104,16 @@
 ## 5. 本轮代码修复后预期
 
 - 技术/结构化数据子分可维持或微升（FAQ 与可见内容对齐上线）。
-- GEO 子分在完成小样本基线后可从 1.5 升至约 2.0–2.5（有观测数据，但仍非稳定引用优势）。
+- GEO 子分在完成小样本基线后可从 1.5 升至约 **2.0**（已有观测数据，但仍非稳定引用优势；见 `docs/geo-baseline-2026-07-10.md`）。
 - 总分预计仍落在 **72–76**，直到真实图片与询盘闭环完成，才有望进入 80+。
+
+## 6. 部署状态（2026-07-10）
+
+| 项 | 状态 |
+|---|---|
+| 提交 | `ba8a846` on `cursor/fix-csp-unsafe-eval` |
+| 远程推送 | 已推送 origin |
+| 本地 typecheck / build / seo:smoke | 通过（51 URL） |
+| IndexNow | 51 URL，HTTP 200 |
+| Preview | Ready：`scottchen-cv244ma38-context27149.vercel.app` |
+| Production promote | **待人工执行** `vercel --prod` 或 `vercel promote scottchen-cv244ma38-context27149.vercel.app` |
