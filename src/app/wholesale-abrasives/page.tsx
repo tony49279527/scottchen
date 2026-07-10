@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Wholesale Abrasive Tools & Bulk Supplies | SCOTTCHEN",
@@ -306,6 +307,7 @@ export default function WholesaleAbrasivesPage() {
                 "description": "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers, and industrial buyers from China manufacturer.",
                 "url": absoluteUrl("/wholesale-abrasives"),
               },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

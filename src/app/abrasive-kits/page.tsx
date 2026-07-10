@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Private Label Abrasive & Polishing Kits Wholesale | SCOTTCHEN",
@@ -299,18 +300,23 @@ export default function AbrasiveKitsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/abrasive-kits#productgroup"),
-            "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
-            "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
-            "url": absoluteUrl("/abrasive-kits"),
-            "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "Private-label abrasive and polishing kits",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 kits per common assortment" },
-              { "@type": "PropertyValue", "name": "Packaging", "value": "Color box, blister, polybag, barcode and instruction inserts" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/abrasive-kits#productgroup"),
+                "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
+                "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
+                "url": absoluteUrl("/abrasive-kits"),
+                "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "Private-label abrasive and polishing kits",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 kits per common assortment" },
+                  { "@type": "PropertyValue", "name": "Packaging", "value": "Color box, blister, polybag, barcode and instruction inserts" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

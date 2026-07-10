@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "百叶片厂家与百叶轮批发 | SCOTTCHEN",
@@ -349,19 +350,24 @@ export default function ZhFlapDiscsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/flap-discs#productgroup"),
-            "name": "SCOTTCHEN百叶片、百叶轮、平面砂布轮",
-            "description": "专业百叶片生产厂家，T27/T29锆刚玉陶瓷氧化铝百叶片批发，MOQ 500片起。",
-            "url": absoluteUrl("/zh/flap-discs"),
-            "image": absoluteUrl("/images/fiber_discs.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "百叶片与平面砂布轮",
-            "material": "锆刚玉、陶瓷、氧化铝，玻璃纤维网盖",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "形状", "value": "T27 平面 / T29 锥面" },
-              { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/flap-discs#productgroup"),
+                "name": "SCOTTCHEN百叶片、百叶轮、平面砂布轮",
+                "description": "专业百叶片生产厂家，T27/T29锆刚玉陶瓷氧化铝百叶片批发，MOQ 500片起。",
+                "url": absoluteUrl("/zh/flap-discs"),
+                "image": absoluteUrl("/images/fiber_discs.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "百叶片与平面砂布轮",
+                "material": "锆刚玉、陶瓷、氧化铝，玻璃纤维网盖",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "形状", "value": "T27 平面 / T29 锥面" },
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

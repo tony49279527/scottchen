@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "砂带厂家与环形砂带批发 | SCOTTCHEN",
@@ -345,19 +346,24 @@ export default function ZhSandingBeltsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
-            "name": "SCOTTCHEN环形砂带、砂带、砂带套",
-            "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
-            "url": absoluteUrl("/zh/sanding-belts"),
-            "image": absoluteUrl("/images/sanding_tools.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "环形砂带与砂带套",
-            "material": "氧化铝、锆刚玉、陶瓷、碳化硅",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 200 条起" },
-              { "@type": "PropertyValue", "name": "非标尺寸", "value": "按确认图纸裁切宽度与周长" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
+                "name": "SCOTTCHEN环形砂带、砂带、砂带套",
+                "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
+                "url": absoluteUrl("/zh/sanding-belts"),
+                "image": absoluteUrl("/images/sanding_tools.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "环形砂带与砂带套",
+                "material": "氧化铝、锆刚玉、陶瓷、碳化硅",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 200 条起" },
+                  { "@type": "PropertyValue", "name": "非标尺寸", "value": "按确认图纸裁切宽度与周长" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

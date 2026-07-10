@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "抛光轮厂家与抛光布轮批发 | SCOTTCHEN",
@@ -355,20 +356,26 @@ export default function ZhBuffingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
-            "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
-            "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
-            "url": absoluteUrl("/zh/buffing-wheels"),
-            "image": absoluteUrl("/images/buffing_wheels.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "棉布抛光轮与抛光配件",
-            "material": "棉布、绒布、麻棉混纺、抛光膏",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "参考起订量", "value": "标准规格 500 件/尺寸；套装 1,000 套起" },
-              { "@type": "PropertyValue", "name": "参考交期", "value": "定金与样品确认后约 25-35 天" },
-              { "@type": "PropertyValue", "name": "贸易条款", "value": "FOB 上海 / EXW / CIF 可协商" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
+                "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
+                "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
+                "url": absoluteUrl("/zh/buffing-wheels"),
+                "image": absoluteUrl("/images/buffing_wheels.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "棉布抛光轮与抛光配件",
+                "material": "棉布、绒布、麻棉混纺、抛光膏",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "500件/款（标准品）" },
+                  { "@type": "PropertyValue", "name": "参考交期", "value": "标准品25-35天，OEM 30-40天" },
+                  { "@type": "PropertyValue", "name": "贸易条款", "value": "FOB上海 / CIF / 门到门" },
+                  { "@type": "PropertyValue", "name": "付款方式", "value": "T/T 30%定金，70%见提单副本" },
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具批发与五金分销合作 | SCOTTCHEN",
@@ -303,6 +304,7 @@ export default function ZhWholesaleAbrasivesPage() {
                 "description": "磨料磨具工厂直供批发，面向经销商、零售商、工业买家，中国厂家直供价格。",
                 "url": absoluteUrl("/zh/wholesale-abrasives"),
               },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

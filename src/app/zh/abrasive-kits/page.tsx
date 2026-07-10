@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具套装批发与OEM贴牌 | SCOTTCHEN",
@@ -315,18 +316,23 @@ export default function ZhAbrasiveKitsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/abrasive-kits#productgroup"),
-            "name": "SCOTTCHEN磨具套装、抛光工具套装、砂磨套装",
-            "description": "专业磨具套装OEM厂家，抛光轮套装、砂纸套装、DIY五金工具组合套装，零售包装，FBA贴标，MOQ 500套起。",
-            "url": absoluteUrl("/zh/abrasive-kits"),
-            "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "磨具套装与抛光工具套装",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "参考起订量", "value": "常见组合 500 套起" },
-              { "@type": "PropertyValue", "name": "包装选项", "value": "彩盒、吸塑、聚袋、条码与说明书" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/abrasive-kits#productgroup"),
+                "name": "SCOTTCHEN磨具套装、抛光工具套装、砂磨套装",
+                "description": "专业磨具套装OEM厂家，抛光轮套装、砂纸套装、DIY五金工具组合套装，零售包装，FBA贴标，MOQ 500套起。",
+                "url": absoluteUrl("/zh/abrasive-kits"),
+                "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "磨具套装与抛光工具套装",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见组合 500 套起" },
+                  { "@type": "PropertyValue", "name": "包装选项", "value": "彩盒、吸塑、聚袋、条码与说明书" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

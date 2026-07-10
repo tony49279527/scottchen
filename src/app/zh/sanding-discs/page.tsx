@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "砂纸片批发与砂碟厂家 | SCOTTCHEN",
@@ -359,19 +360,24 @@ export default function ZhSandingDiscsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
-            "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
-            "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
-            "url": absoluteUrl("/zh/sanding-discs"),
-            "image": absoluteUrl("/images/sanding_screens.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "砂纸片与砂碟",
-            "material": "氧化铝、锆刚玉、碳化硅、陶瓷、网砂",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" },
-              { "@type": "PropertyValue", "name": "背基/连接方式", "value": "植绒、背胶、钢纸、快换" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
+                "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
+                "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
+                "url": absoluteUrl("/zh/sanding-discs"),
+                "image": absoluteUrl("/images/sanding_screens.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "砂纸片与砂碟",
+                "material": "氧化铝、锆刚玉、碳化硅、陶瓷、网砂",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" },
+                  { "@type": "PropertyValue", "name": "背基/连接方式", "value": "植绒、背胶、钢纸、快换" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

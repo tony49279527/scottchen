@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Cutting Disc & Cut-Off Wheel Manufacturer | SCOTTCHEN",
@@ -380,19 +381,24 @@ export default function CuttingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/cutting-wheels#productgroup"),
-            "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
-            "description": "Cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement. Compliance claims are confirmed per approved SKU specification.",
-            "url": absoluteUrl("/cutting-wheels"),
-            "image": absoluteUrl("/images/fiber_discs.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "Cutting wheels and cut-off discs",
-            "material": "Resin-bonded abrasive with dual fiberglass reinforcement",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "Reference MOQ", "value": "1,000 discs per common size" },
-              { "@type": "PropertyValue", "name": "Reinforcement", "value": "Dual fiberglass mesh" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/cutting-wheels#productgroup"),
+                "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
+                "description": "Cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement. Compliance claims are confirmed per approved SKU specification.",
+                "url": absoluteUrl("/cutting-wheels"),
+                "image": absoluteUrl("/images/fiber_discs.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "Cutting wheels and cut-off discs",
+                "material": "Resin-bonded abrasive with dual fiberglass reinforcement",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "1,000 discs per common size" },
+                  { "@type": "PropertyValue", "name": "Reinforcement", "value": "Dual fiberglass mesh" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

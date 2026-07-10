@@ -8,7 +8,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "SCOTTCHEN 磨料磨具与抛光轮 OEM/ODM 供应",
-  description: "SCOTTCHEN 提供工业抛光轮、抛光布轮、气道布轮、砂碟及定制五金磨具套装的 B2B 供应、贴牌包装和条码准备支持。",
+  description: "SCOTTCHEN 提供工业抛光轮、抛光布轮、气道布轮、砂碟及定制五金磨具套装的 B2B 供应，支持贴牌包装、条码准备、样品测试，以及书面确认的起订量与交期安排。",
   path: "/zh",
   alternatePath: "/",
   locale: "zh-CN",

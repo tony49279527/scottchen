@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "切割片厂家与树脂切割片批发 | SCOTTCHEN",
@@ -342,19 +343,24 @@ export default function ZhCuttingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
-            "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
-            "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，双网增强，MOQ 1000片起。认证范围以确认规格为准。",
-            "url": absoluteUrl("/zh/cutting-wheels"),
-            "image": absoluteUrl("/images/fiber_discs.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "树脂切割片",
-            "material": "树脂结合剂磨料，双层玻璃纤维网增强",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 1,000 片起" },
-              { "@type": "PropertyValue", "name": "增强结构", "value": "双网玻璃纤维增强" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
+                "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
+                "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，双网增强，MOQ 1000片起。认证范围以确认规格为准。",
+                "url": absoluteUrl("/zh/cutting-wheels"),
+                "image": absoluteUrl("/images/fiber_discs.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "树脂切割片",
+                "material": "树脂结合剂磨料，双层玻璃纤维网增强",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 1,000 片起" },
+                  { "@type": "PropertyValue", "name": "增强结构", "value": "双网玻璃纤维增强" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "China Abrasive Manufacturer & OEM Supplier | SCOTTCHEN",
@@ -328,6 +329,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                 "description": "Shanghai-based China abrasive manufacturer producing buffing wheels, sanding discs, flap discs, cutting wheels, sanding belts, and private label abrasive kits.",
                 "address": { "@type": "PostalAddress", "addressLocality": "Shanghai", "addressCountry": "CN" },
               },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

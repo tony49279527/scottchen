@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "中国磨料磨具厂家与上海OEM工厂 | SCOTTCHEN",
@@ -321,6 +322,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                 "description": "上海中国磨料磨具生产厂家，生产抛光轮、砂纸片、百叶片、切割片、砂带、磨具套装。",
                 "address": { "@type": "PostalAddress", "addressLocality": "上海", "addressCountry": "CN" },
               },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

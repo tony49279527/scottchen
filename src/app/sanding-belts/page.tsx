@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Sanding Belt Supplier & OEM Belt Manufacturer | SCOTTCHEN",
@@ -381,19 +382,24 @@ export default function SandingBeltsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/sanding-belts#productgroup"),
-            "name": "SCOTTCHEN Sanding Belts & Abrasive Belts",
-            "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
-            "url": absoluteUrl("/sanding-belts"),
-            "image": absoluteUrl("/images/sanding_tools.webp"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-            "manufacturer": { "@id": absoluteUrl("/#organization") },
-            "category": "Sanding belts and abrasive belts",
-            "material": "Aluminum oxide, zirconia, ceramic, silicon carbide",
-            "additionalProperty": [
-              { "@type": "PropertyValue", "name": "Reference MOQ", "value": "200 belts per common size" },
-              { "@type": "PropertyValue", "name": "Custom sizing", "value": "Width and circumference cut to approved drawing" }
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/sanding-belts#productgroup"),
+                "name": "SCOTTCHEN Sanding Belts & Abrasive Belts",
+                "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
+                "url": absoluteUrl("/sanding-belts"),
+                "image": absoluteUrl("/images/sanding_tools.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "Sanding belts and abrasive belts",
+                "material": "Aluminum oxide, zirconia, ceramic, silicon carbide",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "200 belts per common size" },
+                  { "@type": "PropertyValue", "name": "Custom sizing", "value": "Width and circumference cut to approved drawing" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}
