@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Abrasive Products Catalog — Buffing Wheels, Sanding Discs, Flap Discs | SCOTTCHEN China Manufacturer",
+  title: "OEM Abrasive Products Catalog | SCOTTCHEN China Manufacturer",
   description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
   path: "/products",
   alternatePath: "/zh/products",

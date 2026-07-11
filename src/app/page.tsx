@@ -7,8 +7,8 @@ import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Shanghai OEM Abrasive Manufacturer | Buffing Wheels, Sanding Kits & Private Label | SCOTTCHEN",
-  description: "Shanghai-based OEM abrasive manufacturer since 2014. Custom buffing wheels, sanding discs, flap discs and private-label kits for tool brands, distributors and Amazon sellers. FOB Shanghai.",
+  title: "OEM Abrasive Manufacturer in Shanghai | SCOTTCHEN",
+  description: "OEM abrasive manufacturer since 2014. Custom buffing wheels, sanding discs, flap discs and private-label kits for brands and distributors. FOB Shanghai.",
   path: "/",
   alternatePath: "/zh",
 });
