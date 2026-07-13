@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
@@ -168,6 +169,7 @@ export default function ResourcesHub() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <DecisionGuides />
       <CTASection />
     </div>
   );

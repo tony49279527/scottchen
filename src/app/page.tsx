@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -675,6 +676,7 @@ export default function Home() {
       />
 
       {/* Persistent CTA Banner */}
+      <DecisionGuides />
       <CTASection />
     </div>
   );

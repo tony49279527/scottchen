@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
@@ -670,6 +671,7 @@ export default function BuffingPolishingWheels() {
       />
 
       {/* Persistent CTA Banner (Bottom CTA area) */}
+      <DecisionGuides />
       <CTASection />
     </div>
   );

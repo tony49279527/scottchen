@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -322,6 +323,7 @@ export default function AbrasiveKitsPage() {
         }}
       />
 
+      <DecisionGuides />
       <CTASection />
     </div>
   );

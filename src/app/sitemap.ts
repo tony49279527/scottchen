@@ -101,6 +101,24 @@ const utilityRoutes = [
   { path: "/catalog.pdf", priority: 0.6, changefreq: "monthly" as const },
 ] as const;
 
+const decisionRoutes = [
+  {
+    path: "/alternatives/abrasive-kit-sourcing-alternatives",
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  },
+  {
+    path: "/compare/oem-vs-off-the-shelf-abrasive-kits",
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  },
+  {
+    path: "/solutions/automotive-polishing-kits",
+    priority: 0.85,
+    changefreq: "monthly" as const,
+  },
+] as const;
+
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -122,6 +140,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...localizedEntries,
+    ...decisionRoutes.map(({ path: p, priority, changefreq }) => ({
+      url: absoluteUrl(p),
+      lastModified: LAST_MODIFIED,
+      changeFrequency: changefreq,
+      priority,
+    })),
     ...utilityRoutes.map(({ path: p, priority, changefreq }) => ({
       url: absoluteUrl(p),
       lastModified: LAST_MODIFIED,

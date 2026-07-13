@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -256,6 +257,7 @@ export default function ApplicationsOverview() {
 
 
       {/* Persistent CTA Banner */}
+      <DecisionGuides />
       <CTASection />
     </div>
   );
