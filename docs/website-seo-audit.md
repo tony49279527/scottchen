@@ -212,7 +212,7 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 1. 新增供应商实体档案，公开品牌范围、联系渠道、RFQ 范围和采购尽调边界。
 2. 新增答案优先的磨料选材指南，并引用 FEPA、GS1 和 ICC 一手资料。
 3. 为采购内容增加可见作者/发布团队、复核日期、Article schema、citation 和 BreadcrumbList。
-4. 保持 `OAI-SearchBot`、`ChatGPT-User`、`Claude-User` 和 `PerplexityBot` 可抓取，同时继续阻止用于训练的已知爬虫。
+4. 允许 `OAI-SearchBot`、`ChatGPT-User`、`Claude-User`、`PerplexityBot`、`GPTBot`、`ClaudeBot`、`Google-Extended` 和 `CCBot` 等 AI 搜索、训练与扩展爬虫抓取公开内容，同时继续禁止 API 与感谢页。
 5. 新增 `/llms.txt` 作为补充发现入口，集中列出核心页面和商业核验边界。该文件不是官方排名因素，不替代 robots、sitemap 或结构化数据。
 6. Organization、AboutPage、Article、ProductGroup、FAQPage 和 BreadcrumbList 使用同一站点实体和真实可访问 URL。
 

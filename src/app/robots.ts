@@ -10,11 +10,11 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/thank-you", "/zh/thank-you"],
       },
       {
-        userAgent: ["OAI-SearchBot", "ChatGPT-User", "Claude-User", "PerplexityBot"],
-        allow: "/",
-      },
-      {
         userAgent: [
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "Claude-User",
+          "PerplexityBot",
           "GPTBot",
           "ClaudeBot",
           "Google-Extended",
@@ -27,7 +27,8 @@ export default function robots(): MetadataRoute.Robots {
           "ImagesiftBot",
           "Bytespider",
         ],
-        disallow: "/",
+        allow: "/",
+        disallow: ["/api/", "/thank-you", "/zh/thank-you"],
       },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),
