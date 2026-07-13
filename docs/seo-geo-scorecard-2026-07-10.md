@@ -29,7 +29,7 @@
 
 ### 技术与索引健康 — 4.5 / 5
 
-- robots.txt 允许主站抓取，禁止 `/api/` 与 thank-you；搜索型 AI bot 允许、训练型 bot 禁止。
+- robots.txt 允许主站公开内容被搜索型与训练型 AI bot 抓取，并继续禁止 `/api/` 与 thank-you 页面。
 - sitemap 浏览器实测 200，约 51 URL（25 组双语 + catalog.pdf），含 xhtml hreflang。
 - 裸域 → www 301；canonical / hreflang（en / zh-CN / x-default）互指正确。
 - 核心页无 noindex；感谢页 noindex 正确。

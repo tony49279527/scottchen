@@ -247,6 +247,20 @@ if (!robots.includes(`Sitemap: ${sitemapUrl}`)) {
   fail("robots.txt does not point to the canonical sitemap.");
 }
 
+for (const bot of ["GPTBot", "ClaudeBot", "Google-Extended", "CCBot"]) {
+  const group = robots
+    .split(/\r?\n\s*\r?\n/)
+    .find((section) =>
+      section
+        .split(/\r?\n/)
+        .some((line) => line.trim().toLowerCase() === `user-agent: ${bot.toLowerCase()}`)
+    );
+
+  if (!group || /^Disallow:\s*\/$/im.test(group)) {
+    fail(`robots.txt must allow public content for ${bot}.`);
+  }
+}
+
 const keyText = (await fetchText(indexNowKeyUrl)).trim();
 if (keyText !== indexNowKey) {
   fail("IndexNow key file content does not match the configured key.");
