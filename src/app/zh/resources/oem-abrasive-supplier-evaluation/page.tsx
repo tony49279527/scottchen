@@ -136,18 +136,6 @@ export default function ChineseOemAbrasiveSupplierEvaluation() {
           url: absoluteUrl(item.scottchenPath),
         })),
       },
-      {
-        "@type": "FAQPage",
-        "@id": absoluteUrl("/zh/resources/oem-abrasive-supplier-evaluation#faq"),
-        mainEntity: faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.a,
-          },
-        })),
-      },
     ],
   };
 

@@ -5,9 +5,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "切割片厂家_树脂切割片批发_不锈钢切割片OEM代工_SCOTTCHEN",
+  title: "切割片厂家与树脂切割片批发 | SCOTTCHEN",
   description: "上海树脂切割片生产厂家，提供金属/不锈钢专用切割片(切割砂轮)，超薄1.0-1.6mm，EN12413认证，双网增强，MOQ 1000片起。",
   path: "/zh/cutting-wheels",
   locale: "zh-CN",
@@ -290,8 +291,10 @@ export default function ZhCuttingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
-                  src="/images/hero_cutting_discs.webp"
+                  src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN树脂切割片厂家批发 - 金属不锈钢超薄切割片"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -340,12 +343,25 @@ export default function ZhCuttingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
-            "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
-            "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，MPA EN12413认证双网增强，MOQ 1000片起。",
-            "url": absoluteUrl("/zh/cutting-wheels"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
+                "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
+                "description": "上海树脂切割片厂家批发金属/不锈钢/超薄切割片，双网增强，MOQ 1000片起。认证范围以确认规格为准。",
+                "url": absoluteUrl("/zh/cutting-wheels"),
+                "image": absoluteUrl("/images/fiber_discs.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "树脂切割片",
+                "material": "树脂结合剂磨料，双层玻璃纤维网增强",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 1,000 片起" },
+                  { "@type": "PropertyValue", "name": "增强结构", "value": "双网玻璃纤维增强" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />

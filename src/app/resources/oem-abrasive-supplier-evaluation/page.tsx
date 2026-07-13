@@ -8,7 +8,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "How to Evaluate an OEM Abrasive Supplier | SCOTTCHEN",
   description:
-    "A B2B buyer guide for evaluating OEM abrasive accessory suppliers: product scope, RFQ data, samples, QC evidence, packaging, lead time, MOQ and verification questions.",
+    "A B2B buyer guide to evaluating OEM abrasive suppliers: product scope, RFQ data, samples, QC evidence, packaging, lead time and MOQ questions.",
   path: "/resources/oem-abrasive-supplier-evaluation",
   alternatePath: "/zh/resources/oem-abrasive-supplier-evaluation",
 });
@@ -153,18 +153,6 @@ export default function OemAbrasiveSupplierEvaluation() {
           name: item.factor,
           description: item.evidence,
           url: absoluteUrl(item.scottchenPath),
-        })),
-      },
-      {
-        "@type": "FAQPage",
-        "@id": absoluteUrl("/resources/oem-abrasive-supplier-evaluation#faq"),
-        mainEntity: faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.a,
-          },
         })),
       },
     ],

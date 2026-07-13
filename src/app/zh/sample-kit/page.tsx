@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SampleKitForm from "@/components/SampleKitForm";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "申请表面打磨与抛光轮样品测试包 | SCOTTCHEN",
@@ -201,58 +200,6 @@ export default function ChineseSampleKit() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/zh/sample-kit#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "哪些采购群体可以申请表面抛光打磨样品箱？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "样品申请主要面向有真实采购需求的商业客户，包括五金工具品牌、建材五金渠道、跨境电商采购和工业耗材分销商。样品可用性及费用按具体配置确认。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "对于样品产生的国际快递派送费用，SCOTTCHEN 是如何进行优惠扣减的？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "样品可采用 DHL、FedEx、UPS、TNT 或国际 EMS 快递。运费通常由买家承担或使用到付账号；任何订单抵扣安排必须以书面报价为准。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "我能否在样品中要求特定的棉布层数、适配器孔径或者特制砂纸粒度？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可以。请在下面的表格中，列出您精确的打磨工艺配方（例如：6英寸 40 Ply 棉布轮、带 1/4\" 接柄的小毛刷、P80 到 P240 目数各 5 张的镂空砂网），我们将按您的图纸数据定制物理样品。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "样品的加工周期和跨国快递路途大概要多久？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "加工与运输时间会在核对库存、定制工作、包装稿件和收货地后报价，并以书面样品方案中的发运目标为准。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "在发运磨料耗材的同时，我们能够索取彩盒印刷数码样和条码贴纸的扫码样么？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "可以。您提交样品申请后，我们的商务团队会通过邮件向您索取矢量 logo 和 FNSKU/UPC 条码稿件，再安排制作带条码的包装样和物理样品，供您在量产前核验外观和扫码效果。"
-                }
-              }
-            ]
-          })
-        }}
-      />
     </div>
   );
 }

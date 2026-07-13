@@ -5,9 +5,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "砂带厂家_环形砂带批发_砂带定制OEM代工_SCOTTCHEN",
+  title: "砂带厂家与环形砂带批发 | SCOTTCHEN",
   description: "上海砂带厂家，专业生产环形砂带、砂带套，氧化铝/锆刚玉/碳化硅材质，支持非标定制尺寸，适用于磨刀、木工、金属加工，厂家直供。",
   path: "/zh/sanding-belts",
   locale: "zh-CN",
@@ -293,8 +294,10 @@ export default function ZhSandingBeltsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
-                  src="/images/hero_sanding_belts.webp"
+                  src="/images/sanding_tools.webp"
                   alt="SCOTTCHEN砂带厂家批发 - 环形砂带手提带制刀砂带定制"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -343,12 +346,25 @@ export default function ZhSandingBeltsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
-            "name": "SCOTTCHEN环形砂带、砂带、砂带套",
-            "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
-            "url": absoluteUrl("/zh/sanding-belts"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
+                "name": "SCOTTCHEN环形砂带、砂带、砂带套",
+                "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
+                "url": absoluteUrl("/zh/sanding-belts"),
+                "image": absoluteUrl("/images/sanding_tools.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "环形砂带与砂带套",
+                "material": "氧化铝、锆刚玉、陶瓷、碳化硅",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 200 条起" },
+                  { "@type": "PropertyValue", "name": "非标尺寸", "value": "按确认图纸裁切宽度与周长" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />

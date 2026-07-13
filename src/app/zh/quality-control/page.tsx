@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨料磨具产品质量控制与验货计划 | SCOTTCHEN",
@@ -309,58 +308,6 @@ export default function ChineseQualityControl() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/zh/quality-control#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "台式抛光布轮的中心孔公差如何确认？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "中心孔尺寸和公差应按 SKU 写入双方确认的图纸或规格表。量产前还应确认检验量具、方法和抽样水平。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "如何确立棉布轮层数 (Ply) 的真实性与叠合密度？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "确认规格应记录层数、结构以及适用的重量或厚度标准。生产样品可依据这些约定值和保留封样进行检查。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "纤维打磨砂盘的动平衡安全测试是怎么实施的？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "转速相关检验取决于产品设计、标示工作限制和适用标准。下单前应在质检计划中确认测试方法、抽样频率和需要提供的报告。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "你们怎么防范大货磨料或研磨膏（蜡条）发生目数污染与粗颗粒渗漏？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "质检计划可约定物料隔离、换线清场、供应批次管理和表面检查。精细抛光产品还应在实际底材上与确认样进行效果比较。"
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "我们可以安排我们本国的第三方验货公司装柜前去仓库检验么？",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "第三方出货前验货可在报价阶段协商。买家应书面确认验货公司、范围、时间、现场要求和验货费用承担方式。"
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

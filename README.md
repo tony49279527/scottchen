@@ -29,14 +29,16 @@ Set `NEXT_PUBLIC_SITE_URL=https://www.scottchentools.com` after the production d
 
 ### Inquiry delivery
 
-Copy `.env.example` to `.env` and configure one delivery path:
+Copy `.env.example` to `.env` and configure at least one primary delivery path:
 
 - Preferred: `INQUIRY_WEBHOOK_URL`
 - Fallback: `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, `INQUIRY_TO_EMAIL`
+- Optional backup copy: `INQUIRY_BACKUP_WEBHOOK_URL`
 - Optional auto reply: `INQUIRY_AUTO_REPLY_ENABLED=true`, `INQUIRY_AUTO_REPLY_FROM`
 - Optional analytics: `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 
 If neither path is configured, the quote and sample forms will show a visible delivery error instead of faking a successful submission.
+If both primary paths are configured, the endpoint tries the webhook first and falls back to Resend when the webhook fails. `INQUIRY_BACKUP_WEBHOOK_URL` receives a non-fatal copy after successful primary delivery and should point to a separate CRM, spreadsheet, or internal workflow endpoint.
 
 ### Current lead-flow behavior
 
@@ -47,6 +49,7 @@ If neither path is configured, the quote and sample forms will show a visible de
 - Shared CTA blocks now route to locale-matched contact and sample pages.
 - Personal email addresses are accepted but score lower than company-domain addresses, avoiding unnecessary loss of small-business leads.
 - The inquiry endpoint now applies basic in-memory rate limiting and lead scoring.
+- The inquiry endpoint falls back from webhook delivery to Resend and can send an optional backup webhook copy for durable lead capture.
 - First-touch landing page, referrer, and UTM attribution persist while a visitor navigates to the form.
 - Google Analytics loads only after explicit visitor consent.
 - Light and dark themes follow the visitor's system setting on first load and persist an explicit theme choice locally.
@@ -72,7 +75,7 @@ UV_NO_PROGRESS=1 uv run --with reportlab --with pillow python scripts/build_cata
 
 Use `npm run typecheck` for a fast TypeScript pass.
 
-Webhook payloads now include contact fields, inquiry fields, `utm_*`, `referrer`, `landingPage`, `locale`, `clientIp`, `userAgent`, `submittedAt`, `leadScore`, and `leadTier`.
+Webhook payloads now include contact fields, inquiry fields, `utm_*`, `referrer`, `landingPage`, `locale`, `clientIp`, `userAgent`, `submittedAt`, `leadScore`, and `leadTier`. Backup webhook payloads also include `deliveryRole=backup` and `primaryDelivery`.
 
 Run `npm run indexnow` after a production content update to submit sitemap URLs
 to IndexNow. The hosted key file is available at
@@ -92,7 +95,7 @@ Required Vercel environment variables:
 
 - `NEXT_PUBLIC_SITE_URL=https://www.scottchentools.com`
 - `INQUIRY_WEBHOOK_URL` or `RESEND_API_KEY`, `INQUIRY_FROM_EMAIL`, and `INQUIRY_TO_EMAIL`
-- Optional: `INQUIRY_AUTO_REPLY_ENABLED`, `INQUIRY_AUTO_REPLY_FROM`, `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- Optional: `INQUIRY_BACKUP_WEBHOOK_URL`, `INQUIRY_AUTO_REPLY_ENABLED`, `INQUIRY_AUTO_REPLY_FROM`, `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 
 After the first Vercel deployment is live, point `www.scottchentools.com` to
 the domain target shown in the Vercel Domains panel. Keep the apex

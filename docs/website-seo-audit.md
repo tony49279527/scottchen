@@ -228,7 +228,7 @@ GEO 不是独立于 SEO 的“秘密排名开关”。Google 的 AI 搜索功能
 
 ## 八、上线后仍必须完成
 
-1. 配置 `INQUIRY_WEBHOOK_URL`，或完整配置 `RESEND_*`。2026-07-05 复核发现 Vercel 生产环境仍未配置询盘投递变量。
+1. 询盘投递变量：2026-07-07 复核发现 Vercel Production 已配置 `RESEND_API_KEY`、`INQUIRY_FROM_EMAIL` 和 `INQUIRY_TO_EMAIL`；仍需在最新部署后完整提交一次报价表和样品表，确认业务邮箱实际收到通知。
 2. 验证 `sales@scottchentools.com` 能正常收发邮件。2026-07-04 公开 DNS 未发现 MX 记录。
 3. 配置并检查 SPF、DKIM 和 DMARC。2026-07-04 公开 DNS 未发现 SPF 或 DMARC 记录。
 4. 在生产环境完整提交一次报价表和样品表。

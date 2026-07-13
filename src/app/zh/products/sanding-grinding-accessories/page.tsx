@@ -606,74 +606,62 @@ export default function ChineseSandingGrindingAccessories() {
                 "name": "SCOTTCHEN 研磨、打磨及砂纸配件大货产品目录",
                 "description": "工业级抛磨耗材，包含乳胶防水干湿两用砂纸、玻璃纤维网格墙面砂网、高切削锆刚玉纤维钢纸磨片及细节塑料砂带笔。",
                 "url": absoluteUrl("/zh/products/sanding-grinding-accessories"),
+                "image": absoluteUrl("/images/sanding_tools.webp"),
                 "brand": {
                   "@type": "Brand",
                   "name": "SCOTTCHEN"
                 },
+                "manufacturer": {
+                  "@id": absoluteUrl("/#organization")
+                },
+                "category": "砂纸、研磨砂碟及打磨配件套装",
+                "material": "碳化硅、氧化铝、锆刚玉、玻璃纤维网格、乳胶纸基、硫化纤维及布基",
+                "additionalProperty": [
+                  {
+                    "@type": "PropertyValue",
+                    "name": "参考起订量",
+                    "value": "砂纸 10,000 张、纤维砂碟 5,000 张、混合砂纸架或细节打磨笔 1,000 套；实际数量和交期按 SKU 报价"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "规格控制项",
+                    "value": "磨粒类型、FEPA P 目数范围、基材、尺寸、中心孔、连接方式和包装数量"
+                  }
+                ],
                 "hasVariant": [
                   {
                     "@type": "Product",
                     "name": "干湿两用乳胶纸基砂纸片",
                     "description": "高品质碳化硅磨粒贴附于 C-weight 乳胶纸基上，适合汽车车漆打磨与湿抛光。",
-                    "sku": "SC-SANDPAPER-SHEETS-ZH"
+                    "sku": "SC-SANDPAPER-SHEETS-ZH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "碳化硅磨粒配 C-weight 乳胶纸基"
                   },
                   {
                     "@type": "Product",
                     "name": "锆刚玉硫化纤维钢纸磨片",
                     "description": "重负荷焊缝粗磨及除锈锆刚玉砂盘，带 7/8 英寸十字中心定位星型定位盘。",
-                    "sku": "SC-ZIRCONIA-DISCS-ZH"
+                    "sku": "SC-ZIRCONIA-DISCS-ZH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "锆刚玉磨粒配硫化纤维基材",
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "中心孔", "value": "7/8 英寸星型中心定位孔" },
+                      { "@type": "PropertyValue", "name": "参考起订量", "value": "单规格目数 2,000 张起订" }
+                    ]
                   },
                   {
                     "@type": "Product",
                     "name": "防堵塞墙面石膏板网格镂空砂网",
                     "description": "双面涂覆优质碳化硅的镂空网格砂片，专为石膏板大面积抹灰批灰除粉吸尘设计。",
-                    "sku": "SC-DRYWALL-MESH-ZH"
-                  }
-                ]
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/products/sanding-grinding-accessories#faqpage"),
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "SCOTTCHEN 砂纸张提供哪些背基纸重和基材材质？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "可提供用于手工湿磨的 C-weight 乳胶纸背基，以及用于曲面或机械打磨的柔性布基选项。耐水性、抗拉强度、粘接和工具适用性需按批准规格及样品测试确认。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "为什么在墙面打磨时推荐碳化硅网格砂网，而不是普通氧化铝砂纸？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "碳化硅磨粒与开放式玻璃纤维网格组合可让石膏或腻子粉尘穿过网面，有助于减少表面堵塞。配合匹配的吸尘打磨设备可改善集尘效果，但不能视为无尘，结果取决于设备、密封和操作条件。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "纤维磨片支持哪些中心定位孔形式？有哪些加固措施？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "锆刚玉硫化纸磨盘拥有 4.5\"、5\" 及 7\" 标准外径，配备 7/8\" (22.23mm) 中心定位孔。采购商可选择圆形平面孔或带十字星型切口定位心。背基材质、厚度、标示工作限制和工具兼容性必须写入批准规格。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "砂纸卷可以按照我们设计的彩盒样式进行多目数混合定制么？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "可以。我们为五金渠道与亚马逊卖家提供极具零售竞争力的砂卷分装架彩盒定制。您可以根据目标场景混合 4 到 5 种特定目数卷（如 P150, P240, P320, P400），装入配有自断裁切齿的彩色瓦楞印刷盒内，直接贴条码上市发售。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "塑料精细打磨棒与备用砂带的最小起订量 (MOQ) 是多少？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "我们精细弹簧张力塑料磨棒套装的起订量为 1,000 套。标准零售套装包含 1 支高韧性弹簧定位塑料握杆和混合 15 条环形软砂布带（涵盖不同目数）。我们支持整套挂卡或吸塑彩色纸盒包装定制。"
-                    }
+                    "sku": "SC-DRYWALL-MESH-ZH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "双面碳化硅涂覆玻璃纤维网格"
                   }
                 ]
               }

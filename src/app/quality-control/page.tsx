@@ -3,7 +3,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Abrasive Product Quality Control Planning | SCOTTCHEN",
@@ -310,58 +309,6 @@ export default function QualityControl() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/quality-control#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How is the inner bore tolerance confirmed for polishing wheels?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The bore dimension and tolerance are confirmed per SKU in the approved drawing or specification. The inspection method, gauge, and sampling level should be agreed before production."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do you verify the density and ply count of cotton polishing wheels?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The approved specification records ply count, construction, and relevant weight or thickness criteria. Production samples can then be checked against those agreed values and the retained reference sample."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you run speed tests on grinding and fiber discs to prevent safety failures?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Speed-related checks depend on the product design, labeled operating limit, and applicable standard. The required test method, sampling frequency, and report should be confirmed in the quality plan before ordering."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do you prevent grit contamination in sandpapers and polishing compounds?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The quality plan can define material segregation, line-clearance, supplier-lot control, and surface inspection requirements. Fine finishing products should be evaluated against an approved sample on the intended substrate."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can we hire third-party inspection firms to audit the shipment before loading?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Third-party pre-shipment inspection can be discussed during quotation. The buyer should confirm the inspection company, scope, timing, access requirements, and responsibility for inspection fees in writing."
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* Persistent CTA Banner */}
       <CTASection />

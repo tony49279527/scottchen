@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BackButton from "@/components/BackButton";
 
 export default function NotFound() {
   return (
@@ -75,12 +76,9 @@ export default function NotFound() {
             >
               Back to Home
             </Link>
-            <a
-              href="javascript:history.back()"
-              className="flex-1 inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-slate-700 transition-colors"
-            >
+            <BackButton className="flex-1 inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-slate-700 transition-colors cursor-pointer">
               Go Back
-            </a>
+            </BackButton>
           </div>
 
           <div className="pt-4 text-center">

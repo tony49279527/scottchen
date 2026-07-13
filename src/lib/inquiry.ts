@@ -10,6 +10,8 @@ export interface AttributionFields {
   utmTerm: string;
   utmContent: string;
   formStartedAt: string;
+  /** Honeypot field; must be empty for legitimate submissions. */
+  hpField?: string;
 }
 
 export interface QuoteInquiryPayload extends AttributionFields {

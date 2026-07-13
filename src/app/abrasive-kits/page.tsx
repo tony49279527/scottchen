@@ -3,12 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Abrasive Kit Wholesale | Polishing & Sanding Accessory Kits Private Label | SCOTTCHEN",
-  description: "OEM private label abrasive kits. Buffing wheel kits, sanding disc kits, polishing compound sets. Retail-ready packaging, FBA compliant. MOQ 500 sets from China manufacturer.",
+  title: "Private Label Abrasive & Polishing Kits Wholesale | SCOTTCHEN",
+  description: "OEM private-label abrasive kits: buffing wheel kits, sanding disc kits and compound sets in retail-ready packaging. MOQ 500 sets from a China factory.",
   path: "/abrasive-kits",
   alternatePath: "/zh/abrasive-kits",
 });
@@ -248,6 +250,8 @@ export default function AbrasiveKitsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/hero_abrasives_kit.webp"
                   alt="SCOTTCHEN Abrasive Kits and Polishing Kits Wholesale"
@@ -297,16 +301,29 @@ export default function AbrasiveKitsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/abrasive-kits#productgroup"),
-            "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
-            "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
-            "url": absoluteUrl("/abrasive-kits"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/abrasive-kits#productgroup"),
+                "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
+                "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
+                "url": absoluteUrl("/abrasive-kits"),
+                "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "Private-label abrasive and polishing kits",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 kits per common assortment" },
+                  { "@type": "PropertyValue", "name": "Packaging", "value": "Color box, blister, polybag, barcode and instruction inserts" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />
 
+      <DecisionGuides />
       <CTASection />
     </div>
   );

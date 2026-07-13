@@ -122,6 +122,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href={isZh ? "/zh/about" : "/about"} className="hover:text-white transition-colors">
+                  {p("About SCOTTCHEN", "关于 SCOTTCHEN")}
+                </Link>
+              </li>
+              <li>
                 <Link href={isZh ? "/zh/china-abrasive-manufacturer" : "/china-abrasive-manufacturer"} className="hover:text-white transition-colors">
                   {p("Our Shanghai Factory", "上海工厂介绍")}
                 </Link>
@@ -182,8 +187,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <a
+                  href="/catalog.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors block"
+                >
+                  {p("Specifications Catalog (PDF)", "规格目录 PDF")}
+                </a>
+              </li>
+              <li>
                 <Link href={isZh ? "/zh/resources/abrasive-sourcing-checklist" : "/resources/abrasive-sourcing-checklist"} className="hover:text-white transition-colors block">
-                  {p("Sourcing Checklist (PDF)", "采购检查清单")}
+                  {p("Sourcing Checklist", "采购检查清单")}
                 </Link>
               </li>
               <li>
@@ -242,13 +257,13 @@ export default function Footer() {
             <Link href={isZh ? "/zh" : "/"} className="hover:text-white transition-colors">
               {isZh ? "首页" : "Home"}
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <Link href={isZh ? "/zh/terms" : "/terms"} className="hover:text-white transition-colors">
               {isZh ? "服务条款" : "Terms"}
             </Link>
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link href={isZh ? "/zh/privacy" : "/privacy"} className="hover:text-white transition-colors">
               {isZh ? "隐私政策" : "Privacy"}
             </Link>
-            <Link href="/cookie-policy" className="hover:text-white transition-colors">
+            <Link href={isZh ? "/zh/cookie-policy" : "/cookie-policy"} className="hover:text-white transition-colors">
               {isZh ? "Cookie政策" : "Cookies"}
             </Link>
           </div>

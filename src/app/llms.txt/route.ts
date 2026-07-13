@@ -54,11 +54,17 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [Quality-control workflow](${absoluteUrl("/quality-control")})
 - [Supplier profile and buyer due diligence](${absoluteUrl("/supplier-profile")})
 - [B2B abrasive sourcing resource center](${absoluteUrl("/resources")})
+- [Abrasive kit sourcing alternatives](${absoluteUrl("/alternatives/abrasive-kit-sourcing-alternatives")})
+- [OEM vs off-the-shelf abrasive kit comparison](${absoluteUrl("/compare/oem-vs-off-the-shelf-abrasive-kits")})
+- [Automotive polishing kits for aftermarket brands](${absoluteUrl("/solutions/automotive-polishing-kits")})
 - [OEM abrasive supplier evaluation guide](${absoluteUrl("/resources/oem-abrasive-supplier-evaluation")})
 - [Abrasive sourcing checklist](${absoluteUrl("/resources/abrasive-sourcing-checklist")})
 - [Abrasive grain, backing and grit selection guide](${absoluteUrl("/resources/abrasive-material-selection-guide")})
 - [Commercial sample request](${absoluteUrl("/sample-kit")})
 - [Submit an RFQ](${absoluteUrl("/contact")})
+- [Website and B2B inquiry terms](${absoluteUrl("/terms")})
+- [Privacy policy](${absoluteUrl("/privacy")})
+- [Cookie policy](${absoluteUrl("/cookie-policy")})
 
 ## Chinese pages
 
@@ -78,6 +84,9 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [磨料磨具采购检查清单](${absoluteUrl("/zh/resources/abrasive-sourcing-checklist")})
 - [磨料选材、背基与粒度指南](${absoluteUrl("/zh/resources/abrasive-material-selection-guide")})
 - [提交询价](${absoluteUrl("/zh/contact")})
+- [网站与 B2B 询盘条款](${absoluteUrl("/zh/terms")})
+- [隐私政策](${absoluteUrl("/zh/privacy")})
+- [Cookie 政策](${absoluteUrl("/zh/cookie-policy")})
 
 ## Quick sourcing answers
 

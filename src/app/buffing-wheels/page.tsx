@@ -5,10 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Buffing Wheel Manufacturer | Cotton Buffing & Polishing Wheels Wholesale | SCOTTCHEN",
-  description: "Shanghai-based OEM buffing wheel manufacturer since 2014. Wholesale cotton buffing and polishing wheels for metal finishing. MOQ 500pcs, ISO 9001 certified factory.",
+  title: "Buffing Wheel Manufacturer & Wholesale Supplier | SCOTTCHEN",
+  description: "Shanghai OEM buffing wheel manufacturer since 2014. Wholesale cotton buffing and polishing wheels for metal finishing, MOQ 500 pcs per size.",
   path: "/buffing-wheels",
   alternatePath: "/zh/buffing-wheels",
 });
@@ -345,6 +346,8 @@ export default function BuffingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN Cotton Buffing Wheels and Polishing Wheels"
@@ -412,12 +415,27 @@ export default function BuffingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/buffing-wheels#productgroup"),
-            "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
-            "description": "Wholesale cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, sisal-cotton treated buffs, and polishing compound bars from Shanghai OEM manufacturer.",
-            "url": absoluteUrl("/buffing-wheels"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/buffing-wheels#productgroup"),
+                "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
+                "description": "Wholesale cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, sisal-cotton treated buffs, and polishing compound bars from Shanghai OEM manufacturer.",
+                "url": absoluteUrl("/buffing-wheels"),
+                "image": absoluteUrl("/images/buffing_wheels.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "Cotton buffing wheels and polishing accessories",
+                "material": "Cotton muslin, cotton flannel, sisal-cotton blend, wax-bound abrasive compounds",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 pcs per size (standard) / 1,000 sets (kits)" },
+                  { "@type": "PropertyValue", "name": "Quoted lead time", "value": "25 - 35 Days after deposit & sample approval" },
+                  { "@type": "PropertyValue", "name": "Shipping terms", "value": "FOB Shanghai / EXW / CIF by arrangement" },
+                  { "@type": "PropertyValue", "name": "Payment terms", "value": "T/T 30% deposit, 70% before shipment" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />

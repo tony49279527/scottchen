@@ -84,7 +84,7 @@ export default function ThemeToggle({ isZh }: { isZh: boolean }) {
       type="button"
       data-theme-toggle
       onClick={toggleTheme}
-      className="theme-toggle-control inline-flex h-9 items-center justify-center gap-2 rounded-md border border-industry-slate-800 bg-industry-slate-900/60 px-2.5 text-industry-slate-300 transition-colors hover:border-industry-slate-700 hover:bg-industry-slate-800 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-industry-orange"
+      className="theme-toggle-control inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-industry-slate-800 bg-industry-slate-900/60 text-industry-slate-300 transition-colors hover:border-industry-slate-700 hover:bg-industry-slate-800 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-industry-orange"
       aria-label={label}
       title={label}
     >
@@ -119,9 +119,6 @@ export default function ThemeToggle({ isZh }: { isZh: boolean }) {
           />
         </svg>
       )}
-      <span className="hidden xl:inline text-xs font-bold">
-        {isZh ? (isLight ? "深色" : "浅色") : isLight ? "Dark" : "Light"}
-      </span>
     </button>
   );
 }

@@ -6,6 +6,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy | SCOTTCHEN",
   description: "Learn about how SCOTTCHEN collects, stores, protects and manages B2B commercial inquiry data and sample request information.",
   path: "/privacy",
+  alternatePath: "/zh/privacy",
 });
 
 export default function PrivacyPolicy() {

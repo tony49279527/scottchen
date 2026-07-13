@@ -5,10 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Cutting Disc Manufacturer | Cut-Off Wheels & Cutting Discs Wholesale | SCOTTCHEN",
-  description: "China OEM cutting disc manufacturer. Thin cut-off wheels for metal & stainless steel. 4.5'/5'/7'/9' sizes. EN12413 compliant, contaminant-free. MOQ 1000 pieces.",
+  title: "Cutting Disc & Cut-Off Wheel Manufacturer | SCOTTCHEN",
+  description: "China OEM cutting disc manufacturer. Thin cut-off wheels for metal and stainless steel in 4.5 to 9 inch sizes. EN12413 compliant, MOQ 1,000 pieces.",
   path: "/cutting-wheels",
   alternatePath: "/zh/cutting-wheels",
 });
@@ -330,6 +331,8 @@ export default function CuttingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
                   src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN Cutting Wheels and Cut-Off Discs"
@@ -378,12 +381,25 @@ export default function CuttingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/cutting-wheels#productgroup"),
-            "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
-            "description": "EN12413-compliant cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement.",
-            "url": absoluteUrl("/cutting-wheels"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/cutting-wheels#productgroup"),
+                "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
+                "description": "Cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement. Compliance claims are confirmed per approved SKU specification.",
+                "url": absoluteUrl("/cutting-wheels"),
+                "image": absoluteUrl("/images/fiber_discs.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "Cutting wheels and cut-off discs",
+                "material": "Resin-bonded abrasive with dual fiberglass reinforcement",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "1,000 discs per common size" },
+                  { "@type": "PropertyValue", "name": "Reinforcement", "value": "Dual fiberglass mesh" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />

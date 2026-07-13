@@ -5,10 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "China Abrasive Manufacturer | OEM Abrasive Tools Supplier & Factory | SCOTTCHEN",
-  description: "SCOTTCHEN is a Shanghai-based China abrasive manufacturer and OEM supplier of buffing wheels, sanding discs, flap discs, and private label abrasive kits since 2014.",
+  title: "China Abrasive Manufacturer & OEM Supplier | SCOTTCHEN",
+  description: "SCOTTCHEN is a Shanghai abrasive manufacturer supplying OEM buffing wheels, sanding discs, flap discs and private-label abrasive kits since 2014.",
   path: "/china-abrasive-manufacturer",
   alternatePath: "/zh/china-abrasive-manufacturer",
 });
@@ -122,12 +123,30 @@ export default function ChinaAbrasiveManufacturerPage() {
               <Image
                 width={1024}
                 height={768}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 loading="lazy"
                 src="/images/quality_inspection.webp"
                 alt="SCOTTCHEN Shanghai Abrasive Manufacturing Factory Quality Inspection"
                 className="w-full h-80 object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
+                <p className="text-xs font-semibold text-white">
+                  Quality inspection at our Shanghai abrasive manufacturing facility
+                </p>
+                <p className="text-[11px] text-industry-slate-300 leading-relaxed">
+                  Additional production-line and warehouse photos, ISO certificates, and third-party audit reports are available to qualified buyers on request or during a factory visit / video tour.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <Link href="/contact" className="text-[11px] font-bold text-industry-orange hover:underline">
+                    Request factory visit / video tour →
+                  </Link>
+                  <Link href="/about" className="text-[11px] font-bold text-industry-slate-300 hover:text-white hover:underline">
+                    About SCOTTCHEN →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -326,15 +345,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                 "description": "Shanghai-based China abrasive manufacturer producing buffing wheels, sanding discs, flap discs, cutting wheels, sanding belts, and private label abrasive kits.",
                 "address": { "@type": "PostalAddress", "addressLocality": "Shanghai", "addressCountry": "CN" },
               },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/china-abrasive-manufacturer#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

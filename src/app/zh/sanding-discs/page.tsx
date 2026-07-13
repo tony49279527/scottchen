@@ -5,9 +5,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "砂纸片批发_砂碟厂家_圆形砂纸盘OEM定制_SCOTTCHEN",
+  title: "砂纸片批发与砂碟厂家 | SCOTTCHEN",
   description: "上海砂纸片生产厂家，提供植绒砂纸片、背胶砂纸、钢纸磨片、网格砂纸、网砂等产品批发，氧化铝/碳化硅/锆刚玉材质齐全，MOQ 500片起。",
   path: "/zh/sanding-discs",
   locale: "zh-CN",
@@ -307,8 +308,10 @@ export default function ZhSandingDiscsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
-                  src="/images/hero_sanding_discs.webp"
+                  src="/images/sanding_screens.webp"
                   alt="SCOTTCHEN砂纸片批发 - 植绒拉绒片背胶钢纸磨片网砂厂家"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -357,12 +360,25 @@ export default function ZhSandingDiscsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
-            "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
-            "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
-            "url": absoluteUrl("/zh/sanding-discs"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
+                "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
+                "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
+                "url": absoluteUrl("/zh/sanding-discs"),
+                "image": absoluteUrl("/images/sanding_screens.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "砂纸片与砂碟",
+                "material": "氧化铝、锆刚玉、碳化硅、陶瓷、网砂",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" },
+                  { "@type": "PropertyValue", "name": "背基/连接方式", "value": "植绒、背胶、钢纸、快换" }
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />

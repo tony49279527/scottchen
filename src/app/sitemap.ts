@@ -5,6 +5,7 @@ const LAST_MODIFIED = new Date(SITE_UPDATED);
 
 const localizedRoutes = [
   { en: "/", zh: "/zh", priority: 1.0, changefreq: "weekly" as const },
+  { en: "/about", zh: "/zh/about", priority: 0.85, changefreq: "monthly" as const },
   { en: "/products", zh: "/zh/products", priority: 0.9, changefreq: "weekly" as const },
   {
     en: "/products/buffing-polishing-wheels",
@@ -91,13 +92,31 @@ const localizedRoutes = [
     priority: 0.85,
     changefreq: "monthly" as const,
   },
+  { en: "/terms", zh: "/zh/terms", priority: 0.2, changefreq: "yearly" as const },
+  { en: "/privacy", zh: "/zh/privacy", priority: 0.2, changefreq: "yearly" as const },
+  { en: "/cookie-policy", zh: "/zh/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
 ] as const;
 
 const utilityRoutes = [
   { path: "/catalog.pdf", priority: 0.6, changefreq: "monthly" as const },
-  { path: "/terms", priority: 0.2, changefreq: "yearly" as const },
-  { path: "/privacy", priority: 0.2, changefreq: "yearly" as const },
-  { path: "/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
+] as const;
+
+const decisionRoutes = [
+  {
+    path: "/alternatives/abrasive-kit-sourcing-alternatives",
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  },
+  {
+    path: "/compare/oem-vs-off-the-shelf-abrasive-kits",
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  },
+  {
+    path: "/solutions/automotive-polishing-kits",
+    priority: 0.85,
+    changefreq: "monthly" as const,
+  },
 ] as const;
 
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
@@ -121,6 +140,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...localizedEntries,
+    ...decisionRoutes.map(({ path: p, priority, changefreq }) => ({
+      url: absoluteUrl(p),
+      lastModified: LAST_MODIFIED,
+      changeFrequency: changefreq,
+      priority,
+    })),
     ...utilityRoutes.map(({ path: p, priority, changefreq }) => ({
       url: absoluteUrl(p),
       lastModified: LAST_MODIFIED,

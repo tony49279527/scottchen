@@ -541,74 +541,79 @@ export default function ChineseBuffingPolishingWheels() {
                 "name": "SCOTTCHEN 工业级抛光轮及棉布轮规格目录",
                 "description": "专业出口纯棉密缝布轮、松缝黄 flannel 绒布轮、带柄迷你打磨轮及多规格固体抛光蜡条。专为金属打磨、镜面色彩还原及五金分销商定制设计。",
                 "url": absoluteUrl("/zh/products/buffing-polishing-wheels"),
+                "image": absoluteUrl("/images/buffing_wheels.webp"),
                 "brand": {
                   "@type": "Brand",
                   "name": "SCOTTCHEN"
                 },
+                "manufacturer": {
+                  "@id": absoluteUrl("/#organization")
+                },
+                "category": "抛光棉布轮与抛光耗材套装",
+                "material": "纯棉 flannel、棉帆布、剑麻棉混织、固体抛光蜡",
+                "additionalProperty": [
+                  {
+                    "@type": "PropertyValue",
+                    "name": "参考起订量",
+                    "value": "台磨机棉轮单规格 500 件起；带柄电钻磨头单器形 1,000 件起"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "报价生产周期",
+                    "value": "开单确认设计稿后 25 至 35 天"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "包装选项",
+                    "value": "泡壳、彩卡、纸袋、瓦楞彩盒，可应用品牌、安全警示及 FNSKU/UPC 条码数据"
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    "name": "常见应用材质",
+                    "value": "不锈钢、铝合金、铜件/黄铜、碳钢、亚克力、镀铬装饰件及木器表面精饰"
+                  }
+                ],
                 "hasVariant": [
                   {
                     "@type": "Product",
                     "name": "Spiral Stitched Cotton Buffing Wheel (密缝棉布轮)",
                     "description": "密缝线缝，高硬度大打磨力，适于金属拉丝及去锈。",
-                    "sku": "SC-SPIRAL-COTTON-ZH"
+                    "sku": "SC-SPIRAL-COTTON-ZH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "棉帆布或加强棉混织",
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "层数选项", "value": "30 Ply、40 Ply、50 Ply 或 60 Ply" },
+                      { "@type": "PropertyValue", "name": "中心孔规格", "value": "1/2 英寸、5/8 英寸、3/4 英寸或 1 英寸中心纸管/塑料法兰圈" }
+                    ]
                   },
                   {
                     "@type": "Product",
                     "name": "Loose Cotton Flannel Coloring Wheel (松缝 flannel 绒布轮)",
                     "description": "特柔松缝，在高速下自然撑开，适于极高亮镜面上色及精细打磨。",
-                    "sku": "SC-LOOSE-FLANNEL-ZH"
+                    "sku": "SC-LOOSE-FLANNEL-ZH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "material": "细柔绒毛精梳纯棉 flannel 织物",
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "缝制手法", "value": "仅轴心一圈车线固定，边缘全松缝" },
+                      { "@type": "PropertyValue", "name": "适用场景", "value": "珠宝饰品精饰、汽车轮毂最终上色、高光亚克力/有机树脂" }
+                    ]
                   },
                   {
                     "@type": "Product",
                     "name": "Mounted Drill Buffing Wheels (带柄迷你手电钻布轮)",
                     "description": "焊接 1/4英寸 六角/圆形适配铁柄，专攻深槽、死角和汽车排气管打磨。",
-                    "sku": "SC-SHANK-BUFFER-ZH"
-                  }
-                ]
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#faqpage"),
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "Spiral Stitched（密缝）棉线布轮和 Loose Flannel（松缝绒布）轮有什么本质区别？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "密缝布轮通过多圈缝线形成较高挺度，可作为中粗加工和金属表面处理的起点；松缝绒布轮仅在中心固定，适合上色与最终精饰。轮体、抛光膏、基材、压力和转速必须通过样件测试确认。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "如何合理匹配不同的抛光轮与抛光膏颜色？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "若要粗切削金属去斑去锈，使用密缝布轮配合黑 Emery 砂蜡；中度切削和拉丝黄铜使用红 Tripoli 蜡；若要对不锈钢和一般钢件进行镜面还原，使用白蜡配合密缝棉轮；若要对铝材或高级铜饰品进行无痕镜面色彩提亮，使用绿蜡配合松缝 flannel 绒布轮。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "你们提供用于台磨机和手电钻的轴套和转接铁杆吗？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "可提供伸缩轴套以及 1/4\" 六角柄或圆柄选项。使用前必须在批准规格中核对轴径或夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "你们对零售货架包装提供哪些合规支持？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "可按买家确认稿制作泡壳、彩卡、纸袋和瓦楞彩盒，并应用品牌、安全警示及 FNSKU/UPC 数据后进行样品扫码检查。最终零售或平台入仓要求以渠道当期规则为准。"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "样品包的寄送流程是怎样的？",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "经核实的工具品牌和五金分销商可以申请样品，并填写所需直径、层数和配蜡克重。样品费、国际快递费及可能适用的订单抵扣条件会在发出前书面确认。"
-                    }
+                    "sku": "SC-SHANK-BUFFER-ZH",
+                    "manufacturer": {
+                      "@id": absoluteUrl("/#organization")
+                    },
+                    "additionalProperty": [
+                      { "@type": "PropertyValue", "name": "适配手柄", "value": "1/4 英寸 (6.35mm) 标准六角快装柄或圆形不锈钢接柄" },
+                      { "@type": "PropertyValue", "name": "参考起订量", "value": "单一器形 1,000 件起，或定制整套多形态彩盒" }
+                    ]
                   }
                 ]
               }

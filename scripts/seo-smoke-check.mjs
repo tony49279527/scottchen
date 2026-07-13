@@ -1,12 +1,103 @@
 const DEFAULT_SITE_URL = "https://www.scottchentools.com";
 const DEFAULT_INDEXNOW_KEY = "bba16f0343d10f111540909669eb16cc";
+const MAX_TITLE_LENGTH = 70;
+const MAX_DESCRIPTION_LENGTH = 160;
+const FETCH_RETRY_ATTEMPTS = Number(process.env.SEO_SMOKE_FETCH_RETRIES || 3);
+const FETCH_RETRY_DELAY_MS = 350;
+const FETCH_TIMEOUT_MS = Number(process.env.SEO_SMOKE_FETCH_TIMEOUT_MS || 15000);
+const ASSET_CHECK_CONCURRENCY = Number(process.env.SEO_SMOKE_ASSET_CONCURRENCY || 8);
 
-const siteUrl = (process.env.SEO_SMOKE_SITE_URL || DEFAULT_SITE_URL).replace(/\/+$/, "");
+const args = process.argv.slice(2);
+
+function readArg(name) {
+  const prefix = `${name}=`;
+  const equalsArg = args.find((arg) => arg.startsWith(prefix));
+  if (equalsArg) {
+    return equalsArg.slice(prefix.length);
+  }
+
+  const index = args.indexOf(name);
+  return index >= 0 ? args[index + 1] : undefined;
+}
+
+if (args.includes("--help")) {
+  console.log(`Usage: npm run seo:smoke -- [--site-url URL] [--fetch-origin URL]
+
+--site-url      Canonical production URL expected in sitemap/canonical tags.
+--fetch-origin  Optional origin to request, useful for local builds that emit production canonical URLs.
+
+Environment equivalents: SEO_SMOKE_SITE_URL, SEO_SMOKE_FETCH_ORIGIN, INDEXNOW_KEY.`);
+  process.exit(0);
+}
+
+const siteUrl = (readArg("--site-url") || process.env.SEO_SMOKE_SITE_URL || DEFAULT_SITE_URL).replace(/\/+$/, "");
+const fetchOriginUrl = (readArg("--fetch-origin") || process.env.SEO_SMOKE_FETCH_ORIGIN || siteUrl).replace(/\/+$/, "");
 const indexNowKey = process.env.INDEXNOW_KEY || DEFAULT_INDEXNOW_KEY;
 const origin = new URL(siteUrl);
+const fetchOrigin = new URL(fetchOriginUrl);
+const ignoreFetchNoindexHeader = fetchOriginUrl !== siteUrl;
 
 function fail(message) {
   throw new Error(message);
+}
+
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function retryDelayFor(attempt) {
+  return FETCH_RETRY_DELAY_MS * 2 ** attempt;
+}
+
+function shouldRetryResponse(response) {
+  return response.status === 408 || response.status === 429 || response.status >= 500;
+}
+
+async function mapWithConcurrency(items, limit, mapper) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (nextIndex < items.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+    }
+  });
+
+  await Promise.all(workers);
+  return results;
+}
+
+async function fetchWithRetry(url, init) {
+  let lastError;
+
+  for (let attempt = 0; attempt <= FETCH_RETRY_ATTEMPTS; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, { ...init, signal: controller.signal });
+      clearTimeout(timeout);
+
+      if (!shouldRetryResponse(response) || attempt === FETCH_RETRY_ATTEMPTS) {
+        return response;
+      }
+
+      await response.arrayBuffer().catch(() => {});
+      await wait(retryDelayFor(attempt));
+    } catch (error) {
+      clearTimeout(timeout);
+      lastError = error;
+      if (attempt === FETCH_RETRY_ATTEMPTS) {
+        break;
+      }
+      await wait(retryDelayFor(attempt));
+    }
+  }
+
+  const message = lastError instanceof Error ? lastError.message : String(lastError);
+  fail(`${url} fetch failed after ${FETCH_RETRY_ATTEMPTS + 1} attempts: ${message}`);
 }
 
 function decodeXmlText(value) {
@@ -18,8 +109,14 @@ function decodeXmlText(value) {
     .replaceAll("&apos;", "'");
 }
 
+function decodeHtmlText(value) {
+  return decodeXmlText(value)
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(Number.parseInt(code, 16)));
+}
+
 async function fetchText(url) {
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       "User-Agent": "SCOTTCHEN SEO smoke check",
     },
@@ -32,9 +129,118 @@ async function fetchText(url) {
   return response.text();
 }
 
-const robotsUrl = new URL("/robots.txt", origin).toString();
+function fetchUrlFor(canonicalUrl) {
+  const parsed = new URL(canonicalUrl);
+  if (parsed.origin !== origin.origin) {
+    return canonicalUrl;
+  }
+
+  return new URL(`${parsed.pathname}${parsed.search}`, fetchOrigin).toString();
+}
+
+function getAttr(tag, attrName) {
+  const match = tag.match(new RegExp(`${attrName}\\s*=\\s*("[^"]*"|'[^']*'|[^\\s>]+)`, "i"));
+  if (!match) {
+    return "";
+  }
+
+  const raw = match[1];
+  return raw.startsWith("\"") || raw.startsWith("'") ? raw.slice(1, -1) : raw;
+}
+
+function hasToken(value, token) {
+  return value
+    .split(/\s+/)
+    .map((item) => item.toLowerCase())
+    .includes(token);
+}
+
+function extractMetadata(html) {
+  const title =
+    decodeHtmlText(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+  let description = "";
+  let canonical = "";
+  let robotsNoindex = false;
+
+  for (const metaMatch of html.matchAll(/<meta\b[^>]*>/gi)) {
+    const tag = metaMatch[0];
+    const name = getAttr(tag, "name").toLowerCase();
+    const content = decodeHtmlText(getAttr(tag, "content")).replace(/\s+/g, " ").trim();
+
+    if (name === "description") {
+      description = content;
+    }
+    if (name === "robots" && content.toLowerCase().includes("noindex")) {
+      robotsNoindex = true;
+    }
+  }
+
+  for (const linkMatch of html.matchAll(/<link\b[^>]*>/gi)) {
+    const tag = linkMatch[0];
+    const rel = getAttr(tag, "rel");
+    if (hasToken(rel, "canonical")) {
+      canonical = getAttr(tag, "href");
+      break;
+    }
+  }
+
+  return { title, description, canonical, robotsNoindex };
+}
+
+function extractImageUrls(html, pageUrl) {
+  const urls = new Set();
+
+  for (const tagMatch of html.matchAll(/<(?:img|source)\b[^>]*>/gi)) {
+    const tag = tagMatch[0];
+    const src = decodeHtmlText(getAttr(tag, "src"));
+    const srcSet = decodeHtmlText(getAttr(tag, "srcset"));
+
+    if (src) {
+      urls.add(new URL(src, pageUrl).toString());
+    }
+
+    if (srcSet) {
+      for (const candidate of srcSet.split(",")) {
+        const rawUrl = candidate.trim().split(/\s+/)[0];
+        if (rawUrl) {
+          urls.add(new URL(rawUrl, pageUrl).toString());
+        }
+      }
+    }
+  }
+
+  return [...urls].filter((url) => !url.startsWith("data:") && !url.startsWith("blob:"));
+}
+
+async function checkAsset(url) {
+  const fetchedUrl = fetchUrlFor(url);
+  let assetCheck = assetCheckCache.get(fetchedUrl);
+
+  if (!assetCheck) {
+    assetCheck = (async () => {
+      const response = await fetchWithRetry(fetchedUrl, {
+        headers: {
+          "User-Agent": "SCOTTCHEN SEO smoke check",
+        },
+      });
+
+      await response.arrayBuffer();
+      return response.ok ? null : { fetchedUrl, status: response.status };
+    })();
+    assetCheckCache.set(fetchedUrl, assetCheck);
+  }
+
+  const issue = await assetCheck;
+  return issue ? { ...issue, url } : null;
+}
+
+const robotsUrl = new URL("/robots.txt", fetchOrigin).toString();
 const sitemapUrl = new URL("/sitemap.xml", origin).toString();
-const indexNowKeyUrl = new URL(`/${indexNowKey}.txt`, origin).toString();
+const sitemapFetchUrl = new URL("/sitemap.xml", fetchOrigin).toString();
+const indexNowKeyUrl = new URL(`/${indexNowKey}.txt`, fetchOrigin).toString();
 
 const robots = await fetchText(robotsUrl);
 if (!robots.includes(`Sitemap: ${sitemapUrl}`)) {
@@ -46,7 +252,7 @@ if (keyText !== indexNowKey) {
   fail("IndexNow key file content does not match the configured key.");
 }
 
-const sitemap = await fetchText(sitemapUrl);
+const sitemap = await fetchText(sitemapFetchUrl);
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)]
   .map((match) => decodeXmlText(match[1].trim()))
   .filter(Boolean);
@@ -69,9 +275,13 @@ if (uniqueUrls.size !== urls.length) {
 }
 
 const issues = [];
+let htmlPageCount = 0;
+let checkedImageCount = 0;
+const assetCheckCache = new Map();
 
 for (const url of urls) {
-  const response = await fetch(url, {
+  const fetchUrl = fetchUrlFor(url);
+  const response = await fetchWithRetry(fetchUrl, {
     redirect: "manual",
     headers: {
       "User-Agent": "SCOTTCHEN SEO smoke check",
@@ -83,9 +293,45 @@ for (const url of urls) {
   let robotsNoindex = false;
 
   if (contentType.includes("text/html")) {
+    htmlPageCount += 1;
     const html = await response.text();
-    canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1] || "";
-    robotsNoindex = /name="robots" content="[^"]*noindex/i.test(html);
+    const metadata = extractMetadata(html);
+    canonical = metadata.canonical;
+    robotsNoindex = metadata.robotsNoindex;
+
+    if (!metadata.title) {
+      issues.push({ url, fetchUrl, issue: "Missing title" });
+    } else if (metadata.title.length > MAX_TITLE_LENGTH) {
+      issues.push({
+        url,
+        fetchUrl,
+        issue: "Title too long",
+        titleLength: metadata.title.length,
+        title: metadata.title,
+      });
+    }
+
+    if (!metadata.description) {
+      issues.push({ url, fetchUrl, issue: "Missing meta description" });
+    } else if (metadata.description.length > MAX_DESCRIPTION_LENGTH) {
+      issues.push({
+        url,
+        fetchUrl,
+        issue: "Description too long",
+        descriptionLength: metadata.description.length,
+        description: metadata.description,
+      });
+    }
+
+    const imageUrls = extractImageUrls(html, url);
+    checkedImageCount += imageUrls.length;
+    const imageIssues = await mapWithConcurrency(imageUrls, ASSET_CHECK_CONCURRENCY, checkAsset);
+
+    for (const imageIssue of imageIssues) {
+      if (imageIssue) {
+        issues.push({ ...imageIssue, page: url, issue: "Image request failed" });
+      }
+    }
   } else {
     await response.arrayBuffer();
   }
@@ -93,12 +339,13 @@ for (const url of urls) {
   if (
     response.status !== 200 ||
     response.headers.get("location") ||
-    xRobotsTag.toLowerCase().includes("noindex") ||
+    (!ignoreFetchNoindexHeader && xRobotsTag.toLowerCase().includes("noindex")) ||
     robotsNoindex ||
     (canonical && canonical !== url)
   ) {
     issues.push({
       url,
+      fetchUrl,
       status: response.status,
       contentType,
       location: response.headers.get("location") || "",
@@ -115,4 +362,8 @@ if (issues.length) {
 }
 
 console.log(`SEO smoke check passed for ${siteUrl}.`);
+if (fetchOriginUrl !== siteUrl) {
+  console.log(`Fetched pages from ${fetchOriginUrl}.`);
+}
 console.log(`Checked ${urls.length} sitemap URLs.`);
+console.log(`Checked ${htmlPageCount} HTML pages and ${checkedImageCount} image references.`);

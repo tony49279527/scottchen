@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Cotton Buffing Wheels Manufacturer | SCOTTCHEN",
-  description: "Source OEM cotton buffing wheels, spiral-stitched pads, loose flannel wheels, drill buffers and compound kits with reference MOQ, lead time and packaging parameters.",
+  description: "Source OEM cotton buffing wheels, spiral-stitched pads, flannel wheels, drill buffers and compound kits with reference MOQ and lead times.",
   path: "/products/buffing-polishing-wheels",
   alternatePath: "/zh/products/buffing-polishing-wheels",
 });
@@ -663,52 +664,6 @@ export default function BuffingPolishingWheels() {
                     ]
                   }
                 ]
-              },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/products/buffing-polishing-wheels#faqpage"),
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What is the difference between spiral-stitched and loose-flannel buffing wheels?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Spiral-stitched buffing wheels feature concentric circles of stitching, creating a firmer surface for medium-to-heavy cut polishing and metal preparation. Loose-flannel wheels are stitched at the arbor center so the softer layers can flare out for coloring and final finishing. Confirm the wheel, compound, substrate, pressure, and speed with a workpiece test."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How do I match Scottchen buffing wheels with the correct compound bar color?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "For heavy metal cutting and oxidation removal, use our Black Emery compound with spiral-stitched wheels. For medium cutting on brass or copper, use Red Tripoli compound. White Rouge is designed for high-gloss coloring on steel, chrome, and hard metals, while Green Chromium Oxide is used for final mirror finishes on stainless steel and aluminum, typically paired with soft loose flannel wheels."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Do you supply telescoping arbor hole inserts and custom shanks?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We can provide telescoping inserts and 1/4\" hex or round shank options. Buyers must confirm spindle or chuck dimensions, tool type, the product's labeled maximum speed, and the tool manufacturer's limits in the approved specification before use."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What are the standard packaging options for retail-ready distribution?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Available formats include shrink wrap, blister cards, and printed color boxes. Buyer-approved logos, warnings, instructions, and FNSKU or UPC data can be applied and sample-scanned; final acceptance depends on the retailer or marketplace's current rules."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What is the typical minimum order quantity (MOQ) and production lead time?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Reference MOQs are 500 pieces per size for bench-grinder wheels and 1,000 pieces per shape for shank-mounted pads. Quantity, lead time, sample charges, and packaging scope are confirmed in the written quotation."
-                    }
-                  }
-                ]
               }
             ]
           })
@@ -716,6 +671,7 @@ export default function BuffingPolishingWheels() {
       />
 
       {/* Persistent CTA Banner (Bottom CTA area) */}
+      <DecisionGuides />
       <CTASection />
     </div>
   );

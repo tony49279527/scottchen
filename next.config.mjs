@@ -11,11 +11,17 @@ const cspDirectives = [
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
-  "object-src 'none'",
+  // Allow same-origin PDF/object preview (catalog.pdf). Blocking object-src
+  // entirely makes many browsers render /catalog.pdf as a blank page.
+  "object-src 'self'",
 ].join("; ");
 
 const nextConfig = {
   poweredByHeader: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    qualities: [68, 72, 75],
+  },
   async headers() {
     return [
       {
@@ -28,7 +34,7 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "geolocation=(), camera=(), microphone=(), interest-cohort=(), payment=(), usb=()" },
           {
             key: "Content-Security-Policy",
-            value: isProd ? cspDirectives : cspDirectives.replace("'unsafe-eval'", ""),
+            value: isProd ? cspDirectives.replace(" 'unsafe-eval'", "") : cspDirectives,
           },
         ],
       },
@@ -39,6 +45,15 @@ const nextConfig = {
             key: "Cache-Control",
             value: "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
           },
+        ],
+      },
+      {
+        source: "/catalog.pdf",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          { key: "Content-Disposition", value: 'inline; filename="SCOTTCHEN_B2B_Catalog.pdf"' },
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
         ],
       },
     ];

@@ -25,7 +25,7 @@ function resolveSiteUrl(): string {
 export const SITE_URL = resolveSiteUrl();
 export const SITE_EMAIL = "sales@scottchentools.com";
 export const RETAIL_SITE_URL = "https://scottchen.online";
-export const SITE_UPDATED = "2026-07-04";
+export const SITE_UPDATED = "2026-07-13";
 export const PRODUCTION_DOMAIN = "www.scottchentools.com";
 
 export function absoluteUrl(path = "/") {
@@ -34,6 +34,7 @@ export function absoluteUrl(path = "/") {
 
 const localizedPaths = new Set([
   "/",
+  "/about",
   "/products",
   "/products/buffing-polishing-wheels",
   "/products/sanding-grinding-accessories",
@@ -55,6 +56,9 @@ const localizedPaths = new Set([
   "/resources/abrasive-sourcing-checklist",
   "/resources/abrasive-material-selection-guide",
   "/resources/oem-abrasive-supplier-evaluation",
+  "/terms",
+  "/privacy",
+  "/cookie-policy",
   "/thank-you",
 ]);
 

@@ -194,6 +194,7 @@ export default function SampleKitForm() {
             message: fields.message,
           }),
           formStartedAt,
+          hpField: fields.hpField,
         }
       );
 

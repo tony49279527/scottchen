@@ -5,9 +5,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "抛光轮厂家_抛光布轮批发_抛光轮生产厂家_SCOTTCHEN",
+  title: "抛光轮厂家与抛光布轮批发 | SCOTTCHEN",
   description: "SCOTTCHEN上海抛光轮生产厂家，专业提供抛光布轮、麻布轮、气道轮、抛光膏套装的OEM/ODM代工与批发，MOQ 500件，支持贴牌定制，出口全球。",
   path: "/zh/buffing-wheels",
   locale: "zh-CN",
@@ -241,7 +242,7 @@ export default function ZhBuffingWheelsPage() {
                   {[
                     { title: "工厂直供价格", desc: "我们是抛光轮源头生产厂家，自有工厂直销，省去中间商层层加价，为批发商和品牌商提供最具竞争力的出厂价格。" },
                     { title: "全系列产品", desc: "硬质布轮、软质布轮、麻布轮、气道轮、磨头、抛光膏一站式采购，减少多供应商采购的沟通成本和物流成本。" },
-                    { title: "严格质量管控", desc: "ISO 9001认证工厂，每只抛光轮经动平衡测试，原材料到成品三阶段质检，确保出厂产品合格率达99%以上。" },
+                    { title: "严格质量管控", desc: "按确认规格执行原材料到成品的分阶段质检与动平衡抽检；认证范围与验收标准以书面报价/订单为准。" },
                     { title: "OEM/ODM定制", desc: "10年+贴牌代工经验，支持品牌标签、彩盒包装、特殊规格、套装组合、FBA贴标等全方位定制服务。" },
                     { title: "快速交货", desc: "标准品7-15天发货，OEM订单30-40天交货，上海港口紧邻工厂，船期密集，物流成本低、时效快。" },
                     { title: "专业技术支持", desc: "拥有资深抛光工艺工程师团队，可协助客户选型、设计抛光方案、解决抛光难题，提供工艺培训和指导。" },
@@ -303,8 +304,10 @@ export default function ZhBuffingWheelsPage() {
                 <Image
                   width={1024}
                   height={1024}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  quality={70}
                   loading="lazy"
-                  src="/images/hero_buffing_wheels.webp"
+                  src="/images/buffing_wheels.webp"
                   alt="SCOTTCHEN抛光布轮厂家批发 - 硬质线布轮软布轮气道轮"
                   className="object-cover w-full h-56 opacity-90"
                 />
@@ -353,12 +356,27 @@ export default function ZhBuffingWheelsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProductGroup",
-            "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
-            "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
-            "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
-            "url": absoluteUrl("/zh/buffing-wheels"),
-            "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+            "@graph": [
+              {
+                "@type": "ProductGroup",
+                "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
+                "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
+                "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
+                "url": absoluteUrl("/zh/buffing-wheels"),
+                "image": absoluteUrl("/images/buffing_wheels.webp"),
+                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "manufacturer": { "@id": absoluteUrl("/#organization") },
+                "category": "棉布抛光轮与抛光配件",
+                "material": "棉布、绒布、麻棉混纺、抛光膏",
+                "additionalProperty": [
+                  { "@type": "PropertyValue", "name": "参考起订量", "value": "500件/款（标准品）" },
+                  { "@type": "PropertyValue", "name": "参考交期", "value": "标准品25-35天，OEM 30-40天" },
+                  { "@type": "PropertyValue", "name": "贸易条款", "value": "FOB上海 / CIF / 门到门" },
+                  { "@type": "PropertyValue", "name": "付款方式", "value": "T/T 30%定金，70%见提单副本" },
+                ],
+              },
+              buildFaqPageSchema(faqs),
+            ],
           }),
         }}
       />

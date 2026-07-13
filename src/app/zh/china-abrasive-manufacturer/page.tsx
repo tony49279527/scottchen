@@ -5,9 +5,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "中国磨料磨具厂家_上海磨具OEM工厂_磨具批发出口_SCOTTCHEN",
+  title: "中国磨料磨具厂家与上海OEM工厂 | SCOTTCHEN",
   description: "SCOTTCHEN是位于上海的中国磨料磨具专业生产厂家，成立于2014年，为全球客户提供抛光轮、砂纸片、百叶片等磨具的OEM/ODM代工与出口服务。",
   path: "/zh/china-abrasive-manufacturer",
   locale: "zh-CN",
@@ -117,12 +118,30 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               <Image
                 width={1024}
                 height={768}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 loading="lazy"
                 src="/images/quality_inspection.webp"
                 alt="SCOTTCHEN上海磨料磨具工厂质量检测车间"
                 className="w-full h-80 object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
+                <p className="text-xs font-semibold text-white">
+                  上海磨料磨具工厂质量检测现场
+                </p>
+                <p className="text-[11px] text-industry-slate-300 leading-relaxed">
+                  更多产线/仓库实拍、ISO 证书及第三方验厂报告，可向合格采购商按需提供，或安排实地验厂 / 视频验厂。
+                </p>
+                <div className="flex flex-wrap gap-3 pt-1">
+                  <Link href="/zh/contact" className="text-[11px] font-bold text-industry-orange hover:underline">
+                    申请验厂 / 视频验厂 →
+                  </Link>
+                  <Link href="/zh/about" className="text-[11px] font-bold text-industry-slate-300 hover:text-white hover:underline">
+                    关于 SCOTTCHEN →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -319,15 +338,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                 "description": "上海中国磨料磨具生产厂家，生产抛光轮、砂纸片、百叶片、切割片、砂带、磨具套装。",
                 "address": { "@type": "PostalAddress", "addressLocality": "上海", "addressCountry": "CN" },
               },
-              {
-                "@type": "FAQPage",
-                "@id": absoluteUrl("/zh/china-abrasive-manufacturer#faqpage"),
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": faq.a },
-                })),
-              },
+              buildFaqPageSchema(faqs),
             ],
           }),
         }}

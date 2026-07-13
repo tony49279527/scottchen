@@ -157,6 +157,7 @@ export default function RFQForm() {
             message: fields.message,
           }),
           formStartedAt,
+          hpField: fields.hpField,
         }
       );
 

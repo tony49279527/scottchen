@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
-import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Surface Finishing Application Scenarios | SCOTTCHEN",
@@ -255,60 +255,9 @@ export default function ApplicationsOverview() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "@id": absoluteUrl("/applications#faqpage"),
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How do I choose between cotton buffing wheels and zirconia fiber discs for metalworking?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Zirconia fiber discs are engineered for aggressive material removal, weld leveling, and rust grinding. Once the surface is mechanically prepped and flat, cotton buffing wheels paired with abrasive compounds (like Black Emery or White Rouge) are used to deburr, clean, and color the metal to a reflective finish."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What are the default grit options included in woodworking and sanding paper kits?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "For woodworking and refinishing, our kits typically range from coarse P80 and P120 (for shaping and varnish stripping) up to P180, P240, and P320 (for pre-stain grain smoothing). Sourcing agents can customize this mix for their specific market target."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Are the drywall sanding screens compatible with automated dust-extraction tools?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Our silicon carbide drywall mesh screens feature an open fiberglass design that allows standard vacuum sanders to draw dust directly through the screen. We cut mesh sheets to standard 9x11\" and 3.25x11\" dimensions to fit popular orbital and manual hand sanders."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can we configure automotive wheel-polishing kits with custom shanks and compound weights?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. We offer standard 1/4\" round and hex shank adapter fittings for power drills and impact drivers, and can bundle these with 100g or 250g compound bars. We package these into custom-molded blister packs featuring your branding."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you offer private labeled, application-specific kits for ecommerce store launches?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, this is our specialty. Sourcing managers can define a targeted workflow (like 'Boat Gelcoat Repair' or 'Knife Mirror Polishing') and choose the exact combination of wheels, pads, and abrasives. We provide custom color box packaging with barcodes, pre-sorted and ready for ecommerce fulfillment."
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* Persistent CTA Banner */}
+      <DecisionGuides />
       <CTASection />
     </div>
   );
