@@ -86,8 +86,9 @@ Evidence:
 
 ### Abrasive kit sourcing alternatives
 
-Factory-direct OEM usually fits repeat private-label programs. Distributors can fit fast,
-lower-volume validation. Trading companies, contract packers and in-house assembly are
+Direct OEM sourcing can fit repeat private-label programs when the production source and
+quality responsibilities are verified. Distributors can fit faster, lower-volume validation.
+Trading companies, contract packers and in-house assembly are
 other models with different control and verification responsibilities.
 
 Full comparison: ${absoluteUrl("/alternatives/abrasive-kit-sourcing-alternatives")}
@@ -135,7 +136,7 @@ Evidence:
 ## 7. Quick answers
 
 Q: What is the MOQ for a private-label abrasive kit?
-A: A 500-set quantity is a common SCOTTCHEN RFQ starting point. Final MOQ depends on the components, packaging and print process and is confirmed in writing.
+A: MOQ depends on component specifications, assortment, packaging, print process, tooling and order quantity. It is confirmed in the written quotation.
 
 Q: Does SCOTTCHEN publish fixed prices?
 A: No. Product and kit pricing is quoted against the selected specification, quantity, packaging, inspection and shipping assumptions.

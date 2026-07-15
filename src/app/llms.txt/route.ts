@@ -47,7 +47,7 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [Sanding belts landing page](${absoluteUrl("/sanding-belts")})
 - [Cutting wheels landing page](${absoluteUrl("/cutting-wheels")})
 - [Abrasive kits landing page](${absoluteUrl("/abrasive-kits")})
-- [China abrasive manufacturer page](${absoluteUrl("/china-abrasive-manufacturer")})
+- [China abrasive production and sourcing page](${absoluteUrl("/china-abrasive-manufacturer")})
 - [Wholesale abrasives page](${absoluteUrl("/wholesale-abrasives")})
 - [OEM / private-label workflow](${absoluteUrl("/oem-private-label")})
 - [Application scenarios](${absoluteUrl("/applications")})
@@ -56,6 +56,9 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [B2B abrasive sourcing resource center](${absoluteUrl("/resources")})
 - [Abrasive kit sourcing alternatives](${absoluteUrl("/alternatives/abrasive-kit-sourcing-alternatives")})
 - [OEM vs off-the-shelf abrasive kit comparison](${absoluteUrl("/compare/oem-vs-off-the-shelf-abrasive-kits")})
+- [Flap disc RFQ guide](${absoluteUrl("/resources/flap-disc-rfq-guide")})
+- [Sanding belt RFQ guide](${absoluteUrl("/resources/sanding-belt-rfq-guide")})
+- [Cutting wheel compliance checklist](${absoluteUrl("/resources/cutting-wheel-compliance-checklist")})
 - [Automotive polishing kits for aftermarket brands](${absoluteUrl("/solutions/automotive-polishing-kits")})
 - [OEM abrasive supplier evaluation guide](${absoluteUrl("/resources/oem-abrasive-supplier-evaluation")})
 - [Abrasive sourcing checklist](${absoluteUrl("/resources/abrasive-sourcing-checklist")})
@@ -76,7 +79,10 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [砂带页面](${absoluteUrl("/zh/sanding-belts")})
 - [切割片页面](${absoluteUrl("/zh/cutting-wheels")})
 - [磨具套装页面](${absoluteUrl("/zh/abrasive-kits")})
-- [中国磨料磨具供应商页面](${absoluteUrl("/zh/china-abrasive-manufacturer")})
+- [中国磨料磨具生产与采购说明](${absoluteUrl("/zh/china-abrasive-manufacturer")})
+- [百叶片 RFQ 指南](${absoluteUrl("/zh/resources/flap-disc-rfq-guide")})
+- [砂带 RFQ 指南](${absoluteUrl("/zh/resources/sanding-belt-rfq-guide")})
+- [切割片合规与安全证据清单](${absoluteUrl("/zh/resources/cutting-wheel-compliance-checklist")})
 - [批发合作页面](${absoluteUrl("/zh/wholesale-abrasives")})
 - [供应商信息与采购核验](${absoluteUrl("/zh/supplier-profile")})
 - [B2B 磨料磨具采购资源中心](${absoluteUrl("/zh/resources")})
@@ -91,7 +97,7 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 ## Quick sourcing answers
 
 Q: What is the MOQ for private-label kits?
-A: 500 sets for kits or 500 pieces for common components is a typical starting point. Paper abrasives may require larger runs. Final MOQ is confirmed in quotation.
+A: MOQ is quoted by component specification, assortment, packaging, print process, tooling and order quantity. Use the written quotation rather than a generic website number.
 
 Q: Do you support Amazon or ecommerce packaging?
 A: SCOTTCHEN can discuss buyer-supplied barcode labels, instruction sheets, safety warnings, carton marks and sample scan checks. Final scope is confirmed by packaging artwork and written pack specification.

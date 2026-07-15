@@ -40,8 +40,8 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-industry-slate-400 leading-relaxed max-w-xs">
               {isZh
-                ? "上海OEM/ODM磨料磨具制造商，专业生产抛光轮、砂纸片、百叶片、砂带、切割片及磨具套装，服务全球工具品牌、五金分销商和跨境电商卖家。成立于2014年。"
-                : "Shanghai-based OEM/ODM manufacturer of buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, and private-label abrasive accessory kits serving global tool brands, hardware distributors, and e-commerce sellers since 2014."}
+                ? "上海磨料磨具B2B采购与OEM项目支持，覆盖抛光轮、砂纸片、百叶片、砂带、切割片和贴牌磨具套装。生产来源、文件和商务条件按项目确认。"
+                : "Shanghai-based B2B sourcing and OEM project support for buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels and private-label abrasive kits. Production sources, documents and commercial terms are confirmed per project."}
             </p>
             <div className="pt-2 text-xs text-industry-slate-500 space-y-1">
               <div className="flex items-center gap-1.5">
@@ -128,7 +128,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={isZh ? "/zh/china-abrasive-manufacturer" : "/china-abrasive-manufacturer"} className="hover:text-white transition-colors">
-                  {p("Our Shanghai Factory", "上海工厂介绍")}
+                  {p("Production & Sourcing", "生产与采购说明")}
                 </Link>
               </li>
               <li>
@@ -216,10 +216,10 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-xs text-industry-slate-500 block mb-1">
-                  {p("Response Time:", "回复时效:")}
+                  {p("Quote Scope:", "报价范围:")}
                 </span>
                 <span className="text-white block">
-                  {p("Within 1 business day", "1个工作日内回复")}
+                  {p("Confirmed after RFQ review", "审核询价后书面确认")}
                 </span>
               </li>
               <li>
@@ -236,7 +236,7 @@ export default function Footer() {
 
         <div className="border-t border-industry-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-industry-slate-500 gap-4">
           <div>
-            &copy; {currentYear} SCOTTCHEN. {p("All rights reserved.", "保留所有权利。")} {isZh ? "上海磨料磨具B2B工厂，出口全球。" : "Shanghai-based B2B abrasive manufacturer, exporting worldwide."}
+            &copy; {currentYear} SCOTTCHEN. {p("All rights reserved.", "保留所有权利。")} {isZh ? "上海磨料磨具B2B采购与OEM项目支持。" : "Shanghai-based B2B abrasive sourcing and OEM project support."}
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 items-center justify-center">
             <div className="flex items-center space-x-2 text-[10px] font-mono border border-industry-slate-800 bg-industry-slate-900/40 px-2 py-1 rounded">

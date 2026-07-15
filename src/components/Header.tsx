@@ -56,14 +56,14 @@ export default function Header() {
   const secondaryNavItems = isZh
     ? [
         { name: "样品申领", href: "/zh/sample-kit" },
-        { name: "关于工厂", href: "/zh/china-abrasive-manufacturer" },
+        { name: "生产与采购", href: "/zh/china-abrasive-manufacturer" },
         { name: "批发合作", href: "/zh/wholesale-abrasives" },
         { name: "供应商档案", href: "/zh/supplier-profile" },
         { name: "联系我们", href: "/zh/contact" },
       ]
     : [
         { name: "Sample Kit", href: "/sample-kit" },
-        { name: "Our Factory", href: "/china-abrasive-manufacturer" },
+        { name: "Production & Sourcing", href: "/china-abrasive-manufacturer" },
         { name: "Wholesale", href: "/wholesale-abrasives" },
         { name: "Supplier Profile", href: "/supplier-profile" },
         { name: "Contact", href: "/contact" },
