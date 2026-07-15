@@ -28,7 +28,7 @@ const kitBlocks = [
     body: "Pair wheel construction and compounds to the intended cut-to-color sequence, then validate the sequence on the buyer's target substrate.",
   },
   {
-    title: "Retail-ready packaging",
+    title: "Packaging approval plan",
     body: "Confirm component map, instructions, warnings, buyer-supplied barcode data, carton marks and sample scan checks in the approved pack specification.",
   },
 ] as const;
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "What is the MOQ for a custom automotive polishing kit?",
-    a: "A 500-set quantity is a common SCOTTCHEN RFQ starting point. The final minimum depends on the selected components, packaging and print process.",
+    a: "MOQ depends on the selected components, packaging, print process, tooling and order quantity. It is confirmed in a dated written quotation after the kit specification is reviewed.",
   },
   {
     q: "How should an automotive polishing kit be validated?",

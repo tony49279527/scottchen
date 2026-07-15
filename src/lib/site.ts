@@ -24,7 +24,6 @@ function resolveSiteUrl(): string {
 
 export const SITE_URL = resolveSiteUrl();
 export const SITE_EMAIL = "sales@scottchentools.com";
-export const RETAIL_SITE_URL = "https://scottchen.online";
 export const SITE_UPDATED = "2026-07-15";
 export const PRODUCTION_DOMAIN = "www.scottchentools.com";
 
@@ -52,6 +51,11 @@ const localizedPaths = new Set([
   "/sample-kit",
   "/contact",
   "/supplier-profile",
+  "/evidence-center",
+  "/product-compliance",
+  "/procurement-terms",
+  "/packaging-private-label",
+  "/case-studies",
   "/resources",
   "/resources/abrasive-sourcing-checklist",
   "/resources/abrasive-material-selection-guide",

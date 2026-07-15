@@ -37,7 +37,7 @@ export default function ChineseSampleKit() {
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">评估快指</span>
                 <h2 className="text-2xl font-black text-white mt-1">样品评估规则</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  为全球采购商提供样品审核、国际运费和规格定制说明。
+                  面向采购方说明样品审核、国际运费和规格询价需要确认的字段。
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -95,10 +95,13 @@ export default function ChineseSampleKit() {
                   loading="lazy"
                   decoding="async"
                   src="/images/sample_kit.webp"
-                  alt="SCOTTCHEN 抛磨耗材样品测试箱"
+                  alt="抛磨耗材样品包概念示意图"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-3 right-3 text-[10px] text-industry-slate-300">
+                  概念示意图，不代表已发出的样品或客户订单
+                </span>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
@@ -116,13 +119,13 @@ export default function ChineseSampleKit() {
                   <div>
                     <h4 className="font-bold text-white uppercase">样品国际运费怎么安排？</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      我们可通过 DHL、FedEx、UPS 等国际快递发货。采购商通常承担快递费用，也可提供到付账号；如报价中包含合格订单抵扣条款，则按书面报价执行。
+                      承运渠道、发货方、运费、到付或预付方式、清关责任及后续抵扣安排均在发出前书面确认。
                     </p>
                   </div>
                   <div>
                     <h4 className="font-bold text-white uppercase">我可以索取特定的磨料规格或层数吗？</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      当然可以。请在表格正文留言中写明您需要的直径大小、缝线层数、砂粒目数分配（如 C-wt Latex P240 砂纸、十字花星孔锆砂碟）或适配钻柄材质，我们技术部门会据此精准挑配。
+                      请在表格中写明目标尺寸、结构、柄径、粒度、工具和基材。书面样品方案将确认负责来源、可行性、准确内容、证据、费用与发出目标；网站不承诺某个物理样品一定可做。
                     </p>
                   </div>
                   <div>
@@ -139,7 +142,7 @@ export default function ChineseSampleKit() {
                   商业资格审核条件
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  样品申请需要填写有效的公司名称、网店或品牌官网网址以及联系邮箱。资料完整的申请通常会在一个工作日内完成初步审核。
+                  样品申请需填写有效公司名称、网店或品牌官网及联系邮箱。审核时间、样品可行性、费用与发出安排在评估具体配置后确认。
                 </p>
                 <div className="bg-industry-slate-950 p-3 rounded border border-industry-slate-800 text-[10px] font-mono text-industry-orange">
                   已审核的商用渠道包括：五金工具品牌、跨国批发分销商、亚马逊/Shopify 店主、工业抛磨耗材供货链经理。
@@ -171,11 +174,11 @@ export default function ChineseSampleKit() {
               },
               {
                 q: "对于样品产生的国际快递派送费用，SCOTTCHEN 是如何进行优惠扣减的？",
-                a: "样品可采用 DHL、FedEx、UPS、TNT 或国际 EMS 快递。运费通常由买家承担或使用到付账号；任何订单抵扣安排必须以书面报价为准。"
+                a: "承运渠道、发货方、运费、到付或预付方式、清关责任及任何后续抵扣均在发出前书面确认。"
               },
               {
                 q: "我能否在样品中要求特定的棉布层数、适配器孔径或者特制砂纸粒度？",
-                a: "可以。请在下面的表格中，列出您精确的打磨工艺配方（例如：6英寸 40 Ply 棉布轮、带 1/4\" 接柄的小毛刷、P80 到 P240 目数各 5 张的镂空砂网），我们将按您的图纸数据定制物理样品。"
+                a: "请列明尺寸、结构、柄径和粒度。书面样品方案必须确认负责来源、可行性、准确内容、证据、费用与发出目标；网站不承诺某个物理样品一定可做。"
               },
               {
                 q: "样品的加工周期和跨国快递路途大概要多久？",
@@ -183,7 +186,7 @@ export default function ChineseSampleKit() {
               },
               {
                 q: "在发运磨料耗材的同时，我们能够索取彩盒印刷数码样和条码贴纸的扫码样么？",
-                a: "可以。您提交样品申请后，我们的商务团队会通过邮件向您索取矢量 logo 和 FNSKU/UPC 条码稿件，再安排制作带条码的包装样和物理样品，供您在量产前核验外观和扫码效果。"
+                a: "可在询价中提出包装或条码样需求，但书面样品方案必须说明可行性、刀模与版稿责任方、允许使用的买家数据、样品与扫码方法、费用和留存记录；本页不保证一定提供。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">

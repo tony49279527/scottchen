@@ -31,7 +31,7 @@
 
 - 参考 MOQ：台磨机棉轮 500 件/规格；带柄磨头 1,000 件/器形；砂纸 10,000 张；纤维砂碟 5,000 张（单目数 2,000 张起亦有出现，以对应页面为准）；细节打磨笔 1,000 套。
 - 报价生产周期：抛光轮 25–35 天、砂磨配件 20–30 天，均以书面订单计划为准。
-- 实体：SCOTTCHEN，上海 OEM/ODM 磨料磨具制造商，成立于 2014 年；联系方式仅 sales@scottchentools.com；零售站 scottchen.online。
+- 实体：SCOTTCHEN，上海 B2B 磨料磨具采购与 OEM 项目支持品牌；联系方式为 sales@scottchentools.com，签约主体与生产来源按 SKU 书面核验。
 - 所有性能、交期、平台合规承诺均为「参考条件 + 书面确认 + 样件验证」，不存在无条件保证。
 
 ## Query Set（按产品族 × 六类意图）
@@ -104,7 +104,7 @@
 | 地域合规 | abrasive supplier for EU market compliance |
 | 地域合规 | China abrasive manufacturer export to US |
 | 品牌实体 | is SCOTTCHEN a manufacturer or trading company |
-| 品牌实体 | SCOTTCHEN Shanghai factory |
+| 品牌实体 | SCOTTCHEN Shanghai B2B sourcing support |
 
 ### 中文侧抽样（Gemini / Copilot 中文、AI 搜索国内可达平台）
 

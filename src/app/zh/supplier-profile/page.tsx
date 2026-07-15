@@ -5,7 +5,6 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
   SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
@@ -26,7 +25,6 @@ const facts = [
   ["目标买家", "工具品牌、五金分销商、工业供应商及电商卖家"],
   ["服务语言", "中文与英文"],
   ["销售邮箱", SITE_EMAIL],
-  ["零售参考站", "scottchen.online"],
 ] as const;
 
 const verificationItems = [
@@ -55,23 +53,11 @@ export default function ChineseSupplierProfile() {
         mainEntity: { "@id": absoluteUrl("/#organization") },
       },
       {
-        "@type": "Organization",
+        "@type": "Brand",
         "@id": `${absoluteUrl("/")}#organization`,
         name: SITE_NAME,
         url: absoluteUrl("/"),
-        email: SITE_EMAIL,
-        sameAs: [RETAIL_SITE_URL],
-        areaServed: "Worldwide",
         knowsAbout: ["涂附磨具", "棉布抛光轮", "贴牌工具配件套装", "零售包装与条码准备"],
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            email: SITE_EMAIL,
-            contactType: "B2B 销售与 OEM 报价",
-            availableLanguage: ["Chinese", "English"],
-            areaServed: "Worldwide",
-          },
-        ],
       },
       {
         "@type": "ItemList",
@@ -133,15 +119,6 @@ export default function ChineseSupplierProfile() {
                       <a className="text-industry-orange-light hover:underline" href={`mailto:${SITE_EMAIL}`}>
                         {value}
                       </a>
-                    ) : label === "零售参考站" ? (
-                      <a
-                        className="text-industry-orange-light hover:underline"
-                        href={RETAIL_SITE_URL}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {value}
-                      </a>
                     ) : (
                       value
                     )}
@@ -154,10 +131,10 @@ export default function ChineseSupplierProfile() {
           <aside className="rounded-xl border border-industry-orange/30 bg-industry-orange/5 p-7 lg:col-span-2">
             <h2 className="text-xl font-bold text-white">如何确认供应商信息</h2>
             <p className="mt-4 text-sm leading-relaxed text-industry-slate-300">
-              SCOTTCHEN 是本站及所链接零售参考站使用的产品品牌。正式尽调时，我们会在报价层面确认签约主体、生产地点与收款账户，并向合格采购商按需提供证书与验货文件。请将本档案作为起点，下单前以书面报价单或合同核验最终信息。
+              SCOTTCHEN 是本站使用的产品品牌。正式尽调时，报价必须列明签约主体、生产地点与收款账户；任何证书或验货文件是否可提供，都要按准确 SKU 书面说明，本页不代表现有原件。下单前请核验实际文件、报价与合同。
             </p>
             <p className="mt-4 text-xs leading-relaxed text-industry-slate-400">
-              最近复核：2026 年 6 月 28 日
+              最近复核：{SITE_UPDATED}
             </p>
           </aside>
         </div>

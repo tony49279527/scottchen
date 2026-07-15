@@ -8,7 +8,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具批发与五金分销合作 | SCOTTCHEN",
-  description: "SCOTTCHEN磨具厂家直供批发，面向经销商、五金店、电商卖家、工业采购商提供磨料磨具批量采购服务，支持混批、柜货、贴牌、一件代发。",
+  description: "上海磨具B2B采购与OEM项目支持，生产来源、包装、起订量、交期、付款和贸易术语按SKU书面确认。",
   path: "/zh/wholesale-abrasives",
   locale: "zh-CN",
   alternatePath: "/wholesale-abrasives",
@@ -34,19 +34,19 @@ export default function ZhWholesaleAbrasivesPage() {
   const faqs = [
     {
       q: "哪些客户可以申请磨具批发账户？",
-      a: "我们的磨具批发项目面向经销商、五金零售商、工业供应公司、工具品牌、电商卖家、Amazon FBA卖家以及大批量采购的工业终端用户开放。我们不向普通零售消费者提供批发价格。申请批发价格的买家需为转售或工业使用目的采购，并达到我们的最低起订量。我们会通过您的公司网站、营业执照、税务登记证或转售证书核实商业资质。新批发客户通常从试单开始评估产品质量，再建立长期整柜补货合作。" },
+      a: "项目面向经销商、零售商、工业供应公司、工具品牌、电商卖家和工业采购方。买家资格、试单数量、各SKU起订量及所需商业资料按项目审核，并写入书面报价。" },
     {
       q: "批发合作的付款方式是什么？",
-      a: "新批发客户标准付款条件：订单确认时30% T/T电汇定金，余款70%在发货前（见提单副本）支付。对有长期稳定订单记录和良好付款表现的回头客户，可根据具体情况适当放宽付款条件，如降低定金比例或提供账期。超过一定金额门槛的大额订单我们也接受即期信用证（L/C at sight）。样品订单通常通过T/T、PayPal、Alibaba信用保障等平台预付全款。所有付款条件在生产前以形式发票书面确认。" },
+      a: "付款方式、定金与尾款节点、币种、收款主体及账期按项目确认。只有法律供应主体与买家在报价、形式发票或合同中书面列明后才构成承诺；本页不设固定30/70比例或固定付款渠道。" },
     {
       q: "有批量折扣和整柜价格吗？",
       a: "价格按SKU、规格、包装、数量、贸易术语和当期材料成本报价。建议在同一份询价中要求试单、补货、混合SKU和整柜等情景，分别列明单价、包装、检验和物流假设，避免依赖网站上的固定折扣比例。" },
     {
       q: "批发订单支持哪些交货方式？",
-      a: "标准交货条件为FOB上海（船上交货）——我们负责工厂到上海港的内陆运输、出口清关和装船，风险和运费责任在货物越过船舷时转移给买方。我们也可以报EXW（工厂交货）、CIF（成本+保险+运费到目的港），或通过我们的货代合作伙伴安排门到门（DDP/DDU）送货。拼箱（LCL）订单由我们与合作货代安排拼柜；整柜（FCL）订单使用标准20尺和40尺集装箱，我们可在工厂直接装柜、加固，避免运输途中货损。" },
+      a: "可按项目比较EXW、FOB、CIF或门到门情景，但每票货物的指定地点、生产来源、进出口主体、清关范围、风险转移和运费责任必须在书面报价或合同中确认。本页不设固定贸易术语。" },
     {
       q: "可以授予区域独家代理权吗？",
-      a: "我们考虑向能够证明有强大市场覆盖能力、销量承诺、品牌建设投入、能在当地专业代表SCOTTCHEN品牌的成熟经销商授予独家分销权。独家授权按产品类别和国家/地区授予，并设最低年度采购额要求。独家代理商可获得更强的营销支持、优先排产权、新品开发参与权和区域保护。如果您有兴趣申请独家代理，请将贵公司简介、市场覆盖范围和销量预测发送给我们的销售团队进行评估。" },
+      a: "可按品类和区域讨论独家合作。采购承诺、期限、渠道限制、支持范围和区域保护只有写入双方另行签署的协议后才生效；网站本身不授予独家权。" },
     {
       q: "平台包装或第三方仓配如何确认？",
       a: "买家应提供当前平台或第三方仓的条码、聚袋、警告、外箱和预约要求。报价会确认可执行的包装、贴标、发运与异常处理范围；平台规则持续变化，买家保留最终批准责任。" },
@@ -86,16 +86,16 @@ export default function ZhWholesaleAbrasivesPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量报价</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">FOB上海</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">交货条款</div>
+                <div className="text-2xl font-black text-industry-orange">按报价</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">指定贸易术语</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">6大品类</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">全系列磨具</div>
+                <div className="text-2xl font-black text-industry-orange">按品类</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">核验来源与 SKU</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-industry-orange">贴牌支持</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">OEM/ODM</div>
+                <div className="text-2xl font-black text-industry-orange">贴牌范围</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">按报价确认</div>
               </div>
             </div>
           </div>
@@ -114,10 +114,10 @@ export default function ZhWholesaleAbrasivesPage() {
                 SCOTTCHEN为经销商、五金零售商、工业供应公司、工具品牌、电商和工业采购方提供多品类询价支持。报价应列明每个SKU的生产来源、材料与结构、包装、检验、起订量、交期和贸易术语，便于买家比较真实总成本。
               </p>
               <p>
-                我们服务多种商业模式的批发客户：传统磨料磨具分销商和工业MRO公司采购我们的产品批发给加工厂、焊接车间、承包商和工业客户；五金零售商和家居连锁超市将我们的零售包装产品放在货架销售；电商卖家和Amazon FBA商家在线销售我们的自有品牌产品；金属加工车间、铸造厂、抛光加工厂等大型工业终端用户以批发价批量采购自用。无论您的商业模式如何，我们都能根据您的采购量、包装和配送需求设计合适的批发方案。
+                该采购流程可用于经销、零售、工业供应、电商和工业终端项目。生产来源、渠道包装、条码流程、订单数量与交付责任按实际SKU确认，不由买家类别直接推定。
               </p>
               <p>
-                开通SCOTTCHEN批发账户后，您将拥有专属销售联系人负责您的订单管理、报价、样品协调、生产进度跟踪和售后支持。我们的销售团队具备丰富的国际磨料磨具贸易经验，精通英文沟通、出口单证和物流协调，让从中国采购磨具简单可靠。
+                项目联系人可协调询价澄清、样品、书面批准和出运文件。负责供应的法律主体、生产来源、检验范围和售后责任必须在报价与合同中保持清晰。
               </p>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function ZhWholesaleAbrasivesPage() {
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">价格体系</span>
               <h2 className="text-2xl font-extrabold text-white">批量价格与阶梯折扣</h2>
               <p className="text-sm text-industry-slate-300 leading-relaxed">
-                我们的批发价格按订单量分层定价，采购量越大折扣越深。以下参考阶梯展示我们的折扣结构，具体价格按SKU根据产品规格和包装要求单独报价。
+                建议在同一报价中比较试单、补货、混合SKU和整柜情景，并保持SKU规格、包装、质量计划与贸易术语一致，避免把不同范围误认为固定折扣。
               </p>
               <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                 <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
@@ -170,22 +170,22 @@ export default function ZhWholesaleAbrasivesPage() {
                   </thead>
                   <tbody className="divide-y divide-industry-slate-850 text-white">
                     <tr>
-                      <td className="px-4 py-3 font-bold text-industry-orange">MOQ起订</td>
-                      <td className="px-4 py-3">500件</td>
-                      <td className="px-4 py-3">标准批发价</td>
+                      <td className="px-4 py-3 font-bold text-industry-orange">评估订单</td>
                       <td className="px-4 py-3">按SKU报价</td>
+                      <td className="px-4 py-3">列明计价依据</td>
+                      <td className="px-4 py-3">书面排期</td>
                     </tr>
                     <tr className="bg-industry-slate-900/40">
                       <td className="px-4 py-3 font-bold text-industry-orange">批量</td>
-                      <td className="px-4 py-3">5000件</td>
-                      <td className="px-4 py-3">5-10%折扣</td>
-                      <td className="px-4 py-3">按组合报价</td>
+                      <td className="px-4 py-3">按SKU报价</td>
+                      <td className="px-4 py-3">批量情景</td>
+                      <td className="px-4 py-3">书面排期</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-3 font-bold text-industry-orange">大批量</td>
-                      <td className="px-4 py-3">20000件</td>
-                      <td className="px-4 py-3">10-18%折扣</td>
-                      <td className="px-4 py-3">按包装报价</td>
+                      <td className="px-4 py-3">按SKU报价</td>
+                      <td className="px-4 py-3">补货情景</td>
+                      <td className="px-4 py-3">书面排期</td>
                     </tr>
                     <tr className="bg-industry-slate-900/40">
                       <td className="px-4 py-3 font-bold text-industry-orange">整柜FCL</td>
@@ -197,7 +197,7 @@ export default function ZhWholesaleAbrasivesPage() {
                 </table>
               </div>
               <p className="text-xs text-industry-slate-500 italic">
-                * 折扣百分比为参考区间。实际报价按SKU单独核算，可能因产品品类、磨料类型、包装形式和原材料实时价格有所浮动。
+                * 本页不承诺通用折扣或交期；以注明日期的报价、批准SKU范围和合同为商业事实来源。
               </p>
             </div>
 
@@ -206,7 +206,7 @@ export default function ZhWholesaleAbrasivesPage() {
               <h2 className="text-2xl font-extrabold text-white">物流配送</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  标准批发订单以FOB上海交货，我们的工厂距上海港约一小时车程。我们负责全部内陆运输、出口清关和集装箱装柜。对没有指定货代的买家，我们可以推荐可靠货代并报价CIF或门到门送达您指定的目的港或仓库。
+                  物流按每票货物报价。书面文件应列明生产来源、起运地与目的地、贸易术语和指定地点、进出口主体、内陆运输、清关、装货、运费与保险范围。FOB上海、CIF或门到门仅可作为比较情景，不是固定承诺。
                 </p>
                 <div className="grid grid-cols-1 gap-3">
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
@@ -215,11 +215,11 @@ export default function ZhWholesaleAbrasivesPage() {
                   </div>
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">整柜FCL发运</h3>
-                    <p className="text-xs text-industry-slate-400 mt-1">20尺柜（约26-28CBM）和40尺高柜（约66-68CBM）在工厂直接装柜加固，防止运输货损，单位运费最经济。</p>
+                    <p className="text-xs text-industry-slate-400 mt-1">整柜箱型、可用容积、装货地点、加固方式和成本依据按批准装载计划与货代报价确认。</p>
                   </div>
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">合并集运</h3>
-                    <p className="text-xs text-industry-slate-400 mt-1">我们可分批生产后合单，将多品类产品合并在同一个集装箱发运，降低您的总物流成本和收货复杂度。</p>
+                    <p className="text-xs text-industry-slate-400 mt-1">如需合并出运，仓储、多来源操作、检验、装货责任和额外费用应写入报价。</p>
                   </div>
                 </div>
               </div>
@@ -239,13 +239,13 @@ export default function ZhWholesaleAbrasivesPage() {
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">
                 <h3 className="text-base font-bold text-industry-orange mb-3">批发贴牌服务</h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  所有产品均可以您的自有品牌供货，包括定制标签、彩盒、吸卡、模塑箱、品牌外箱。自有品牌按SKU设置MOQ。我们提供包装设计支持、产品摄影和营销素材，助力您上线推广自有品牌产品线。
+                  贴牌可行性按SKU和生产来源确认。设计稿、包装形式、条码数据、警告文字、印刷开机量和起订量应写入批准包装规格与书面报价。
                 </p>
               </div>
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">
                 <h3 className="text-base font-bold text-industry-orange mb-3">营销支持</h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  批发合作伙伴可获取高清产品图、场景图、产品描述文案、A+页面文案、安全数据表、规格书和应用指南，供您的网站、目录和电商listing使用。重点客户可联合开发联名营销物料。
+                  报价可逐项列出对应SKU现有的产品图、说明书、规格书、安全文件或listing辅助材料；本页不默认承诺其可用性或使用权。
                 </p>
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function ZhWholesaleAbrasivesPage() {
                 { step: "1. 提交申请", desc: "通过批发询盘表、邮件或RFQ页面联系我们，提供公司信息、感兴趣的产品、预估用量和目标市场。" },
                 { step: "2. 资质审核", desc: "我们审核您的商业资质，指派专属销售代表全程对接合作。" },
                 { step: "3. 报价样品", desc: "获取详细批发报价，申请产品样品评估，最终确认规格和包装。" },
-                { step: "4. 首单下单", desc: "样品确认后下首单、支付定金，我们开始生产并全程更新进度直至发货。" },
+                { step: "4. 确认订单控制", desc: "批准样品、规格和包装稿，确认付款与 Incoterms，再按已识别生产来源的书面排期推进检验与发运。" },
               ].map((s) => (
                 <div key={s.step} className="border-l-2 border-industry-orange pl-4">
                   <h3 className="text-sm font-bold text-white">{s.step}</h3>
@@ -301,7 +301,7 @@ export default function ZhWholesaleAbrasivesPage() {
                 "@type": "WebPage",
                 "@id": absoluteUrl("/zh/wholesale-abrasives#webpage"),
                 "name": "SCOTTCHEN磨具批发",
-                "description": "磨料磨具工厂直供批发，面向经销商、零售商、工业买家，中国厂家直供价格。",
+                "description": "上海磨具B2B采购与OEM项目支持，生产来源和商业条款按SKU书面确认。",
                 "url": absoluteUrl("/zh/wholesale-abrasives"),
               },
               buildFaqPageSchema(faqs),

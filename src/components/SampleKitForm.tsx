@@ -289,8 +289,8 @@ export default function SampleKitForm() {
         </h2>
         <p className="mt-1 text-sm text-industry-slate-400">
           {isZh
-            ? "在您本国的车间实际核验我们的车缝密度、背胶强度及磨料级配标准。"
-            : "Verify our manufacturing standards, stitching densities, and grit ranges in your own workshop."}
+            ? "在您自己的车间核验拟议 SKU 规格、缝线条件、背基要求与粒度范围。"
+            : "Verify the proposed SKU specification, stitching criteria, and grit range in your own workshop."}
         </p>
       </div>
 
@@ -606,8 +606,8 @@ export default function SampleKitForm() {
           rows={4}
           placeholder={
             isZh
-              ? "如：请在箱中装入：2个带柄凹槽打磨布头 (1/4寸六角快速接头)，1个多层车缝棉布轮，5张批灰打磨镂空网格砂片 P120。"
-              : "e.g. Please include: 2x Dome cotton buffers (1/4 hex shank), 1x Concentric Spiral stitched 6-inch wheel, 5x Drywall Sanding screens P120."
+              ? "如：请说明目标产品类别、工具型号、尺寸、结构、粒度、工件、包装概念和需要核验的证据。"
+              : "e.g. List the target category, tool model, dimensions, construction, grit, workpiece, pack concept and evidence you need verified."
           }
           value={fields.message}
           onChange={handleChange}
@@ -631,7 +631,7 @@ export default function SampleKitForm() {
           />
           <span className="ml-3 text-xs text-industry-slate-400 leading-relaxed">
             {isZh
-              ? "我同意本站的隐私条款，同意将我的公司资料授权 SCOTTCHEN 的质检测试团队寄送样品大货并联系我。"
+              ? "我同意本站的隐私条款，并同意 SCOTTCHEN 就本次询价或样品需求与我联系；我可以随时退订。"
               : "I agree to the privacy policy and consent to being contacted by SCOTTCHEN for commercial quotes and custom packaging consultations."}{" "}
             <span className="text-industry-orange">*</span>
           </span>

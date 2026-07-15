@@ -6,24 +6,23 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
   SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
 } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "关于 SCOTTCHEN | 上海磨料磨具 OEM 厂家",
+  title: "关于 SCOTTCHEN | 上海磨料采购与 OEM 项目支持",
   description:
-    "SCOTTCHEN 是成立于 2014 年的上海磨料磨具 OEM 厂家，提供抛光轮、砂碟、百叶片、砂带、切割片与贴牌套装，支持询价、打样与出口交付。",
+    "SCOTTCHEN 提供上海 B2B 磨料采购与 OEM 项目支持；生产主体、场地、文件、商务条款和适用 SKU 证据均需书面确认。",
   path: "/zh/about",
   alternatePath: "/about",
   locale: "zh-CN",
 });
 
 const highlights = [
-  { label: "成立年份", value: "2014" },
-  { label: "总部", value: "中国上海" },
+  { label: "协调基地", value: "中国上海" },
+  { label: "采购范围", value: "六类磨料磨具产品" },
   { label: "业务重点", value: "OEM / 贴牌磨抛套装" },
   { label: "销售邮箱", value: SITE_EMAIL },
 ] as const;
@@ -46,7 +45,7 @@ export default function ZhAboutPage() {
         "@id": absoluteUrl("/zh/about#webpage"),
         url: absoluteUrl("/zh/about"),
         name: "关于 SCOTTCHEN",
-        description: "SCOTTCHEN 上海磨料磨具 OEM 厂家公司介绍与采购入口。",
+        description: "SCOTTCHEN 上海 B2B 磨料采购与 OEM 项目支持介绍。",
         inLanguage: "zh-CN",
         dateModified: SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
@@ -74,7 +73,7 @@ export default function ZhAboutPage() {
             关于 SCOTTCHEN
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-industry-slate-300">
-            SCOTTCHEN 是位于上海的磨料磨具 OEM 厂家，面向工具品牌、分销商与跨境卖家，提供抛光轮、砂碟、百叶片、砂带、切割片及贴牌表面处理套装。
+            SCOTTCHEN 面向工具品牌、分销商与跨境卖家，提供上海 B2B 磨料采购与 OEM 项目支持，范围包括抛光轮、砂碟、百叶片、砂带、切割片及贴牌表面处理套装。
           </p>
         </div>
       </section>
@@ -99,17 +98,17 @@ export default function ZhAboutPage() {
           <div className="space-y-5 lg:col-span-7">
             <h2 className="text-2xl font-extrabold text-white">我们是谁</h2>
             <p className="text-sm leading-relaxed text-industry-slate-300">
-              自 2014 年起，SCOTTCHEN 服务需要明确规格、可贴牌包装与书面报价条款的 B2B 采购方。我们聚焦涂附磨具与棉布抛光类配件，覆盖打磨、砂光、精修与抛光流程。
+              SCOTTCHEN 服务需要明确规格、可贴牌包装与书面报价条款的 B2B 采购方。报价应列明签约主体、实际生产来源和工序范围，不应根据本网站推定所有产品来自同一设施。
             </p>
             <p className="text-sm leading-relaxed text-industry-slate-300">
-              常见合作包括 OEM 套装设计、混合 SKU 组合、条码/FNSKU 准备、样品评估与整柜补货。起订量、交期、证书范围与贸易条款以各项目书面报价为准。
+              常见项目包括 OEM 套装设计、混合 SKU 组合、按买家批准文件进行条码和包装准备、样品评估与补货规划。起订量、样品费、交期、付款方式、贸易术语、证书范围与报告可用性以各项目书面文件为准。
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/zh/china-abrasive-manufacturer"
                 className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white"
               >
-                查看工厂介绍
+                查看采购与来源说明
               </Link>
               <Link
                 href="/zh/supplier-profile"
@@ -183,15 +182,10 @@ export default function ZhAboutPage() {
             ))}
           </div>
           <p className="mt-8 text-sm text-industry-slate-400">
-            零售参考站：{" "}
-            <a
-              href={RETAIL_SITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-industry-orange hover:underline"
-            >
-              {RETAIL_SITE_URL.replace(/^https?:\/\//, "")}
-            </a>
+            买家证据中心：{" "}
+            <Link href="/zh/evidence-center" className="text-industry-orange hover:underline">
+              查看当前证据状态
+            </Link>
             。本站品牌名：{SITE_NAME}。
           </p>
         </div>

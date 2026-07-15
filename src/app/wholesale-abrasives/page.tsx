@@ -20,17 +20,17 @@ export default function WholesaleAbrasivesPage() {
     { name: "Flap Discs", link: "/flap-discs", desc: "Type 27 depressed center and Type 29 conical flap discs in zirconia, ceramic, and aluminum oxide" },
     { name: "Sanding Belts", link: "/sanding-belts", desc: "Portable, bench, file, wide, knife making, and silicon carbide belts in custom sizes" },
     { name: "Cutting Wheels", link: "/cutting-wheels", desc: "Metal, INOX stainless, thin cut-off, Type 27 depressed center, cast iron, and masonry cutting discs" },
-    { name: "Abrasive Kits", link: "/abrasive-kits", desc: "Buffing kits, sanding assortments, polishing kits, drill accessory kits with retail-ready packaging" },
+    { name: "Abrasive Kits", link: "/abrasive-kits", desc: "Buffing, sanding, polishing and drill-accessory kit concepts quoted by BOM and packaging scope" },
   ];
 
   const faqs = [
     {
       q: "Who is eligible for a wholesale abrasive tools account?",
-      a: "Our wholesale abrasives program is open to distributors, hardware retailers, industrial supply companies, tool brands, e-commerce sellers, Amazon FBA sellers, and industrial end-users purchasing in bulk quantities. We do not sell directly to retail consumers at wholesale pricing. To qualify for wholesale pricing, buyers must be purchasing for resale or industrial use and meet our minimum order quantities. We verify business credentials through your website, business license, tax ID, or resale certificate. New wholesale customers typically start with a trial order to evaluate product quality before committing to larger recurring container shipments.",
+      a: "The program is intended for distributors, retailers, industrial suppliers, tool brands, e-commerce sellers and industrial buyers. Buyer qualification, trial quantities, SKU-level minimums and any supporting business documents are reviewed per project and recorded in the written quotation.",
     },
     {
       q: "What are your wholesale payment terms?",
-      a: "Standard payment terms for new wholesale customers are 30% T/T deposit at order confirmation with the remaining 70% balance due against copy of the bill of lading before shipment. For established repeat customers with a consistent order history and good payment record, we may extend more flexible terms including lower deposit percentages or net payment terms on a case-by-case basis. We also accept L/C at sight for larger orders exceeding a defined threshold. Sample orders are paid in full before shipment via T/T, PayPal, or trade assurance platforms such as Alibaba Trade Assurance.",
+      a: "Payment method, deposit or balance milestones, currency, beneficiary and any credit terms vary by project. They become commitments only when the legal supplier and buyer record them in the quotation, pro forma invoice or contract; this page does not establish a fixed 30/70 structure or accepted payment channel.",
     },
     {
       q: "Do you offer volume discounts and container pricing?",
@@ -38,11 +38,11 @@ export default function WholesaleAbrasivesPage() {
     },
     {
       q: "What shipping terms do you offer for wholesale orders?",
-      a: "Standard shipping terms are FOB Shanghai (Free On Board), where we handle all inland transport to Shanghai Port, export customs clearance, and loading onto the vessel, at which point risk and freight responsibility transfer to the buyer. We can also quote EXW (Ex Works) from our factory, CIF (Cost, Insurance, Freight) to your destination port, or door-to-door delivery via our freight forwarding partners. For LCL (less than container load) shipments, we consolidate cargo with our freight forwarder. FCL shipments use standard 20ft and 40ft containers, which we can load and secure at our factory to prevent transit damage.",
+      a: "EXW, FOB, CIF or door-to-door scenarios may be evaluated, but the named place, production source, exporter and importer roles, customs scope, risk transfer and freight responsibility must be confirmed for each shipment in the written quotation or contract. No Incoterm is fixed by this page.",
     },
     {
       q: "Can I get exclusive distribution rights in my market?",
-      a: "We consider exclusive distribution arrangements for established distributors who can demonstrate strong market coverage, sales volume commitments, brand-building investment, and the ability to represent the SCOTTCHEN brand professionally in their territory. Exclusivity is granted on a per-product-category and per-country/region basis and requires a minimum annual purchase commitment. Exclusive distributors receive enhanced marketing support, priority production scheduling, new product development input, and territorial protection. Contact our sales team with your company profile, market coverage, and volume projections to discuss exclusive distribution.",
+      a: "Potential exclusivity can be discussed by product category and territory. Any purchase commitment, term, channel restriction, support scope or territorial protection exists only in a separately signed agreement; the website does not grant exclusivity.",
     },
     {
       q: "Can marketplace packaging and barcode requirements be included?",
@@ -84,16 +84,16 @@ export default function WholesaleAbrasivesPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">MOQ Quoted</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">FOB Shanghai</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Shipping Terms</div>
+                <div className="text-2xl font-black text-industry-orange">Per Quote</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Named Incoterms</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">6 Categories</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Full Abrasive Range</div>
+                <div className="text-2xl font-black text-industry-orange">By Category</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Source &amp; SKU Verified</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">Private Label</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Branding Available</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Scope Quoted</div>
               </div>
             </div>
           </div>
@@ -112,10 +112,10 @@ export default function WholesaleAbrasivesPage() {
                 SCOTTCHEN supports wholesale abrasive sourcing for distributors, retailers, tool brands, e-commerce sellers and industrial buyers. The quotation identifies the product source, SKU specification, packaging, inspection scope, MOQ, lead-time milestones and commercial terms so buyers can compare offers on a like-for-like basis.
               </p>
               <p>
-                We serve wholesale customers across a range of business models. Traditional abrasives distributors and industrial supply companies stock our products for resale to fabricators, welders, contractors, and industrial accounts. Hardware retailers and home-center chains carry our retail-packaged products on their shelves. E-commerce sellers and Amazon FBA merchants sell our private label products online. Large industrial end-users—metal fabrication shops, foundries, polishing operations, knife making workshops—buy direct in bulk for their own production use at wholesale pricing. Whatever your business model, we can structure a wholesale program that fits your volume, packaging, and delivery requirements.
+                The sourcing workflow can be evaluated for distributors, retailers, industrial suppliers, e-commerce sellers and industrial end-users. Product source, channel packaging, barcode workflow, order quantity and delivery responsibilities are confirmed for the actual SKU rather than inferred from a buyer category.
               </p>
               <p>
-                When you open a wholesale account with SCOTTCHEN, you work directly with a dedicated sales contact who manages your orders, provides quotations, coordinates sample production, tracks production status, and handles post-shipment support. Our sales team includes English-speaking professionals with extensive experience in international abrasive trade, export documentation, and logistics coordination to make sourcing from China straightforward and reliable.
+                A project contact can coordinate RFQ clarification, samples, written approvals and shipment documents. The responsible supplier, production source, inspection scope and post-shipment responsibilities must remain visible in the quotation and contract.
               </p>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function WholesaleAbrasivesPage() {
               <h2 className="text-2xl font-extrabold text-white">Shipping &amp; Logistics</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  Standard wholesale orders ship FOB Shanghai from our factory, which is located approximately one hour from Shanghai Port. We manage all inland transport, export customs clearance, and container loading. For buyers without an established freight forwarder, we can recommend reliable forwarders and quote CIF or door-to-door rates for delivery to your destination port or warehouse.
+                  Logistics are quoted per shipment. The written offer must name the production source, origin and destination, Incoterm and named place, exporter and importer roles, inland transport, customs, loading, freight and insurance scope. FOB Shanghai, CIF and door-to-door can be compared as scenarios but are not standing commitments.
                 </p>
                 <div className="grid grid-cols-1 gap-3">
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
@@ -218,11 +218,11 @@ export default function WholesaleAbrasivesPage() {
                   </div>
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">FCL Containers</h3>
-                    <p className="text-xs text-industry-slate-400 mt-1">20ft (approx. 26-28 CBM) and 40ft HQ (approx. 66-68 CBM) containers loaded directly at our factory with careful bracing to prevent transit damage. Most economical per-unit shipping.</p>
+                    <p className="text-xs text-industry-slate-400 mt-1">FCL equipment, usable volume, loading location, bracing method and cost basis are confirmed against the approved load plan and forwarder quotation.</p>
                   </div>
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">Consolidation</h3>
-                    <p className="text-xs text-industry-slate-400 mt-1">We can hold production batches and consolidate multiple product categories into a single container shipment, reducing your total logistics costs and simplifying receiving.</p>
+                    <p className="text-xs text-industry-slate-400 mt-1">If consolidation is requested, storage, mixed-source handling, inspection, loading responsibility and any added cost are listed in the quotation.</p>
                   </div>
                 </div>
               </div>
@@ -242,13 +242,13 @@ export default function WholesaleAbrasivesPage() {
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">
                 <h3 className="text-base font-bold text-industry-orange mb-3">Private Label for Wholesale</h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  All products are available under your private brand including custom labels, color boxes, blister packs, molded cases, and branded cartons. Private label MOQ applies per SKU. We provide packaging design support, product photography, and marketing assets to help you launch and promote your branded product line.
+                  Private-label feasibility varies by SKU and production source. Artwork, packaging format, barcode data, warning text, print setup and MOQ are confirmed in the approved packaging specification and written quotation.
                 </p>
               </div>
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">
                 <h3 className="text-base font-bold text-industry-orange mb-3">Marketing Support</h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  Wholesale partners receive access to high-resolution product images, lifestyle photography, product descriptions, A+ content copy, safety data sheets, specification sheets, and application guides for use on your website, catalogs, and marketplace listings. Co-branded marketing materials can be developed for key accounts.
+                  Any available product images, instructions, specification sheets, safety files or listing-support materials are itemized for the quoted SKU. Availability and usage rights are not implied by this page.
                 </p>
               </div>
             </div>
@@ -262,7 +262,7 @@ export default function WholesaleAbrasivesPage() {
                 { step: "1. Submit Inquiry", desc: "Contact us via our wholesale inquiry form, email, or RFQ page with your company information, product interests, estimated volumes, and target market." },
                 { step: "2. Account Review", desc: "We review your business credentials and assign a dedicated sales representative who will work with you throughout the relationship." },
                 { step: "3. Quotation & Samples", desc: "Receive detailed wholesale pricing, request product samples for evaluation, and finalize specifications and packaging." },
-                { step: "4. Place First Order", desc: "Approve samples, confirm your first order, pay the deposit, and we begin production with regular status updates through shipment." },
+                { step: "4. Confirm Order Controls", desc: "Approve samples, sign the specification and artwork, confirm payment and Incoterms, then follow the written schedule for the identified production source through inspection and shipment." },
               ].map((s) => (
                 <div key={s.step} className="border-l-2 border-industry-orange pl-4">
                   <h3 className="text-sm font-bold text-white">{s.step}</h3>
@@ -304,7 +304,7 @@ export default function WholesaleAbrasivesPage() {
                 "@type": "WebPage",
                 "@id": absoluteUrl("/wholesale-abrasives#webpage"),
                 "name": "SCOTTCHEN Wholesale Abrasive Tools",
-                "description": "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers, and industrial buyers from China manufacturer.",
+                "description": "Shanghai-based B2B sourcing and OEM project support for wholesale abrasive tools, with production source and commercial terms confirmed per SKU in writing.",
                 "url": absoluteUrl("/wholesale-abrasives"),
               },
               buildFaqPageSchema(faqs),

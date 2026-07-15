@@ -48,7 +48,7 @@ export default function ThankYou() {
                 <strong>B2B Quote Generation:</strong> We compile bulk contract options, packaging toolings cost, and lead times.
               </li>
               <li>
-                <strong>Contact:</strong> We typically reply to the email provided within <strong>one business day</strong>.
+                <strong>Contact:</strong> A response will be sent to the email provided after the submitted scope is reviewed; this page does not promise a fixed response time.
               </li>
             </ul>
           </div>

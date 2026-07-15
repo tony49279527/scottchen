@@ -59,8 +59,8 @@ function buildAutoReplyHtml(payload: InquiryPayload) {
       <p>
         ${
           isZh
-            ? "我们已经收到您的询盘资料。团队会根据您提交的产品类别、包装需求和预估采购量进行审核，通常会在一个工作日内回复。"
-            : "We have received your inquiry details. Our team will review your product category, packaging requirements, and expected volume, then typically reply within one business day."
+            ? "我们已经收到您的询盘资料。团队会审核产品类别、证据、包装需求和预估采购量；回复时间以实际评估进度为准。"
+            : "We have received your inquiry details. The submitted product, evidence, packaging and volume scope will be reviewed; response timing depends on that assessment."
         }
       </p>
       <p>

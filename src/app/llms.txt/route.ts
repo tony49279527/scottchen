@@ -1,4 +1,4 @@
-import { absoluteUrl, RETAIL_SITE_URL, SITE_EMAIL, SITE_UPDATED, SITE_URL } from "@/lib/site";
+import { absoluteUrl, SITE_EMAIL, SITE_UPDATED, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -10,7 +10,6 @@ export function GET() {
 Last reviewed: ${SITE_UPDATED}
 Website: ${SITE_URL}
 Sales contact: ${SITE_EMAIL}
-Retail product reference: ${RETAIL_SITE_URL}
 Languages: English (en), Simplified Chinese (zh-CN)
 Full content: ${absoluteUrl("/llms-full.txt")}
 
@@ -28,7 +27,7 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 1. Buffing & Polishing Wheels
    - Cotton stitched buffing wheels, loose flannel wheels and bench-grinder polishing wheels
    - Drill-mounted polishing pads and kits
-   - Polishing compounds and retail-ready buffing kits
+   - Polishing compounds and buffing-kit RFQ concepts; exact BOM and packaging require quotation approval
 
 2. Sanding & Grinding Accessories
    - Sandpaper sheets, sanding discs, mesh sanding screens and sanding belts
@@ -47,12 +46,17 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [Sanding belts landing page](${absoluteUrl("/sanding-belts")})
 - [Cutting wheels landing page](${absoluteUrl("/cutting-wheels")})
 - [Abrasive kits landing page](${absoluteUrl("/abrasive-kits")})
-- [China abrasive production and sourcing page](${absoluteUrl("/china-abrasive-manufacturer")})
+- [China abrasive supply-chain verification page](${absoluteUrl("/china-abrasive-manufacturer")})
 - [Wholesale abrasives page](${absoluteUrl("/wholesale-abrasives")})
 - [OEM / private-label workflow](${absoluteUrl("/oem-private-label")})
 - [Application scenarios](${absoluteUrl("/applications")})
 - [Quality-control workflow](${absoluteUrl("/quality-control")})
 - [Supplier profile and buyer due diligence](${absoluteUrl("/supplier-profile")})
+- [Evidence center and public document status](${absoluteUrl("/evidence-center")})
+- [Product compliance evidence matrix](${absoluteUrl("/product-compliance")})
+- [Procurement terms by SKU](${absoluteUrl("/procurement-terms")})
+- [Packaging and private-label approval workflow](${absoluteUrl("/packaging-private-label")})
+- [Case-study evidence standard](${absoluteUrl("/case-studies")})
 - [B2B abrasive sourcing resource center](${absoluteUrl("/resources")})
 - [Abrasive kit sourcing alternatives](${absoluteUrl("/alternatives/abrasive-kit-sourcing-alternatives")})
 - [OEM vs off-the-shelf abrasive kit comparison](${absoluteUrl("/compare/oem-vs-off-the-shelf-abrasive-kits")})
@@ -79,12 +83,17 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 - [砂带页面](${absoluteUrl("/zh/sanding-belts")})
 - [切割片页面](${absoluteUrl("/zh/cutting-wheels")})
 - [磨具套装页面](${absoluteUrl("/zh/abrasive-kits")})
-- [中国磨料磨具生产与采购说明](${absoluteUrl("/zh/china-abrasive-manufacturer")})
+- [中国磨料磨具供应链核验说明](${absoluteUrl("/zh/china-abrasive-manufacturer")})
 - [百叶片 RFQ 指南](${absoluteUrl("/zh/resources/flap-disc-rfq-guide")})
 - [砂带 RFQ 指南](${absoluteUrl("/zh/resources/sanding-belt-rfq-guide")})
 - [切割片合规与安全证据清单](${absoluteUrl("/zh/resources/cutting-wheel-compliance-checklist")})
 - [批发合作页面](${absoluteUrl("/zh/wholesale-abrasives")})
 - [供应商信息与采购核验](${absoluteUrl("/zh/supplier-profile")})
+- [证据中心与公开文件状态](${absoluteUrl("/zh/evidence-center")})
+- [产品合规证据矩阵](${absoluteUrl("/zh/product-compliance")})
+- [按 SKU 采购条款](${absoluteUrl("/zh/procurement-terms")})
+- [包装与贴牌审批流程](${absoluteUrl("/zh/packaging-private-label")})
+- [案例证据标准](${absoluteUrl("/zh/case-studies")})
 - [B2B 磨料磨具采购资源中心](${absoluteUrl("/zh/resources")})
 - [OEM 磨料磨具供应商评估指南](${absoluteUrl("/zh/resources/oem-abrasive-supplier-evaluation")})
 - [磨料磨具采购检查清单](${absoluteUrl("/zh/resources/abrasive-sourcing-checklist")})

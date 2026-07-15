@@ -8,8 +8,8 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Sanding Belt Supplier & OEM Belt Manufacturer | SCOTTCHEN",
-  description: "Wholesale sanding belts for knife making, woodworking and metal fabrication. Custom sizes in aluminum oxide and zirconia from a China OEM factory.",
+  title: "Sanding Belt Sourcing & OEM Project Support | SCOTTCHEN",
+  description: "Sanding-belt sourcing for knife making, woodworking and metal fabrication. Sizes, materials, joints, source and terms are confirmed per SKU.",
   path: "/sanding-belts",
   alternatePath: "/zh/sanding-belts",
 });
@@ -18,33 +18,33 @@ export default function SandingBeltsPage() {
   const subtypes = [
     {
       name: "Portable Belt Sander Belts (3x21, 4x24)",
-      desc: "Standard-sized sanding belts for popular portable belt sanders used in construction, woodworking, deck refinishing, and metal surface prep. The 3x21 and 4x24 sizes fit most common belt sander models from major power tool brands. These belts are produced in aluminum oxide for general wood and metal work, zirconia alumina for aggressive metal grinding, and ceramic for high-production applications.",
-      features: ["Common sizes: 3\"x21\", 3\"x24\", 4\"x24\"", "Backing: X-weight or Y-weight cotton/polyester cloth", "Joint: precision-butt for smooth, bump-free operation", "Grits P36 through P400 in aluminum oxide and zirconia"],
+      desc: "Portable-sander belt inquiries can start with common 3x21 and 4x24 formats for woodworking, refinishing or metal surface preparation. Machine model, exact dimensions, grain, backing, joint, direction and operating conditions must be confirmed before a source or SKU is approved.",
+      features: ["Common RFQ sizes: 3\"x21\", 3\"x24\", 4\"x24\"", "Backing weight confirmed by application", "Joint and direction approved by sample", "Grain and grit range quoted by SKU"],
     },
     {
       name: "Bench Sander Belts (6x48, 4x36)",
-      desc: "Wider sanding belts designed for stationary bench and pedestal belt sanders used in cabinet shops, metal fabrication shops, knife making shops, and educational institutions. The 6x48 size is the industry standard for bench belt sanders, delivering a wide sanding surface for dimensioning, shaping, and finishing larger workpieces. These belts are available in aluminum oxide, zirconia, silicon carbide, and ceramic grain.",
-      features: ["Common sizes: 6\"x48\", 4\"x36\", 6\"x88\" wide-belt", "Heavy Y-weight or YF-polyester backing for rigidity", "Bi-directional tape joint for reversible operation option", "Available in closed-coat and open-coat constructions"],
+      desc: "Bench-sander belt inquiries can cover formats such as 6x48 and 4x36 for shaping, grinding or finishing. Tool dimensions, tension, direction, workpiece and finish target control the grain, backing, joint and coat construction; availability is confirmed only in the written SKU quotation.",
+      features: ["Common RFQ sizes: 6\"x48\", 4\"x36\", 6\"x88\"", "Backing selected against tool tension", "Joint direction confirmed before sampling", "Open- or closed-coat scope quoted by SKU"],
     },
     {
       name: "Narrow / File Belts (1x30, 1/2x18)",
-      desc: "Narrow-width sanding belts for air file belt sanders, finger sanders, and detail grinding tools used in auto body, welding, fabrication, and hard-to-reach areas. The 1x30 size is also popular with hobbyist and entry-level knife makers using small bench belt grinders. Narrow belts are available in aluminum oxide for general work, zirconia for metal, and non-woven surface conditioning belts for blending and finishing.",
-      features: ["Common sizes: 1/2\"x18\", 3/4\"x20-1/2\", 1\"x30\", 1\"x42\"", "Flexible J-weight or X-weight cloth backing", "Tape or butt joint for smooth running on small contact wheels", "Grits P40 through P1200 for stock removal to fine finish"],
+      desc: "Narrow-belt inquiries can cover air files, finger sanders and detail grinders used in confined areas. The buyer should provide the machine, width, circumference, contact wheel, direction and target operation; grain, backing, joint and grit range are then confirmed by quotation and sample.",
+      features: ["Common RFQ sizes: 1/2\"x18\", 3/4\"x20-1/2\", 1\"x30\", 1\"x42\"", "Backing flexibility confirmed by application", "Joint checked on the target tool", "Grit range quoted by SKU"],
     },
     {
       name: "Wide Sanding Belts",
-      desc: "Wide belts for industrial wide-belt sanding machines used in panel processing, furniture manufacturing, plywood production, and metal coil processing. Wide sanding belts require precise tracking and uniform tension across the belt width, demanding precision joint construction and consistent cloth thickness. We produce wide belts in aluminum oxide, silicon carbide, and ceramic grain on heavy polyester backing for demanding industrial applications.",
-      features: ["Custom widths: 12\" to 54\"+ for wide-belt machines", "Polyester or combination backing for dimensional stability", "Precision tape or overlap joint for vibration-free tracking", "Available in anti-static, open-coat, and closed-coat variants"],
+      desc: "Wide belts for industrial wide-belt sanding machines can be evaluated for panel processing, furniture, plywood or metal applications. Width, circumference, grain, backing, joint, tracking criteria and responsible production source are confirmed for each quoted SKU and approved through representative samples.",
+      features: ["Exact width and circumference supplied by buyer", "Backing selected for the machine and workpiece", "Joint and tracking criteria included in approval", "Coat and anti-static requirements quoted by SKU"],
     },
     {
       name: "Knife Making Belts (2x72)",
-      desc: "Specialized sanding belts in the 2x72 size that has become the industry standard for professional knife making and bladesmithing belt grinders. Knife making belts require a premium combination of aggressive cut rate, long life, and heat resistance when grinding hardened tool steels, high-carbon steels, and stainless steel blade materials. We offer ceramic, zirconia, and structured abrasive belts optimized for knife makers.",
-      features: ["Standard size: 2\"x72\" for knife grinders", "Premium ceramic and zirconia grain for hardened steel", "Heat-resistant resin bond prevents loading on steel", "Grits P36 through P2000 covering all blade-making stages"],
+      desc: "A 2x72 belt program for knife-making should define each process step, workpiece steel, heat-treatment state, machine speed, pressure and finish target. Ceramic, zirconia, aluminum oxide or structured-abrasive options are evaluated only when the responsible source, construction and representative sample are documented.",
+      features: ["Common RFQ size: 2\"x72\"", "Grain selected by process step", "Heat and loading behavior tested on the target steel", "Grit sequence quoted and sampled by SKU"],
     },
     {
       name: "Silicon Carbide Belts (Glass / Stone)",
-      desc: "Sharp, friable silicon carbide grain on waterproof polyester or cloth backing for grinding and finishing glass, stone, granite, marble, concrete, ceramic, and hard non-ferrous metals. Silicon carbide belts cut extremely hard materials effectively while producing a uniform scratch pattern. Wet or dry options are available with waterproof backing for wet grinding applications in stone fabrication, glass edgework, and lapidary.",
-      features: ["Black silicon carbide grain for hard, brittle materials", "Waterproof polyester backing for wet grinding", "Applications: glass, stone, granite, marble, ceramic, carbide", "Grits P60 through P2000 for coarse to fine finishing"],
+      desc: "Silicon-carbide belt configurations can be evaluated for glass, stone, ceramic, coatings and selected non-ferrous materials. Wet use, backing, adhesive system, dimensions, grit range and scratch pattern must be specified by the quoted source and validated on the buyer's equipment and workpiece.",
+      features: ["Silicon-carbide option quoted by SKU", "Wet or dry use stated in writing", "Target material and finish recorded", "Grit range confirmed by source and sample"],
     },
   ];
 
@@ -55,19 +55,19 @@ export default function SandingBeltsPage() {
     },
     {
       q: "Can you produce sanding belts in custom sizes?",
-      a: "Yes. We manufacture sanding belts in custom widths and lengths to match virtually any belt sander, bench grinder, file sander, tube polisher, or wide-belt machine. Custom belt production requires the exact belt dimensions (width x length), cloth backing preference, abrasive grain type, grit, and joint type. We maintain tooling for most common sizes and can produce custom-joint tooling for non-standard dimensions with a one-time setup fee that is absorbed into volume orders.",
+      a: "Custom widths and circumferences can be evaluated after the buyer provides the machine, exact dimensions, grain, grit, backing, joint and application. Production source, tooling feasibility, sample quantity, setup charge and MOQ must be confirmed in the written quotation rather than assumed from this page.",
     },
     {
       q: "What joint types do you use on sanding belts?",
-      a: "We offer two primary joint types: butt joints and tape overlap joints. Precision butt joints create a nearly invisible, smooth seam that runs without a bump over contact wheels and platens, making them ideal for fine finishing, knife making, and applications where the joint seam can cause witness marks on the workpiece. Tape overlap joints are stronger and more flexible, suitable for aggressive stock removal and narrow belts. All joints are precision-sanded to exact belt thickness for smooth tracking.",
+      a: "Butt, overlap or other joint constructions may suit different machines and finishes. The approved specification should identify the joint, direction, thickness or tolerance target and test method. Joint strength, tracking and finish are verified on representative samples and the agreed inspection plan.",
     },
     {
       q: "How long does sanding belt production take?",
-      a: "Standard production lead time for sanding belt wholesale orders is 25 to 35 days after deposit and sample approval for standard sizes in aluminum oxide. Custom sizes, ceramic belts, wide belts, and private label packaged orders may require 30 to 45 days depending on cloth sourcing and joint tooling preparation. Rush production is available for urgent repeat orders from established customers. We maintain inventory of common 3x21, 4x24, and 2x72 belt sizes for fast reorder fulfillment.",
+      a: "Lead time depends on abrasive-cloth availability, dimensions, joint tooling, packaging, sample approval, inspection and quantity. Require dated material, sample, production, inspection and shipment milestones in the written quotation; this page does not promise standard, rush or stocked availability.",
     },
     {
       q: "What backing cloth weights are available?",
-      a: "We produce sanding belts on several backing cloth weights to match application requirements: J-weight (flexible, for contour work and narrow belts), X-weight (general-purpose, most common for portable and bench sanders), Y-weight (heavy-duty for aggressive stock removal and metal grinding), YF-weight (rigid polyester for wide-belt and high-tension applications), and waterproof polyester backing for wet grinding applications. Backing selection depends on belt size, tool type, workpiece material, and grinding pressure.",
+      a: "A quoted sanding-belt source can be evaluated across several backing weights: J-weight for flexible contour work, X-weight for general-purpose portable and bench sanding, Y-weight for heavier stock removal, YF polyester for higher-tension applications, and waterproof polyester where wet use is required. Availability and suitability depend on the exact size, tool, workpiece, pressure and approved sample.",
     },
     {
       q: "Do you offer private label packaging for sanding belts?",
@@ -83,10 +83,10 @@ export default function SandingBeltsPage() {
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Sanding Belts", href: "/sanding-belts" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B Wholesale &amp; OEM</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              Sanding Belt Supplier &amp; Abrasive Belts Manufacturer
+              Sanding Belt Sourcing &amp; OEM Project Support
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              Wholesale abrasive sanding belts for knife making, woodworking, metal fabrication, glass, and stone. Custom sizes available, precision-butt joints, aluminum oxide, zirconia, ceramic, and silicon carbide belts from China OEM factory.
+              Shanghai-based B2B support for sanding-belt inquiries. Size, abrasive cloth, backing, joint, production source, sample plan, MOQ, lead time, payment and Incoterms are confirmed per SKU in writing.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -110,7 +110,7 @@ export default function SandingBeltsPage() {
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">Custom Sizes</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Any Dimension</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Confirmed Per SKU</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">Written Plan</div>
@@ -132,17 +132,17 @@ export default function SandingBeltsPage() {
               <div className="space-y-5">
                 <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Why SCOTTCHEN</span>
                 <h2 className="text-2xl font-extrabold text-white tracking-wide">
-                  Wholesale Sanding Belts From a Dedicated Abrasive Belts Manufacturer
+                  Shanghai B2B Sanding Belt Sourcing and OEM Support
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN is a specialized sanding belt supplier and abrasive belts manufacturer operating from our Shanghai production facility since 2014. We produce coated abrasive sanding belts in a comprehensive range of sizes, abrasive grain types, backing cloth weights, and joint configurations to serve woodworking shops, metal fabricators, knife makers, glass and stone fabricators, industrial wide-belt operations, and abrasive product distributors worldwide. As a wholesale sanding belt supplier, we combine factory-direct pricing with strict quality control over every production step—from abrasive cloth slitting and joint skiving to belt curing, testing, and packaging.
+                    SCOTTCHEN provides Shanghai-based B2B sourcing and OEM project support for sanding-belt inquiries. The written quotation must name the responsible production source and define the size, abrasive cloth, backing, joint, packaging and inspection scope for the exact SKU; the website does not assert an owned factory, operating history or factory-direct price.
                   </p>
                   <p>
-                    Sanding belt quality depends critically on the precision of the joint, the uniformity of the abrasive coating, and the stability of the backing cloth under tension. We use precision-butt joints on all finishing belts, skived and taped to a tolerance of less than 0.05mm thickness variation at the seam, ensuring the joint runs smoothly over contact wheels and platens without producing witness marks on the workpiece. Our heat-resistant resin bond system is formulated to withstand the high temperatures generated in aggressive metal grinding and knife making applications, preventing grain shedding and premature belt failure.
+                    Sanding-belt performance depends on joint construction, abrasive coating, backing stability, workpiece, machine and operating conditions. Joint tolerance, bond, tracking, tension and finish criteria should be defined in the RFQ and verified through representative samples and the agreed quality plan instead of universal website claims.
                   </p>
                   <p>
-                    We understand that different applications demand different belt specifications, and our product range reflects that diversity. From lightweight J-weight cloth file belts for auto body detail work to heavy YF-polyester wide belts for industrial panel sanding; from premium ceramic 2x72 knife making belts to waterproof silicon carbide belts for stone and glass—we can supply the right belt for the application. We also produce custom-sized belts for non-standard machines and specialty applications, working from customer drawings or sample belts to match exact dimensions and performance requirements.
+                    Portable, narrow, knife-making, bench and wide-belt configurations can be compared from buyer drawings or samples. Feasibility, material source, sample charges, MOQ, lead time, payment and Incoterms remain subject to the SKU-level quotation or contract.
                   </p>
                 </div>
               </div>
@@ -174,8 +174,9 @@ export default function SandingBeltsPage() {
 
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Standard Specifications
+                  Common RFQ Reference — Availability Not Implied
                 </h2>
+                <p className="text-xs text-industry-slate-400">These combinations are inquiry examples, not approved SCOTTCHEN SKUs. Source, dimensions, backing, joint, evidence and availability are confirmed in the written quotation.</p>
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
@@ -266,11 +267,11 @@ export default function SandingBeltsPage() {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "Precision Butt Joint", desc: "Every finishing belt is manufactured with a precision-butt joint skived to less than 0.05mm thickness variation, ensuring smooth, bump-free operation over contact wheels and platens." },
-                    { title: "Heat-Resistant Resin Bond", desc: "Fully cured resin-over-resin bond system withstands high temperatures in aggressive metal grinding and knife making without premature grain shedding or belt failure." },
-                    { title: "Custom Size Capability", desc: "We produce belts in any width and length for portable sanders, bench grinders, file belt tools, tube polishers, and industrial wide-belt machines." },
-                    { title: "Full Grain Selection", desc: "Aluminum oxide for general work, zirconia alumina for metal, ceramic for hard steels, silicon carbide for glass/stone, and non-woven for blending and finishing." },
-                    { title: "Tension-Tested Before Shipment", desc: "Each production batch undergoes tension testing to ensure belts run true, track correctly, and withstand rated operating speeds without splice failure." },
+                    { title: "Joint Specification", desc: "Joint type, direction, thickness target and acceptance method are defined for the quoted SKU." },
+                    { title: "Bond and Backing Evidence", desc: "Bond, backing and operating-condition claims require applicable supplier data or sample tests." },
+                    { title: "Custom Size Evaluation", desc: "Width, circumference, tooling feasibility and tolerance are confirmed from the machine, drawing or sample." },
+                    { title: "Material Selection", desc: "Grain and backing options are compared against the workpiece, machine and buyer test plan." },
+                    { title: "Written Inspection Plan", desc: "Tracking, tension, joint and dimensional checks and their sampling level are agreed per order." },
                     { title: "Private Label & Kits", desc: "Branded sleeves, color boxes, multi-grit packs and knife-making belt kits can use buyer-approved artwork and barcode data." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
@@ -293,13 +294,13 @@ export default function SandingBeltsPage() {
                 <h2 className="text-xl font-extrabold text-white">OEM / Private Label Capabilities</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    SCOTTCHEN offers complete OEM and private label sanding belt manufacturing for distributors, abrasive supply companies, tool brands, knife making suppliers, and e-commerce sellers. Our OEM services include custom belt dimensions, abrasive grain selection, backing cloth weight, joint type, and special performance treatments such as anti-static coating, lubricant additives for metal grinding, and open-coat configurations for wood resin.
+                    SCOTTCHEN supports OEM and private-label sanding-belt sourcing for distributors, abrasive suppliers, tool brands and industrial buyers. The RFQ can cover dimensions, grain, backing, joint and special treatment requirements; the quotation identifies what the responsible production source can supply.
                   </p>
                   <p>
-                    Private label packaging includes branded cardboard belt sleeves, color boxes for multi-belt assortment packs, bulk cartons with your logo and product information, and retail display packs for hardware and home-center distribution. We also produce popular kit configurations such as knife making belt sets (assorted grits from P36 to P2000 in one package), woodworking starter kits, and metalworking assortment packs. All packaging can include your brand, belt size, FEPA or CAMI grit markings, safety warnings, and barcode labels.
+                    Private-label packaging may include sleeves, color boxes, cartons or assortment packs. The applicable grit convention, warnings, translations and buyer-supplied barcode data must be checked for the target market and recorded in approved artwork; no FEPA, ANSI or marketplace acceptance is implied.
                   </p>
                   <p>
-                    For large OEM customers, we can develop custom abrasive belt specifications for specialized applications including robotic grinding cells, automatic tube polishing lines, and wide-belt sanding operations. Our technical team works with you to define performance requirements, produce sample belts for in-house testing, and refine specifications before moving to mass production.
+                    For specialized equipment, buyers should provide drawings, operating conditions and performance targets. Feasibility, samples, testing responsibility and any production commitment are confirmed in the project quotation and approved specification.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -392,7 +393,6 @@ export default function SandingBeltsPage() {
                 "url": absoluteUrl("/sanding-belts"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "Sanding belts and abrasive belts",
                 "material": "Aluminum oxide, zirconia, ceramic, silicon carbide",
                 "additionalProperty": [

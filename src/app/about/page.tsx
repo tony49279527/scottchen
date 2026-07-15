@@ -6,23 +6,22 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
   SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
 } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About SCOTTCHEN | Shanghai OEM Abrasive Manufacturer",
+  title: "About SCOTTCHEN | Shanghai Abrasive Sourcing & OEM Support",
   description:
-    "SCOTTCHEN is a Shanghai-based OEM abrasive manufacturer since 2014. Learn our product scope, private-label workflow, export markets and how to start an RFQ.",
+    "Shanghai-based B2B abrasive sourcing and OEM support. Production source, documents, terms and evidence are confirmed by SKU in writing.",
   path: "/about",
   alternatePath: "/zh/about",
 });
 
 const highlights = [
-  { label: "Founded", value: "2014" },
-  { label: "HQ", value: "Shanghai, China" },
+  { label: "Base", value: "Shanghai, China" },
+  { label: "Scope", value: "6 abrasive product families" },
   { label: "Focus", value: "OEM / private-label abrasive kits" },
   { label: "Sales", value: SITE_EMAIL },
 ] as const;
@@ -46,7 +45,7 @@ export default function AboutPage() {
         url: absoluteUrl("/about"),
         name: "About SCOTTCHEN",
         description:
-          "Company overview for SCOTTCHEN, a Shanghai OEM abrasive, sanding and polishing accessory manufacturer.",
+          "Company overview for SCOTTCHEN, a Shanghai-based B2B abrasive sourcing and OEM project support team.",
         inLanguage: "en",
         dateModified: SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
@@ -73,9 +72,9 @@ export default function AboutPage() {
             About SCOTTCHEN
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-industry-slate-300">
-            SCOTTCHEN is a Shanghai-based OEM manufacturer of buffing wheels, sanding
-            discs, flap discs, sanding belts, cutting wheels and private-label surface
-            finishing kits for tool brands, distributors and online sellers.
+            SCOTTCHEN provides Shanghai-based B2B sourcing and OEM project support for
+            buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels and
+            private-label surface-finishing kits.
           </p>
         </div>
       </section>
@@ -100,23 +99,24 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-5">
             <h2 className="text-2xl font-extrabold text-white">Who we are</h2>
             <p className="text-sm leading-relaxed text-industry-slate-300">
-              Since 2014, SCOTTCHEN has supported B2B buyers who need retail-ready abrasive
-              accessories with clear specifications, private-label packaging options and
-              written quotation terms. We focus on coated and cotton finishing accessories
-              that map to grind, sand, finish and polish workflows.
+              SCOTTCHEN supports B2B buyers who need abrasive accessories with clear
+              specifications, private-label packaging options and written quotation terms.
+              The responsible contracting entity, production source and process scope are
+              identified for the quoted SKU rather than inferred from this website.
             </p>
             <p className="text-sm leading-relaxed text-industry-slate-300">
               Buyers typically engage us for OEM kit design, mixed-SKU assortments,
-              barcode/FNSKU preparation, sample evaluation and container replenishment.
-              Commercial commitments such as MOQ, lead time, certificate scope and
-              Incoterms are confirmed in the written quotation for each project.
+              buyer-approved barcode and packaging preparation, sample evaluation and
+              replenishment planning. MOQ, sample charges, lead time, payment terms,
+              Incoterms, certificate scope and test-report availability are confirmed in
+              writing for each project.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/china-abrasive-manufacturer"
                 className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white"
               >
-                View factory profile
+                View sourcing profile
               </Link>
               <Link
                 href="/supplier-profile"
@@ -192,15 +192,10 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="mt-8 text-sm text-industry-slate-400">
-            Retail reference storefront:{" "}
-            <a
-              href={RETAIL_SITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-industry-orange hover:underline"
-            >
-              {RETAIL_SITE_URL.replace(/^https?:\/\//, "")}
-            </a>
+            Buyer evidence center:{" "}
+            <Link href="/evidence-center" className="text-industry-orange hover:underline">
+              Review current evidence status
+            </Link>
             . Brand name on this B2B site: {SITE_NAME}.
           </p>
         </div>

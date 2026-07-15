@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Cotton Buffing Wheels Manufacturer | SCOTTCHEN",
-  description: "Source OEM cotton buffing wheels, spiral-stitched pads, flannel wheels, drill buffers and compound kits with reference MOQ and lead times.",
+  title: "OEM Cotton Buffing Wheel Sourcing | SCOTTCHEN",
+  description: "Source cotton buffing wheels, spiral-stitched pads, flannel wheels, drill buffers and compound kits with SKU-level source and quoted terms.",
   path: "/products/buffing-polishing-wheels",
   alternatePath: "/zh/products/buffing-polishing-wheels",
 });
@@ -17,28 +17,28 @@ export default function BuffingPolishingWheels() {
   const subtypes = [
     {
       name: "Spiral Stitched Cotton Buffing Wheels",
-      desc: "Stitched with high-tensile cotton thread in concentric rings. Increases wheel rigidity for heavy cut polishing, deburring, and surface prep. Ideal for brass, steel, and aluminum rough polishing.",
-      features: ["Ply count: 30 Ply, 40 Ply, 50 Ply, 60 Ply options", "Concentric stitching spacing: 3/8\" or 1/4\" spacing", "Bore sizing options: 1/2\", 5/8\", 3/4\", 1\" center inserts"],
+      desc: "A spiral-stitched construction can be evaluated for rough polishing, deburring or surface preparation. Fiber composition, ply count, thread, stitch spacing, bore, operating limit and performance must be confirmed by quoted SKU and representative test.",
+      features: ["Ply count: confirmed by quoted SKU and sample", "Stitch pattern and spacing: documented in the approved specification", "Bore and insert: matched to the buyer's machine and verified by sample"],
     },
     {
       name: "Loose Flannel Polishing Wheels",
-      desc: "Soft cotton flannel layers stitched only around the center arbor hole. Designed for light cut buffing, coloring, and final mirror polish. Soft material holds fine rouge compounds evenly without burning finishes.",
-      features: ["Material: 100% fine carded cotton flannel", "Stitching: single concentric circle at center", "Use cases: Jewelry finishing, automotive trim coloring, acrylic shine"],
+      desc: "A loose flannel construction can be evaluated for lighter buffing and coloring. Exact fiber composition, wheel construction, compound pairing, operating limit, heat and finish must be approved on the buyer's workpiece.",
+      features: ["Material: fiber composition confirmed by SKU", "Stitching and edge construction: documented by source", "Use case and finish: tested on the buyer's workpiece"],
     },
     {
       name: "Bench Grinder Polishing Wheels (Extra Thick)",
-      desc: "Reinforced 6-inch and 8-inch wheel options for compatible bench grinders. Construction, bore fit, labeled operating limit and acceptance checks must be confirmed in the approved SKU specification.",
-      features: ["Diameter: 6\" (150mm), 8\" (200mm), 10\" (250mm)", "Thickness: 1/2\" to 2.5\" laminated layers", "Bore inserts: Metal flange center plates or telescope plastic sleeves"],
+      desc: "A bench-machine wheel inquiry category. Construction, dimensions, bore fit, guarding, labeled operating limit and acceptance checks must be confirmed in the approved SKU specification.",
+      features: ["Diameter and thickness: matched to the tool and confirmed by SKU", "Layer construction: documented by source and checked on sample", "Bore insert and flange fit: approved against the buyer's machine"],
     },
     {
       name: "Drill Polishing Wheels (Mounted Cylindrical & Dome)",
-      desc: "Shank-mounted accessories in dome, cone, cylinder, and goblet shapes. Ideal for polishing recessed wheels, engine headers, pipe interiors, and contours. Hex shank fits standard impact drivers.",
-      features: ["Shank size: 1/4\" (6.35mm) hex shank or round metal arbor", "Shapes: T-shape pad, cylinder, cone, dome, mushroom", "MOQ: 1,000 units/shape, or bundled in customized hex kits"],
+      desc: "Shank-mounted dome, cone, cylinder or goblet shapes can be scoped for recessed or contoured areas. Shank dimensions, tool compatibility, operating limit, material and performance require SKU-level confirmation and sample approval.",
+      features: ["Shank geometry and dimensions: confirmed against the tool", "Shape and material: selected from the workpiece and access requirement", "MOQ: quoted by approved SKU, material, packaging and quantity"],
     },
     {
       name: "Polishing Compound Bar Kits",
-      desc: "Premium abrasive waxes categorized by grit scale. Green Chromium Oxide (fine mirror shine), White Rouge (chrome/hard metal final gloss), Red Tripoli (brass/copper medium polishing), Black Emery (heavy cut metal cleaning).",
-      features: ["Bar dimensions: 100g, 250g, 500g customized packaging", "Base: Wax/Tallow binding matrix", "Custom labeling: Heat-sealed shrink wrap with barcode sticker"],
+      desc: "Compound-bar inquiries can compare color-coded formulations for different cut and finish targets. Composition, hazards, intended substrate, bar weight, shelf information and performance must come from the responsible source and be approved with the exact wheel and workpiece.",
+      features: ["Bar weight quoted by SKU", "Composition and safety information requested from source", "Wheel, substrate and finish target recorded", "Label and barcode scope approved before printing"],
     },
   ];
 
@@ -61,7 +61,7 @@ export default function BuffingPolishingWheels() {
                 Buffing & Polishing Wheels
               </h1>
               <p className="mt-3 text-base text-industry-slate-400">
-                High-durability cotton buffing pads, bench grinder wheels, shank buffers, and color compound blocks.
+                Sourcing inquiries for stitched or loose wheels, bench-machine and shank-mounted concepts, and compound bars.
               </p>
             </div>
 
@@ -90,9 +90,9 @@ export default function BuffingPolishingWheels() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="md:w-1/3">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
-                <h2 className="text-2xl font-black text-white mt-1">Buffing Wheel Specifications</h2>
+                <h2 className="text-2xl font-black text-white mt-1">Buffing Wheel RFQ Fields</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  Key procurement, sizing, and compatibility details for wholesale polishing wheel orders.
+                  Information that must be tied to an exact source, SKU, sample and written quotation before approval.
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -101,13 +101,13 @@ export default function BuffingPolishingWheels() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Calibrated Ply & Sizes:</strong> Available from 3&quot; to 10&quot; diameters, with ply options ranging from 30 Ply to 80 Ply for varied polishing aggressiveness.</span>
+                    <span className="text-industry-slate-200"><strong>Construction & Size:</strong> Diameter, thickness, ply count, fiber composition and stitch construction require source documents and sample measurements.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Flexible Bore Configuration:</strong> Standard 1/2&quot;, 5/8&quot;, 3/4&quot;, and 1&quot; telescoping arbor hole inserts, plus 1/4&quot; hex/round shanks for drill mounts.</span>
+                    <span className="text-industry-slate-200"><strong>Tool Fit:</strong> Bore, insert, flange or shank geometry must be matched to the buyer's machine, guarding and labeled operating limits.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -115,13 +115,13 @@ export default function BuffingPolishingWheels() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Compound Synergy:</strong> Custom-formulated wax-binded color compound bars (Green Chrome, White Rouge, Red Tripoli, Black Emery) in 100g to 500g sizes.</span>
+                    <span className="text-industry-slate-200"><strong>Compound Pairing:</strong> Composition, hazards, bar weight, wheel pairing and finish target must come from the responsible source and be tested on the workpiece.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Reference Order Terms:</strong> Many inquiries start at 500 standard wheels or 1,000 shank-mounted pieces; MOQ, sample charges and lead time are confirmed by configuration.</span>
+                    <span className="text-industry-slate-200"><strong>Written Order Terms:</strong> Production source, MOQ, sample charges, lead time, payment and Incoterms are confirmed by SKU and configuration in the quotation or contract.</span>
                   </li>
                 </ul>
               </div>
@@ -149,7 +149,7 @@ export default function BuffingPolishingWheels() {
               {[
                 ["Primary products", "Spiral-stitched cotton wheels, loose flannel wheels, bench-grinder wheels, shank-mounted drill buffers and compound bar kits."],
                 ["MOQ basis", "Quoted per wheel construction, size, shank or bore, packaging and order quantity."],
-                ["Quoted lead time", "Common batch-production planning range is 25 to 35 days after sample, artwork and specification approval."],
+                ["Quoted lead time", "Dated material, sample, artwork, production, inspection and shipment milestones are confirmed in writing."],
                 ["Packaging evidence", "Shrink wrap, blister card, color box, barcode label and buyer-approved warning/instruction layouts can be included in the pack specification."],
                 ["Quality checks", "Dimensions, bore fit, construction, labeled operating limit, packaging and sample acceptance criteria are recorded against the approved SKU."],
                 ["Next verification step", "Compare supplier facts on the evaluation guide, then request a sample wheel kit or submit an RFQ with tool, substrate and packaging requirements."],
@@ -218,7 +218,7 @@ export default function BuffingPolishingWheels() {
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg text-center space-y-4">
                 <h3 className="text-lg font-bold text-white uppercase">Looking for custom kit bundling and barcodes?</h3>
                 <p className="text-sm text-industry-slate-400 max-w-lg mx-auto">
-                  We specialize in packaging custom wheel sizes and compound bars into blister packs or color boxes complete with FNSKU labels for online Sellers.
+                  Blister packs or color boxes can be evaluated with buyer-approved artwork, warnings and buyer-supplied FNSKU or UPC data. Scope, sample scanning and marketplace responsibility are confirmed in writing.
                 </p>
                 <div className="pt-2">
                   <Link
@@ -233,55 +233,55 @@ export default function BuffingPolishingWheels() {
               {/* Technical Specifications Table */}
               <div id="spec-table" className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Standard Sizing & Bore Specification Index
+                  SKU Approval Matrix — No Published Standard Sizes
                 </h2>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
-                        <th className="px-4 py-3 font-semibold uppercase">Diameter</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Ply Count</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Arbor Hole Inner Diameter</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Spiral Stitch Spacing</th>
-                        <th className="px-4 py-3 font-semibold uppercase">B2B MOQ</th>
+                        <th className="px-4 py-3 font-semibold uppercase">RFQ Field</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Buyer Input</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Source Evidence</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Sample Check</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Approval Record</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3">3&quot; (75mm)</td>
-                        <td className="px-4 py-3">30 Ply / 40 Ply</td>
-                        <td className="px-4 py-3">1/4&quot; Hex Shank Mounted</td>
-                        <td className="px-4 py-3">3/8&quot; (9.5mm)</td>
-                        <td className="px-4 py-3">1,000 units</td>
+                        <td className="px-4 py-3">Machine fit</td>
+                        <td className="px-4 py-3">Tool, arbor, flange and guard</td>
+                        <td className="px-4 py-3">Drawing and labeled operating limit</td>
+                        <td className="px-4 py-3">Fit, clearance and runout</td>
+                        <td className="px-4 py-3">Signed SKU specification</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">4&quot; (100mm)</td>
-                        <td className="px-4 py-3">30 Ply / 40 Ply</td>
-                        <td className="px-4 py-3">3/8&quot;, 1/2&quot;</td>
-                        <td className="px-4 py-3">3/8&quot; or 1/4&quot;</td>
-                        <td className="px-4 py-3">1,000 units</td>
+                        <td className="px-4 py-3">Wheel construction</td>
+                        <td className="px-4 py-3">Target cut, color and workpiece</td>
+                        <td className="px-4 py-3">Fiber, ply and stitch record</td>
+                        <td className="px-4 py-3">Dimensions and visible construction</td>
+                        <td className="px-4 py-3">Approved sample ID</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3">6&quot; (150mm)</td>
-                        <td className="px-4 py-3">40 Ply / 50 Ply / 60 Ply</td>
-                        <td className="px-4 py-3">1/2&quot;, 5/8&quot;</td>
-                        <td className="px-4 py-3">3/8&quot;, 1/4&quot;, 1/8&quot; (airway)</td>
-                        <td className="px-4 py-3">500 units</td>
+                        <td className="px-4 py-3">Compound</td>
+                        <td className="px-4 py-3">Substrate and finish target</td>
+                        <td className="px-4 py-3">Composition, hazards and shelf data</td>
+                        <td className="px-4 py-3">Representative workpiece test</td>
+                        <td className="px-4 py-3">Test plan and result</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">8&quot; (200mm)</td>
-                        <td className="px-4 py-3">40 Ply / 50 Ply / 60 Ply</td>
-                        <td className="px-4 py-3">5/8&quot;, 3/4&quot;, 1&quot;</td>
-                        <td className="px-4 py-3">3/8&quot; or 1/4&quot;</td>
-                        <td className="px-4 py-3">500 units</td>
+                        <td className="px-4 py-3">Packaging</td>
+                        <td className="px-4 py-3">Channel, warnings and artwork</td>
+                        <td className="px-4 py-3">Source, material and dieline</td>
+                        <td className="px-4 py-3">Pack-out and label review</td>
+                        <td className="px-4 py-3">Approved pack specification</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3">10&quot; (250mm)</td>
-                        <td className="px-4 py-3">50 Ply / 60 Ply / 80 Ply</td>
-                        <td className="px-4 py-3">5/8&quot;, 3/4&quot;, 1&quot;, 1-1/4&quot;</td>
-                        <td className="px-4 py-3">3/8&quot; or 1/4&quot;</td>
-                        <td className="px-4 py-3">300 units</td>
+                        <td className="px-4 py-3">Commercial terms</td>
+                        <td className="px-4 py-3">Quantity, destination and timing</td>
+                        <td className="px-4 py-3">Named source and quotation basis</td>
+                        <td className="px-4 py-3">Sample and milestone approval</td>
+                        <td className="px-4 py-3">Dated quotation or contract</td>
                       </tr>
                     </tbody>
                   </table>
@@ -291,51 +291,51 @@ export default function BuffingPolishingWheels() {
               {/* Material Density & Thread Specifications Table */}
               <div id="density-table" className="space-y-4 pt-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Cotton Fiber Density & Stitching Specifications
+                  Construction Evidence Matrix by Quoted Wheel SKU
                 </h2>
                 <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
-                  Different finishing applications require specialized cotton weave counts and stitching rigidity:
+                  The site does not publish a fiber grade, yarn count or stitch construction as fact without a source document and exact SKU. Request the following evidence before approval:
                 </p>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
-                        <th className="px-4 py-3 font-semibold uppercase">Cotton Quality Grade</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Warp / Weft Count</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Thread ply</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Stitching Pitch Ring Spacing</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Target Application</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Construction</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Material Evidence</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Dimensions &amp; Stitching</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Operating Evidence</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Approval Record</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3 font-bold">Premium Unbleached Cotton</td>
-                        <td className="px-4 py-3">21s / 21s (84 x 72 threads/inch)</td>
-                        <td className="px-4 py-3">32s / 2 ply carded cotton thread</td>
-                        <td className="px-4 py-3">1/4&quot; (6.35 mm) concentric</td>
-                        <td className="px-4 py-3">Heavy brass/stainless rough polishing</td>
+                        <td className="px-4 py-3 font-bold">Spiral-stitched wheel</td>
+                        <td className="px-4 py-3">Fiber declaration and source document</td>
+                        <td className="px-4 py-3">Diameter, ply, bore, thread and pitch by SKU</td>
+                        <td className="px-4 py-3">Label limit, tool fit and sample test</td>
+                        <td className="px-4 py-3">Signed specification and reference sample</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">Fine Yellow Flannel</td>
-                        <td className="px-4 py-3">32s / 32s (100 x 80 threads/inch)</td>
-                        <td className="px-4 py-3">21s / 2 ply soft sewing thread</td>
-                        <td className="px-4 py-3">3/8&quot; (9.53 mm) loose concentric</td>
-                        <td className="px-4 py-3">Automotive clear coat high gloss shine</td>
+                        <td className="px-4 py-3 font-bold">Loose flannel wheel</td>
+                        <td className="px-4 py-3">Fiber declaration and source document</td>
+                        <td className="px-4 py-3">Diameter, ply, bore and center stitching by SKU</td>
+                        <td className="px-4 py-3">Label limit, compound and sample finish</td>
+                        <td className="px-4 py-3">Signed specification and reference sample</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-bold">Reinforced Sisal-Cotton Blend</td>
-                        <td className="px-4 py-3">10s / 10s heavy canvas weave</td>
-                        <td className="px-4 py-3">40s / 3 ply high-strength nylon core</td>
-                        <td className="px-4 py-3">1/8&quot; (3.18 mm) tight interlocking</td>
-                        <td className="px-4 py-3">Iron cast heavy weld material leveling</td>
+                        <td className="px-4 py-3 font-bold">Sisal or blended wheel</td>
+                        <td className="px-4 py-3">Fiber blend, source and safety data</td>
+                        <td className="px-4 py-3">Diameter, layers, bore and stitching by SKU</td>
+                        <td className="px-4 py-3">Label limit, tool fit and sample test</td>
+                        <td className="px-4 py-3">Signed specification and source evidence</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">White Open Flannel</td>
-                        <td className="px-4 py-3">40s / 40s (120 x 100 threads/inch)</td>
-                        <td className="px-4 py-3">16s / 2 ply zero-twist soft cotton</td>
-                        <td className="px-4 py-3">None (Loose-fold layout)</td>
-                        <td className="px-4 py-3">Fine jewelry & precious metal coloring</td>
+                        <td className="px-4 py-3 font-bold">Open-fold finishing wheel</td>
+                        <td className="px-4 py-3">Fiber declaration and source document</td>
+                        <td className="px-4 py-3">Diameter, folds, bore and construction by SKU</td>
+                        <td className="px-4 py-3">Label limit, compound and sample finish</td>
+                        <td className="px-4 py-3">Signed specification and reference sample</td>
                       </tr>
                     </tbody>
                   </table>
@@ -376,7 +376,7 @@ export default function BuffingPolishingWheels() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Material Selection:</span>
-                    <span className="text-white font-bold leading-normal">100% fine cotton flannel, military cotton canvas, yellow treated hard cotton fabric.</span>
+                    <span className="text-white font-bold leading-normal">Proposed cotton/flannel construction and exact fiber composition confirmed in the SKU specification.</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Arbor Centers:</span>
@@ -410,15 +410,15 @@ export default function BuffingPolishingWheels() {
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Retail Product Reference
+                  Buyer Evidence Center
                 </h3>
                 <p className="text-xs leading-relaxed text-industry-slate-300">
-                  Review current SCOTTCHEN retail products to understand existing wheel,
-                  compound, and kit configurations before requesting a custom B2B version.
+                  Review current document status, verification boundaries, and the
+                  materials to request before placing a B2B order.
                 </p>
-                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
-                  View the SCOTTCHEN retail store &rarr;
-                </a>
+                <Link href="/evidence-center" className="text-xs font-bold text-industry-orange hover:underline">
+                  Review buyer evidence &rarr;
+                </Link>
               </div>
 
             </div>
@@ -431,10 +431,10 @@ export default function BuffingPolishingWheels() {
       <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Shop Samples on Amazon</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">External Retail Links</span>
             <h2 className="text-3xl font-extrabold text-white mt-3">Amazon Retail Listing References</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Use the selected Amazon listings below as retail product references. Availability, pricing, seller status, and Prime eligibility are controlled by Amazon and may change.
+              External retail-listing references only. Card titles and descriptions summarize marketplace positioning and do not prove SCOTTCHEN OEM source, current availability, specifications, compliance, brand rights or performance. Amazon controls listing status and pricing.
             </p>
           </div>
 
@@ -457,7 +457,7 @@ export default function BuffingPolishingWheels() {
               {
                 title: "Extra Thick Cotton Buffing Wheels",
                 asin: "B07BGV23GK",
-                desc: "Super thick 100% natural cotton polishing wheel designed for rigid heavy-duty bench grinder cutting.",
+                desc: "Extra-thick polishing-wheel reference; fiber composition, construction and intended use require current listing and SKU verification.",
                 url: "https://www.amazon.com/SCOTTCHEN-Extra-Buffing-Polishing-grinder/dp/B07BGV23GK/ref=sr_1_4?m=A3OOZSPFZX1YUE&marketplaceID=ATVPDKIKX0DER&nsdOptOutParam=true",
                 img: "/images/buffing_wheels.webp"
               },
@@ -548,15 +548,15 @@ export default function BuffingPolishingWheels() {
               },
               {
                 q: "How do I match Scottchen buffing wheels with the correct compound bar color?",
-                a: "For heavy metal cutting and oxidation removal, use our Black Emery compound with spiral-stitched wheels. For medium cutting on brass or copper, use Red Tripoli compound. White Rouge is designed for high-gloss coloring on steel, chrome, and hard metals, while Green Chromium Oxide is used for final mirror finishes on stainless steel and aluminum, typically paired with soft loose flannel wheels."
+                a: "Color names do not prove formulation or suitability. Ask the quoted source for composition, hazards and intended substrate, then compare each compound with the exact wheel, workpiece, pressure and speed. Approve the combination from a representative test rather than this page."
               },
               {
                 q: "Do you supply telescoping arbor hole inserts and custom shanks?",
-                a: "We can provide telescoping inserts and 1/4\" hex or round shank options. Buyers must confirm spindle or chuck dimensions, tool type, the product's labeled maximum speed, and the tool manufacturer's limits in the approved specification before use."
+                a: "Bore inserts and hex or round shanks can be requested. Availability, material, dimensions, tool fit and labeled operating limit must be confirmed by quoted SKU and approved sample before use."
               },
               {
                 q: "What are the standard packaging options for retail-ready distribution?",
-                a: "Available formats include shrink wrap, blister cards, and printed color boxes. Buyer-approved logos, warnings, instructions, and FNSKU or UPC data can be applied and sample-scanned; final acceptance depends on the retailer or marketplace's current rules."
+                a: "Shrink wrap, blister cards or color boxes can be evaluated for quotation. Source, dieline, artwork, rights, warnings, buyer barcode data, sample and scan record must be approved per project; this page does not promise a format or marketplace acceptance."
               },
               {
                 q: "What is the typical minimum order quantity (MOQ) and production lead time?",
@@ -584,86 +584,13 @@ export default function BuffingPolishingWheels() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/products/buffing-polishing-wheels#productgroup"),
-                "name": "SCOTTCHEN Buffing & Polishing Wheels Catalog",
-                "description": "Industrial-grade cotton buffing wheels, spiral stitched polishing pads, loose flannel wheels, and compound bars. Tailored for metal restoration, automotive deburring, and catalog distribution.",
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/products/buffing-polishing-wheels#catalog"),
+                "name": "Buffing and Polishing Wheel RFQ Catalog",
+                "description": "Sourcing reference for wheel and compound configurations. Exact material, dimensions, operating limits, availability and commercial terms require a dated SKU quotation and approved evidence.",
                 "url": absoluteUrl("/products/buffing-polishing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
-                "brand": {
-                  "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@id": absoluteUrl("/#organization")
-                },
-                "category": "Cotton buffing wheels and polishing accessory kits",
-                "material": "Cotton flannel, cotton canvas, sisal-cotton blend, polishing compound wax",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "MOQ basis",
-                    "value": "500 pieces per common bench-grinder wheel size; 1,000 pieces per shank-mounted shape"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Quoted lead time",
-                    "value": "25 to 35 days after sample, artwork and specification approval"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Packaging options",
-                    "value": "Shrink wrap, blister card, color box, barcode label and custom warning or instruction layout"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Common applications",
-                    "value": "Stainless steel, aluminum, brass, carbon steel, acrylic, chrome trim and wood finishes"
-                  }
-                ],
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "name": "Spiral Stitched Cotton Buffing Wheel",
-                    "description": "Concentric stitched, high-tensile cotton wheel for aggressive cutting and heavy metal prep.",
-                    "sku": "SC-SPIRAL-COTTON",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "Cotton canvas or reinforced cotton blend",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "Ply count", "value": "30 Ply, 40 Ply, 50 Ply or 60 Ply options" },
-                      { "@type": "PropertyValue", "name": "Bore sizing", "value": "1/2 inch, 5/8 inch, 3/4 inch or 1 inch center inserts" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "Loose Cotton Flannel Coloring Wheel",
-                    "description": "Fine-weave loose flannel wheel for final coloring, coloring trim, and mirror finishes.",
-                    "sku": "SC-LOOSE-FLANNEL",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "Fine carded cotton flannel",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "Stitching", "value": "Single concentric circle at center" },
-                      { "@type": "PropertyValue", "name": "Use cases", "value": "Jewelry finishing, automotive trim coloring and acrylic shine" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "Shank Mounted Drill Buffing Wheels",
-                    "description": "1/4-inch hex shank mounted mushroom, dome, cylindrical and goblet shapes for recessed polishing.",
-                    "sku": "SC-SHANK-BUFFER",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "Shank size", "value": "1/4 inch hex shank or round metal arbor" },
-                      { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted per shape, shank, material, packaging and order quantity" }
-                    ]
-                  }
-                ]
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               }
             ]
           })

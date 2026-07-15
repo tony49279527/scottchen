@@ -15,8 +15,8 @@ export const metadata: Metadata = createPageMetadata({
 export default function ChineseQualityControl() {
   const qcPoints = [
     {
-      title: "1. 原材料进厂校验",
-      desc: "对于抛光棉布轮，可按确认规格核对棉纱材质、织物结构与来料标识。对于砂纸类磨料，可抽检 C-weight、J-weight 或乳胶纸基等背基参数，并记录批次结果。",
+      title: "1. 原材料证据与抽样计划",
+      desc: "质检计划可要求报价来源按确认规格核对纤维、织物或背基身份，并写明文件来源、抽样方法、责任方和留存记录；本页不代表已有真实来料或批次结果。",
     },
     {
       title: "2. 棉布轮叠合层数与密度抽检",
@@ -27,7 +27,7 @@ export default function ChineseQualityControl() {
       desc: "同心圆螺旋缝线用于锁紧棉层。缝线结构、线材状态以及双方约定的拉力要求，可按确认的检验方法和封样进行检查。",
     },
     {
-      title: "4. 中心孔径与铁盘公差精准控制",
+      title: "4. 中心孔径与装配公差检查",
       desc: "松动或偏心的中心孔会导致布轮在台式砂轮机上产生跳动。中心孔、外径、厚度和装配要求应依据双方确认的图纸与封样进行检验。",
     },
     {
@@ -43,8 +43,8 @@ export default function ChineseQualityControl() {
       desc: "砂碟和自粘砂碟的背基柔韧性与磨料附着力，可按约定进行弯折、剥离或应用测试；具体允收条件写入对应 SKU 质检计划。",
     },
     {
-      title: "8. 电商标签及外箱条码扫码审计",
-      desc: "对于向亚马逊 FBA 仓库供货的跨境电商卖家，条码可读性非常重要。我们可在出货封箱前对彩盒上的 FNSKU、UPC 等条码进行扫描检查；最终入仓结果仍以平台当期规则为准。",
+      title: "8. 电商标签及外箱条码扫码计划",
+      desc: "如项目使用买家提供的 FNSKU、UPC 等数据，质检计划应写明扫码责任方、设备、样本、阶段、判定和留存记录。网站目前未公开生产扫码记录，最终入仓仍以平台当期规则为准。",
     },
   ];
 
@@ -119,7 +119,7 @@ export default function ChineseQualityControl() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>标签与第三方验货:</strong> 买家条码数据可进行样品扫码；第三方验货的地点、时间、范围、准入和费用在报价阶段确认。</span>
+                    <span className="text-industry-slate-200"><strong>标签与第三方验货:</strong> 报价可约定买家数据的责任方与样品扫码方法；第三方验货的地点、时间、证据、准入和费用也须书面确认。</span>
                   </li>
                 </ul>
               </div>
@@ -191,13 +191,13 @@ export default function ChineseQualityControl() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/quality_inspection.webp"
-                  alt="磨料磨具质检规划示意图"
+                  src="/images/qc-evidence-planning-concept-v2.jpg"
+                  alt="AI 生成的磨料磨具质量证据规划概念图"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
                 <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
-                  流程示意图，不代表特定工厂或实验室实景
+                  AI 生成的规划概念图，不代表特定工厂、实验室或检测结果
                 </span>
               </div>
 
@@ -242,9 +242,9 @@ export default function ChineseQualityControl() {
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4 text-center">
-                <h4 className="text-sm font-bold text-white uppercase">亲自检验我们的工艺质量</h4>
+                <h4 className="text-sm font-bold text-white uppercase">定义项目验货范围</h4>
                 <p className="text-xs text-industry-slate-400">
-                  申领一盒标准大货规格的物理样品包，在您本国的试验车间中对缝线强度和磨料目数进行实地检测。
+                  在询价中定义来源、SKU、样品内容与测试方法，再在您的车间对批准样品进行适配和质量评估；网站不承诺标准现货样品包。
                 </p>
                 <Link
                   href="/zh/sample-kit"

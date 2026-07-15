@@ -8,8 +8,8 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Buffing Wheel Manufacturer & Wholesale Supplier | SCOTTCHEN",
-  description: "Shanghai OEM buffing wheel supplier since 2014. Compare cotton buffing and polishing wheel specifications, samples, packaging and quoted order quantities.",
+  title: "Buffing Wheel OEM Sourcing & Wholesale | SCOTTCHEN",
+  description: "Compare cotton buffing and polishing wheel specifications, samples, packaging and quotation controls. Production source and evidence are confirmed by SKU.",
   path: "/buffing-wheels",
   alternatePath: "/zh/buffing-wheels",
 });
@@ -18,38 +18,38 @@ export default function BuffingWheelsPage() {
   const subtypes = [
     {
       name: "Spiral Stitched Cotton Buffs",
-      desc: "Concentrically stitched with high-tensile cotton thread for rigid, aggressive cutting action. Spiral-stitched cotton buffs are the workhorse of industrial polishing lines, ideal for deburring, scratch removal, and preparing surfaces before color buffing. The stitching prevents the cotton layers from splaying under pressure, giving a consistent firm face across long production runs.",
-      features: ["Ply count: 30/40/50/60/80 Ply options", "Stitch spacing: 1/8\", 1/4\", 3/8\" concentric rings", "Diameters: 3\" to 12\" for bench grinders and buffers", "Premium unbleached cotton canvas or muslin cloth"],
+      desc: "Spiral or concentric stitching is commonly used to hold cotton layers together for cutting and intermediate polishing steps. Buyers can compare cloth grade, ply count, stitch pattern, density, bore, rated speed and the target substrate through a proposed-source sample test.",
+      features: ["Common RFQ field: ply count and finished thickness", "Common RFQ field: stitch pattern and spacing", "Common RFQ field: diameter, bore and machine interface", "Cloth grade and thread specification: confirm by SKU"],
     },
     {
       name: "Loose Section Cotton Buffs",
-      desc: "Soft cotton layers stitched only at the center arbor hole so the cloth flares out under rotation, producing a gentle coloring and mirror polish action. Loose section buffs are used after spiral-stitched cutting to achieve a final high-gloss finish on stainless steel, chrome, brass, and precious metals without burning or marring the surface.",
-      features: ["100% fine carded cotton flannel or white muslin", "Single center-ring stitching for maximum softness", "Works with White Rouge and Green Chrome compounds", "Ideal for automotive chrome, jewelry, and acrylic finishing"],
+      desc: "Loose-section wheels use limited center stitching so the cloth face can flex during a coloring or final-polish step. Surface result, heat behavior and compound pairing depend on the quoted construction, machine settings and workpiece, so approval should be based on a controlled sample test.",
+      features: ["Common materials: muslin, flannel or other specified cloth", "RFQ field: center stitching and finished density", "Compound pairing: validate on the target substrate", "Bore, rated speed and acceptance criteria: confirm by SKU"],
     },
     {
       name: "Airway / Ventilated Buffs",
-      desc: "Constructed with internal pleats that create air channels between cotton sections, dissipating heat and allowing faster polishing speeds without compound burn-through. Airway buffs are the preferred choice for high-production automatic polishing machines in cookware, faucet, and tubular-furniture factories where continuous operation raises surface temperatures.",
-      features: ["Pleated airway design reduces heat buildup by 30-40%", "Suitable for high-RPM automatic polishing equipment", "Available in 8\" to 14\" diameters with steel centers", "Longer service life than solid cotton wheels"],
+      desc: "Airway and ventilated constructions use pleated sections intended to move air through the wheel. They may be evaluated for continuous polishing lines where heat management matters, but cooling, life and output must be verified for the proposed source, wheel size, hub and operating conditions.",
+      features: ["RFQ field: pleat count and section construction", "RFQ field: diameter, hub, bore and machine interface", "Rated speed: source document and SKU approval required", "Heat and service-life comparison: validate by sample test"],
     },
     {
       name: "Sisal-Cotton Treated Buffs",
-      desc: "Abrasive sisal fiber blended with cotton cloth and treated with a bonding agent for aggressive cutting on stainless steel, carbon steel, and cast iron. Sisal-cotton treated buffs remove deep scratches, weld discoloration, and scale quickly. They are used as the first step in a multi-stage buffing line before cotton cutting and color steps.",
-      features: ["Sisal-cotton blend with resin treatment for rigidity", "Hard density cuts faster than plain cotton", "Recommended with Black Emery or stainless-cutting compounds", "Available in spiral-stitched and bias-weave constructions"],
+      desc: "Sisal, sisal-cotton and treated constructions are commonly considered for an initial cutting step before finer cotton-wheel stages. Fiber composition, treatment chemistry, density, compound compatibility and achievable finish vary by source and must be documented and sample-tested for the application.",
+      features: ["Fiber composition and treatment: confirm by SKU", "Construction and density: state in the approved sample", "Compound pairing: test on the buyer's workpiece", "Performance and wear criteria: agree before order release"],
     },
     {
       name: "Bench Grinder Polishing Wheel Kits",
-      desc: "Pre-assembled buffing wheel sets sized for 6-inch and 8-inch bench grinders, typically combining a sisal wheel, spiral-stitched cotton wheel, and loose flannel wheel with matched compound bars. Retail packaging, barcode placement and multilingual instructions are scoped against buyer-supplied channel requirements.",
-      features: ["6\" and 8\" diameters with 1/2\" and 5/8\" arbor holes", "3-step polishing sequence: sisal cut → cotton cut → color", "Shrink-wrapped or blister-card retail packaging available", "Buyer-supplied UPC/FNSKU data and carton marks can be specified"],
+      desc: "A proposed kit can combine wheels, compounds and adapters for a defined bench-grinder interface. Machine compatibility, rated speed, sequence and safety information must be checked against the buyer's equipment, while packaging and barcode placement follow buyer-supplied channel requirements.",
+      features: ["Wheel diameter, bore and adapter: confirm against the machine", "Sequence and compound pairing: approve by sample test", "Packaging format: quoted by SKU and order quantity", "Buyer-supplied UPC/FNSKU data and carton marks: approve in artwork"],
     },
     {
       name: "Drill-Mounted Buffing Sets",
-      desc: "Shank-mounted buffing wheels in cylinder, dome, cone, mushroom, and T-pad shapes with 1/4\" hex shanks that fit standard drills and impact drivers. Drill-mounted buffs are designed for reaching recessed areas such as wheel rims, exhaust pipes, engine bays, and contoured metalwork where bench grinders cannot reach.",
-      features: ["1/4\" (6.35mm) hex shank for cordless drills", "Shapes: cylinder, cone, dome, mushroom, goblet, T-shape", "Sold in multi-piece kits with compound bars", "Order quantity quoted per shape and packaging combination"],
+      desc: "Shank-mounted formats are commonly used to reach recesses and contours that a bench-mounted wheel cannot access. A sourcing quote should identify shape, cloth or felt construction, shank geometry, tool compatibility, rated speed and the proposed production source for every component.",
+      features: ["Common RFQ field: shank type and dimensions", "Common shapes: cylinder, cone, dome, mushroom and T-shape", "Kit composition and compound pairing: quoted by SKU", "Tool compatibility and rated speed: buyer approval required"],
     },
     {
       name: "Polishing Compound Bars",
-      desc: "Wax-bound abrasive compounds formulated in matched grits to pair with each buffing wheel type. Black Emery for heavy cut on steel and iron, Red Tripoli for medium cut on brass and copper, White Rouge for high-gloss on chrome and stainless, and Green Chromium Oxide for mirror finishing on stainless and aluminum. Compound bars are available in 100g, 250g, 500g, and 1kg sizes.",
-      features: ["Four standard colors: Black, Red, White, Green", "Custom grit formulations for automatic polishing lines", "Heat-sealed shrink wrap with barcode sticker option", "Private label color boxes and blister packs available"],
+      desc: "Compound color alone does not define abrasive chemistry or suitability. An RFQ should state abrasive type, particle range, binder, bar weight, target substrate, safety-document requirements and packaging, followed by a sample comparison with the selected wheel construction.",
+      features: ["Formula, grit and binder: confirm by SKU", "Bar dimensions and net weight: state in quotation", "Safety and composition documents: identify by source and market", "Wrapper, label and retail pack-out: approve as artwork"],
     },
   ];
 
@@ -63,20 +63,20 @@ export default function BuffingWheelsPage() {
       a: "Lead time is quoted after the wheel construction, quantity, sample status, artwork and packaging process are confirmed. The written quotation should separate sample approval, artwork approval, production and shipment milestones rather than relying on a generic website estimate.",
     },
     {
-      q: "Do you provide compound bars matched to your buffing wheels?",
-      a: "Yes. We manufacture polishing compound bars in all four standard grades—Black Emery, Red Tripoli, White Rouge, and Green Chromium Oxide—to pair with our buffing wheels in the correct sequence. We can also supply custom-formulated compounds for automatic polishing machines used in cookware, faucet, and hardware manufacturing. Compounds are sold separately or bundled into kits with buffing wheels for retail distribution.",
+      q: "Can a buffing-wheel sourcing quote include matched compound bars?",
+      a: "A quoted sourcing scope can include compound bars alongside buffing wheels. The proposed production source, formula, grit, binder, bar weight, safety documents, packaging and wheel pairing must be confirmed by SKU and approved through sample testing; color names alone are not a performance specification.",
     },
     {
-      q: "What arbor hole sizes are available for your polishing wheels?",
-      a: "Standard arbor hole sizes include 1/4\", 3/8\", 1/2\", 5/8\", 3/4\", 1\", and 1-1/4\" to fit most bench grinders, pedestal buffers, and automatic polishing machines. We supply telescoping cardboard or plastic center inserts that adapt a single wheel to multiple spindle diameters, as well as metal reinforcing washers for heavy-duty applications. Custom bore sizes and keyway configurations for industrial machinery are available on request.",
+      q: "How should buyers specify an arbor hole for a polishing wheel?",
+      a: "Common RFQs reference dimensions such as 1/4\", 3/8\", 1/2\", 5/8\", 3/4\", 1\" or 1-1/4\", but none should be assumed compatible from the website alone. State the machine spindle, bore tolerance, insert or washer construction, wheel diameter and rated speed; the proposed source and approved sample must confirm the final SKU.",
     },
     {
-      q: "Are your buffing wheels balanced for smooth high-speed operation?",
+      q: "How should balance and rated speed be verified for a buffing wheel?",
       a: "Balance, bore tolerance, rated RPM and the inspection method should be written into the approved SKU specification. For large-diameter airway and ventilated buffs, buyers should also confirm hub construction, concentricity criteria and the sample test setup before production.",
     },
     {
-      q: "Can you produce buffing wheels with our private label and custom packaging?",
-      a: "Private-label scope can include custom ply configurations, compound wrappers, color boxes, blister cards, polybags and buyer-supplied UPC or FNSKU data. Marketplace or retailer acceptance is not implied: current channel rules, warnings, barcode placement and carton marks must be supplied by the buyer and confirmed in the approved packaging specification.",
+      q: "Can a sourcing project include private-label buffing wheels and packaging?",
+      a: "A proposed scope can include wheel specifications, compound wrappers, color boxes, blister cards, polybags and buyer-supplied UPC or FNSKU data. Feasibility, MOQ, sample fees, production source and terms are confirmed in the SKU quotation. Marketplace or retailer acceptance is not implied: current channel rules, warnings, barcode placement and carton marks must be supplied by the buyer and approved in the packaging specification.",
     },
   ];
 
@@ -88,10 +88,10 @@ export default function BuffingWheelsPage() {
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Buffing Wheels", href: "/buffing-wheels" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B Wholesale &amp; OEM</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              Buffing Wheel Manufacturer &amp; Polishing Wheel Supplier
+              Buffing Wheel OEM Sourcing &amp; Wholesale
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              Shanghai-based OEM supplier of cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, and matched polishing compound bars. Specifications, inspection scope and supporting documents are confirmed per quoted configuration.
+              Shanghai-based B2B sourcing and OEM project support for cotton buffing wheels, spiral-stitched wheels, airway buffs and polishing compounds. The proposed production source, specification, inspection scope, evidence, MOQ and terms are confirmed for each quoted SKU.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -124,8 +124,8 @@ export default function BuffingWheelsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead Time</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">FOB Shanghai</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Global Shipping</div>
+                <div className="text-2xl font-black text-industry-orange">Named Terms</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Incoterm + Place in Quote</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">Documented</div>
@@ -143,11 +143,11 @@ export default function BuffingWheelsPage() {
               <div className="space-y-5">
                 <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Why SCOTTCHEN</span>
                 <h2 className="text-2xl font-extrabold text-white tracking-wide">
-                  Precision Cotton Buffing Wheels &amp; Polishing Wheels From a Trusted Buffing Wheel Manufacturer
+                  Compare Buffing Wheel Constructions Through a Documented Sourcing Process
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    Since 2014, SCOTTCHEN has supported buffing wheel and polishing accessory sourcing from Shanghai, China. The quoted scope can cover cotton wheel construction, matched compounds, adapters and retail packaging for distributors, tool brands and industrial polishing buyers. The responsible source and inspection scope for each component should be identified in the quotation.
+                    SCOTTCHEN supports buffing wheel and polishing accessory sourcing projects from Shanghai, China. The quoted scope can cover cotton wheel construction, matched compounds, adapters and retail packaging for distributors, tool brands and industrial polishing buyers. The responsible production source and inspection scope for each component must be identified in the quotation.
                   </p>
                   <p>
                     Industrial buyers require more than a wheel name: density, arbor fit, rated speed, construction and compound pairing must be explicit. The approved sample and quality plan should define balance, ply count, bore tolerance and any application-specific acceptance checks before an order is released.
@@ -168,7 +168,7 @@ export default function BuffingWheelsPage() {
                       <h3 className="text-lg font-bold text-industry-orange">{sub.name}</h3>
                       <p className="text-sm text-industry-slate-300 leading-relaxed">{sub.desc}</p>
                       <div className="border-t border-industry-slate-800/80 pt-4">
-                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">Key Specifications:</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">Common RFQ Fields — Confirm by SKU:</span>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-industry-slate-400 font-mono">
                           {sub.features.map((feat) => (
                             <li key={feat} className="flex items-center space-x-2">
@@ -185,7 +185,7 @@ export default function BuffingWheelsPage() {
 
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Standard Specifications Table
+                  RFQ Specification Examples
                 </h2>
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
@@ -194,7 +194,7 @@ export default function BuffingWheelsPage() {
                         <th className="px-4 py-3 font-semibold uppercase">Diameter</th>
                         <th className="px-4 py-3 font-semibold uppercase">Ply Count</th>
                         <th className="px-4 py-3 font-semibold uppercase">Arbor Hole</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Max RPM</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Rated Speed</th>
                         <th className="px-4 py-3 font-semibold uppercase">Material</th>
                       </tr>
                     </thead>
@@ -203,47 +203,50 @@ export default function BuffingWheelsPage() {
                         <td className="px-4 py-3">3\" (75mm)</td>
                         <td className="px-4 py-3">30 / 40 Ply</td>
                         <td className="px-4 py-3">1/4\" Hex Shank</td>
-                        <td className="px-4 py-3">6,000 RPM</td>
+                        <td className="px-4 py-3">Confirm by SKU</td>
                         <td className="px-4 py-3">Cotton / Shank-mounted</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3">4\" (100mm)</td>
                         <td className="px-4 py-3">30 / 40 Ply</td>
                         <td className="px-4 py-3">3/8\", 1/2\"</td>
-                        <td className="px-4 py-3">6,000 RPM</td>
+                        <td className="px-4 py-3">Confirm by SKU</td>
                         <td className="px-4 py-3">Cotton Muslin</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3">6\" (150mm)</td>
                         <td className="px-4 py-3">40 / 50 / 60 Ply</td>
                         <td className="px-4 py-3">1/2\", 5/8\"</td>
-                        <td className="px-4 py-3">4,500 RPM</td>
+                        <td className="px-4 py-3">Confirm by SKU</td>
                         <td className="px-4 py-3">Cotton / Sisal-Cotton</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3">8\" (200mm)</td>
                         <td className="px-4 py-3">40 / 50 / 60 Ply</td>
                         <td className="px-4 py-3">5/8\", 3/4\", 1\"</td>
-                        <td className="px-4 py-3">3,600 RPM</td>
+                        <td className="px-4 py-3">Confirm by SKU</td>
                         <td className="px-4 py-3">Cotton / Airway</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3">10\" (250mm)</td>
                         <td className="px-4 py-3">50 / 60 / 80 Ply</td>
                         <td className="px-4 py-3">5/8\", 3/4\", 1\"</td>
-                        <td className="px-4 py-3">3,000 RPM</td>
+                        <td className="px-4 py-3">Confirm by SKU</td>
                         <td className="px-4 py-3">Cotton / Sisal / Airway</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3">12\" (300mm)</td>
                         <td className="px-4 py-3">60 / 80 Ply</td>
                         <td className="px-4 py-3">1\", 1-1/4\"</td>
-                        <td className="px-4 py-3">2,400 RPM</td>
+                        <td className="px-4 py-3">Confirm by SKU</td>
                         <td className="px-4 py-3">Airway / Steel-center</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <p className="text-xs text-industry-slate-500 leading-relaxed">
+                  Dimensions, ply counts, bores and materials above are common RFQ examples, not a stock or performance commitment. The quoted production source must confirm the final construction, rated speed, marking, test method and supporting evidence for each SKU before buyer approval.
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -273,16 +276,16 @@ export default function BuffingWheelsPage() {
 
               <div className="space-y-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Why Choose Our Buffing Wheels
+                  How to Evaluate a Buffing Wheel Quote
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     { title: "Balance & Bore Criteria", desc: "Put the balance method, bore tolerance, rated speed and acceptance sample into the written SKU specification." },
                     { title: "Documented Quality Plan", desc: "Confirm incoming, in-process and final inspection scope, sampling level and records for the quoted configuration." },
-                    { title: "Matched Compound System", desc: "We manufacture the full range of compound bars—Black Emery, Red Tripoli, White Rouge, Green Chrome—so you can source complete polishing systems from one supplier." },
-                    { title: "Flexible OEM & Private Label", desc: "Custom ply configurations, branded packaging, blister cards, color boxes and buyer-supplied barcode data can be scoped." },
+                    { title: "Wheel and Compound Pairing", desc: "A quoted scope can pair proposed wheels and compounds, with the source, formula, sequence and sample result documented by SKU." },
+                    { title: "OEM & Private-Label Scope", desc: "Proposed ply configurations, branded packaging, blister cards, color boxes and buyer-supplied barcode data can be evaluated and quoted." },
                     { title: "Channel-Specific Packaging", desc: "Document polybag, warning, barcode and carton requirements against the buyer's current retailer or marketplace rules." },
-                    { title: "Engineering Support", desc: "Our technical team can develop custom wheel constructions, compound formulations, and multi-step polishing sequences for automatic polishing lines and specialized substrates." },
+                    { title: "Application Review", desc: "Any technical support, custom construction or multi-step sequence is defined in the written project scope and validated on buyer-approved samples." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -301,16 +304,16 @@ export default function BuffingWheelsPage() {
 
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg space-y-5">
                 <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">OEM &amp; Private Label</span>
-                <h2 className="text-xl font-extrabold text-white">OEM / Private Label Capabilities</h2>
+                <h2 className="text-xl font-extrabold text-white">OEM / Private-Label Sourcing Scope</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    SCOTTCHEN provides comprehensive OEM and private label manufacturing for cotton buffing wheels and polishing wheel products. We work with distributors, importers, tool brands, and e-commerce sellers to develop custom wheel lines under your brand name. Our OEM services include custom cloth selection (unbleached muslin, yellow treated cotton, white flannel, sisal-cotton blend), custom ply counts and stitch patterns, arbor hole modifications, and private label compounds in matched colors.
+                    SCOTTCHEN supports OEM and private-label sourcing projects for distributors, importers, tool brands and e-commerce sellers. A proposed scope may compare cloth types, ply counts, stitch patterns, bores and compounds, but the responsible production source, material specification, sample fee, MOQ, evidence and commercial terms are confirmed in the SKU quotation.
                   </p>
                   <p>
                     Private-label packaging options can include industrial cartons, color boxes, hang-tag blister cards, heat-shrink polybags and clamshells. Logo files, specifications, translations, warnings and barcode data remain buyer-controlled inputs; the approved artwork and current channel rules determine the final pack-out.
                   </p>
                   <p>
-                    The OEM process begins with your product specifications and target application, after which we provide technical consultation, produce pre-production samples for approval, and move to mass production only after written sample approval. We also support kitting—combining buffing wheels, compound bars, arbor adapters, and drill accessories into multi-piece sets with custom inserts and retail displays. Contact our sales team to discuss your private label buffing wheel project.
+                    A project can follow this documented sequence: buyer specification and target market, proposed-source quotation, sample and evidence review, artwork approval, order confirmation, production and inspection, then shipment. Any consultation, sampling, kitting or retail-display work is included only when stated in the written quotation and approved project scope.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -363,7 +366,7 @@ export default function BuffingWheelsPage() {
                 <div className="space-y-4 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">MOQ:</span>
-                    <span className="text-white font-bold">500 pcs per size (standard) / 1,000 sets (kits)</span>
+                    <span className="text-white font-bold">Quoted by SKU, packaging and quantity</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Lead Time:</span>
@@ -371,15 +374,15 @@ export default function BuffingWheelsPage() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Shipping Terms:</span>
-                    <span className="text-white font-bold">FOB Shanghai / EXW / CIF by arrangement</span>
+                    <span className="text-white font-bold">Incoterms rule and named place stated in quotation</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Payment Terms:</span>
-                    <span className="text-white font-bold">T/T 30% deposit, 70% before shipment</span>
+                    <span className="text-white font-bold">Method and milestones stated in quotation or contract</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Materials:</span>
-                    <span className="text-white font-bold leading-normal">Cotton muslin, cotton flannel, sisal-cotton blend, steel centers, wax-bound abrasive compounds</span>
+                    <span className="text-white font-bold leading-normal">Proposed material and component source confirmed by SKU</span>
                   </div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
@@ -402,7 +405,7 @@ export default function BuffingWheelsPage() {
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>
                   <li><Link href="/sanding-belts" className="text-industry-orange hover:underline">Sanding Belts</Link></li>
                   <li><Link href="/wholesale-abrasives" className="text-industry-orange hover:underline">Wholesale Abrasives Program</Link></li>
-                  <li><Link href="/china-abrasive-manufacturer" className="text-industry-orange hover:underline">China Factory Profile</Link></li>
+                  <li><Link href="/china-abrasive-manufacturer" className="text-industry-orange hover:underline">China Sourcing Profile</Link></li>
                 </ul>
               </div>
             </div>
@@ -420,18 +423,16 @@ export default function BuffingWheelsPage() {
                 "@type": "ProductGroup",
                 "@id": absoluteUrl("/buffing-wheels#productgroup"),
                 "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
-                "description": "Wholesale cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, sisal-cotton treated buffs, and polishing compound bars from Shanghai OEM manufacturer.",
+                "description": "Shanghai B2B sourcing and OEM project support for cotton buffing wheels, spiral-stitched wheels, airway buffs, sisal-cotton constructions and polishing compounds, quoted by SKU.",
                 "url": absoluteUrl("/buffing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "Cotton buffing wheels and polishing accessories",
-                "material": "Cotton muslin, cotton flannel, sisal-cotton blend, wax-bound abrasive compounds",
                 "additionalProperty": [
                   { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by wheel construction, size, packaging and quantity" },
                   { "@type": "PropertyValue", "name": "Lead-time basis", "value": "Quoted after specification, packaging and sample approval" },
-                  { "@type": "PropertyValue", "name": "Shipping terms", "value": "FOB Shanghai / EXW / CIF by arrangement" },
-                  { "@type": "PropertyValue", "name": "Payment terms", "value": "T/T 30% deposit, 70% before shipment" }
+                  { "@type": "PropertyValue", "name": "Shipping terms", "value": "Incoterms rule and named place stated in quotation" },
+                  { "@type": "PropertyValue", "name": "Payment terms", "value": "Method and milestones stated in quotation or contract" }
                 ],
               },
               buildFaqPageSchema(faqs),

@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Cutting Disc & Cut-Off Wheel Manufacturer | SCOTTCHEN",
+  title: "Cutting Disc & Cut-Off Wheel Sourcing | SCOTTCHEN",
   description: "China OEM cut-off wheel sourcing for metal and stainless steel in 4.5 to 9 inch sizes. Compare specifications, safety documents, samples and quoted MOQ.",
   path: "/cutting-wheels",
   alternatePath: "/zh/cutting-wheels",
@@ -18,33 +18,33 @@ export default function CuttingWheelsPage() {
   const subtypes = [
     {
       name: "Metal Cutting-Off Wheels (Type 1 / Type 41)",
-      desc: "Flat Type 1 (Type 41) straight cutting wheels designed for general-purpose metal cutting on angle grinders and chop saws. These thin bonded abrasive wheels cut carbon steel, structural steel, angle iron, sheet metal, and solid bar stock quickly and efficiently. Type 1 flat profile wheels provide a straight, clean cut with minimum burr formation and are the standard choice for metal fabrication, construction, steel erection, and general industrial metal cutting.",
-      features: ["Flat Type 1/Type 41 profile for straight cutting", "Thickness: 1.0mm to 3.2mm depending on diameter", "Aluminum oxide or premium A/O blend grain", "2-fiberglass reinforcement for burst safety"],
+      desc: "Type 1 / Type 41 flat cutting-wheel configurations can be evaluated for metal cutting. The buyer must provide the workpiece, section, tool, guard, spindle, operating conditions and target market; formulation, reinforcement, rated speed, cut result and safety evidence are then approved for the exact quoted SKU.",
+      features: ["Flat Type 1/Type 41 profile for straight cutting", "Thickness confirmed by diameter and SKU", "Abrasive formulation confirmed in the approved specification", "Reinforcement and safety evidence verified per SKU"],
     },
     {
       name: "Stainless Steel (INOX) Cutting Discs",
-      desc: "Specially formulated contaminant-free cutting discs for stainless steel and high-alloy metals that require Fe+S+Cl content below 0.1% to prevent after-corrosion and weld contamination. INOX cutting discs use high-purity white aluminum oxide or specialty aluminum oxide-silicon carbide blends without iron, sulfur, or chlorine fillers that can cause rust contamination on stainless steel cut edges. These discs are essential for food processing equipment, chemical processing, pharmaceutical, and architectural stainless applications.",
-      features: ["Contaminant-free: Fe + S + Cl less than 0.1%", "High-purity white A/O or A/O+SiC blend grain", "No after-rust or heat discoloration on stainless", "Thin kerf for fast, cool cutting on INOX materials"],
+      desc: "INOX cutting-disc configurations can be evaluated for stainless steel and high-alloy applications. The buyer must state any iron, sulfur and chlorine limit, abrasive formulation, target standard and end-use restrictions in the RFQ, then require applicable evidence for the exact quoted SKU.",
+      features: ["Fe, S and Cl limits stated by the buyer", "Formulation and material evidence confirmed per SKU", "Corrosion and heat claims verified by representative test", "Tool, guard and application compatibility approved in writing"],
     },
     {
       name: "Thin Cut-Off Wheels (1.0-1.6mm)",
-      desc: "Ultra-thin cut-off wheels in 1.0mm, 1.2mm, and 1.6mm thickness for fast, precise cutting with minimal material loss and reduced burr formation. Thin cut-off wheels cut faster with less effort and less heat generation than thicker wheels, making them the preferred choice for sheet metal, thin-wall tube, exhaust pipe, and precision metal cutting applications. Available for both general metal and stainless steel (INOX) specifications.",
-      features: ["Ultra-thin: 1.0mm, 1.2mm, 1.6mm thickness options", "Fast cutting with minimum kerf material loss", "Reduced heat buildup and workpiece discoloration", "Ideal for sheet metal, thin tube, exhaust, auto body"],
+      desc: "Common ultra-thin inquiry thicknesses include 1.0mm, 1.2mm and 1.6mm. Kerf, cut time, burr, heat, life and stability depend on formulation, reinforcement, workpiece, tool and feed; compare candidates under the same test method and approve only with applicable evidence for the exact SKU.",
+      features: ["Common RFQ thicknesses: 1.0mm, 1.2mm, 1.6mm", "Kerf and cut time measured in the sample test", "Heat, burr and wear recorded under common conditions", "Metal or INOX scope confirmed by formulation and evidence"],
     },
     {
       name: "Depressed Center Cutting Wheels (Type 27)",
-      desc: "Type 27 depressed-center cutting wheels feature a raised hub that provides spindle nut clearance while allowing both cutting and light grinding with the same wheel. The depressed center design gives the wheel additional rigidity and is compatible with standard Type 27 angle grinder guards. Type 27 cutting wheels are popular with welders and fabricators who need to switch between cutting and light grinding without changing wheels, though they do not replace dedicated grinding wheels for heavy stock removal.",
-      features: ["Depressed center (Type 27) profile for grinder clearance", "Thickness: 2.5mm to 3.2mm for rigidity", "Suitable for both cutting and light grinding", "Available in metal-grade and INOX-grade formulations"],
+      desc: "A depressed-center cutting-wheel inquiry must identify the wheel type, permitted use, tool, guard, flange, thickness and rated speed. Do not use a cutting wheel for side grinding unless the exact product label, responsible producer and applicable safety documents explicitly permit that operation.",
+      features: ["Depressed-center profile confirmed by SKU", "Thickness and permitted operation stated on approved label", "Tool, guard and flange compatibility checked", "Metal or INOX formulation supported by evidence"],
     },
     {
       name: "Cast Iron & Foundry Cutting Wheels",
-      desc: "Heavy-duty cutting wheels formulated with hard, durable silicon carbide or premium aluminum oxide grain blends for cutting cast iron, ductile iron, and foundry materials that quickly wear out standard cutting discs. These wheels use a harder bond matrix for longer life on dense, abrasive cast materials, and are reinforced with double fiberglass mesh for safety under high-torque cutting conditions found in foundries, casting cleaning operations, and heavy equipment repair.",
-      features: ["Silicon carbide or premium A/O blend for cast iron", "Hard bond for extended life on dense cast materials", "Double fiberglass reinforcement for heavy loads", "Available in 4.5\" through 14\" diameters for industrial saws"],
+      desc: "Cast-iron and foundry cutting-wheel configurations can use silicon carbide or aluminum-oxide blends. Material, bond, reinforcement, diameter, rated speed and expected life must be defined for the quoted SKU and compared on the buyer's equipment and workpiece.",
+      features: ["Abrasive blend confirmed by SKU", "Bond and service-life targets tested under agreed conditions", "Reinforcement supported by the approved specification", "Diameter and machine compatibility confirmed in writing"],
     },
     {
       name: "Masonry & Stone Cutting Discs",
-      desc: "Silicon carbide or specialty abrasive grain cutting wheels for cutting masonry materials including concrete, brick, block, stone, granite, and tile. Masonry cutting discs use a softer bond that allows the hard silicon carbide grain to fracture and expose fresh cutting edges when cutting hard, brittle mineral materials. Available as Type 1 flat wheels for chop saws and angle grinders in standard masonry diameters, as well as depressed center Type 27 profiles.",
-      features: ["Silicon carbide grain for concrete, brick, stone", "C-type hard bond for mineral material cutting", "Available in 4.5\" through 14\" diameters", "Double fiberglass reinforcement for safety"],
+      desc: "Masonry or stone cutting-wheel configurations can use silicon carbide or other formulations. The quoted source must identify the target material, bond, reinforcement, diameter, rated speed, tool, guard and applicable safety evidence; performance and suitability are approved through representative testing.",
+      features: ["Target mineral material stated in the RFQ", "Grain, bond and reinforcement confirmed by SKU", "Diameter and rated speed checked against the tool", "Safety evidence verified for the quoted construction"],
     },
   ];
 
@@ -59,11 +59,11 @@ export default function CuttingWheelsPage() {
     },
     {
       q: "What sizes and thicknesses are available?",
-      a: "We produce cutting discs in standard angle grinder and chop saw diameters: 4\" (100mm), 4.5\" (115mm), 5\" (125mm), 6\" (150mm), 7\" (180mm), 9\" (230mm), 12\" (300mm), and 14\" (355mm). Common arbor hole sizes are 7/8\" (22.23mm) for hand-held angle grinders and 1\" (25.4mm) or 20mm for chop saws. Disc thickness ranges from ultra-thin 1.0mm for precision sheet metal cutting to 3.2mm for heavy-duty general-purpose cutting, with 1.6mm being the most popular all-purpose thickness.",
+      a: "Common inquiry dimensions include 4\" through 14\" diameters, several thicknesses and different arbor sizes. Availability, dimensional tolerance, rated speed, tool and guard compatibility, production source and applicable evidence must be confirmed for the exact quoted SKU.",
     },
     {
       q: "Can I use metal cutting discs on stainless steel?",
-      a: "Standard metal cutting discs may contain iron, sulfur, and chlorine fillers that can cause after-rust and contamination on stainless steel cut edges. For stainless steel applications, we recommend using our dedicated INOX-grade cutting discs, which are formulated with contaminant-free raw materials (Fe+S+Cl < 0.1%) to prevent corrosion and weld contamination. Using INOX-specific discs also reduces heat buildup and discoloration on stainless, producing cleaner cuts that require less post-cut finishing.",
+      a: "Do not assume a general metal wheel is suitable for stainless steel. State the material, tool, guard, target standard and any Fe, S or Cl limit in the RFQ, then verify the exact INOX formulation with applicable documents and representative sample tests before approval.",
     },
     {
       q: "How are cutting discs packaged for wholesale distribution?",
@@ -71,7 +71,7 @@ export default function CuttingWheelsPage() {
     },
     {
       q: "What is the shelf life and storage recommendation for cutting wheels?",
-      a: "Bonded abrasive cutting wheels have a recommended shelf life of 3 years from the manufacture date when stored properly in cool, dry conditions away from moisture, extreme temperatures, and chemical exposure. Fiberglass-reinforced resinoid wheels should be stored flat on a level surface, not standing on edge, to prevent warping. We print manufacture dates and recommended-use periods on each wheel label and recommend rotating stock on a first-in, first-out basis.",
+      a: "Shelf life, manufacture date, storage orientation and recommended-use period must follow the exact product label, responsible producer's instructions and applicable market requirements. Require these details in the approved specification and label artwork; this page does not set a universal three-year period or claim that every wheel is date-marked.",
     },
   ];
 
@@ -83,7 +83,7 @@ export default function CuttingWheelsPage() {
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Cutting Wheels", href: "/cutting-wheels" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B Wholesale &amp; OEM</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              Cutting Disc Manufacturer &amp; Cut-Off Wheels Supplier
+              Cutting Disc Sourcing &amp; OEM Project Support
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               OEM cut-off wheel sourcing for metal, stainless steel (INOX), cast iron, and masonry applications. Confirm reinforcement, formulation, rated speed, safety documents, MOQ and inspection scope for the exact quoted SKU.
@@ -113,12 +113,12 @@ export default function CuttingWheelsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Documents Checked</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">Fe+S+Cl&lt;0.1%</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">INOX Grade</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">INOX Limits</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-industry-orange">2-Fiberglass</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Reinforced</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Reinforcement Verified</div>
               </div>
             </div>
           </div>
@@ -136,13 +136,13 @@ export default function CuttingWheelsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN has manufactured bonded abrasive cutting wheels and cut-off discs at our Shanghai production facility since 2014, supplying metal fabricators, welding distributors, construction suppliers, hardware chains, and industrial tool brands across North America, Europe, the Middle East, and Asia-Pacific. As a dedicated cutting disc manufacturer, we produce Type 1/Type 41 flat cutting wheels and Type 27 depressed-center cutting discs in a full range of sizes from 4-inch angle grinder discs to 14-inch chop saw wheels for metal, stainless steel (INOX), cast iron, and masonry applications.
+                    SCOTTCHEN provides Shanghai-based B2B sourcing and OEM project support for bonded cutting-wheel inquiries. The responsible production source, formulation, reinforcement, rated speed, applicable standard and report coverage must be identified for the exact quoted SKU; this page does not assert an owned factory or manufacturing history.
                   </p>
                   <p>
                     Cutting wheel safety is non-negotiable, so the RFQ must name the applicable market standard, rated speed, guard and tool compatibility, reinforcement construction, label warnings and required test evidence. For INOX wheels, state the allowed iron, sulfur and chlorine limits and request test evidence for the quoted formulation. Approval should be based on applicable documents and representative samples, not generic marketing claims.
                   </p>
                   <p>
-                    As a wholesale cut-off wheels supplier, we understand that distributors and industrial buyers demand consistent cut rate, long wheel life, minimum burr formation, and predictable performance. Our thin 1.0-1.6mm cut-off wheels are engineered for fast, cool cutting with minimal material waste and reduced heat-affected zones on the workpiece. We offer both premium-grade cutting wheels for professional fabricators and value-grade options for price-sensitive markets, each with consistent quality control from raw material mixing through final packaging.
+                    Cut rate, wheel life, burr, temperature and stability depend on formulation, reinforcement, workpiece, tool and operation. Compare candidate SKUs under one approved test method, then record the selected construction, inspection plan, MOQ, lead time, payment and Incoterms in the quotation or contract.
                   </p>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function CuttingWheelsPage() {
 
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Standard Specifications
+                  Common RFQ Dimensions — Not Approved SKU Data
                 </h2>
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
@@ -183,7 +183,7 @@ export default function CuttingWheelsPage() {
                         <th className="px-4 py-3 font-semibold uppercase">Size</th>
                         <th className="px-4 py-3 font-semibold uppercase">Thickness</th>
                         <th className="px-4 py-3 font-semibold uppercase">Arbor</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Max RPM</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Rated-Speed Evidence</th>
                         <th className="px-4 py-3 font-semibold uppercase">Application</th>
                         <th className="px-4 py-3 font-semibold uppercase">Material</th>
                       </tr>
@@ -193,7 +193,7 @@ export default function CuttingWheelsPage() {
                         <td className="px-4 py-3">4.5\" (115mm)</td>
                         <td className="px-4 py-3">1.0 / 1.2 / 1.6 / 2.5 / 3.2mm</td>
                         <td className="px-4 py-3">7/8\" (22.23mm)</td>
-                        <td className="px-4 py-3">13,300 RPM</td>
+                        <td className="px-4 py-3">Per SKU label and report</td>
                         <td className="px-4 py-3">Metal / INOX</td>
                         <td className="px-4 py-3">A/O / White A/O</td>
                       </tr>
@@ -201,7 +201,7 @@ export default function CuttingWheelsPage() {
                         <td className="px-4 py-3">5\" (125mm)</td>
                         <td className="px-4 py-3">1.0 / 1.2 / 1.6 / 2.5 / 3.2mm</td>
                         <td className="px-4 py-3">7/8\" (22.23mm)</td>
-                        <td className="px-4 py-3">12,200 RPM</td>
+                        <td className="px-4 py-3">Per SKU label and report</td>
                         <td className="px-4 py-3">Metal / INOX</td>
                         <td className="px-4 py-3">A/O / White A/O</td>
                       </tr>
@@ -209,7 +209,7 @@ export default function CuttingWheelsPage() {
                         <td className="px-4 py-3">7\" (180mm)</td>
                         <td className="px-4 py-3">1.6 / 2.0 / 2.5 / 3.2mm</td>
                         <td className="px-4 py-3">7/8\" (22.23mm)</td>
-                        <td className="px-4 py-3">8,500 RPM</td>
+                        <td className="px-4 py-3">Per SKU label and report</td>
                         <td className="px-4 py-3">Metal / INOX</td>
                         <td className="px-4 py-3">A/O / White A/O</td>
                       </tr>
@@ -217,7 +217,7 @@ export default function CuttingWheelsPage() {
                         <td className="px-4 py-3">9\" (230mm)</td>
                         <td className="px-4 py-3">1.9 / 2.0 / 2.5 / 3.2mm</td>
                         <td className="px-4 py-3">7/8\" (22.23mm)</td>
-                        <td className="px-4 py-3">6,600 RPM</td>
+                        <td className="px-4 py-3">Per SKU label and report</td>
                         <td className="px-4 py-3">Metal / INOX / Cast Iron</td>
                         <td className="px-4 py-3">A/O / SiC Blend</td>
                       </tr>
@@ -225,7 +225,7 @@ export default function CuttingWheelsPage() {
                         <td className="px-4 py-3">14\" (355mm)</td>
                         <td className="px-4 py-3">2.5 / 3.0 / 3.2 / 4.0mm</td>
                         <td className="px-4 py-3">1\" (25.4mm) / 20mm</td>
-                        <td className="px-4 py-3">4,400 RPM</td>
+                        <td className="px-4 py-3">Per SKU label and report</td>
                         <td className="px-4 py-3">Chop saw: Metal / Masonry</td>
                         <td className="px-4 py-3">A/O / SiC</td>
                       </tr>
@@ -266,10 +266,10 @@ export default function CuttingWheelsPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     { title: "Safety Evidence by SKU", desc: "Request the applicable standard, report number, issuing body, covered dimensions, validity and label scope for the exact wheel." },
-                    { title: "Dual Fiberglass Reinforcement", desc: "Two layers of high-tensile fiberglass mesh reinforcement provide burst resistance and structural integrity at maximum operating RPM." },
-                    { title: "Contaminant-Free INOX Grade", desc: "Stainless steel cutting discs contain Fe+S+Cl below 0.1%, preventing after-rust, weld contamination, and surface discoloration on stainless." },
-                    { title: "Thin Kerf Fast Cutting", desc: "1.0-1.6mm ultra-thin wheels deliver fast, precise cuts with minimal burr formation, reduced material waste, and less heat buildup on the workpiece." },
-                    { title: "Consistent Quality Control", desc: "Each batch undergoes rotational burst testing, side load testing, and dimensional inspection before release to ensure wheel-to-wheel consistency." },
+                    { title: "Reinforcement by SKU", desc: "Layer count, mesh, construction and related safety evidence are confirmed in the approved specification." },
+                    { title: "INOX Limits by SKU", desc: "Any Fe, S or Cl limit requires applicable material or test evidence for the quoted wheel." },
+                    { title: "Comparative Cut Test", desc: "Kerf, burr, temperature, cut time and wear are compared under buyer-approved conditions." },
+                    { title: "Written Quality Plan", desc: "Dimensional, rotational, side-load or other checks and sampling are agreed per order." },
                     { title: "Private Label Scope", desc: "Branded labels, color boxes, tins and multilingual instructions can be scoped from buyer-approved safety and channel requirements." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
@@ -292,13 +292,13 @@ export default function CuttingWheelsPage() {
                 <h2 className="text-xl font-extrabold text-white">OEM / Private Label Capabilities</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    SCOTTCHEN provides complete OEM and private label cut-off wheel manufacturing for distributors, welding supply brands, private label tool companies, and industrial supply chains worldwide. Our OEM services include abrasive grain selection (aluminum oxide, white aluminum oxide for INOX, silicon carbide for masonry), wheel thickness and hardness grade specification, Type 1 or Type 27 profile, and custom label printing with your brand name, logo, specifications, and safety warnings.
+                    SCOTTCHEN supports OEM and private-label cutting-wheel sourcing for distributors, welding suppliers, tool brands and industrial buyers. Grain, formulation, thickness, profile, reinforcement, label and packaging options are confirmed with the responsible production source in the written quotation.
                   </p>
                   <p>
                     Private-label options can include shrink wrap, printed labels, color boxes, storage tins, blister packs and industrial cartons. The buyer is responsible for confirming the applicable standard, maximum RPM, safety pictograms, translations and channel barcode data; the approved artwork defines what may appear on the wheel and packaging.
                   </p>
                   <p>
-                    For large OEM customers with consistent volume, we can develop custom wheel formulations including specialized grain blends and bond hardness tailored to specific applications such as stainless steel pipe production, automotive exhaust manufacturing, or heavy structural steel fabrication. Contact our sales engineering team with your performance targets and application requirements for a custom quotation and pre-production samples.
+                    Custom formulation requests require the application, workpiece, equipment, rated speed, performance targets and applicable standard. Development feasibility, samples, testing responsibility and any production commitment are confirmed in the project documents.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -387,16 +387,15 @@ export default function CuttingWheelsPage() {
                 "@type": "ProductGroup",
                 "@id": absoluteUrl("/cutting-wheels#productgroup"),
                 "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
-                "description": "Cut-off wheels for metal, stainless steel INOX, cast iron, and masonry with dual fiberglass reinforcement. Compliance claims are confirmed per approved SKU specification.",
+                "description": "B2B sourcing support for cut-off wheels for metal, stainless steel, cast iron and masonry; reinforcement and compliance evidence are confirmed per SKU.",
                 "url": absoluteUrl("/cutting-wheels"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "Cutting wheels and cut-off discs",
-                "material": "Resin-bonded abrasive with dual fiberglass reinforcement",
+                "material": "Resin-bonded abrasive; formulation and reinforcement confirmed per SKU",
                 "additionalProperty": [
                   { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, formulation, label, packaging and quantity" },
-                  { "@type": "PropertyValue", "name": "Reinforcement", "value": "Dual fiberglass mesh" }
+                  { "@type": "PropertyValue", "name": "Reinforcement", "value": "Confirmed in the approved SKU specification" }
                 ],
               },
               buildFaqPageSchema(faqs),

@@ -6,8 +6,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Sandpaper & Grinding Disc Supplier | SCOTTCHEN",
-  description: "Source OEM sandpaper sheets, sanding rolls, silicon carbide screens, zirconia grinding discs, mini sanding sticks and dispenser kits with MOQ and QC parameters.",
+  title: "OEM Sandpaper & Grinding Disc Sourcing | SCOTTCHEN",
+  description: "Source sandpaper sheets, sanding rolls, screens, grinding discs, sanding sticks and dispenser kits with SKU-level source, evidence and quoted terms.",
   path: "/products/sanding-grinding-accessories",
   alternatePath: "/zh/products/sanding-grinding-accessories",
 });
@@ -16,56 +16,56 @@ export default function SandingGrindingAccessories() {
   const subtypes = [
     {
       name: "Sanding Sheets & Rolls",
-      desc: "Industrial silicon carbide (for wet/dry automotive prep) and aluminum oxide (for woodworking). Available in precut sheet bundles and continuous rolls designed for dispenser boxes.",
+      desc: "An inquiry category for sheet, roll or dispenser concepts. Material, backing, grit, dimensions, source and application fit are not approved until documented for the quoted SKU.",
       features: [
-        "Grits: P60, P80, P120, P150, P180, P240, P320, P400, P600, P800, P1000",
-        "Sizing: 9\" x 11\" sheets, 2\" to 4.5\" width roll wraps",
-        "Backing: C-weight latex paper, flexible J-weight cloth backing",
+        "RFQ fields: substrate, process, tool, wet/dry use and target finish",
+        "SKU evidence: grain, backing, dimensions, grit system and operating limits",
+        "Approval: source documents, samples, packaging and written commercial terms",
       ],
     },
     {
       name: "Grinding & Zirconia Fiber Discs",
-      desc: "Zirconia alumina abrasive grains resin-bonded to a heavy vulcanized fiber backing. Engineered for high-speed weld dressing, heavy deburring, rust removal, and beveling on carbon steel and alloys.",
+      desc: "A sourcing scenario for fiber-disc and grinding-disc inquiries. Grain, bond, backing, arbor, speed rating and substrate compatibility require source evidence and sample approval.",
       features: [
-        "Sizing: 4.5\" (115mm), 5\" (125mm), 7\" (180mm) outer diameter",
-        "Arbor hole: 7/8\" (22.23mm) center round or star center hub",
-        "MOQ: 2,000 discs per grit dimension",
+        "RFQ fields: disc type, tool, diameter, arbor, substrate and removal target",
+        "Safety evidence: marked operating limit, traceability and applicable documents",
+        "Commercial scope: sample fee, MOQ, lead time, payment and Incoterms quoted by project",
       ],
     },
     {
       name: "Drywall Sanding Screens & Mesh Sheets",
-      desc: "Open-mesh structure coated on both sides with silicon carbide. The open structure helps reduce loading during drywall sanding; equipment fit must be confirmed by size, attachment and extraction layout.",
+      desc: "An inquiry category for open-mesh sanding products. Mesh construction, coating, dimensions, attachment and dust-extraction compatibility must be verified for the selected source and SKU.",
       features: [
-        "Material: Heavy fiberglass mesh substrate",
-        "Grits: P80, P120, P150, P180, P220",
-        "Sizing: Precut 9x11 sheets, 3.25\" x 11\" blocks, or custom rolls",
+        "RFQ fields: surface, sanding method, holder, extraction layout and desired grit",
+        "SKU evidence: mesh material, coating, dimensions and labeled use limits",
+        "Approval: fit sample, packaging specification and dated quotation",
       ],
     },
     {
       name: "Detail Sanding Sticks",
-      desc: "Rigid plastic mini sanding sticks with interchangeable micro-grit belts. Designed for scale model building, jewelry polishing, mold refinement, and tight corners where orbital sanders cannot reach.",
+      desc: "A planning category for narrow-access hand-sanding tools and replaceable abrasive components. Handle, tension, belt dimensions and use claims must be confirmed from the quoted source.",
       features: [
-        "Belt Width: 1/4\" (6.35mm), 1/2\" (12.7mm) options",
-        "Structure: Spring-tensioned plastic rods",
-        "Packaging: Multi-grit kits (1 rod + 5 belts per grit) ready for online retail",
+        "RFQ fields: workpiece, access space, abrasive size, grit progression and pack concept",
+        "Compatibility: handle, tension system and replacement-belt fit approved by sample",
+        "Retail scope: BOM, warnings, artwork, barcode data and channel responsibility documented",
       ],
     },
     {
       name: "Diamond & Specialty Abrasives",
-      desc: "Electroplated diamond discs and flexible backing pads. Specially manufactured for grinding and beveling ceramic tile, porcelain, granite, marble, gemstones, and glass.",
+      desc: "A higher-risk inquiry category that requires exact construction, tool, substrate, operating limits and applicable compliance evidence before any suitability statement is accepted.",
       features: [
-        "Grits: 50, 100, 200, 400, 800, 1500, 3000 grit range",
-        "Backing: Hook and loop backing, or steel core plates",
-        "Substrate: Granite, quartz, marble, tiles, gemstones",
+        "RFQ fields: substrate, process, tool, speed, cooling method and finish target",
+        "SKU evidence: abrasive construction, backing/core, dimensions and warnings",
+        "Approval: source identity, test basis, sample result and written use boundary",
       ],
     },
     {
       name: "Sanding Dispenser Kits",
-      desc: "Workshop-ready combinations. A steel or heavy cardboard dispenser rack pre-packed with 4 to 5 rolls of assorted grits. Allows rapid tearing without unrolling the entire bundle.",
+      desc: "A private-label pack-out scenario, not an approved stock kit. Roll count, grit mix, cutter design, packaging materials and channel requirements are RFQ inputs.",
       features: [
-        "Roll count: 4-roll and 5-roll combinations",
-        "Packaging: Custom printed corrugated box with integrated cutting blades",
-        "Ideal Buyers: Hardware store displays, automotive shop organizers",
+        "BOM approval: each component source, identity, quantity and compatibility",
+        "Packaging approval: dieline owner, cutter safety, artwork, warnings and barcode data",
+        "Commercial approval: sample, MOQ, lead time, pack-out inspection and Incoterms",
       ],
     },
   ];
@@ -89,7 +89,7 @@ export default function SandingGrindingAccessories() {
                 Sanding & Grinding Accessories
               </h1>
               <p className="mt-3 text-base text-industry-slate-400">
-                Bulk sandpapers, zirconia resin fiber discs, mesh drywall screen sheets, and detail mini sanding stick kits.
+                Sourcing inquiries for sandpaper, grinding discs, mesh sheets, detail tools and private-label dispenser concepts.
               </p>
             </div>
 
@@ -118,9 +118,9 @@ export default function SandingGrindingAccessories() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="md:w-1/3">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">B2B QUICK TAKEAWAYS</span>
-                <h2 className="text-2xl font-black text-white mt-1">Abrasives Specifications</h2>
+                <h2 className="text-2xl font-black text-white mt-1">RFQ Specification Fields</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  Consolidated technical parameters, backing weights, and packaging MOQs for volume buyers.
+                  Fields buyers and sources should document before a SKU, sample or commercial term is treated as approved.
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -177,8 +177,8 @@ export default function SandingGrindingAccessories() {
               {[
                 ["Primary products", "Wet/dry sandpaper sheets, continuous sanding rolls, fiberglass mesh sanding screens, zirconia fiber discs, detail sanding sticks and dispenser kits."],
                 ["MOQ basis", "Quoted per product construction, size, grit mix, packaging and order quantity."],
-                ["Quoted lead time", "Common planning range is 20 to 30 days after SKU, grit mix, packaging and sample approval."],
-                ["Specification controls", "Grain type, FEPA P-grit range, backing material, dimensions, arbor hole, attachment method and pack quantity are defined by SKU."],
+                ["Quoted lead time", "Dated material, sample, packaging, production, inspection and shipment milestones are confirmed in writing."],
+                ["Specification controls", "Grain type, applicable grit designation standard, backing, dimensions, arbor hole, attachment method and pack quantity are defined by SKU."],
                 ["Quality checks", "Backing tensile strength, grain adhesion, dimensional fit, grit assortment, barcode scan and carton configuration can be checked against the approved specification."],
                 ["Next verification step", "Use the material selection guide for grain and backing choices, then request a sample abrasive kit with substrate and tool details."],
               ].map(([label, value]) => (
@@ -248,7 +248,7 @@ export default function SandingGrindingAccessories() {
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg text-center space-y-4">
                 <h3 className="text-lg font-bold text-white uppercase">Sanding roll dispensers & retail bundles</h3>
                 <p className="text-sm text-industry-slate-400 max-w-lg mx-auto">
-                  We supply multi-grit sandpapers and detail sticks packaged in custom corrugated dispenser cases and blister backing cards with FNSKU barcodes.
+                  Dispenser cases or blister cards can be evaluated with buyer-approved artwork, warnings and buyer-supplied barcode data. Scope, sample scanning and marketplace responsibility are confirmed in writing.
                 </p>
                 <div className="pt-2">
                   <Link
@@ -274,7 +274,7 @@ export default function SandingGrindingAccessories() {
                         <th className="px-4 py-3 font-semibold uppercase">Abrasive Grain</th>
                         <th className="px-4 py-3 font-semibold uppercase">Grit Standard Scope</th>
                         <th className="px-4 py-3 font-semibold uppercase">Backing Type</th>
-                        <th className="px-4 py-3 font-semibold uppercase">B2B Sourcing MOQ</th>
+                        <th className="px-4 py-3 font-semibold uppercase">MOQ Basis</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
@@ -283,48 +283,48 @@ export default function SandingGrindingAccessories() {
                         <td className="px-4 py-3">Silicon Carbide / Aluminum Oxide</td>
                         <td className="px-4 py-3">P60 to P2500</td>
                         <td className="px-4 py-3">C-wt / J-wt Latex Paper</td>
-                        <td className="px-4 py-3">10,000 Sheets</td>
+                        <td className="px-4 py-3">Quoted per SKU</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">Zirconia Fiber Discs</td>
                         <td className="px-4 py-3">Zirconia Alumina</td>
                         <td className="px-4 py-3">P36 to P120</td>
                         <td className="px-4 py-3">0.8mm Vulcanized Fiber</td>
-                        <td className="px-4 py-3">5,000 Discs</td>
+                        <td className="px-4 py-3">Quoted per SKU</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 font-bold">Drywall Sanding Screen</td>
                         <td className="px-4 py-3">Silicon Carbide double-coat</td>
                         <td className="px-4 py-3">P80 to P240</td>
                         <td className="px-4 py-3">Fiberglass Open Mesh</td>
-                        <td className="px-4 py-3">5,000 Sheets</td>
+                        <td className="px-4 py-3">Quoted per SKU</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">Detail Sanding sticks</td>
                         <td className="px-4 py-3">Aluminum Oxide belts</td>
                         <td className="px-4 py-3">P80 to P400</td>
                         <td className="px-4 py-3">Resilient plastic stick</td>
-                        <td className="px-4 py-3">1,000 Kits</td>
+                        <td className="px-4 py-3">Quoted per SKU</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 font-bold">Diamond Grinders</td>
                         <td className="px-4 py-3">Electroplated Diamond</td>
                         <td className="px-4 py-3">P50 to P3000</td>
                         <td className="px-4 py-3">Flexible backing or Steel core</td>
-                        <td className="px-4 py-3">500 units</td>
+                        <td className="px-4 py-3">Quoted per SKU</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
 
-              {/* Tensile Strength & Fracturing Specifications Table */}
+              {/* Backing evidence fields */}
               <div id="tensile-table" className="space-y-4 pt-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Abrasive Backing Tensile Strength & Grain Adhesion Specifications
+                  Abrasive Backing Evidence Fields by Quoted SKU
                 </h2>
                 <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
-                  B2B surfacing operations require backing materials that withstand massive mechanical tension and shear stress without premature grain shedding or fracturing:
+                  No mechanical value is published as a product claim without a source document and exact SKU. Use this matrix to request the backing identity, test method, measured result and approval evidence from the responsible source.
                 </p>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
@@ -332,40 +332,40 @@ export default function SandingGrindingAccessories() {
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
                         <th className="px-4 py-3 font-semibold uppercase">Abrasive Backing Type</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Base Material Weight</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Longitudinal Tensile (N/50mm)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Transverse Tensile (N/50mm)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Bond & Grain Fracture Threshold</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Specification to Request</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Test Method</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Result Status</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Release Evidence</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
                         <td className="px-4 py-3 font-bold">Vulcanized Fiber Backing</td>
-                        <td className="px-4 py-3">0.8 mm High-Density Vulcanized Cotton</td>
-                        <td className="px-4 py-3">&ge; 1,050 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 750 N / 50mm</td>
-                        <td className="px-4 py-3">Phenolic resin bond / Zirconia micro-fracturing &ge; 120 N load</td>
+                        <td className="px-4 py-3">Material, thickness, source and lot identity</td>
+                        <td className="px-4 py-3">Defined by source and buyer quality plan</td>
+                        <td className="px-4 py-3">Not published; record measured values by SKU</td>
+                        <td className="px-4 py-3">Specification, source file and sample record</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">Latex C-weight Paper</td>
-                        <td className="px-4 py-3">140 g/m&sup2; Premium Latex-Impregnated</td>
-                        <td className="px-4 py-3">&ge; 350 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 220 N / 50mm</td>
-                        <td className="px-4 py-3">Double-coat resin / Silicon carbide self-sharpening fracture</td>
+                        <td className="px-4 py-3">Paper weight, treatment, source and wet-use claim</td>
+                        <td className="px-4 py-3">Defined by source and buyer quality plan</td>
+                        <td className="px-4 py-3">Not published; verify against approved sample</td>
+                        <td className="px-4 py-3">Specification, test record and sample sign-off</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 font-bold">Cotton J-weight Cloth</td>
-                        <td className="px-4 py-3">180 g/m&sup2; High-Flex Poly-Cotton Blend</td>
-                        <td className="px-4 py-3">&ge; 820 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 480 N / 50mm</td>
-                        <td className="px-4 py-3">Glue/resin hybrid bond / Aluminum oxide progressive attrition</td>
+                        <td className="px-4 py-3">Cloth weight, fiber content, flexibility and source</td>
+                        <td className="px-4 py-3">Defined by source and buyer quality plan</td>
+                        <td className="px-4 py-3">Not published; record longitudinal and transverse data</td>
+                        <td className="px-4 py-3">Source file, joint/sample test and approval</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">Fiberglass Mesh</td>
-                        <td className="px-4 py-3">110 g/m&sup2; E-glass Open Interlock Mesh</td>
-                        <td className="px-4 py-3">&ge; 450 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 400 N / 50mm</td>
-                        <td className="px-4 py-3">Phenolic binder coating / SiC grain retention index &ge; 98%</td>
+                        <td className="px-4 py-3">Mesh, binder, grain, dimensions and source</td>
+                        <td className="px-4 py-3">Defined by source and buyer quality plan</td>
+                        <td className="px-4 py-3">Not published; record strength and retention method</td>
+                        <td className="px-4 py-3">Specification, sample result and release record</td>
                       </tr>
                     </tbody>
                   </table>
@@ -440,15 +440,15 @@ export default function SandingGrindingAccessories() {
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Retail Product Reference
+                  Buyer Evidence Center
                 </h3>
                 <p className="text-xs leading-relaxed text-industry-slate-300">
-                  Review current SCOTTCHEN retail products to understand existing abrasive,
-                  sanding, and kit configurations before requesting a custom B2B version.
+                  Review current document status, verification boundaries, and the
+                  materials to request before placing a B2B order.
                 </p>
-                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
-                  View the SCOTTCHEN retail store &rarr;
-                </a>
+                <Link href="/evidence-center" className="text-xs font-bold text-industry-orange hover:underline">
+                  Review buyer evidence &rarr;
+                </Link>
               </div>
 
             </div>
@@ -461,10 +461,10 @@ export default function SandingGrindingAccessories() {
       <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Shop Samples on Amazon</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">External Retail Links</span>
             <h2 className="text-3xl font-extrabold text-white mt-3">Amazon Retail Listing References</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Use the selected Amazon listings below as retail product references. Availability, pricing, seller status, and Prime eligibility are controlled by Amazon and may change.
+              External retail-listing references only. Card titles and descriptions summarize marketplace positioning and do not prove SCOTTCHEN OEM source, current availability, specifications, compliance, brand rights or performance. Amazon controls listing status and pricing.
             </p>
           </div>
 
@@ -609,7 +609,7 @@ export default function SandingGrindingAccessories() {
             {[
               {
                 q: "What backing weights and materials are available for Scottchen sandpaper sheets?",
-                a: "We offer C-weight latex-impregnated paper backing for wet/dry hand sanding sheets (which prevents tearing when soaked), and heavy J-weight flexible cotton cloth backing for sander rolls, ensuring higher tensile strength during contour sanding and machine operation."
+                a: "C-weight paper, cloth or other backings can be evaluated after the buyer states wet or dry use, tool, pressure and finish target. Weight, fiber, treatment, wet strength and tensile performance require source evidence and representative tests for the quoted SKU; no tear-prevention claim is made by this page."
               },
               {
                 q: "Why do you use silicon carbide for drywall sanding screens instead of aluminum oxide?",
@@ -617,15 +617,15 @@ export default function SandingGrindingAccessories() {
               },
               {
                 q: "What center hole dimensions and backing options do you support for grinding discs?",
-                a: "Available configurations can include 4.5\", 5\", and 7\" diameters with a 7/8\" (22.23mm) circular or star center. Backing material, thickness, labeled operating limit and tool compatibility must be confirmed in the approved SKU specification."
+                a: "State the tool, diameter, arbor or center geometry, backing, substrate and use conditions in the RFQ. Exact dimensions, construction, labeled operating limit and compatibility must be confirmed by the quoted source, SKU evidence and approved sample; this page publishes no fixed available configuration."
               },
               {
                 q: "Can we mix multiple grits in a custom-labeled dispenser box?",
-                a: "Yes. A dispenser box can be quoted with 4 or 5 selected roll grits and an integrated tearing edge. Buyer-approved branding, warnings and UPC data can be applied after artwork and sample review."
+                a: "A multi-grit dispenser concept can be evaluated. The quotation must confirm the source, number of grits, roll dimensions, cutter safety, pack structure, branding, warnings, barcode data and approval sample; this page does not promise a fixed configuration."
               },
               {
                 q: "What is the minimum order quantity (MOQ) for detail sanding sticks?",
-                a: "A 1,000-pack quantity is a common RFQ starting point for spring-tensioned detail sanding sticks. Pack composition, grit mix, packaging, actual MOQ and lead time are confirmed in the quotation."
+                a: "Pack composition, grit mix, packaging, production source, MOQ and lead time are confirmed for the quoted detail-sanding-stick SKU; this page does not set a standard starting quantity."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -649,87 +649,13 @@ export default function SandingGrindingAccessories() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/products/sanding-grinding-accessories#productgroup"),
-                "name": "SCOTTCHEN Sanding & Grinding Accessories Catalog",
-                "description": "Industrial abrasive options including latex-backed wet/dry sandpaper sheets, open-mesh silicon carbide drywall sanding screens, zirconia fiber discs, and detail sanding rods.",
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/products/sanding-grinding-accessories#catalog"),
+                "name": "Sanding and Grinding Accessory RFQ Catalog",
+                "description": "Sourcing reference for abrasive accessory configurations. Exact grain, backing, dimensions, operating limits, availability and terms require a dated SKU quotation and approved evidence.",
                 "url": absoluteUrl("/products/sanding-grinding-accessories"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
-                "brand": {
-                  "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@id": absoluteUrl("/#organization")
-                },
-                "category": "Sandpaper, grinding discs and abrasive accessory kits",
-                "material": "Silicon carbide, aluminum oxide, zirconia alumina, fiberglass mesh, latex paper, vulcanized fiber and cloth backing",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "MOQ basis",
-                    "value": "10,000 sheets for sandpaper, 5,000 fiber discs and 1,000 detail-stick sets"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Quoted lead time",
-                    "value": "20 to 30 days after SKU, grit mix, packaging and sample approval"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Specification controls",
-                    "value": "Grain type, FEPA P-grit range, backing material, dimensions, arbor hole, attachment method and pack quantity"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Common applications",
-                    "value": "Wood, drywall, carbon steel, high-alloy welds, fiberglass, ceramic, porcelain, marble, tile, gemstones and glass"
-                  }
-                ],
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "name": "Latex Wet/Dry Sandpaper Sheets",
-                    "description": "Premium silicon carbide sheets on latex C-weight backing for automotive styling and wet prep.",
-                    "sku": "SC-SANDPAPER-SHEETS",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "Silicon carbide or aluminum oxide on C-weight latex paper or flexible J-weight cloth backing",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "Grit range", "value": "P60 to P2500" },
-                      { "@type": "PropertyValue", "name": "Sizing", "value": "9 inch x 11 inch sheets or 2 inch to 4.5 inch roll wraps" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "Zirconia Vulcanized Fiber Grinding Discs",
-                    "description": "Heavy weld-leveling zirconia discs with 7/8-inch star hubs on 0.8mm vulcanized backing.",
-                    "sku": "SC-ZIRCONIA-DISCS",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "Zirconia alumina on vulcanized fiber backing",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "Diameter", "value": "4.5 inch, 5 inch or 7 inch outer diameter" },
-                      { "@type": "PropertyValue", "name": "Arbor hole", "value": "7/8 inch or 22.23 mm center round or star center hub" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "Fiberglass Mesh Drywall Sanding Screens",
-                    "description": "Double-sided silicon carbide mesh sheets designed to reduce clogging during vacuum-assisted drywall sanding.",
-                    "sku": "SC-DRYWALL-MESH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "Fiberglass mesh substrate with silicon carbide coating",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "Grit range", "value": "P80, P120, P150, P180 and P220" },
-                      { "@type": "PropertyValue", "name": "Sizing", "value": "Precut 9 x 11 sheets, 3.25 x 11 blocks or custom rolls" }
-                    ]
-                  }
-                ]
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               }
             ]
           })

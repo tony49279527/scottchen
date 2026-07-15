@@ -6,8 +6,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "工业棉布轮、气道抛光轮及抛光膏 OEM 厂家 | SCOTTCHEN",
-  description: "定制高密度密缝布轮、松缝镜面轮、台式砂轮机棉轮、带柄迷你布轮及精细抛光膏。按确认规格、包装和数量报价。",
+  title: "工业棉布轮、气道抛光轮及抛光膏 OEM 采购 | SCOTTCHEN",
+  description: "布轮、台式机轮、带柄布轮及抛光膏的 OEM 采购询价；来源、SKU、结构、工具适配、样品和商业条款按项目确认。",
   path: "/zh/products/buffing-polishing-wheels",
   alternatePath: "/products/buffing-polishing-wheels",
   locale: "zh-CN",
@@ -17,28 +17,28 @@ export default function ChineseBuffingPolishingWheels() {
   const subtypes = [
     {
       name: "同心圆密缝棉线抛光布轮 (Spiral Stitched)",
-      desc: "使用高强力棉线进行同心圆缝线锁边。大幅增加了布轮表面的切削硬度，适合配合粗抛光蜡进行粗抛、除锈、拉丝与表面初级精饰。是黄铜、不锈钢和粗糙铝材切削打磨的首选。",
-      features: ["层数可调: 30 Ply, 40 Ply, 50 Ply, 60 Ply 层缝线棉轮", "线圈间距: 标准 3/8英寸 或超密 1/4英寸 间距缝线", "孔径规格: 支持 1/2\", 5/8\", 3/4\", 1\" 中心纸管或塑料法兰圈"],
+      desc: "同心圆缝线结构可用于评估粗抛、去毛刺或表面准备。纤维成分、层数、缝线、针距、孔径、标称使用限制与性能必须按报价SKU和代表性样品确认。",
+      features: ["层数：按报价 SKU 与样品确认", "缝线图案与针距：写入批准规格", "孔径与衬套：匹配买家机器并通过样品验证"],
     },
     {
       name: "松缝黄/白 flannel 镜面色彩抛光轮",
-      desc: "多层精梳软毛 flannel 叠合，仅围绕中心孔进行同心车线固定。松缝边缘适合配合相应抛光膏进行精饰和上色；具体效果取决于工件材质、转速、压力与工艺参数。",
-      features: ["选料工艺: 100% 细柔绒毛精梳纯棉 flannel 织物", "缝制手法: 仅轴心一圈车线固定，边缘全松缝呈现", "适用材质: 珠宝饰品精饰、汽车轮毂最终上色、高光亚克力/有机树脂"],
+      desc: "松缝结构可用于较轻的抛光或上色评估。准确纤维成分、布轮结构、抛光膏配对、使用限制、发热和表面结果须在买家工件上批准。",
+      features: ["材料：准确纤维成分按 SKU 规格确认", "缝线与边缘结构：由来源形成文件", "用途与表面结果：在买家工件上测试"],
     },
     {
-      name: "台磨机超厚缝线棉轮 (Bench Grinder Buffs)",
-      desc: "为标准 6英寸 与 8英寸 台式砂轮机/抛光机设计的超厚棉布轮。能够承受强力打磨压力不变形，双线踩边设计，可防织物高速飞边或纤维松脱，极大提升生产安全性。",
-      features: ["产品直径: 6英寸 (150mm), 8英寸 (200mm), 10英寸 (250mm)", "叠层厚度: 1/2英寸 到 2.5英寸 夹层叠加厚度均可定制", "轴孔衬板: 提供钢板扣法兰、金属加强圈及伸缩套套管组合"],
+      name: "台磨机缝线棉轮询价 (Bench Grinder Buffs)",
+      desc: "台式抛光机棉布轮询价需提供机器、轴径、法兰、防护、速度、压力和目标工件。直径、厚度、结构、孔径、标称使用限制与安全证据按具体来源、SKU和样品批准确认。",
+      features: ["直径：按工具与SKU确认", "叠层与厚度：按批准规格确认", "轴孔衬板：按机器、来源与样品确认"],
     },
     {
       name: "带柄圆顶及圆柱迷你布轮 (Mounted Buffs)",
-      desc: "配备 1/4\" 金属固定柄的圆顶、圆柱、圆锥和蘑菇形抛光布轮。专门用于手电钻及冲击批打磨，针对深孔、轮毂内凹死角、排气管管道及不规则曲面提供优异的通过性与去氧化能力。",
-      features: ["适配手柄: 1/4\" (6.35mm) 标准六角快装柄或圆形不锈钢接柄", "外观形态: 提供 T型布碟、圆柱形、圆锥形、圆顶形、蘑菇形", "MOQ 要求: 单一器形 1,000 件起批，或定制整套多形态彩盒"],
+      desc: "圆顶、圆柱、圆锥或蘑菇形带柄布轮可用于讨论凹槽和曲面应用。柄径、工具兼容性、标称使用限制、材料与性能须按具体SKU确认并在目标工件上测试。",
+      features: ["柄部几何与尺寸：按工具确认", "形状和材料：根据工件与操作空间选择", "MOQ：按批准 SKU、材料、包装和数量报价"],
     },
     {
       name: "彩色抛光蜡 / 抛光膏条装系列 (Compound Bars)",
-      desc: "高品质研磨切削油脂，按粗细级级区分：绿蜡（铬绿高光氧化铬镜面）、白蜡（硬质不锈钢最终光泽）、红蜡（红 Tripoli 铜铝中抛切削）、黑蜡（Emery 强力金属去锈去氧化）。",
-      features: ["单条克重: 100g, 250g, 500g 封塑防潮纸盒标签定制", "基础基质: 高等级动物脂肪与天然硬石蜡粘合基质", "安全贴标: 封塑热收缩贴条码，满足直接零售货架要求"],
+      desc: "抛光膏条可按切削与表面目标比较不同颜色或配方。成分、危害信息、适用基材、克重、储存与性能必须由负责来源提供，并与实际布轮和工件一起批准。",
+      features: ["单条克重：按SKU报价", "配方与安全资料：向负责来源索取", "布轮、基材与表面目标：写入测试计划", "标签与条码：印刷前完成批准"],
     },
   ];
 
@@ -62,7 +62,7 @@ export default function ChineseBuffingPolishingWheels() {
                 工业棉布轮与抛光轮系列
               </h1>
               <p className="mt-3 text-base text-industry-slate-400">
-                高密度工业纯棉缝线布轮、镜面绒布轮、台式砂轮机厚棉轮、电钻迷你打磨轮及专属色标抛光膏。
+                密缝、松缝、台式机与带柄布轮及抛光膏的采购询价；纤维成分、结构、适配工具、性能和可供范围按SKU核验。
               </p>
             </div>
 
@@ -91,9 +91,9 @@ export default function ChineseBuffingPolishingWheels() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="md:w-1/3">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">核心指标</span>
-                <h2 className="text-2xl font-black text-white mt-1">抛光布轮定制细节</h2>
+                <h2 className="text-2xl font-black text-white mt-1">抛光布轮询价字段</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  为工业买家汇总的叠层、中心孔和抛光辅料核心工艺参数。
+                  所有信息必须绑定准确来源、SKU、样品与书面报价后才能批准。
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -102,13 +102,13 @@ export default function ChineseBuffingPolishingWheels() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>叠层与厚度控制:</strong> 直径从 3英寸 到 10英寸，厚度层数提供 30 Ply 到 80 Ply，依据重力切削和镜面还原要求精细定制。</span>
+                    <span className="text-industry-slate-200"><strong>结构与尺寸:</strong> 直径、厚度、层数、纤维成分和缝线结构须通过来源文件与样品测量确认。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>柔性轴心接头:</strong> 标准 1/2&quot;, 5/8&quot;, 3/4&quot;, 1&quot; 伸缩管轴孔。针对手电钻提供快速卡入的 1/4&quot; 六角铁柄接头。</span>
+                    <span className="text-industry-slate-200"><strong>工具适配:</strong> 孔径、衬套、法兰或柄部几何须匹配买家机器、防护与标示使用限制。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -116,13 +116,13 @@ export default function ChineseBuffingPolishingWheels() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>抛光膏适配协同:</strong> 定制克重的固体抛光蜡条（绿铬高光蜡、白镜面蜡、红 Tripoli 中抛蜡、黑 Emery 去氧化粗蜡），防潮塑封标。</span>
+                    <span className="text-industry-slate-200"><strong>抛光膏配对:</strong> 成分、危害、克重、布轮配对与表面目标须由负责来源提供，并在工件上测试。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>批量起订与货运:</strong> 棉轮单规格 500 件起，带柄电钻磨头 1,000 件起；交期和样品条件按具体配置报价。</span>
+                    <span className="text-industry-slate-200"><strong>书面商业条款:</strong> 生产来源、起订量、样品费、交期、付款和贸易术语按SKU与配置写入报价或合同。</span>
                   </li>
                 </ul>
               </div>
@@ -170,7 +170,7 @@ export default function ChineseBuffingPolishingWheels() {
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg text-center space-y-4">
                 <h3 className="text-lg font-bold text-white uppercase">寻找磨料抛光套装的专属品牌定制与扫码合规？</h3>
                 <p className="text-sm text-industry-slate-400 max-w-lg mx-auto">
-                  我们为跨境电商卖家提供布轮目数、夹心孔径的自由组合，提供全彩版面吸塑纸卡或牛皮外箱设计，并在每套出厂产品贴附 FNSKU/UPC 条形码。
+                  泡壳、彩卡或外箱可结合买家批准的设计稿、警告和买家提供的FNSKU/UPC数据进行评估；执行范围、样品扫码和平台责任应书面确认。
                 </p>
                 <div className="pt-2">
                   <Link
@@ -185,55 +185,55 @@ export default function ChineseBuffingPolishingWheels() {
               {/* Technical Specifications Table */}
               <div id="spec-table" className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  标准抛光轮尺寸与中心轴孔孔径规格表
+                  SKU 批准矩阵 — 网站不发布标准可供尺寸
                 </h2>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
-                        <th className="px-4 py-3 font-semibold uppercase">标准外径</th>
-                        <th className="px-4 py-3 font-semibold uppercase">布轮厚度层数 (Ply)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">中心孔孔径选项 (Arbor ID)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">同心缝线间距 (Stitch)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">标准批量起订量 (MOQ)</th>
+                        <th className="px-4 py-3 font-semibold uppercase">询价字段</th>
+                        <th className="px-4 py-3 font-semibold uppercase">买家输入</th>
+                        <th className="px-4 py-3 font-semibold uppercase">来源证据</th>
+                        <th className="px-4 py-3 font-semibold uppercase">样品检查</th>
+                        <th className="px-4 py-3 font-semibold uppercase">批准记录</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3">3&quot; (75mm)</td>
-                        <td className="px-4 py-3">30 Ply / 40 Ply</td>
-                        <td className="px-4 py-3">1/4&quot; 六角接柄快速换合</td>
-                        <td className="px-4 py-3">3/8&quot; (9.5mm)</td>
-                        <td className="px-4 py-3">1,000 件起</td>
+                        <td className="px-4 py-3">机器适配</td>
+                        <td className="px-4 py-3">工具、主轴、法兰与防护</td>
+                        <td className="px-4 py-3">图纸与标示使用限制</td>
+                        <td className="px-4 py-3">装配、间隙与跳动</td>
+                        <td className="px-4 py-3">签署 SKU 规格</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">4&quot; (100mm)</td>
-                        <td className="px-4 py-3">30 Ply / 40 Ply</td>
-                        <td className="px-4 py-3">3/8&quot;, 1/2&quot;</td>
-                        <td className="px-4 py-3">3/8&quot; 或 1/4&quot; 间距</td>
-                        <td className="px-4 py-3">1,000 件起</td>
+                        <td className="px-4 py-3">布轮结构</td>
+                        <td className="px-4 py-3">切削、上色目标与工件</td>
+                        <td className="px-4 py-3">纤维、层数与缝线记录</td>
+                        <td className="px-4 py-3">尺寸与可见结构</td>
+                        <td className="px-4 py-3">批准样品编号</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3">6&quot; (150mm)</td>
-                        <td className="px-4 py-3">40 Ply / 50 Ply / 60 Ply</td>
-                        <td className="px-4 py-3">1/2&quot;, 5/8&quot;</td>
-                        <td className="px-4 py-3">3/8&quot;, 1/4&quot;, 1/8&quot;（折叠气道轮）</td>
-                        <td className="px-4 py-3">500 件起</td>
+                        <td className="px-4 py-3">抛光膏</td>
+                        <td className="px-4 py-3">基材与目标表面</td>
+                        <td className="px-4 py-3">成分、危害与储存资料</td>
+                        <td className="px-4 py-3">代表性工件测试</td>
+                        <td className="px-4 py-3">测试计划与结果</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">8&quot; (200mm)</td>
-                        <td className="px-4 py-3">40 Ply / 50 Ply / 60 Ply</td>
-                        <td className="px-4 py-3">5/8&quot;, 3/4&quot;, 1&quot;</td>
-                        <td className="px-4 py-3">3/8&quot; 或 1/4&quot; 间距</td>
-                        <td className="px-4 py-3">500 件起</td>
+                        <td className="px-4 py-3">包装</td>
+                        <td className="px-4 py-3">渠道、警示与版稿</td>
+                        <td className="px-4 py-3">来源、材料与刀模</td>
+                        <td className="px-4 py-3">装量与标签检查</td>
+                        <td className="px-4 py-3">批准包装规格</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3">10&quot; (250mm)</td>
-                        <td className="px-4 py-3">50 Ply / 60 Ply / 80 Ply</td>
-                        <td className="px-4 py-3">5/8&quot;, 3/4&quot;, 1&quot;, 1-1/4&quot;</td>
-                        <td className="px-4 py-3">3/8&quot; 或 1/4&quot; 间距</td>
-                        <td className="px-4 py-3">300 件起</td>
+                        <td className="px-4 py-3">商业条款</td>
+                        <td className="px-4 py-3">数量、目的地与时间</td>
+                        <td className="px-4 py-3">具名来源与报价依据</td>
+                        <td className="px-4 py-3">样品与里程碑批准</td>
+                        <td className="px-4 py-3">日期化报价或合同</td>
                       </tr>
                     </tbody>
                   </table>
@@ -243,51 +243,51 @@ export default function ChineseBuffingPolishingWheels() {
               {/* Material Density & Thread Specifications Table */}
               <div id="density-table" className="space-y-4 pt-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  棉纤维经纬密度与缝线针距技术参数表
+                  按报价布轮 SKU 核验的结构证据矩阵
                 </h2>
                 <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
-                  针对不同金属的打磨与精抛表面精饰要求，SCOTTCHEN 精细调配经纬纱支线数与表面缝合间距：
+                  没有来源文件与准确 SKU 时，网站不把纤维等级、纱支或缝线结构写成事实。批准前应索取以下证据：
                 </p>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
-                        <th className="px-4 py-3 font-semibold uppercase">纯棉材质等级</th>
-                        <th className="px-4 py-3 font-semibold uppercase">经纬纱支密度</th>
-                        <th className="px-4 py-3 font-semibold uppercase">车缝线规格</th>
-                        <th className="px-4 py-3 font-semibold uppercase">同心缝线间距</th>
-                        <th className="px-4 py-3 font-semibold uppercase">目标加工应用</th>
+                        <th className="px-4 py-3 font-semibold uppercase">结构</th>
+                        <th className="px-4 py-3 font-semibold uppercase">材料证据</th>
+                        <th className="px-4 py-3 font-semibold uppercase">尺寸与缝线</th>
+                        <th className="px-4 py-3 font-semibold uppercase">使用证据</th>
+                        <th className="px-4 py-3 font-semibold uppercase">批准记录</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3 font-bold">特级天然无漂白纯棉布</td>
-                        <td className="px-4 py-3">21s / 21s (84 x 72 股/英寸)</td>
-                        <td className="px-4 py-3">32s / 2股 普梳纯棉车缝线</td>
-                        <td className="px-4 py-3">1/4&quot; (6.35 毫米) 密缝同心圆</td>
-                        <td className="px-4 py-3">铜件/不锈钢件重载粗抛与拉丝</td>
+                        <td className="px-4 py-3 font-bold">同心密缝布轮</td>
+                        <td className="px-4 py-3">纤维声明与来源文件</td>
+                        <td className="px-4 py-3">直径、层数、孔径、线与针距按SKU</td>
+                        <td className="px-4 py-3">标签限制、工具适配与样品测试</td>
+                        <td className="px-4 py-3">签字规格与参考样品</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">细柔黄 flannel 双面绒布</td>
-                        <td className="px-4 py-3">32s / 32s (100 x 80 股/英寸)</td>
-                        <td className="px-4 py-3">21s / 2股 柔性车缝线</td>
-                        <td className="px-4 py-3">3/8&quot; (9.53 毫米) 宽缝同心圆</td>
-                        <td className="px-4 py-3">汽车漆面清漆层镜面抛光及高光提亮</td>
+                        <td className="px-4 py-3 font-bold">松缝绒布轮</td>
+                        <td className="px-4 py-3">纤维声明与来源文件</td>
+                        <td className="px-4 py-3">直径、层数、孔径与中心缝线按SKU</td>
+                        <td className="px-4 py-3">标签限制、抛光膏与样品表面</td>
+                        <td className="px-4 py-3">签字规格与参考样品</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-bold">剑麻棉线混织强化层</td>
-                        <td className="px-4 py-3">10s / 10s 粗支重磅帆布织造</td>
-                        <td className="px-4 py-3">40s / 3股 高强防割尼龙芯缝线</td>
-                        <td className="px-4 py-3">1/8&quot; (3.18 毫米) 超致密连锁交织</td>
-                        <td className="px-4 py-3">铸铁件焊缝整平与强力去毛刺</td>
+                        <td className="px-4 py-3 font-bold">剑麻或混合结构轮</td>
+                        <td className="px-4 py-3">纤维混合、来源与安全资料</td>
+                        <td className="px-4 py-3">直径、层数、孔径与缝线按SKU</td>
+                        <td className="px-4 py-3">标签限制、工具适配与样品测试</td>
+                        <td className="px-4 py-3">签字规格与来源证据</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">特柔白 open-fold 镜面绒布</td>
-                        <td className="px-4 py-3">40s / 40s (120 x 100 股/英寸)</td>
-                        <td className="px-4 py-3">16s / 2股 无捻超柔纯棉线</td>
-                        <td className="px-4 py-3">无车线 (自然层叠松装版型)</td>
-                        <td className="px-4 py-3">高档珠宝与贵金属镜面上色提亮</td>
+                        <td className="px-4 py-3 font-bold">开放折叠精饰轮</td>
+                        <td className="px-4 py-3">纤维声明与来源文件</td>
+                        <td className="px-4 py-3">直径、折数、孔径与结构按SKU</td>
+                        <td className="px-4 py-3">标签限制、抛光膏与样品表面</td>
+                        <td className="px-4 py-3">签字规格与参考样品</td>
                       </tr>
                     </tbody>
                   </table>
@@ -362,14 +362,14 @@ export default function ChineseBuffingPolishingWheels() {
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  现有零售产品参考
+                  买家证据中心
                 </h3>
                 <p className="text-xs leading-relaxed text-industry-slate-300">
-                  可先查看 SCOTTCHEN 现有零售产品，了解布轮、抛光膏和工具包的常见组合，再提交 B2B 定制要求。
+                  查看当前文件状态、核验边界，以及下达 B2B 订单前应索取的资料。
                 </p>
-                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
-                  查看 SCOTTCHEN 零售产品站 &rarr;
-                </a>
+                <Link href="/zh/evidence-center" className="text-xs font-bold text-industry-orange hover:underline">
+                  查看买家证据 &rarr;
+                </Link>
               </div>
 
             </div>
@@ -382,10 +382,10 @@ export default function ChineseBuffingPolishingWheels() {
       <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">亚马逊零售样品直达</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">外部零售链接</span>
             <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊零售商品参考</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              下方为部分亚马逊零售商品链接，可用于了解现有产品形式。库存、价格、卖家状态和 Prime 资格均由亚马逊平台管理，可能随时变化。
+              仅作外部零售商品参考。卡片标题与说明只是对平台定位的概括，不证明 SCOTTCHEN 的 OEM 来源、当前可供性、规格、合规、品牌权利或性能；商品状态与价格由亚马逊管理。
             </p>
           </div>
 
@@ -499,15 +499,15 @@ export default function ChineseBuffingPolishingWheels() {
               },
               {
                 q: "如何合理匹配不同的抛光轮与抛光膏颜色？",
-                a: "若要粗切削金属去斑去锈，使用密缝布轮配合黑 Emery 砂蜡；中度切削和拉丝黄铜使用红 Tripoli 蜡；若要对不锈钢和一般钢件进行镜面还原，使用白蜡配合密缝棉轮；若要对铝材或高级铜饰品进行无痕镜面色彩提亮，使用绿蜡配合松缝 flannel 绒布轮。"
+                a: "颜色名称不能证明配方或适用性。应向报价来源索取成分、危害和目标基材资料，再用准确布轮、工件、压力和转速比较各抛光膏，并以代表性样件结果批准组合。"
               },
               {
                 q: "你们提供用于台磨机和手电钻的轴套和转接铁杆吗？",
-                a: "可提供伸缩轴套以及 1/4\" 六角柄或圆柄选项。使用前必须在批准规格中核对轴径或夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。"
+                a: "可提出轴套、六角柄或圆柄需求，但可供范围、材料、尺寸、工具适配和标签工作限制必须由报价 SKU 与样品确认。"
               },
               {
                 q: "你们对零售货架包装提供哪些合规支持？",
-                a: "可按买家确认稿制作泡壳、彩卡、纸袋和瓦楞彩盒，并应用品牌、安全警示及 FNSKU/UPC 数据后进行样品扫码检查。最终零售或平台入仓要求以渠道当期规则为准。"
+                a: "泡壳、彩卡、纸袋或彩盒可用于询价。来源、刀模、版稿、权利、警告、买家条码数据、样品与扫码记录须按项目批准；本页不承诺某种包装或平台接收。"
               },
               {
                 q: "样品包的寄送流程是怎样的？",
@@ -536,86 +536,13 @@ export default function ChineseBuffingPolishingWheels() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#productgroup"),
-                "name": "SCOTTCHEN 工业级抛光轮及棉布轮规格目录",
-                "description": "专业出口纯棉密缝布轮、松缝黄 flannel 绒布轮、带柄迷你打磨轮及多规格固体抛光蜡条。专为金属打磨、镜面色彩还原及五金分销商定制设计。",
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#catalog"),
+                "name": "抛光轮与布轮 RFQ 采购目录",
+                "description": "用于询价规划的结构参考；准确材料、尺寸、使用限制、可供范围与商业条款须由带日期的 SKU 报价和批准证据确认。",
                 "url": absoluteUrl("/zh/products/buffing-polishing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
-                "brand": {
-                  "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@id": absoluteUrl("/#organization")
-                },
-                "category": "抛光棉布轮与抛光耗材套装",
-                "material": "纯棉 flannel、棉帆布、剑麻棉混织、固体抛光蜡",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "起订量依据",
-                    "value": "台磨机棉轮单规格 500 件起；带柄电钻磨头单器形 1,000 件起"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "报价生产周期",
-                    "value": "开单确认设计稿后 25 至 35 天"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "包装选项",
-                    "value": "泡壳、彩卡、纸袋、瓦楞彩盒，可应用品牌、安全警示及 FNSKU/UPC 条码数据"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "常见应用材质",
-                    "value": "不锈钢、铝合金、铜件/黄铜、碳钢、亚克力、镀铬装饰件及木器表面精饰"
-                  }
-                ],
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "name": "Spiral Stitched Cotton Buffing Wheel (密缝棉布轮)",
-                    "description": "密缝线缝，高硬度大打磨力，适于金属拉丝及去锈。",
-                    "sku": "SC-SPIRAL-COTTON-ZH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "棉帆布或加强棉混织",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "层数选项", "value": "30 Ply、40 Ply、50 Ply 或 60 Ply" },
-                      { "@type": "PropertyValue", "name": "中心孔规格", "value": "1/2 英寸、5/8 英寸、3/4 英寸或 1 英寸中心纸管/塑料法兰圈" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "Loose Cotton Flannel Coloring Wheel (松缝 flannel 绒布轮)",
-                    "description": "特柔松缝，在高速下自然撑开，适于极高亮镜面上色及精细打磨。",
-                    "sku": "SC-LOOSE-FLANNEL-ZH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "细柔绒毛精梳纯棉 flannel 织物",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "缝制手法", "value": "仅轴心一圈车线固定，边缘全松缝" },
-                      { "@type": "PropertyValue", "name": "适用场景", "value": "珠宝饰品精饰、汽车轮毂最终上色、高光亚克力/有机树脂" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "Mounted Drill Buffing Wheels (带柄迷你手电钻布轮)",
-                    "description": "焊接 1/4英寸 六角/圆形适配铁柄，专攻深槽、死角和汽车排气管打磨。",
-                    "sku": "SC-SHANK-BUFFER-ZH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "适配手柄", "value": "1/4 英寸 (6.35mm) 标准六角快装柄或圆形不锈钢接柄" },
-                      { "@type": "PropertyValue", "name": "起订量依据", "value": "按器形、柄径、材料、包装和订单数量报价" }
-                    ]
-                  }
-                ]
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               }
             ]
           })

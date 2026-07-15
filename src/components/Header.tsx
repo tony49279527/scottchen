@@ -42,30 +42,40 @@ export default function Header() {
         { name: "OEM", href: "/zh/oem-private-label" },
         { name: "应用", href: "/zh/applications" },
         { name: "质检", href: "/zh/quality-control" },
+        { name: "证据", href: "/zh/evidence-center" },
         { name: "资源", href: "/zh/resources" },
-        { name: "关于", href: "/zh/about" },
       ]
     : [
         { name: "OEM", href: "/oem-private-label" },
         { name: "Applications", href: "/applications" },
         { name: "Quality", href: "/quality-control" },
+        { name: "Evidence", href: "/evidence-center" },
         { name: "Resources", href: "/resources" },
-        { name: "About", href: "/about" },
       ];
 
   const secondaryNavItems = isZh
     ? [
         { name: "样品申领", href: "/zh/sample-kit" },
-        { name: "生产与采购", href: "/zh/china-abrasive-manufacturer" },
+        { name: "供应链核验", href: "/zh/china-abrasive-manufacturer" },
         { name: "批发合作", href: "/zh/wholesale-abrasives" },
         { name: "供应商档案", href: "/zh/supplier-profile" },
+        { name: "产品合规", href: "/zh/product-compliance" },
+        { name: "采购条款", href: "/zh/procurement-terms" },
+        { name: "包装流程", href: "/zh/packaging-private-label" },
+        { name: "案例标准", href: "/zh/case-studies" },
+        { name: "关于", href: "/zh/about" },
         { name: "联系我们", href: "/zh/contact" },
       ]
     : [
         { name: "Sample Kit", href: "/sample-kit" },
-        { name: "Production & Sourcing", href: "/china-abrasive-manufacturer" },
+        { name: "Supply-Chain Verification", href: "/china-abrasive-manufacturer" },
         { name: "Wholesale", href: "/wholesale-abrasives" },
         { name: "Supplier Profile", href: "/supplier-profile" },
+        { name: "Product Compliance", href: "/product-compliance" },
+        { name: "Procurement Terms", href: "/procurement-terms" },
+        { name: "Packaging Workflow", href: "/packaging-private-label" },
+        { name: "Case Evidence", href: "/case-studies" },
+        { name: "About", href: "/about" },
         { name: "Contact", href: "/contact" },
       ];
 

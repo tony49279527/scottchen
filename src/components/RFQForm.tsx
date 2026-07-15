@@ -571,7 +571,7 @@ export default function RFQForm() {
           />
           <span className="ml-3 text-xs text-industry-slate-400 leading-relaxed">
             {isZh
-              ? "我同意本站的隐私政策，并授权 SCOTTCHEN (SCOTTCHEN) 的商务专员通过邮箱或电话向我提供报价及定制包装咨询。"
+              ? "我同意本站的隐私政策，并同意 SCOTTCHEN 通过邮箱或电话就本次询价与我联系。"
               : "I agree to the privacy policy and consent to being contacted by SCOTTCHEN for commercial quotes and custom packaging consultations."}{" "}
             <span className="text-industry-orange">*</span>
           </span>

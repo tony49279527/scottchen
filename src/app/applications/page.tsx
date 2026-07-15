@@ -57,10 +57,10 @@ export default function ApplicationsOverview() {
     {
       id: "online-sellers",
       name: "Online Seller Specialty Accessory Kits",
-      tag: "Amazon, eBay, and Shopify Retail-Ready Packs",
+      tag: "Amazon, eBay, and Shopify Packaging Planning",
       challenges: "Abrasives online suffer from high return rates if tool compatibility is ambiguous. Custom kits must be lightweight to qualify for low tier storage fees, and include clear guides to prevent bad consumer feedback.",
       products: "Pre-bundled polishing wheel kits, assorted sandpaper rolls, multi-grit detail stick packs.",
-      packaging: "Amazon-ready mailer boxes with barcode sticker applications, instruction sheets.",
+      packaging: "Mailer-box, buyer-supplied barcode and instruction-sheet concepts subject to artwork, scan, source and current channel approval.",
     },
   ];
 
@@ -77,7 +77,7 @@ export default function ApplicationsOverview() {
                 Scenario-Specific Surface Finishing
               </h1>
               <p className="mt-4 text-base text-industry-slate-400 leading-relaxed">
-                We build accessory combinations matched to specific substrates. Align your catalog with the exact workflows of your target buyers.
+                Use these scenarios to draft an RFQ for substrate-specific accessory combinations. Source, compatibility, performance and packaging remain subject to quotation and representative sample approval.
               </p>
             </div>
             
@@ -137,7 +137,7 @@ export default function ApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Distribution Kits:</strong> Configurable tool pairings in private-label blisters or color boxes; 500 sets is a reference MOQ, subject to the quoted specification.</span>
+                    <span className="text-industry-slate-200"><strong>Distribution Kits:</strong> Configurable tool pairings in private-label blisters or color boxes; MOQ is quoted by SKU, packaging and quantity.</span>
                   </li>
                 </ul>
               </div>
@@ -222,23 +222,23 @@ export default function ApplicationsOverview() {
             {[
               {
                 q: "How do I choose between cotton buffing wheels and zirconia fiber discs for metalworking?",
-                a: "Zirconia fiber discs are engineered for aggressive material removal, weld leveling, and rust grinding. Once the surface is mechanically prepped and flat, cotton buffing wheels paired with abrasive compounds (like Black Emery or White Rouge) are used to deburr, clean, and color the metal to a reflective finish."
+                a: "Fiber discs and cotton-wheel processes serve different stages. Define the workpiece, defect, tool, finish target and safety requirements, then compare quoted disc and buffing configurations on representative samples instead of assuming a fixed material sequence."
               },
               {
                 q: "What are the default grit options included in woodworking and sanding paper kits?",
-                a: "For woodworking and refinishing, our kits typically range from coarse P80 and P120 (for shaping and varnish stripping) up to P180, P240, and P320 (for pre-stain grain smoothing). Sourcing agents can customize this mix for their specific market target."
+                a: "There is no default kit on this page. The buyer should define the substrate, coating, removal step and target finish; the quoted BOM then lists each grit, backing, source and pack count for sample approval."
               },
               {
                 q: "Are the drywall sanding screens compatible with automated dust-extraction tools?",
-                a: "Yes. Our silicon carbide drywall mesh screens feature an open fiberglass design that allows standard vacuum sanders to draw dust directly through the screen. We cut mesh sheets to standard 9x11\" and 3.25x11\" dimensions to fit popular orbital and manual hand sanders."
+                a: "An open-mesh configuration can be evaluated with the buyer's exact sander, pad, extraction path and seal. Mesh material, dimensions, hole pattern, dust behavior and tool fit must be confirmed by the quoted SKU and representative trial."
               },
               {
                 q: "Can we configure automotive wheel-polishing kits with custom shanks and compound weights?",
-                a: "Yes. We offer standard 1/4\" round and hex shank adapter fittings for power drills and impact drivers, and can bundle these with 100g or 250g compound bars. We package these into custom-molded blister packs featuring your branding."
+                a: "Provide the exact tool, shank, speed, wheel and compound requirements. Adapter, compound weight and pack format can be scoped in a BOM, but availability, compatibility, dieline ownership and branding are confirmed only in the quotation and approved sample."
               },
               {
                 q: "Do you offer private labeled, application-specific kits for ecommerce store launches?",
-                a: "Yes, this is our specialty. Sourcing managers can define a targeted workflow (like 'Boat Gelcoat Repair' or 'Knife Mirror Polishing') and choose the exact combination of wheels, pads, and abrasives. We provide custom color box packaging with barcodes, pre-sorted and ready for ecommerce fulfillment."
+                a: "A buyer can define a workflow and proposed assortment for quotation. Ecommerce readiness is not automatic: component source, warnings, artwork, buyer-supplied barcode data, pack-out, scan result, carton and warehouse rules must all be approved for the live project."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">

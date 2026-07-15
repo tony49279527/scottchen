@@ -73,6 +73,11 @@ const localizedRoutes = [
   { en: "/sample-kit", zh: "/zh/sample-kit", priority: 0.8, changefreq: "monthly" as const },
   { en: "/contact", zh: "/zh/contact", priority: 0.9, changefreq: "monthly" as const },
   { en: "/supplier-profile", zh: "/zh/supplier-profile", priority: 0.7, changefreq: "monthly" as const },
+  { en: "/evidence-center", zh: "/zh/evidence-center", priority: 0.9, changefreq: "monthly" as const },
+  { en: "/product-compliance", zh: "/zh/product-compliance", priority: 0.85, changefreq: "monthly" as const },
+  { en: "/procurement-terms", zh: "/zh/procurement-terms", priority: 0.85, changefreq: "monthly" as const },
+  { en: "/packaging-private-label", zh: "/zh/packaging-private-label", priority: 0.85, changefreq: "monthly" as const },
+  { en: "/case-studies", zh: "/zh/case-studies", priority: 0.75, changefreq: "monthly" as const },
   { en: "/resources", zh: "/zh/resources", priority: 0.8, changefreq: "monthly" as const },
   {
     en: "/resources/abrasive-sourcing-checklist",

@@ -266,6 +266,18 @@ if (keyText !== indexNowKey) {
   fail("IndexNow key file content does not match the configured key.");
 }
 
+for (const [path, expectedHeader] of [
+  ["/templates/evidence-register-template.csv", "evidence_id,status,document_type"],
+  ["/templates/commercial-terms-template.csv", "product_family,sku_or_configuration"],
+  ["/templates/case-study-intake-template.csv", "case_id,publication_permission"],
+  ["/templates/packaging-release-template.csv", "project_id,sku,pack_layer"],
+]) {
+  const content = await fetchText(new URL(path, fetchOrigin).toString());
+  if (!content.startsWith(expectedHeader)) {
+    fail(`${path} is missing or has an unexpected CSV header.`);
+  }
+}
+
 const sitemap = await fetchText(sitemapFetchUrl);
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)]
   .map((match) => decodeXmlText(match[1].trim()))
@@ -281,6 +293,24 @@ if (!urls.includes(siteUrl)) {
 
 if (!urls.includes(new URL("/catalog.pdf", origin).toString())) {
   fail("Sitemap is missing catalog.pdf.");
+}
+
+for (const path of [
+  "/evidence-center",
+  "/product-compliance",
+  "/procurement-terms",
+  "/packaging-private-label",
+  "/case-studies",
+  "/zh/evidence-center",
+  "/zh/product-compliance",
+  "/zh/procurement-terms",
+  "/zh/packaging-private-label",
+  "/zh/case-studies",
+]) {
+  const requiredUrl = new URL(path, origin).toString();
+  if (!urls.includes(requiredUrl)) {
+    fail(`Sitemap is missing buyer-trust route: ${requiredUrl}`);
+  }
 }
 
 const uniqueUrls = new Set(urls);

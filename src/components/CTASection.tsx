@@ -12,7 +12,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = "Ready to Evaluate Our Surface Finishing Accessories?",
-  subtitle = "Whether you are a tool brand expanding your catalog, a hardware distributor, or an online seller seeking custom retail-ready packaging, we have sourcing paths tailored to you.",
+  subtitle = "Tool brands, distributors and online sellers can submit a scoped RFQ for component sourcing, samples and packaging approval; availability and terms are confirmed in writing.",
 }: CTASectionProps) {
   const pathname = usePathname() || "";
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
@@ -27,7 +27,7 @@ export default function CTASection({
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-industry-slate-400">
           {isZh
-            ? "无论您是工具品牌商、渠道分销商，还是希望做零售化套装的跨境卖家，我们都可以提供对应的采购与打样路径。"
+            ? "工具品牌、渠道分销商和跨境卖家可提交组件、样品与包装审批范围明确的询价；可行性与条款以书面回复为准。"
             : subtitle}
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">

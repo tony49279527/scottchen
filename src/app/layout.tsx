@@ -1,31 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DeferredClientShell from "@/components/DeferredClientShell";
 import DocumentShell from "@/components/DocumentShell";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
-  SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
   SITE_URL,
 } from "@/lib/site";
 import "./globals.css";
-
-const bodyFont = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-site-sans",
-  display: "swap",
-});
-
-const displayFont = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-site-display",
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   colorScheme: "light dark",
@@ -37,13 +21,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
-  description: "SCOTTCHEN supplies retail-ready surface finishing accessory kits with private-label packaging, custom grit assortments and B2B sourcing support.",
+  title: "B2B Abrasive Sourcing & Private-Label Project Support | SCOTTCHEN",
+  description: "Shanghai-based B2B sourcing and project support for abrasive, sanding and polishing accessories, samples, packaging plans and written commercial terms.",
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
-  category: "Industrial Manufacturing",
+  category: "Industrial Procurement",
   referrer: "strict-origin-when-cross-origin",
   robots: {
     index: true,
@@ -69,7 +53,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
     description:
-      "Retail-ready surface finishing kits, custom assortments, private label packaging and B2B sourcing support.",
+      "B2B abrasive sourcing, proposed assortments, private-label packaging planning and written project controls.",
     url: SITE_URL,
     locale: "en_US",
     alternateLocale: ["zh_CN"],
@@ -86,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OEM Abrasive, Sanding & Polishing Kits | SCOTTCHEN",
     description:
-      "Retail-ready surface finishing kits, private label packaging and B2B sourcing support.",
+      "B2B abrasive sourcing, private-label packaging planning and written project controls.",
     images: [absoluteUrl("/opengraph-image")],
   },
 };
@@ -95,7 +79,7 @@ const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "Brand",
       "@id": `${SITE_URL}/#organization`,
       "name": "SCOTTCHEN",
       "url": SITE_URL,
@@ -106,22 +90,10 @@ const corporateSchema = {
         "height": 512,
       },
       "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
-      "email": SITE_EMAIL,
-      "slogan": "Industrial OEM Abrasive, Sanding & Polishing Solutions",
+      "slogan": "B2B Abrasive Sourcing & Project Support",
       "description":
         "B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.",
       "dateModified": SITE_UPDATED,
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Shanghai",
-        "addressRegion": "Shanghai",
-        "addressCountry": "CN",
-      },
-      "areaServed": ["Worldwide", "North America", "Europe", "Asia", "Australia"],
-      "brand": {
-        "@type": "Brand",
-        "name": "SCOTTCHEN"
-      },
       "knowsAbout": [
         "Coated abrasives",
         "Cotton buffing wheels",
@@ -133,42 +105,6 @@ const corporateSchema = {
         "Private-label tool accessory kits",
         "Retail packaging and barcode preparation",
         "B2B abrasive supplier evaluation"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "SCOTTCHEN B2B abrasive accessory catalog",
-        "itemListElement": [
-          {
-            "@type": "OfferCatalog",
-            "name": "Buffing and polishing wheels",
-            "url": absoluteUrl("/products/buffing-polishing-wheels")
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Sanding and grinding accessories",
-            "url": absoluteUrl("/products/sanding-grinding-accessories")
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Private-label surface finishing kits",
-            "url": absoluteUrl("/oem-private-label")
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "B2B abrasive sourcing resources",
-            "url": absoluteUrl("/resources")
-          }
-        ]
-      },
-      "sameAs": [RETAIL_SITE_URL],
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "email": SITE_EMAIL,
-          "contactType": "sales",
-          "availableLanguage": ["English", "Chinese"],
-          "areaServed": "Worldwide",
-        }
       ]
     },
     {
@@ -177,7 +113,7 @@ const corporateSchema = {
       "url": SITE_URL,
       "name": `${SITE_NAME} - OEM Abrasive Sourcing Support`,
       "description": "B2B abrasive, sanding and polishing accessory sourcing site with English and Simplified Chinese buyer resources.",
-      "publisher": {
+      "about": {
         "@id": `${SITE_URL}/#organization`
       },
       "inLanguage": ["en", "zh-CN"]
@@ -192,7 +128,7 @@ export default function RootLayout({
 }) {
   return (
     <DocumentShell
-      className={`${bodyFont.variable} ${displayFont.variable} h-full`}
+      className="h-full"
       bodyClassName="h-full antialiased bg-industry-slate-900 text-industry-slate-200 font-sans"
       head={
         <script

@@ -7,8 +7,8 @@ import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Abrasive Products Catalog | SCOTTCHEN China Manufacturer",
-  description: "Browse our technical dimensions, standard B2B MOQ parameters, and packaging options for polishing wheels, sanding screen, grinding discs, and custom kits.",
+  title: "OEM Abrasive Products Catalog | SCOTTCHEN",
+  description: "Compare abrasive product families, specification controls and packaging options. MOQ, production source, evidence and terms are quoted by SKU.",
   path: "/products",
   alternatePath: "/zh/products",
 });
@@ -21,17 +21,17 @@ export default function ProductsOverview() {
         {
           name: "Buffing & Polishing Wheels",
           url: "/products/buffing-polishing-wheels",
-          types: "Cotton spiral stitched, loose cotton flannel, airway wheels, sisal wheels, felt wheels, drill polishers.",
-          moq: "500 pcs/size",
-          pack: "Bulk carton / customized private label box",
+          types: "Candidate wheel constructions and tool-mounted concepts; fiber, build, dimensions, use limits and source require SKU evidence.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: source, materials, dieline, pack-out and approval sample",
           img: "/images/buffing_wheels.webp",
         },
         {
           name: "Polishing Wheel Kits",
           url: "/products/buffing-polishing-wheels",
-          types: "Drill polishing kits, bench grinder restoration kits, mixed size compound kits, retail blister packs.",
-          moq: "500 sets",
-          pack: "Double blister pack / custom color box / polybag",
+          types: "Candidate wheel, compound, adapter and pack-out combinations; there is no approved stock BOM on this page.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: BOM, tooling, artwork, warnings and channel requirements",
           img: "/images/hero_abrasives_kit.webp",
         },
       ],
@@ -42,25 +42,25 @@ export default function ProductsOverview() {
         {
           name: "Sanding Sheets & Sandpaper Rolls",
           url: "/products/sanding-grinding-accessories",
-          types: "Woodworking sandpaper, automotive wet/dry sheets, furniture refinishing sanding rolls, assorted grits.",
-          moq: "10,000 sheets / 200 rolls",
-          pack: "Grit-assorted sleeves, cardboard roll dispenser boxes",
+          types: "Candidate sheet, roll and dispenser inquiries; grain, backing, grit system, dimensions and wet/dry use require source evidence.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: roll or sheet count, materials, cutter safety and dieline",
           img: "/images/sanding_sheets.webp",
         },
         {
           name: "Sanding Screens & Drywall Abrasives",
           url: "/products/sanding-grinding-accessories",
-          types: "Silicon carbide drywall mesh sanding screens, vacuum-compatible screens, contractor rolls.",
-          moq: "5,000 sheets",
-          pack: "Individually wrapped paper covers / shrink wrap",
+          types: "Candidate mesh sheet or roll inquiries; mesh construction, coating and equipment compatibility require SKU confirmation.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: protection, labels, warnings, pack quantity and transport test",
           img: "/images/sanding_screens.webp",
         },
         {
           name: "Detail Sanding Tools",
           url: "/products/sanding-grinding-accessories",
-          types: "Sanding sticks, mini matchstick details, mold polishing blocks, scale craft smoothing rods.",
-          moq: "1,000 packs",
-          pack: "Clear hanging bags / retail barcode header cards",
+          types: "Candidate hand-sanding tools and replacement abrasives; handle, tension system and abrasive fit require sample approval.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: pack format, artwork rights, warnings and buyer barcode data",
           img: "/images/detail_sanding.webp",
         },
       ],
@@ -71,25 +71,25 @@ export default function ProductsOverview() {
         {
           name: "Grinding & Fiber Discs",
           url: "/products/sanding-grinding-accessories",
-          types: "Zirconia alumina fiber discs, angle grinder discs, metal weld removal, fiberglass sanding backings.",
-          moq: "2,000 discs/grit",
-          pack: "Shrink packs / inner white boxes / bulk export cartons",
+          types: "Candidate fiber-disc or grinding-disc inquiries; grain, bond, backing, arbor and operating limit require exact source evidence.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: product protection, warnings, traceability and carton scope",
           img: "/images/fiber_discs.webp",
         },
         {
           name: "Diamond & Specialty Abrasives",
           url: "/products/sanding-grinding-accessories",
-          types: "Diamond polishing sheets, stone grinding discs, marble and granite grinders, tile/porcelain finishers.",
-          moq: "500 discs",
-          pack: "Inner boxes with warning cards",
+          types: "Higher-risk specialty-abrasive inquiry category; construction, tool, substrate, cooling and safety evidence must be approved.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: protective format, warnings, instructions and source documents",
           img: "/images/diamond_polishing.webp",
         },
         {
           name: "Sanding Dispenser Kits",
           url: "/products/sanding-grinding-accessories",
-          types: "Workshop multi-roll dispenser kits, sandpaper roll refills, assorted grit rolls with racks.",
-          moq: "300 racks",
-          pack: "Color display box with metal tearing edge",
+          types: "Candidate multi-roll dispenser or refill concept; BOM, cutter, roll dimensions, grit mix and source are RFQ fields.",
+          moq: "Quoted per SKU",
+          pack: "RFQ: structural sample, cutter safety, artwork and pack-out approval",
           img: "/images/sanding_dispenser.webp",
         },
       ],
@@ -111,11 +111,11 @@ export default function ProductsOverview() {
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             Surface Finishing Accessories Catalog
             <span className="mt-2 block text-base font-semibold text-industry-slate-400 sm:text-lg">
-              OEM abrasive products from a Shanghai manufacturer — buffing wheels, sanding discs, flap discs, belts, cutting wheels & kits
+              Shanghai B2B sourcing and OEM project support for buffing wheels, sanding discs, flap discs, belts, cutting wheels and kits
             </span>
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
-            Scottchen specializes in supplying configured, customized accessory kits to tool brand catalogs and high-volume retail sellers. Explore our technical dimensions, standard B2B MOQ parameters, and packaging options.
+            Compare candidate product families for tool-brand, distributor and retail projects. Production source, technical evidence, MOQ basis, packaging scope and commercial terms are confirmed per SKU in writing.
           </p>
         </div>
       </section>
@@ -176,7 +176,7 @@ export default function ProductsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Product Families:</strong> Concentrated B2B supply of cotton buffing wheels, sanding rolls, open-mesh screens, and zirconia fiber grinding discs.</span>
+                    <span className="text-industry-slate-200"><strong>Inquiry Families:</strong> Candidate sourcing categories include buffing wheels, sanding rolls, open-mesh screens and fiber grinding discs; availability is confirmed per SKU.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -190,13 +190,13 @@ export default function ProductsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Packaging Configurations:</strong> Pre-assembled grit sleeves, kraft dispenser boxes, double blisters, or FBA shrink cartons.</span>
+                    <span className="text-industry-slate-200"><strong>Packaging Brief:</strong> Sleeves, dispenser boxes, blister concepts or cartons are RFQ formats; source, dieline, materials and sample approval remain project-specific.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Import Readiness:</strong> Complete barcode labels (FNSKU/UPC), custom warnings, and third-party QA pre-shipment clearance.</span>
+                    <span className="text-industry-slate-200"><strong>Import Evidence:</strong> Assign responsibility for buyer barcode data, warnings, destination rules and any third-party inspection in the dated quotation; no clearance is implied.</span>
                   </li>
                 </ul>
               </div>
@@ -236,21 +236,21 @@ export default function ProductsOverview() {
                           <div className="flex justify-between items-start">
                             <h3 className="text-lg font-bold text-white">{item.name}</h3>
                             <span className="text-[10px] font-mono text-industry-orange bg-industry-orange/10 border border-industry-orange/20 px-2 py-0.5 rounded">
-                              Reference B2B MOQ
+                              RFQ category — not stock
                             </span>
                           </div>
                           <p className="text-sm text-industry-slate-400 leading-relaxed">
-                            <strong className="text-industry-slate-300">Description / Subtypes:</strong> {item.types}
+                            <strong className="text-industry-slate-300">Candidate inquiry scope:</strong> {item.types}
                           </p>
                           
                           {/* B2B Sourcing Parameters */}
                           <div className="grid grid-cols-2 gap-4 border-t border-industry-slate-850 pt-4 text-xs font-mono">
                             <div>
-                              <span className="text-industry-slate-500 block">Sourcing MOQ:</span>
+                              <span className="text-industry-slate-500 block">MOQ basis:</span>
                               <span className="text-white font-bold">{item.moq}</span>
                             </div>
                             <div>
-                              <span className="text-industry-slate-500 block">Standard Packaging:</span>
+                              <span className="text-industry-slate-500 block">Packaging RFQ field:</span>
                               <span className="text-white font-bold leading-normal">{item.pack}</span>
                             </div>
                           </div>
@@ -261,7 +261,7 @@ export default function ProductsOverview() {
                             href={item.url}
                             className="text-xs font-bold text-industry-orange hover:text-industry-orange-light uppercase tracking-wider transition-colors"
                           >
-                            View Full Spec Sheet &rarr;
+                            Open RFQ Detail &rarr;
                           </Link>
                           <Link
                             href="/contact"
@@ -287,7 +287,7 @@ export default function ProductsOverview() {
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPEC INDEX & FAQS</span>
             <h2 className="text-3xl font-extrabold text-white mt-3">Frequently Asked Questions</h2>
             <p className="mt-4 text-sm text-industry-slate-400">
-              Technical compliance parameters, customization specs, and shipment logistics details for bulk importers.
+              SKU specifications, evidence requests, customization scope and quoted logistics assumptions for bulk importers.
             </p>
           </div>
 
@@ -295,7 +295,7 @@ export default function ProductsOverview() {
             {[
               {
                 q: "What options do you support for custom catalog configurations?",
-                a: "We allow complete customization of B2B kit configurations. Sourcing agents can determine specific ply counts for cotton buffing wheels, select compound wax bars by chemical formulations, and bundle diverse sandpaper grits (from P60 to P2500) within a single color box or blister layout."
+                a: "B2B kit configurations can be evaluated by SKU, including wheel construction, compound selection, grit assortment and packaging layout. Each component's production source, specification, evidence and commercial scope must be confirmed in the quotation and approved sample."
               },
               {
                 q: "What testing certificates do you provide for grinding and fiber discs?",
@@ -307,7 +307,7 @@ export default function ProductsOverview() {
               },
               {
                 q: "Do you support custom bore/arbor hole size inserts?",
-                a: "Yes. We offer standard telescoping cardboard inserts, brass arbors, and zinc flange plates. Sizing options include 1/2\", 5/8\", 3/4\", and 1\" bore diameters, as well as 1/4\" round and hex shanks for impact drills."
+                a: "Provide the tool, spindle or chuck, flange, guard and operating limit. Bore inserts, arbor materials and shank options are confirmed only for the quoted SKU and responsible source, then approved through fit and sample checks."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">

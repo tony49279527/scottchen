@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM 砂纸、砂带与锆刚玉砂碟配件系列 | SCOTTCHEN",
-  description: "批量采购标准砂纸张、防堵塞碳化硅网格砂网、高切削力锆刚玉纤维砂碟、精细打磨砂纸棒及定制砂带盒装。支持低起订量贴牌服务。",
+  description: "批量采购砂纸张、网格砂网、纤维砂碟、细节打磨棒及砂卷盒装；生产来源、规格、证据和商业条款按SKU报价。",
   path: "/zh/products/sanding-grinding-accessories",
   alternatePath: "/products/sanding-grinding-accessories",
   locale: "zh-CN",
@@ -17,56 +17,56 @@ export default function ChineseSandingGrindingAccessories() {
   const subtypes = [
     {
       name: "干湿两用砂纸与纸砂卷",
-      desc: "工业级碳化硅（适用于汽车喷漆前湿磨）和棕刚玉（适用于木工打磨）。提供预裁切的捆装砂纸张，以及可配合分装盒拉撕的连续纸砂卷卷装。",
+      desc: "砂纸张、砂卷或分装方案的询价类别。材料、背基、粒度、尺寸、来源和适用性只有在对应 SKU 形成文件并批准后才成立。",
       features: [
-        "目数范围: P60, P80, P120, P150, P180, P240, P320, P400, P600, P800, P1000",
-        "标准尺寸: 9\" x 11\" 砂纸张, 2\" 至 4.5\" 宽度砂卷",
-        "底纸基材: C-wt 乳胶抗水底纸，或高韧性 J-wt 软布基",
+        "询价字段：基材、工艺、工具、干湿使用和目标表面",
+        "SKU 证据：磨粒、背基、尺寸、粒度体系和使用限制",
+        "批准要求：来源文件、样品、包装规格和书面商业条款",
       ],
     },
     {
       name: "锆刚玉重切削纤维砂碟",
-      desc: "高品质锆刚玉磨粒，通过高强度树脂牢固粘接于厚质钢纸（硫化纤维）基体上。专为高转速焊缝打磨、强力去毛刺、除锈以及碳钢、合金钢坡口精整而设计。",
+      desc: "纤维砂碟和磨片的采购场景。磨粒、结合剂、背基、孔径、转速等级和基材适配必须通过来源资料与样品批准。",
       features: [
-        "标准规格: 4.5\" (115mm), 5\" (125mm), 7\" (180mm) 外径",
-        "中心孔径: 7/8\" (22.23mm) 圆孔或十字花心定位星型孔",
-        "采购起订: 单规格目数 2,000 张起订",
+        "询价字段：磨片类型、工具、直径、孔径、基材和切削目标",
+        "安全证据：标示使用限制、追溯信息和适用文件",
+        "商业范围：样品费、MOQ、交期、付款与 Incoterms 按项目报价",
       ],
     },
     {
       name: "防堵塞石膏板网格砂网",
-      desc: "双面涂覆碳化硅磨料的玻璃纤维网格底材。开放式结构有助于墙面批灰和石膏板打磨时排灰并减少堵塞，设备兼容性需按尺寸与孔位确认。",
+      desc: "开放式网格研磨产品的询价类别。网格结构、涂层、尺寸、连接方式和除尘兼容性须按所选来源和 SKU 核验。",
       features: [
-        "网格基材: 高抗拉强度玻璃纤维网格",
-        "目数配置: P80, P120, P150, P180, P220",
-        "交货规格: 9x11 砂纸尺寸, 3.25\" x 11\" 手磨板尺寸或定制卷装",
+        "询价字段：表面、打磨方式、托具、除尘结构和目标粒度",
+        "SKU 证据：网格材料、涂层、尺寸和标示使用限制",
+        "批准要求：适配样品、包装规格和日期化报价",
       ],
     },
     {
       name: "精细塑料打磨棒 / 砂纸笔",
-      desc: "配有弹簧张力机构的硬质塑料精细打磨棒，可自由更换超细目数环形砂带。适用于拼装比例模型、珠宝精抛、模具精整等轨道砂光机无法触及的窄缝狭角。",
+      desc: "窄位手工打磨工具与可替换磨料部件的规划类别。手柄、张紧结构、砂带尺寸和用途声明须由报价来源确认。",
       features: [
-        "砂带宽度: 1/4\" (6.35mm), 1/2\" (12.7mm) 规格",
-        "张力结构: 弹簧锁紧式塑料打磨杆",
-        "零售包装: 多目数混合套装（1杆 + 每种目数各5条砂带），跨境电商直接零售",
+        "询价字段：工件、操作空间、磨料尺寸、粒度顺序和包装概念",
+        "兼容批准：手柄、张紧结构和替换砂带配合通过样品确认",
+        "零售范围：BOM、警示、版稿、条码数据和渠道责任形成文件",
       ],
     },
     {
       name: "金刚石与石材石材特殊磨片",
-      desc: "高硬度电镀金刚石磨盘与软性橡胶背板。专门用于高硬度瓷砖、抛光砖、花岗岩、大理石、玉石玻璃等材料的崩边修整、边缘抛光与坡口打磨。",
+      desc: "风险较高的特殊磨料询价类别。任何适用性声明都应先明确结构、工具、基材、使用限制和适用合规证据。",
       features: [
-        "目数范围: 50, 100, 200, 400, 800, 1500, 3000 目",
-        "粘接方式: 强力拉扣魔术贴（自粘式）或钢芯磨盘",
-        "适用底材: 花岗岩、石英石、大理石、瓷砖、玉石及玻璃",
+        "询价字段：基材、工艺、工具、转速、冷却方式和目标表面",
+        "SKU 证据：磨料结构、背基或芯体、尺寸和警示",
+        "批准要求：来源身份、测试依据、样品结果和书面用途边界",
       ],
     },
     {
       name: "工坊砂卷组合分装架套装",
-      desc: "适合工坊与零售货架展示的组合方案。配备钢制或厚硬纸板制的分装架，预装 4 到 5 卷不同目数的自撕砂卷。可快速撕取所需长度而不会把整卷弄乱。",
+      desc: "贴牌包装询价场景，不是已批准的现货套装。砂卷数量、粒度组合、裁切结构、包装材料和渠道要求都属于 RFQ 输入。",
       features: [
-        "砂卷数量: 4卷装与5卷装可选组合",
-        "定制外包装: 印刷专属私有品牌标志，带金属自断切口瓦楞彩盒",
-        "适合客群: 五金工具店、汽修工坊收纳整理货架",
+        "BOM 批准：逐项确认组件来源、身份、数量和兼容性",
+        "包装批准：刀模权属、裁切安全、版稿、警示和条码数据",
+        "商业批准：样品、MOQ、交期、装量检验和 Incoterms",
       ],
     },
   ];
@@ -91,7 +91,7 @@ export default function ChineseSandingGrindingAccessories() {
                 砂纸、研磨与打磨耗材配件
               </h1>
               <p className="mt-3 text-base text-industry-slate-400">
-                大货批发抗水砂纸、锆刚玉钢纸砂碟、防堵塞网格砂布以及工坊自撕砂带卷架套装。
+                面向砂纸、磨片、网格砂网、细节工具和贴牌分装方案的采购询价。
               </p>
             </div>
 
@@ -120,9 +120,9 @@ export default function ChineseSandingGrindingAccessories() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="md:w-1/3">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-industry-orange uppercase">采购指南</span>
-                <h2 className="text-2xl font-black text-white mt-1">磨料研磨性能参数</h2>
+                <h2 className="text-2xl font-black text-white mt-1">询价规格字段</h2>
                 <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">
-                  为大批量采购商整理的技术参数、基材强度以及包装起订量说明。
+                  在把 SKU、样品或商业条款视为已批准之前，买家与来源方应共同形成文件的字段。
                 </p>
               </div>
               <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -182,7 +182,7 @@ export default function ChineseSandingGrindingAccessories() {
                         {sub.desc}
                       </p>
                       <div className="border-t border-industry-slate-800/80 pt-4">
-                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">出厂技术规格能力:</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">报价技术参数:</span>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-industry-slate-400 font-mono">
                           {sub.features.map((feat) => (
                             <li key={feat} className="flex items-center space-x-2">
@@ -201,7 +201,7 @@ export default function ChineseSandingGrindingAccessories() {
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg text-center space-y-4">
                 <h3 className="text-lg font-bold text-white uppercase">自撕盒装砂卷及零售混合挂卡</h3>
                 <p className="text-sm text-industry-slate-400 max-w-lg mx-auto">
-                  可按买家确认的包装资料制作泡壳热缩、纸卡及印刷自撕彩盒，并在出货前对 FNSKU 条码进行扫描抽检。
+                  泡壳、纸卡或自撕彩盒可结合买家批准的包装资料和买家提供的条码数据进行评估；执行范围、样品扫码和平台责任应写入报价。
                 </p>
                 <div className="pt-2">
                   <Link
@@ -227,7 +227,7 @@ export default function ChineseSandingGrindingAccessories() {
                         <th className="px-4 py-3 font-semibold uppercase">研磨材质</th>
                         <th className="px-4 py-3 font-semibold uppercase">目数规格范围</th>
                         <th className="px-4 py-3 font-semibold uppercase">背基基材</th>
-                        <th className="px-4 py-3 font-semibold uppercase">B2B 大货起订量</th>
+                        <th className="px-4 py-3 font-semibold uppercase">起订量依据</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
@@ -236,35 +236,35 @@ export default function ChineseSandingGrindingAccessories() {
                         <td className="px-4 py-3">碳化硅 / 棕刚玉</td>
                         <td className="px-4 py-3">P60 至 P2500</td>
                         <td className="px-4 py-3">C-wt / J-wt 乳胶防水纸</td>
-                        <td className="px-4 py-3">10,000 张</td>
+                        <td className="px-4 py-3">按SKU报价</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">锆刚玉纤维磨片</td>
                         <td className="px-4 py-3">锆刚玉磨料</td>
                         <td className="px-4 py-3">P36 至 P120</td>
                         <td className="px-4 py-3">0.8mm 厚硫化纤维板</td>
-                        <td className="px-4 py-3">5,000 张</td>
+                        <td className="px-4 py-3">按SKU报价</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 font-bold">镂空墙面网格砂网</td>
                         <td className="px-4 py-3">碳化硅双面涂层</td>
                         <td className="px-4 py-3">P80 至 P240</td>
                         <td className="px-4 py-3">高拉力玻璃纤维网格</td>
-                        <td className="px-4 py-3">5,000 张</td>
+                        <td className="px-4 py-3">按SKU报价</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">塑料精细打磨棒</td>
                         <td className="px-4 py-3">棕刚玉软带</td>
                         <td className="px-4 py-3">P80 至 P400</td>
                         <td className="px-4 py-3">弹性 ABS 打磨杆及柔性带</td>
-                        <td className="px-4 py-3">1,000 套</td>
+                        <td className="px-4 py-3">按SKU报价</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 font-bold">金刚石研磨盘</td>
                         <td className="px-4 py-3">电镀高硬度金刚石</td>
                         <td className="px-4 py-3">P50 至 P3000</td>
                         <td className="px-4 py-3">拉扣自粘背胶 / 钢制核心</td>
-                        <td className="px-4 py-3">500 个</td>
+                        <td className="px-4 py-3">按SKU报价</td>
                       </tr>
                     </tbody>
                   </table>
@@ -274,10 +274,10 @@ export default function ChineseSandingGrindingAccessories() {
               {/* Tensile Strength & Fracturing Specifications Table */}
               <div id="tensile-table" className="space-y-4 pt-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  砂带与磨片背基抗拉强度与磨粒附着力规格表
+                  按报价 SKU 核验的磨料背基证据字段
                 </h2>
                 <p className="text-xs text-industry-slate-400 leading-relaxed font-mono">
-                  针对工业磨削大负荷作业环境，背基基材必须承受巨大的剪切与机械拉力负荷，避免磨料崩裂及脱砂失效：
+                  没有来源文件与准确 SKU 时，本页不公开任何机械数值作为产品承诺。采购方应向负责来源索取背基身份、测试方法、实测结果与批准证据。
                 </p>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
@@ -285,40 +285,40 @@ export default function ChineseSandingGrindingAccessories() {
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
                         <th className="px-4 py-3 font-semibold uppercase">磨料背基类型</th>
-                        <th className="px-4 py-3 font-semibold uppercase">基础材料规格</th>
-                        <th className="px-4 py-3 font-semibold uppercase">纵向抗拉强度 (N/50mm)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">横向抗拉强度 (N/50mm)</th>
-                        <th className="px-4 py-3 font-semibold uppercase">背胶强度与颗粒受载极限</th>
+                        <th className="px-4 py-3 font-semibold uppercase">应索取的规格</th>
+                        <th className="px-4 py-3 font-semibold uppercase">测试方法</th>
+                        <th className="px-4 py-3 font-semibold uppercase">结果状态</th>
+                        <th className="px-4 py-3 font-semibold uppercase">放行证据</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
                         <td className="px-4 py-3 font-bold">硫化钢纸背基</td>
-                        <td className="px-4 py-3">0.8 毫米高密度硫化纯棉纤维板</td>
-                        <td className="px-4 py-3">&ge; 1,050 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 750 N / 50mm</td>
-                        <td className="px-4 py-3">双层酚醛树脂粘结 / 锆刚玉颗粒受压微崩自锐点 &ge; 120 N</td>
+                        <td className="px-4 py-3">材料、厚度、来源与批次身份</td>
+                        <td className="px-4 py-3">由来源文件与买家质量计划定义</td>
+                        <td className="px-4 py-3">未公开；按 SKU 记录实测值</td>
+                        <td className="px-4 py-3">批准规格、来源文件与样品记录</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">乳胶防水 C-wt 纸张</td>
-                        <td className="px-4 py-3">140 g/m&sup2; 特级浸渍乳胶防水纸基</td>
-                        <td className="px-4 py-3">&ge; 350 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 220 N / 50mm</td>
-                        <td className="px-4 py-3">超韧双覆背胶 / 碳化硅微崩针锐自洁特性</td>
+                        <td className="px-4 py-3">纸重、处理、来源与湿用声明</td>
+                        <td className="px-4 py-3">由来源文件与买家质量计划定义</td>
+                        <td className="px-4 py-3">未公开；对照批准样品核验</td>
+                        <td className="px-4 py-3">批准规格、测试记录与样品签字</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 font-bold">柔性 J-wt 棉布基</td>
-                        <td className="px-4 py-3">180 g/m&sup2; 高抗挠聚酯棉布混纺</td>
-                        <td className="px-4 py-3">&ge; 820 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 480 N / 50mm</td>
-                        <td className="px-4 py-3">混合柔性动物胶加高韧树脂粘结 / 棕刚玉颗粒渐进式损耗控制</td>
+                        <td className="px-4 py-3">布重、纤维成分、柔性与来源</td>
+                        <td className="px-4 py-3">由来源文件与买家质量计划定义</td>
+                        <td className="px-4 py-3">未公开；记录纵横向数据</td>
+                        <td className="px-4 py-3">来源文件、接头/样品测试与批准</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
                         <td className="px-4 py-3 font-bold">玻璃纤维网格</td>
-                        <td className="px-4 py-3">110 g/m&sup2; 无碱玻璃纤维镂空扣织网</td>
-                        <td className="px-4 py-3">&ge; 450 N / 50mm</td>
-                        <td className="px-4 py-3">&ge; 400 N / 50mm</td>
-                        <td className="px-4 py-3">酚醛树脂耐高温涂覆 / 碳化硅磨粒高附着保持率 &ge; 98%</td>
+                        <td className="px-4 py-3">网格、结合剂、磨粒、尺寸与来源</td>
+                        <td className="px-4 py-3">由来源文件与买家质量计划定义</td>
+                        <td className="px-4 py-3">未公开；记录强度与保持率方法</td>
+                        <td className="px-4 py-3">批准规格、样品结果与放行记录</td>
                       </tr>
                     </tbody>
                   </table>
@@ -350,8 +350,8 @@ export default function ChineseSandingGrindingAccessories() {
                 
                 <div className="space-y-4 text-xs font-mono">
                   <div>
-                    <span className="text-industry-slate-500 block">常规交货期:</span>
-                    <span className="text-white font-bold">20 - 30 个自然日</span>
+                    <span className="text-industry-slate-500 block">交货期:</span>
+                    <span className="text-white font-bold">按材料、样品、包装、生产、验货和出运节点书面确认</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">混合装分配:</span>
@@ -363,7 +363,7 @@ export default function ChineseSandingGrindingAccessories() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">交货港口与贸易术语:</span>
-                    <span className="text-white font-bold leading-normal">临近上海港/宁波港出货。支持 FOB、CIF 港口，或直接双清空海运派送到 FBA 仓库。</span>
+                    <span className="text-white font-bold leading-normal">起运地、目的地、生产来源、FOB/CIF或其他Incoterms、清关与仓库责任按每票货物书面报价。</span>
                   </div>
                 </div>
 
@@ -393,14 +393,14 @@ export default function ChineseSandingGrindingAccessories() {
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  现有零售产品参考
+                  买家证据中心
                 </h3>
                 <p className="text-xs leading-relaxed text-industry-slate-300">
-                  可先查看 SCOTTCHEN 现有零售产品，了解砂纸、磨片和工具包的常见组合，再提交 B2B 定制要求。
+                  查看当前文件状态、核验边界，以及下达 B2B 订单前应索取的资料。
                 </p>
-                <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-industry-orange hover:underline">
-                  查看 SCOTTCHEN 零售产品站 &rarr;
-                </a>
+                <Link href="/zh/evidence-center" className="text-xs font-bold text-industry-orange hover:underline">
+                  查看买家证据 &rarr;
+                </Link>
               </div>
 
             </div>
@@ -413,10 +413,10 @@ export default function ChineseSandingGrindingAccessories() {
       <section className="py-20 bg-industry-slate-900 border-t border-industry-slate-850">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">亚马逊零售样品直达</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">外部零售链接</span>
             <h2 className="text-3xl font-extrabold text-white mt-3">亚马逊零售商品参考</h2>
             <p className="mt-4 text-sm text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-              下方为部分亚马逊零售商品链接，可用于了解现有产品形式。库存、价格、卖家状态和 Prime 资格均由亚马逊平台管理，可能随时变化。
+              仅作外部零售商品参考。卡片标题与说明只是对平台定位的概括，不证明 SCOTTCHEN 的 OEM 来源、当前可供性、规格、合规、品牌权利或性能；商品状态与价格由亚马逊管理。
             </p>
           </div>
 
@@ -561,7 +561,7 @@ export default function ChineseSandingGrindingAccessories() {
             {[
               {
                 q: "SCOTTCHEN 砂纸张提供哪些背基纸重和基材材质？",
-                a: "可提供用于手工湿磨的 C-weight 乳胶纸背基，以及用于曲面或机械打磨的柔性布基选项。耐水性、抗拉强度、粘接和工具适用性需按批准规格及样品测试确认。"
+                a: "请在询价中写明干湿用途、工具、压力、目标表面与期望背基。纸重、纤维、处理、耐湿强度、粘接与工具适用性须由报价来源按准确 SKU 提供证据并通过代表性样品确认；本页不发布固定可供背基。"
               },
               {
                 q: "为什么在墙面打磨时推荐碳化硅网格砂网，而不是普通氧化铝砂纸？",
@@ -569,15 +569,15 @@ export default function ChineseSandingGrindingAccessories() {
               },
               {
                 q: "纤维磨片支持哪些中心定位孔形式？有哪些加固措施？",
-                a: "锆刚玉硫化纸磨盘拥有 4.5\"、5\" 及 7\" 标准外径，配备 7/8\" (22.23mm) 中心定位孔。采购商可选择圆形平面孔或带十字星型切口定位心。背基材质、厚度、标示工作限制和工具兼容性必须写入批准规格。"
+                a: "常见询价可讨论不同直径、圆孔或星型中心，但准确尺寸、背基、厚度、孔型、标示工作限制和工具兼容性必须由报价 SKU、来源文件和样品批准确认；本页不承诺固定规格可供。"
               },
               {
                 q: "砂纸卷可以按照我们设计的彩盒样式进行多目数混合定制么？",
-                a: "可以。我们为五金渠道与亚马逊卖家提供极具零售竞争力的砂卷分装架彩盒定制。您可以根据目标场景混合 4 到 5 种特定目数卷（如 P150, P240, P320, P400），装入配有自断裁切齿的彩色瓦楞印刷盒内，直接贴条码上市发售。"
+                a: "可按目标场景询价多粒度砂卷分装盒。粒度、裁切结构、印刷、买家提供的条码数据、样品扫码和渠道责任必须写入批准包装规格与报价，不能由网站保证直接上市。"
               },
               {
                 q: "塑料精细打磨棒与备用砂带的最小起订量 (MOQ) 是多少？",
-                a: "我们精细弹簧张力塑料磨棒套装的起订量为 1,000 套。标准零售套装包含 1 支高韧性弹簧定位塑料握杆和混合 15 条环形软砂布带（涵盖不同目数）。我们支持整套挂卡或吸塑彩色纸盒包装定制。"
+                a: "细节打磨棒的组件来源、握杆、砂带数量、粒度组合、包装、起订量和交期按具体 SKU 书面报价；本页不设固定起订数字。"
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -601,69 +601,13 @@ export default function ChineseSandingGrindingAccessories() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/products/sanding-grinding-accessories#productgroup"),
-                "name": "SCOTTCHEN 研磨、打磨及砂纸配件大货产品目录",
-                "description": "工业级抛磨耗材，包含乳胶防水干湿两用砂纸、玻璃纤维网格墙面砂网、高切削锆刚玉纤维钢纸磨片及细节塑料砂带笔。",
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/products/sanding-grinding-accessories#catalog"),
+                "name": "研磨与打磨配件 RFQ 采购目录",
+                "description": "用于询价规划的磨料配件结构参考；准确磨粒、背基、尺寸、使用限制、可供范围与条款须由带日期的 SKU 报价和批准证据确认。",
                 "url": absoluteUrl("/zh/products/sanding-grinding-accessories"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
-                "brand": {
-                  "@type": "Brand",
-                  "name": "SCOTTCHEN"
-                },
-                "manufacturer": {
-                  "@id": absoluteUrl("/#organization")
-                },
-                "category": "砂纸、研磨砂碟及打磨配件套装",
-                "material": "碳化硅、氧化铝、锆刚玉、玻璃纤维网格、乳胶纸基、硫化纤维及布基",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "起订量依据",
-                    "value": "砂纸 10,000 张、纤维砂碟 5,000 张、混合砂纸架或细节打磨笔 1,000 套；实际数量和交期按 SKU 报价"
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "规格控制项",
-                    "value": "磨粒类型、FEPA P 目数范围、基材、尺寸、中心孔、连接方式和包装数量"
-                  }
-                ],
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "name": "干湿两用乳胶纸基砂纸片",
-                    "description": "高品质碳化硅磨粒贴附于 C-weight 乳胶纸基上，适合汽车车漆打磨与湿抛光。",
-                    "sku": "SC-SANDPAPER-SHEETS-ZH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "碳化硅磨粒配 C-weight 乳胶纸基"
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "锆刚玉硫化纤维钢纸磨片",
-                    "description": "重负荷焊缝粗磨及除锈锆刚玉砂盘，带 7/8 英寸十字中心定位星型定位盘。",
-                    "sku": "SC-ZIRCONIA-DISCS-ZH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "锆刚玉磨粒配硫化纤维基材",
-                    "additionalProperty": [
-                      { "@type": "PropertyValue", "name": "中心孔", "value": "7/8 英寸星型中心定位孔" },
-                      { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、粒度、背基、包装和订单数量报价" }
-                    ]
-                  },
-                  {
-                    "@type": "Product",
-                    "name": "防堵塞墙面石膏板网格镂空砂网",
-                    "description": "双面涂覆优质碳化硅的镂空网格砂片，专为石膏板大面积抹灰批灰除粉吸尘设计。",
-                    "sku": "SC-DRYWALL-MESH-ZH",
-                    "manufacturer": {
-                      "@id": absoluteUrl("/#organization")
-                    },
-                    "material": "双面碳化硅涂覆玻璃纤维网格"
-                  }
-                ]
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               }
             ]
           })

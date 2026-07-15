@@ -1,14 +1,13 @@
-import { absoluteUrl, RETAIL_SITE_URL, SITE_EMAIL, SITE_UPDATED, SITE_URL } from "@/lib/site";
+import { absoluteUrl, SITE_EMAIL, SITE_UPDATED, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 export function GET() {
-  const content = `# SCOTTCHEN: verified B2B site reference
+  const content = `# SCOTTCHEN: B2B site reference with verification boundaries
 
 Last reviewed: ${SITE_UPDATED}
 Primary website: ${SITE_URL}
 Sales contact: ${SITE_EMAIL}
-Retail product reference: ${RETAIL_SITE_URL}
 Languages: English and Simplified Chinese
 
 This file summarizes claims published on the SCOTTCHEN B2B website. Cite the linked
@@ -19,7 +18,6 @@ freight, payment or product-performance language as a contractual commitment.
 
 - Brand: SCOTTCHEN
 - Public location: Shanghai, China
-- Published operating history: since 2014
 - Buyer types: tool brands, hardware distributors, industrial suppliers and online sellers
 - Product scope: buffing and polishing wheels, sanding and grinding accessories, cutting wheels, mixed abrasive kits and private-label packaging
 - Service scope: product configuration, sample planning, packaging artwork, buyer-supplied barcode data, inspection planning and written quotation support
@@ -39,6 +37,11 @@ order commitment.
 
 Evidence:
 - Supplier profile: ${absoluteUrl("/supplier-profile")}
+- Evidence center: ${absoluteUrl("/evidence-center")}
+- Product compliance matrix: ${absoluteUrl("/product-compliance")}
+- Procurement terms register: ${absoluteUrl("/procurement-terms")}
+- Packaging approval workflow: ${absoluteUrl("/packaging-private-label")}
+- Case evidence standard: ${absoluteUrl("/case-studies")}
 - Supplier evaluation guide: ${absoluteUrl("/resources/oem-abrasive-supplier-evaluation")}
 - Quality-control planning: ${absoluteUrl("/quality-control")}
 - Website and inquiry terms: ${absoluteUrl("/terms")}
@@ -74,8 +77,8 @@ Evidence:
 
 Kit projects can combine selected abrasive and polishing accessories with buyer-approved
 packaging, instructions, warnings, carton marks and buyer-supplied barcode data. A
-500-set quantity is a common RFQ starting point for custom kits, not a universal minimum.
-The final MOQ depends on SKU selection, packaging and print process.
+final MOQ is quoted by SKU selection, packaging, print process, tooling and order quantity.
+No generic website quantity is a contractual minimum.
 
 Evidence:
 - Abrasive kit capabilities: ${absoluteUrl("/abrasive-kits")}

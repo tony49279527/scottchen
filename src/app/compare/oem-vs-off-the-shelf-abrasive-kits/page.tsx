@@ -18,7 +18,7 @@ const comparison = [
   ["Launch speed", "Requires specification, sample and artwork approval", "Faster when stock is available"],
   ["Branding", "Private-label pack, instructions and buyer-supplied barcode data", "Existing brand and packaging"],
   ["Assortment", "Configured sizes, grits, wheel types and compounds", "Fixed by the stock SKU"],
-  ["MOQ", "Production MOQ; SCOTTCHEN kit RFQs commonly start at 500 sets", "Often case or distributor minimum"],
+  ["MOQ", "Production MOQ quoted by SKU, packaging and quantity", "Often case or distributor minimum"],
   ["Validation", "Buyer approves product and packaging criteria before production", "Buyer tests the available stock item"],
   ["Replenishment", "Planned production against an approved specification", "Dependent on distributor or brand inventory"],
   ["Unit pricing", "Quoted to configuration, volume and pack requirements", "Published or account pricing may be available"],
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "What MOQ should buyers expect for a private-label abrasive kit?",
-    a: "SCOTTCHEN commonly uses 500 sets as an RFQ starting point. Final MOQ depends on the components, packaging, print method and production plan and is confirmed in the quotation.",
+    a: "MOQ depends on the components, packaging, print method, tooling and production plan. It is confirmed in the dated written quotation after specification review.",
   },
   {
     q: "Can a buyer test an OEM kit before mass production?",

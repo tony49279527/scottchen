@@ -22,7 +22,7 @@ export default function SampleKit() {
             Request a Surface Finishing Sample Kit
           </h1>
           <p className="mt-4 text-base text-industry-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Evaluate our stitching density, backing paper tear strength, and grit calibrations before placing bulk container orders.
+            Request source-identified samples and define checks for construction, backing, grit marking, fit and the intended workpiece before approving a bulk order.
           </p>
         </div>
       </section>
@@ -94,10 +94,13 @@ export default function SampleKit() {
                   loading="lazy"
                   decoding="async"
                   src="/images/sample_kit.webp"
-                  alt="SCOTTCHEN Sample Testing Kit Box"
+                  alt="Illustrative surface-finishing sample-kit concept"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-3 right-3 text-[10px] text-industry-slate-300">
+                  Illustrative concept — not a shipped sample or customer order
+                </span>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
@@ -115,7 +118,7 @@ export default function SampleKit() {
                   <div>
                     <h4 className="font-bold text-white uppercase">How is shipping handled?</h4>
                     <p className="text-industry-slate-400 mt-1 leading-relaxed">
-                      We can ship samples through international couriers. The recipient normally covers freight or provides a courier account; any later order credit must be stated in the written quotation.
+                      Courier route, dispatch party, freight charge, collect or prepaid method, customs responsibility and any later credit are confirmed in writing before dispatch.
                     </p>
                   </div>
                   <div>
@@ -138,7 +141,7 @@ export default function SampleKit() {
                   Verification Criteria
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  Sample kit requests require a valid business name, website or store URL, and contact email. We typically review complete applications within one business day.
+                  Sample requests require a valid business name, website or store URL and contact email. Review timing, sample feasibility, charges and dispatch details are confirmed after the requested configuration is assessed.
                 </p>
                 <div className="bg-industry-slate-950 p-3 rounded border border-industry-slate-800 text-[10px] font-mono text-industry-orange">
                   Commercial channels verified: Tool Brands, Distributors, Online Store Owners, Detailing Suppliers.
@@ -170,11 +173,11 @@ export default function SampleKit() {
               },
               {
                 q: "How are international shipping and courier freight charges handled for samples?",
-                a: "Sample kits can be shipped through international couriers. The recipient normally covers courier charges. Any credit against a qualifying bulk order must be stated in the written quotation."
+                a: "Courier route, dispatch party, freight charge, collect or prepaid method, customs responsibility and any later credit are confirmed in writing before dispatch."
               },
               {
                 q: "Can I request custom wheel plies, shank shapes, or sanding grits in my sample pack?",
-                a: "Yes. Please specify your desired dimensions (e.g., 6-inch 40 Ply cotton wheel, 1/4\" hex shank Adaptor, drywall mesh screens from P80 to P240) in the contact form, and our technicians will configure the kit accordingly."
+                a: "List the desired dimensions, construction, shank and grit in the request. The written sample plan must confirm the responsible source, feasibility, exact contents, evidence, charges and dispatch target; the site does not promise a particular physical sample."
               },
               {
                 q: "What is the typical transit and processing time for sample delivery?",
@@ -182,7 +185,7 @@ export default function SampleKit() {
               },
               {
                 q: "Can we request branded box and barcode label mockups alongside the physical tools?",
-                a: "Yes. After you submit the sample request, our sales team can collect your logo files and barcode artwork by email, then prepare branded packaging mockups and barcode-applied samples for pre-production review."
+                a: "A packaging or barcode mockup can be requested, but the written sample plan must state whether it is feasible, who supplies the dieline and artwork, which buyer data may be used, the sample and scan method, fees and retained record. No mockup is guaranteed by this page."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">

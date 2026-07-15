@@ -57,10 +57,10 @@ export default function ChineseApplicationsOverview() {
     {
       id: "online-sellers",
       name: "跨境电商专属打磨抛光工具包",
-      tag: "面向亚马逊、Shopify 及沃尔玛的 Ready-to-Ship 套装",
+      tag: "面向亚马逊、Shopify 及沃尔玛的包装规划",
       challenges: "跨境五金电商退货的一大诱因是兼容性含糊和说明书缺失。线上套装包装需要做到自重极轻以节省仓储物流阶梯费用，同时内附图解指引以消除不必要的买家差评。",
       products: "精装抛光轮+抛光蜡大礼包、多目数混合纸砂卷、细节打磨杆带备用带套装。",
-      packaging: "符合亚马逊防爆标准的飞机盒，贴好高清条码，内附图文对照卡。",
+      packaging: "飞机盒、买家提供的条码与图文说明卡可作为询价范围；平台、警告语、扫码与入仓要求须按项目当期规则批准。",
     },
   ];
 
@@ -77,7 +77,7 @@ export default function ChineseApplicationsOverview() {
                 针对不同底材的表面研磨与抛光搭配
               </h1>
               <p className="mt-4 text-base text-industry-slate-400 leading-relaxed">
-                我们为不同材质规划耗材组合，帮助品牌和分销商把产品目录、工具兼容性与目标买家的实际工作流对齐。
+                这些场景用于起草不同材质的耗材 RFQ；产品来源、工具兼容性、性能与包装需通过书面报价和代表性样品批准。
               </p>
             </div>
             
@@ -117,13 +117,13 @@ export default function ChineseApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>金属打磨协同:</strong> 结合高切削锆刚玉钢纸磨碟完成粗加工，配合高张力缝线布轮与金刚砂膏实现快速镜面拉丝。</span>
+                    <span className="text-industry-slate-200"><strong>金属打磨询价:</strong> 写清金属、缺陷、工具、工序与目标表面；磨片、布轮和抛光膏配对须由来源资料与工件测试批准。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>木工作业与批灰墙:</strong> 干湿两用防水乳胶砂纸（氧化铝/碳化硅）和玻纤网格镂空防塞砂片，支持连续纸砂卷分撕。</span>
+                    <span className="text-industry-slate-200"><strong>木工与墙面询价:</strong> 写清基材、干湿方式、吸尘设备、尺寸与目标粒度；砂纸、砂网或砂卷结构按 SKU 核验。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -131,7 +131,7 @@ export default function ChineseApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>异形件汽修珠宝:</strong> 1/4\" 标准接柄的打磨圆锥轮、柱状轮与细节弹簧打磨杆配合，解决盲孔深槽磨抛难题。</span>
+                    <span className="text-industry-slate-200"><strong>异形件与精细工件:</strong> 写清工具接口、操作空间、基材与表面目标；柄部、形状、材料和使用限制按样品批准。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -222,19 +222,19 @@ export default function ChineseApplicationsOverview() {
             {[
               {
                 q: "在金属研磨抛光中，如何配合使用锆刚玉纤维磨片与棉布抛光轮？",
-                a: "锆刚玉钢纸磨片带有极高的自锐性，切削速度快，适合焊接后削平粗大焊道、去粗毛刺或表面除锈。在表面平整及预打磨完成后，再使用车缝棉布轮或气道布轮配合抛光膏（如红/白/绿蜡），逐级把金属表面还原出拉丝或镜面效果。"
+                a: "纤维磨片与棉布轮可用于不同工序。应先定义工件、缺陷、工具、目标表面和安全要求，再在相同条件下比较报价方案，不应由网站预设固定磨料、速度或工艺结果。"
               },
               {
                 q: "木工家具砂纸与精细打磨棒的常规目数是如何级配配置的？",
-                a: "对于实木及家具打磨，我们搭配的套装通常是：粗磨 P80 和 P120（用于塑形或脱除旧漆防腐层），中打磨 P180 和 P240（去除粗大划痕），以及精细平滑 P320（刷木漆前处理）。细节打磨棒则配以超精细环形砂带，专门伸入雕刻死角磨平毛刺。"
+                a: "本页没有默认套装。买家应定义木材、涂层、去除工序与目标表面；报价 BOM 再列明各粒度、背基、组件来源和包装数量，并由代表性样品批准。"
               },
               {
                 q: "镂空墙面网格砂网可以配合市场上主流的吸尘抛磨设备使用吗？",
-                a: "可以。我们的镂空网状基材采用双面涂覆优质碳化硅，具有密集的排灰小孔。我们裁切成标准的 9x11\" 及 3.25x11\" 等多种工装尺寸，可以直接粘贴于带吸尘孔的拉扣打磨手板或自动轨道石膏磨平机上，粉尘会穿透网格瞬间吸走。"
+                a: "开放式网格方案必须与买家的具体打磨机、底盘、集尘路径和密封条件一起测试。网格材料、尺寸、孔型、集尘表现和工具适配按报价 SKU 与代表性试用确认；本页不作无尘或固定尺寸兼容承诺。"
               },
               {
                 q: "汽车轮毂和不锈钢排气管抛光的柄装棉轮有什么转速和适配要求？",
-                a: "可提供 1/4\" 圆柄或六角接柄选项，但必须核对夹头尺寸、工具类型、产品标签最高转速和工具制造商限制。形状、材料及转速需通过样件测试确认，不应使用未经书面确认的通用转速。"
+                a: "可在询价中提出圆柄或六角接柄需求，但必须核对夹头、工具、标签工作限制和制造商要求。柄径、形状、材料与转速以报价 SKU 和样件测试为准。"
               },
               {
                 q: "我们可以根据特定的网店主打场景进行贴牌设计吗？",

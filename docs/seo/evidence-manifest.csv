@@ -1,0 +1,2 @@
+evidence_id,type,title,source_owner,source_path,entity_scope,product_scope,market_scope,issued_on,expires_on,public_scope,redaction_status,customer_permission,approval_status,last_verified,notes
+E-001,website-baseline,Current public sourcing statements,SCOTTCHEN,https://www.scottchentools.com/,SCOTTCHEN,Abrasive sanding and polishing accessories,Global,,,public,not-needed,not-applicable,draft,2026-07-15,Public website wording is a content baseline and is not independent proof of factory certificate test customer or order claims

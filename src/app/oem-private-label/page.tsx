@@ -21,7 +21,7 @@ export default function OEMPrivateLabel() {
     },
     {
       title: "2. Custom Retail Packaging",
-      desc: "Brand presence is determined by packaging format. We offer structural mockup planning for various formats:",
+      desc: "Packaging formats can be discussed as a structural brief. The quotation must identify format availability, dieline owner, materials, sample method, approval evidence and setup cost:",
       details: [
         "Double Blister Pack: High visual clarity for retail shelves and hardware store racks.",
         "Color Corrugated Box: High strength for heavy grinding discs, diamond pads, or sanding roll dispenser grids.",
@@ -31,11 +31,11 @@ export default function OEMPrivateLabel() {
     },
     {
       title: "3. Professional Labeling & Barcode Compliance",
-      desc: "We review supplied barcode, warning, and country-of-origin requirements before shipment and document the approved label layout. Final marketplace and import compliance remains subject to the buyer's current destination rules.",
+      desc: "The order plan can include a review of buyer-supplied barcode, warning and origin requirements plus an approved label layout. The responsible checker, method and retained record must be named; final marketplace and import compliance remains subject to current destination rules.",
       details: [
-        "FNSKU / UPC Data: Buyer-supplied symbols can be printed or applied to retail packaging and sample-scanned before production approval.",
-        "Instruction Cards: Clear user manuals, tool compatibility tables, and substrate usage guides to reduce avoidable consumer returns.",
-        "Warning & Regulatory Stickers: Standard compliance markings, warnings, and country-of-origin labels on cartons.",
+        "FNSKU / UPC Data: Quote only after a packaging source accepts the buyer data and a responsible scan method is agreed.",
+        "Instruction Cards: Buyer-approved content, translation, compatibility statements and use boundaries require named owners.",
+        "Warning & Origin Labels: Applicable text, legal basis, placement and responsible party must be confirmed for the destination and SKU.",
       ],
     },
     {
@@ -45,11 +45,11 @@ export default function OEMPrivateLabel() {
   ];
 
   const oemSteps = [
-    { step: "01", title: "Request Sample Kit", desc: "Test our cotton wheel densities, stitch tolerances, and sandpaper grits in your own facility." },
-    { step: "02", title: "Select Kit Combination", desc: "Work with our engineers to configure your accessory selection, grits, and custom inserts." },
-    { step: "03", title: "Design Packaging", desc: "We provide structural die-lines for color boxes or blister backing cards. You provide artwork." },
-    { step: "04", title: "Approve Mockups", desc: "We produce physical packaging mockups and barcode placements for visual validation before production." },
-    { step: "05", title: "Batch Production", desc: "The quotation confirms production timing and the agreed batch checks after specification and artwork approval." },
+    { step: "01", title: "Request Sample Kit", desc: "Test the quoted cotton-wheel construction, stitch criteria and sandpaper grits in your own facility." },
+    { step: "02", title: "Select Kit Combination", desc: "Define the accessory selection, grits, component sources and custom inserts with the project contact." },
+    { step: "03", title: "Confirm Dieline Responsibility", desc: "The quotation states whether the buyer, packaging source or another named party supplies the dieline, which format is used and who approves it." },
+    { step: "04", title: "Approve Mockups", desc: "Physical packaging mockups and barcode placement checks can be scoped for visual validation before order approval." },
+    { step: "05", title: "Confirm Order Plan", desc: "The quotation names each SKU's production source, written schedule and agreed inspection points after specification and artwork approval." },
     { step: "06", title: "Warehouse Delivery", desc: "Loading, freight, delivery point and customs responsibilities are confirmed with the selected Incoterms rule and logistics plan." },
   ];
 
@@ -65,7 +65,7 @@ export default function OEMPrivateLabel() {
               OEM & Private Label Surface Finishing Kits
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              We help tool brands and online sellers plan retail-ready accessory bundles with custom packaging, branding, and buyer-supplied barcode data.
+              Plan proposed accessory bundles, packaging responsibilities, branding and buyer-supplied barcode data; source capability and approval evidence are confirmed per project.
             </p>
           </div>
           
@@ -104,13 +104,13 @@ export default function OEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Configurable Bundles:</strong> Combine buffing wheels, compound bars, sandpapers, arbors, or detail sticks into workflow-specific kits.</span>
+                    <span className="text-industry-slate-200"><strong>Proposed Bundles:</strong> A BOM can combine categories after each source, specification, compatibility and inspection scope is quoted.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Retail-Ready Packaging:</strong> Select double blister packs, corrugated boxes, eco-friendly kraft wraps, or hang-tag bags.</span>
+                    <span className="text-industry-slate-200"><strong>Packaging Feasibility:</strong> Candidate blister, box, kraft or bag formats require a named source, dieline owner, approved sample and artwork sign-off.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -118,13 +118,13 @@ export default function OEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Barcode Verification:</strong> FNSKU, UPC, and required warning labels can be applied and scan-checked against buyer-supplied data before shipment.</span>
+                    <span className="text-industry-slate-200"><strong>Barcode Verification Plan:</strong> The quotation names the buyer data, responsible party, artwork, sample stage, scanner and retained record; no production scan result is implied.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Quoted Project Scope:</strong> A 500-set reference MOQ, production schedule, inspection scope and international delivery assumptions are confirmed for each configuration.</span>
+                    <span className="text-industry-slate-200"><strong>Quoted Project Scope:</strong> Production source, MOQ, written schedule, evidence, inspection and delivery assumptions are confirmed for each SKU and packaging configuration.</span>
                   </li>
                 </ul>
               </div>
@@ -198,13 +198,13 @@ export default function OEMPrivateLabel() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/oem_packaging.webp"
-                  alt="Illustrative private-label packaging concept"
+                  src="/images/oem-abrasive-packaging-concept-v2.jpg"
+                  alt="AI-generated unbranded private-label abrasive packaging concept"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
                 <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
-                  Illustrative packaging concept
+                  AI-generated concept — not a customer order, dieline, label or shipment
                 </span>
               </div>
 
@@ -215,7 +215,7 @@ export default function OEMPrivateLabel() {
                 <div className="space-y-3 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">Sourcing MOQ:</span>
-                    <span className="text-white font-bold">Reference: 500 boxed kits</span>
+                    <span className="text-white font-bold">Quoted by SKU, packaging and quantity</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Package Toolings:</span>
@@ -241,15 +241,15 @@ export default function OEMPrivateLabel() {
                   For tool brand distributors, product differentiation comes from custom combinations, clear substrate compatibility guides, and clean retail branding — not just the abrasive raw material itself.
                 </p>
                 <p className="text-xs text-industry-orange font-mono font-bold">
-                  We supply both raw bulk abrasives and full retail bundles.
+                  Bulk and retail-bundle scopes are quoted only after the component and packaging sources are identified.
                 </p>
               </div>
 
               {/* Action card */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4 text-center">
-                <h4 className="text-sm font-bold text-white uppercase">Ready to get structural die-lines?</h4>
+                <h4 className="text-sm font-bold text-white uppercase">Need to confirm a dieline source?</h4>
                 <p className="text-xs text-industry-slate-400">
-                  Request a quote and check the custom package selection field to receive CAD die-lines for your box designs.
+                  Send the pack format and dimensions. The written response will state whether a CAD dieline exists, who owns it, any setup charge and what approval sample is available.
                 </p>
                 <Link
                   href="/contact"
@@ -280,19 +280,19 @@ export default function OEMPrivateLabel() {
             {[
               {
                 q: "What is the typical minimum order quantity (MOQ) for custom private label kits?",
-                a: "A common starting point is 500 sets for boxed custom kits and 1,000 sets for some blister-card configurations. The actual MOQ depends on the product mix, print process, packaging structure and material suppliers, and is confirmed in the quotation."
+                a: "MOQ depends on product mix, print process, packaging structure, tooling, material source and order quantity. It is stated in the dated written quotation after the SKU and pack specification are reviewed."
               },
               {
                 q: "Can packaging dielines and structural mockups be included?",
-                a: "Yes. After the kit configuration is fixed, the project can include PDF or DXF dielines plus digital or physical mockups. Deliverables, revision rounds, sample charges and ownership are confirmed in the quotation."
+                a: "The quotation can state whether a PDF, DXF or other dieline exists, who owns and supplies it, which digital or physical mockup is feasible, and the charges and revision limits. No dieline or mockup is promised by this page."
               },
               {
                 q: "How do you verify barcode scannability for marketplace fulfillment?",
-                a: "We can apply buyer-supplied UPC or FNSKU data and perform sample scan checks before shipment. Barcode size, quiet zones, contrast, substrate and placement should follow GS1 guidance and the marketplace's current requirements; a formal verification grade must be separately specified."
+                a: "A quotation can scope use of buyer-supplied UPC or FNSKU data and name the party, scanner, sample stage and retained scan record. Barcode size, quiet zones, contrast, substrate and placement remain subject to the buyer's current GS1 and marketplace requirements. No production scan record is currently published."
               },
               {
                 q: "What options do you support for multi-language instruction manuals and packaging inserts?",
-                a: "Warning sheets, process guides and grit-to-substrate charts can be printed in agreed languages. Paper stock, weight, dimensions, translation responsibility and fold pattern are confirmed in the packaging specification."
+                a: "Warning sheets, process guides or grit-to-substrate charts can be evaluated for quotation. Languages, approved copy, translation responsibility, usage rights, paper, dimensions, fold and print source must be confirmed in the packaging specification."
               },
               {
                 q: "Can you ship custom kits directly to international fulfillment centers (DDP)?",

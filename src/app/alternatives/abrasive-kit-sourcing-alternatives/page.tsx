@@ -18,7 +18,7 @@ const models = [
   {
     name: "Factory-direct OEM",
     cost: "Quoted to specification",
-    minimum: "Often production MOQ; SCOTTCHEN kit RFQs commonly start at 500 sets",
+    minimum: "Production MOQ quoted by SKU, packaging and quantity",
     control: "High product, assortment and packaging control",
     bestFor: "Brands with repeat demand and a defined private-label brief",
   },

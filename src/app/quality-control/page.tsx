@@ -15,7 +15,7 @@ export default function QualityControl() {
   const qcPoints = [
     {
       title: "1. Raw Material Verification",
-      desc: "For cotton buffing wheels, we inspect declared yarn grades and construction. For sandpapers, we verify backing weight parameters (C-weight, J-weight, and waterproof latex) against the approved specification.",
+      desc: "For cotton buffing wheels, the plan can check declared fiber grade and construction. For coated abrasives, it can check backing identity and weight against the approved specification. The responsible source, method and sample size must be written into the order quality plan.",
     },
     {
       title: "2. Cotton Wheel Ply & Density Audits",
@@ -42,8 +42,8 @@ export default function QualityControl() {
       desc: "Backing flexibility and abrasive adhesion can be sampled using an agreed bend, peel, or application check. Acceptance criteria are recorded in the SKU quality plan.",
     },
     {
-      title: "8. Barcode Scanner Audits",
-      desc: "For online sellers sending batches to Amazon FBA, barcode readability is an important release check. FNSKU or UPC labels can be scan-checked before shipment; final acceptance remains subject to the platform's current rules.",
+      title: "8. Barcode Scan-Control Planning",
+      desc: "If a project uses buyer-supplied FNSKU or UPC data, the quality plan should name the scan owner, device, sample, stage, acceptance rule and retained record. No production scan record is currently published; final acceptance remains subject to the platform's current rules.",
     },
   ];
 
@@ -118,7 +118,7 @@ export default function QualityControl() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Labeling & Audit Scope:</strong> Buyer-supplied barcode data can be sample-scanned; third-party inspection access, timing and fees are agreed during quotation.</span>
+                    <span className="text-industry-slate-200"><strong>Labeling & Audit Scope:</strong> A quotation may define a responsible sample-scan method for buyer data; third-party inspection access, timing, evidence and fees must also be agreed.</span>
                   </li>
                 </ul>
               </div>
@@ -190,13 +190,13 @@ export default function QualityControl() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/quality_inspection.webp"
-                  alt="Illustrative abrasive quality-planning workspace"
+                  src="/images/qc-evidence-planning-concept-v2.jpg"
+                  alt="AI-generated abrasive quality-evidence planning concept"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
                 <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
-                  Illustrative workflow visual, not a facility claim
+                  AI-generated planning concept — not a factory, laboratory or test result
                 </span>
               </div>
 

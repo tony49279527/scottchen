@@ -45,7 +45,7 @@ export default function ChineseThankYouPage() {
                 <strong>报价整理：</strong>我们会汇总 MOQ、交期、打样与包装方案。
               </li>
               <li>
-                <strong>商务回复：</strong>我们通常会在 <strong>一个工作日内</strong> 回复您填写的邮箱。
+                <strong>商务回复：</strong>提交范围审核后会回复您填写的邮箱；本页不承诺固定回复时间。
               </li>
             </ul>
           </div>

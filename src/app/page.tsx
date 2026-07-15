@@ -9,8 +9,8 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Abrasive Manufacturer in Shanghai | SCOTTCHEN",
-  description: "OEM abrasive manufacturer since 2014. Custom buffing wheels, sanding discs, flap discs and private-label kits for brands and distributors. FOB Shanghai.",
+  title: "OEM Abrasive Kit Sourcing & Private Label | SCOTTCHEN",
+  description: "Shanghai-based B2B sourcing and project support for abrasive, sanding and polishing kits. Production source, evidence and commercial terms are confirmed by SKU.",
   path: "/",
   alternatePath: "/zh",
 });
@@ -18,11 +18,11 @@ export const metadata: Metadata = createPageMetadata({
 const homeFaqs = [
   {
     q: "What is the minimum order quantity (MOQ) for custom private label kits?",
-    a: "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation.",
+    a: "MOQ is quoted by SKU, assortment, packaging, print process, tooling and order quantity. Use the dated written quotation rather than a generic website number.",
   },
   {
     q: "Can you prepare buyer-supplied marketplace labels and packaging data?",
-    a: "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification.",
+    a: "Buyer-supplied FNSKU or UPC data, instructions, safety cards and carton marks can be scoped in the quotation. It must identify the responsible party, approved artwork, sample stage, scan method and retained record; final acceptance depends on current marketplace rules.",
   },
   {
     q: "Can I request physical samples for laboratory testing before ordering?",
@@ -48,41 +48,41 @@ export default function Home() {
   const categories = [
     {
       title: "Buffing & Polishing Wheels",
-      desc: "Cotton buffing wheels, bench grinder polishing wheels, and drill-mount pads. Engineered with high-strength stitching and calibrated arbor hole accuracy.",
+      desc: "RFQ reference for cotton, bench-grinder and drill-mount wheel configurations. Fiber, stitching, bore, operating limit and performance are confirmed by quoted SKU.",
       link: "/products/buffing-polishing-wheels",
-      badge: "Core Mainstay",
+      badge: "RFQ Reference",
       img: "/images/buffing_wheels.webp",
       ctaText: "Explore Cotton Buffing Wheels Catalog",
     },
     {
       title: "Polishing Wheel Kits",
-      desc: "Scenario-specific buffing kits complete with polishing compound bars. Ready for retail branding, online kits, and DIY automotive wheel restoration.",
+      desc: "Planning concepts for buffing wheels and compound bars. BOM, tool fit, packaging, source and channel requirements require written approval.",
       link: "/products/buffing-polishing-wheels",
-      badge: "High Conversion",
+      badge: "BOM Concept",
       img: "/images/hero_abrasives_kit.webp",
       ctaText: "Browse Polishing Wheel Kits",
     },
     {
       title: "Sanding Sheets & Rolls",
-      desc: "Silicon carbide and aluminum oxide abrasives. Available in assorted grit packs, rolls, and dispenser boxes for woodwork, metal prep, and paint prep.",
+      desc: "Candidate silicon-carbide or aluminum-oxide sheets and rolls. Grain, backing, grit, format and application are confirmed per source and sample.",
       link: "/products/sanding-grinding-accessories",
-      badge: "High Volume",
+      badge: "RFQ Reference",
       img: "/images/sanding_sheets.webp",
       ctaText: "View Grinding & Sanding Technical Specs",
     },
     {
       title: "Grinding & Fiber Discs",
-      desc: "Heavy-duty zirconia alumina resin fiber discs and angle grinder attachments. Designed for rapid weld removal, rust removal, and metal prep.",
+      desc: "Candidate fiber-disc and grinder-accessory configurations. Grain, backing, arbor, rated speed, guard fit and performance require SKU evidence.",
       link: "/products/sanding-grinding-accessories",
-      badge: "Industrial Grade",
+      badge: "Evidence Required",
       img: "/images/fiber_discs.webp",
       ctaText: "Inspect Heavy Grinding Disc Specs",
     },
     {
       title: "Detail Sanding Tools",
-      desc: "Mini sanding sticks and matchstick-style detail finishing tools. Crucial for craft, models, jewelry, and tight corner smoothing.",
+      desc: "Detail-sanding tool concepts for confined areas. Component source, grit, dimensions, tool fit and pack scope are confirmed in the quotation.",
       link: "/products/sanding-grinding-accessories",
-      badge: "Specialty Niche",
+      badge: "RFQ Reference",
       img: "/images/detail_sanding.webp",
       ctaText: "View Mini Sanding Stick Systems",
     },
@@ -90,8 +90,9 @@ export default function Home() {
       title: "OEM Surface Finishing Kits",
       desc: "Custom accessory configurations, buyer-supplied barcode data, instruction sheets, and marketplace-oriented polybag or color-box packaging.",
       link: "/oem-private-label",
-      badge: "Made to Order",
-      img: "/images/oem_packaging.webp",
+      badge: "Concept Preview",
+      img: "/images/oem-abrasive-packaging-concept-v2.jpg",
+      concept: true,
       ctaText: "Configure Custom Packaging Specs",
     },
   ];
@@ -110,20 +111,20 @@ export default function Home() {
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
               <span className="inline-flex items-center rounded-md bg-industry-orange/10 px-3 py-1 text-xs font-bold tracking-wider text-industry-orange uppercase border border-industry-orange/20 w-fit">
-                Shanghai OEM · Since 2014 · B2B Private Label
+                Shanghai B2B Sourcing · SKU-Level Disclosure · Private Label
               </span>
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
                 OEM Abrasive, Sanding & Polishing Accessory Kits
               </h1>
               <p className="text-lg text-industry-slate-300 leading-relaxed max-w-2xl">
-                We help tool brands, hardware distributors, and online sellers build retail-ready surface finishing accessory kits. Private label packaging, custom grit assortments, and optimized compatibility.
+                Shanghai-based sourcing support for tool brands, distributors and online sellers. Candidate kit BOMs, packaging, compatibility, evidence and commercial terms are evaluated and confirmed per quoted SKU.
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono uppercase tracking-wider text-industry-slate-400">
-                <span>Shanghai factory base</span>
+                <span>Shanghai project support</span>
                 <span className="text-industry-slate-700">·</span>
-                <span>Export markets worldwide</span>
+                <span>Production source confirmed per SKU</span>
                 <span className="text-industry-slate-700">·</span>
-                <span>Kit RFQs commonly start from 500 sets</span>
+                <span>Commercial terms quoted in writing</span>
                 <span className="text-industry-slate-700">·</span>
                 <Link href="/about" className="text-industry-orange hover:underline">
                   About SCOTTCHEN
@@ -164,16 +165,16 @@ export default function Home() {
               {/* Trust badges */}
               <div className="grid grid-cols-3 gap-4 pt-8 border-t border-industry-slate-800 max-w-lg">
                 <div>
-                  <div className="text-xl font-bold text-white">Since 2014</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">Shanghai OEM manufacturing</div>
+                  <div className="text-xl font-bold text-white">Evidence Center</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">Public status and project files</div>
                 </div>
                 <div>
                   <div className="text-xl font-bold text-white">Barcode Prep</div>
                   <div className="text-xs text-industry-slate-400 mt-1">Buyer-supplied label data</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-white">500-set RFQ</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">Common kit starting point</div>
+                  <div className="text-xl font-bold text-white">Terms by SKU</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">Written quotation controls</div>
                 </div>
               </div>
             </div>
@@ -208,9 +209,9 @@ export default function Home() {
                 </div>
                 
                 <div className="p-6 bg-industry-slate-950/90 border-t border-industry-slate-850">
-                  <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-2">SCOTTCHEN Premium Accessories</h2>
+                  <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-2">RFQ Kit Planning Concept</h2>
                   <p className="text-xs text-industry-slate-400 leading-relaxed">
-                    Custom combined buffing wheels, sanding rolls, and compounds in unified retail-ready boxes.
+                    Proposed wheel, sanding and compound combinations; component and packaging availability is confirmed only in the written quotation.
                   </p>
                   <div className="mt-4 flex justify-between items-center text-[10px] text-industry-slate-500 font-mono pt-3 border-t border-industry-slate-900">
                     <span>MOQ: quoted per configuration</span>
@@ -279,7 +280,7 @@ export default function Home() {
               Workflow-Focused Surface Finishing
             </h2>
             <p className="mt-4 text-base text-industry-slate-400">
-              Surface preparation and polishing is a structured process. We manufacture and package accessories that map precisely to each critical stage.
+              Surface preparation and polishing is a structured process. We support B2B sourcing and OEM kit planning for each stage, with component source, specification and evidence confirmed per SKU.
             </p>
           </div>
 
@@ -369,6 +370,11 @@ export default function Home() {
                   <span className="absolute top-3 left-3 text-[9px] font-mono font-bold tracking-widest uppercase text-industry-slate-300 bg-industry-slate-950/80 border border-industry-slate-800 px-2 py-0.5 rounded backdrop-blur">
                     {cat.badge}
                   </span>
+                  {"concept" in cat && cat.concept ? (
+                    <span className="absolute bottom-2 left-3 right-3 text-[10px] text-industry-slate-200">
+                      AI-generated packaging concept — not a shipped order or production proof
+                    </span>
+                  ) : null}
                 </div>
                 
                 <div className="p-8 flex-grow flex flex-col justify-between">
@@ -405,15 +411,15 @@ export default function Home() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/oem_packaging.webp"
+                  src="/images/oem-abrasive-packaging-concept-v2.jpg"
                   sizes="(min-width: 1024px) 36vw, 92vw"
                   quality={68}
-                  alt="Illustrative SCOTTCHEN private-label packaging concept"
+                  alt="AI-generated unbranded private-label abrasive packaging concept"
                   className="object-cover w-full h-48 opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent" />
                 <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
-                  Illustrative packaging concept
+                  AI-generated concept — not production evidence or a shipped order
                 </span>
               </div>
               
@@ -448,7 +454,7 @@ export default function Home() {
                 B2B OEM Private Label Solutions
               </h2>
               <p className="text-base text-industry-slate-300 leading-relaxed">
-                Standard industrial abrasives gain value when packaged, labeled, and combinations are tuned for specific target user groups. We help tool accessory brands and online marketplace sellers launch private label kits from structural planning to retail-ready box packaging.
+                Packaging and labeling can add value when responsibilities are controlled. The project brief can cover structure, buyer-approved artwork, barcode data and pack-out, but dieline availability, source capability, samples, scan evidence and channel acceptance require written confirmation.
               </p>
               
               <ul className="space-y-3 text-sm text-industry-slate-300">
@@ -512,7 +518,7 @@ export default function Home() {
               },
               {
                 title: "E-Commerce / Online Sellers",
-                role: "Retail-Ready Kits",
+                role: "Packaging-Approval Plans",
                 focus: "Optimized packaging weights, barcode compliance, and instruction inserts to reduce returns.",
               },
               {
@@ -558,7 +564,7 @@ export default function Home() {
                 B2B Quality Control Inspections
               </h2>
               <p className="text-base text-industry-slate-300 leading-relaxed">
-                Industrial accessories are subject to extreme forces. A polishing wheel or sanding disc must perform safely and consistently. We perform systematic testing checks on all batches before shipping:
+                Industrial accessories are subject to demanding operating conditions. The quoted source, exact SKU and target market must have a written quality plan. Checks such as the following are included only when defined in that plan, with methods, sampling and release evidence agreed in writing:
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-industry-slate-300">
@@ -585,7 +591,7 @@ export default function Home() {
                   href="/quality-control"
                   className="text-sm font-bold text-industry-orange hover:text-industry-orange-light flex items-center"
                 >
-                  Read our full Batch Testing Standards &rarr;
+                  Review the SKU Quality-Planning Framework &rarr;
                 </Link>
               </div>
             </div>
@@ -665,7 +671,7 @@ export default function Home() {
                 url: absoluteUrl("/"),
                 name: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
                 description:
-                  "SCOTTCHEN supplies retail-ready surface finishing accessory kits with private-label packaging, custom grit assortments and B2B sourcing support.",
+                  "Shanghai-based B2B sourcing support for abrasive accessory kit RFQs, with source, evidence, packaging and commercial terms confirmed per quoted SKU.",
                 dateModified: SITE_UPDATED,
                 inLanguage: "en",
                 isPartOf: { "@id": absoluteUrl("/#website") },

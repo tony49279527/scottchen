@@ -37,7 +37,7 @@ export default function TermsOfService() {
                 These terms govern use of this website and pre-contract requests made to the SCOTTCHEN brand, including quotation, sample, product specification and packaging discussions.
               </p>
               <p>
-                This website is dedicated to B2B sourcing and trade evaluation. Individual consumers seeking small-volume orders should use the linked SCOTTCHEN retail reference or the relevant third-party marketplace listing.
+                This website is dedicated to B2B sourcing and trade evaluation. It does not publish a verified SCOTTCHEN consumer-store link; buyers should independently verify any third-party marketplace listing.
               </p>
               <p>
                 Submitting a form does not create a purchase, supply, agency or exclusivity agreement. The legal contracting entity and binding terms must be identified in the project quotation or contract.
@@ -50,19 +50,17 @@ export default function TermsOfService() {
                 Quantities shown on this website are reference RFQ starting points, not binding minimums. Actual MOQ depends on the SKU, materials, packaging and print process and must be stated in the quotation.
               </p>
               <ul className="list-disc pl-5 space-y-2 font-mono text-xs text-industry-slate-400">
-                <li><strong>Cotton Buffing & Airway Wheels:</strong> 500 pieces per size/stitch style.</li>
-                <li><strong>Shank-mounted Drill Polishing Pads:</strong> 1,000 pieces per shape.</li>
-                <li><strong>Sanding Sheets & Sandpaper Rolls:</strong> 10,000 sheets or 200 rolls per grit level.</li>
-                <li><strong>Zirconia Fiber Grinding Discs:</strong> 2,000 discs per grit dimension.</li>
-                <li><strong>Drywall Sanding Fiberglass Screens:</strong> 5,000 sheets per size.</li>
-                <li><strong>Custom Mixed Sourcing Tool Kits:</strong> 500 pre-packaged sets.</li>
+                <li><strong>Buffing wheels and drill accessories:</strong> quoted by construction, dimensions, material, packaging and quantity.</li>
+                <li><strong>Sheets, rolls, discs, screens and belts:</strong> quoted by grain, grit, backing, size, pack format and quantity.</li>
+                <li><strong>Bonded or safety-critical products:</strong> quoted only after intended market, labeled limits and evidence requirements are reviewed.</li>
+                <li><strong>Private-label kits:</strong> quoted after the bill of materials, artwork, packaging, barcode responsibilities and inspection plan are defined.</li>
               </ul>
             </div>
 
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">3. Quotations and Pricing</h2>
               <p>
-                Wholesale price quotes are normally issued in U.S. Dollars (USD). Each quotation states its own validity period. Changes in raw material or freight costs may require an updated quotation before a purchase agreement is signed.
+                Each quotation must state its currency, validity period, included and excluded costs, tax treatment and price-adjustment conditions. No currency or price basis is established by this website.
               </p>
             </div>
 

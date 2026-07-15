@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Sanding Disc Wholesale Supplier & OEM Factory | SCOTTCHEN",
+  title: "Sanding Disc Wholesale & OEM Sourcing | SCOTTCHEN",
   description: "OEM aluminum oxide, zirconia and silicon carbide sanding disc sourcing. Compare backing, attachment, grit, sample plans, packaging and quoted MOQ.",
   path: "/sanding-discs",
   alternatePath: "/zh/sanding-discs",
@@ -18,33 +18,33 @@ export default function SandingDiscsPage() {
   const subtypes = [
     {
       name: "Hook & Loop Sanding Discs",
-      desc: "Hook-and-loop backed sanding discs designed for quick, tool-free changes on random orbital sanders and dual-action polishers. The nylon hook-and-loop backing bonds firmly to the sander pad during use and peels off cleanly for grit changes, reducing downtime in high-volume woodworking, auto body, and metal finishing shops. We produce hook and loop sanding discs with premium resin-bonded aluminum oxide, zirconia alumina, or ceramic grain on C-weight, D-weight, or E-weight paper backing, as well as film-backed options for fine finishing.",
-      features: ["Diameters: 4.5\", 5\", 6\", 7\", 9\" common sizes", "Grit range: P24 to P3000 (coarse to ultra-fine)", "Backing: C/D/E-weight paper, polyester film, or cloth", "8-hole, 15-hole, multi-hole, or no-hole dust extraction patterns"],
+      desc: "Hook-and-loop backed sanding discs are designed for quick changes on random orbital sanders and dual-action polishers. RFQs can cover aluminum oxide, zirconia alumina, ceramic or other quoted grain options with paper, film or cloth backing. The exact production source, grain, backing, attachment bond and application suitability must be confirmed for the quoted SKU and approved sample.",
+      features: ["Reference diameters to quote: 4.5\", 5\", 6\", 7\", 9\"", "Grit range confirmed for the quoted SKU", "Paper, polyester film or cloth backing as specified", "Hole pattern matched to the approved pad drawing"],
     },
     {
       name: "PSA (Sticky / Self-Adhesive) Sanding Discs",
-      desc: "Pressure-sensitive adhesive sanding discs that adhere directly to flat or soft DA sander backup pads without a hook-and-loop interface. PSA discs offer a secure bond for aggressive stock removal and are widely used in autobody repair, metal fabrication, and solid-surface fabrication shops where heat and pressure can lift hook-and-loop discs. Available in aluminum oxide and zirconia grain on durable paper or cloth backing.",
-      features: ["High-tack pressure-sensitive adhesive backing", "Compatible with standard PSA backup pads", "Resin-over-resin bond for heat resistance", "Grits P36 to P2000 in aluminum oxide and zirconia"],
+      desc: "Pressure-sensitive adhesive sanding discs attach directly to a matching backup pad without a hook-and-loop interface. The adhesive, liner, backing, grain, use temperature, removal method and residue acceptance criteria should be confirmed for the quoted SKU and tested on the buyer's pad and substrate.",
+      features: ["Pressure-sensitive adhesive specified per SKU", "Pad diameter and surface confirmed before quotation", "Heat and residue criteria defined in the sample plan", "Grain and grit range documented in writing"],
     },
     {
       name: "Fiber Resin Discs",
-      desc: "Rigid vulcanized fiber backing coated with aluminum oxide, zirconia alumina, or ceramic grain for heavy-duty grinding on angle grinders. Fiber resin discs are designed for weld grinding, stock removal, deburring, and edge chamfering on steel, stainless steel, and cast iron. They mount on a rigid rubber backup pad and deliver aggressive cutting action with excellent grain retention under heavy pressure.",
-      features: ["Diameters: 4\", 4.5\", 5\", 7\", 9\"", "Arbor hole: 7/8\" standard", "Grains: aluminum oxide, zirconia alumina, ceramic", "Grits P24 to P120 for heavy grinding"],
+      desc: "Rigid vulcanized fiber backing can be combined with aluminum oxide, zirconia alumina or ceramic grain for grinding applications. Buyers should confirm the disc diameter, arbor, backing, grain, labeled operating limit, compatible tool and guard, plus cut-rate and grain-retention acceptance criteria for the exact SKU.",
+      features: ["Diameter and arbor confirmed per SKU", "Backing thickness documented in the specification", "Grain source identified in the material record", "Grit and operating limit confirmed on the label"],
     },
     {
       name: "Quick-Change / Roll-Lock Discs",
-      desc: "Compact sanding discs with a quick-change threaded or twist-lock backing that mounts to a matching holder on die grinders and pneumatic tools. Roll-lock discs are used in hard-to-reach areas for spot weld removal, blending, deburring, and surface prep in auto body, aerospace, and metal fabrication. Available in aluminum oxide, zirconia, non-woven surface conditioning, and ceramic types.",
-      features: ["Diameters: 2\", 3\", 4\" mini discs", "Type R, Type S, Type TS quick-change attachments", "Surface conditioning non-woven options available", "Ideal for die grinders and right-angle tools"],
+      desc: "Compact discs can use threaded or twist-lock backing to connect to a matching holder on die grinders and pneumatic tools. Interface type, dimensions, holder fit, grain, backing, labeled operating limit and application suitability must be confirmed for the quoted SKU and approved sample.",
+      features: ["Reference diameters to quote: 2\", 3\", 4\"", "Type R, Type S or Type TS interface as specified", "Grain or non-woven construction documented per SKU", "Holder fit verified with the buyer's tool setup"],
     },
     {
       name: "Mesh Anti-Clog Net Sanding Discs",
-      desc: "Open-mesh sanding net discs that allow near-full-surface dust extraction, dramatically reducing clogging and loading when sanding painted surfaces, wood, filler, and drywall. The mesh grid structure allows dust to pass through the entire disc surface rather than through dedicated holes, delivering longer disc life and a cleaner working environment. Mesh sanding discs are compatible with multi-hole and standard hook-and-loop backup pads.",
-      features: ["Grid mesh structure for 99%+ dust extraction", "Anti-clog, long-life aluminum oxide or ceramic grain", "Compatible with Festool, Mirka, and standard DA sanders", "Grits P80 to P800 for wood, paint, filler, drywall"],
+      desc: "Open-mesh sanding discs use a porous structure intended to move dust through more of the disc surface than a fixed-hole paper disc. Dust extraction, loading, cut rate, service life and backup-pad compatibility depend on the complete tool and extraction setup and should be validated with representative samples.",
+      features: ["Open-mesh structure for dust-extraction trials", "Grain and anti-loading treatment quoted per SKU", "Pad and extraction compatibility verified on an approved sample", "Grit and application range confirmed in the written specification"],
     },
     {
       name: "Wet/Dry Sanding Discs",
-      desc: "Waterproof latex-paper or film-backed sanding discs designed for wet sanding applications in automotive paint correction, solid surface finishing, marine gel coat, and precision metal finishing. Wet/dry discs use silicon carbide or premium aluminum oxide grain bonded with a waterproof resin that withstands water, lubricants, and compounds without grain shedding. Available as hook-and-loop or PSA backed in fine grit ranges.",
-      features: ["Waterproof latex paper or polyester film backing", "Silicon carbide or aluminum oxide grain options", "Grits P600 to P3000 for fine finishing", "Works with water, compounds, and lubricants"],
+      desc: "Wet/dry sanding discs can use latex-paper or film backing with silicon carbide, aluminum oxide or another quoted grain. The buyer should define the liquid, soak time, substrate, attachment and acceptance criteria for curl, shedding and scratch consistency before approving the SKU.",
+      features: ["Latex-paper or polyester-film options", "Grain selection confirmed per application", "Fine-grit range quoted per SKU", "Wet-use conditions validated on an approved sample"],
     },
   ];
 
@@ -54,12 +54,12 @@ export default function SandingDiscsPage() {
       a: "MOQ is quoted per diameter, grit, grain, backing, attachment, hole pattern and packaging format. Custom patterns, ceramic materials and printed packs can require different setup quantities. Ask for mixed-SKU and trial-order assumptions to be stated on the quotation.",
     },
     {
-      q: "What materials are your sanding discs made from?",
-      a: "We produce sanding discs in three primary abrasive grain types: aluminum oxide for general-purpose wood, metal, and paint sanding; zirconia alumina for aggressive stock removal and metal grinding with superior self-sharpening characteristics; and silicon carbide for hard materials like stone, glass, auto paint, and hard metals where a fine, consistent scratch pattern is required. Backing materials include C/D/E-weight kraft paper, vulcanized fiber, polyester film, and Y/W-weight cotton cloth for heavy-duty applications.",
+      q: "Which sanding-disc materials should an RFQ specify?",
+      a: "Common grain families include aluminum oxide for general-purpose work, zirconia alumina for higher-pressure metal applications, silicon carbide for hard or coated surfaces, and ceramic options for demanding stock removal. The RFQ should identify the exact grain source, backing, bond, coating and attachment for each SKU; suitability and performance are approved against a representative sample rather than assumed from the grain name.",
     },
     {
-      q: "Can you produce sanding discs with custom hole patterns?",
-      a: "Yes. We manufacture sanding discs with standard 5-hole, 6-hole, 8-hole, 15-hole, and multi-hole patterns as well as custom hole configurations to match specific sander brands including Festool, Mirka, Makita, DeWalt, Bosch, and Milwaukee. Custom die-cutting tools can be produced for proprietary hole patterns subject to a tooling charge that is refunded after cumulative order volume reaches an agreed threshold. Contact our engineering team with your sander model and hole pattern drawing.",
+      q: "How should custom sanding-disc hole patterns be quoted?",
+      a: "Provide the sander model, backup-pad drawing, disc diameter and required extraction layout. Standard or custom hole patterns, die-cut tooling responsibility, tooling charges, ownership, revision limits and fit acceptance must be confirmed in the quotation, approved drawing and representative sample before production.",
     },
     {
       q: "Do you offer private label and retail packaging for sanding discs?",
@@ -67,11 +67,11 @@ export default function SandingDiscsPage() {
     },
     {
       q: "How long does sanding disc production take?",
-      a: "Standard production lead time for sanding disc wholesale orders is 20 to 30 days after deposit and pre-production sample approval for standard aluminum oxide discs in common sizes and grits. Zirconia, ceramic, and specialty backings may extend lead time to 30 to 40 days depending on grain availability. Private label packaging with custom printing adds approximately 7 to 10 days. We maintain safety stock of common SKUs for repeat customers to enable faster reorder cycles.",
+      a: "Lead time is quoted after the SKU, material source, quantity, tooling, sample status and packaging artwork are confirmed. The written quotation should separate material preparation, sample approval, production, inspection and shipment milestones; no website range overrides the project schedule.",
     },
     {
       q: "What is the shelf life and how should sanding discs be stored?",
-      a: "When stored in a cool, dry environment away from direct sunlight and moisture at temperatures between 15-25°C and 40-60% relative humidity, resin-bonded sanding discs maintain full performance for 24 to 36 months from production. PSA discs should be stored with the liner intact and used within 18 months for optimal adhesive performance. We recommend avoiding storage near heat sources, solvent vapors, or high-humidity environments that can degrade paper backing and adhesive bonds.",
+      a: "Storage limits depend on the backing, resin system, adhesive, packaging and applicable product guidance. Keep the quoted SKU dry, protected from direct sunlight, heat and solvent vapors, and retain any PSA liner. Required temperature, humidity, shelf-life basis and incoming test should be stated in the approved specification and supporting document.",
     },
   ];
 
@@ -83,7 +83,7 @@ export default function SandingDiscsPage() {
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Sanding Discs", href: "/sanding-discs" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B Wholesale &amp; OEM</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              Sanding Disc Wholesale &amp; Sandpaper Discs Bulk Supplier
+              Sanding Disc Wholesale &amp; OEM Sourcing Support
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               OEM sanding disc sourcing for aluminum oxide, zirconia, silicon carbide, ceramic and mesh products. Confirm backing, attachment, grit, hole pattern, sample acceptance and quoted MOQ per SKU.
@@ -113,8 +113,8 @@ export default function SandingDiscsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead-Time Milestones</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">P24-P3000</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Grit Range</div>
+                <div className="text-2xl font-black text-industry-orange">RFQ Defined</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Grit &amp; Backing</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">Private Label</div>
@@ -132,7 +132,7 @@ export default function SandingDiscsPage() {
               <div className="space-y-5">
                 <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Why SCOTTCHEN</span>
                 <h2 className="text-2xl font-extrabold text-white tracking-wide">
-                  Wholesale Sanding Discs From a Dedicated Sandpaper Discs Supplier
+                  Shanghai B2B Sourcing &amp; OEM Project Support for Sanding Discs
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
@@ -157,7 +157,7 @@ export default function SandingDiscsPage() {
                       <h3 className="text-lg font-bold text-industry-orange">{sub.name}</h3>
                       <p className="text-sm text-industry-slate-300 leading-relaxed">{sub.desc}</p>
                       <div className="border-t border-industry-slate-800/80 pt-4">
-                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">Key Specifications:</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">RFQ Reference Specifications — Confirm Per SKU:</span>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-industry-slate-400 font-mono">
                           {sub.features.map((feat) => (
                             <li key={feat} className="flex items-center space-x-2">
@@ -174,7 +174,7 @@ export default function SandingDiscsPage() {
 
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Standard Specifications
+                  Common RFQ Reference Configurations
                 </h2>
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
@@ -255,16 +255,16 @@ export default function SandingDiscsPage() {
 
               <div className="space-y-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Why Choose Our Sanding Discs
+                  Sanding Disc RFQ Verification Points
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "Premium Resin Bond System", desc: "Resin-over-resin bonding anchors abrasive grains at high heat, preventing premature grain shedding and extending disc life under heavy pressure." },
-                    { title: "Anti-Clog Coating", desc: "Stearate and special anti-loading coatings prevent paint, wood resin, and metal particles from loading the disc surface, improving cut rate and finish consistency." },
-                    { title: "Consistent Grit Distribution", desc: "Electrostatic grain orientation ensures uniform grit coverage and consistent scratch patterns from disc to disc and batch to batch." },
-                    { title: "Custom Hole Patterns", desc: "Standard 8/15/multi-hole patterns plus custom die-cut hole configurations to match any orbital sander brand or proprietary backup pad." },
+                    { title: "Bond System & Shedding Test", desc: "Identify the resin or adhesive system and approve shedding, heat exposure and attachment-bond criteria on a representative SKU sample." },
+                    { title: "Loading & Cut-Rate Test", desc: "Confirm any anti-loading treatment, target substrate, tool speed and comparison method before accepting cut-rate or service-life claims." },
+                    { title: "Grit & Scratch Consistency", desc: "Define grit distribution, scratch-pattern and batch-consistency checks in the written quality plan." },
+                    { title: "Hole Pattern & Tooling", desc: "Confirm the hole drawing, die-cut tooling responsibility, pad fit and dust-extraction result through the approved sample." },
                     { title: "Private Label & Retail Packaging", desc: "Shrink packs, clamshells, dispenser boxes and color sleeves can use buyer-approved barcode data, artwork and multilingual copy." },
-                    { title: "Full Grit Range", desc: "P24 extra-coarse for heavy stock removal through P3000 ultra-fine for wet sanding and finish polishing—all available from a single supplier." },
+                    { title: "SKU-Level Quotation", desc: "Grain, backing, attachment, grit, packaging, MOQ, lead time and inspection terms are confirmed for each quoted combination." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -283,16 +283,16 @@ export default function SandingDiscsPage() {
 
               <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg space-y-5">
                 <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">OEM &amp; Private Label</span>
-                <h2 className="text-xl font-extrabold text-white">OEM / Private Label Capabilities</h2>
+                <h2 className="text-xl font-extrabold text-white">OEM / Private Label Project Scope</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    SCOTTCHEN offers complete OEM and private label manufacturing for sanding discs and sandpaper disc products. We work with distributors, hardware chains, tool brands, and e-commerce sellers to develop custom sanding disc lines under your brand. Choose abrasive grain type (aluminum oxide, zirconia alumina, silicon carbide, ceramic), backing weight and material (paper, film, fiber, cloth, mesh), hole pattern, attachment system (hook-and-loop, PSA, arbor mount, roll-lock), and packaging format.
+                    SCOTTCHEN coordinates Shanghai-based B2B sourcing and OEM project support for sanding-disc programs. An RFQ can define grain, backing, hole pattern, attachment and packaging options, while the responsible production source, material documents, converting scope and inspection plan are identified for each quoted SKU.
                   </p>
                   <p>
                     Retail packaging options can include shrink-wrapped grit packs, clamshells, dispenser boxes, assortment packs and bulk contractor packs. Logo files, product specifications, grit designations, warnings and barcode data must be confirmed in buyer-approved artwork and checked against current channel rules.
                   </p>
                   <p>
-                    We also produce assorted sanding disc kits that combine multiple grits in a single package for DIY, woodworking, and automotive retail channels. Custom assortments can include foam interface pads, backup pads, and sanding accessories as add-on items. Contact our sales team with your target market, sander compatibility requirements, and volume projections for a customized OEM quotation.
+                    Assorted-grit kits, interface pads, backup pads and related accessories can be included in the RFQ. Final availability, compatibility, component source, MOQ and commercial terms depend on the approved sample and written quotation. Share the target market, tool interface and projected quantity for a scoped response.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -343,7 +343,7 @@ export default function SandingDiscsPage() {
                   <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">Quoted per grit, size, backing and pack</span></div>
                   <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Quoted by SKU, packaging and sample approval</span></div>
                   <div><span className="text-industry-slate-500 block">Grit Standards:</span><span className="text-white font-bold">FEPA (P-grit) or CAMI/ANSI as specified</span></div>
-                  <div><span className="text-industry-slate-500 block">Pack Formats:</span><span className="text-white font-bold">25/50/100 packs, dispenser boxes, bulk cartons</span></div>
+                  <div><span className="text-industry-slate-500 block">Pack Formats:</span><span className="text-white font-bold">Confirmed in the approved packaging specification</span></div>
                   <div><span className="text-industry-slate-500 block">Documentation:</span><span className="text-white font-bold">Confirmed for quoted SKU and market</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
@@ -385,9 +385,8 @@ export default function SandingDiscsPage() {
                 "url": absoluteUrl("/sanding-discs"),
                 "image": absoluteUrl("/images/sanding_screens.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "Sanding discs and sandpaper discs",
-                "material": "Aluminum oxide, zirconia, silicon carbide, ceramic, mesh screen",
+                "material": "Grain and backing documented for each quoted SKU",
                 "additionalProperty": [
                   { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by SKU, grit, packaging and order quantity" },
                   { "@type": "PropertyValue", "name": "Attachment types", "value": "Hook-and-loop, PSA, fiber, quick-change" }

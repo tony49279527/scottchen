@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Private Label Abrasive & Polishing Kits Wholesale | SCOTTCHEN",
+  title: "Private-Label Abrasive & Polishing Kit Sourcing | SCOTTCHEN",
   description: "OEM private-label abrasive kits: buffing wheel kits, sanding disc kits and compound sets. Compare BOM, packaging, samples and quoted minimums.",
   path: "/abrasive-kits",
   alternatePath: "/zh/abrasive-kits",
@@ -19,38 +19,38 @@ export default function AbrasiveKitsPage() {
   const kits = [
     {
       name: "Buffing & Polishing Wheel Kits",
-      desc: "Complete buffing wheel kits combining spiral-stitched cotton wheels, loose flannel wheels, sisal wheels, and matched compound bars for multi-stage metal polishing. These kits are designed for bench grinders in 6-inch and 8-inch sizes, typically including three wheels (sisal cut, cotton cut, cotton color) and three to four compound bars (Black Emery, Red Tripoli, White Rouge, Green Chrome) for a complete cut-to-color polishing sequence. Packaged in retail color boxes or blister cards with arbor adapters and instructions.",
-      included: ["3-8 buffing wheels (sisal/cotton/flannel)", "3-4 compound bars (black/red/white/green)", "Arbor adapters (1/2\", 5/8\", 3/4\")", "Bench grinder or drill mounting hardware", "Color box or blister pack retail packaging"],
+      desc: "A candidate sourcing scenario for a staged buffing assortment. The website does not define a stock kit or approved bill of materials.",
+      included: ["Buyer RFQ: workpiece, tool and finish target", "Component source, exact SKU and operating-limit evidence", "Approved BOM, quantities and compatibility", "Packaging, instructions, warnings and barcode-data owner", "Sample, MOQ, timing, payment and Incoterms in a dated quote"],
     },
     {
       name: "Sanding Disc Assortment Kits",
-      desc: "Assorted grit sanding disc kits that bundle multiple grits in one package for a complete sanding progression, from coarse stock removal through fine finishing. Available for 5-inch and 6-inch random orbital sanders in hook-and-loop backing, these kits typically include grits P40, P60, P80, P120, P220, and P400 in resealable dispenser packs or color boxes. Ideal for woodworkers, auto body shops, DIY enthusiasts, and gift/promotional channels.",
-      included: ["Assorted grits (e.g., P40-P400 or P80-P3000)", "Hook & loop or PSA backing", "Foam interface pad optional", "Dispenser box or resealable bag packaging", "Grit reference chart included"],
+      desc: "A candidate multi-grit assortment for a defined tool and process. Disc size, hole pattern, backing and grit progression remain RFQ fields until approved.",
+      included: ["Buyer RFQ: tool, hole pattern, substrate and sanding stages", "Component source, SKU, backing and grit-system evidence", "Approved BOM, counts and interface-pad compatibility", "Pack structure, artwork, warnings and label responsibility", "Sample, MOQ, timing, payment and Incoterms in a dated quote"],
     },
     {
       name: "Automotive Wheel Polishing Kits",
-      desc: "Specialized polishing kits for aluminum wheel and automotive chrome restoration, combining drill-mounted buffing wheels in various shapes (cone, mushroom, cylinder, dome), airway buffs for large surfaces, and matched compound bars formulated for aluminum and chrome. These kits are packaged for retail in the automotive aftermarket and appeal to car enthusiasts, detailers, and wheel restoration shops. Includes 1/4\" hex shank accessories for cordless drills.",
-      included: ["Drill-mounted buffs (cone/dome/cylinder/mushroom)", "Large airway or loose-section buffs", "Aluminum & chrome-specific compounds", "1/4\" hex shank mandrels", "Microfiber towel and step-by-step guide"],
+      desc: "A project concept for wheel or trim finishing. Substrate, coating, tool, geometry, compound chemistry and desired result must be tested on the buyer's workpiece.",
+      included: ["Buyer RFQ: substrate, coating, tool and finish target", "Component source, SKU, shank and operating-limit evidence", "Approved BOM, compound pairing and compatibility", "Instructions, warnings, artwork and barcode-data owner", "Sample outcome and commercial terms documented before approval"],
     },
     {
       name: "Jewelry Polishing Kits",
-      desc: "Compact jewelry polishing kits with small-diameter cotton buffs, muslin wheels, felt bobs, and rouge compounds for gold, silver, platinum, and precious metal finishing. Designed for rotary tools (Dremel-style), flex shafts, and small bench jewelry polishers. These kits are popular in jewelry supply catalogs, craft stores, and hobbyist channels, packaged in small plastic cases or wooden boxes with organized compartments.",
-      included: ["1/8\" or 3/32\" shank felt and cotton bobs", "Small diameter muslin and flannel wheels", "Red rouge and jewelers white compound", "Mandrels and adapters for rotary tools", "Plastic storage case with compartments"],
+      desc: "A small-tool finishing concept that requires material, tool and contamination controls. No metal suitability or finish result is promised without source data and representative testing.",
+      included: ["Buyer RFQ: metal, coating, tool, access and finish target", "Component source, exact SKU, composition and safety information", "Approved BOM, mandrel fit and cross-contamination controls", "Storage, instructions, warnings and packaging approval", "Sample, MOQ, timing, payment and Incoterms in a dated quote"],
     },
     {
       name: "Drill Polishing Accessory Kits",
-      desc: "All-in-one drill polishing kits that turn any standard cordless or electric drill into a polishing and buffing tool. These kits include a range of shank-mounted buffing wheels, polishing pads, sanding accessories, compound bars, mandrels, and adapters in various shapes and materials for metal polishing, auto detailing, and DIY projects. Packaged in durable carrying cases or color boxes for hardware retail, auto parts stores, and online marketplaces.",
-      included: ["8-30 piece shank-mounted buffing and polishing accessories", "1/4\" hex shank mandrels and adapters", "Assorted compound bars", "Wool/felt polishing pads for final finishing", "Carrying case or blister pack retail packaging"],
+      desc: "A mixed-accessory inquiry for a specified drill or rotary tool. It is not described as universal; every shank, adapter, wheel and operating limit requires confirmation.",
+      included: ["Buyer RFQ: tool model, chuck, speed range and workpiece", "Component source, exact SKU and labeled operating limits", "Approved BOM, fit, balance and use sequence", "Pack-out, instructions, warnings and channel requirements", "Sample, MOQ, timing, payment and Incoterms in a dated quote"],
     },
     {
       name: "Knife Sharpening Belt Kits",
-      desc: "Assorted grit belt packs for 2x72 knife making belt grinders, providing a complete sharpening and honing progression from coarse grinding to mirror polish. These kits typically include ceramic, zirconia, and fine silicon carbide belts in grits from P36 through P2000 or higher, and are packaged in sets for knife makers, bladesmiths, and sharpening services. Popular among knife making suppliers, blacksmith supply shops, and custom knife makers.",
-      included: ["2x72 sanding belts in assorted grits (P36-P2000)", "Ceramic belts for hard steel, A/O for general", "Leather stropping belt optional", "Grit progression guide included", "Branded sleeve or box packaging"],
+      desc: "A belt-assortment scenario for a named machine, process and material. Belt dimensions, joint, backing, grain and grit progression are approved only for the quoted source and SKU.",
+      included: ["Buyer RFQ: machine, belt path, speed, material and process stages", "Component source, SKU, joint, backing and grit-system evidence", "Approved BOM, fit test and progression rationale", "Sleeve or box scope, warnings and traceability fields", "Sample, MOQ, timing, payment and Incoterms in a dated quote"],
     },
     {
       name: "Multi-Purpose DIY Abrasive Kits",
-      desc: "Broad assortment abrasive kits combining sandpaper sheets, sanding discs, cutting wheels, flap discs, buffing wheels, compounds, and accessories in a single carry case for home DIY, garage, and workshop use. These all-in-one kits appeal to gift buyers, first-time homeowners, and general tool users through hardware stores, department stores, and online marketplaces. Contents can be fully customized for seasonal promotions and retailer-specific assortments.",
-      included: ["Sanding sheets, discs, belts assortment", "Cutting wheels and flap discs for angle grinders", "Buffing wheels and polishing compounds", "Drill-mounted accessories and mandrels", "Durable plastic carrying case with custom foam insert"],
+      desc: "A multi-source kitting concept with a higher verification burden. Each component retains its own manufacturer, applicable documents, tool compatibility and safety boundary.",
+      included: ["Buyer RFQ: user, tools, applications, market and channel", "Per-component source, SKU, evidence and operating limits", "Approved BOM, segregation, compatibility and inspection plan", "Case or carton concept, inserts, warnings and barcode responsibility", "Assembly location and all commercial terms documented per project"],
     },
   ];
 
@@ -61,15 +61,15 @@ export default function AbrasiveKitsPage() {
     },
     {
       q: "Can I customize the contents of my abrasive kit?",
-      a: "Absolutely. We specialize in custom kit assembly and can build abrasive kits to your exact specifications, including product selection, grit assortments, quantities, packaging formats, and accessory inclusions. You can combine any of our manufactured products—buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, compound bars, and accessories—into a kit, plus add non-abrasive items such as microfiber towels, safety gear, applicators, or instructions. We work from your BOM (bill of materials) to develop a custom quotation and pre-production sample.",
+      a: "A custom kit can be evaluated from the buyer's bill of materials, target market and acceptance requirements. Candidate components may include buffing wheels, sanding discs, flap discs, belts, cutting wheels, compounds and accessories, but each component's production source, specification, quantity, packaging and inspection scope must be identified in the written quotation and approved sample.",
     },
     {
       q: "What retail packaging formats do you offer for kits?",
-      a: "We offer a full range of retail packaging for abrasive and polishing kits including color boxes, blister card packs with hang tabs for peg display, clamshell packs, shrink-wrapped bundles, durable plastic carrying cases with custom foam inserts, wooden boxes for premium jewelry kits, and tin containers. All packaging can be printed with your brand, product images, multilingual descriptions, features and benefits, safety warnings, and UPC/FNSKU barcode labels. Packaging design and artwork services are available for buyers without finalized designs.",
+      a: "Color boxes, blister cards, clamshells, shrink wrap, carry cases, foam inserts, wooden boxes or tins can be evaluated. Feasibility, tooling, artwork, warnings and buyer-supplied UPC or FNSKU data are confirmed in the approved pack specification and quotation; marketplace acceptance is not guaranteed by this page.",
     },
     {
       q: "Can kit packaging include buyer-supplied marketplace labels?",
-      a: "Yes. Buyer-supplied FNSKU or UPC data, carton marks, warning text and packaging instructions can be included in the approved pack specification. The buyer remains responsible for confirming the marketplace's current requirements before production approval.",
+      a: "Buyer-supplied FNSKU or UPC data, carton marks, warning text and packaging instructions can be scoped in the quotation. It must identify the responsible party, artwork, sample stage, scan method and retained record; the buyer remains responsible for current marketplace requirements.",
     },
     {
       q: "How long does kit production and assembly take?",
@@ -77,7 +77,7 @@ export default function AbrasiveKitsPage() {
     },
     {
       q: "Can I include my own branded materials or inserts in the kits?",
-      a: "Yes. We can include your supplied branded materials such as instruction manuals, warranty cards, marketing inserts, catalogs, discount cards, or other promotional items in the kits. Buyers provide the printed materials delivered to our factory, or we can print materials in China to your specifications. We also handle the arrangement of items in custom foam inserts or molded trays to ensure a professional presentation when the customer opens the kit. Discuss your specific insert and unboxing requirements with our sales team.",
+      a: "Buyer-supplied inserts can be included when the approved BOM and pack specification identify the material, quantity, delivery location, printing responsibility and placement. Assembly site, foam or tray work, sample approval, loss allowance and cost are confirmed in the quotation.",
     },
   ];
 
@@ -115,16 +115,16 @@ export default function AbrasiveKitsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Quoted Minimums</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">Retail-Ready</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Packaging</div>
+                <div className="text-2xl font-black text-industry-orange">Per Project</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Packaging Approved</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">Barcode Prep</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Buyer-Supplied Data</div>
+                <div className="text-2xl font-black text-industry-orange">Buyer Data</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Barcode Scope Quoted</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-industry-orange">Custom</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Assortments</div>
+                <div className="text-2xl font-black text-industry-orange">Per BOM</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Feasibility Quoted</div>
               </div>
             </div>
           </div>
@@ -142,10 +142,10 @@ export default function AbrasiveKitsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN supports OEM abrasive kit manufacturing and private label polishing kit assembly for distributors, e-commerce sellers, tool brands, hardware chains, and retail private label programs. The sourcing brief can combine buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, polishing compounds, and shank-mounted accessories. Each quotation should identify the component source, specification, packaging scope and acceptance plan so buyers can compare like-for-like offers.
+                    SCOTTCHEN provides Shanghai-based B2B sourcing and OEM project support for abrasive kits and private-label assembly. The sourcing brief can combine buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, compounds and accessories. Each quotation must identify every component source, specification, packaging scope and acceptance plan.
                   </p>
                   <p>
-                    Our kitting and assembly services go beyond simply bundling products into a box. We work with you to design the optimal kit assortment for your target market—whether that is an automotive wheel polishing kit for car enthusiasts, a knife making belt kit for bladesmiths, a general-purpose drill polishing kit for DIY consumers, or a sanding disc assortment pack for woodworkers. We select appropriate grit progressions, quantities, accessory inclusions, and packaging formats based on your channel (retail shelf, Amazon, distributor catalog, or promotional gift program).
+                    The page shows kit-planning scenarios, not stocked products or an approved BOM. The buyer can submit an automotive, knife-making, drill-polishing or sanding concept; identified sources then quote component feasibility, grit progression, quantities, packaging and approval samples for the target channel.
                   </p>
                   <p>
                     Kit assembly, inspection and packaging should follow the buyer-approved bill of materials and pack specification. Before production, confirm component identity, quantities, visual checks, label data and carton marks in writing. Marketplace-related items such as buyer-supplied FNSKU labels or warning text can be scoped in the quotation, but current platform acceptance remains the buyer's responsibility.
@@ -155,7 +155,7 @@ export default function AbrasiveKitsPage() {
 
               <div className="space-y-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Abrasive &amp; Polishing Kit Types
+                  RFQ Kit Concepts — Availability Not Implied
                 </h2>
                 <div className="space-y-6">
                   {kits.map((kit) => (
@@ -184,9 +184,9 @@ export default function AbrasiveKitsPage() {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "Retail-Ready Packaging", desc: "Blister cards, color boxes, clamshells, plastic carry cases, and wooden boxes with hang tabs, windows, and custom printed branding for immediate shelf placement." },
-                    { title: "Custom Assortments", desc: "Fully customizable kit contents based on your bill of materials—mix any combination of abrasives, compounds, accessories, and non-abrasive items in one package." },
-                    { title: "Private Label Branding", desc: "Your logo, brand colors, product images, multilingual descriptions, features and benefits, and safety warnings printed directly on packaging." },
+                    { title: "Retail-Packaging Scope", desc: "Blister cards, color boxes, clamshells, cases or other formats can be quoted. Dieline source, materials, warnings, artwork, pack-out and channel acceptance require project approval." },
+                    { title: "Assortment Feasibility", desc: "A proposed BOM can mix categories only after each source, specification, compatibility, safety requirement, assembly site and pack constraint is quoted and approved." },
+                    { title: "Private-Label Artwork Control", desc: "Brand files, product images, approved multilingual copy and safety warnings are itemized in the artwork brief; printing is authorized only after rights, revision and sign-off are recorded." },
                     { title: "Marketplace Label Preparation", desc: "Buyer-supplied FNSKU or UPC data, warning text and carton marks can be included in the approved pack specification." },
                     { title: "Documented Component Scope", desc: "The quotation identifies the selected components, specifications, packaging work and agreed inspection points." },
                     { title: "Launch Asset Scope", desc: "Product images, instructions and listing-support materials can be discussed and itemized in the quotation." },
@@ -211,13 +211,13 @@ export default function AbrasiveKitsPage() {
                 <h2 className="text-xl font-extrabold text-white">Custom Kitting &amp; Private Label Workflow</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    The private label abrasive kit development process begins with your product concept and target market. We discuss your target audience, retail channel, price point, preferred contents, packaging format, and branding direction. Our team then proposes a kit configuration with a bill of materials, packaging mockups, and a detailed quotation including tooling costs, unit pricing, MOQ, and lead time.
+                    Start with the target market, channel, price target, proposed contents, packaging and branding brief. The written response must state whether a BOM, packaging mockup or design resource is available, who is responsible, and the tooling, unit price, MOQ and lead-time assumptions; this page does not promise those deliverables.
                   </p>
                   <p>
-                    Upon quotation acceptance and deposit, we produce pre-production samples with your artwork and packaging for your approval. This sample stage allows you to evaluate the physical kit, test product performance, review packaging print quality, and request any adjustments before mass production. Production begins only after written sample approval to ensure the final product meets your specifications exactly.
+                    Sample quantity, fee, payment milestone, component source, artwork and packaging scope are confirmed in the quotation. The buyer should evaluate the physical kit, product performance and packaging print, then approve the sample and any changes in writing before an order proceeds.
                   </p>
                   <p>
-                    During production, all abrasive components are manufactured in our factory to approved specifications, packaging is printed and assembled, and kits are assembled by trained kitting staff following detailed work instructions. Each kit undergoes visual inspection before final carton packing. For FBA orders, we apply FNSKU labels and prepare cartons per Amazon's requirements. We can also arrange consolidated shipping with your other SCOTTCHEN products in a single container to reduce logistics costs.
+                    During order execution, component sources, assembly location, packaging work and inspection sampling follow the approved BOM, pack specification and quality plan. Buyer-supplied FNSKU or other channel data can be scoped and sample-scanned when written into those documents, but the buyer remains responsible for current marketplace rules and final acceptance. Consolidation and shipping responsibilities are confirmed in the quotation and Incoterms clause.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -269,7 +269,7 @@ export default function AbrasiveKitsPage() {
                   <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Written milestones after sample approval</span></div>
                   <div><span className="text-industry-slate-500 block">Packaging:</span><span className="text-white font-bold">Color boxes, blister, clamshell, cases, tins</span></div>
                   <div><span className="text-industry-slate-500 block">Marketplace Labels:</span><span className="text-white font-bold">Buyer-supplied data scoped per quotation</span></div>
-                  <div><span className="text-industry-slate-500 block">Artwork:</span><span className="text-white font-bold">Custom design services available</span></div>
+                  <div><span className="text-industry-slate-500 block">Artwork:</span><span className="text-white font-bold">Owner, source, format and fees quoted per project</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link href="/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
@@ -303,19 +303,13 @@ export default function AbrasiveKitsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/abrasive-kits#productgroup"),
-                "name": "SCOTTCHEN Abrasive Kits & Polishing Kits",
-                "description": "OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing sets, and drill accessory kits with retail-ready packaging.",
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/abrasive-kits#catalog"),
+                "name": "Abrasive Kit RFQ Concepts",
+                "description": "Planning scenarios for private-label abrasive kits. Component source, BOM, compatibility, packaging, barcode scope, MOQ and timing require a dated quotation and approved samples.",
                 "url": absoluteUrl("/abrasive-kits"),
                 "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
-                "category": "Private-label abrasive and polishing kits",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by BOM, packaging, tooling and order quantity" },
-                  { "@type": "PropertyValue", "name": "Packaging", "value": "Color box, blister, polybag, barcode and instruction inserts" }
-                ],
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

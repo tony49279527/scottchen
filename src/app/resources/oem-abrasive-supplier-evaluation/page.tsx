@@ -111,7 +111,7 @@ const faqs = [
   },
   {
     q: "Does SCOTTCHEN publish fixed MOQ and lead-time guarantees?",
-    a: "SCOTTCHEN publishes reference MOQ and lead-time ranges to help buyers scope a project. Final quantities, sample charges, timing and inspection terms depend on the SKU, packaging and written quotation.",
+    a: "No single website number is treated as a commitment. MOQ, sample charges, timing and inspection terms depend on the exact SKU, source, packaging and order scope and become binding only in the dated written quotation or contract.",
   },
   {
     q: "Which SCOTTCHEN pages support supplier due diligence?",

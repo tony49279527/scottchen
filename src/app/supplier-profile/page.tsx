@@ -5,7 +5,6 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
   SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
@@ -25,7 +24,6 @@ const facts = [
   ["Buyer types", "Tool brands, distributors, industrial suppliers and online sellers"],
   ["Languages", "English and Chinese"],
   ["Sales contact", SITE_EMAIL],
-  ["Retail reference", "scottchen.online"],
 ] as const;
 
 const verificationItems = [
@@ -54,27 +52,15 @@ export default function SupplierProfile() {
         mainEntity: { "@id": absoluteUrl("/#organization") },
       },
       {
-        "@type": "Organization",
+        "@type": "Brand",
         "@id": `${absoluteUrl("/")}#organization`,
         name: SITE_NAME,
         url: absoluteUrl("/"),
-        email: SITE_EMAIL,
-        sameAs: [RETAIL_SITE_URL],
-        areaServed: "Worldwide",
         knowsAbout: [
           "Coated abrasives",
           "Cotton buffing wheels",
           "Private-label tool accessory kits",
           "Retail packaging preparation",
-        ],
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            email: SITE_EMAIL,
-            contactType: "B2B sales and OEM quotation",
-            availableLanguage: ["English", "Chinese"],
-            areaServed: "Worldwide",
-          },
         ],
       },
       {
@@ -137,15 +123,6 @@ export default function SupplierProfile() {
                       <a className="text-industry-orange-light hover:underline" href={`mailto:${SITE_EMAIL}`}>
                         {value}
                       </a>
-                    ) : label === "Retail reference" ? (
-                      <a
-                        className="text-industry-orange-light hover:underline"
-                        href={RETAIL_SITE_URL}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {value}
-                      </a>
                     ) : (
                       value
                     )}
@@ -158,15 +135,14 @@ export default function SupplierProfile() {
           <aside className="rounded-xl border border-industry-orange/30 bg-industry-orange/5 p-7 lg:col-span-2">
             <h2 className="text-xl font-bold text-white">How we confirm supplier details</h2>
             <p className="mt-4 text-sm leading-relaxed text-industry-slate-300">
-              SCOTTCHEN is the product brand used across this B2B site and the linked
-              retail reference. For formal due diligence, we provide quotation-level
-              confirmation of the contracting entity, production location, and payment
-              beneficiary, plus certificates and inspection documents for qualified
-              buyers upon request. Use this profile as a starting point, then verify
-              details on the written quotation or contract before PO placement.
+              SCOTTCHEN is the product brand used across this B2B site. For formal due
+              diligence, the quotation must identify the contracting entity, production
+              location and payment beneficiary. Any certificate or inspection-document
+              availability must be stated against the exact SKU; this page does not imply
+              that an original currently exists. Verify the written documents before PO placement.
             </p>
             <p className="mt-4 text-xs leading-relaxed text-industry-slate-400">
-              Last reviewed: 28 June 2026
+              Last reviewed: {SITE_UPDATED}
             </p>
           </aside>
         </div>

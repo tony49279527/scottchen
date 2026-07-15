@@ -62,7 +62,7 @@ const resources = [
     href: "/supplier-profile",
     intent: "Brand entity and verification boundary",
     summary:
-      "Published facts about SCOTTCHEN's B2B scope, contact channel, retail reference, quotation boundary and buyer verification checklist.",
+      "Published facts about SCOTTCHEN's B2B scope, contact channel, quotation boundary and buyer verification checklist.",
   },
 ] as const;
 

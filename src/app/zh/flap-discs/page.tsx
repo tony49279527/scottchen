@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "百叶片厂家与百叶轮批发 | SCOTTCHEN",
+  title: "百叶片采购与百叶轮批发支持 | SCOTTCHEN",
   description: "T27/T29锆刚玉、陶瓷氧化铝百叶片OEM采购指南。按尺寸、粒度、底板、最高转速、样品、包装和数量书面报价。",
   path: "/zh/flap-discs",
   locale: "zh-CN",
@@ -19,8 +19,8 @@ export default function ZhFlapDiscsPage() {
   const types = [
     {
       name: "T27平面百叶片（平型砂布轮）",
-      desc: "T27型百叶片（又称平型百叶片、平面砂布轮）是最通用的百叶片类型，砂布片沿平面径向排列，工作面平坦，适合平面打磨、焊缝齐平磨平、大面积金属表面去毛刺和除锈。T27百叶片研磨时工作面与工件表面平行接触，接触面积大、磨削均匀，是金属加工车间、钢结构制造、五金制品厂最常用的打磨耗材。我司T27百叶片厂家生产4寸、4.5寸、5寸、7寸等规格，氧化铝/锆刚玉/陶瓷三种磨料可选，密度有标准密度（72片）和高密度（120片/160片）两种，支持OEM贴牌定制。",
-      specs: ["直径：4\"/4.5\"/5\"/6\"/7\"（100-180mm）", "内孔：7/8\"（22.23mm）/M10/M14", "磨料：氧化铝/锆刚玉/陶瓷", "砂布片数：60/72/80/120/160片", "最高转速：13300 RPM（4.5寸）"],
+      desc: "T27型百叶片（又称平型百叶片、平面砂布轮）适合平面打磨、焊缝修整、去毛刺和除锈。4寸、4.5寸、5寸、7寸及不同磨料、粒度、密度可作为询价范围；实际生产来源、结构、最高转速、适用文件和可供规格按SKU书面确认。",
+      specs: ["常见询价直径：4\"/4.5\"/5\"/6\"/7\"", "内孔：按工具与SKU确认", "磨料：氧化铝/锆刚玉/陶瓷可询价", "砂布片数：按批准规格确认", "最高转速：按标签、报告与工具说明书核对"],
     },
     {
       name: "T29钹型百叶片（锥型/翘头百叶片）",
@@ -39,23 +39,23 @@ export default function ZhFlapDiscsPage() {
     },
     {
       name: "氧化铝百叶片",
-      desc: "氧化铝（Aluminum Oxide/AO）百叶片是最经济型的百叶片，采用煅烧棕刚玉或半脆刚玉砂布制造，适合普通金属、木材、塑料等一般材料打磨，性价比极高。氧化铝百叶片通用性强，是五金店、DIY市场、维修车间、小型金属加工厂最常用的规格。我司氧化铝百叶片出厂前100%经过回转强度测试和动平衡测试，质量稳定、价格实惠，支持彩盒、插卡、吸塑等零售包装OEM。",
+      desc: "氧化铝（Aluminum Oxide/AO）百叶片可用于普通金属、木材或一般打磨场景。磨料牌号、底板、结合方式、回转与平衡检验、零售包装范围应在具体SKU的报价、样品批准和质量计划中确认，网站不作100%测试或统一性能承诺。",
       specs: ["磨料：煅烧氧化铝（棕刚玉）", "粒度：P40/P60/P80/P120/P180/P240/P320", "布基：X-wt/J-wt棉布", "特点：价格经济/通用型", "适配：普通金属/木材/塑料/DIY"],
     },
     {
       name: "加厚高密度百叶片",
-      desc: "加厚高密度百叶片采用更多片砂布片（120片/160片甚至更多）排列，砂布层更厚、工作面更宽、磨料量更大，相比普通密度（72片）百叶片寿命提升50-100%，减少换片频率，提高打磨效率。高密度百叶片适合长时间连续高强度打磨作业，如焊缝清根、铸件浇口去除、大面积钢板除锈等大工作量工业应用。我司高密度百叶片分T27平面型和T29钹型两种，锆刚玉和陶瓷磨料均可定制，底板采用加厚玻纤盖增强，确保高负荷作业安全。",
-      specs: ["砂布片数：120片/160片/更多（定制）", "厚度：加厚12mm-18mm", "磨料：锆刚玉/陶瓷", "寿命：比标准型高50-100%", "应用：连续高强度工业打磨"],
+      desc: "高密度百叶片使用更多砂布片，可与标准密度方案进行对比测试。片数、厚度、磨料、底板、最高转速和预期寿命必须按报价SKU定义，并在买家实际工况下通过代表性样品核验。",
+      specs: ["砂布片数：按SKU确认", "厚度：按批准规格确认", "磨料：锆刚玉/陶瓷可询价", "寿命：按共同测试条件比较", "应用：按工件、设备和工况批准"],
     },
   ];
 
   const applications = [
-    { name: "不锈钢加工", desc: "不锈钢板焊缝打磨、焊道整平、边角处理，推荐锆刚玉或陶瓷百叶片，冷切削不烧不锈钢。" },
+    { name: "不锈钢加工", desc: "不锈钢板焊缝、边角和表面处理可比较锆刚玉或陶瓷方案；切削、温升、变色和表面结果需按相同工况测试。" },
     { name: "钢结构制造", desc: "钢结构厂房、桥梁、铁塔的焊缝打磨、除锈、切割边毛刺处理，T27/T29锆刚玉百叶片。" },
     { name: "造船与压力容器", desc: "船体钢板焊缝、管道环缝、容器封头打磨，T29钹型陶瓷/锆刚玉百叶片。" },
-    { name: "汽车制造", desc: "汽车车架、排气管、车身钢板的焊缝打磨、冲压件飞边去除，自动化打磨专用规格可定制。" },
+    { name: "汽车制造", desc: "汽车车架、排气管或车身钢板的焊缝与飞边处理，应按设备、自动化接口、工件和节拍评估专用规格可行性。" },
     { name: "五金制品", desc: "五金工具、铸件、铁艺制品、门窗配件的去毛刺、焊缝打磨、表面抛光前处理，氧化铝百叶片性价比高。" },
-    { name: "铸造行业", desc: "铸钢、铸铁、铸铝件浇口、冒口、飞边的去除和表面修整，高密度陶瓷百叶片效率最高。" },
+    { name: "铸造行业", desc: "铸钢、铸铁或铸铝件浇口、冒口和飞边处理，可比较标准密度与高密度方案的切削、寿命、温升和成本。" },
     { name: "管道安装", desc: "管道焊缝、管端坡口、管道对接焊缝打磨，T29钹型百叶片角度打磨更方便。" },
     { name: "维修与DIY", desc: "金属维修、设备维护、农机维修、金属表面锈迹旧漆去除，通用氧化铝百叶片经济实惠。" },
   ];
@@ -63,7 +63,7 @@ export default function ZhFlapDiscsPage() {
   const faqs = [
     {
       q: "百叶片（百叶轮）T27和T29型号有什么区别？怎么选？",
-      a: "T27是平面型百叶片，砂布片水平排列，工作面平坦，打磨时百叶片与工件表面平行接触，接触面积大，适合平面打磨、焊缝与母材齐平处理、大面积表面磨削。T29是钹型/锥型百叶片，砂布片以15-20度角倾斜排列，工作面呈锥形，边缘与工件接触更锋利，切削速度更快，适合角焊缝、弧面、边角、管道外壁等需要角度磨削的场景。如果你主要是平面打磨选T27；如果经常打磨焊缝、边角或曲面选T29。我们也有T27/T29两种都做的通用型设计，具体联系销售咨询。",
+      a: "T27呈相对平坦的工作面，可用于评估平面混磨与精整；T29呈锥形工作面，可用于评估角焊缝、弧面和边角。最终选择需记录角磨机、防护罩、角度、压力、工件、最高转速和代表性样品结果，不能只按型号名称推定切削或表面表现。",
     },
     {
       q: "百叶片批发MOQ是多少？支持OEM贴牌吗？",
@@ -71,11 +71,11 @@ export default function ZhFlapDiscsPage() {
     },
     {
       q: "氧化铝、锆刚玉、陶瓷百叶片如何选择？",
-      a: "氧化铝（AO）百叶片最经济，适合普通碳钢、木材、塑料等一般材料非连续打磨，适合DIY和小工作量场景。锆刚玉（ZA）百叶片磨削力强、自锐性好、寿命是氧化铝的2-3倍、磨削热低不易烧工件，是不锈钢、碳钢、合金钢等金属工业打磨的主流选择，性价比最高。陶瓷（Ceramic）百叶片是高端产品，磨削效率和寿命最高，冷切削适合不锈钢、高温合金、钛合金等难磨材料高强度连续作业，航空航天、汽车、高端铸件领域首选，但单价也最高。可根据加工材料、工作量和预算综合选择。",
+      a: "氧化铝、锆刚玉和陶瓷配置可分别纳入一般金属、木材、不锈钢、合金钢或高压磨削场景的样品比较。价格、切削、寿命、温升和表面结果受砂布来源、片数、底板、工具、压力与工件影响；RFQ应统一测试条件并用结果决定材料，网站不承诺固定倍数或最佳等级。",
     },
     {
       q: "百叶片的4.5寸、5寸、7寸是什么意思？怎么选直径和粒度？",
-      a: "寸数指百叶片外径（英寸），4.5寸=115mm是100mm角磨机最常用规格，5寸=125mm是125mm角磨机常用规格，7寸=180mm是180mm角磨机规格。中国市场最常用4寸（100mm，16mm孔）和4.5寸（115mm，22.23mm孔），欧美市场最常用4.5寸和5寸。粒度选择：P36/P40极粗用于重负荷大余量磨削（浇口去除、焊缝粗磨）；P60/P80中粗用于焊缝处理、去毛刺、一般打磨（最常用粒度）；P120/P180细磨用于表面精磨、漆面/涂层前处理。建议初次采购以P60和P80为主力粒度。",
+      a: "寸数指百叶片外径。采购方应以角磨机和防护罩说明书、法兰与孔径、产品标签及适用报告核对直径、孔径和最高转速。粒度选择需结合去除量、目标纹路和后续工序，在同一工件上比较粗、中、细粒度样品；网站不按地区或销量推定最常用规格。",
     },
     {
       q: "百叶片项目应如何核验安全证据？",
@@ -83,7 +83,7 @@ export default function ZhFlapDiscsPage() {
     },
     {
       q: "百叶片使用寿命多久？如何判断更换时机？",
-      a: "百叶片使用寿命取决于磨料类型、工件材质、打磨压力和使用习惯。在正常工业使用中（打磨不锈钢焊缝，角磨机11000RPM）：氧化铝百叶片寿命约15-30分钟，锆刚玉约30-60分钟，陶瓷百叶片约60-120分钟。判断更换时机：①砂布片磨耗殆尽露出尼龙搭扣或底板；②磨削效率明显下降、需要增大压力才能磨削；③百叶片振动明显增大、失去平衡；④砂布片大面积脱落或断裂；⑤打磨工件表面出现异常烧伤或焦痕（说明磨粒钝了）。建议不要使用磨耗到底板已露出的百叶片，否则底板可能破损飞出造成危险。",
+      a: "百叶片寿命取决于磨料、结构、工件、工具、压力、角度和终止条件，网站不能提供统一分钟数。采购测试应记录相同工件、工具、速度、压力、去除量和停止规则，并比较切削、温升、振动、砂布片状态与安全要求。使用与更换必须遵循产品标签、工具说明书和批准的安全文件。",
     },
   ];
 
@@ -93,9 +93,9 @@ export default function ZhFlapDiscsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "百叶片", href: "/zh/flap-discs" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">百叶片厂家 · 花形叶轮批发</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B采购 · 百叶片OEM支持</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              百叶片厂家_百叶轮批发_平面砂布轮OEM定制
+              百叶片采购_百叶轮批发_平面砂布轮OEM项目支持
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               T27/T29锆刚玉和陶瓷百叶片OEM采购支持。尺寸、粒度、底板、最高转速、适用市场文件、包装、起订量和交期按具体SKU书面确认。
@@ -126,11 +126,11 @@ export default function ZhFlapDiscsPage() {
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">T27/T29</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">平面/钹型齐全</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">平面/钹型询价</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">AO/ZA/Ceramic</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">三种磨料选择</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">三种磨料比较</div>
               </div>
             </div>
           </div>
@@ -142,19 +142,19 @@ export default function ZhFlapDiscsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8 space-y-12">
               <div className="space-y-5">
-                <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">百叶轮生产厂家</span>
+                <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B项目支持</span>
                 <h2 className="text-2xl font-extrabold text-white tracking-wide">
-                  SCOTTCHEN — 专业百叶片厂家，T27/T29锆刚玉/陶瓷百叶片工厂直供
+                  T27/T29百叶片采购、样品与OEM项目协调
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
                     SCOTTCHEN在上海为百叶片项目提供选型、打样、包装和出口协调。买家应在询价中核验生产主体、砂布和底板来源、设备与检验能力、标称最高转速及具体SKU的测试证据，不应仅依据笼统的产能、市场覆盖或认证表述做决定。
                   </p>
                   <p>
-                    百叶片（Flap Disc）是将多片矩形砂布片以重叠扇形方式排列粘合在玻纤底板或铁盖上的涂附磨具，相比传统树脂砂轮片，百叶片同时具备磨削+打磨+初步抛光三重功能，磨削噪音低、振动小、不崩片、安全性高、使用寿命是树脂砂轮的15-30倍，是现代金属加工业替代砂轮打磨片的升级换代产品。我们的百叶片产品系列覆盖T27平面型、T29钹型、锆刚玉型、陶瓷型、氧化铝型、加厚高密度型等全系列规格，适配4寸（100mm）、4.5寸（115mm）、5寸（125mm）、7寸（180mm）所有主流角磨机。
+                    百叶片由砂布片、底板和结合结构组成，可询价T27、T29及不同磨料、粒度、密度和尺寸。具体可供范围、工具与防护罩兼容性、最高转速和性能表现应按报价SKU、代表性样品和批准文件核验。
                   </p>
                   <p>
-                    作为专业百叶轮厂家，我们始终将产品安全放在首位——所有百叶片均采用加厚玻璃纤维网盖、全树脂双涂粘结工艺，每批次产品必须通过1.5倍额定转速的回转爆破测试方可出厂，绝不以牺牲安全为代价低价竞争。服务客户包括：国际工具品牌OEM、五金连锁超市、工业MRO分销商、焊接耗材经销商、电商卖家（Amazon/Shopify）、钢结构厂、造船厂、汽车零部件厂等。
+                    报价应列明生产来源、砂布、底板、结合结构、抽样与回转测试方法、报告覆盖和包装标签。是否采用特定结构、是否逐批测试以及测试比例只能由具体SKU的质量计划和记录证明，不能由网站统一承诺。
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function ZhFlapDiscsPage() {
                       <h3 className="text-lg font-bold text-industry-orange">{t.name}</h3>
                       <p className="text-sm text-industry-slate-300 leading-relaxed">{t.desc}</p>
                       <div className="border-t border-industry-slate-800/80 pt-4">
-                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">常用规格：</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-wider block mb-2">常见询价字段（不代表现货）：</span>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-industry-slate-400 font-mono">
                           {t.specs.map((s) => (
                             <li key={s} className="flex items-center space-x-2">
@@ -186,7 +186,7 @@ export default function ZhFlapDiscsPage() {
 
               <div className="space-y-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  百叶片常用规格参数表
+                  百叶片 RFQ 核验表（不代表已批准 SKU）
                 </h2>
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
@@ -194,16 +194,16 @@ export default function ZhFlapDiscsPage() {
                       <tr>
                         <th className="px-4 py-3 font-semibold uppercase">规格（直径）</th>
                         <th className="px-4 py-3 font-semibold uppercase">内孔</th>
-                        <th className="px-4 py-3 font-semibold uppercase">最高转速RPM</th>
+                        <th className="px-4 py-3 font-semibold uppercase">最高转速核对</th>
                         <th className="px-4 py-3 font-semibold uppercase">适配角磨机</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
-                      <tr><td className="px-4 py-3 font-bold text-industry-orange">4\" (100mm)</td><td className="px-4 py-3">16mm / M10</td><td className="px-4 py-3">15300</td><td className="px-4 py-3">100mm角磨机</td></tr>
-                      <tr className="bg-industry-slate-900/40"><td className="px-4 py-3 font-bold text-industry-orange">4.5\" (115mm)</td><td className="px-4 py-3">7/8\" (22.23mm)/M14</td><td className="px-4 py-3">13300</td><td className="px-4 py-3">115mm角磨机（最常用）</td></tr>
-                      <tr><td className="px-4 py-3 font-bold text-industry-orange">5\" (125mm)</td><td className="px-4 py-3">7/8\" (22.23mm)/M14</td><td className="px-4 py-3">12200</td><td className="px-4 py-3">125mm角磨机</td></tr>
-                      <tr className="bg-industry-slate-900/40"><td className="px-4 py-3 font-bold text-industry-orange">6\" (150mm)</td><td className="px-4 py-3">7/8\" (22.23mm)/M14</td><td className="px-4 py-3">10200</td><td className="px-4 py-3">150mm角磨机</td></tr>
-                      <tr><td className="px-4 py-3 font-bold text-industry-orange">7\" (180mm)</td><td className="px-4 py-3">7/8\" (22.23mm)/M14</td><td className="px-4 py-3">8600</td><td className="px-4 py-3">180mm角磨机</td></tr>
+                      <tr><td className="px-4 py-3 font-bold text-industry-orange">4\" (100mm)</td><td className="px-4 py-3">按SKU确认</td><td className="px-4 py-3">标签/报告/工具说明书</td><td className="px-4 py-3">按实际工具批准</td></tr>
+                      <tr className="bg-industry-slate-900/40"><td className="px-4 py-3 font-bold text-industry-orange">4.5\" (115mm)</td><td className="px-4 py-3">按SKU确认</td><td className="px-4 py-3">标签/报告/工具说明书</td><td className="px-4 py-3">按实际工具批准</td></tr>
+                      <tr><td className="px-4 py-3 font-bold text-industry-orange">5\" (125mm)</td><td className="px-4 py-3">按SKU确认</td><td className="px-4 py-3">标签/报告/工具说明书</td><td className="px-4 py-3">按实际工具批准</td></tr>
+                      <tr className="bg-industry-slate-900/40"><td className="px-4 py-3 font-bold text-industry-orange">6\" (150mm)</td><td className="px-4 py-3">按SKU确认</td><td className="px-4 py-3">标签/报告/工具说明书</td><td className="px-4 py-3">按实际工具批准</td></tr>
+                      <tr><td className="px-4 py-3 font-bold text-industry-orange">7\" (180mm)</td><td className="px-4 py-3">按SKU确认</td><td className="px-4 py-3">标签/报告/工具说明书</td><td className="px-4 py-3">按实际工具批准</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -230,14 +230,14 @@ export default function ZhFlapDiscsPage() {
 
               <div className="space-y-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  为什么选择SCOTTCHEN百叶片厂家
+                  百叶片项目如何降低采购风险
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     { title: "安全证据核验", desc: "按目标市场和具体SKU核对适用标准、报告编号、覆盖尺寸、测试日期、最高转速和标签要求。" },
-                    { title: "优质砂布原料", desc: "选用德国Vsm、Hermes、ZWS及国产顶级砂布，锆刚玉/陶瓷磨料自锐性好、不烧工件，寿命比普通产品高2-4倍。" },
-                    { title: "自动化生产", desc: "全自动排片/点胶/成型设备，砂布片排列均匀、胶量一致，每片百叶片动平衡测试合格，振动小运转平稳。" },
-                    { title: "全系列覆盖", desc: "T27/T29两种形状，AO/ZA/Ceramic三种磨料，4寸-7寸全直径，P40-P320全粒度，72片/120片/160片密度可选。" },
+                    { title: "材料来源可核验", desc: "砂布品牌、等级和原产地仅在对应SKU有文件支持时写入报价。" },
+                    { title: "检验方法书面化", desc: "动平衡、跳动、结合强度和回转相关方法与抽样比例写入质量计划。" },
+                    { title: "规格按SKU确认", desc: "形状、磨料、直径、粒度、片数和密度以批准规格为准。" },
                     { title: "OEM/ODM范围", desc: "网盖印刷、彩盒、插卡、吸塑和套装可按买家批准文件确认；平台标签规则由买家提供。" },
                     { title: "可比报价", desc: "报价列明生产来源、材料、结构、包装、检验、数量和贸易术语，便于比较总到岸成本。" },
                   ].map((adv) => (
@@ -259,7 +259,7 @@ export default function ZhFlapDiscsPage() {
                 <h2 className="text-xl font-extrabold text-white">百叶片OEM/ODM贴牌定制服务</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    SCOTTCHEN百叶片厂家为全球工具品牌、五金连锁、焊接耗材经销商、电商卖家提供专业的百叶片OEM/ODM贴牌代工服务。我们拥有10年以上的百叶片出口贴牌经验，熟悉欧美澳新中东东南亚各市场的产品标准和安全法规要求，可帮助客户快速开发自有品牌百叶片产品线。
+                    SCOTTCHEN为百叶片OEM项目提供上海B2B询价、样品、包装和出口协调。负责生产的主体、适用市场标准与报告覆盖必须在具体SKU报价中列明，网站不声明自有工厂、固定经营年限或自动符合任何市场要求。
                   </p>
                   <p>
                     OEM范围可包括网盖或铁盖印刷、零售或工业包装、T27/T29形状、砂布与磨料类型、片数密度、底板颜色和多粒度套装。产品规格、最高转速、安全警告、平台条码和外箱标签必须由买家批准，并与目标市场要求一并核验。
@@ -302,7 +302,7 @@ export default function ZhFlapDiscsPage() {
                   quality={70}
                   loading="lazy"
                   src="/images/fiber_discs.webp"
-                  alt="SCOTTCHEN百叶片厂家批发 - T27/T29锆刚玉陶瓷百叶轮"
+                  alt="SCOTTCHEN百叶片采购与T27/T29 OEM项目支持"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
@@ -360,7 +360,6 @@ export default function ZhFlapDiscsPage() {
                 "url": absoluteUrl("/zh/flap-discs"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "百叶片与平面砂布轮",
                 "material": "锆刚玉、陶瓷、氧化铝，玻璃纤维网盖",
                 "additionalProperty": [

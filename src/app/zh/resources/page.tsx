@@ -62,7 +62,7 @@ const resources = [
     href: "/zh/supplier-profile",
     intent: "品牌实体与核验边界",
     summary:
-      "公开 SCOTTCHEN 的 B2B 业务范围、联系渠道、零售参考、报价边界和买家核验清单。",
+      "公开 SCOTTCHEN 的 B2B 业务范围、联系渠道、报价边界和买家核验清单。",
   },
 ] as const;
 

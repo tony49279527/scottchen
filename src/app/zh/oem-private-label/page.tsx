@@ -21,7 +21,7 @@ export default function ChineseOEMPrivateLabel() {
     },
     {
       title: "2. 多样化零售包装定制",
-      desc: "包装的档次决定了产品的溢价。我们提供以下不同包装形态的结构打样与设计方案：",
+      desc: "以下包装形态可作为结构询价范围；报价必须列明可行性、刀模责任方、材料、样品方式、批准证据和开版费用：",
       details: [
         "双泡壳挂卡包装：便于货架展示产品，适合建材超市及五金店挂钩陈列。",
         "彩色瓦楞彩盒：可按产品重量和运输要求确定纸板结构，适合砂碟、磨片或砂卷架。",
@@ -31,11 +31,11 @@ export default function ChineseOEMPrivateLabel() {
     },
     {
       title: "3. 专业条码审计与合规标识",
-      desc: "我们会在出货前依据买家提供的条码、警示语和原产地要求核对标签版式，并记录确认结果。最终平台和进口合规仍以目的国及平台当期规则为准。",
+      desc: "订单计划可纳入对买家提供的条码、警示语和原产地要求的核对，并指定责任人、方法和留存记录。最终平台与进口合规仍以目的国及平台当期规则为准。",
       details: [
-        "FNSKU / UPC 数据：可把买家提供的条码印刷或粘贴于零售包装，并在量产批准前进行样品扫码检查。",
-        "多语言技术说明书：提供清晰的配合工具型号对照表、磨料目数-底材推荐卡，有效避免由于买家误用导致的退单。",
-        "安全警告与出口警示标：外箱粘贴标准警告图标、防潮图示及原产地标 (Made in China)。",
+        "FNSKU / UPC 数据：报价需写明买家数据、责任方、批准版稿、样品阶段、扫码方法与留存记录。",
+        "多语言说明书：内容、翻译责任、工具兼容信息和使用权在版稿中确认。",
+        "安全警告与出口标识：仅使用买家或法规责任方批准、且与实际原产地和SKU相符的内容。",
       ],
     },
     {
@@ -45,11 +45,11 @@ export default function ChineseOEMPrivateLabel() {
   ];
 
   const oemSteps = [
-    { step: "01", title: "申领样品包", desc: "在您本国的质检工段实际测试我们的布轮叠合密度、缝线强度和磨料切削力。" },
-    { step: "02", title: "挑选套装搭配", desc: "与我们的工程师紧密协作，敲定所需的耗材规格、粒度级配和吸塑/泡棉内衬设计。" },
-    { step: "03", title: "刀模线图设计", desc: "我们提供高精度的 CAD 刀模设计图（PDF/DXF），您的美工人员可直接排版印刷稿。" },
-    { step: "04", title: "彩盒样品验证", desc: "在大货量产前，制作包装数码样以及条码贴标位置确认图，供您视觉及扫码核验。" },
-    { step: "05", title: "批量制造", desc: "规格和包装稿确认后，报价单会写明生产时间及双方同意的批次检查项目。" },
+    { step: "01", title: "申领样品包", desc: "在买家质检环境中测试报价样品的布轮结构、缝线指标和磨料表现。" },
+    { step: "02", title: "挑选套装搭配", desc: "与项目联系人确认耗材规格、粒度级配、组件来源和吸塑或泡棉内衬设计。" },
+    { step: "03", title: "确认刀模范围", desc: "报价应列明可提供的 CAD 刀模格式、责任方和设计稿批准流程。" },
+    { step: "04", title: "彩盒样品验证", desc: "报价说明可提供的数码稿、白样或产前包装样；条码位置与扫码方法在批准记录中确认。" },
+    { step: "05", title: "确认订单计划", desc: "规格和包装稿确认后，报价单会列明各 SKU 的生产来源、书面排期和双方同意的检验项目。" },
     { step: "06", title: "仓库交付", desc: "装运、运费、交货点和清关责任按选定的 Incoterms 规则及物流方案书面确认。" },
   ];
 
@@ -60,12 +60,12 @@ export default function ChineseOEMPrivateLabel() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "OEM定制", href: "/zh/oem-private-label" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">私有品牌 OEM 代工</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">私有品牌 OEM 项目支持</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
               OEM 贴牌与抛光工具包定制服务
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              我们协助五金品牌和跨境工具卖家规划专有彩盒、产品组合及买家提供的条码数据，并在量产前确认包装样。
+              为五金品牌和跨境工具卖家提供彩盒、产品组合与买家条码数据的项目规划；刀模、样品、扫码与量产放行范围按报价和批准记录确认。
             </p>
           </div>
           
@@ -104,13 +104,13 @@ export default function ChineseOEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>模块化套装配置:</strong> 支持棉布轮、黄绒轮、抛光膏蜡块、精细砂纸棒和中心接柄的跨品类高度融合。</span>
+                    <span className="text-industry-slate-200"><strong>拟议套装配置:</strong> 跨品类 BOM 只有在各组件来源、规格、兼容性和检验范围报价后才能批准。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>商用包装结构:</strong> 自由定制双吸塑插卡、彩色瓦楞纸盒、高承载自撕砂纸轴架以及挂卡塑料卡头袋。</span>
+                    <span className="text-industry-slate-200"><strong>包装可行性:</strong> 吸塑、彩盒、轴架或挂袋须确认来源、刀模责任方、样品、版稿与费用。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -118,13 +118,13 @@ export default function ChineseOEMPrivateLabel() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>条码扫码检查:</strong> 可应用买家提供的 FNSKU、UPC 和警示信息并进行样品扫码；正式等级验证与平台验收要求需单独约定。</span>
+                    <span className="text-industry-slate-200"><strong>条码核验计划:</strong> 报价需列明买家数据、责任方、版稿、样品阶段、设备与留存记录；不暗示已有生产扫码结果。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>项目书面范围:</strong> 500 套为参考起订点，实际数量、生产计划、检验范围和国际交付假设按配置写入报价单。</span>
+                    <span className="text-industry-slate-200"><strong>项目书面范围:</strong> 生产来源、起订量、书面排期、证据、检验和国际交付假设按 SKU 与包装配置写入报价单。</span>
                   </li>
                 </ul>
               </div>
@@ -198,13 +198,13 @@ export default function ChineseOEMPrivateLabel() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/oem_packaging.webp"
-                  alt="私有品牌包装概念示意图"
+                  src="/images/oem-abrasive-packaging-concept-v2.jpg"
+                  alt="AI 生成的无品牌磨具私牌包装概念图"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
                 <span className="absolute bottom-2 left-3 text-[10px] text-industry-slate-300">
-                  包装概念示意图
+                  AI 生成概念图，不代表客户订单、刀模、标签或出货
                 </span>
               </div>
 
@@ -215,7 +215,7 @@ export default function ChineseOEMPrivateLabel() {
                 <div className="space-y-3 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">标准代工起订量:</span>
-                    <span className="text-white font-bold">参考：盒装套件 500 套</span>
+                    <span className="text-white font-bold">按 SKU、包装与数量书面报价</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">包装结构模版:</span>
@@ -241,15 +241,15 @@ export default function ChineseOEMPrivateLabel() {
                   对工具分销商和电商卖家而言，差异化并非仅来自布砂原材料，而在于能为消费者提供直观的工作流配置指南、精美的挂卡彩盒展现以及放心的转速安全标识。
                 </p>
                 <p className="text-xs text-industry-orange font-mono font-bold">
-                  我们不仅出产工业散装，更致力于为您孵化卓越的高端终端耗材品牌。
+                  工业散装与零售套装均须在识别部件和包装来源后逐项报价，不由本页默认承诺供货。
                 </p>
               </div>
 
               {/* Action card */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4 text-center">
-                <h4 className="text-sm font-bold text-white uppercase">索取高精度包装展开线图？</h4>
+                <h4 className="text-sm font-bold text-white uppercase">需要确认包装刀模来源？</h4>
                 <p className="text-xs text-industry-slate-400">
-                  点击是在线询盘，并在留言中注明您的套装配置组合，以获取高清晰包装刀模线设计原图。
+                  提交包装形式与尺寸要求；书面回复会说明是否已有 CAD 刀模、权利与责任方、开版费以及可提供的批准样品。
                 </p>
                 <Link
                   href="/zh/contact"
@@ -279,20 +279,20 @@ export default function ChineseOEMPrivateLabel() {
           <div className="space-y-6">
             {[
               {
-                q: "为什么大货的最小起订量 (MOQ) 可以控制在 500 套？",
-                a: "盒装定制套装常以 500 套作为询价起点，部分泡壳方案可能从 1,000 套起。实际 MOQ 取决于产品组合、印刷方式、包装结构和材料供应商，并以报价单为准。"
+                q: "贴牌项目的最小起订量 (MOQ) 如何确定？",
+                a: "MOQ 取决于产品组合、印刷方式、包装结构、模具、材料来源和订单数量；审核 SKU 与包装规格后写入带日期的书面报价。"
               },
               {
-                q: "你们提供的 CAD 包装展开刀模线格式是什么？怎么排版？",
-                a: "一旦确定了最终的棉轮规格与抛光膏目数组合，我们的包装结构工程师就会为您定制高精度的刀模底图文件（提供 PDF 和 DXF 格式），上面标有清晰的裁切实线、折叠虚线和出血边缘，您的美工只需在 Adobe Illustrator (AI) 里直接套版输出即可。"
+                q: "包装刀模与结构样如何确认？",
+                a: "报价可说明是否已有 PDF、DXF 或其他格式的刀模、由谁拥有和提供、可行的数码稿或实物样、费用与修改轮次。本页不承诺现有刀模或包装工程师能力。"
               },
               {
                 q: "如何规避亚马逊 FBA 扫码入库由于条码模糊而被拒收的客诉？",
-                a: "可应用买家提供的 UPC 或 FNSKU 数据，并在出货前进行样品扫码检查。条码尺寸、静区、对比度、承印材料和位置应遵循 GS1 指南及平台当期要求；如需正式验证等级，必须在质检范围中单独约定。"
+                a: "报价可纳入买家提供的 UPC 或 FNSKU 数据，并明确扫码责任方、设备、样品阶段与留存记录。条码尺寸、静区、对比度、承印材料和位置仍以买家当期 GS1 与平台要求为准；目前网站未公开生产扫码记录。"
               },
               {
-                q: "纸箱和说明书支持哪些防爆和多国语言印刷规格？",
-                a: "可按产品重量和运输测试要求选用双瓦楞纸箱，以降低重负荷磨片运输中的破损风险。说明书或内页的纸张、克重、语言和折页方式均需在包装规格中确认。"
+                q: "纸箱和多语言说明书如何评估？",
+                a: "纸箱结构、运输测试、说明书语言、批准文案、翻译责任、纸张和折页方式均需在包装规格中确认。报价应说明可行来源与样品，不由网站承诺某种结构一定降低破损。"
               },
               {
                 q: "你们可以把定制工具包直接 DDP（完税后交货）发到我们国外的海外仓吗？",

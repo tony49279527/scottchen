@@ -4,15 +4,13 @@ import RFQForm from "@/components/RFQForm";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
-  SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
 } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Request an OEM / Wholesale Quote | SCOTTCHEN",
-  description: "Contact SCOTTCHEN to request pricing sheets, manufacturing timelines, packaging dielines, and bulk shipping container options for surface finishing tools.",
+  description: "Contact SCOTTCHEN for B2B sourcing and OEM project support, including SKU-level source, evidence, quoted milestones, packaging and shipping assumptions.",
   path: "/contact",
   alternatePath: "/zh/contact",
 });
@@ -28,8 +26,8 @@ const rfqSpecificationItems = [
 const firstReplyItems = [
   "Recommended product or kit configuration and any open specification questions",
   "MOQ and pricing basis for the requested quantity and packaging scope",
-  "Sample, approval and quality-plan path before production",
-  "Indicative production timing, Incoterms assumptions and next documents needed",
+  "Sample, evidence, approval and quality-plan path before order execution",
+  "Indicative written project milestones, Incoterms assumptions and next documents needed",
 ] as const;
 
 export default function Contact() {
@@ -50,21 +48,10 @@ export default function Contact() {
         mainEntity: { "@id": absoluteUrl("/#organization") },
       },
       {
-        "@type": "Organization",
+        "@type": "Brand",
         "@id": absoluteUrl("/#organization"),
         name: SITE_NAME,
         url: absoluteUrl("/"),
-        email: SITE_EMAIL,
-        sameAs: [RETAIL_SITE_URL],
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            email: SITE_EMAIL,
-            contactType: "B2B sales and OEM quotation",
-            availableLanguage: ["English", "Chinese"],
-            areaServed: "Worldwide",
-          },
-        ],
       },
       {
         "@type": "ItemList",
@@ -113,7 +100,7 @@ export default function Contact() {
                   Quote Response Time
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  Our team reviews B2B specifications and typically emails product options, packaging suggestions, and next steps within <strong>one business day</strong>.
+                  Submitted specifications are reviewed for product scope, source, evidence, packaging and commercial assumptions. Response timing is not guaranteed by this page.
                 </p>
                 <div className="text-xs font-mono text-industry-orange">
                   Target response time: within 1 business day
@@ -147,9 +134,9 @@ export default function Contact() {
                     </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">Existing Product Store:</span>
-                    <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
-                      scottchen.online &rarr;
+                    <span className="text-industry-slate-500 block uppercase">Evidence status:</span>
+                    <a href="/evidence-center" className="text-white font-bold hover:underline">
+                      Buyer Evidence Center &rarr;
                     </a>
                   </div>
                   <div>

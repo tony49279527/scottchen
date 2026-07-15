@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { alternateLocalePath, RETAIL_SITE_URL } from "@/lib/site";
+import { alternateLocalePath } from "@/lib/site";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -128,7 +128,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href={isZh ? "/zh/china-abrasive-manufacturer" : "/china-abrasive-manufacturer"} className="hover:text-white transition-colors">
-                  {p("Production & Sourcing", "生产与采购说明")}
+                  {p("Supply-Chain Verification", "供应链核验说明")}
                 </Link>
               </li>
               <li>
@@ -144,6 +144,31 @@ export default function Footer() {
               <li>
                 <Link href={isZh ? "/zh/supplier-profile" : "/supplier-profile"} className="hover:text-white transition-colors">
                   {p("Supplier Profile", "供应商档案")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/evidence-center" : "/evidence-center"} className="font-semibold text-industry-orange-light hover:text-white transition-colors">
+                  {p("Buyer Evidence Center", "买家证据中心")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/product-compliance" : "/product-compliance"} className="hover:text-white transition-colors">
+                  {p("Product Compliance Map", "产品合规矩阵")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/procurement-terms" : "/procurement-terms"} className="hover:text-white transition-colors">
+                  {p("Procurement Terms", "采购条款登记")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/packaging-private-label" : "/packaging-private-label"} className="hover:text-white transition-colors">
+                  {p("Packaging Workflow", "包装放行流程")}
+                </Link>
+              </li>
+              <li>
+                <Link href={isZh ? "/zh/case-studies" : "/case-studies"} className="hover:text-white transition-colors">
+                  {p("Case Evidence Standard", "案例证据标准")}
                 </Link>
               </li>
               <li>
@@ -221,14 +246,6 @@ export default function Footer() {
                 <span className="text-white block">
                   {p("Confirmed after RFQ review", "审核询价后书面确认")}
                 </span>
-              </li>
-              <li>
-                <span className="text-xs text-industry-slate-500 block mb-1">
-                  {p("Retail Store:", "零售产品站:")}
-                </span>
-                <a href={RETAIL_SITE_URL} target="_blank" rel="noopener noreferrer" className="text-white hover:underline block">
-                  scottchen.online
-                </a>
               </li>
             </ul>
           </div>

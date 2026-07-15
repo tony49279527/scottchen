@@ -4,15 +4,13 @@ import RFQForm from "@/components/RFQForm";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  RETAIL_SITE_URL,
-  SITE_EMAIL,
   SITE_NAME,
   SITE_UPDATED,
 } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "索取 OEM / 磨料磨具批发大货报价 | SCOTTCHEN",
-  description: "联系 SCOTTCHEN 索取抛光布轮、打磨耗材大货批发价格表、交期进度、定制彩盒刀模图及国际物流集装箱出口方案。",
+  description: "联系 SCOTTCHEN 获取磨料磨具 B2B 采购与 OEM 项目支持，包括按 SKU 确认的生产来源、证据、报价排期、包装和物流假设。",
   path: "/zh/contact",
   alternatePath: "/contact",
   locale: "zh-CN",
@@ -29,8 +27,8 @@ const rfqSpecificationItems = [
 const firstReplyItems = [
   "建议的产品或套装配置，以及仍需确认的规格问题",
   "基于目标数量和包装范围的 MOQ 与报价口径",
-  "量产前的样品、审批和质检计划路径",
-  "预计生产周期、Incoterms 假设和下一步所需资料",
+  "订单执行前的样品、证据、审批和质检计划路径",
+  "书面项目排期、Incoterms 假设和下一步所需资料",
 ] as const;
 
 export default function ChineseContact() {
@@ -51,21 +49,10 @@ export default function ChineseContact() {
         mainEntity: { "@id": absoluteUrl("/#organization") },
       },
       {
-        "@type": "Organization",
+        "@type": "Brand",
         "@id": absoluteUrl("/#organization"),
         name: SITE_NAME,
         url: absoluteUrl("/"),
-        email: SITE_EMAIL,
-        sameAs: [RETAIL_SITE_URL],
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            email: SITE_EMAIL,
-            contactType: "B2B 销售与 OEM 报价",
-            availableLanguage: ["Chinese", "English"],
-            areaServed: "Worldwide",
-          },
-        ],
       },
       {
         "@type": "ItemList",
@@ -148,9 +135,9 @@ export default function ChineseContact() {
                     </a>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block uppercase">现有产品零售站:</span>
-                    <a href="https://scottchen.online" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:underline">
-                      scottchen.online &rarr;
+                    <span className="text-industry-slate-500 block uppercase">证据状态:</span>
+                    <a href="/zh/evidence-center" className="text-white font-bold hover:underline">
+                      买家证据中心 &rarr;
                     </a>
                   </div>
                   <div>

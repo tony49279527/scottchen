@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "切割片厂家与树脂切割片批发 | SCOTTCHEN",
+  title: "切割片采购与树脂切割片批发支持 | SCOTTCHEN",
   description: "金属与不锈钢树脂切割片 OEM 采购指南，覆盖 1.0-1.6mm 超薄规格、额定转速、安全文件、样品验证与逐项报价。",
   path: "/zh/cutting-wheels",
   locale: "zh-CN",
@@ -19,23 +19,23 @@ export default function ZhCuttingWheelsPage() {
   const types = [
     {
       name: "金属切割片（T41/T1平型切割片）",
-      desc: "T41型（也叫T1型）平型切割片是最通用的金属切割树脂砂轮片，切割面平直、适合方管、圆管、角铁、扁钢、螺纹钢等各种黑色金属型材的切断作业。我们的金属通用切割片采用一级棕刚玉/煅烧氧化铝磨料，双网玻璃纤维增强，树脂结合剂配方平衡了切削速度和耐用性，切割锋利不烧伤工件、不崩边、不抖动，广泛应用于钢结构工程、金属加工车间、五金加工、建筑装修、机械维修等领域。",
+      desc: "T41型（也叫T1型）平型切割片可用于方管、圆管、角铁、扁钢等金属切断。磨料、树脂结合剂、增强层数、最高转速、工具与护罩兼容性及性能表现必须按报价SKU和适用安全文件确认。",
       specs: ["直径：4\"/4.5\"/5\"/6\"/7\"/9\"/12\"/14\"/16\"", "厚度：2.5mm/3.0mm/3.2mm", "内孔：7/8\"(22.23mm)/16mm/20mm/25.4mm/32mm", "磨料：棕刚玉/煅烧氧化铝(A)", "适配：角磨机/型材切割机/固定式切割机"],
     },
     {
       name: "不锈钢专用切割片（INOX切割片）",
       desc: "INOX 切割片用于对铁、硫、氯含量有明确限制的不锈钢应用。采购方应在 RFQ 中写明允许限值、目标材质、额定转速、切割测试方法和所需第三方文件，并以对应配方的检测结果和样品表现作为批准依据。",
-      specs: ["磨料：白刚玉/单晶刚玉/混合磨料", "有害元素：Fe+S+Cl≤0.1%", "厚度：1.0mm/1.2mm/1.6mm/2.0mm", "特点：不烧伤/不变色/不锈蚀", "应用：304/316不锈钢管/板/型材切割"],
+      specs: ["磨料：按报价配方确认", "Fe/S/Cl限值：按目标市场与报告确认", "厚度：按SKU确认", "性能：按代表性样品测试", "应用：经工具、护罩与材料测试批准"],
     },
     {
       name: "超薄切割片（1.0-1.6mm）",
       desc: "超薄切割片常见厚度包括1.0mm、1.2mm和1.6mm，可用于薄壁金属与不锈钢切割。采购时应确认直径、厚度、磨料、增强结构、标称最高转速、工具和防护罩兼容性，并以覆盖具体SKU的安全文件与代表性样品测试批准。",
-      specs: ["厚度：1.0mm/1.2mm/1.6mm", "直径：4\"(107mm)/4.5\"(115mm)/5\"(125mm)", "磨料：WA白刚玉+高级树脂", "增强：双网玻璃纤维", "特点：切口窄/无毛刺/不变形/锋利"],
+      specs: ["厚度：按SKU确认", "直径：按SKU确认", "磨料与树脂：按批准配方确认", "增强：按安全文件确认", "性能：按共同测试方法比较"],
     },
     {
       name: "钹型切割片（T27/T42钹型切割砂轮）",
       desc: "T27/T42 型钹型切割片采用下沉中心结构，采购时必须核对角磨机、护罩、安装方式、允许用途、厚度和额定转速。任何安全标准或第三方报告都应核验报告编号、覆盖尺寸、有效期和标签范围，不能由通用网页文案代替。",
-      specs: ["类型：T27/T42钹型（凹心型）", "直径：4.5\"/5\"/7\"/9\"", "厚度：2.5mm/3.0mm/3.2mm", "磨料：A/WA棕白刚玉混合", "特点：可斜切/切割打磨两用/强度高"],
+      specs: ["类型：T27/T42钹型（凹心型）", "直径：按SKU与工具确认", "厚度：按SKU确认", "磨料与配方：按批准文件确认", "允许用途：以标签、生产方说明和安全文件为准"],
     },
     {
       name: "铸铁专用切割片（灰口铸铁/球墨铸铁）",
@@ -44,19 +44,19 @@ export default function ZhCuttingWheelsPage() {
     },
     {
       name: "石材/混凝土切割片（树脂型）",
-      desc: "石材混凝土树脂切割片采用碳化硅磨料或专用石材磨料配方，适用于大理石、花岗岩、人造石、混凝土、瓷砖、耐火砖、红砖等非金属硬脆材料的切割。树脂型石材切割片相比金刚石锯片成本更低，适合一般装修、石材加工、建筑施工的简单切割作业，也可用于钢材+石材混合切割场景。需要注意：树脂石材切割片主要用于普通切割，大规模石材加工推荐使用金刚石锯片（我司可协助采购）。我司石材切割片直径4寸-14寸齐全，批发供应。",
+      desc: "石材或混凝土树脂切割片可采用碳化硅或其他配方。采购方应提供材料、设备、防护罩、切割方式和目标市场，核对负责生产的来源、适用直径、额定转速、安全文件和样品测试后再批准。",
       specs: ["磨料：黑碳化硅(C)/GC绿碳化硅", "切割对象：石材/混凝土/瓷砖/耐火砖", "直径：4\"-14\"", "厚度：2.5-3.2mm", "提示：石材深加工推荐金刚石锯片"],
     },
   ];
 
   const safety = [
-    "切割片最大使用速度不得超过标签标注的RPM和线速度（通常80m/s）",
+    "切割片最大使用速度不得超过该具体SKU标签和负责生产方文件标注的RPM与线速度",
     "安装切割片前检查是否有裂纹、破损、受潮，有问题严禁使用",
-    "安装时必须使用符合规格的法兰盘压紧，法兰直径不小于切割片直径1/3",
+    "安装法兰、压紧方式和尺寸必须遵循该具体切割片标签、负责生产方文件和工具说明书",
     "切割时操作人员必须佩戴防护眼镜、防尘口罩、防护手套、劳保鞋",
     "切割片严禁用于打磨作业（应使用专用磨片），侧向施压会导致切割片破裂飞出",
-    "切割片存放需防潮、防压、平放，避免阳光直射和高温环境，保质期2年",
-    "新装切割片应空转1分钟以上确认无异常方可使用",
+    "存放方式与使用期限以该具体SKU标签、负责生产方说明和适用市场要求为准",
+    "安装后的试运行与检查步骤必须遵循该具体切割片标签、负责生产方文件和工具说明书",
     "切割工件应牢固固定，切割片要垂直切入，不得强力扭转或斜压",
   ];
 
@@ -69,7 +69,7 @@ export default function ZhCuttingWheelsPage() {
       a: "较薄的切割片通常可减少切缝，但切削速度、毛刺、温升、寿命和稳定性取决于配方、增强结构、工件、设备和操作。应在同一材料、截面、转速和进给条件下测试不同厚度，并遵循工具、护罩和切割片制造商的说明。" },
     {
       q: "金属切割片和不锈钢切割片有什么区别？可以混用吗？",
-      a: "不建议混用。金属切割片（普通棕刚玉）含Fe、S、Cl元素较高，切割不锈钢时高温下这些元素会附着在不锈钢切口表面，造成切口后期生锈（不锈钢最怕铁离子污染）；金属片切割不锈钢效率也低、切口发黑变形。不锈钢专用切割片（INOX）使用白刚玉/单晶刚玉磨料，配方严格控制Fe+S+Cl≤0.1%，不会污染不锈钢，切割锋利不变色不生锈，但价格比普通金属片略高。建议：切黑色金属（铁、角钢、螺纹钢、普通钢管）用普通金属切割片性价比高；切不锈钢必须用INOX不锈钢专用切割片；切铸铁用碳化硅铸铁片；切石材用碳化硅石材片。按材质选对应切割片效果最好、效率最高、最安全。" },
+      a: "不应默认通用金属切割片适用于不锈钢。采购方应在RFQ中列明材料、工具、防护罩、目标标准及Fe、S、Cl限值，并索取准确INOX配方对应的文件与代表性样品测试，再决定是否批准使用。" },
     {
       q: "你们的切割片有什么质量认证？安全性能如何？",
       a: "切割片属于高速旋转危险磨具。采购方应明确目标市场适用标准、工具与护罩兼容性、额定转速、增强结构、抽样和回转测试方法，并索取对应 SKU 的报告编号、签发机构、覆盖规格和有效期。没有这些文件时，不应把通用网页声明视为 EN12413、MPA、oSa 或其他安全认证证据。" },
@@ -87,9 +87,9 @@ export default function ZhCuttingWheelsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "切割片", href: "/zh/cutting-wheels" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">树脂切割片厂家 · 安全认证</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B采购 · 安全证据核验</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              切割片厂家_树脂切割片批发_不锈钢切割片OEM代工
+              树脂切割片采购_不锈钢切割片批发_OEM项目支持
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               面向金属、不锈钢 INOX、超薄、钹型、铸铁与石材应用的树脂切割片 OEM 采购。直径、厚度、配方、增强结构、额定转速、安全文件和 MOQ 均按具体 SKU 核验与报价。
@@ -115,8 +115,8 @@ export default function ZhCuttingWheelsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">核验安全文件</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">双网增强</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">安全加固</div>
+                <div className="text-2xl font-black text-industry-orange">按SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">增强结构核验</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">4-16寸</div>
@@ -136,9 +136,9 @@ export default function ZhCuttingWheelsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-8 space-y-12">
               <div className="space-y-5">
-                <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">树脂砂轮切割片生产厂家</span>
+                <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B项目支持</span>
                 <h2 className="text-2xl font-extrabold text-white tracking-wide">
-                  SCOTTCHEN — 专业切割片厂家，双网增强树脂切割片工厂直供
+                  树脂切割片规格、安全文件与OEM采购协调
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
@@ -223,16 +223,16 @@ export default function ZhCuttingWheelsPage() {
 
               <div className="space-y-6">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  为什么选择SCOTTCHEN切割片厂家
+                  切割片项目如何降低采购与安全风险
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     { title: "按 SKU 核验安全文件", desc: "核对适用标准、报告编号、签发机构、覆盖尺寸、有效期与标签使用范围。" },
-                    { title: "双网增强工艺", desc: "包括1.0mm超薄规格在内的所有切割片均采用双网玻璃纤维增强，拒绝单网/无网劣质工艺。" },
-                    { title: "一级磨料原料", desc: "选用河南一级棕刚玉、白刚玉、黑碳化硅磨料，高强度酚醛树脂，切割锋利、寿命长。" },
-                    { title: "全规格覆盖", desc: "直径4寸-16寸、厚度1.0-4.0mm全规格，金属/不锈钢/铸铁/石材四大应用配方齐全。" },
-                    { title: "自动化生产", desc: "全自动压机+电脑控温隧道固化炉，产品密度均匀、硬度稳定、每批次质量一致。" },
-                    { title: "OEM/ODM服务", desc: "表面印刷Logo、彩盒/收缩包装定制、零售套装、FBA贴标代发，10年+出口贴牌经验。" },
+                    { title: "增强结构按SKU确认", desc: "层数、网布、结构及相关安全证据写入批准规格。" },
+                    { title: "磨料与树脂可追溯", desc: "材料等级与来源仅在对应SKU有文件支持时写入报价。" },
+                    { title: "规格范围书面确认", desc: "直径、厚度、配方、额定转速和应用范围以报价与报告覆盖为准。" },
+                    { title: "检验计划可审核", desc: "尺寸、回转、侧向负荷或其他检查与抽样比例按订单约定。" },
+                    { title: "包装条码按买家文件", desc: "标签、警告、渠道条码和包装工作仅按买家批准稿与报价范围执行。" },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -252,7 +252,7 @@ export default function ZhCuttingWheelsPage() {
                 <h2 className="text-xl font-extrabold text-white">切割片OEM/ODM贴牌定制服务</h2>
                 <div className="text-sm text-industry-slate-300 leading-relaxed space-y-4">
                   <p>
-                    SCOTTCHEN切割片厂家为全球工具品牌、五金连锁、焊接耗材经销商、建材超市、电商卖家提供专业的树脂切割片OEM/ODM贴牌代工服务。我们有10年以上的切割片出口贴牌经验，熟悉各国市场的标准要求和包装规范。
+                    SCOTTCHEN从上海为树脂切割片OEM项目提供询价、样品、包装和出口协调。负责生产的主体、适用标准、报告覆盖与市场要求必须在具体SKU文件中确认；网站不声明自有工厂、固定经营年限或自动符合任何市场要求。
                   </p>
                   <p>
                     OEM 范围可包括本体标签、内孔贴纸、工业或零售包装、组合装和采购方提供的条码数据。品牌、额定转速、安全图示、认证标识、翻译与渠道标签必须由采购方确认其适用性和使用权，并写入批准稿件。
@@ -295,7 +295,7 @@ export default function ZhCuttingWheelsPage() {
                   quality={70}
                   loading="lazy"
                   src="/images/fiber_discs.webp"
-                  alt="SCOTTCHEN树脂切割片厂家批发 - 金属不锈钢超薄切割片"
+                  alt="SCOTTCHEN树脂切割片采购与安全证据核验支持"
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
@@ -353,12 +353,11 @@ export default function ZhCuttingWheelsPage() {
                 "url": absoluteUrl("/zh/cutting-wheels"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "树脂切割片",
-                "material": "树脂结合剂磨料，双层玻璃纤维网增强",
+                "material": "树脂结合剂磨料；配方与增强结构按SKU确认",
                 "additionalProperty": [
                   { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、配方、标签、包装和订单数量书面确认" },
-                  { "@type": "PropertyValue", "name": "增强结构", "value": "双网玻璃纤维增强" }
+                  { "@type": "PropertyValue", "name": "增强结构", "value": "以批准SKU规格与安全文件为准" }
                 ],
               },
               buildFaqPageSchema(faqs),
