@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Contact details:</strong> Full name and email address.</li>
                 <li><strong>Business metadata:</strong> Registered company name, corporate website URL, target geographic markets, and standard business profile type (e.g., brand manager, distributor, or online seller).</li>
                 <li><strong>Technical specifications:</strong> Targeted tool categories, custom ply counts, bore sizes, sandpaper grits, packaging preferences, and estimated batch volumes.</li>
-                <li><strong>Request context:</strong> Locale, landing page, referrer, UTM parameters, submission time, IP address, browser user agent, and internal lead-routing score.</li>
+                <li><strong>Request context:</strong> Locale, landing page, selected source page, referrer, UTM parameters, submission time, IP address, browser user agent, and internal lead-routing score.</li>
               </ul>
             </div>
 

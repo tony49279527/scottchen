@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
-import { buildSamplePayload, submitInquiry } from "@/lib/inquiryClient";
+import { buildSamplePayload, getInquirySourcePage, submitInquiry } from "@/lib/inquiryClient";
+import { inferInquiryContext, sampleCategoryOptions } from "@/lib/inquiryContext";
 
 interface SampleFormFields {
   fullName: string;
@@ -30,6 +31,8 @@ export default function SampleKitForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [formStartedAt] = useState(() => new Date().toISOString());
+  const formStartTracked = useRef(false);
+  const sourcePageRef = useRef("");
 
   const [fields, setFields] = useState<SampleFormFields>({
     fullName: "",
@@ -49,6 +52,30 @@ export default function SampleKitForm() {
 
   const [errors, setErrors] = useState<Partial<Record<keyof SampleFormFields, string>>>({});
   const [touched, setTouched] = useState<Partial<Record<keyof SampleFormFields, boolean>>>({});
+
+  useEffect(() => {
+    const sourcePage = getInquirySourcePage();
+    const context = inferInquiryContext(sourcePage);
+    sourcePageRef.current = sourcePage;
+
+    if (context.sampleCategories.length) {
+      setFields((previous) => previous.categories.length
+        ? previous
+        : { ...previous, categories: context.sampleCategories });
+    }
+  }, []);
+
+  const trackFormStart = () => {
+    if (formStartTracked.current) return;
+    formStartTracked.current = true;
+    trackEvent({
+      event: "sample_form_start",
+      locale: isZh ? "zh-CN" : "en",
+      formType: "sample",
+      category: fields.categories.join(", "),
+      sourcePage: sourcePageRef.current,
+    });
+  };
 
   const validateField = (name: keyof SampleFormFields, value: string | string[] | boolean): string => {
     if (name === "consent") {
@@ -152,6 +179,13 @@ export default function SampleKitForm() {
     });
 
     if (hasError) {
+      trackEvent({
+        event: "sample_form_validation_error",
+        locale: isZh ? "zh-CN" : "en",
+        formType: "sample",
+        category: fields.categories.join(", "),
+        sourcePage: sourcePageRef.current,
+      });
       setErrors(newErrors);
       setTouched(
         (Object.keys(fields) as Array<keyof SampleFormFields>).reduce(
@@ -204,6 +238,7 @@ export default function SampleKitForm() {
           locale: isZh ? "zh-CN" : "en",
           formType: "sample",
           category: fields.categories.join(", "),
+          sourcePage: sourcePageRef.current,
         });
         setSubmitError(readableSubmitError(result.message));
         setIsSubmitting(false);
@@ -214,6 +249,7 @@ export default function SampleKitForm() {
         locale: isZh ? "zh-CN" : "en",
         formType: "sample",
         category: fields.categories.join(", "),
+        sourcePage: sourcePageRef.current,
       });
     } catch (error) {
       console.error("Sample request submission failed:", error);
@@ -222,6 +258,7 @@ export default function SampleKitForm() {
         locale: isZh ? "zh-CN" : "en",
         formType: "sample",
         category: fields.categories.join(", "),
+        sourcePage: sourcePageRef.current,
       });
       setSubmitError(
         deliveryErrorMessage()
@@ -245,7 +282,7 @@ export default function SampleKitForm() {
   `;
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
+    <form onSubmit={handleSubmit} onFocusCapture={trackFormStart} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
       <div className="border-b border-industry-slate-800 pb-4 mb-6">
         <h2 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
           {isZh ? "B2B 物理样品申领表格" : "B2B Material Sample Request"}
@@ -384,26 +421,19 @@ export default function SampleKitForm() {
           {isZh ? "选择样品包中需要放入的耗材类别" : "Select Accessories Needed in Sample Kit"} <span className="text-industry-orange">*</span>
         </label>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 bg-industry-slate-950/60 p-4 rounded border border-industry-slate-800">
-          {[
-            { label: isZh ? "螺旋车缝密缝棉布轮" : "Spiral Stitched Buffing Wheels", val: "Buffing Wheels" },
-            { label: isZh ? "松缝纯棉黄 Flannel 绒轮" : "Loose Flannel Coloring Wheels", val: "Loose Flannel" },
-            { label: isZh ? "带柄凹槽打磨抛光布头" : "Shank-Mounted Polishing Buffs", val: "Shank Buffs" },
-            { label: isZh ? "研磨抛光蜡膏条" : "Abrasive Compound Bars", val: "Compounds" },
-            { label: isZh ? "干湿两用防水乳胶砂纸片" : "Sanding Sheets & Rolls", val: "Sanding Sheets" },
-            { label: isZh ? "防堵塞镂空玻璃纤维砂网" : "Drywall Sanding Screens", val: "Sanding Screens" },
-            { label: isZh ? "精细塑料打磨棒 (Mini 砂带)" : "Detail Mini Sanding Sticks", val: "Detail Sticks" },
-            { label: isZh ? "大理石瓷砖电镀金刚石磨片" : "Diamond Specialty Discs", val: "Diamond Abrasives" },
-          ].map((cat) => (
-            <label key={cat.val} className="inline-flex items-center text-white cursor-pointer select-none">
+          {sampleCategoryOptions.map((category) => (
+            <label key={category.value} className="inline-flex items-center text-white cursor-pointer select-none">
               <input
                 type="checkbox"
                 name="categories"
-                value={cat.val}
-                checked={fields.categories.includes(cat.val)}
+                value={category.value}
+                checked={fields.categories.includes(category.value)}
                 onChange={handleCheckboxChange}
                 className="h-5 w-5 rounded accent-industry-orange border-industry-slate-700 bg-industry-slate-950 focus:ring-industry-orange"
               />
-              <span className="ml-2.5 text-xs text-industry-slate-300 font-medium">{cat.label}</span>
+              <span className="ml-2.5 text-xs text-industry-slate-300 font-medium">
+                {isZh ? category.zh : category.en}
+              </span>
             </label>
           ))}
         </div>
@@ -584,6 +614,7 @@ export default function SampleKitForm() {
           <input
             type="checkbox"
             name="consent"
+            required
             checked={fields.consent}
             onChange={(e) => {
               setFields((prev) => ({ ...prev, consent: e.target.checked }));

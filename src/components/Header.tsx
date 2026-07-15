@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { alternateLocalePath } from "@/lib/site";
 import ThemeToggle from "@/components/ThemeToggle";
+import { trackEvent } from "@/lib/analytics";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,6 +15,7 @@ export default function Header() {
 
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const prefix = isZh ? "/zh" : "";
+  const quoteHref = buildInquiryHref(pathname, "quote");
 
   const productLinks = isZh
     ? [
@@ -219,7 +222,15 @@ export default function Header() {
               </Link>
             </div>
             <Link
-              href={isZh ? "/zh/contact" : "/contact"}
+              href={quoteHref}
+              onClick={() =>
+                trackEvent({
+                  event: "quote_cta_click",
+                  locale: isZh ? "zh-CN" : "en",
+                  formType: "quote",
+                  sourcePage: pathname,
+                })
+              }
               className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded bg-industry-orange-cta px-4 text-[13px] font-bold tracking-wide text-white shadow-lg shadow-industry-orange/20 transition-all-custom hover:scale-[1.02] hover:bg-industry-orange-hover"
             >
               {isZh ? "在线询盘" : "Request Quote"}
@@ -227,6 +238,20 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-1 lg:hidden">
+            <Link
+              href={quoteHref}
+              onClick={() =>
+                trackEvent({
+                  event: "quote_cta_click",
+                  locale: isZh ? "zh-CN" : "en",
+                  formType: "quote",
+                  sourcePage: pathname,
+                })
+              }
+              className="inline-flex h-9 items-center justify-center rounded bg-industry-orange-cta px-3 text-xs font-bold text-white shadow-sm shadow-industry-orange/20"
+            >
+              {isZh ? "询价" : "Quote"}
+            </Link>
             <ThemeToggle isZh={isZh} />
             <button
               type="button"
@@ -326,7 +351,7 @@ export default function Header() {
               </div>
             </div>
             <Link
-              href={isZh ? "/zh/contact" : "/contact"}
+              href={quoteHref}
               onClick={closeMobileMenu}
               className="block w-full rounded bg-industry-orange-cta py-3 text-center text-base font-bold text-white transition-colors hover:bg-industry-orange-hover"
             >

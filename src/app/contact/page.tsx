@@ -25,6 +25,13 @@ const rfqSpecificationItems = [
   "Target quantity, destination market, Incoterms rule and preferred shipment plan",
 ] as const;
 
+const firstReplyItems = [
+  "Recommended product or kit configuration and any open specification questions",
+  "MOQ and pricing basis for the requested quantity and packaging scope",
+  "Sample, approval and quality-plan path before production",
+  "Indicative production timing, Incoterms assumptions and next documents needed",
+] as const;
+
 export default function Contact() {
   const schema = {
     "@context": "https://schema.org",
@@ -111,6 +118,20 @@ export default function Contact() {
                 <div className="text-xs font-mono text-industry-orange">
                   Target response time: within 1 business day
                 </div>
+              </div>
+
+              <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
+                <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
+                  What the First Reply Covers
+                </h3>
+                <ul className="space-y-2 text-xs leading-relaxed text-industry-slate-300">
+                  {firstReplyItems.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span aria-hidden="true" className="mt-1 text-industry-orange">&#10003;</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
-import { buildQuotePayload, submitInquiry } from "@/lib/inquiryClient";
+import { buildQuotePayload, getInquirySourcePage, submitInquiry } from "@/lib/inquiryClient";
+import { inferInquiryContext, quoteCategoryOptions } from "@/lib/inquiryContext";
 
 interface FormFields {
   fullName: string;
@@ -29,6 +30,8 @@ export default function RFQForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [formStartedAt] = useState(() => new Date().toISOString());
+  const formStartTracked = useRef(false);
+  const sourcePageRef = useRef("");
 
   const [fields, setFields] = useState<FormFields>({
     fullName: "",
@@ -47,6 +50,30 @@ export default function RFQForm() {
 
   const [errors, setErrors] = useState<Partial<Record<keyof FormFields, string>>>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormFields, boolean>>>({});
+
+  useEffect(() => {
+    const sourcePage = getInquirySourcePage();
+    const context = inferInquiryContext(sourcePage);
+    sourcePageRef.current = sourcePage;
+
+    if (context.quoteCategory) {
+      setFields((previous) => previous.productCategory
+        ? previous
+        : { ...previous, productCategory: context.quoteCategory });
+    }
+  }, []);
+
+  const trackFormStart = () => {
+    if (formStartTracked.current) return;
+    formStartTracked.current = true;
+    trackEvent({
+      event: "quote_form_start",
+      locale: isZh ? "zh-CN" : "en",
+      formType: "quote",
+      category: fields.productCategory,
+      sourcePage: sourcePageRef.current,
+    });
+  };
 
   const validateField = (name: keyof FormFields, value: string | boolean): string => {
     if (name === "consent") {
@@ -117,6 +144,14 @@ export default function RFQForm() {
     });
 
     if (hasError) {
+      trackEvent({
+        event: "quote_form_validation_error",
+        locale: isZh ? "zh-CN" : "en",
+        formType: "quote",
+        category: fields.productCategory,
+        buyerType: fields.buyerType,
+        sourcePage: sourcePageRef.current,
+      });
       setErrors(newErrors);
       setTouched(
         (Object.keys(fields) as Array<keyof FormFields>).reduce(
@@ -168,6 +203,7 @@ export default function RFQForm() {
           formType: "quote",
           category: fields.productCategory,
           buyerType: fields.buyerType,
+          sourcePage: sourcePageRef.current,
         });
         setSubmitError(readableSubmitError(result.message));
         setIsSubmitting(false);
@@ -180,6 +216,7 @@ export default function RFQForm() {
         formType: "quote",
         category: fields.productCategory,
         buyerType: fields.buyerType,
+        sourcePage: sourcePageRef.current,
       });
     } catch (error) {
       console.error("Inquiry submission failed:", error);
@@ -189,6 +226,7 @@ export default function RFQForm() {
         formType: "quote",
         category: fields.productCategory,
         buyerType: fields.buyerType,
+        sourcePage: sourcePageRef.current,
       });
       setSubmitError(
         deliveryErrorMessage()
@@ -212,7 +250,7 @@ export default function RFQForm() {
   `;
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
+    <form onSubmit={handleSubmit} onFocusCapture={trackFormStart} className="space-y-6 max-w-2xl mx-auto glass-panel p-8 rounded-lg shadow-xl">
       <div className="border-b border-industry-slate-800 pb-4 mb-6">
         <h2 className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
           {isZh ? "B2B 在线询盘报价申请" : "B2B Request for Quote"}
@@ -384,33 +422,12 @@ export default function RFQForm() {
             onBlur={handleBlur}
             className={inputClass("productCategory")}
           >
-            {isZh ? (
-              <>
-                <option value="">请选择产品线...</option>
-                <option value="Buffing Wheels">车缝棉布轮与抛光轮</option>
-                <option value="Polishing Kits">挂卡/零售抛光轮套装</option>
-                <option value="Sanding Sheets">干湿两用砂纸与连续砂卷</option>
-                <option value="Grinding Discs">锆刚玉重切削硫化纤维砂碟</option>
-                <option value="Detail Tools">细节塑料打磨棒 (Mini 砂带杆)</option>
-                <option value="Sanding Screens">防堵塞镂空墙面砂网</option>
-                <option value="Diamond Abrasives">石材石英石电镀金刚石磨片</option>
-                <option value="Dispenser Kits">自撕自断纸砂卷架彩盒套装</option>
-                <option value="Custom Mixed Kits">自定义多品类磨抛工具箱</option>
-              </>
-            ) : (
-              <>
-                <option value="">Select target category...</option>
-                <option value="Buffing Wheels">Buffing & Polishing Wheels</option>
-                <option value="Polishing Kits">Pre-Packaged Polishing Wheel Kits</option>
-                <option value="Sanding Sheets">Sanding Sheets & Sandpaper Rolls</option>
-                <option value="Grinding Discs">Grinding & Zirconia Fiber Discs</option>
-                <option value="Detail Tools">Detail Sanding Tools (Mini Sticks)</option>
-                <option value="Sanding Screens">Drywall Sanding Screens</option>
-                <option value="Diamond Abrasives">Diamond & Stone Specialty Abrasives</option>
-                <option value="Dispenser Kits">Sanding Dispenser Workshop Kits</option>
-                <option value="Custom Mixed Kits">Custom Mixed Surface Prep Kits</option>
-              </>
-            )}
+            <option value="">{isZh ? "请选择产品线..." : "Select target category..."}</option>
+            {quoteCategoryOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {isZh ? option.zh : option.en}
+              </option>
+            ))}
           </select>
           {touched.productCategory && errors.productCategory && (
             <p className="mt-1 text-xs text-red-500 font-medium" role="alert">{errors.productCategory}</p>
@@ -441,6 +458,7 @@ export default function RFQForm() {
                 <option value="Container Wholesale (2000-5000 Kits)">整柜/大货批发批次 (2000-5000 套)</option>
                 <option value="High Volume Industrial (5000+ Kits)">工业级大宗集中采购 (5000 套以上)</option>
                 <option value="Sample Evaluation Only">仅用于样品物理评估 (后续订货)</option>
+                <option value="Not Sure Yet">暂不确定，希望先获得建议</option>
               </>
             ) : (
               <>
@@ -450,6 +468,7 @@ export default function RFQForm() {
                 <option value="Container Wholesale (2000-5000 Kits)">Container Wholesale (2000-5000 Kits)</option>
                 <option value="High Volume Industrial (5000+ Kits)">High Volume Industrial (5000+ Kits)</option>
                 <option value="Sample Evaluation Only">Sample Evaluation Only (Testing first)</option>
+                <option value="Not Sure Yet">Not Sure Yet (Need guidance)</option>
               </>
             )}
           </select>
@@ -535,6 +554,7 @@ export default function RFQForm() {
           <input
             type="checkbox"
             name="consent"
+            required
             checked={fields.consent}
             onChange={(e) => {
               setFields((prev) => ({ ...prev, consent: e.target.checked }));
@@ -584,6 +604,11 @@ export default function RFQForm() {
             isZh ? "提交在线询盘申请" : "Submit Request for Quote"
           )}
         </button>
+        <p className="mt-3 text-center text-xs leading-relaxed text-industry-slate-400">
+          {isZh
+            ? "数量暂不确定也可以提交。收到回复后，您可直接通过邮件补充图纸、包装稿或条码文件。"
+            : "Not sure about volume yet? Submit with that option and reply to our email with drawings, packaging artwork, or barcode files."}
+        </p>
       </div>
     </form>
   );

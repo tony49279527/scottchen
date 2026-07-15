@@ -26,6 +26,13 @@ const rfqSpecificationItems = [
   "目标数量、目的市场、Incoterms 规则和优先出运方案",
 ] as const;
 
+const firstReplyItems = [
+  "建议的产品或套装配置，以及仍需确认的规格问题",
+  "基于目标数量和包装范围的 MOQ 与报价口径",
+  "量产前的样品、审批和质检计划路径",
+  "预计生产周期、Incoterms 假设和下一步所需资料",
+] as const;
+
 export default function ChineseContact() {
   const schema = {
     "@context": "https://schema.org",
@@ -107,11 +114,25 @@ export default function ChineseContact() {
                   报价反馈时间
                 </h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  我们的供应链销售团队会在收到 B2B 询盘参数后进行精细核算，并在 <strong>24小时（工作日）</strong>内通过电子邮件向您发送产品组合报价、交期安排及物流价格表。
+                  我们的商务团队会核对 B2B 询盘参数，目标是在 <strong>1 个工作日内</strong>通过电子邮件回复产品方向、待确认规格和下一步报价路径。
                 </p>
                 <div className="text-xs font-mono text-industry-orange">
                   目标答复时效：1 个工作日内
                 </div>
+              </div>
+
+              <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
+                <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
+                  首轮回复会包含什么
+                </h3>
+                <ul className="space-y-2 text-xs leading-relaxed text-industry-slate-300">
+                  {firstReplyItems.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span aria-hidden="true" className="mt-1 text-industry-orange">&#10003;</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">

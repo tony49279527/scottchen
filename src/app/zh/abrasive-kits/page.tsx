@@ -74,8 +74,8 @@ export default function ZhAbrasiveKitsPage() {
       q: "你们提供哪些零售包装形式？",
       a: "我们提供全面的零售包装选择：①彩盒——全彩印刷、挂孔、展示窗可选；②吸卡/插卡（Blister Card）——带挂孔，适合五金店货架挂装销售；③翻盖吸塑（Clamshell）——全透明展示防盗；④热收缩膜捆装；⑤坚固塑料手提箱（带定制EVA泡沫内衬）；⑥木盒/铁盒（高端礼品套装）；⑦纸筒/桶装。所有包装均可印刷您的品牌Logo、产品图片、多语言描述、卖点说明、安全警告，以及UPC/FNSKU条码。对于没有完成包装设计的客户，我们可提供包装设计和美工服务。" },
     {
-      q: "你们能做Amazon FBA贴标代发吗？",
-      a: "完全可以。SCOTTCHEN在为Amazon等电商卖家准备FBA订单方面经验丰富。我们的FBA预备服务包括：按Amazon要求贴塑料袋（必要时贴防窒息警告标签）；在每个可售单元上贴FNSKU条码；纸箱内容标签、纸箱重量尺寸标签；按Amazon最新FBA包装和预备要求装箱打包。对符合条件的套装产品，我们还可以提供Amazon SIOC（Ships in Own Container，原箱发货）免亚马逊额外包装认证方案。我们可以从工厂直接发往美国、欧洲、英国、日本等各站点的亚马逊运营中心，也可发往您指定的第三方预备仓库。" },
+      q: "套装包装可以使用买家提供的平台条码吗？",
+      a: "可以。买家提供的 FNSKU 或 UPC 数据、外箱唛头、警示文字和包装说明可以写入经双方确认的包装规格。量产前，买家仍需根据目标平台的最新规则确认标签、包装和入仓要求。" },
     {
       q: "磨具套装生产组装需要多长时间？",
       a: "标准磨具套装（使用现有包装和常规产品）的生产组装周期为订单确认和样品批准后30-40天，包括套装内各磨具组件的生产、包装材料印刷和生产、组装车间Kitting组装、质量检验和纸箱打包。使用新开模具（如定制注塑塑料箱、复杂模切彩盒）的套装，生产周期可能延长至45-55天。紧急零售旺季上架的加急订单，可根据实际情况协商优先排产。我们的标准样品准备周期为10-15天。" },
@@ -90,12 +90,12 @@ export default function ZhAbrasiveKitsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "磨具套装", href: "/zh/abrasive-kits" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B套装贴牌 · FBA零售包装</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B 套装贴牌 · 零售包装与条码</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              磨具套装批发_抛光工具套装贴牌_砂磨套装OEM定制
+              磨具套装批发与抛光工具套装 OEM 贴牌
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN专业磨具套装OEM厂家，提供抛光轮套装（含抛光膏）、砂纸碟片组合套装、汽车轮毂抛光套装、首饰抛光套装、电钻抛光配件套装、磨刀砂带套装、多功能DIY磨具套装等，零售级彩盒/吸塑/工具箱包装，FBA贴标，支持自有品牌定制，MOQ 500套起。
+              面向品牌商、经销商和跨境卖家的磨具套装 OEM 方案，覆盖抛光轮、砂纸碟片、汽车轮毂抛光、电钻配件和多功能 DIY 组合。量产前确认 BOM、包装、买家提供的条码数据、样品和质检计划。
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -122,8 +122,8 @@ export default function ZhAbrasiveKitsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">彩盒/吸塑/工具箱</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">FBA贴标</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">直发亚马逊仓</div>
+                <div className="text-2xl font-black text-industry-orange">条码准备</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">使用买家确认数据</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">定制组合</div>
@@ -145,13 +145,13 @@ export default function ZhAbrasiveKitsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN专业为全球经销商、电商卖家、工具品牌、五金连锁、零售自有品牌项目提供磨具套装OEM代工和抛光工具套装贴牌组装服务。作为磨具套装厂家，我们核心优势是自产所有主要磨具产品——抛光轮、砂纸片、百叶片、砂带、切割片、抛光膏、带柄磨头，实现磨具套装核心组件的自产自控，对产品质量、价格和交期拥有完全控制权。这种垂直整合能力让我们在为客户提供高性价比组装套装的同时，保持对套装内每一件产品质量的严格把控。
+                    SCOTTCHEN面向经销商、电商卖家、工具品牌、五金连锁和零售自有品牌项目提供磨具套装 OEM 与贴牌组装支持。采购需求可以组合抛光轮、砂纸片、百叶片、砂带、切割片、抛光膏和带柄磨头。为便于买家横向比较，每份报价应明确组件来源、规格、包装工作和验收计划。
                   </p>
                   <p>
                     我们的套装组装（Kitting & Assembly）服务远不止把产品装进盒子那么简单。我们与客户共同设计最适合目标市场的套装配置方案——无论是面向汽车爱好者的汽车轮毂抛光套装、面向刀匠的磨刀砂带套装、面向DIY消费者的通用电钻抛光套装，还是面向木工的砂纸片多粒度套装，我们都会根据客户的销售渠道（零售货架、Amazon电商、经销商目录或促销礼品渠道）选择合适的磨料粒度组合、配件配置和包装形式。
                   </p>
                   <p>
-                    所有磨具套装的组装、质检和包装均在SCOTTCHEN上海ISO 9001认证工厂完成，每一套都按照经过客户确认的物料清单组装，装箱前进行外观检验，并按客户要求贴标。我们在为Amazon FBA电商客户准备套装产品方面经验丰富，包括FNSKU条码贴标、聚袋预备、防窒息警告、纸箱标签和SIOC认证原箱包装。无论您是准备新推出自有品牌套装产品线，还是扩展现有产品系列，我们的工程和包装团队都能从产品概念开发到大货生产全程支持。
+                    套装组装、检验和包装应依据买家确认的物料清单和包装规格执行。量产前书面确认组件身份、数量、外观检查、标签数据和外箱唛头。FNSKU 等平台条码或警示文字可以纳入报价范围，但平台最终是否接受仍由买家按照当期规则确认。
                   </p>
                 </div>
               </div>
@@ -204,9 +204,9 @@ export default function ZhAbrasiveKitsPage() {
                     { title: "零售级精美包装", desc: "彩盒、吸卡、翻盖吸塑、塑料手提箱、木盒、铁盒多种包装选择，带挂孔、展示窗和全彩印刷，开箱即上架。" },
                     { title: "完全定制组合", desc: "按客户BOM任意组合套装内容——可混合任何磨具产品、配件和非磨具物品，灵活满足不同市场需求。" },
                     { title: "自有品牌印刷", desc: "包装上直接印刷您的品牌Logo、产品图片、多语言描述、功能卖点和安全警告，打造独立品牌形象。" },
-                    { title: "FBA代发服务", desc: "提供完整FBA预备服务：FNSKU条码、聚袋、防窒息标签、纸箱标签、SIOC认证包装，直发Amazon各站点仓库。" },
-                    { title: "核心组件自产", desc: "抛光轮、砂纸片、砂带、百叶片、切割片、抛光膏全部自产，质量统一可控，价格有竞争力。" },
-                    { title: "营销物料支持", desc: "提供高清产品摄影图、场景图、A+页面文案、视频素材，助力客户Amazon listing和市场推广。" },
+                    { title: "平台条码准备", desc: "买家提供的 FNSKU 或 UPC 数据、警示文字和外箱唛头可写入确认后的包装规格。" },
+                    { title: "组件范围可核对", desc: "报价明确所选组件、规格、包装工作和双方约定的检验点。" },
+                    { title: "上市物料范围", desc: "产品图片、说明书和 listing 辅助材料可以在报价中逐项讨论和确认。" },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -283,7 +283,7 @@ export default function ZhAbrasiveKitsPage() {
                   <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">500套/款</span></div>
                   <div><span className="text-industry-slate-500 block">交期：</span><span className="text-white font-bold">标准30-40天（定制箱45-55天）</span></div>
                   <div><span className="text-industry-slate-500 block">包装：</span><span className="text-white font-bold">彩盒/吸塑/插卡/翻盖/塑料箱/木盒/铁盒</span></div>
-                  <div><span className="text-industry-slate-500 block">FBA服务：</span><span className="text-white font-bold">FNSKU贴标、聚袋、SIOC包装</span></div>
+                  <div><span className="text-industry-slate-500 block">平台条码：</span><span className="text-white font-bold">按买家提供的数据和报价范围执行</span></div>
                   <div><span className="text-industry-slate-500 block">设计：</span><span className="text-white font-bold">提供包装设计和美工服务</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">

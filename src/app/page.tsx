@@ -120,7 +120,7 @@ export default function Home() {
                 <span className="text-industry-slate-700">·</span>
                 <span>Export markets worldwide</span>
                 <span className="text-industry-slate-700">·</span>
-                <span>MOQ from 500 kits</span>
+                <span>Kit RFQs commonly start from 500 sets</span>
                 <span className="text-industry-slate-700">·</span>
                 <Link href="/about" className="text-industry-orange hover:underline">
                   About SCOTTCHEN
@@ -169,8 +169,8 @@ export default function Home() {
                   <div className="text-xs text-industry-slate-400 mt-1">FNSKU barcode & carton labels</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-white">MOQ 500</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">Small-batch kit testing</div>
+                  <div className="text-xl font-bold text-white">500-set RFQ</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">Common kit starting point</div>
                 </div>
               </div>
             </div>

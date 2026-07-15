@@ -18,6 +18,6 @@ export function trackEvent(event: InquiryAnalyticsEvent) {
     form_type: event.formType,
     category: event.category,
     buyer_type: event.buyerType,
+    source_page: event.sourcePage,
   });
 }
-

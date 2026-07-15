@@ -2,6 +2,7 @@ export type InquiryType = "quote" | "sample";
 
 export interface AttributionFields {
   landingPage: string;
+  sourcePage: string;
   locale: "en" | "zh-CN";
   referrer: string;
   utmSource: string;
@@ -52,6 +53,12 @@ export interface InquiryApiResponse {
 
 export interface InquiryAnalyticsEvent {
   event:
+    | "quote_cta_click"
+    | "sample_cta_click"
+    | "quote_form_start"
+    | "sample_form_start"
+    | "quote_form_validation_error"
+    | "sample_form_validation_error"
     | "quote_submit_success"
     | "quote_submit_error"
     | "sample_submit_success"
@@ -61,4 +68,5 @@ export interface InquiryAnalyticsEvent {
   formType?: InquiryType;
   category?: string;
   buyerType?: string;
+  sourcePage?: string;
 }

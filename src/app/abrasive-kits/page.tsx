@@ -68,8 +68,8 @@ export default function AbrasiveKitsPage() {
       a: "We offer a full range of retail packaging for abrasive and polishing kits including color boxes, blister card packs with hang tabs for peg display, clamshell packs, shrink-wrapped bundles, durable plastic carrying cases with custom foam inserts, wooden boxes for premium jewelry kits, and tin containers. All packaging can be printed with your brand, product images, multilingual descriptions, features and benefits, safety warnings, and UPC/FNSKU barcode labels. Packaging design and artwork services are available for buyers without finalized designs.",
     },
     {
-      q: "Do you provide FBA-ready kit packaging?",
-      a: "Yes. We are experienced in preparing abrasive and polishing kits for Amazon FBA fulfillment. Our FBA prep service includes polybag application with suffocation warnings (where required by Amazon), FNSKU barcode labels applied to each sellable unit, carton content labeling, carton weight and dimension labels, and shipment preparation per Amazon's current FBA packaging and prep requirements. We can also apply Amazon's \"Ships in Own Container\" (SIOC) frustration-free packaging for qualifying kit products.",
+      q: "Can kit packaging include buyer-supplied marketplace labels?",
+      a: "Yes. Buyer-supplied FNSKU or UPC data, carton marks, warning text and packaging instructions can be included in the approved pack specification. The buyer remains responsible for confirming the marketplace's current requirements before production approval.",
     },
     {
       q: "How long does kit production and assembly take?",
@@ -92,7 +92,7 @@ export default function AbrasiveKitsPage() {
               Abrasive Kit Wholesale &amp; Polishing Kits Private Label
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing compound sets, and drill accessory kits. Retail-ready packaging, FBA compliant, custom assortments. MOQ 500 sets from China manufacturer.
+              OEM private label abrasive kits, buffing wheel kits, sanding disc assortments, polishing compound sets, and drill accessory kits. Configure the assortment, packaging, buyer-supplied barcode data, sample approval and written quality plan before production.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -119,8 +119,8 @@ export default function AbrasiveKitsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Packaging</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">FBA Prep</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Compliant</div>
+                <div className="text-2xl font-black text-industry-orange">Barcode Prep</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Buyer-Supplied Data</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">Custom</div>
@@ -142,13 +142,13 @@ export default function AbrasiveKitsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN specializes in OEM abrasive kit manufacturing and private label polishing kit assembly for distributors, e-commerce sellers, tool brands, hardware chains, and retail private label programs worldwide. As a China-based abrasive kit manufacturer producing all core abrasive products in-house—buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, polishing compounds, and shank-mounted accessories—we have full control over component quality, pricing, and kitting customization. This vertical integration allows us to offer highly competitive pricing on assembled retail kits while maintaining strict quality control over every item that goes into the package.
+                    SCOTTCHEN supports OEM abrasive kit manufacturing and private label polishing kit assembly for distributors, e-commerce sellers, tool brands, hardware chains, and retail private label programs. The sourcing brief can combine buffing wheels, sanding discs, flap discs, sanding belts, cutting wheels, polishing compounds, and shank-mounted accessories. Each quotation should identify the component source, specification, packaging scope and acceptance plan so buyers can compare like-for-like offers.
                   </p>
                   <p>
                     Our kitting and assembly services go beyond simply bundling products into a box. We work with you to design the optimal kit assortment for your target market—whether that is an automotive wheel polishing kit for car enthusiasts, a knife making belt kit for bladesmiths, a general-purpose drill polishing kit for DIY consumers, or a sanding disc assortment pack for woodworkers. We select appropriate grit progressions, quantities, accessory inclusions, and packaging formats based on your channel (retail shelf, Amazon, distributor catalog, or promotional gift program).
                   </p>
                   <p>
-                    All kit assembly, quality inspection, and packaging is performed in our Shanghai facility under ISO 9001 quality management. Each kit is assembled according to an approved bill of materials, visually inspected before packing, and carton-labeled per your requirements. We have extensive experience preparing kits for Amazon FBA fulfillment including FNSKU labeling, polybag prep, suffocation warnings, and SIOC (Ships in Own Container) packaging. Whether you are launching a new private label kit brand or scaling an existing product line, our engineering and packaging teams support you from concept development through mass production.
+                    Kit assembly, inspection and packaging should follow the buyer-approved bill of materials and pack specification. Before production, confirm component identity, quantities, visual checks, label data and carton marks in writing. Marketplace-related items such as buyer-supplied FNSKU labels or warning text can be scoped in the quotation, but current platform acceptance remains the buyer's responsibility.
                   </p>
                 </div>
               </div>
@@ -187,9 +187,9 @@ export default function AbrasiveKitsPage() {
                     { title: "Retail-Ready Packaging", desc: "Blister cards, color boxes, clamshells, plastic carry cases, and wooden boxes with hang tabs, windows, and custom printed branding for immediate shelf placement." },
                     { title: "Custom Assortments", desc: "Fully customizable kit contents based on your bill of materials—mix any combination of abrasives, compounds, accessories, and non-abrasive items in one package." },
                     { title: "Private Label Branding", desc: "Your logo, brand colors, product images, multilingual descriptions, features and benefits, and safety warnings printed directly on packaging." },
-                    { title: "FBA-Ready Prep", desc: "Complete FBA preparation including FNSKU labeling, polybag application, suffocation warnings, carton labels, and SIOC-compliant packaging for Amazon sellers." },
-                    { title: "All Components Made In-House", desc: "Buffing wheels, sanding discs, belts, compounds, and shank accessories are produced in our own factory for consistent quality control and competitive pricing." },
-                    { title: "Marketing Support Assets", desc: "We provide high-resolution product images, lifestyle photography, A+ content copy, and video assets for your Amazon listings and marketing materials." },
+                    { title: "Marketplace Label Preparation", desc: "Buyer-supplied FNSKU or UPC data, warning text and carton marks can be included in the approved pack specification." },
+                    { title: "Documented Component Scope", desc: "The quotation identifies the selected components, specifications, packaging work and agreed inspection points." },
+                    { title: "Launch Asset Scope", desc: "Product images, instructions and listing-support materials can be discussed and itemized in the quotation." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -268,7 +268,7 @@ export default function AbrasiveKitsPage() {
                   <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">500 sets per kit configuration</span></div>
                   <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">30 - 40 days (45-55 with custom cases)</span></div>
                   <div><span className="text-industry-slate-500 block">Packaging:</span><span className="text-white font-bold">Color boxes, blister, clamshell, cases, tins</span></div>
-                  <div><span className="text-industry-slate-500 block">FBA Prep:</span><span className="text-white font-bold">FNSKU labels, polybags, SIOC packaging</span></div>
+                  <div><span className="text-industry-slate-500 block">Marketplace Labels:</span><span className="text-white font-bold">Buyer-supplied data scoped per quotation</span></div>
                   <div><span className="text-industry-slate-500 block">Artwork:</span><span className="text-white font-bold">Custom design services available</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">

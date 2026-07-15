@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { INQUIRY_SOURCE_KEY } from "@/lib/inquiryContext";
 
 const ATTRIBUTION_KEY = "scottchen_attribution";
 const UTM_KEYS = [
@@ -12,6 +14,16 @@ const UTM_KEYS = [
 ] as const;
 
 export default function AttributionTracker() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const conversionPath = /\/(?:contact|sample-kit|thank-you)$/.test(pathname);
+
+    if (!conversionPath) {
+      sessionStorage.setItem(INQUIRY_SOURCE_KEY, pathname);
+    }
+  }, [pathname]);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const hasCampaign = UTM_KEYS.some((key) => params.has(key));

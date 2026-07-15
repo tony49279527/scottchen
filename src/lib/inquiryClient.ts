@@ -5,6 +5,10 @@ import type {
   QuoteInquiryPayload,
   SampleInquiryPayload,
 } from "@/lib/inquiry";
+import {
+  INQUIRY_SOURCE_KEY,
+  normalizeInquirySource,
+} from "@/lib/inquiryContext";
 
 function readUtmParam(name: string): string {
   if (typeof window === "undefined") {
@@ -28,6 +32,22 @@ function readStoredAttribution() {
   }
 }
 
+export function getInquirySourcePage(): string {
+  if (typeof window === "undefined") {
+    return "";
+  }
+
+  const explicitSource = new URLSearchParams(window.location.search).get("from");
+  const recentSource = sessionStorage.getItem(INQUIRY_SOURCE_KEY);
+  const stored = readStoredAttribution();
+
+  return (
+    normalizeInquirySource(explicitSource) ||
+    normalizeInquirySource(recentSource) ||
+    normalizeInquirySource(stored?.landingPage)
+  );
+}
+
 export function getAttributionFields(pathname: string): AttributionFields {
   const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
   const stored = readStoredAttribution();
@@ -36,6 +56,7 @@ export function getAttributionFields(pathname: string): AttributionFields {
     landingPage:
       stored?.landingPage ||
       (typeof window === "undefined" ? pathname : window.location.href),
+    sourcePage: getInquirySourcePage(),
     locale: isZh ? "zh-CN" : "en",
     referrer:
       stored?.referrer || (typeof document === "undefined" ? "" : document.referrer),

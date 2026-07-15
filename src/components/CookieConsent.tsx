@@ -10,6 +10,8 @@ import {
 } from "@/lib/consent";
 
 const analyticsEnabled = Boolean(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID);
+const privacyLinkClass =
+  "font-bold text-industry-slate-200 underline decoration-industry-orange decoration-2 underline-offset-2 hover:text-industry-slate-300";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -54,11 +56,11 @@ export default function CookieConsent() {
             {isZh ? (
               <>
                 如果您同意，我们会使用 Google Analytics 了解哪些页面和询盘入口最有帮助。拒绝不会影响网站或询盘表单使用。查看{" "}
-                <Link href="/zh/cookie-policy" className="text-industry-orange-light hover:underline font-bold">
+                <Link href="/zh/cookie-policy" className={privacyLinkClass}>
                   Cookie 政策
                 </Link>{" "}
                 与{" "}
-                <Link href="/zh/privacy" className="text-industry-orange-light hover:underline font-bold">
+                <Link href="/zh/privacy" className={privacyLinkClass}>
                   隐私政策
                 </Link>{" "}
                 以了解详情。
@@ -66,11 +68,11 @@ export default function CookieConsent() {
             ) : (
               <>
                 With your permission, we use Google Analytics to understand which pages and inquiry paths are useful. Declining does not affect the site or RFQ forms. Review our{" "}
-                <Link href="/cookie-policy" className="text-industry-orange-light hover:underline font-bold">
+                <Link href="/cookie-policy" className={privacyLinkClass}>
                   Cookie Policy
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="text-industry-orange-light hover:underline font-bold">
+                <Link href="/privacy" className={privacyLinkClass}>
                   Privacy Policy
                 </Link>{" "}
                 for details.

@@ -89,6 +89,7 @@ function buildEmailHtml(
     buildRows("Country", payload.country),
     buildRows("Locale", payload.locale),
     buildRows("Landing Page", payload.landingPage),
+    buildRows("Source Page", payload.sourcePage || "-"),
     buildRows("Referrer", payload.referrer || "-"),
     buildRows("UTM Source", payload.utmSource || "-"),
     buildRows("UTM Medium", payload.utmMedium || "-"),
