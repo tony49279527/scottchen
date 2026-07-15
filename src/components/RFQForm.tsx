@@ -267,6 +267,7 @@ export default function RFQForm() {
         <input
           type="text"
           name="hpField"
+          maxLength={200}
           tabIndex={-1}
           autoComplete="off"
           value={fields.hpField}
@@ -284,6 +285,7 @@ export default function RFQForm() {
             type="text"
             id="fullName"
             name="fullName"
+            maxLength={120}
             required
             autoComplete="name"
             value={fields.fullName}
@@ -305,6 +307,7 @@ export default function RFQForm() {
             type="text"
             id="companyName"
             name="companyName"
+            maxLength={180}
             required
             autoComplete="organization"
             value={fields.companyName}
@@ -328,6 +331,7 @@ export default function RFQForm() {
             type="email"
             id="email"
             name="email"
+            maxLength={254}
             required
             autoComplete="email"
             value={fields.email}
@@ -349,6 +353,7 @@ export default function RFQForm() {
             type="text"
             id="country"
             name="country"
+            maxLength={120}
             required
             autoComplete="country-name"
             value={fields.country}
@@ -519,6 +524,7 @@ export default function RFQForm() {
             type="text"
             id="targetMarket"
             name="targetMarket"
+            maxLength={200}
             autoComplete="country"
             placeholder={isZh ? "如：北美亚马逊、德国 FBA 仓" : "e.g. North America, Germany (FBA)"}
             value={fields.targetMarket}
@@ -536,6 +542,7 @@ export default function RFQForm() {
         <textarea
           id="message"
           name="message"
+          maxLength={5000}
           rows={4}
           placeholder={
             isZh

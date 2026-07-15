@@ -182,7 +182,7 @@ export default function ProductsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Reference MOQs:</strong> Polishing wheels: 500 pcs; compound kits: 500 sets; sandpapers: 10,000 sheets; fiber discs: 2,000 pcs/grit. Final minimums are quoted per SKU.</span>
+                    <span className="text-industry-slate-200"><strong>Quoted minimums:</strong> Final quantities depend on SKU construction, materials, packaging, print method and order mix.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">

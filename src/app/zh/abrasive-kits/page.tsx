@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具套装批发与OEM贴牌 | SCOTTCHEN",
-  description: "专业磨具套装OEM厂家，提供抛光轮套装、砂纸套装、磨头套装、DIY五金工具组合套装，零售包装，FBA贴标，支持自有品牌定制。",
+  description: "抛光轮、砂纸、磨头和DIY磨具套装OEM采购支持。按BOM、包装、样品、平台标签和订单数量书面报价。",
   path: "/zh/abrasive-kits",
   locale: "zh-CN",
   alternatePath: "/abrasive-kits",
@@ -66,7 +66,7 @@ export default function ZhAbrasiveKitsPage() {
   const faqs = [
     {
       q: "磨具套装/抛光套装贴牌MOQ是多少？",
-      a: "标准磨具套装和抛光套装（使用现有模具和包装形式）MOQ为500套/款。需要新开模具的定制塑料箱、特殊形状吸塑、定制模切彩盒等，根据包装供应商起订量要求，MOQ一般为1000套/款。使用我司已开模的标准工具箱和通用包装尺寸的套装可以保持500套的MOQ。我们也提供混柜计划（Mixed Container Program），允许批发商在一个集装箱内组合多款不同套装SKU，满足多SKU少量库存的需求。" },
+      a: "MOQ按套装BOM、组件来源、包装形式、印刷、模具和订单数量报价。建议在同一询价中要求试单、补货和混合SKU情景，分别列明假设，便于比较。" },
     {
       q: "可以定制磨具套装的内容组合吗？",
       a: "完全可以。SCOTTCHEN专业提供磨具套装和抛光工具套装的定制组装服务，可根据您的目标市场和BOM清单（物料清单）完全定制套装内容——您可以任意组合我们自产的抛光轮、砂纸片、百叶片、砂带、切割片、抛光膏、带柄磨头等产品，也可以加入非磨具类配件（超细纤维毛巾、安全护目镜、手套、连接杆、心轴、说明书等）。我们可根据您的目标零售价位推荐最优的产品配置方案，并提供详细的FOB报价和样品确认。" },
@@ -78,7 +78,7 @@ export default function ZhAbrasiveKitsPage() {
       a: "可以。买家提供的 FNSKU 或 UPC 数据、外箱唛头、警示文字和包装说明可以写入经双方确认的包装规格。量产前，买家仍需根据目标平台的最新规则确认标签、包装和入仓要求。" },
     {
       q: "磨具套装生产组装需要多长时间？",
-      a: "标准磨具套装（使用现有包装和常规产品）的生产组装周期为订单确认和样品批准后30-40天，包括套装内各磨具组件的生产、包装材料印刷和生产、组装车间Kitting组装、质量检验和纸箱打包。使用新开模具（如定制注塑塑料箱、复杂模切彩盒）的套装，生产周期可能延长至45-55天。紧急零售旺季上架的加急订单，可根据实际情况协商优先排产。我们的标准样品准备周期为10-15天。" },
+      a: "交期取决于组件供应、设计稿批准、包装模具、样品批准、组装和检验范围。书面报价应列明材料、样品、生产、验货和出运的日期与责任。" },
     {
       q: "客户可以在套装中放入自己品牌的物料吗？",
       a: "可以。我们可以将客户提供的品牌物料装入套装中，例如说明书、保修卡、营销插页、产品目录、折扣卡或其他促销物品。客户可以将印刷物料直接发货到我们工厂，也可以委托我们在国内印制您的物料。我们还负责在定制泡沫内衬或模塑托盘中安排各产品的位置和固定方式，确保客户打开套装时的开箱体验专业完美。如有具体的插页物料或开箱体验（Unboxing Experience）要求，请与销售团队沟通讨论，我们会为您量身定制。" },
@@ -114,8 +114,8 @@ export default function ZhAbrasiveKitsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">套/款起订</div>
+                <div className="text-2xl font-black text-industry-orange">按套装</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量报价</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">零售包装</div>
@@ -232,7 +232,7 @@ export default function ZhAbrasiveKitsPage() {
                     报价确认并支付定金后，我们生产带客户品牌和包装的产前样品供您确认。样品阶段让您实际评估套装实物、测试产品性能、检查包装印刷质量，在大货生产前提出任何调整要求。只有在收到客户书面样品批准后才开始大货生产，确保最终产品完全符合客户规格。
                   </p>
                   <p>
-                    生产期间，所有磨具组件在我司工厂按批准规格生产，包装材料完成印刷和制作，组装车间经过培训的组装人员按照详细作业指导书进行套装组装。每一套装箱前都经过目视检验。FBA订单我们会按Amazon要求贴FNSKU标签并预备纸箱。我们也可以安排客户的其他SCOTTCHEN产品在同一集装箱内合并发货，降低物流成本。
+                    生产期间应按批准规格记录组件来源、包装材料、组装作业和抽样检验。平台订单使用买家提供并批准的当前条码、警告和纸箱要求；混合SKU装运范围与物流假设写入报价。
                   </p>
                 </div>
                 <div className="pt-2">
@@ -280,8 +280,8 @@ export default function ZhAbrasiveKitsPage() {
                   套装参数
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">500套/款</span></div>
-                  <div><span className="text-industry-slate-500 block">交期：</span><span className="text-white font-bold">标准30-40天（定制箱45-55天）</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">按BOM、包装和数量报价</span></div>
+                  <div><span className="text-industry-slate-500 block">交期：</span><span className="text-white font-bold">样品批准后书面确认里程碑</span></div>
                   <div><span className="text-industry-slate-500 block">包装：</span><span className="text-white font-bold">彩盒/吸塑/插卡/翻盖/塑料箱/木盒/铁盒</span></div>
                   <div><span className="text-industry-slate-500 block">平台条码：</span><span className="text-white font-bold">按买家提供的数据和报价范围执行</span></div>
                   <div><span className="text-industry-slate-500 block">设计：</span><span className="text-white font-bold">提供包装设计和美工服务</span></div>
@@ -321,14 +321,14 @@ export default function ZhAbrasiveKitsPage() {
                 "@type": "ProductGroup",
                 "@id": absoluteUrl("/zh/abrasive-kits#productgroup"),
                 "name": "SCOTTCHEN磨具套装、抛光工具套装、砂磨套装",
-                "description": "专业磨具套装OEM厂家，抛光轮套装、砂纸套装、DIY五金工具组合套装，零售包装，FBA贴标，MOQ 500套起。",
+                "description": "抛光轮、砂纸和DIY磨具套装OEM采购支持，按BOM、包装、样品和数量书面报价。",
                 "url": absoluteUrl("/zh/abrasive-kits"),
                 "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
                 "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "磨具套装与抛光工具套装",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见组合 500 套起" },
+                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按BOM、包装、模具和订单数量报价" },
                   { "@type": "PropertyValue", "name": "包装选项", "value": "彩盒、吸塑、聚袋、条码与说明书" }
                 ],
               },

@@ -137,7 +137,7 @@ export default function ChineseApplicationsOverview() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>分销零售配套:</strong> 可讨论吸塑、彩卡和礼盒方案；参考起订量为 500 套，最终数量、条码扫描检查及平台要求写入报价与包装确认稿。</span>
+                    <span className="text-industry-slate-200"><strong>分销零售配套:</strong> 可讨论吸塑、彩卡和礼盒方案；最终数量、条码扫描检查及平台要求写入报价与包装确认稿。</span>
                   </li>
                 </ul>
               </div>

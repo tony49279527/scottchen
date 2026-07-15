@@ -63,7 +63,7 @@ export default function ZhSandingBeltsPage() {
   const faqs = [
     {
       q: "砂带批发MOQ是多少？非标尺寸可以定制吗？",
-      a: "标准常见尺寸（如3×21\"、4×24\"、6×48\"、2×72\"氧化铝常规粒度）MOQ为500条/规格/粒度；窄砂带、宽砂带、碳化硅、陶瓷等特殊规格MOQ一般为200-500条，具体视尺寸和材料而定。我们专业支持非标尺寸砂带定制——您只需提供砂带的宽度、周长（长度）、磨料类型、粒度和布基要求（或直接告诉我方配在什么品牌型号的砂带机上），我们就能为您生产。首次定制非标的客户如需测试样品，我们提供5-10条小批量打样服务。" },
+      a: "MOQ按宽度、周长、磨料、粒度、布基、接头、包装和订单数量报价。非标询价请提供设备型号、宽度、周长、应用材料、磨料与粒度要求；样品数量、费用和时间写入书面报价。" },
     {
       q: "砂带接头有哪几种？你们用什么接头工艺？",
       a: "砂带接头主要有三种：①搭接（Overlap Joint）——砂带两端斜磨后重叠粘合，接头厚度略大，是最常见的接头形式，适合普通磨削；②对接（Butt Joint）——砂带两端对接后用强力胶带在背面粘合，接头平整、厚度一致，适合精细打磨和高精度磨削；③S形/W形接头——类似对接但切口为S形，接头强度更高、弯曲柔性好，是高端重型砂带常用接头。SCOTTCHEN根据砂带用途和客户要求选择合适的接头工艺，所有接头经过拉力测试和动态跑带测试，确保砂带高速运转不开裂、不跳接头。" },
@@ -75,7 +75,7 @@ export default function ZhSandingBeltsPage() {
       a: "砂带寿命取决于磨料、布基、磨削压力、工件材质和使用方法，正常使用下：氧化铝木工砂带寿命约2-4小时连续使用；锆刚玉金属砂带约1-3小时；陶瓷砂带约2-5小时；碳化硅细砂带寿命较短约30-60分钟。延长砂带寿命注意：①使用前将砂带悬挂24小时让其自然展开定型（尤其宽砂带）；②调整砂带张力适中，过紧易断、过松易跑偏；③控制打磨压力，不要用力重压，砂带是靠磨粒速度切削而非压力；④选用正确粒度，粗磨用粗砂带不要用细砂带强行磨；⑤保持接触面平整，避免尖锐角大力冲击砂带。" },
     {
       q: "砂带支持OEM贴牌吗？可以做套装组合吗？",
-      a: "完全支持。SCOTTCHEN作为砂带厂家提供全面OEM/ODM服务：①背面印刷品牌Logo、粒度号、规格、安全警告标识；②包装定制——单条装、多条装彩盒、插卡、吸塑、塑封、纸筒等零售包装；③多粒度组合套装——如3×21\"砂带5粒度套装（P40/P80/P120/P220/P400各2条）、2×72\"制刀全套砂带12条套装等；④磨料和布基定制——按客户应用场景推荐或按客户指定品牌砂布（Vsm、Hermes、3M等）加工；⑤FBA贴标代发服务——FNSKU标签、防窒息袋、纸箱标签直发亚马逊仓库。我们已为多个欧美工具品牌和电商卖家提供砂带贴牌服务。" },
+      a: "OEM范围可包括背面品牌、粒度、规格与警告印刷，单条或多条零售包装，多粒度套装，以及磨料和布基配置。平台条码、警告和入仓规则由买家提供最终版本，并在样品与包装批准文件中确认。" },
     {
       q: "怎么确认我需要的砂带尺寸？",
       a: "确认砂带尺寸需要两个参数：宽度和周长（展开长度）。宽度用尺子量砂带的宽度即可。周长测量方法：①如果旧砂带还在，将其剪断展开测量总长度（最准确）；②如果砂带还在机器上，可以用一根细绳沿砂带内侧绕一圈，然后量绳子长度；③如果知道砂带机品牌和型号，可以查说明书或网上查该型号的砂带规格，我们的销售也熟悉主流品牌砂带机的标配尺寸，提供机型即可帮助确认。注意：砂带长度一般标注为周长（即环形一圈的长度），不是半圈。如果您提供错误的尺寸，砂带过长无法张紧、过短装不上，务必准确测量。" },
@@ -92,7 +92,7 @@ export default function ZhSandingBeltsPage() {
               砂带厂家_环形砂带批发_砂带定制OEM代工
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN上海专业砂带厂家，生产手提砂带机砂带、台式砂带机砂带、窄砂带/锉刀砂带、宽幅砂带、制刀专用2×72砂带、碳化硅砂带等全系列环形砂带，氧化铝/锆刚玉/陶瓷/碳化硅材质齐全，支持非标尺寸定制，工厂直供批发，MOQ低至200条，出口品质。
+              环形砂带OEM采购支持，覆盖手提、台式、窄幅、宽幅和2×72等应用。尺寸、磨料、布基、接头、粒度、包装、起订量和交期按SKU书面确认。
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -119,8 +119,8 @@ export default function ZhSandingBeltsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">AO/ZA/Ceramic/SiC</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 200条</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量</div>
+                <div className="text-2xl font-black text-industry-orange">按SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量报价</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">接头平整</div>
@@ -148,7 +148,7 @@ export default function ZhSandingBeltsPage() {
                     砂带是涂附磨具中效率最高、应用最广的磨削工具，相比砂轮和百叶片，砂带磨削具有接触面积大、散热快、不易烧伤工件、磨削效率高（是铣削的10倍、普通砂轮磨削的5倍）、更换方便、安全性高等优势，被誉为"万能磨削"工具。无论是手持砂带机的小型打磨作业，还是宽砂带机的大规模板材定厚砂光，环形砂带都能提供高效稳定的磨削效果。
                   </p>
                   <p>
-                    作为砂带厂家，我们的核心优势是非标定制能力——不管您需要什么尺寸、什么磨料、什么布基、什么粒度，我们都能快速为您加工生产。标准品MOQ低至200条，大货交期7-15天（特殊规格25-30天）。我们服务的客户包括：砂带机品牌商、木工机械厂家、刀具厂、刀匠工作室、金属加工厂、铸造厂、家具厂、五金工具批发商、Amazon/Shopify电商卖家、DIY工具套装品牌等。
+                    砂带项目的核心是尺寸、磨料、布基、植砂、接头和应用条件匹配。非标能力、样品时间、起订量和批量交期应按具体组合核验并写入报价。项目可面向砂带机品牌、木工、制刀、金属加工、铸造、家具、批发和电商渠道。
                   </p>
                 </div>
               </div>
@@ -234,8 +234,8 @@ export default function ZhSandingBeltsPage() {
                     { title: "优质砂布原料", desc: "选用Vsm、Hermes、DEER等顶级品牌砂布卷，磨料均匀、脱砂少、寿命长，全树脂粘结。" },
                     { title: "接头工艺精湛", desc: "搭接/对接/S形接头工艺精准选择，拉力测试通过，运行平整不跳、不开裂、不断带。" },
                     { title: "磨料全种类", desc: "氧化铝、锆刚玉、陶瓷、碳化硅四大磨料齐全，覆盖木工、金属、制刀、石材全行业应用。" },
-                    { title: "快速打样交货", desc: "标准品有模具最快7-15天交货，标准规格5-10条免费打样，非标打样3-5天。" },
-                    { title: "OEM/套装定制", desc: "Logo印刷、彩盒吸塑包装、多粒度组合套装（如2×72制刀12条套装）、FBA贴标代发。" },
+                    { title: "书面样品与交期", desc: "样品数量、费用、材料准备、生产、验货和出运节点按尺寸与订单数量报价。" },
+                    { title: "OEM/套装范围", desc: "Logo印刷、零售包装和多粒度套装可按批准文件确认；平台标签规则由买家提供。" },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -258,10 +258,10 @@ export default function ZhSandingBeltsPage() {
                     SCOTTCHEN砂带厂家为全球工具品牌、五金连锁、砂带机制造商、电商卖家、刀匠品牌提供专业的砂带OEM/ODM定制服务。我们的砂带转换加工车间配备多台进口设备，可按客户要求使用指定品牌砂布卷（包括Vsm、Hermes、3M、DEER、Norton等）或我们推荐的国产优质砂布进行转换加工。
                   </p>
                   <p>
-                    OEM服务内容：①背面品牌印刷——砂带背面印刷品牌Logo、粒度号、规格、安装方向标识、安全警告；②包装定制——单条牛皮纸/塑料包装，多条彩盒、插卡、吸塑、纸筒包装；③套装组合——如3×21\"多粒度组合套装、2×72\"制刀全套砂带（P36/P60/P80/P120/P220/P400/P800/P1200各1条）、DIY五金店零售组合装；④特殊配方定制——按客户应用定制磨料、植砂密度、超涂层、布基类型；⑤FBA服务——FNSKU条码、防窒息袋、纸箱标签直发亚马逊仓库；⑥配套销售——砂带+砂带机配套开发，为砂带机品牌定制原厂砂带耗材。
+                    OEM范围可包括背面品牌、粒度、规格、安装方向和警告印刷，单条或多条包装，多粒度套装，以及磨料、植砂、涂层、布基和接头配置。平台条码、警告语与外箱标签由买家提供并批准，实际供应范围写入报价。
                   </p>
                   <p>
-                    合作流程：提供尺寸（宽×周长）、磨料、粒度、数量需求 → 我方报价并推荐最优材料方案 → 打样（5-10条，3-7天） → 客户测试样品 → 样品通过后签订合同付30%定金 → 批量生产（标准7-15天，非标25-30天） → QC验货 → 付尾款发货。我们支持混批和多规格合并生产，方便客户一站式采购。
+                    合作流程通常包括：提交宽度、周长、磨料、粒度、接头、应用和数量 → 书面报价 → 打样与测试 → 样品和包装批准 → 订单 → 生产、验货和发运。费用、付款条件和各阶段时间以具体项目文件为准。
                   </p>
                 </div>
                 <div className="pt-2">
@@ -309,8 +309,8 @@ export default function ZhSandingBeltsPage() {
                   批发参数
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">标准品200-500条</span></div>
-                  <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">标准7-15天，非标25-30天</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">按尺寸、材料、接头和数量报价</span></div>
+                  <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">按尺寸、材料、包装和数量确认</span></div>
                   <div><span className="text-industry-slate-500 block">宽度：</span><span className="text-white font-bold">3mm-2200mm</span></div>
                   <div><span className="text-industry-slate-500 block">周长：</span><span className="text-white font-bold">300mm-12000mm</span></div>
                   <div><span className="text-industry-slate-500 block">磨料：</span><span className="text-white font-bold">AO/ZA/Ceramic/SiC</span></div>
@@ -328,6 +328,7 @@ export default function ZhSandingBeltsPage() {
                   相关产品分类
                 </h3>
                 <ul className="space-y-2 text-sm">
+                  <li><Link href="/zh/resources/sanding-belt-rfq-guide" className="font-bold text-industry-orange hover:underline">砂带 RFQ 指南</Link></li>
                   <li><Link href="/zh/buffing-wheels" className="text-industry-orange hover:underline">抛光轮/布轮/麻布轮</Link></li>
                   <li><Link href="/zh/sanding-discs" className="text-industry-orange hover:underline">砂纸片/砂碟</Link></li>
                   <li><Link href="/zh/flap-discs" className="text-industry-orange hover:underline">百叶片/百叶轮</Link></li>
@@ -351,7 +352,7 @@ export default function ZhSandingBeltsPage() {
                 "@type": "ProductGroup",
                 "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
                 "name": "SCOTTCHEN环形砂带、砂带、砂带套",
-                "description": "上海砂带厂家，环形砂带批发，全尺寸非标定制，AO/ZA/Ceramic/SiC磨料，MOQ 200条起。",
+                "description": "环形砂带OEM采购支持，覆盖AO、ZA、Ceramic和SiC磨料，按尺寸、接头、包装与数量书面报价。",
                 "url": absoluteUrl("/zh/sanding-belts"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
@@ -359,7 +360,7 @@ export default function ZhSandingBeltsPage() {
                 "category": "环形砂带与砂带套",
                 "material": "氧化铝、锆刚玉、陶瓷、碳化硅",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格 200 条起" },
+                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、磨料、布基、接头、包装和订单数量报价" },
                   { "@type": "PropertyValue", "name": "非标尺寸", "value": "按确认图纸裁切宽度与周长" }
                 ],
               },

@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Buffing Wheel Manufacturer & Wholesale Supplier | SCOTTCHEN",
-  description: "Shanghai OEM buffing wheel manufacturer since 2014. Wholesale cotton buffing and polishing wheels for metal finishing, MOQ 500 pcs per size.",
+  description: "Shanghai OEM buffing wheel supplier since 2014. Compare cotton buffing and polishing wheel specifications, samples, packaging and quoted order quantities.",
   path: "/buffing-wheels",
   alternatePath: "/zh/buffing-wheels",
 });
@@ -38,13 +38,13 @@ export default function BuffingWheelsPage() {
     },
     {
       name: "Bench Grinder Polishing Wheel Kits",
-      desc: "Pre-assembled buffing wheel sets sized for 6-inch and 8-inch bench grinders, typically combining a sisal wheel, spiral-stitched cotton wheel, and loose flannel wheel with matched compound bars. These kits are packaged for retail, hardware, and e-commerce channels, ready to FBA standards with barcode labels and multilingual instructions.",
-      features: ["6\" and 8\" diameters with 1/2\" and 5/8\" arbor holes", "3-step polishing sequence: sisal cut → cotton cut → color", "Shrink-wrapped or blister-card retail packaging available", "FNSKU/UPC labeling and polybag FBA prep upon request"],
+      desc: "Pre-assembled buffing wheel sets sized for 6-inch and 8-inch bench grinders, typically combining a sisal wheel, spiral-stitched cotton wheel, and loose flannel wheel with matched compound bars. Retail packaging, barcode placement and multilingual instructions are scoped against buyer-supplied channel requirements.",
+      features: ["6\" and 8\" diameters with 1/2\" and 5/8\" arbor holes", "3-step polishing sequence: sisal cut → cotton cut → color", "Shrink-wrapped or blister-card retail packaging available", "Buyer-supplied UPC/FNSKU data and carton marks can be specified"],
     },
     {
       name: "Drill-Mounted Buffing Sets",
       desc: "Shank-mounted buffing wheels in cylinder, dome, cone, mushroom, and T-pad shapes with 1/4\" hex shanks that fit standard drills and impact drivers. Drill-mounted buffs are designed for reaching recessed areas such as wheel rims, exhaust pipes, engine bays, and contoured metalwork where bench grinders cannot reach.",
-      features: ["1/4\" (6.35mm) hex shank for cordless drills", "Shapes: cylinder, cone, dome, mushroom, goblet, T-shape", "Sold in multi-piece kits with compound bars", "MOQ: 1,000 sets per shape combination"],
+      features: ["1/4\" (6.35mm) hex shank for cordless drills", "Shapes: cylinder, cone, dome, mushroom, goblet, T-shape", "Sold in multi-piece kits with compound bars", "Order quantity quoted per shape and packaging combination"],
     },
     {
       name: "Polishing Compound Bars",
@@ -56,11 +56,11 @@ export default function BuffingWheelsPage() {
   const faqs = [
     {
       q: "What is the minimum order quantity for wholesale cotton buffing wheels?",
-      a: "Our standard MOQ for cotton buffing wheel wholesale orders is 500 pieces per size and ply configuration for standard bench-grinder wheels. Shank-mounted and drill buffing sets start at 1,000 sets per shape combination. For custom constructions, treated sisal-cotton wheels, or private label packaged kits, MOQ is confirmed in the quotation based on material availability and setup costs. We accept mixed-SKU trial orders for qualified distributors to evaluate quality across multiple product lines.",
+      a: "Order quantity is confirmed per size, ply, construction and packaging format. Standard configurations may support smaller evaluation orders, while custom constructions, printed packaging and mixed kits can require higher setup quantities. Ask for the MOQ assumptions to be stated on the SKU-level quotation.",
     },
     {
       q: "How long is the typical lead time for buffing wheel production?",
-      a: "Standard production lead time for cotton buffing and polishing wheel orders is 25 to 35 days after sample approval and deposit confirmation. Lead times vary by order volume, ply count complexity, packaging requirements, and current factory schedule. Private label packaging with custom printing, blister cards, or color boxes typically adds 7 to 10 days. Rush production can be arranged for urgent orders on a case-by-case basis with a priority scheduling surcharge.",
+      a: "Lead time is quoted after the wheel construction, quantity, sample status, artwork and packaging process are confirmed. The written quotation should separate sample approval, artwork approval, production and shipment milestones rather than relying on a generic website estimate.",
     },
     {
       q: "Do you provide compound bars matched to your buffing wheels?",
@@ -72,11 +72,11 @@ export default function BuffingWheelsPage() {
     },
     {
       q: "Are your buffing wheels balanced for smooth high-speed operation?",
-      a: "Yes. All SCOTTCHEN cotton buffing wheels are manufactured under precision-balanced assembly with a bore tolerance of +/-0.05mm to minimize vibration at rated RPM. Each production batch is tested on balancing equipment before packaging. For large-diameter airway and ventilated buffs used on automatic polishing lines, we use steel-center hubs with precision-punched arbor holes to ensure concentricity and long service life without spindle wear.",
+      a: "Balance, bore tolerance, rated RPM and the inspection method should be written into the approved SKU specification. For large-diameter airway and ventilated buffs, buyers should also confirm hub construction, concentricity criteria and the sample test setup before production.",
     },
     {
       q: "Can you produce buffing wheels with our private label and custom packaging?",
-      a: "Absolutely. We offer full OEM and private label services including custom ply configurations, branded compound bar wrappers, printed color boxes, blister cards with hang tabs, heat-shrinked polybags with FNSKU/UPC barcode labels, and FBA-ready carton labeling. We support distributors, e-commerce sellers, and tool brands with retail-ready packaging that meets Amazon FBA, big-box hardware, and industrial distributor requirements. Send us your artwork and specifications for a custom quotation.",
+      a: "Private-label scope can include custom ply configurations, compound wrappers, color boxes, blister cards, polybags and buyer-supplied UPC or FNSKU data. Marketplace or retailer acceptance is not implied: current channel rules, warnings, barcode placement and carton marks must be supplied by the buyer and confirmed in the approved packaging specification.",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function BuffingWheelsPage() {
               Buffing Wheel Manufacturer &amp; Polishing Wheel Supplier
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              Shanghai-based OEM manufacturer of cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, and matched polishing compound bars. Precision-balanced, ISO 9001 certified, serving distributors, tool brands, and industrial polishing operations worldwide.
+              Shanghai-based OEM supplier of cotton buffing wheels, spiral-stitched polishing wheels, airway buffs, and matched polishing compound bars. Specifications, inspection scope and supporting documents are confirmed per quoted configuration.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -116,11 +116,11 @@ export default function BuffingWheelsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Pieces per SKU</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">MOQ Quoted</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">25-35 Days</div>
+                <div className="text-2xl font-black text-industry-orange">Written Plan</div>
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead Time</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
@@ -128,8 +128,8 @@ export default function BuffingWheelsPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Global Shipping</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-industry-orange">ISO 9001</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Certified Factory</div>
+                <div className="text-2xl font-black text-industry-orange">Documented</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Inspection Scope</div>
               </div>
             </div>
           </div>
@@ -147,13 +147,13 @@ export default function BuffingWheelsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    Since 2014, SCOTTCHEN has operated as a dedicated buffing wheel manufacturer and polishing wheel supplier headquartered in Shanghai, China. We produce cotton buffing wheels for metal fabricators, automotive restoration shops, jewelry makers, cookware manufacturers, hardware distributors, e-commerce sellers, and private label tool brands across North America, Europe, and Asia-Pacific. Our in-house production covers every stage from raw cotton cloth cutting and spiral stitching to final wheel assembly, balancing, compound bar molding, and retail-ready packaging.
+                    Since 2014, SCOTTCHEN has supported buffing wheel and polishing accessory sourcing from Shanghai, China. The quoted scope can cover cotton wheel construction, matched compounds, adapters and retail packaging for distributors, tool brands and industrial polishing buyers. The responsible source and inspection scope for each component should be identified in the quotation.
                   </p>
                   <p>
-                    As a wholesale buffing wheel supplier, we understand that industrial buyers and polishing operations require more than just a wheel—they need consistent density, reliable arbor fit, balanced rotation, and compounds matched to the substrate. Whether you are ordering spiral-stitched cotton buffs for stainless steel weld removal, loose flannel wheels for chrome mirror finishing, airway ventilated buffs for automatic polishing machines, or sisal-cotton treated wheels for aggressive ferrous metal cutting, every batch is manufactured to approved specifications and tested for balance, ply count, and bore tolerance before leaving the factory.
+                    Industrial buyers require more than a wheel name: density, arbor fit, rated speed, construction and compound pairing must be explicit. The approved sample and quality plan should define balance, ply count, bore tolerance and any application-specific acceptance checks before an order is released.
                   </p>
                   <p>
-                    Distributors sourcing cotton buffing wheels wholesale from SCOTTCHEN benefit from factory-direct pricing, flexible MOQ structures starting at 500 pieces, custom packaging for retail and FBA channels, and a responsive engineering team that can develop custom wheel constructions for specialized applications such as medical device polishing, aerospace component finishing, and high-volume automatic polishing lines. We also supply matched polishing compound bars in all standard colors and grit formulations so buyers can source complete polishing solutions from a single China buffing wheel manufacturer.
+                    Distributors can request a quotation that separates wheel construction, compound selection, packaging, barcode data, MOQ assumptions and sample validation. Specialized or regulated applications require buyer-defined performance and documentation requirements; suitability is not established by a general website description.
                   </p>
                 </div>
               </div>
@@ -277,11 +277,11 @@ export default function BuffingWheelsPage() {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "Precision-Balanced Assembly", desc: "Every wheel is balanced on precision equipment with a +/-0.05mm bore tolerance to minimize vibration and spindle wear at rated RPM." },
-                    { title: "ISO 9001 Certified Production", desc: "Our Shanghai factory operates under ISO 9001 quality management with incoming cloth inspection, in-process stitching checks, and final AQL batch inspection." },
+                    { title: "Balance & Bore Criteria", desc: "Put the balance method, bore tolerance, rated speed and acceptance sample into the written SKU specification." },
+                    { title: "Documented Quality Plan", desc: "Confirm incoming, in-process and final inspection scope, sampling level and records for the quoted configuration." },
                     { title: "Matched Compound System", desc: "We manufacture the full range of compound bars—Black Emery, Red Tripoli, White Rouge, Green Chrome—so you can source complete polishing systems from one supplier." },
-                    { title: "Flexible OEM & Private Label", desc: "Custom ply configurations, branded packaging, blister cards, color boxes, FNSKU/UPC labeling, and FBA-ready prep for e-commerce sellers and tool brands." },
-                    { title: "FBA-Ready Packaging", desc: "Retail kits are packed in polybags, blister cards, or color boxes with scannable barcodes and FBA-compliant carton labels for Amazon fulfillment." },
+                    { title: "Flexible OEM & Private Label", desc: "Custom ply configurations, branded packaging, blister cards, color boxes and buyer-supplied barcode data can be scoped." },
+                    { title: "Channel-Specific Packaging", desc: "Document polybag, warning, barcode and carton requirements against the buyer's current retailer or marketplace rules." },
                     { title: "Engineering Support", desc: "Our technical team can develop custom wheel constructions, compound formulations, and multi-step polishing sequences for automatic polishing lines and specialized substrates." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
@@ -307,7 +307,7 @@ export default function BuffingWheelsPage() {
                     SCOTTCHEN provides comprehensive OEM and private label manufacturing for cotton buffing wheels and polishing wheel products. We work with distributors, importers, tool brands, and e-commerce sellers to develop custom wheel lines under your brand name. Our OEM services include custom cloth selection (unbleached muslin, yellow treated cotton, white flannel, sisal-cotton blend), custom ply counts and stitch patterns, arbor hole modifications, and private label compounds in matched colors.
                   </p>
                   <p>
-                    For private label retail, we offer a full range of packaging options including bulk industrial cartons, branded color boxes, hang-tag blister cards, heat-shrink polybags, and clamshell packaging. We print your logo, product specifications, safety warnings, and multilingual instructions directly on packaging, and apply FNSKU or UPC barcode labels as required for Amazon FBA and other marketplace fulfillment. Our FBA prep service includes polybag suffocation warnings, carton weight labels, and ASIN/FNSKU labeling.
+                    Private-label packaging options can include industrial cartons, color boxes, hang-tag blister cards, heat-shrink polybags and clamshells. Logo files, specifications, translations, warnings and barcode data remain buyer-controlled inputs; the approved artwork and current channel rules determine the final pack-out.
                   </p>
                   <p>
                     The OEM process begins with your product specifications and target application, after which we provide technical consultation, produce pre-production samples for approval, and move to mass production only after written sample approval. We also support kitting—combining buffing wheels, compound bars, arbor adapters, and drill accessories into multi-piece sets with custom inserts and retail displays. Contact our sales team to discuss your private label buffing wheel project.
@@ -367,7 +367,7 @@ export default function BuffingWheelsPage() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Lead Time:</span>
-                    <span className="text-white font-bold">25 - 35 Days after deposit &amp; sample approval</span>
+                    <span className="text-white font-bold">Quoted by SKU, packaging and sample approval</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Shipping Terms:</span>
@@ -428,8 +428,8 @@ export default function BuffingWheelsPage() {
                 "category": "Cotton buffing wheels and polishing accessories",
                 "material": "Cotton muslin, cotton flannel, sisal-cotton blend, wax-bound abrasive compounds",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 pcs per size (standard) / 1,000 sets (kits)" },
-                  { "@type": "PropertyValue", "name": "Quoted lead time", "value": "25 - 35 Days after deposit & sample approval" },
+                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by wheel construction, size, packaging and quantity" },
+                  { "@type": "PropertyValue", "name": "Lead-time basis", "value": "Quoted after specification, packaging and sample approval" },
                   { "@type": "PropertyValue", "name": "Shipping terms", "value": "FOB Shanghai / EXW / CIF by arrangement" },
                   { "@type": "PropertyValue", "name": "Payment terms", "value": "T/T 30% deposit, 70% before shipment" }
                 ],

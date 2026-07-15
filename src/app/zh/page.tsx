@@ -109,8 +109,8 @@ export default function ChineseHome() {
                   <div className="text-xs text-industry-slate-400 mt-1">FNSKU 条码与外箱标</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-white">MOQ 500</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">支持小批量试单</div>
+                  <div className="text-xl font-bold text-white">按SKU报价</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">规格与包装决定起订量</div>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function ChineseHome() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>参考起订量:</strong> 许多抛光轮或定制套装询价从 500 件/套起，实际 MOQ 取决于 SKU、包装和印刷方式。</span>
+                    <span className="text-industry-slate-200"><strong>起订量报价:</strong> 实际数量取决于SKU结构、材料、包装、印刷方式和订单组合。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

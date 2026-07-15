@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Flap Disc Manufacturer | Type 27 & 29 Wholesale | SCOTTCHEN",
-  description: "OEM flap disc manufacturer in China. Type 27 and 29 zirconia or ceramic flap discs in 4.5, 5 and 7 inch sizes with fiberglass backing. MOQ 500 pcs.",
+  description: "OEM flap disc sourcing in China. Compare Type 27 and 29 zirconia or ceramic flap disc specifications, samples, packaging and quoted MOQ.",
   path: "/flap-discs",
   alternatePath: "/zh/flap-discs",
 });
@@ -51,7 +51,7 @@ export default function FlapDiscsPage() {
   const faqs = [
     {
       q: "What is the minimum order quantity for wholesale flap discs?",
-      a: "Our reference MOQ for flap disc wholesale orders is 500 pieces per size, type, grit, and grain combination for standard zirconia and aluminum oxide flap discs. Ceramic and premium German zirconia flap discs have a reference MOQ of 1,000 pieces per configuration. Private label packaging, custom label printing, and high-density jumbo discs may require higher MOQs based on raw material purchasing requirements. We accept mixed-container orders combining multiple sizes, grits, and types to help distributors stock a complete flap disc range.",
+      a: "MOQ is quoted per diameter, profile, grit, grain, density, backing and packaging format. Ceramic materials, high-density constructions and printed packaging can have different setup quantities. Require the SKU-level quotation to identify all minimums and mixed-SKU assumptions.",
     },
     {
       q: "What is the difference between Type 27 and Type 29 flap discs?",
@@ -63,7 +63,7 @@ export default function FlapDiscsPage() {
     },
     {
       q: "What safety certifications do your flap discs meet?",
-      a: "Our flap discs are manufactured under ISO 9001 quality management and comply with EN12413 safety standards for bonded abrasive products. Each disc is rated for maximum RPM appropriate to its diameter: 4.5\" discs at 13,300 RPM, 5\" discs at 12,200 RPM, and 7\" discs at 8,600 RPM. Discs carry appropriate safety markings, expiration dates, and application restrictions. We can provide MPA and third-party test reports for qualified buyers upon request.",
+      a: "The RFQ should state the target market, applicable safety standard, maximum RPM, grinder and guard compatibility, label requirements and evidence needed for the exact disc. Request report numbers, covered sizes and validity instead of relying on a general ISO, EN12413, MPA or oSa statement.",
     },
     {
       q: "What is the production lead time for flap disc orders?",
@@ -71,7 +71,7 @@ export default function FlapDiscsPage() {
     },
     {
       q: "Can you supply flap discs under our private label brand?",
-      a: "Yes. We offer comprehensive private label services for flap discs including custom printed labels with your brand name, logo, specifications, safety warnings, and multilingual text. Private label packaging options include individual shrink wrap per disc, color box sleeves, branded inner cartons, and retail blister packs. We can also apply your UPC/EAN or FNSKU barcode labels to individual discs and cartons for retail and FBA distribution. Private label MOQ and printing setup costs are confirmed in the quotation based on your label design and order volume.",
+      a: "Private-label scope can include printed labels, shrink wrap, color sleeves, cartons, blister packs and buyer-supplied UPC, EAN or FNSKU data. Safety text, translations and current retailer or marketplace requirements must be supplied and approved by the buyer; MOQ and print setup are confirmed in the quotation.",
     },
   ];
 
@@ -86,7 +86,7 @@ export default function FlapDiscsPage() {
               Flap Disc Manufacturer &amp; Abrasive Flap Disc Supplier
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              OEM flap disc manufacturer producing Type 27 and Type 29 flap discs in zirconia alumina, ceramic, and aluminum oxide. Fiberglass-backed, precision-balanced for vibration-free angle grinder operation. MOQ 500 pieces.
+              OEM flap disc sourcing for Type 27 and Type 29 configurations in zirconia alumina, ceramic and aluminum oxide. Confirm backing, balance criteria, rated speed, sample plan and MOQ per quoted SKU.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -105,16 +105,16 @@ export default function FlapDiscsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Pieces per SKU</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">MOQ Quoted</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">25-35 Days</div>
+                <div className="text-2xl font-black text-industry-orange">Written Plan</div>
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead Time</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">EN12413</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Safety Standard</div>
+                <div className="text-2xl font-black text-industry-orange">Per Market</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Documents Checked</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">Vibration-Free</div>
@@ -254,7 +254,7 @@ export default function FlapDiscsPage() {
                     { title: "Precision-Balanced Build", desc: "Automated flap arrangement and precision assembly produce balanced discs that reduce vibration and operator fatigue during extended angle grinder use." },
                     { title: "Heat-Resistant Bond", desc: "Industrial epoxy adhesive bonds flaps to the backing plate under heat and pressure, preventing flap detachment even in high-temperature heavy grinding conditions." },
                     { title: "Contaminant-Free for Stainless", desc: "Stainless-grade discs contain Fe+S+Cl below 0.1%, preventing after-rust and contamination on stainless steel workpieces." },
-                    { title: "Full Private Label Support", desc: "Custom labels, retail packaging, FBA prep, barcode labeling, and branded cartons to support your brand distribution across all channels." },
+                    { title: "Private Label Scope", desc: "Custom labels, retail packaging, buyer-supplied barcode data and branded cartons are documented in the approved artwork." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -330,8 +330,8 @@ export default function FlapDiscsPage() {
                   B2B Sourcing Parameters
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">500 pcs per size/grit/type</span></div>
-                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">25 - 35 days after sample approval</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">Quoted per size, grit and construction</span></div>
+                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Quoted by SKU, packaging and sample approval</span></div>
                   <div><span className="text-industry-slate-500 block">Max RPM (4.5\"):</span><span className="text-white font-bold">13,300 RPM</span></div>
                   <div><span className="text-industry-slate-500 block">Max RPM (5\"):</span><span className="text-white font-bold">12,200 RPM</span></div>
                   <div><span className="text-industry-slate-500 block">Max RPM (7\"):</span><span className="text-white font-bold">8,600 RPM</span></div>
@@ -349,6 +349,7 @@ export default function FlapDiscsPage() {
                   Related Categories
                 </h3>
                 <ul className="space-y-2 text-sm">
+                  <li><Link href="/resources/flap-disc-rfq-guide" className="font-bold text-industry-orange hover:underline">Flap Disc RFQ Guide</Link></li>
                   <li><Link href="/cutting-wheels" className="text-industry-orange hover:underline">Cutting Wheels</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/sanding-belts" className="text-industry-orange hover:underline">Sanding Belts</Link></li>
@@ -380,7 +381,7 @@ export default function FlapDiscsPage() {
                 "material": "Zirconia alumina, ceramic, aluminum oxide on fiberglass backing",
                 "additionalProperty": [
                   { "@type": "PropertyValue", "name": "Shapes", "value": "Type 27 flat and Type 29 conical" },
-                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 discs per common size and grit" }
+                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, grit, construction, packaging and quantity" }
                 ],
               },
               buildFaqPageSchema(faqs),

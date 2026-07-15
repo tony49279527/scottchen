@@ -40,7 +40,7 @@ export default function ZhWholesaleAbrasivesPage() {
       a: "新批发客户标准付款条件：订单确认时30% T/T电汇定金，余款70%在发货前（见提单副本）支付。对有长期稳定订单记录和良好付款表现的回头客户，可根据具体情况适当放宽付款条件，如降低定金比例或提供账期。超过一定金额门槛的大额订单我们也接受即期信用证（L/C at sight）。样品订单通常通过T/T、PayPal、Alibaba信用保障等平台预付全款。所有付款条件在生产前以形式发票书面确认。" },
     {
       q: "有批量折扣和整柜价格吗？",
-      a: "有。我们按订单数量提供阶梯价格折扣，整柜（FCL）订单享受最优惠价格。阶梯价格大致为：MOQ级别（每SKU 500件起）起批；5000件/ SKU享受5-10%折扣；20000件以上享受10-18%折扣；20尺/40尺整柜订单享受最优工厂直供价。我们鼓励客户将多个品类产品混拼一个集装箱（Mixed-SKU Container），只要整柜货量达到门槛即可享受FCL价格。对承诺年度采购量的客户我们还提供年度合同协议价。" },
+      a: "价格按SKU、规格、包装、数量、贸易术语和当期材料成本报价。建议在同一份询价中要求试单、补货、混合SKU和整柜等情景，分别列明单价、包装、检验和物流假设，避免依赖网站上的固定折扣比例。" },
     {
       q: "批发订单支持哪些交货方式？",
       a: "标准交货条件为FOB上海（船上交货）——我们负责工厂到上海港的内陆运输、出口清关和装船，风险和运费责任在货物越过船舷时转移给买方。我们也可以报EXW（工厂交货）、CIF（成本+保险+运费到目的港），或通过我们的货代合作伙伴安排门到门（DDP/DDU）送货。拼箱（LCL）订单由我们与合作货代安排拼柜；整柜（FCL）订单使用标准20尺和40尺集装箱，我们可在工厂直接装柜、加固，避免运输途中货损。" },
@@ -48,8 +48,8 @@ export default function ZhWholesaleAbrasivesPage() {
       q: "可以授予区域独家代理权吗？",
       a: "我们考虑向能够证明有强大市场覆盖能力、销量承诺、品牌建设投入、能在当地专业代表SCOTTCHEN品牌的成熟经销商授予独家分销权。独家授权按产品类别和国家/地区授予，并设最低年度采购额要求。独家代理商可获得更强的营销支持、优先排产权、新品开发参与权和区域保护。如果您有兴趣申请独家代理，请将贵公司简介、市场覆盖范围和销量预测发送给我们的销售团队进行评估。" },
     {
-      q: "是否提供一件代发或FBA代发服务？",
-      a: "虽然我们主要以批量批发和OEM制造为主，但我们支持电商客户按Amazon FBA规格预备订单，包括FNSKU条码贴标、聚袋包装、防窒息警告标签、纸箱标签等，可直接从工厂发往全球各站点Amazon运营中心或您指定的第三方海外仓/预备仓。对有稳定销量的长期贴牌客户，我们可在有限范围内提供一件代发履约服务。但我们不面向个人消费者提供单件一件代发业务。" },
+      q: "平台包装或第三方仓配如何确认？",
+      a: "买家应提供当前平台或第三方仓的条码、聚袋、警告、外箱和预约要求。报价会确认可执行的包装、贴标、发运与异常处理范围；平台规则持续变化，买家保留最终批准责任。" },
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function ZhWholesaleAbrasivesPage() {
               磨具批发_磨料磨具批发供货_五金工具分销合作
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN磨具厂家直供批发，面向经销商、五金零售商、电商卖家、工业采购商提供砂纸片、百叶片、切割片、砂带、抛光轮、磨具套装等磨料磨具批量采购服务，中国上海工厂直供价格，支持混批、柜货、OEM贴牌、FBA代发、一件代发，MOQ低至500件。
+              面向经销商、零售商、电商和工业买家的磨具批量采购支持。砂纸片、百叶片、切割片、砂带、抛光轮和套装按SKU、包装、检验、数量与贸易术语书面报价。
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -82,8 +82,8 @@ export default function ZhWholesaleAbrasivesPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量</div>
+                <div className="text-2xl font-black text-industry-orange">按SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量报价</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">FOB上海</div>
@@ -111,7 +111,7 @@ export default function ZhWholesaleAbrasivesPage() {
             </h2>
             <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
               <p>
-                SCOTTCHEN运营专门的磨料磨具批发项目，面向全球经销商、五金零售商、工业供应公司、工具品牌、电商卖家和大型工业采购商提供磨具工厂直供批发服务。作为中国磨具源头厂家，我们直接生产供应全系列磨具产品——砂纸片、百叶片、切割片、砂带、抛光轮、抛光膏、零售级磨具套装，全部在我们通过ISO 9001认证的上海工厂生产，省去多层贸易商和进口商的加价环节。
+                SCOTTCHEN为经销商、五金零售商、工业供应公司、工具品牌、电商和工业采购方提供多品类询价支持。报价应列明每个SKU的生产来源、材料与结构、包装、检验、起订量、交期和贸易术语，便于买家比较真实总成本。
               </p>
               <p>
                 我们服务多种商业模式的批发客户：传统磨料磨具分销商和工业MRO公司采购我们的产品批发给加工厂、焊接车间、承包商和工业客户；五金零售商和家居连锁超市将我们的零售包装产品放在货架销售；电商卖家和Amazon FBA商家在线销售我们的自有品牌产品；金属加工车间、铸造厂、抛光加工厂等大型工业终端用户以批发价批量采购自用。无论您的商业模式如何，我们都能根据您的采购量、包装和配送需求设计合适的批发方案。
@@ -173,25 +173,25 @@ export default function ZhWholesaleAbrasivesPage() {
                       <td className="px-4 py-3 font-bold text-industry-orange">MOQ起订</td>
                       <td className="px-4 py-3">500件</td>
                       <td className="px-4 py-3">标准批发价</td>
-                      <td className="px-4 py-3">25-35天</td>
+                      <td className="px-4 py-3">按SKU报价</td>
                     </tr>
                     <tr className="bg-industry-slate-900/40">
                       <td className="px-4 py-3 font-bold text-industry-orange">批量</td>
                       <td className="px-4 py-3">5000件</td>
                       <td className="px-4 py-3">5-10%折扣</td>
-                      <td className="px-4 py-3">25-35天</td>
+                      <td className="px-4 py-3">按组合报价</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-3 font-bold text-industry-orange">大批量</td>
                       <td className="px-4 py-3">20000件</td>
                       <td className="px-4 py-3">10-18%折扣</td>
-                      <td className="px-4 py-3">30-40天</td>
+                      <td className="px-4 py-3">按包装报价</td>
                     </tr>
                     <tr className="bg-industry-slate-900/40">
                       <td className="px-4 py-3 font-bold text-industry-orange">整柜FCL</td>
                       <td className="px-4 py-3">20尺/40尺整柜</td>
-                      <td className="px-4 py-3">最优工厂价</td>
-                      <td className="px-4 py-3">30-45天</td>
+                      <td className="px-4 py-3">整柜情景价</td>
+                      <td className="px-4 py-3">按订舱计划确认</td>
                     </tr>
                   </tbody>
                 </table>
@@ -228,12 +228,12 @@ export default function ZhWholesaleAbrasivesPage() {
 
           <div className="space-y-6">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">配套服务</span>
-            <h2 className="text-2xl font-extrabold text-white">一件代发、FBA与贴牌服务</h2>
+            <h2 className="text-2xl font-extrabold text-white">平台包装、仓配与贴牌范围</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">
-                <h3 className="text-base font-bold text-industry-orange mb-3">FBA代发预备</h3>
+                <h3 className="text-base font-bold text-industry-orange mb-3">买家批准的平台包装</h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  按Amazon FBA规格预备订单，包括每个可售单元贴FNSKU条码、聚袋包装、防窒息警告标签、纸箱内容标签和重量尺寸标签，符合Amazon现行规范。可从工厂直发美国、欧洲、英国、日本等各站点Amazon运营中心。
+                  买家提供当前可售单元条码、聚袋、警告、纸箱内容、重量尺寸和预约要求。供应方可执行的贴标、包装和发运范围必须在报价与包装批准文件中确认，不能以网站文字替代平台当期规则。
                 </p>
               </div>
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">

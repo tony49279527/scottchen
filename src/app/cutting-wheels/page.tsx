@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Cutting Disc & Cut-Off Wheel Manufacturer | SCOTTCHEN",
-  description: "China OEM cutting disc manufacturer. Thin cut-off wheels for metal and stainless steel in 4.5 to 9 inch sizes. EN12413 compliant, MOQ 1,000 pieces.",
+  description: "China OEM cut-off wheel sourcing for metal and stainless steel in 4.5 to 9 inch sizes. Compare specifications, safety documents, samples and quoted MOQ.",
   path: "/cutting-wheels",
   alternatePath: "/zh/cutting-wheels",
 });
@@ -51,11 +51,11 @@ export default function CuttingWheelsPage() {
   const faqs = [
     {
       q: "What is the MOQ for wholesale cut-off wheel orders?",
-      a: "Our reference MOQ for cutting wheel and cut-off wheel wholesale orders is 1,000 pieces per size and specification for standard metal cutting discs in bulk packaging. Stainless INOX discs, thin 1.0mm wheels, and specialty masonry/cast iron discs also have a reference MOQ of 1,000 pieces per size. Private label packaging, color boxes, retail blister packs, and branded tin containers require higher MOQs due to printing and packaging setup costs. Full-container (FCL) orders offer the most competitive per-unit pricing.",
+      a: "MOQ is quoted per diameter, thickness, formulation, label and packaging format. Thin wheels, INOX formulations, printed labels and retail packs can have different setup quantities. Require the quotation to identify every MOQ assumption instead of applying one website number across all cut-off wheels.",
     },
     {
-      q: "Are your cutting discs EN12413 certified?",
-      a: "Yes. All SCOTTCHEN bonded abrasive cutting wheels and cut-off discs are manufactured under EN12413 safety standards for bonded abrasive products. Our factory maintains ISO 9001 quality management, and each production batch undergoes testing for rotational burst speed, side load, and axle hole fit before release. MPA safety certification and third-party test reports are available for qualified buyers and distributors who require them for market access in the European Union.",
+      q: "Which cutting-wheel safety documents should a buyer request?",
+      a: "State the target market and applicable standard in the RFQ, then request the certificate or test report number, issuing body, covered product family, dimensions, validity and label requirements for the exact quoted SKU. Do not rely on a general website statement as evidence of EN12413, ANSI B7.1, MPA, oSa or any other market requirement.",
     },
     {
       q: "What sizes and thicknesses are available?",
@@ -67,7 +67,7 @@ export default function CuttingWheelsPage() {
     },
     {
       q: "How are cutting discs packaged for wholesale distribution?",
-      a: "Standard wholesale packaging is bulk industrial cartons with inner shrink-wrapped bundles of 25 or 50 discs per bundle, labeled with size, specification, and batch number. For retail distribution, we offer color boxes, individual shrink wrap, blister packs, and metal storage tins with your private label branding, safety instructions, and multilingual warnings. FBA-ready packaging includes individual FNSKU barcode labels, polybag suffocation warnings, and carton weight labels as required by Amazon.",
+      a: "Packaging can be quoted as industrial cartons, shrink-wrapped bundles, color boxes, blister packs or storage tins. The buyer must provide current safety text, translations, barcode data and channel requirements; the final label and carton scope is controlled by the approved artwork rather than an assumed marketplace-compliance claim.",
     },
     {
       q: "What is the shelf life and storage recommendation for cutting wheels?",
@@ -86,7 +86,7 @@ export default function CuttingWheelsPage() {
               Cutting Disc Manufacturer &amp; Cut-Off Wheels Supplier
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              OEM cutting disc manufacturer from China. EN12413-compliant cut-off wheels for metal, stainless steel (INOX), cast iron, and masonry. 2-fiberglass reinforcement, contaminant-free for stainless. MOQ 1000 pieces.
+              OEM cut-off wheel sourcing for metal, stainless steel (INOX), cast iron, and masonry applications. Confirm reinforcement, formulation, rated speed, safety documents, MOQ and inspection scope for the exact quoted SKU.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -105,12 +105,12 @@ export default function CuttingWheelsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 1,000</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Pieces per SKU</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">MOQ Quoted</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">EN12413</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Safety Certified</div>
+                <div className="text-2xl font-black text-industry-orange">Per Market</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Documents Checked</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">Fe+S+Cl&lt;0.1%</div>
@@ -132,14 +132,14 @@ export default function CuttingWheelsPage() {
               <div className="space-y-5">
                 <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Why SCOTTCHEN</span>
                 <h2 className="text-2xl font-extrabold text-white tracking-wide">
-                  EN12413-Compliant Cut-Off Wheels From a Trusted Cutting Disc Manufacturer
+                  Cut-Off Wheel Specifications and Safety Evidence for B2B Buyers
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
                     SCOTTCHEN has manufactured bonded abrasive cutting wheels and cut-off discs at our Shanghai production facility since 2014, supplying metal fabricators, welding distributors, construction suppliers, hardware chains, and industrial tool brands across North America, Europe, the Middle East, and Asia-Pacific. As a dedicated cutting disc manufacturer, we produce Type 1/Type 41 flat cutting wheels and Type 27 depressed-center cutting discs in a full range of sizes from 4-inch angle grinder discs to 14-inch chop saw wheels for metal, stainless steel (INOX), cast iron, and masonry applications.
                   </p>
                   <p>
-                    Cutting wheel safety is non-negotiable. All SCOTTCHEN cut-off wheels are manufactured under EN12413 safety standards with dual fiberglass mesh reinforcement, precision-mixed resin-bonded abrasive grain, and strict rotational burst testing at speeds exceeding 1.5 times the maximum rated RPM. Each production batch is tested for side load strength, arbor hole dimensional accuracy, and free-spin balance before packaging. Our INOX stainless steel cutting discs are formulated with contaminant-free raw materials to achieve Fe+S+Cl content below 0.1%, preventing after-corrosion on stainless steel cut edges.
+                    Cutting wheel safety is non-negotiable, so the RFQ must name the applicable market standard, rated speed, guard and tool compatibility, reinforcement construction, label warnings and required test evidence. For INOX wheels, state the allowed iron, sulfur and chlorine limits and request test evidence for the quoted formulation. Approval should be based on applicable documents and representative samples, not generic marketing claims.
                   </p>
                   <p>
                     As a wholesale cut-off wheels supplier, we understand that distributors and industrial buyers demand consistent cut rate, long wheel life, minimum burr formation, and predictable performance. Our thin 1.0-1.6mm cut-off wheels are engineered for fast, cool cutting with minimal material waste and reduced heat-affected zones on the workpiece. We offer both premium-grade cutting wheels for professional fabricators and value-grade options for price-sensitive markets, each with consistent quality control from raw material mixing through final packaging.
@@ -265,12 +265,12 @@ export default function CuttingWheelsPage() {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "EN12413 Safety Certified", desc: "All cutting wheels are manufactured and tested to EN12413 bonded abrasive safety standards with MPA certification available for EU market access." },
+                    { title: "Safety Evidence by SKU", desc: "Request the applicable standard, report number, issuing body, covered dimensions, validity and label scope for the exact wheel." },
                     { title: "Dual Fiberglass Reinforcement", desc: "Two layers of high-tensile fiberglass mesh reinforcement provide burst resistance and structural integrity at maximum operating RPM." },
                     { title: "Contaminant-Free INOX Grade", desc: "Stainless steel cutting discs contain Fe+S+Cl below 0.1%, preventing after-rust, weld contamination, and surface discoloration on stainless." },
                     { title: "Thin Kerf Fast Cutting", desc: "1.0-1.6mm ultra-thin wheels deliver fast, precise cuts with minimal burr formation, reduced material waste, and less heat buildup on the workpiece." },
                     { title: "Consistent Quality Control", desc: "Each batch undergoes rotational burst testing, side load testing, and dimensional inspection before release to ensure wheel-to-wheel consistency." },
-                    { title: "Full Private Label Support", desc: "Branded labels, color boxes, metal tins, FBA-ready packaging, and multilingual safety instructions for retail and distribution channels." },
+                    { title: "Private Label Scope", desc: "Branded labels, color boxes, tins and multilingual instructions can be scoped from buyer-approved safety and channel requirements." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -295,7 +295,7 @@ export default function CuttingWheelsPage() {
                     SCOTTCHEN provides complete OEM and private label cut-off wheel manufacturing for distributors, welding supply brands, private label tool companies, and industrial supply chains worldwide. Our OEM services include abrasive grain selection (aluminum oxide, white aluminum oxide for INOX, silicon carbide for masonry), wheel thickness and hardness grade specification, Type 1 or Type 27 profile, and custom label printing with your brand name, logo, specifications, and safety warnings.
                   </p>
                   <p>
-                    Private label packaging options include individual shrink wrap with printed labels, 25/50-piece color boxes, metal storage tins for retail, blister packs with hang tabs, and bulk industrial cartons. All labels can carry your brand, wheel dimensions, maximum RPM, safety pictograms per EN12413/ANSI B7.1 requirements, and multilingual warnings. FNSKU/UPC barcode labels can be applied to individual wheels or cartons for retail and FBA distribution.
+                    Private-label options can include shrink wrap, printed labels, color boxes, storage tins, blister packs and industrial cartons. The buyer is responsible for confirming the applicable standard, maximum RPM, safety pictograms, translations and channel barcode data; the approved artwork defines what may appear on the wheel and packaging.
                   </p>
                   <p>
                     For large OEM customers with consistent volume, we can develop custom wheel formulations including specialized grain blends and bond hardness tailored to specific applications such as stainless steel pipe production, automotive exhaust manufacturing, or heavy structural steel fabrication. Contact our sales engineering team with your performance targets and application requirements for a custom quotation and pre-production samples.
@@ -346,9 +346,9 @@ export default function CuttingWheelsPage() {
                   B2B Sourcing Parameters
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">1,000 pcs per size/thickness</span></div>
-                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">25 - 35 days after deposit</span></div>
-                  <div><span className="text-industry-slate-500 block">Safety Standard:</span><span className="text-white font-bold">EN12413, ISO 9001</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">Quoted per size, formulation and pack</span></div>
+                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Confirmed in written order schedule</span></div>
+                  <div><span className="text-industry-slate-500 block">Safety Evidence:</span><span className="text-white font-bold">Confirmed for target market and SKU</span></div>
                   <div><span className="text-industry-slate-500 block">Diameters:</span><span className="text-white font-bold">4\" - 14\" (100mm - 355mm)</span></div>
                   <div><span className="text-industry-slate-500 block">Packaging:</span><span className="text-white font-bold">Bulk, color boxes, metal tins, blister packs</span></div>
                 </div>
@@ -364,6 +364,7 @@ export default function CuttingWheelsPage() {
                   Related Categories
                 </h3>
                 <ul className="space-y-2 text-sm">
+                  <li><Link href="/resources/cutting-wheel-compliance-checklist" className="font-bold text-industry-orange hover:underline">Compliance Checklist</Link></li>
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/sanding-belts" className="text-industry-orange hover:underline">Sanding Belts</Link></li>
@@ -394,7 +395,7 @@ export default function CuttingWheelsPage() {
                 "category": "Cutting wheels and cut-off discs",
                 "material": "Resin-bonded abrasive with dual fiberglass reinforcement",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "1,000 discs per common size" },
+                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, formulation, label, packaging and quantity" },
                   { "@type": "PropertyValue", "name": "Reinforcement", "value": "Dual fiberglass mesh" }
                 ],
               },

@@ -27,6 +27,26 @@ const COUNTRY_ALIASES: Record<string, string> = {
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const FIELD_LIMITS = {
+  name: 120,
+  company: 180,
+  email: 254,
+  country: 120,
+  url: 2048,
+  attribution: 300,
+  selection: 200,
+  message: 5000,
+  honeypot: 200,
+} as const;
+
+function hasValidString(value: unknown, maxLength: number, required = false) {
+  if (typeof value !== "string" || value.length > maxLength) {
+    return false;
+  }
+
+  return !required || value.trim().length > 0;
+}
+
 export function isQuotePayload(payload: InquiryPayload): payload is Extract<InquiryPayload, { type: "quote" }> {
   return payload.type === "quote";
 }
@@ -85,18 +105,26 @@ export function isLikelyBusinessWebsite(value: string): boolean {
 }
 
 export function validatePayload(payload: InquiryPayload): string | null {
-  const baseChecks = [
-    payload.fullName,
-    payload.companyName,
-    payload.email,
-    payload.country,
-    payload.landingPage,
-    payload.locale,
-    payload.formStartedAt,
-  ];
+  const validBaseFields =
+    hasValidString(payload.fullName, FIELD_LIMITS.name, true) &&
+    hasValidString(payload.companyName, FIELD_LIMITS.company, true) &&
+    hasValidString(payload.email, FIELD_LIMITS.email, true) &&
+    hasValidString(payload.country, FIELD_LIMITS.country, true) &&
+    hasValidString(payload.landingPage, FIELD_LIMITS.url, true) &&
+    hasValidString(payload.sourcePage, FIELD_LIMITS.url) &&
+    hasValidString(payload.referrer, FIELD_LIMITS.url) &&
+    hasValidString(payload.utmSource, FIELD_LIMITS.attribution) &&
+    hasValidString(payload.utmMedium, FIELD_LIMITS.attribution) &&
+    hasValidString(payload.utmCampaign, FIELD_LIMITS.attribution) &&
+    hasValidString(payload.utmTerm, FIELD_LIMITS.attribution) &&
+    hasValidString(payload.utmContent, FIELD_LIMITS.attribution) &&
+    hasValidString(payload.formStartedAt, FIELD_LIMITS.selection, true) &&
+    hasValidString(payload.message, FIELD_LIMITS.message) &&
+    (payload.hpField === undefined || hasValidString(payload.hpField, FIELD_LIMITS.honeypot)) &&
+    (payload.locale === "en" || payload.locale === "zh-CN");
 
-  if (baseChecks.some((value) => !isNonEmptyString(value))) {
-    return "Missing required contact fields.";
+  if (!validBaseFields) {
+    return "One or more contact fields are missing, invalid, or too long.";
   }
 
   if (!isValidEmail(payload.email)) {
@@ -104,25 +132,37 @@ export function validatePayload(payload: InquiryPayload): string | null {
   }
 
   if (isQuotePayload(payload)) {
-    if (
-      !isNonEmptyString(payload.buyerType) ||
-      !isNonEmptyString(payload.productCategory) ||
-      !isNonEmptyString(payload.quantity) ||
-      !isNonEmptyString(payload.customPackaging)
-    ) {
-      return "Missing required quote fields.";
+    const validQuoteFields =
+      hasValidString(payload.buyerType, FIELD_LIMITS.selection, true) &&
+      hasValidString(payload.productCategory, FIELD_LIMITS.selection, true) &&
+      hasValidString(payload.quantity, FIELD_LIMITS.selection, true) &&
+      hasValidString(payload.customPackaging, FIELD_LIMITS.selection, true) &&
+      hasValidString(payload.targetMarket, FIELD_LIMITS.selection);
+
+    if (!validQuoteFields) {
+      return "One or more quote fields are missing, invalid, or too long.";
     }
   }
 
   if (isSamplePayload(payload)) {
-    if (
-      !isLikelyBusinessWebsite(payload.website) ||
-      !Array.isArray(payload.categories) ||
-      payload.categories.length === 0 ||
-      !isNonEmptyString(payload.estimatedQuantity) ||
-      !isNonEmptyString(payload.oemNeeded)
-    ) {
-      return "Missing required sample request fields.";
+    const validCategories =
+      Array.isArray(payload.categories) &&
+      payload.categories.length > 0 &&
+      payload.categories.length <= 12 &&
+      payload.categories.every((category) =>
+        hasValidString(category, FIELD_LIMITS.selection, true)
+      );
+    const validSampleFields =
+      hasValidString(payload.website, FIELD_LIMITS.url, true) &&
+      isLikelyBusinessWebsite(payload.website) &&
+      validCategories &&
+      hasValidString(payload.application, FIELD_LIMITS.selection) &&
+      hasValidString(payload.targetMaterial, FIELD_LIMITS.selection) &&
+      hasValidString(payload.estimatedQuantity, FIELD_LIMITS.selection, true) &&
+      hasValidString(payload.oemNeeded, FIELD_LIMITS.selection, true);
+
+    if (!validSampleFields) {
+      return "One or more sample request fields are missing, invalid, or too long.";
     }
   }
 

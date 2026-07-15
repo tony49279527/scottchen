@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "砂纸片批发与砂碟厂家 | SCOTTCHEN",
-  description: "上海砂纸片生产厂家，提供植绒砂纸片、背胶砂纸、钢纸磨片、网格砂纸、网砂等产品批发，氧化铝/碳化硅/锆刚玉材质齐全，MOQ 500片起。",
+  description: "植绒砂纸片、背胶砂纸、钢纸磨片和网砂OEM采购支持。按磨料、背基、孔型、粒度、包装、样品与数量书面报价。",
   path: "/zh/sanding-discs",
   locale: "zh-CN",
   alternatePath: "/sanding-discs",
@@ -24,12 +24,12 @@ export default function ZhSandingDiscsPage() {
     },
     {
       name: "背胶砂纸片（PSA自粘砂纸片）",
-      desc: "背胶砂纸片（PSA砂纸片）背面涂有压敏胶层，可直接粘贴在胶面托盘或橡胶垫上使用，粘接力强、适合高压力打磨作业。相比植绒砂纸片，PSA背胶砂纸片在高速打磨和重压打磨下不易脱落，适用于金属磨削、木工平面打磨、石材抛光前处理等工业级应用。我司背胶砂纸片采用高强度柔性纸基或聚酯薄膜基，胶层均匀、贴合平整、撕除不留残胶，支持OEM品牌印刷和定制包装，MOQ 500片起。",
+      desc: "背胶砂纸片（PSA砂纸片）使用压敏胶连接匹配的托盘或垫盘，可用于金属、木工和表面处理。采购时应确认纸基或膜基、胶层、尺寸、孔型、粒度、使用温度和残胶验收方法，并通过代表性样品验证。",
       specs: ["直径：4\"/5\"/6\"/8\"（100-200mm）", "背基：PSA压敏胶", "磨料：氧化铝/碳化硅/锆刚玉", "纸基：A-wt/C-wt/D-wt/E-wt纸基", "用途：金属/木工/石材打磨"],
     },
     {
       name: "钢纸磨片（纤维砂碟/砂轮片）",
-      desc: "钢纸磨片是以高强度硬化钢纸为背基、表面粘合氧化铝或锆刚玉磨料的圆形砂碟，通常安装在角磨机上进行金属打磨、焊缝磨削、去毛刺、除锈作业。钢纸磨片比普通植绒砂纸片更厚更坚韧，可承受角磨机10000RPM以上的高转速重负荷磨削，是金属加工、钢结构制造、船厂焊接的必备耗材。常见规格为4寸、4.5寸、5寸、7寸，粒度P16-P120。我司钢纸磨片批发出口欧美市场多年，通过MPA安全认证，双磨料覆盖，质量稳定。",
+      desc: "钢纸磨片以硬化钢纸为背基，常用于金属打磨、焊缝磨削、去毛刺和除锈。采购时应确认直径、孔径、磨料、粒度、背基、标称最高转速、工具与防护罩兼容性，并索取覆盖具体SKU和尺寸的适用安全证据。",
       specs: ["直径：4\"/4.5\"/5\"/7\"（100-180mm）", "背基：高强度硫化钢纸（0.8mm）", "磨料：氧化铝/锆刚玉", "粒度：P16-P120", "最高转速：13300 RPM（4.5寸）"],
     },
     {
@@ -44,7 +44,7 @@ export default function ZhSandingDiscsPage() {
     },
     {
       name: "水磨耐水砂纸（干湿两用砂纸）",
-      desc: "水磨耐水砂纸（水磨砂纸）以耐水乳胶纸为基底，采用碳化硅或氧化铝磨料、全树脂防水粘结剂制造，可在水中或油中浸泡使用而不脱砂、不卷曲。水砂纸是汽车漆面抛光、腻子精磨、钢琴漆面打磨、吉他油漆、五金件镜面抛光前处理的必备耗材。粒度范围极广，从粗磨P60到镜面精抛P5000、P7000均可提供。我司水砂纸批发供应金阳砂、海豚砂、富士星同款质量等级，支持9\"×11\"方形水砂纸和圆形水磨砂纸片定制，MOQ低至500张。",
+      desc: "耐水砂纸可采用乳胶纸基、碳化硅或氧化铝磨料，用于汽车漆面、腻子、乐器涂层和五金精磨。RFQ应确认尺寸、磨料、粒度、耐水方法、浸泡时间、脱砂、卷曲和划痕一致性验收条件。",
       specs: ["规格：9\"×11\"（230×280mm）/圆形", "磨料：碳化硅/氧化铝", "基底：耐水乳胶纸（A-wt/C-wt）", "粒度：P60-P7000", "用途：汽车漆面/腻子/钢琴漆/五金精抛"],
     },
   ];
@@ -72,7 +72,7 @@ export default function ZhSandingDiscsPage() {
   const faqs = [
     {
       q: "砂纸片批发MOQ是多少？可以混批吗？",
-      a: "标准规格砂纸片（如5寸8孔氧化铝P80-P400）的MOQ为500片/粒度/规格。特殊规格（定制直径、定制孔型、特殊磨料如陶瓷或特殊纸基）的MOQ一般为1000-2000片。我们支持同一直径不同粒度混批采购，也支持不同品类产品（砂纸片+百叶片+切割片）混装整柜，方便经销商一站式采购。新客户试单可灵活协商数量，具体请联系销售团队咨询。",
+      a: "MOQ按直径、孔型、磨料、粒度、背基、连接方式、包装和订单数量报价。试单、混合粒度与混合SKU方案应分别列明单价、包装、检验和物流假设。",
     },
     {
       q: "氧化铝、碳化硅、锆刚玉、陶瓷砂纸片如何选择？",
@@ -84,7 +84,7 @@ export default function ZhSandingDiscsPage() {
     },
     {
       q: "砂纸片可以OEM贴牌吗？包装和Logo定制怎么做？",
-      a: "完全可以。我们作为砂纸片厂家为全球工具品牌、电商卖家、五金连锁提供全面OEM/ODM服务：①砂纸片背面印刷品牌Logo和粒度号；②定制彩盒、插卡、吸塑、塑封筒等零售包装；③定制不干胶标签和多语言说明；④支持组合套装（不同粒度混装，如P40/P80/P120/P220/P400五粒度套装）；⑤FBA贴标服务（FNSKU条码、防窒息标签、纸箱标签）；⑥可定制特殊孔型、特殊磨料配方。OEM MOQ根据定制内容从500-5000套不等。",
+      a: "OEM范围可包括背面品牌与粒度印刷、彩盒、插卡、吸塑、标签、多语言说明、多粒度套装、特殊孔型和磨料配置。平台条码、警告和入仓规则由买家提供最终版本；起订量按SKU、包装复杂度和数量书面报价。",
     },
     {
       q: "你们的砂纸片使用寿命如何？和3M、Norton相比怎样？",
@@ -107,7 +107,7 @@ export default function ZhSandingDiscsPage() {
               砂纸片批发_砂碟厂家_圆形砂纸盘OEM定制
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN上海砂纸片生产厂家，专业提供植绒砂纸片（拉绒片）、背胶砂纸片（PSA）、钢纸磨片、快换转矩砂碟、网格防堵塞网砂、耐水水磨砂纸等全系列砂碟产品，氧化铝/碳化硅/锆刚玉/陶瓷磨料齐全，支持OEM贴牌定制、FBA贴标发货，MOQ低至500片。
+              植绒、背胶、钢纸、快换和网格砂碟OEM采购支持。磨料、背基、孔型、粒度、平台标签、起订量、交期和检验范围按具体SKU书面确认。
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -126,8 +126,8 @@ export default function ZhSandingDiscsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量（片）</div>
+                <div className="text-2xl font-black text-industry-orange">按SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量报价</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">4种磨料</div>
@@ -157,7 +157,7 @@ export default function ZhSandingDiscsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN是位于上海的专业砂纸片、砂碟生产厂家，自2014年起从事涂附磨具转换加工和出口业务，是国内集研发、生产、销售为一体的砂碟制造商。作为圆形砂纸盘厂家，我们拥有多台高精度模切机、冲床、拉绒复合机、PSA涂胶生产线，日产各类砂纸片、砂碟产品超过20万片，产品出口北美、欧洲、澳洲、中东、东南亚等40+国家和地区。
+                    SCOTTCHEN在上海为砂纸片和砂碟项目提供选型、打样、包装及出口协调。买家应核验生产主体、材料来源、模切与复合能力、检验记录和实际产能，并把这些信息写入供应商审核与订单文件。
                   </p>
                   <p>
                     作为砂碟厂家，我们深知磨料质量、背基强度和粘结剂工艺是决定砂纸片寿命和打磨效果的三大核心。我们严格选用优质磨料——普通级选用国产优质煅烧氧化铝，工业级选用德国ZWS锆刚玉和美国陶瓷磨料；背基采用进口E-wt/D-wt高韧性乳胶纸、Y-wt聚酯布和耐水乳胶纸；粘结采用"全树脂双涂"工艺（树脂底胶+树脂复胶），添加防堵塞硬脂酸锌涂层，确保砂纸片在高速打磨下不脱砂、不糊砂、寿命长。
@@ -246,9 +246,9 @@ export default function ZhSandingDiscsPage() {
                   {[
                     { title: "全规格一站式供应", desc: "3寸-9寸全直径、多孔型/无孔、四种磨料、全粒度P40-P7000覆盖，从粗磨到镜面抛光一站式采购。" },
                     { title: "优质原材料", desc: "精选德国锆刚玉、美国陶瓷磨料、高韧性乳胶纸基，全树脂双涂工艺+防堵塞涂层，寿命远超普通市场货。" },
-                    { title: "MPA/ISO认证", desc: "工厂通过ISO 9001:2015认证，钢纸磨片通过MPA EN12413安全认证，产品符合FEPA/ANSI磨料标准。" },
-                    { title: "高产能快交期", desc: "日产砂纸片20万片+，标准品7-15天交货，OEM订单30-40天，大订单产能可弹性扩充。" },
-                    { title: "OEM贴牌服务", desc: "背面印刷Logo、彩盒/吸塑/插卡/桶装定制、多粒度套装组合、FBA贴标代发，10年+贴牌经验。" },
+                    { title: "文件按SKU核验", desc: "安全标准、体系证书和第三方报告应核对签发机构、覆盖主体、尺寸、SKU、日期和有效期。" },
+                    { title: "书面产能与交期", desc: "样品、物料、生产、验货和出运节点按规格、包装及订单数量写入报价。" },
+                    { title: "OEM贴牌范围", desc: "背面印刷、彩盒、吸塑、插卡、桶装和多粒度套装可按批准文件确认；平台规则由买家提供。" },
                     { title: "专业技术支持", desc: "磨料应用工程师团队协助客户选型、开发专用砂纸配方、提供打磨工艺优化建议。" },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
@@ -272,10 +272,10 @@ export default function ZhSandingDiscsPage() {
                     SCOTTCHEN砂纸片厂家为全球工具品牌、汽车耗材经销商、电商卖家、五金连锁企业提供专业的砂纸片OEM/ODM贴牌代工服务。我们拥有10年以上的涂附磨具贴牌经验，深谙欧美、东南亚市场的产品标准和包装要求，可帮助客户从零开始打造自有品牌砂纸产品线。
                   </p>
                   <p>
-                    我们的砂碟OEM服务包括：①背面品牌印刷——砂纸片背面可印刷您的Logo、品牌名、粒度号、原产地标识；②包装定制——彩盒、插卡、吸塑、塑料袋、塑封筒、组合装桶等多种零售包装；③多粒度套装——不同粒度混装（如P40/P80/P120/P220/P400五件套或十件套），带分配器盒；④特殊规格定制——非标直径、特殊孔型、特殊磨料配方、特殊涂层；⑤FBA服务——FNSKU贴标、防窒息袋、纸箱标签，直发亚马逊运营中心；⑥营销物料支持——高-resolution产品图、应用图、视频素材、A+页面文案。
+                    砂碟OEM范围可包括背面品牌与粒度印刷、彩盒、插卡、吸塑、塑料袋、桶装、多粒度套装、非标直径、孔型、磨料和涂层。平台条码、警告语、原产地标识和外箱标签由买家批准，实际服务范围写入报价与样品批准文件。
                   </p>
                   <p>
-                    我们已为Amazon、eBay、Shopify等平台的众多电商客户提供砂纸片FBA贴标代发服务，熟悉Amazon包装和标签规范，有效避免入库被拒。OEM砂纸片合作流程：发送需求询盘 → 我方报价和方案 → 打样确认（7-10天） → 签订合同 → 支付定金 → 批量生产（25-35天） → 验货发货。欢迎品牌商和批发商前来洽谈合作。
+                    平台包装与标签规则会变化，买家应提供当前版本并保留最终批准责任。合作流程通常包括规格询盘、书面报价、打样、样品与包装批准、订单、生产、验货和发运；各阶段时间与付款条件以项目文件为准。
                   </p>
                 </div>
                 <div className="pt-2">
@@ -323,12 +323,12 @@ export default function ZhSandingDiscsPage() {
                   批发参数
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">500片/规格/粒度</span></div>
-                  <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">标准品25-30天，OEM 30-40天</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">按SKU、包装和数量报价</span></div>
+                  <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">按规格、样品批准和数量确认</span></div>
                   <div><span className="text-industry-slate-500 block">直径范围：</span><span className="text-white font-bold">3寸-9寸（75-225mm）</span></div>
                   <div><span className="text-industry-slate-500 block">磨料：</span><span className="text-white font-bold">AO/SiC/ZA/Ceramic</span></div>
                   <div><span className="text-industry-slate-500 block">包装：</span><span className="text-white font-bold">散装100片/塑封 / 彩盒 / 插卡 / 定制</span></div>
-                  <div><span className="text-industry-slate-500 block">认证：</span><span className="text-white font-bold">ISO 9001 / MPA / FEPA</span></div>
+                  <div><span className="text-industry-slate-500 block">文件：</span><span className="text-white font-bold">按主体、SKU与目标市场核验</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link href="/zh/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
@@ -365,7 +365,7 @@ export default function ZhSandingDiscsPage() {
                 "@type": "ProductGroup",
                 "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
                 "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
-                "description": "上海砂纸片生产厂家批发植绒砂纸片、背胶砂纸、钢纸磨片、网砂，氧化铝/碳化硅/锆刚玉/陶瓷磨料，MOQ 500片起。",
+                "description": "植绒、背胶、钢纸和网格砂碟OEM采购支持，按磨料、背基、孔型、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/sanding-discs"),
                 "image": absoluteUrl("/images/sanding_screens.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
@@ -373,7 +373,7 @@ export default function ZhSandingDiscsPage() {
                 "category": "砂纸片与砂碟",
                 "material": "氧化铝、锆刚玉、碳化硅、陶瓷、网砂",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "参考起订量", "value": "常见规格与粒度 500 片起" },
+                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按SKU、粒度、包装和订单数量书面确认" },
                   { "@type": "PropertyValue", "name": "背基/连接方式", "value": "植绒、背胶、钢纸、快换" }
                 ],
               },

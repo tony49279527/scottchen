@@ -299,6 +299,7 @@ export default function SampleKitForm() {
         <input
           type="text"
           name="hpField"
+          maxLength={200}
           tabIndex={-1}
           autoComplete="off"
           value={fields.hpField}
@@ -316,6 +317,7 @@ export default function SampleKitForm() {
             type="text"
             id="fullName"
             name="fullName"
+            maxLength={120}
             required
             autoComplete="name"
             value={fields.fullName}
@@ -337,6 +339,7 @@ export default function SampleKitForm() {
             type="text"
             id="companyName"
             name="companyName"
+            maxLength={180}
             required
             autoComplete="organization"
             value={fields.companyName}
@@ -360,6 +363,7 @@ export default function SampleKitForm() {
             type="email"
             id="email"
             name="email"
+            maxLength={254}
             required
             autoComplete="email"
             value={fields.email}
@@ -381,6 +385,7 @@ export default function SampleKitForm() {
             type="text"
             id="country"
             name="country"
+            maxLength={120}
             required
             autoComplete="country-name"
             value={fields.country}
@@ -403,6 +408,7 @@ export default function SampleKitForm() {
           type="url"
           id="website"
           name="website"
+          maxLength={2048}
           placeholder="e.g. www.mytoolbrand.com"
           required
           value={fields.website}
@@ -596,6 +602,7 @@ export default function SampleKitForm() {
         <textarea
           id="message"
           name="message"
+          maxLength={5000}
           rows={4}
           placeholder={
             isZh

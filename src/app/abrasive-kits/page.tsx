@@ -10,7 +10,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Private Label Abrasive & Polishing Kits Wholesale | SCOTTCHEN",
-  description: "OEM private-label abrasive kits: buffing wheel kits, sanding disc kits and compound sets in retail-ready packaging. MOQ 500 sets from a China factory.",
+  description: "OEM private-label abrasive kits: buffing wheel kits, sanding disc kits and compound sets. Compare BOM, packaging, samples and quoted minimums.",
   path: "/abrasive-kits",
   alternatePath: "/zh/abrasive-kits",
 });
@@ -57,7 +57,7 @@ export default function AbrasiveKitsPage() {
   const faqs = [
     {
       q: "What is the MOQ for private label abrasive kits?",
-      a: "Our reference MOQ for wholesale abrasive kit and polishing kit private label orders is 500 sets per kit configuration. Kits with custom molded plastic cases, printed color boxes with custom die cuts, or complex assortments may have MOQs of 1,000 sets depending on packaging supplier minimums. Standard kit configurations using existing tooling and packaging formats can often be produced at the 500-set MOQ. We also offer mixed-container programs where distributors can combine multiple kit SKUs to fill a full container.",
+      a: "MOQ is quoted by kit BOM, component sources, packaging format, artwork, tooling and order quantity. Ask for evaluation, replenishment and mixed-SKU scenarios in the same quotation so the commercial assumptions remain comparable.",
     },
     {
       q: "Can I customize the contents of my abrasive kit?",
@@ -73,7 +73,7 @@ export default function AbrasiveKitsPage() {
     },
     {
       q: "How long does kit production and assembly take?",
-      a: "Standard lead time for abrasive kit production is 30 to 40 days from order confirmation and sample approval. This includes production of the individual abrasive components, printing and production of packaging materials, kitting and assembly, quality inspection, and carton packing. Custom packaging with new tooling, injection-molded cases, or complex die-cut boxes may extend lead time to 45-55 days. Rush production is available for urgent retail launch timelines on a case-by-case basis.",
+      a: "Lead time depends on component availability, artwork approval, packaging tooling, sample approval, assembly and inspection scope. Require dated milestones for materials, samples, production, inspection and shipment in the written quotation.",
     },
     {
       q: "Can I include my own branded materials or inserts in the kits?",
@@ -111,8 +111,8 @@ export default function AbrasiveKitsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Sets per Kit SKU</div>
+                <div className="text-2xl font-black text-industry-orange">Per Kit</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Quoted Minimums</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">Retail-Ready</div>
@@ -265,8 +265,8 @@ export default function AbrasiveKitsPage() {
                   Kitting Parameters
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">500 sets per kit configuration</span></div>
-                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">30 - 40 days (45-55 with custom cases)</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">Quoted per BOM and packaging</span></div>
+                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Written milestones after sample approval</span></div>
                   <div><span className="text-industry-slate-500 block">Packaging:</span><span className="text-white font-bold">Color boxes, blister, clamshell, cases, tins</span></div>
                   <div><span className="text-industry-slate-500 block">Marketplace Labels:</span><span className="text-white font-bold">Buyer-supplied data scoped per quotation</span></div>
                   <div><span className="text-industry-slate-500 block">Artwork:</span><span className="text-white font-bold">Custom design services available</span></div>
@@ -313,7 +313,7 @@ export default function AbrasiveKitsPage() {
                 "manufacturer": { "@id": absoluteUrl("/#organization") },
                 "category": "Private-label abrasive and polishing kits",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 kits per common assortment" },
+                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by BOM, packaging, tooling and order quantity" },
                   { "@type": "PropertyValue", "name": "Packaging", "value": "Color box, blister, polybag, barcode and instruction inserts" }
                 ],
               },

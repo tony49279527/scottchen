@@ -151,7 +151,7 @@ export default function ChineseSandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>参考起订量:</strong> 砂纸 10,000 张、纤维砂碟 5,000 张、混合砂纸架或细节打磨笔 1,000 套；实际数量和交期按 SKU 报价。</span>
+                    <span className="text-industry-slate-200"><strong>起订量报价:</strong> 实际数量和交期按产品结构、尺寸、粒度组合、包装和订单数量报价。</span>
                   </li>
                 </ul>
               </div>
@@ -619,7 +619,7 @@ export default function ChineseSandingGrindingAccessories() {
                 "additionalProperty": [
                   {
                     "@type": "PropertyValue",
-                    "name": "参考起订量",
+                    "name": "起订量依据",
                     "value": "砂纸 10,000 张、纤维砂碟 5,000 张、混合砂纸架或细节打磨笔 1,000 套；实际数量和交期按 SKU 报价"
                   },
                   {
@@ -650,7 +650,7 @@ export default function ChineseSandingGrindingAccessories() {
                     "material": "锆刚玉磨粒配硫化纤维基材",
                     "additionalProperty": [
                       { "@type": "PropertyValue", "name": "中心孔", "value": "7/8 英寸星型中心定位孔" },
-                      { "@type": "PropertyValue", "name": "参考起订量", "value": "单规格目数 2,000 张起订" }
+                      { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、粒度、背基、包装和订单数量报价" }
                     ]
                   },
                   {

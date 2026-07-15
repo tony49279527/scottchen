@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "工业棉布轮、气道抛光轮及抛光膏 OEM 厂家 | SCOTTCHEN",
-  description: "定制高密度密缝布轮、松缝镜面轮、台式砂轮机棉轮、带柄迷你布轮及精细抛光膏。支持 MOQ 500，并按确认的规格表进行批次质量控制。",
+  description: "定制高密度密缝布轮、松缝镜面轮、台式砂轮机棉轮、带柄迷你布轮及精细抛光膏。按确认规格、包装和数量报价。",
   path: "/zh/products/buffing-polishing-wheels",
   alternatePath: "/products/buffing-polishing-wheels",
   locale: "zh-CN",
@@ -320,7 +320,7 @@ export default function ChineseBuffingPolishingWheels() {
                 <div className="space-y-4 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">生产周期:</span>
-                    <span className="text-white font-bold">25 - 35 天（开单确认设计稿后）</span>
+                    <span className="text-white font-bold">按SKU、包装与样品批准确认</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">样品政策:</span>
@@ -554,7 +554,7 @@ export default function ChineseBuffingPolishingWheels() {
                 "additionalProperty": [
                   {
                     "@type": "PropertyValue",
-                    "name": "参考起订量",
+                    "name": "起订量依据",
                     "value": "台磨机棉轮单规格 500 件起；带柄电钻磨头单器形 1,000 件起"
                   },
                   {
@@ -612,7 +612,7 @@ export default function ChineseBuffingPolishingWheels() {
                     },
                     "additionalProperty": [
                       { "@type": "PropertyValue", "name": "适配手柄", "value": "1/4 英寸 (6.35mm) 标准六角快装柄或圆形不锈钢接柄" },
-                      { "@type": "PropertyValue", "name": "参考起订量", "value": "单一器形 1,000 件起，或定制整套多形态彩盒" }
+                      { "@type": "PropertyValue", "name": "起订量依据", "value": "按器形、柄径、材料、包装和订单数量报价" }
                     ]
                   }
                 ]

@@ -30,12 +30,10 @@ export default function DeferredClientShell() {
 
   useEffect(() => scheduleIdle(() => setReady(true)), []);
 
-  if (!ready) return null;
-
   return (
     <>
       <AttributionTracker />
-      {analyticsEnabled ? (
+      {ready && analyticsEnabled ? (
         <>
           <Analytics />
           <CookieConsent />

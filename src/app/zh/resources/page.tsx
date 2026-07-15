@@ -37,6 +37,27 @@ const resources = [
       "覆盖磨粒类别、背基材料、FEPA P 目数、样品测试、GS1 条码检查和 Incoterms 报价要求。",
   },
   {
+    title: "百叶片 RFQ 询价指南",
+    href: "/zh/resources/flap-disc-rfq-guide",
+    intent: "百叶片规格与样品测试",
+    summary:
+      "定义T27/T29、磨料、粒度、密度、底板、转速、样品验收、安全证据、包装和商务假设。",
+  },
+  {
+    title: "砂带 RFQ 询价指南",
+    href: "/zh/resources/sanding-belt-rfq-guide",
+    intent: "非标砂带规格编制",
+    summary:
+      "从设备到砂带的采购清单，覆盖尺寸、布基、磨料、接头、跑偏测试、包装和书面交期。",
+  },
+  {
+    title: "切割片合规与安全证据清单",
+    href: "/zh/resources/cutting-wheel-compliance-checklist",
+    intent: "安全证据核验",
+    summary:
+      "把每个切割片SKU对应到目标市场标准、测试报告、使用限制、追溯和批准标签。",
+  },
+  {
     title: "SCOTTCHEN 供应商档案",
     href: "/zh/supplier-profile",
     intent: "品牌实体与核验边界",
@@ -51,6 +72,8 @@ const queryClusters = [
   "贴牌砂纸套装 RFQ 应该包含哪些参数",
   "砂纸背基和磨粒如何选择",
   "抛光轮起订量交期包装和质检清单",
+  "百叶片 RFQ 规格与样品测试清单",
+  "如何按 SKU 核验切割片安全报告",
 ] as const;
 
 export default function ChineseResourcesHub() {

@@ -148,7 +148,7 @@ export default function BuffingPolishingWheels() {
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
               {[
                 ["Primary products", "Spiral-stitched cotton wheels, loose flannel wheels, bench-grinder wheels, shank-mounted drill buffers and compound bar kits."],
-                ["Reference MOQ", "500 pieces per common bench-grinder wheel size; 1,000 pieces per shank-mounted shape; final MOQ is quoted per configuration."],
+                ["MOQ basis", "Quoted per wheel construction, size, shank or bore, packaging and order quantity."],
                 ["Quoted lead time", "Common batch-production planning range is 25 to 35 days after sample, artwork and specification approval."],
                 ["Packaging evidence", "Shrink wrap, blister card, color box, barcode label and buyer-approved warning/instruction layouts can be included in the pack specification."],
                 ["Quality checks", "Dimensions, bore fit, construction, labeled operating limit, packaging and sample acceptance criteria are recorded against the approved SKU."],
@@ -368,7 +368,7 @@ export default function BuffingPolishingWheels() {
                 <div className="space-y-4 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">Lead Time:</span>
-                    <span className="text-white font-bold">25 - 35 Days (Batch production)</span>
+                    <span className="text-white font-bold">Quoted by SKU, packaging and sample approval</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Sample Policy:</span>
@@ -560,7 +560,7 @@ export default function BuffingPolishingWheels() {
               },
               {
                 q: "What is the typical minimum order quantity (MOQ) and production lead time?",
-                a: "Reference MOQs are 500 pieces per size for bench-grinder wheels and 1,000 pieces per shape for shank-mounted pads. Quantity, lead time, sample charges, and packaging scope are confirmed in the written quotation."
+                a: "Quantity, lead time, sample charges and packaging scope are quoted by wheel construction, size, shank or bore and order quantity."
               }
             ].map((faq, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-lg border border-industry-slate-800/80">
@@ -602,7 +602,7 @@ export default function BuffingPolishingWheels() {
                 "additionalProperty": [
                   {
                     "@type": "PropertyValue",
-                    "name": "Reference MOQ",
+                    "name": "MOQ basis",
                     "value": "500 pieces per common bench-grinder wheel size; 1,000 pieces per shank-mounted shape"
                   },
                   {
@@ -660,7 +660,7 @@ export default function BuffingPolishingWheels() {
                     },
                     "additionalProperty": [
                       { "@type": "PropertyValue", "name": "Shank size", "value": "1/4 inch hex shank or round metal arbor" },
-                      { "@type": "PropertyValue", "name": "Reference MOQ", "value": "1,000 units per shape, or bundled in customized hex kits" }
+                      { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted per shape, shank, material, packaging and order quantity" }
                     ]
                   }
                 ]

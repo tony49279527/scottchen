@@ -149,7 +149,7 @@ export default function SandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Reference MOQs:</strong> 10,000 sheets for sandpaper, 5,000 fiber discs and 1,000 sets for dispenser boxes or detail sticks; final quantity and lead time are quoted per SKU.</span>
+                    <span className="text-industry-slate-200"><strong>Quoted minimums:</strong> Quantity and lead time depend on product construction, grit mix, packaging and order quantity.</span>
                   </li>
                 </ul>
               </div>
@@ -176,7 +176,7 @@ export default function SandingGrindingAccessories() {
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
               {[
                 ["Primary products", "Wet/dry sandpaper sheets, continuous sanding rolls, fiberglass mesh sanding screens, zirconia fiber discs, detail sanding sticks and dispenser kits."],
-                ["Reference MOQ", "10,000 sheets for sandpaper, 5,000 fiber discs, 1,000 detail-stick sets and project-specific minimums for dispenser boxes."],
+                ["MOQ basis", "Quoted per product construction, size, grit mix, packaging and order quantity."],
                 ["Quoted lead time", "Common planning range is 20 to 30 days after SKU, grit mix, packaging and sample approval."],
                 ["Specification controls", "Grain type, FEPA P-grit range, backing material, dimensions, arbor hole, attachment method and pack quantity are defined by SKU."],
                 ["Quality checks", "Backing tensile strength, grain adhesion, dimensional fit, grit assortment, barcode scan and carton configuration can be checked against the approved specification."],
@@ -398,7 +398,7 @@ export default function SandingGrindingAccessories() {
                 <div className="space-y-4 text-xs font-mono">
                   <div>
                     <span className="text-industry-slate-500 block">Lead Time:</span>
-                    <span className="text-white font-bold">20 - 30 Days</span>
+                    <span className="text-white font-bold">Quoted by SKU, packaging and quantity</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Custom Grits combo:</span>
@@ -410,7 +410,7 @@ export default function SandingGrindingAccessories() {
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Shipping terms:</span>
-                    <span className="text-white font-bold leading-normal">FOB Shanghai, CIF ports, or FBA door-to-door courier options.</span>
+                    <span className="text-white font-bold leading-normal">FOB, CIF or door-to-door options scoped per quotation.</span>
                   </div>
                 </div>
 
@@ -667,7 +667,7 @@ export default function SandingGrindingAccessories() {
                 "additionalProperty": [
                   {
                     "@type": "PropertyValue",
-                    "name": "Reference MOQ",
+                    "name": "MOQ basis",
                     "value": "10,000 sheets for sandpaper, 5,000 fiber discs and 1,000 detail-stick sets"
                   },
                   {

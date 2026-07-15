@@ -8,7 +8,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Wholesale Abrasive Tools & Bulk Supplies | SCOTTCHEN",
-  description: "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers and industrial buyers. Factory-direct, FOB Shanghai.",
+  description: "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers and industrial buyers. Compare SKU scope, samples and quoted terms.",
   path: "/wholesale-abrasives",
   alternatePath: "/zh/wholesale-abrasives",
 });
@@ -34,7 +34,7 @@ export default function WholesaleAbrasivesPage() {
     },
     {
       q: "Do you offer volume discounts and container pricing?",
-      a: "Yes. We offer tiered volume discount pricing based on order quantity, with the most competitive pricing applied to full-container (FCL) orders. Our pricing tiers typically start at MOQ level (500 pieces per SKU), increase to discounted pricing at 5,000 pieces per SKU, further discounted pricing at 20,000+ pieces, and the deepest factory-direct pricing for full 20ft or 40ft container orders. Mixed-SKU containers that combine multiple product categories are encouraged and qualify for FCL pricing once total container volume meets the threshold. We also offer annual contract pricing for customers with committed annual volumes.",
+      a: "Pricing is quoted by SKU, specification, packaging, quantity, Incoterms and current input costs. Ask for evaluation, replenishment, mixed-SKU and container scenarios in the same quotation so discounts and logistics assumptions can be compared without relying on generic website tiers.",
     },
     {
       q: "What shipping terms do you offer for wholesale orders?",
@@ -45,8 +45,8 @@ export default function WholesaleAbrasivesPage() {
       a: "We consider exclusive distribution arrangements for established distributors who can demonstrate strong market coverage, sales volume commitments, brand-building investment, and the ability to represent the SCOTTCHEN brand professionally in their territory. Exclusivity is granted on a per-product-category and per-country/region basis and requires a minimum annual purchase commitment. Exclusive distributors receive enhanced marketing support, priority production scheduling, new product development input, and territorial protection. Contact our sales team with your company profile, market coverage, and volume projections to discuss exclusive distribution.",
     },
     {
-      q: "Do you offer dropshipping or FBA fulfillment support?",
-      a: "While we are primarily a wholesale and OEM manufacturer selling in bulk quantities, we support e-commerce sellers by preparing orders to FBA specifications, including FNSKU labeling, polybag prep, suffocation warnings, and carton labeling per Amazon requirements. We can ship directly from our factory to Amazon fulfillment centers worldwide or to your designated third-party prep center. For established private label customers with significant volume, we can also offer dropshipping fulfillment services on a limited basis. We do not operate a consumer-facing dropshipping program for single-unit orders.",
+      q: "Can marketplace packaging and barcode requirements be included?",
+      a: "Buyer-supplied FNSKU, UPC, warning, polybag and carton data can be included in the packaging specification. Marketplace rules change and acceptance is not guaranteed by this website; the buyer must confirm current requirements, importer responsibilities and final destination before shipment is quoted.",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function WholesaleAbrasivesPage() {
               Wholesale Abrasive Tools &amp; Bulk Sanding Supplies
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              Factory-direct wholesale abrasive tools for distributors, hardware retailers, e-commerce sellers, and industrial buyers. Bulk sanding discs, flap discs, cutting wheels, sanding belts, buffing wheels, and private label abrasive kits at competitive China manufacturer pricing.
+              Wholesale abrasive sourcing for distributors, hardware retailers, e-commerce sellers and industrial buyers. Compare sanding discs, flap discs, cutting wheels, sanding belts, buffing wheels and private-label kit quotations on the same written basis.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -80,8 +80,8 @@ export default function WholesaleAbrasivesPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Starting Order</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">MOQ Quoted</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">FOB Shanghai</div>
@@ -109,7 +109,7 @@ export default function WholesaleAbrasivesPage() {
             </h2>
             <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
               <p>
-                SCOTTCHEN operates a dedicated wholesale abrasives program for distributors, hardware retailers, industrial supply companies, tool brands, e-commerce sellers, and large industrial buyers worldwide. As a factory-direct China abrasive manufacturer, we cut out multiple layers of trading company and importer margins to deliver competitive wholesale pricing on a complete range of abrasive tools—sanding discs, flap discs, cutting wheels, sanding belts, buffing wheels, polishing compounds, and retail-ready abrasive kits—all produced in our ISO 9001 certified Shanghai facility.
+                SCOTTCHEN supports wholesale abrasive sourcing for distributors, retailers, tool brands, e-commerce sellers and industrial buyers. The quotation identifies the product source, SKU specification, packaging, inspection scope, MOQ, lead-time milestones and commercial terms so buyers can compare offers on a like-for-like basis.
               </p>
               <p>
                 We serve wholesale customers across a range of business models. Traditional abrasives distributors and industrial supply companies stock our products for resale to fabricators, welders, contractors, and industrial accounts. Hardware retailers and home-center chains carry our retail-packaged products on their shelves. E-commerce sellers and Amazon FBA merchants sell our private label products online. Large industrial end-users—metal fabrication shops, foundries, polishing operations, knife making workshops—buy direct in bulk for their own production use at wholesale pricing. Whatever your business model, we can structure a wholesale program that fits your volume, packaging, and delivery requirements.
@@ -159,7 +159,7 @@ export default function WholesaleAbrasivesPage() {
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Pricing Structure</span>
               <h2 className="text-2xl font-extrabold text-white">Bulk Pricing &amp; Volume Discount Tiers</h2>
               <p className="text-sm text-industry-slate-300 leading-relaxed">
-                Our wholesale pricing is tiered by order volume to reward larger commitments with deeper discounts. The following reference tiers illustrate our discount structure; exact pricing is quoted per SKU based on product specifications and packaging requirements.
+                Ask for multiple quantity scenarios in one quotation. Each scenario should keep the SKU specification, packaging, quality plan and Incoterms basis visible so a lower unit price is not confused with a different product or service scope.
               </p>
               <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                 <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
@@ -173,34 +173,34 @@ export default function WholesaleAbrasivesPage() {
                   </thead>
                   <tbody className="divide-y divide-industry-slate-850 text-white">
                     <tr>
-                      <td className="px-4 py-3 font-bold text-industry-orange">MOQ</td>
-                      <td className="px-4 py-3">500 pieces</td>
-                      <td className="px-4 py-3">Standard wholesale</td>
-                      <td className="px-4 py-3">25-35 days</td>
+                      <td className="px-4 py-3 font-bold text-industry-orange">Evaluation</td>
+                      <td className="px-4 py-3">Quoted by SKU</td>
+                      <td className="px-4 py-3">Pricing basis stated</td>
+                      <td className="px-4 py-3">Written schedule</td>
                     </tr>
                     <tr className="bg-industry-slate-900/40">
                       <td className="px-4 py-3 font-bold text-industry-orange">Volume</td>
-                      <td className="px-4 py-3">5,000 pieces</td>
-                      <td className="px-4 py-3">5-10% discount</td>
-                      <td className="px-4 py-3">25-35 days</td>
+                      <td className="px-4 py-3">Quoted by SKU</td>
+                      <td className="px-4 py-3">Volume scenario</td>
+                      <td className="px-4 py-3">Written schedule</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-3 font-bold text-industry-orange">Large Volume</td>
-                      <td className="px-4 py-3">20,000 pieces</td>
-                      <td className="px-4 py-3">10-18% discount</td>
-                      <td className="px-4 py-3">30-40 days</td>
+                      <td className="px-4 py-3">Quoted by SKU</td>
+                      <td className="px-4 py-3">Replenishment scenario</td>
+                      <td className="px-4 py-3">Written schedule</td>
                     </tr>
                     <tr className="bg-industry-slate-900/40">
                       <td className="px-4 py-3 font-bold text-industry-orange">FCL (Full Container)</td>
-                      <td className="px-4 py-3">20ft / 40ft container</td>
-                      <td className="px-4 py-3">Best factory-direct</td>
-                      <td className="px-4 py-3">30-45 days</td>
+                      <td className="px-4 py-3">Named load plan</td>
+                      <td className="px-4 py-3">FCL scenario</td>
+                      <td className="px-4 py-3">Written schedule</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <p className="text-xs text-industry-slate-500 italic">
-                * Discount percentages are indicative ranges. Exact pricing is quoted per SKU and may vary by product category, grain type, packaging format, and current raw material costs.
+                * No generic discount or lead-time promise is made here. Use the dated quotation and approved SKU scope as the commercial source of truth.
               </p>
             </div>
 
@@ -231,12 +231,12 @@ export default function WholesaleAbrasivesPage() {
 
           <div className="space-y-6">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Fulfillment Programs</span>
-            <h2 className="text-2xl font-extrabold text-white">Dropshipping, FBA &amp; Private Label Programs</h2>
+            <h2 className="text-2xl font-extrabold text-white">Marketplace Packaging &amp; Private Label Programs</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">
-                <h3 className="text-base font-bold text-industry-orange mb-3">FBA Fulfillment Prep</h3>
+                <h3 className="text-base font-bold text-industry-orange mb-3">Buyer-Supplied Channel Requirements</h3>
                 <p className="text-xs text-industry-slate-400 leading-relaxed">
-                  We prepare orders to Amazon FBA specifications including FNSKU barcode labels on each sellable unit, polybag application with suffocation warnings, carton content labels, and carton weight/dimension labels per Amazon's current requirements. We can ship directly from our factory to Amazon fulfillment centers in the US, EU, UK, Japan, and other marketplaces.
+                  FNSKU or UPC data, polybag warnings, carton content labels and weight or dimension marks can be scoped from buyer-approved files. Current marketplace rules, destination, importer role and acceptance remain the buyer's responsibility and must be confirmed before shipment.
                 </p>
               </div>
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800">

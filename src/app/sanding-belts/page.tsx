@@ -51,7 +51,7 @@ export default function SandingBeltsPage() {
   const faqs = [
     {
       q: "What is the MOQ for wholesale sanding belt orders?",
-      a: "Reference MOQ for sanding belt wholesale orders is 500 belts per size and grit for standard sizes and aluminum oxide belts. Zirconia, ceramic, and custom-sized belts have a reference MOQ of 200-500 pieces depending on cloth availability and joint tooling requirements. Wide belts, custom sizes, and specialty applications are quoted individually based on abrasive cloth procurement and production setup. We accept mixed-size and mixed-grit orders to help distributors stock a complete belt range.",
+      a: "MOQ is quoted per belt size, grit, grain, backing and joint. Custom widths, ceramic materials and specialty joints can have different cloth and setup minimums. Ask the quotation to state mixed-size, mixed-grit and trial-order assumptions explicitly.",
     },
     {
       q: "Can you produce sanding belts in custom sizes?",
@@ -71,7 +71,7 @@ export default function SandingBeltsPage() {
     },
     {
       q: "Do you offer private label packaging for sanding belts?",
-      a: "Absolutely. We provide full private label packaging for sanding belts including branded cardboard sleeves, color boxes for multi-belt assortment packs, bulk cartons with your logo, and retail blister packs for hardware and home-center distribution. Each belt sleeve can be printed with your brand, belt size, grit designation, safety warnings, and usage instructions. FNSKU/UPC barcode labels and FBA-compliant carton labeling are available for Amazon sellers and e-commerce distribution.",
+      a: "Private-label scope can include cardboard sleeves, assortment boxes, cartons and blister packs. Brand files, dimensions, grit designation, warnings, instructions and barcode data must be buyer-approved and checked against current retailer or marketplace requirements.",
     },
   ];
 
@@ -105,15 +105,15 @@ export default function SandingBeltsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Belts per Size/Grit</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">MOQ Quoted</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">Custom Sizes</div>
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Any Dimension</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">25-35 Days</div>
+                <div className="text-2xl font-black text-industry-orange">Written Plan</div>
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead Time</div>
               </div>
               <div className="text-center">
@@ -271,7 +271,7 @@ export default function SandingBeltsPage() {
                     { title: "Custom Size Capability", desc: "We produce belts in any width and length for portable sanders, bench grinders, file belt tools, tube polishers, and industrial wide-belt machines." },
                     { title: "Full Grain Selection", desc: "Aluminum oxide for general work, zirconia alumina for metal, ceramic for hard steels, silicon carbide for glass/stone, and non-woven for blending and finishing." },
                     { title: "Tension-Tested Before Shipment", desc: "Each production batch undergoes tension testing to ensure belts run true, track correctly, and withstand rated operating speeds without splice failure." },
-                    { title: "Private Label & Kits", desc: "Branded sleeves, color boxes, multi-grit assortment packs, and knife making belt kits available with your logo and FBA-ready packaging." },
+                    { title: "Private Label & Kits", desc: "Branded sleeves, color boxes, multi-grit packs and knife-making belt kits can use buyer-approved artwork and barcode data." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
                       <div className="flex items-center mb-2">
@@ -347,9 +347,9 @@ export default function SandingBeltsPage() {
                   B2B Sourcing Parameters
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">500 belts per size/grit (standard)</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">Quoted per size, grit, backing and joint</span></div>
                   <div><span className="text-industry-slate-500 block">Custom Sizes:</span><span className="text-white font-bold">Any width x length, tooling fee may apply</span></div>
-                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">25 - 35 days standard production</span></div>
+                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Quoted by size, material, packaging and quantity</span></div>
                   <div><span className="text-industry-slate-500 block">Grains:</span><span className="text-white font-bold">A/O, Zirconia, Ceramic, SiC, Non-woven</span></div>
                   <div><span className="text-industry-slate-500 block">Backing Weights:</span><span className="text-white font-bold">J, X, Y, YF, Waterproof Polyester</span></div>
                 </div>
@@ -365,6 +365,7 @@ export default function SandingBeltsPage() {
                   Related Categories
                 </h3>
                 <ul className="space-y-2 text-sm">
+                  <li><Link href="/resources/sanding-belt-rfq-guide" className="font-bold text-industry-orange hover:underline">Sanding Belt RFQ Guide</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Knife Sharpening Belt Kits</Link></li>
@@ -395,7 +396,7 @@ export default function SandingBeltsPage() {
                 "category": "Sanding belts and abrasive belts",
                 "material": "Aluminum oxide, zirconia, ceramic, silicon carbide",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "200 belts per common size" },
+                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, grain, backing, joint and quantity" },
                   { "@type": "PropertyValue", "name": "Custom sizing", "value": "Width and circumference cut to approved drawing" }
                 ],
               },

@@ -6,6 +6,7 @@ import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Abrasive Manufacturer in Shanghai | SCOTTCHEN",
@@ -20,7 +21,7 @@ const homeFaqs = [
     a: "A 500-set custom kit or 500-piece component quantity is a common RFQ starting point, while paper abrasives may require larger runs. Actual MOQ depends on the SKU, assortment, packaging and print process and is confirmed in the quotation.",
   },
   {
-    q: "Do you provide Amazon FBA-compliant packaging and barcode labeling?",
+    q: "Can you prepare buyer-supplied marketplace labels and packaging data?",
     a: "We can prepare buyer-supplied FNSKU or UPC labels, instruction sheets, safety cards, and carton marks, then perform sample scan checks. Final acceptance depends on the marketplace's current rules and the buyer-approved packaging specification.",
   },
   {
@@ -42,6 +43,8 @@ const homeFaqs = [
 ] as const;
 
 export default function Home() {
+  const quoteHref = buildInquiryHref("/", "quote");
+  const sampleHref = buildInquiryHref("/", "sample");
   const categories = [
     {
       title: "Buffing & Polishing Wheels",
@@ -129,13 +132,13 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 <Link
-                  href="/contact"
+                  href={quoteHref}
                   className="inline-flex items-center justify-center rounded bg-industry-orange-cta px-8 py-4 text-base font-extrabold tracking-wide uppercase text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] shadow-lg shadow-industry-orange/25 text-center"
                 >
                   Request OEM Quote
                 </Link>
                 <Link
-                  href="/sample-kit"
+                  href={sampleHref}
                   className="inline-flex items-center justify-center rounded border border-industry-slate-700 bg-industry-slate-800/50 backdrop-blur-sm px-8 py-4 text-base font-bold uppercase tracking-wide text-white transition-all-custom hover:bg-industry-slate-800 text-center"
                 >
                   Get Sample Kit
@@ -165,8 +168,8 @@ export default function Home() {
                   <div className="text-xs text-industry-slate-400 mt-1">Shanghai OEM manufacturing</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-white">FBA Prep</div>
-                  <div className="text-xs text-industry-slate-400 mt-1">FNSKU barcode & carton labels</div>
+                  <div className="text-xl font-bold text-white">Barcode Prep</div>
+                  <div className="text-xs text-industry-slate-400 mt-1">Buyer-supplied label data</div>
                 </div>
                 <div>
                   <div className="text-xl font-bold text-white">500-set RFQ</div>
@@ -179,7 +182,7 @@ export default function Home() {
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
                 <div className="absolute top-4 right-4 z-10 flex items-center space-x-2 bg-industry-slate-950/85 backdrop-blur px-3 py-1 rounded border border-industry-slate-800">
                   <div className="h-2 w-2 rounded-full bg-green-500 animate-ping" />
-                  <span className="text-[10px] text-industry-slate-300 font-mono tracking-wider">SUPPLY CHAIN READY</span>
+                  <span className="text-[10px] text-industry-slate-300 font-mono tracking-wider">RFQ SCOPE CHECKED</span>
                 </div>
                 
                 <div className="relative aspect-square w-full">
@@ -210,8 +213,8 @@ export default function Home() {
                     Custom combined buffing wheels, sanding rolls, and compounds in unified retail-ready boxes.
                   </p>
                   <div className="mt-4 flex justify-between items-center text-[10px] text-industry-slate-500 font-mono pt-3 border-t border-industry-slate-900">
-                    <span>MOQ: 500 sets</span>
-                    <span className="text-industry-orange font-bold">RETAIL PACKAGING READY</span>
+                    <span>MOQ: quoted per configuration</span>
+                    <span className="text-industry-orange font-bold">PACKAGING SCOPE DOCUMENTED</span>
                   </div>
                 </div>
               </div>
@@ -238,7 +241,7 @@ export default function Home() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Reference MOQs:</strong> Many custom-kit inquiries start at 500 sets; the quoted minimum depends on SKU, packaging and print method.</span>
+                    <span className="text-industry-slate-200"><strong>Quoted minimums:</strong> Kit quantities depend on the component mix, packaging, print method and tooling.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -431,9 +434,9 @@ export default function Home() {
                   <p className="text-[11px] text-industry-slate-500 mt-2">Blister packs, color boxes, kraft dispensers, or bulk shipping cartons.</p>
                 </div>
                 <div className="glass-panel p-6 rounded-lg text-center border border-industry-slate-800">
-                  <div className="text-2xl font-black text-white font-mono">MOQ 500</div>
-                  <div className="text-xs text-industry-slate-400 font-semibold mt-1">Low-Risk Testing</div>
-                  <p className="text-[11px] text-industry-slate-500 mt-2">Small batch product verification to test local distribution.</p>
+                  <div className="text-2xl font-black text-white font-mono">PER SKU</div>
+                  <div className="text-xs text-industry-slate-400 font-semibold mt-1">Quoted Minimums</div>
+                  <p className="text-[11px] text-industry-slate-500 mt-2">Trial quantities depend on the component mix and packaging scope.</p>
                 </div>
               </div>
             </div>

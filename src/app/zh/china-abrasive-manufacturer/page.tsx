@@ -21,14 +21,14 @@ export default function ZhChinaAbrasiveManufacturerPage() {
     { name: "砂纸片与砂碟", link: "/zh/sanding-discs", desc: "植绒拉绒片、背胶PSA、钢纸磨片、网砂、快换转矩砂碟、水磨砂纸" },
     { name: "百叶片与百叶轮", link: "/zh/flap-discs", desc: "T27平面型、T29钹型，锆刚玉/陶瓷/氧化铝，4-7寸" },
     { name: "环形砂带", link: "/zh/sanding-belts", desc: "手提/台式/窄砂带/宽幅砂带/制刀砂带/碳化硅砂带，全尺寸定制" },
-    { name: "树脂切割片", link: "/zh/cutting-wheels", desc: "金属/不锈钢INOX/超薄/钹型/铸铁/石材切割片，MPA EN12413认证" },
+    { name: "树脂切割片", link: "/zh/cutting-wheels", desc: "金属、不锈钢、超薄、钹型、铸铁和石材切割片，安全文件按SKU与目标市场核验" },
     { name: "磨具套装", link: "/zh/abrasive-kits", desc: "抛光套装、砂纸套装、电钻配件套装、汽车/首饰/DIY套装" },
   ];
 
   const faqs = [
     {
       q: "为什么从中国磨料磨具厂家采购磨具？",
-      a: "中国是全球最大的涂附磨具和固结磨具生产国，拥有完整的产业链——磨料冶炼（棕刚玉、白刚玉、碳化硅、锆刚玉、陶瓷磨料）、基布/基纸制造、树脂结合剂生产、最终成品加工均在长三角、河南、山东等产业集群集中完成。从成熟的中国磨具厂家（如SCOTTCHEN）采购可获得显著的成本优势（同质量产品相比欧美/日本品牌价格低30-60%）、丰富的定制能力和自有品牌开发能力，以及从试单到整柜补货的生产规模弹性。我们的直接工厂模式省去多层贸易商加价，同时保持ISO 9001质控体系。" },
+      a: "中国拥有覆盖磨料、背基、结合剂、转换加工和包装的广泛供应链。采购方应比较材料与生产来源、代表性样品表现、质量计划、包装、起订量、交期、贸易术语和总到岸成本，而不是依赖笼统的节省比例、工厂直供或认证声明。" },
     {
       q: "SCOTTCHEN作为中国磨具厂已经生产多少年了？",
       a: "SCOTTCHEN2014年在中国上海成立，截至目前已持续生产磨料磨具产品超过十年。创始人在创立SCOTTCHEN之前已有多年涂附磨具制造和抛光轮生产经验，公司成立初衷是面向不断增长的中国磨具出口市场提供高品质产品。多年来我们不断扩建生产设施，增加固结磨具（切割片、百叶片）生产线，建立了完善的OEM/ODM项目体系，服务客户遍及北美、欧洲、澳洲、中东、东南亚、南美和非洲。" },
@@ -37,13 +37,13 @@ export default function ZhChinaAbrasiveManufacturerPage() {
       a: "我们的质量控制体系分为三个阶段：①来料检验（IQC）——所有原材料（磨料、基布/基纸、树脂、玻纤网、棉布）到货时按批准的材料规格检验测试，不合格材料退回不进入生产；②过程检验（IPQC）——各生产工位进行生产参数监控、尺寸检查、重量校验、附着力测试，百叶片砂布排列均匀性检查、砂带接头拉力测试、切割片回转强度测试等，操作工自检+QC巡检贯穿整个生产过程；③成品终检（FQC）——成品按AQL 2.5标准抽样检验，包括切割片回转爆破测试、百叶片/抛光轮平衡测试、RPM校验、砂带跑带测试、粒度核验、包装标签检查、纸箱摔箱测试等，合格方可放行出货。" },
     {
       q: "能提供第三方工厂审核报告或认证吗？",
-      a: "可以。我们持有ISO 9001:2015质量管理体系认证，切割片产品通过EN12413标准测试并可提供MPA认证供欧盟市场使用。我们已为多家大型零售客户完成工厂审核，可向合格买家提供审核报告、营业执照、出口单证以及SGS、Bureau Veritas或TÜV第三方验货报告。我们欢迎买家安排工厂验厂，无法亲临的客户我们可安排视频工厂参观，实时展示车间、生产线、质检实验室和包装区。" },
+      a: "如需体系证书、工厂审核或产品测试报告，应在RFQ中要求签发机构、证书或报告编号、覆盖法律主体与场地、产品和尺寸范围、标准版本、签发与到期日期。买家也可在报价阶段约定现场、视频或第三方审核的范围、费用和访问条件。" },
     {
       q: "新国际客户的付款方式是什么？",
       a: "新客户标准付款条件为：订单确认时支付30% T/T电汇定金，余款70%在发货前（见提单副本）支付。对有长期合作记录和良好付款表现的老客户，可根据具体情况适当放宽付款条件，例如降低定金比例或账期。大额订单我们也接受即期信用证（L/C at sight）。样品订单通常T/T全额预付、PayPal或通过Alibaba信用保障等贸易保障平台支付。所有付款条件在生产前以形式发票（PI）书面确认。" },
     {
       q: "如何开始从SCOTTCHEN采购磨料磨具？",
-      a: "与SCOTTCHEN开始采购合作非常简单。首先通过我们的联系表单、邮件或询价页面发送询盘，注明感兴趣的产品、数量、规格、包装要求和目标市场。我们24-48小时内回复详细报价。报价接受后我们生产产前样品并发给您测试。收到书面样品批准后我们开立形式发票、收取定金、安排生产。整个生产和发货过程中您的专属销售联系人会定期提供订单进度更新。海运到北美/欧洲基本港约25-35天，全程由我们出口团队协调单证和物流。" },
+      a: "请通过联系表单或询价页面提交产品、数量、规格、包装、目标市场和贸易术语。报价应写明样品、物料、生产、验货和出运节点；海运时间由起运港、目的港、航线和订舱日期决定，应以货代或承运人当期方案为准。" },
   ];
 
   return (
@@ -57,7 +57,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               中国磨料磨具厂家_上海磨具OEM工厂
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN是坐落于上海的中国磨料磨具专业生产厂家，自2014年起生产抛光轮、砂纸片、百叶片、切割片、砂带、磨具套装等全系列磨具产品，为全球客户提供OEM/ODM代工与出口服务，通过ISO 9001认证，产品出口40+国家。
+              SCOTTCHEN在上海为抛光轮、砂纸片、百叶片、切割片、砂带和磨具套装项目提供OEM采购与出口协调。生产主体、场地、证书、产品测试和市场覆盖按具体项目核验。
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -80,12 +80,12 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">上海工厂</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">40+国家</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">出口市场</div>
+                <div className="text-2xl font-black text-industry-orange">按市场</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">出口文件确认</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">ISO 9001</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">认证体系</div>
+                <div className="text-2xl font-black text-industry-orange">按主体</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">证书与报告核验</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">6大品类</div>
@@ -104,10 +104,10 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               <h2 className="text-2xl font-extrabold text-white tracking-wide">关于上海工厂</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  SCOTTCHEN在中国上海拥有自建磨料磨具生产基地，地理位置优越——工厂距全球最繁忙集装箱港口之一的上海港仅约一小时车程，确保货物能够以低廉的成本和高效的船期运往全球各大主要市场。自2014年成立以来，经过十余年持续发展，我们已成长为一体化的中国磨具厂家，在同一质量管理体系下生产涂附磨具、固结磨具、非织造磨具和棉布抛光产品。
+                  SCOTTCHEN以上海为采购与出口协调基地。针对每个询价，买家应确认生产法律主体、实际场地、产品来源、外包工序、质量体系覆盖范围和装运港，不应把公司所在地自动等同于所有产品的生产地点。
                 </p>
                 <p>
-                  上海工厂内设有多条专业生产线：棉布抛光轮生产线（布料裁切、螺旋缝合、组装、平衡）、涂附磨具转换加工线（砂纸分切、模切、砂带接头）、固结磨具压制和固化线（切割片压制、百叶片组装）、抛光膏配方和成型线，以及零售套装组装包装线。这种工厂内部垂直整合模式让我们对质量、交期和价格拥有直接控制权，同时能够为国际客户开发定制产品和自有品牌项目。
+                  抛光轮、涂附磨具、固结磨具、抛光膏和套装可能涉及不同材料、设备和生产来源。报价应列明实际来源与关键工序，并把样品、检验、变更控制和交期责任写入订单文件。
                 </p>
                 <p>
                   我们的团队由磨料磨具工艺工程师、质量控制专员、包装设计师和外贸销售专业人员组成，拥有丰富的服务北美、欧洲、亚太市场经验。我们熟悉磨具产品的国际法规要求、零售包装标准和电商物流要求，能够从初次询盘到后续整柜补货全程支持客户的采购之旅。
@@ -150,7 +150,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">生产能力</span>
               <h2 className="text-2xl font-extrabold text-white mt-2">生产制造能力</h2>
               <p className="mt-3 text-sm text-industry-slate-400">
-                我们在ISO 9001认证质量管理体系下生产6大类别、覆盖全面的磨具产品。
+                六类产品的生产来源、质量体系、测试证据和适用市场文件按具体SKU确认。
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -205,7 +205,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                   <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">2</span><span><strong className="text-white">产前样品：</strong>按确认规格生产样品，发送给客户实物评估和实地测试。</span></li>
                   <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">3</span><span><strong className="text-white">样品确认下单：</strong>收到书面样品批准后开立形式发票，收取定金后排产。</span></li>
                   <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">4</span><span><strong className="text-white">大货生产与质检：</strong>在过程质量监控下生产，包装前完成AQL终检。</span></li>
-                  <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">5</span><span><strong className="text-white">包装发货：</strong>按客户包装要求（散装/零售/FBA）包装，FOB上海或安排门到门发运。</span></li>
+                  <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">5</span><span><strong className="text-white">包装发货：</strong>按买家批准的散装、零售或平台包装文件执行，贸易术语与物流责任写入报价。</span></li>
                 </ol>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               <h2 className="text-2xl font-extrabold text-white tracking-wide">出口经验与服务市场</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  自2014年首单出口以来，SCOTTCHEN已向北美洲、欧洲、大洋洲、中东、东南亚、拉丁美洲超过40个国家的客户发运磨具产品。我们的出口团队精通国际货运单证操作，包括商业发票、装箱单、提单、原产地证、FORM A/E/R以及欧盟市场所需的CE/MPA文件。
+                  出口单证与产品合规要求随目的国、产品和贸易安排变化。商业发票、装箱单、提单、原产地文件和产品测试资料的提供范围，应在订单前按目标市场逐项确认。
                 </p>
                 <p>我们长期服务多种商业模式客户：</p>
                 <ul className="space-y-2">
@@ -230,14 +230,14 @@ export default function ZhChinaAbrasiveManufacturerPage() {
 
           <div className="space-y-6">
             <div className="text-center max-w-2xl mx-auto">
-              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">认证资质</span>
-              <h2 className="text-2xl font-extrabold text-white mt-2">认证与合规</h2>
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">证据核验</span>
+              <h2 className="text-2xl font-extrabold text-white mt-2">供应商文件与产品证据</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { title: "ISO 9001:2015", desc: "生产基地质量管理体系认证" },
-                { title: "EN12413", desc: "固结磨具切割片/打磨片欧洲安全标准" },
-                { title: "MPA认证", desc: "供欧盟市场销售的切割片MPA Hannover测试报告" },
+                { title: "法律主体文件", desc: "核对公司名称、注册地址、经营范围以及与报价和收款主体的一致性" },
+                { title: "体系证书", desc: "核对签发机构、证书编号、覆盖主体与场地、范围和有效期" },
+                { title: "产品测试报告", desc: "核对标准版本、样品标识、覆盖SKU与尺寸、测试日期和报告真实性" },
                 { title: "FEPA/ANSI", desc: "磨料粒度符合FEPA（P粒度）和ANSI/CAMI标准" },
               ].map((cert) => (
                 <div key={cert.title} className="glass-panel p-6 rounded-lg border border-industry-slate-800 text-center">
@@ -269,7 +269,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               <h2 className="text-2xl font-extrabold text-white tracking-wide">为什么从中国采购磨具？</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  中国已发展成为全球最大的涂附磨具和固结磨具生产国，受益于完整的国内产业链、规模经济和数十年制造经验积累。对国际买家而言，从有信誉的中国磨料磨具供应商采购，相比欧洲、日本或高端美国品牌，可在相当工业应用性能前提下节省30-60%的采购成本。
+                  中国拥有广泛的涂附磨具和固结磨具供应链，但不同供应商的材料、结构、检验和贸易条件差异很大。国际买家应通过同规格样品测试和总到岸成本模型验证实际价值，不应预设固定节省比例或性能等同。
                 </p>
                 <p>
                   中国磨具工厂拥有西方市场难以匹敌的灵活定制和自有品牌能力——在欧美磨具制造已整合为少数几个大品牌、产品系列僵化、自有品牌起订量极高的背景下，SCOTTCHEN等中国厂家可以平易近人的MOQ提供定制产品、定制包装和自有品牌项目，使中小品牌启动自有磨具产品线变得切实可行。

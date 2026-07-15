@@ -95,7 +95,7 @@ const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ManufacturingBusiness"],
+      "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       "name": "SCOTTCHEN",
       "url": SITE_URL,
@@ -133,16 +133,6 @@ const corporateSchema = {
         "Private-label tool accessory kits",
         "Retail packaging and barcode preparation",
         "B2B abrasive supplier evaluation"
-      ],
-      "makesProduct": [
-        "Buffing wheels",
-        "Polishing wheels",
-        "Sanding discs",
-        "Flap discs",
-        "Sanding belts",
-        "Cutting wheels",
-        "Abrasive accessory kits",
-        "Polishing compounds"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -185,7 +175,7 @@ const corporateSchema = {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       "url": SITE_URL,
-      "name": `${SITE_NAME} - OEM Abrasive Tools Manufacturer`,
+      "name": `${SITE_NAME} - OEM Abrasive Sourcing Support`,
       "description": "B2B abrasive, sanding and polishing accessory sourcing site with English and Simplified Chinese buyer resources.",
       "publisher": {
         "@id": `${SITE_URL}/#organization`

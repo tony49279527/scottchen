@@ -27,7 +27,7 @@ export default function ChinaAbrasiveManufacturerPage() {
   const faqs = [
     {
       q: "Why should I source abrasive tools from a China abrasive manufacturer?",
-      a: "China is the world's largest producer of coated and bonded abrasives, with a complete supply chain covering abrasive grain production, backing cloth/paper manufacturing, resin bonding, and final product assembly concentrated in key industrial regions. Sourcing abrasives from an established China abrasive manufacturer like SCOTTCHEN provides significant cost advantages (typically 30-60% lower than domestic or European brands for comparable quality), access to extensive custom manufacturing capabilities for private label development, and the production scale to handle orders from initial trial quantities through full-container replenishment programs. Our direct factory model eliminates multiple trading company margins while maintaining ISO 9001 quality control.",
+      a: "China has a broad coated- and bonded-abrasive supply base covering grains, backings, converting, bonding and pack-out. Buyers should compare total landed cost, component source, quality plan, sample evidence, MOQ, lead time and logistics assumptions instead of relying on a generic percentage-saving or factory-direct claim.",
     },
     {
       q: "How long has SCOTTCHEN been manufacturing abrasive tools?",
@@ -39,7 +39,7 @@ export default function ChinaAbrasiveManufacturerPage() {
     },
     {
       q: "Can you provide third-party factory audit reports or certifications?",
-      a: "Yes. We hold ISO 9001:2015 quality management certification and our cutting wheels are tested to EN12413 standards with MPA certification available for the EU market. We have completed factory audits for major retail customers and can provide audit reports, business licenses, export documentation, and third-party inspection reports from SGS, Bureau Veritas, or TÜV upon request for qualified buyers. We welcome buyer-arranged factory inspections and can accommodate video factory tours for buyers unable to visit in person.",
+      a: "Request entity documents, the responsible production source, the applicable certificate or test report for each SKU, inspection records and any buyer-arranged audit scope. Certificate numbers, issuing bodies, product coverage and validity must be checked against the exact quotation before they are used for market access or product claims.",
     },
     {
       q: "What are the payment terms for new international customers?",
@@ -62,7 +62,7 @@ export default function ChinaAbrasiveManufacturerPage() {
               China Abrasive Manufacturer &amp; OEM Abrasive Tools Supplier
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN is a Shanghai-based China abrasive manufacturer and OEM factory producing buffing wheels, sanding discs, flap discs, cutting wheels, sanding belts, and private label abrasive kits since 2014. ISO 9001 certified, exporting to 40+ countries worldwide.
+              SCOTTCHEN is a Shanghai-based abrasive sourcing and OEM support company covering buffing wheels, sanding discs, flap discs, cutting wheels, sanding belts and private-label kits. Production source, documents and export scope are confirmed per quotation.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -82,15 +82,15 @@ export default function ChinaAbrasiveManufacturerPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">Since 2014</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Shanghai Factory</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Shanghai Sourcing Base</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">40+ Countries</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Export Markets</div>
+                <div className="text-2xl font-black text-industry-orange">Per Market</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Export Scope Checked</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">ISO 9001</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Certified</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Documents Checked</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-black text-industry-orange">6 Product Lines</div>
@@ -105,17 +105,17 @@ export default function ChinaAbrasiveManufacturerPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-5">
-              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">About Our Factory</span>
-              <h2 className="text-2xl font-extrabold text-white tracking-wide">About Our Shanghai Factory</h2>
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Production-Source Verification</span>
+              <h2 className="text-2xl font-extrabold text-white tracking-wide">How buyers should verify the quoted production scope</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  SCOTTCHEN operates a purpose-built abrasive manufacturing facility in Shanghai, China, strategically located within one hour of Shanghai Port—the world's busiest container port—ensuring fast, cost-effective container shipping to every major market worldwide. Founded in 2014, our factory has grown over a decade of continuous operation to become an integrated abrasive manufacturer producing coated abrasives, bonded abrasives, non-woven abrasives, and cotton buffing products under one quality management system.
+                  SCOTTCHEN coordinates abrasive sourcing and OEM projects from Shanghai. A quotation should identify the contracting entity, responsible production source, component scope, named Incoterms place and the documents available for buyer verification.
                 </p>
                 <p>
-                  Our Shanghai facility houses dedicated production lines for cotton buffing wheel manufacturing (cloth cutting, spiral stitching, assembly, balancing), coated abrasive converting (sandpaper slitting, die cutting, belt joining), bonded abrasive pressing and curing (cutting wheels, flap disc assembly), polishing compound formulation and molding, and retail kit assembly and packaging lines. This in-house vertical integration gives us direct control over quality, lead times, and pricing, while allowing us to develop custom products and private label programs for our international customers.
+                  Different product families can involve different converting, assembly, bonding, compound and packaging processes. Buyers should request a process map for the quoted SKU and confirm which operations are performed by which source rather than assume that every component is made at one facility.
                 </p>
                 <p>
-                  Our team includes abrasive technology engineers, quality control specialists, packaging designers, and export sales professionals with extensive experience serving North American, European, and Asia-Pacific markets. We understand international regulatory requirements for abrasive products, retail packaging standards, and e-commerce fulfillment requirements, enabling us to support our customers through the complete sourcing journey from initial inquiry through repeat container replenishment.
+                  The RFQ should also name the target market, applicable product rules, quality records, approved packaging inputs and export documents. Any engineering, audit or regulatory support is confirmed for the specific project in writing.
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                 quality={70}
                 loading="lazy"
                 src="/images/quality_inspection.webp"
-                alt="SCOTTCHEN Shanghai Abrasive Manufacturing Factory Quality Inspection"
+                alt="SCOTTCHEN abrasive sourcing quality-plan review"
                 className="w-full h-80 object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
@@ -136,7 +136,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                   Quality inspection at our Shanghai abrasive manufacturing facility
                 </p>
                 <p className="text-[11px] text-industry-slate-300 leading-relaxed">
-                  Additional production-line and warehouse photos, ISO certificates, and third-party audit reports are available to qualified buyers on request or during a factory visit / video tour.
+                  Ask which production-line photos, entity documents, certificates or third-party reports are available for the exact quoted source and SKU. Availability is not implied until confirmed in writing.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-1">
                   <Link href="/contact" className="text-[11px] font-bold text-industry-orange hover:underline">
@@ -155,7 +155,7 @@ export default function ChinaAbrasiveManufacturerPage() {
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Manufacturing Capabilities</span>
               <h2 className="text-2xl font-extrabold text-white mt-2">Our Manufacturing Capabilities</h2>
               <p className="mt-3 text-sm text-industry-slate-400">
-                We produce a comprehensive range of abrasive products across six major categories under our ISO 9001 certified quality management system.
+                The sourcing scope covers six abrasive categories. The responsible source, applicable quality system and supporting documents are confirmed per quoted product.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -202,7 +202,7 @@ export default function ChinaAbrasiveManufacturerPage() {
               <h2 className="text-2xl font-extrabold text-white tracking-wide">OEM / Private Label Services</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  SCOTTCHEN provides comprehensive OEM and private label manufacturing for distributors, tool brands, hardware chains, e-commerce sellers, and industrial supply companies worldwide. Our OEM program covers every product line we manufacture and can be tailored to your specifications, performance requirements, and packaging standards.
+                  SCOTTCHEN supports OEM and private-label sourcing for distributors, tool brands, hardware channels and industrial buyers. Product availability, responsible source, customization scope and packaging options are confirmed per quotation.
                 </p>
                 <p>The OEM workflow follows a structured five-step process:</p>
                 <ol className="space-y-3 mt-2">
@@ -210,7 +210,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                   <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">2</span><span><strong className="text-white">Pre-Production Samples:</strong> We produce samples per approved specifications and send them for your physical evaluation and field testing.</span></li>
                   <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">3</span><span><strong className="text-white">Sample Approval &amp; Order:</strong> After written sample approval, we issue a pro-forma invoice and schedule production upon deposit.</span></li>
                   <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">4</span><span><strong className="text-white">Mass Production &amp; QC:</strong> Production proceeds under in-process QC monitoring, with final AQL inspection before packing.</span></li>
-                  <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">5</span><span><strong className="text-white">Packing &amp; Shipment:</strong> Goods are packed per your packaging requirements (bulk, retail, FBA) and shipped FOB Shanghai or arranged door-to-door.</span></li>
+                  <li className="flex items-start"><span className="w-6 h-6 rounded-full bg-industry-orange text-white flex items-center justify-center text-xs font-bold mr-3 shrink-0">5</span><span><strong className="text-white">Packing &amp; Shipment:</strong> Goods are packed to buyer-approved requirements; Incoterms, named place and logistics responsibilities are confirmed in writing.</span></li>
                 </ol>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function ChinaAbrasiveManufacturerPage() {
               <h2 className="text-2xl font-extrabold text-white tracking-wide">Export Experience &amp; Markets Served</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  Since our first export shipment in 2014, SCOTTCHEN has shipped abrasive products to customers in over 40 countries across North America, Europe, Oceania, the Middle East, Southeast Asia, and Latin America. Our export team is experienced in international shipping documentation, including commercial invoices, packing lists, bills of lading, certificates of origin, FORM A/E/R, and CE/MPA documentation for EU market access.
+                  Export documentation depends on the contracting entity, origin, destination, product and Incoterms rule. The quotation and shipping plan should identify invoices, packing lists, bills of lading, origin documents and any product-specific market-access evidence required for the shipment.
                 </p>
                 <p>
                   We regularly work with customers across diverse business models:
@@ -242,9 +242,9 @@ export default function ChinaAbrasiveManufacturerPage() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { title: "ISO 9001:2015", desc: "Quality Management System certification for our manufacturing facility" },
-                { title: "EN12413", desc: "European safety standard for bonded abrasive cutting and grinding wheels" },
-                { title: "MPA Certification", desc: "MPA Hannover test reports for cutting wheels sold in the EU market" },
+                { title: "Entity Documents", desc: "Confirm the contracting entity, business registration and beneficiary details before payment." },
+                { title: "Product Standards", desc: "Name the applicable market and product standard in the RFQ for each safety-critical SKU." },
+                { title: "Third-Party Reports", desc: "Verify report number, issuing body, product coverage and validity against the exact quotation." },
                 { title: "FEPA / ANSI", desc: "Grit grading compliant with FEPA (P-grit) and ANSI/CAMI standards" },
               ].map((cert) => (
                 <div key={cert.title} className="glass-panel p-6 rounded-lg border border-industry-slate-800 text-center">
@@ -276,7 +276,7 @@ export default function ChinaAbrasiveManufacturerPage() {
               <h2 className="text-2xl font-extrabold text-white tracking-wide">Why Source Abrasives from China?</h2>
               <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                 <p>
-                  China has developed into the world's largest producer of coated and bonded abrasives, benefiting from complete domestic supply chains, economies of scale, and decades of manufacturing expertise. For international buyers, sourcing from a reputable China abrasive tools supplier offers cost savings of 30-60% compared to European, Japanese, or premium US brands while achieving comparable performance for many industrial applications.
+                  China has a broad coated- and bonded-abrasive supply base. International buyers should compare landed cost and measured performance from representative samples rather than assume a universal percentage saving or equivalent quality across suppliers.
                 </p>
                 <p>
                   Chinese abrasive factories offer extensive customization and private label capabilities that are difficult to match with domestic suppliers in Western markets, where abrasive manufacturing has consolidated into a small number of large brands with rigid product lines and high private label minimums. In China, manufacturers like SCOTTCHEN can produce custom products, custom packaging, and private label programs at accessible MOQs, making it feasible for small and medium-sized brands to launch their own abrasive product lines.
@@ -294,7 +294,7 @@ export default function ChinaAbrasiveManufacturerPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
                 { step: "1. Send Inquiry", desc: "Submit an RFQ via our contact form with product interests, specs, quantities, and target market." },
-                { step: "2. Review Quotation", desc: "Receive our detailed quotation within 24-48 hours with pricing, MOQ, lead times, and terms." },
+                { step: "2. Review Quotation", desc: "Review pricing basis, MOQ assumptions, lead-time milestones, documents and commercial terms in the written quotation." },
                 { step: "3. Approve Samples", desc: "We produce and ship pre-production samples for your testing and written approval." },
                 { step: "4. Production & Ship", desc: "Place your order, pay deposit, and we produce, QC, pack, and ship your order." },
               ].map((s) => (

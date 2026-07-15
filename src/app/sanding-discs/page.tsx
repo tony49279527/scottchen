@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Sanding Disc Wholesale Supplier & OEM Factory | SCOTTCHEN",
-  description: "Bulk aluminum oxide, zirconia and silicon carbide sanding discs from a China OEM factory. MOQ 500 pcs, anti-clog coating and private-label packs.",
+  description: "OEM aluminum oxide, zirconia and silicon carbide sanding disc sourcing. Compare backing, attachment, grit, sample plans, packaging and quoted MOQ.",
   path: "/sanding-discs",
   alternatePath: "/zh/sanding-discs",
 });
@@ -51,7 +51,7 @@ export default function SandingDiscsPage() {
   const faqs = [
     {
       q: "What is the MOQ for wholesale sanding disc orders?",
-      a: "Our standard MOQ for sanding disc wholesale orders is 500 pieces per grit per size for standard hook-and-loop and PSA aluminum oxide discs. Zirconia alumina and ceramic sanding discs have a reference MOQ of 1,000 pieces per grit per size. Private label packaging, custom hole patterns, and special grain formulations may require higher MOQs depending on raw material purchasing minimums. We accept mixed-SKU containers for distributors who wish to stock multiple grits and sizes in one shipment.",
+      a: "MOQ is quoted per diameter, grit, grain, backing, attachment, hole pattern and packaging format. Custom patterns, ceramic materials and printed packs can require different setup quantities. Ask for mixed-SKU and trial-order assumptions to be stated on the quotation.",
     },
     {
       q: "What materials are your sanding discs made from?",
@@ -63,7 +63,7 @@ export default function SandingDiscsPage() {
     },
     {
       q: "Do you offer private label and retail packaging for sanding discs?",
-      a: "Absolutely. We provide full private label sanding disc packaging including shrink-wrapped sleeves, clamshell packs, color boxes, dispenser packs, and bulk cartons with your logo, artwork, multilingual instructions, and safety warnings. For Amazon sellers, we offer FBA-ready packaging with FNSKU/UPC barcode labels, polybag suffocation warnings, and carton labels. Our dispensing box design allows users to pull discs one at a time while keeping the stack organized and dust-free.",
+      a: "Private-label scope can include sleeves, clamshells, color boxes, dispenser packs and cartons with buyer-approved artwork. The buyer supplies current warnings, translations, barcode data and channel rules; the approved packaging specification controls the final pack-out.",
     },
     {
       q: "How long does sanding disc production take?",
@@ -86,7 +86,7 @@ export default function SandingDiscsPage() {
               Sanding Disc Wholesale &amp; Sandpaper Discs Bulk Supplier
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              OEM sanding discs supplier from China. Wholesale aluminum oxide, zirconia, silicon carbide, ceramic, and mesh anti-clog sanding discs for woodworking, metal grinding, auto body, and industrial surface prep. MOQ 500pcs, private label ready.
+              OEM sanding disc sourcing for aluminum oxide, zirconia, silicon carbide, ceramic and mesh products. Confirm backing, attachment, grit, hole pattern, sample acceptance and quoted MOQ per SKU.
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -105,12 +105,12 @@ export default function SandingDiscsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Pieces per Grit/Size</div>
+                <div className="text-2xl font-black text-industry-orange">Per SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Quoted Minimums</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">20-30 Days</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead Time</div>
+                <div className="text-2xl font-black text-industry-orange">Written Plan</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">Lead-Time Milestones</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">P24-P3000</div>
@@ -136,13 +136,13 @@ export default function SandingDiscsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN is a specialized sanding discs supplier and sanding disc wholesale manufacturer operating from our Shanghai, China production facility since 2014. We produce a comprehensive range of coated abrasive sanding discs in aluminum oxide, zirconia alumina, silicon carbide, and ceramic grain formulations for woodworking, metal grinding, auto body repair, paint and coating removal, weld blending, solid surface fabrication, and precision finishing operations. As a bulk sandpaper discs supplier for distributors, importers, tool brands, and industrial supply companies, we combine factory-direct pricing with consistent quality control and flexible private label options.
+                    SCOTTCHEN supports sanding-disc sourcing from Shanghai across aluminum oxide, zirconia alumina, silicon carbide and ceramic configurations. Each quotation should identify the production source, backing, attachment, grain, grit, hole pattern, packaging, inspection scope and commercial terms for the exact SKU.
                   </p>
                   <p>
-                    Unlike trading companies that source disc-to-disc from different factories, we control the full production process in-house: from raw jumbo roll slitting and die cutting to adhesive coating, grain grading, and final packaging. This vertical integration allows us to maintain tight tolerances on grit distribution, backing weight, adhesive bond strength, and hole pattern alignment—factors that directly affect sanding performance, disc life, and end-user satisfaction. Our resin-over-resin bond system ensures the abrasive grain anchors firmly to the backing under heat and pressure, delivering consistent cut rate from first contact to final pass.
+                    Buyers should verify which party performs jumbo-roll converting, die cutting, laminating, adhesive work and packaging for each quoted disc. Approval criteria can cover grit distribution, backing weight, attachment bond, dimensions and hole alignment, with representative samples retained for incoming inspection.
                   </p>
                   <p>
-                    Whether you are sourcing bulk aluminum oxide hook-and-loop discs for woodworking distribution, zirconia fiber discs for industrial welding supply catalogs, mesh anti-clog net discs for drywall and paint contractors, or retail-packaged assorted grit sets for Amazon FBA and hardware chains, our engineering and sales teams work directly with you to specify the correct grain, backing, attachment, and packaging configuration. We support small initial trial orders as well as full-container replenishment programs for established distributors with recurring volume.
+                    Whether the requirement is hook-and-loop discs, zirconia fiber discs, mesh discs or assorted grit packs, the RFQ should identify grain, backing, attachment, hole pattern, target substrate and packaging configuration. Trial and replenishment quantities are confirmed against the selected SKU scope.
                   </p>
                 </div>
               </div>
@@ -263,7 +263,7 @@ export default function SandingDiscsPage() {
                     { title: "Anti-Clog Coating", desc: "Stearate and special anti-loading coatings prevent paint, wood resin, and metal particles from loading the disc surface, improving cut rate and finish consistency." },
                     { title: "Consistent Grit Distribution", desc: "Electrostatic grain orientation ensures uniform grit coverage and consistent scratch patterns from disc to disc and batch to batch." },
                     { title: "Custom Hole Patterns", desc: "Standard 8/15/multi-hole patterns plus custom die-cut hole configurations to match any orbital sander brand or proprietary backup pad." },
-                    { title: "Private Label & Retail Packaging", desc: "Shrink packs, clamshells, dispenser boxes, color sleeves, and FBA-ready packaging with barcode labels, your logo, and multilingual copy." },
+                    { title: "Private Label & Retail Packaging", desc: "Shrink packs, clamshells, dispenser boxes and color sleeves can use buyer-approved barcode data, artwork and multilingual copy." },
                     { title: "Full Grit Range", desc: "P24 extra-coarse for heavy stock removal through P3000 ultra-fine for wet sanding and finish polishing—all available from a single supplier." },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
@@ -289,7 +289,7 @@ export default function SandingDiscsPage() {
                     SCOTTCHEN offers complete OEM and private label manufacturing for sanding discs and sandpaper disc products. We work with distributors, hardware chains, tool brands, and e-commerce sellers to develop custom sanding disc lines under your brand. Choose abrasive grain type (aluminum oxide, zirconia alumina, silicon carbide, ceramic), backing weight and material (paper, film, fiber, cloth, mesh), hole pattern, attachment system (hook-and-loop, PSA, arbor mount, roll-lock), and packaging format.
                   </p>
                   <p>
-                    Our retail packaging options include shrink-wrapped grit packs (25/50/100 discs per pack), clamshell hang packs, dispenser boxes with tear-off openings, assortments packs with multiple grits, and bulk contractor packs. All packaging can be printed with your logo, product specifications, ANSI/CAMI or FEPA grit designations, safety warnings, and barcode labels. FBA prep includes polybag application, suffocation warnings, FNSKU labeling, and carton weight labels.
+                    Retail packaging options can include shrink-wrapped grit packs, clamshells, dispenser boxes, assortment packs and bulk contractor packs. Logo files, product specifications, grit designations, warnings and barcode data must be confirmed in buyer-approved artwork and checked against current channel rules.
                   </p>
                   <p>
                     We also produce assorted sanding disc kits that combine multiple grits in a single package for DIY, woodworking, and automotive retail channels. Custom assortments can include foam interface pads, backup pads, and sanding accessories as add-on items. Contact our sales team with your target market, sander compatibility requirements, and volume projections for a customized OEM quotation.
@@ -340,11 +340,11 @@ export default function SandingDiscsPage() {
                   B2B Sourcing Parameters
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">500 pcs per grit/size (A/O) / 1,000 pcs (zirconia/ceramic)</span></div>
-                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">20 - 30 days for standard production</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ:</span><span className="text-white font-bold">Quoted per grit, size, backing and pack</span></div>
+                  <div><span className="text-industry-slate-500 block">Lead Time:</span><span className="text-white font-bold">Quoted by SKU, packaging and sample approval</span></div>
                   <div><span className="text-industry-slate-500 block">Grit Standards:</span><span className="text-white font-bold">FEPA (P-grit) or CAMI/ANSI as specified</span></div>
                   <div><span className="text-industry-slate-500 block">Pack Formats:</span><span className="text-white font-bold">25/50/100 packs, dispenser boxes, bulk cartons</span></div>
-                  <div><span className="text-industry-slate-500 block">Certifications:</span><span className="text-white font-bold">ISO 9001 factory, FEPA-compliant grit grading</span></div>
+                  <div><span className="text-industry-slate-500 block">Documentation:</span><span className="text-white font-bold">Confirmed for quoted SKU and market</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link href="/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
@@ -389,7 +389,7 @@ export default function SandingDiscsPage() {
                 "category": "Sanding discs and sandpaper discs",
                 "material": "Aluminum oxide, zirconia, silicon carbide, ceramic, mesh screen",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "Reference MOQ", "value": "500 discs per common size and grit" },
+                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by SKU, grit, packaging and order quantity" },
                   { "@type": "PropertyValue", "name": "Attachment types", "value": "Hook-and-loop, PSA, fiber, quick-change" }
                 ],
               },

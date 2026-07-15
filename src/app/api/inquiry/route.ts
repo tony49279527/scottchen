@@ -13,6 +13,7 @@ const BACKUP_WEBHOOK_TIMEOUT_MS = 3000;
 const RESEND_TIMEOUT_MS = 10000;
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_MAX = 8;
+const MAX_REQUEST_BODY_BYTES = 50_000;
 const rateLimitStore = new Map<string, number[]>();
 
 type PrimaryDeliveryChannel = "webhook" | "resend";
@@ -343,12 +344,27 @@ async function sendViaResend(
 export async function POST(request: Request) {
   let payload: InquiryPayload;
 
+  const contentLength = Number(request.headers.get("content-length") || 0);
+  if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BODY_BYTES) {
+    return Response.json(
+      { ok: false, message: "Request body is too large." },
+      { status: 413 }
+    );
+  }
+
   try {
     payload = (await request.json()) as InquiryPayload;
   } catch {
     return Response.json(
       { ok: false, message: "Invalid request body." },
       { status: 400 }
+    );
+  }
+
+  if (JSON.stringify(payload).length > MAX_REQUEST_BODY_BYTES) {
+    return Response.json(
+      { ok: false, message: "Request body is too large." },
+      { status: 413 }
     );
   }
 

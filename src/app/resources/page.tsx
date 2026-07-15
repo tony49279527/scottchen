@@ -37,6 +37,27 @@ const resources = [
       "A buyer-oriented guide to abrasive grain families, backing materials, FEPA P-grit language, sample testing, GS1 barcode checks and Incoterms.",
   },
   {
+    title: "Flap disc RFQ guide",
+    href: "/resources/flap-disc-rfq-guide",
+    intent: "Flap disc specification and samples",
+    summary:
+      "Define Type 27/29, grain, grit, density, backing, RPM, sample acceptance, safety evidence, packaging and commercial assumptions.",
+  },
+  {
+    title: "Sanding belt RFQ guide",
+    href: "/resources/sanding-belt-rfq-guide",
+    intent: "Custom belt specification",
+    summary:
+      "A machine-to-belt checklist covering dimensions, backing, grain, joint, tracking tests, packaging and written lead-time milestones.",
+  },
+  {
+    title: "Cutting wheel compliance checklist",
+    href: "/resources/cutting-wheel-compliance-checklist",
+    intent: "Safety evidence verification",
+    summary:
+      "Connect every quoted cut-off wheel SKU to its target-market standard, test report, operating limits, traceability and approved label.",
+  },
+  {
     title: "SCOTTCHEN supplier profile",
     href: "/supplier-profile",
     intent: "Brand entity and verification boundary",
@@ -51,6 +72,8 @@ const queryClusters = [
   "what to check before buying private-label sanding kits",
   "sandpaper backing and abrasive grain selection for B2B orders",
   "buffing wheel MOQ lead time packaging and QC checklist",
+  "flap disc RFQ specification and sample testing checklist",
+  "how to verify cutting wheel safety reports by SKU",
 ] as const;
 
 export default function ResourcesHub() {

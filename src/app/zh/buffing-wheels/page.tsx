@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "抛光轮厂家与抛光布轮批发 | SCOTTCHEN",
-  description: "SCOTTCHEN上海抛光轮生产厂家，专业提供抛光布轮、麻布轮、气道轮、抛光膏套装的OEM/ODM代工与批发，MOQ 500件，支持贴牌定制，出口全球。",
+  description: "上海抛光轮OEM采购支持，提供抛光布轮、麻布轮、气道轮和抛光膏套装。按规格、包装、样品和订单数量书面报价。",
   path: "/zh/buffing-wheels",
   locale: "zh-CN",
   alternatePath: "/buffing-wheels",
@@ -24,7 +24,7 @@ export default function ZhBuffingWheelsPage() {
     },
     {
       name: "软质漂白布轮（软布轮/镜面抛光轮）",
-      desc: "软质漂白布轮采用高支数漂白细棉布或法兰绒布制作，不缝合或仅局部缝合，质地柔软蓬松，专用于镜面精抛工序。配合白蜡（White Rouge）或绿蜡（Green Chrome Oxide）使用，可在不锈钢、黄铜、铝合金、银器等表面获得高光镜面效果。软布轮是首饰抛光、卫浴五金、餐具抛光的必备耗材。我司生产的软质漂白布轮布质均匀、不掉布屑、平衡性能好，支持批发和来样定制，MOQ低至500件。",
+      desc: "软质漂白布轮可采用细棉布或法兰绒，用于镜面精抛。采购时应确认布料、层数、缝线、孔径、密度、最高转速、平衡与掉屑验收标准，并以目标材料上的样品测试批准。",
       specs: ["直径：3\"-12\"（75mm-300mm）", "内孔：1/4\"、1/2\"、5/8\"、定制", "材质：漂白细布/法兰绒/纯棉布", "厚度：1/2\"-2\"可选", "用途：镜面精抛、出光"],
     },
     {
@@ -49,7 +49,7 @@ export default function ZhBuffingWheelsPage() {
     },
     {
       name: "抛光膏/抛光蜡",
-      desc: "抛光膏（抛光蜡）是配合抛光布轮使用的研磨耗材，不同颜色的抛光膏含有不同粒度和成分的磨料，用于不同抛光阶段。黑膏（Emery/黑色金刚砂膏）用于粗抛去氧化皮；红膏（Tripoli/红铁矿膏）用于中抛除划痕；白膏（White Rouge）用于不锈钢和有色金属镜面精抛；绿膏（Green Chrome Oxide）用于不锈钢和铬面镜面出光；蓝膏（Blue）用于塑料和漆面抛光。SCOTTCHEN抛光膏厂家生产各种颜色抛光蜡，支持OEM贴牌包装和配方定制，MOQ低至500条。",
+      desc: "抛光膏需与布轮、材料和目标表面匹配。颜色不能替代配方规格，RFQ应确认磨料、粒度、载体、单条重量、适用材料、包装和安全资料，并通过样品测试验证切削与出光结果。",
       specs: ["单条规格：约100g-500g/条", "颜色/粒度：黑/棕/红/白/绿/蓝", "包装：纸盒/散装/吸塑/贴标", "形状：方条形/圆柱形/定制", "适用材质：不锈钢/铜/铝/塑料/漆面"],
     },
   ];
@@ -68,27 +68,27 @@ export default function ZhBuffingWheelsPage() {
   const faqs = [
     {
       q: "你们作为抛光轮厂家，MOQ（最小起订量）是多少？",
-      a: "标准规格抛光布轮（如6寸、8寸直径，1/2\"或5/8\"内孔）的MOQ为500件/款。非标准规格定制（特殊直径、特殊内孔、特殊硬度）的MOQ一般为1000件/款。抛光膏套装和成品零售包装套装的MOQ通常为500套。首次合作客户可灵活协商试单数量，具体请联系销售团队确认。我们也接受多个SKU混批凑整柜的订单模式，方便批发商和经销商一站式采购。",
+      a: "MOQ按轮型、直径、厚度、孔径或柄径、布料、层数、包装和订单数量报价。试单、套装与混合SKU方案应分别列明单价、包装、检验和物流假设。",
     },
     {
       q: "抛光轮可以OEM贴牌吗？支持哪些定制？",
-      a: "完全可以。SCOTTCHEN作为专业抛光轮生产厂家，提供全面的OEM/ODM贴牌服务，包括：1）印刷您的品牌Logo和标签；2）定制彩盒、吸塑、插卡等零售包装；3）按您的样品或图纸定制特殊规格；4）定制布轮硬度、层数、缝线密度；5）开发专属抛光膏配方；6）组合套装定制（布轮+抛光膏+适配器一站式包装）；7）FBA贴标和准备。我们已为全球40多个国家的工具品牌、五金连锁、电商卖家提供贴牌代工服务。",
+      a: "可以讨论OEM/ODM贴牌项目，包括品牌标签、零售包装、按图纸或确认样定制规格、布轮硬度与层数、抛光膏和套装组合。若涉及平台仓配，请由买家提供当前条码、标签和包装规则，报价中会确认可执行范围与责任边界。",
     },
     {
       q: "硬质布轮和软质布轮的区别是什么？如何选择？",
       a: "硬质布轮（线布轮/螺旋缝合轮）通过密线缝合固定布层，轮体硬、切削力强，配合粗粒度抛光膏（黑蜡、棕蜡）用于粗抛和中抛阶段，主要去除氧化皮、焊痕、砂眼、深划痕。软质布轮（漂白软布轮/法兰绒轮）不缝合或少缝合，布质柔软蓬松，配合细粒度抛光膏（白蜡、绿蜡）用于镜面精抛阶段，获得高光镜面效果。通常一套完整的抛光工序是：麻布轮/硬布轮（粗抛）→ 中硬布轮（中抛）→ 软布轮（精抛/镜面），配合对应的抛光膏依次使用。",
     },
     {
-      q: "你们的抛光轮交期多长？支持一件代发或FBA发货吗？",
-      a: "标准规格抛光布轮的交货周期为收到定金后25-35天，OEM贴牌订单（含定制包装）约30-40天。大批量订单（整柜）交期可协商提前安排生产排期。我们支持多种发货方式：FOB上海出厂价、CIF目的港、或安排门到门物流。针对电商客户，我们提供完整的FBA代发服务，包括FNSKU贴标、塑料袋包装、防窒息标签、纸箱标签等，可直接从工厂发往亚马逊仓库。对于合作稳定的客户，可商议一件代发服务。",
+      q: "抛光轮交期和平台仓配如何确认？",
+      a: "交期取决于轮型、尺寸、材料、包装、样品批准和订单数量，应以书面报价中的里程碑为准。FOB、CIF或门到门方案可在询价时比较；平台仓配必须由买家提供当前标签和入仓要求，并在订单前确认承运、贴标和验收责任。",
     },
     {
       q: "抛光轮使用寿命多久？如何判断更换时机？",
       a: "抛光轮的使用寿命取决于使用条件（压力、转速、工件材质、抛光膏类型），一般工业连续使用情况下，硬质布轮寿命约20-40小时，软质布轮约30-60小时，麻布轮约15-30小时，气道轮可达50-80小时。判断更换的信号包括：布轮直径明显缩小、布层散开或脱落、缝线断裂、抛光效率明显下降、工件表面出现布屑划痕、抛光轮平衡变差产生振动。建议定期修整抛光轮表面（用轮修整器或砂纸棒）以保持工作面平整，可有效延长使用寿命。",
     },
     {
-      q: "作为抛光布轮厂家，你们有哪些质量认证？",
-      a: "SCOTTCHEN工厂通过ISO 9001:2015质量管理体系认证，所有抛光轮产品在出厂前经过动平衡测试、尺寸检验、外观检验和试抛测试。产品符合FEPA和ANSI磨料标准，出口欧洲的产品可提供CE相关文件。我们为多家欧美知名工具品牌和五金连锁供应抛光轮产品长达10年以上，产品质量稳定可靠。可根据客户要求提供SGS、TÜV等第三方检测报告，也欢迎客户委托第三方机构来厂验货。",
+      q: "抛光轮项目应索取哪些质量证据？",
+      a: "建议在RFQ中列明尺寸公差、层数或密度、孔径或柄径、最高使用转速、平衡检查、外观和试抛验收标准。需要体系证书或第三方报告时，应核对签发机构、证书或报告编号、覆盖主体、产品范围、有效期以及具体SKU是否在覆盖范围内。",
     },
   ];
 
@@ -103,7 +103,7 @@ export default function ZhBuffingWheelsPage() {
               抛光轮厂家_抛光布轮批发_布轮厂家
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
-              SCOTTCHEN上海抛光轮生产厂家，专业生产抛光布轮、麻布轮、气道轮（风冷轮）、带柄抛光磨头、抛光膏/抛光蜡等全系列抛光耗材，提供OEM/ODM贴牌代工与批发服务，MOQ低至500件，出口全球40+国家。
+              SCOTTCHEN为抛光布轮、麻布轮、气道轮、带柄抛光磨头和抛光膏项目提供OEM采购支持。起订量、生产来源、质量文件、包装和交期按具体SKU书面确认。
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -122,20 +122,20 @@ export default function ZhBuffingWheelsPage() {
           <div className="glass-panel p-6 sm:p-8 rounded-xl border border-industry-slate-800 bg-industry-slate-950/40">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">MOQ 500</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量（件）</div>
+                <div className="text-2xl font-black text-industry-orange">按SKU</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">起订量报价</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
-                <div className="text-2xl font-black text-industry-orange">ISO 9001</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">质量认证</div>
+                <div className="text-2xl font-black text-industry-orange">按项目</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">质量证据核验</div>
               </div>
               <div className="text-center border-r border-industry-slate-800 last:border-r-0">
                 <div className="text-2xl font-black text-industry-orange">OEM/ODM</div>
                 <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">贴牌定制</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-black text-industry-orange">40+国家</div>
-                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">出口市场</div>
+                <div className="text-2xl font-black text-industry-orange">按市场</div>
+                <div className="text-xs text-industry-slate-400 mt-1 uppercase tracking-wider">出口文件确认</div>
               </div>
             </div>
           </div>
@@ -153,13 +153,13 @@ export default function ZhBuffingWheelsPage() {
                 </h2>
                 <div className="space-y-4 text-sm text-industry-slate-300 leading-relaxed">
                   <p>
-                    SCOTTCHEN是坐落于上海的专业抛光轮厂家，自2014年起深耕抛光耗材行业十余年，是国内领先的抛光布轮、麻布轮、气道轮、抛光磨头及抛光膏研发、生产和出口企业。作为抛光轮生产厂家，我们拥有完整的布轮生产线——从布料裁切、多层叠压、螺旋缝合、组装平衡到成品检验全工序自主完成，严格执行ISO 9001质量管理体系，为全球客户提供稳定可靠的抛光耗材产品。
+                    SCOTTCHEN在上海为抛光布轮、麻布轮、气道轮、抛光磨头和抛光膏项目提供选型、打样、包装与出口协调。询价时应确认布料、层数、缝线、孔径或柄径、平衡标准、生产来源及检验记录，避免仅依据笼统的厂家或认证表述做采购判断。
                   </p>
                   <p>
                     作为布轮厂家，我们深知抛光轮的品质直接决定工件最终抛光效果。因此我们在原材料采购环节严格把关：所用棉布均选用优质高密棉坯布，麻布轮采用进口天然剑麻纤维，缝线选用高拉力涤纶线，金属夹盘采用精密冲压件。每一只抛光轮在出厂前均经过动平衡测试，确保在3000-6000RPM转速下平稳运转、无振动、不掉布屑，保障操作人员安全和工件抛光质量。
                   </p>
                   <p>
-                    我们不仅是抛光轮厂家，更是您抛光工艺解决方案的合作伙伴。无论您是不锈钢餐具加工厂、汽车轮毂翻新厂、五金卫浴制造商、首饰加工厂，还是电商卖家、工具品牌商、五金批发商，SCOTTCHEN都能为您提供从产品选型、工艺咨询到OEM贴牌的一站式服务。支持抛光轮批发、定制加工、OEM/ODM代工、FBA贴标发货，服务全球40+国家和地区的客户。
+                    项目可面向金属加工、汽车翻新、卫浴、首饰、电商、工具品牌和批发渠道。产品选型、OEM包装、平台标签和物流范围均应由买卖双方在样品与订单文件中逐项确认。
                   </p>
                 </div>
               </div>
@@ -240,11 +240,11 @@ export default function ZhBuffingWheelsPage() {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { title: "工厂直供价格", desc: "我们是抛光轮源头生产厂家，自有工厂直销，省去中间商层层加价，为批发商和品牌商提供最具竞争力的出厂价格。" },
+                    { title: "可比报价", desc: "报价列明产品来源、材料、尺寸、包装、检验范围、数量和贸易术语，便于买家比较总到岸成本。" },
                     { title: "全系列产品", desc: "硬质布轮、软质布轮、麻布轮、气道轮、磨头、抛光膏一站式采购，减少多供应商采购的沟通成本和物流成本。" },
                     { title: "严格质量管控", desc: "按确认规格执行原材料到成品的分阶段质检与动平衡抽检；认证范围与验收标准以书面报价/订单为准。" },
-                    { title: "OEM/ODM定制", desc: "10年+贴牌代工经验，支持品牌标签、彩盒包装、特殊规格、套装组合、FBA贴标等全方位定制服务。" },
-                    { title: "快速交货", desc: "标准品7-15天发货，OEM订单30-40天交货，上海港口紧邻工厂，船期密集，物流成本低、时效快。" },
+                    { title: "OEM/ODM范围", desc: "品牌标签、彩盒包装、特殊规格、套装组合及买家提供规则的平台标签可在报价中逐项确认。" },
+                    { title: "书面交期", desc: "打样、样品批准、物料准备、生产、验货和出运节点按SKU与订单数量写入报价。" },
                     { title: "专业技术支持", desc: "拥有资深抛光工艺工程师团队，可协助客户选型、设计抛光方案、解决抛光难题，提供工艺培训和指导。" },
                   ].map((adv) => (
                     <div key={adv.title} className="glass-panel p-5 rounded-lg border border-industry-slate-800">
@@ -268,10 +268,10 @@ export default function ZhBuffingWheelsPage() {
                     SCOTTCHEN抛光轮厂家为全球工具品牌、五金连锁、电商卖家、工业MRO供应商提供专业的OEM/ODM贴牌代工服务。经过十余年的出口代工经验积累，我们深谙欧美、东南亚、中东等市场对抛光轮产品的标准要求和包装规范，能够精准匹配客户的品牌定位和市场需求。
                   </p>
                   <p>
-                    我们的OEM服务涵盖以下内容：①品牌标签印刷——在抛光轮夹盘或包装上印刷您的品牌Logo、产品信息、安全警告；②零售包装定制——彩盒、吸塑卡、插卡、塑料袋、桶装等多种包装形式；③产品规格定制——按您的样品或图纸定制直径、厚度、内孔、硬度、层数等参数；④抛光膏定制——颜色、粒度、配方、包装均可定制；⑤套装组合开发——布轮+抛光膏+适配器组合套装，一站式零售解决方案；⑥FBA服务——FNSKU贴标、防窒息袋、纸箱标签，直接发往亚马逊仓库。
+                    OEM范围可包括品牌标签、零售包装、按确认样或图纸定义的直径、厚度、内孔、硬度和层数、抛光膏规格及套装组合。平台条码、警告语和外箱标签由买家提供最终版本，供应范围在样品批准和订单文件中确认。
                   </p>
                   <p>
-                    OEM合作流程：发送询盘和需求 → 我方提供方案和报价 → 确认后打样（7-10天） → 客户确认样品 → 签订合同支付定金 → 批量生产（25-40天） → 验货/QC → 尾款支付 → 发货。我们的销售团队会全程跟踪订单进度，定期向客户反馈生产状态，确保订单按时保质交付。
+                    OEM合作流程通常包括：提交规格和目标市场 → 书面报价 → 打样 → 样品与包装批准 → 订单确认 → 生产与验货 → 出运。每个阶段的时间、费用、付款节点和责任以具体项目文件为准。
                   </p>
                 </div>
                 <div className="pt-2">
@@ -319,12 +319,12 @@ export default function ZhBuffingWheelsPage() {
                   批发参数
                 </h3>
                 <div className="space-y-4 text-xs font-mono">
-                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">500件/款（标准品）</span></div>
-                  <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">标准品25-35天，OEM 30-40天</span></div>
+                  <div><span className="text-industry-slate-500 block">MOQ：</span><span className="text-white font-bold">按SKU、包装和数量报价</span></div>
+                  <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">按规格、样品批准和数量确认</span></div>
                   <div><span className="text-industry-slate-500 block">包装：</span><span className="text-white font-bold">散装/彩盒/吸塑/插卡/定制</span></div>
-                  <div><span className="text-industry-slate-500 block">付款方式：</span><span className="text-white font-bold">T/T 30%定金，70%见提单副本</span></div>
+                  <div><span className="text-industry-slate-500 block">付款方式：</span><span className="text-white font-bold">以形式发票和合同为准</span></div>
                   <div><span className="text-industry-slate-500 block">价格条款：</span><span className="text-white font-bold">FOB上海 / CIF / 门到门</span></div>
-                  <div><span className="text-industry-slate-500 block">认证：</span><span className="text-white font-bold">ISO 9001:2015 / FEPA / ANSI</span></div>
+                  <div><span className="text-industry-slate-500 block">文件：</span><span className="text-white font-bold">按主体、SKU与目标市场核验</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link href="/zh/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
@@ -361,7 +361,7 @@ export default function ZhBuffingWheelsPage() {
                 "@type": "ProductGroup",
                 "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
                 "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
-                "description": "上海抛光轮生产厂家，批发抛光布轮、麻布轮、气道轮、抛光磨头、抛光膏，MOQ 500件，OEM贴牌定制。",
+                "description": "上海抛光轮OEM采购支持，覆盖抛光布轮、麻布轮、气道轮、抛光磨头和抛光膏，按SKU书面报价。",
                 "url": absoluteUrl("/zh/buffing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
                 "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
@@ -369,10 +369,10 @@ export default function ZhBuffingWheelsPage() {
                 "category": "棉布抛光轮与抛光配件",
                 "material": "棉布、绒布、麻棉混纺、抛光膏",
                 "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "参考起订量", "value": "500件/款（标准品）" },
-                  { "@type": "PropertyValue", "name": "参考交期", "value": "标准品25-35天，OEM 30-40天" },
+                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按SKU、包装和订单数量书面确认" },
+                  { "@type": "PropertyValue", "name": "交期依据", "value": "按规格、样品批准和订单数量书面确认" },
                   { "@type": "PropertyValue", "name": "贸易条款", "value": "FOB上海 / CIF / 门到门" },
-                  { "@type": "PropertyValue", "name": "付款方式", "value": "T/T 30%定金，70%见提单副本" },
+                  { "@type": "PropertyValue", "name": "付款方式", "value": "以形式发票和合同为准" },
                 ],
               },
               buildFaqPageSchema(faqs),
