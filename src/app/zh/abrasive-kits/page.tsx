@@ -8,8 +8,9 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "磨具套装批发与OEM贴牌 | SCOTTCHEN",
-  description: "抛光轮、砂纸、磨头和DIY磨具套装OEM采购支持。按BOM、包装、样品、平台标签和订单数量书面报价。",
+  title: "磨具套装批发与 OEM 贴牌采购支持 | SCOTTCHEN",
+  description:
+    "抛光轮、砂纸、磨头与 DIY 磨具套装的 OEM/贴牌采购支持。按 BOM、包装、样品、平台标签与订单数量书面报价，不以网页数字作承诺。",
   path: "/zh/abrasive-kits",
   locale: "zh-CN",
   alternatePath: "/abrasive-kits",
@@ -318,18 +319,16 @@ export default function ZhAbrasiveKitsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
-                "@id": absoluteUrl("/zh/abrasive-kits#productgroup"),
-                "name": "SCOTTCHEN磨具套装、抛光工具套装、砂磨套装",
-                "description": "抛光轮、砂纸和DIY磨具套装OEM采购支持，按BOM、包装、样品和数量书面报价。",
-                "url": absoluteUrl("/zh/abrasive-kits"),
-                "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
-                "category": "磨具套装与抛光工具套装",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按BOM、包装、模具和订单数量报价" },
-                  { "@type": "PropertyValue", "name": "包装选项", "value": "彩盒、吸塑、聚袋、条码与说明书" }
-                ],
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/abrasive-kits#catalog"),
+                name: "磨具套装 RFQ 规划场景",
+                description:
+                  "贴牌磨具套装的规划场景。组件来源、BOM、兼容性、包装、条码范围、MOQ 与交期以带日期的报价和批准样品为准。",
+                url: absoluteUrl("/zh/abrasive-kits"),
+                image: absoluteUrl("/images/hero_abrasives_kit.webp"),
+                inLanguage: "zh-CN",
+                isPartOf: { "@id": absoluteUrl("/#website") },
+                about: { "@id": absoluteUrl("/#organization") },
               },
               buildFaqPageSchema(faqs),
             ],

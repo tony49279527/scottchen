@@ -392,7 +392,7 @@ export default function SandingBeltsPage() {
                 "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
                 "url": absoluteUrl("/sanding-belts"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "brand": { "@id": absoluteUrl("/#brand") },
                 "category": "Sanding belts and abrasive belts",
                 "material": "Aluminum oxide, zirconia, ceramic, silicon carbide",
                 "additionalProperty": [

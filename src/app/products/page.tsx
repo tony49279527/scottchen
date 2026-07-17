@@ -110,10 +110,10 @@ export default function ProductsOverview() {
           <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS CATALOG</span>
           <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
             Surface Finishing Accessories Catalog
-            <span className="mt-2 block text-base font-semibold text-industry-slate-400 sm:text-lg">
-              Shanghai B2B sourcing and OEM project support for buffing wheels, sanding discs, flap discs, belts, cutting wheels and kits
-            </span>
           </h1>
+          <p className="mt-2 text-base font-semibold text-industry-slate-400 sm:text-lg">
+            Shanghai B2B sourcing and OEM project support for buffing wheels, sanding discs, flap discs, belts, cutting wheels and kits
+          </p>
           <p className="mt-4 text-base text-industry-slate-400 max-w-3xl leading-relaxed">
             Compare candidate product families for tool-brand, distributor and retail projects. Production source, technical evidence, MOQ basis, packaging scope and commercial terms are confirmed per SKU in writing.
           </p>

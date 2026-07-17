@@ -352,7 +352,7 @@ export default function ZhCuttingWheelsPage() {
                 "description": "金属、不锈钢和超薄树脂切割片OEM采购支持，按SKU、安全证据、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/cutting-wheels"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "brand": { "@id": absoluteUrl("/#brand") },
                 "category": "树脂切割片",
                 "material": "树脂结合剂磨料；配方与增强结构按SKU确认",
                 "additionalProperty": [

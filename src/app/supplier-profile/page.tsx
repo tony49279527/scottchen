@@ -52,18 +52,6 @@ export default function SupplierProfile() {
         mainEntity: { "@id": absoluteUrl("/#organization") },
       },
       {
-        "@type": "Brand",
-        "@id": `${absoluteUrl("/")}#organization`,
-        name: SITE_NAME,
-        url: absoluteUrl("/"),
-        knowsAbout: [
-          "Coated abrasives",
-          "Cotton buffing wheels",
-          "Private-label tool accessory kits",
-          "Retail packaging preparation",
-        ],
-      },
-      {
         "@type": "ItemList",
         "@id": absoluteUrl("/supplier-profile#published-facts"),
         name: "Published SCOTTCHEN supplier facts",

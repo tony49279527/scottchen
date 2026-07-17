@@ -10,13 +10,13 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "Abrasive Kit Sourcing Alternatives for B2B | SCOTTCHEN",
   description:
-    "Compare factory-direct OEM, distributors, trading companies, contract packers and in-house assembly. Choose a sourcing model, then request a scoped quote.",
+    "Compare OEM production sourcing, distributors, trading companies, contract packers and in-house assembly. Choose a sourcing model, then request a scoped quote.",
   path: "/alternatives/abrasive-kit-sourcing-alternatives",
 });
 
 const models = [
   {
-    name: "Factory-direct OEM",
+    name: "OEM production sourcing",
     cost: "Quoted to specification",
     minimum: "Production MOQ quoted by SKU, packaging and quantity",
     control: "High product, assortment and packaging control",
@@ -33,8 +33,8 @@ const models = [
     name: "Trading company",
     cost: "Quoted across multiple factories",
     minimum: "Varies by source and consolidation plan",
-    control: "Medium; verify factory and inspection ownership",
-    bestFor: "Mixed categories that one factory cannot supply",
+    control: "Medium; verify production source and inspection ownership",
+    bestFor: "Mixed categories that one source cannot supply",
   },
   {
     name: "Contract packer",
@@ -54,12 +54,12 @@ const models = [
 
 const faqs = [
   {
-    q: "What is the best alternative to factory-direct abrasive kit sourcing?",
+    q: "What is the best alternative to OEM production sourcing for abrasive kits?",
     a: "A distributor is usually the fastest alternative for low-volume validation. A contract packer or in-house assembly gives more pack control when the buyer already has approved component suppliers.",
   },
   {
-    q: "When does a factory-direct OEM abrasive kit make sense?",
-    a: "Factory-direct OEM fits repeat B2B demand where the buyer needs a controlled assortment, private-label packaging, written specifications and a repeatable sample-to-production process.",
+    q: "When does OEM production sourcing for abrasive kits make sense?",
+    a: "OEM production sourcing fits repeat B2B demand where the buyer needs a controlled assortment, private-label packaging, written specifications and a repeatable sample-to-production process. Production source must still be confirmed per quoted SKU.",
   },
   {
     q: "How should buyers compare sourcing quotations?",
@@ -107,8 +107,10 @@ export default function AbrasiveKitSourcingAlternativesPage() {
             Five abrasive kit sourcing alternatives for B2B buyers
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-industry-slate-300">
-            Factory-direct OEM is best for repeat private-label programs; distributors
+            OEM production sourcing fits repeat private-label programs; distributors
             are faster for small trials. Compare all five models before issuing an RFQ.
+            SCOTTCHEN provides B2B sourcing and OEM project support; production source is
+            confirmed per quoted SKU and is not inferred from this page.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/contact" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
@@ -158,7 +160,7 @@ export default function AbrasiveKitSourcingAlternativesPage() {
           {[
             ["1. Define the decision", "Confirm whether the launch needs speed, private-label control, mixed-category consolidation or local assembly flexibility."],
             ["2. Normalize the RFQ", "Give every candidate the same product list, target quantities, packaging files, acceptance criteria and destination assumptions."],
-            ["3. Verify before award", "Review samples, factory or supplier identity, quality evidence, payment beneficiary and written commercial terms before a purchase order."],
+            ["3. Verify before award", "Review samples, supplier identity, quality evidence, payment beneficiary and written commercial terms before a purchase order."],
           ].map(([title, body]) => (
             <article key={title} className="glass-panel rounded-lg p-6">
               <h2 className="text-lg font-bold text-white">{title}</h2>
@@ -188,8 +190,8 @@ export default function AbrasiveKitSourcingAlternativesPage() {
       />
       <DecisionGuides />
       <CTASection
-        title="Need a factory-direct OEM quotation?"
-        subtitle="Share the target assortment, quantity, packaging and destination. We will confirm scope, MOQ and commercial assumptions in writing."
+        title="Need an OEM abrasive-kit quotation?"
+        subtitle="Share the target assortment, quantity, packaging and destination. We will confirm scope, production source, MOQ and commercial assumptions in writing."
       />
     </div>
   );

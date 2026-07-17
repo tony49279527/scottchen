@@ -426,7 +426,7 @@ export default function BuffingWheelsPage() {
                 "description": "Shanghai B2B sourcing and OEM project support for cotton buffing wheels, spiral-stitched wheels, airway buffs, sisal-cotton constructions and polishing compounds, quoted by SKU.",
                 "url": absoluteUrl("/buffing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "brand": { "@id": absoluteUrl("/#brand") },
                 "category": "Cotton buffing wheels and polishing accessories",
                 "additionalProperty": [
                   { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by wheel construction, size, packaging and quantity" },

@@ -7,8 +7,9 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "磨具批发与五金分销合作 | SCOTTCHEN",
-  description: "上海磨具B2B采购与OEM项目支持，生产来源、包装、起订量、交期、付款和贸易术语按SKU书面确认。",
+  title: "磨具批发与五金分销合作支持 | SCOTTCHEN",
+  description:
+    "面向五金分销与渠道补货的磨具 B2B 采购与 OEM 项目支持。生产来源、包装、起订量、交期、付款与贸易术语按 SKU 书面确认。",
   path: "/zh/wholesale-abrasives",
   locale: "zh-CN",
   alternatePath: "/wholesale-abrasives",

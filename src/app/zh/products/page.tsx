@@ -7,7 +7,8 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM 磨料磨具产品目录 — 抛光轮、砂纸片、百叶片 | SCOTTCHEN",
-  description: "比较磨料磨具产品类别、规格控制和包装选项；起订量、生产来源、证据与商业条款按 SKU 报价。",
+  description:
+    "比较抛光轮、砂碟、百叶片、砂带、切割片与贴牌套装类别；规格控制、生产来源、证据边界与商业条款按报价 SKU 确认。",
   path: "/zh/products",
   alternatePath: "/products",
   locale: "zh-CN",

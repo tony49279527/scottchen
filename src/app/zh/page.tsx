@@ -7,8 +7,9 @@ import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "SCOTTCHEN 磨料磨具 B2B 采购与贴牌项目支持",
-  description: "为抛光轮、砂碟和磨具套装提供上海 B2B 采购与项目支持；生产来源、证据、包装和商业条款按 SKU 书面确认。",
+  title: "SCOTTCHEN 磨料磨具 B2B 采购与 OEM 贴牌项目支持",
+  description:
+    "上海 B2B 磨料、砂纸与抛光配件采购及贴牌项目支持。生产来源、证据边界、包装流程与商业条款均按报价 SKU 书面确认。",
   path: "/zh",
   alternatePath: "/",
   locale: "zh-CN",

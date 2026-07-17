@@ -8,8 +8,9 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "砂纸片批发与砂碟 OEM 采购 | SCOTTCHEN",
-  description: "植绒砂纸片、背胶砂纸、钢纸磨片和网砂OEM采购支持。按磨料、背基、孔型、粒度、包装、样品与数量书面报价。",
+  title: "砂纸片批发与砂碟 OEM 采购支持 | SCOTTCHEN",
+  description:
+    "植绒砂纸片、背胶砂纸、钢纸磨片与网砂的 OEM 采购支持。磨料、背基、孔型、粒度、包装、样品、来源与数量按书面报价确认。",
   path: "/zh/sanding-discs",
   locale: "zh-CN",
   alternatePath: "/sanding-discs",
@@ -368,7 +369,7 @@ export default function ZhSandingDiscsPage() {
                 "description": "植绒、背胶、钢纸和网格砂碟OEM采购支持，按磨料、背基、孔型、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/sanding-discs"),
                 "image": absoluteUrl("/images/sanding_screens.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "brand": { "@id": absoluteUrl("/#brand") },
                 "category": "砂纸片与砂碟",
                 "material": "磨料与背基按报价SKU和材料文件确认",
                 "additionalProperty": [

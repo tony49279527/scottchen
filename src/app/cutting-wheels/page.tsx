@@ -390,7 +390,7 @@ export default function CuttingWheelsPage() {
                 "description": "B2B sourcing support for cut-off wheels for metal, stainless steel, cast iron and masonry; reinforcement and compliance evidence are confirmed per SKU.",
                 "url": absoluteUrl("/cutting-wheels"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "brand": { "@id": absoluteUrl("/#brand") },
                 "category": "Cutting wheels and cut-off discs",
                 "material": "Resin-bonded abrasive; formulation and reinforcement confirmed per SKU",
                 "additionalProperty": [

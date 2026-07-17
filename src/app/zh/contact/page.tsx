@@ -4,7 +4,6 @@ import RFQForm from "@/components/RFQForm";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
-  SITE_NAME,
   SITE_UPDATED,
 } from "@/lib/site";
 
@@ -47,12 +46,6 @@ export default function ChineseContact() {
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
         mainEntity: { "@id": absoluteUrl("/#organization") },
-      },
-      {
-        "@type": "Brand",
-        "@id": absoluteUrl("/#organization"),
-        name: SITE_NAME,
-        url: absoluteUrl("/"),
       },
       {
         "@type": "ItemList",

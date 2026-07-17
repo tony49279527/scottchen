@@ -6,7 +6,7 @@ const guides = [
     label: "Sourcing alternatives",
     title: "Compare five abrasive-kit sourcing models",
     summary:
-      "Decide when factory-direct OEM, a distributor, a trading company, a contract packer, or in-house assembly fits the buying brief.",
+      "Decide when OEM production sourcing, a distributor, a trading company, a contract packer, or in-house assembly fits the buying brief.",
   },
   {
     href: "/compare/oem-vs-off-the-shelf-abrasive-kits",

@@ -53,13 +53,6 @@ export default function ChineseSupplierProfile() {
         mainEntity: { "@id": absoluteUrl("/#organization") },
       },
       {
-        "@type": "Brand",
-        "@id": `${absoluteUrl("/")}#organization`,
-        name: SITE_NAME,
-        url: absoluteUrl("/"),
-        knowsAbout: ["涂附磨具", "棉布抛光轮", "贴牌工具配件套装", "零售包装与条码准备"],
-      },
-      {
         "@type": "ItemList",
         "@id": absoluteUrl("/zh/supplier-profile#published-facts"),
         name: "SCOTTCHEN 已公开供应商事实",

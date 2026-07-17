@@ -337,11 +337,12 @@ export default function ChinaAbrasiveManufacturerPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Brand",
-                "@id": absoluteUrl("/#organization"),
-                "name": "SCOTTCHEN",
-                "url": absoluteUrl("/"),
-                "description": "Shanghai-based B2B abrasive sourcing and OEM project support for buffing wheels, sanding discs, flap discs, cutting wheels, sanding belts and private-label kits.",
+                "@type": "WebPage",
+                "@id": absoluteUrl("/china-abrasive-manufacturer#webpage"),
+                url: absoluteUrl("/china-abrasive-manufacturer"),
+                name: "China Abrasive Sourcing & OEM Support | SCOTTCHEN",
+                about: { "@id": absoluteUrl("/#organization") },
+                isPartOf: { "@id": absoluteUrl("/#website") },
               },
               buildFaqPageSchema(faqs),
             ],

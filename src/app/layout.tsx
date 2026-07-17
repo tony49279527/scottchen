@@ -6,9 +6,9 @@ import DocumentShell from "@/components/DocumentShell";
 import {
   absoluteUrl,
   SITE_NAME,
-  SITE_UPDATED,
   SITE_URL,
 } from "@/lib/site";
+import { buildOrganizationNode } from "@/lib/schema";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -78,47 +78,23 @@ export const metadata: Metadata = {
 const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Brand",
-      "@id": `${SITE_URL}/#organization`,
-      "name": "SCOTTCHEN",
-      "url": SITE_URL,
-      "logo": {
-        "@type": "ImageObject",
-        "url": absoluteUrl("/icon.svg"),
-        "width": 512,
-        "height": 512,
-      },
-      "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
-      "slogan": "B2B Abrasive Sourcing & Project Support",
-      "description":
-        "B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.",
-      "dateModified": SITE_UPDATED,
-      "knowsAbout": [
-        "Coated abrasives",
-        "Cotton buffing wheels",
-        "Spiral stitched polishing wheels",
-        "Wet/dry sandpaper sheets",
-        "Sanding discs and flap discs",
-        "Zirconia fiber grinding discs",
-        "Drywall sanding screens",
-        "Private-label tool accessory kits",
-        "Retail packaging and barcode preparation",
-        "B2B abrasive supplier evaluation"
-      ]
-    },
+    buildOrganizationNode(),
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
-      "url": SITE_URL,
-      "name": `${SITE_NAME} - OEM Abrasive Sourcing Support`,
-      "description": "B2B abrasive, sanding and polishing accessory sourcing site with English and Simplified Chinese buyer resources.",
-      "about": {
-        "@id": `${SITE_URL}/#organization`
+      url: SITE_URL,
+      name: `${SITE_NAME} - OEM Abrasive Sourcing Support`,
+      description:
+        "B2B abrasive, sanding and polishing accessory sourcing site with English and Simplified Chinese buyer resources.",
+      about: {
+        "@id": `${SITE_URL}/#organization`,
       },
-      "inLanguage": ["en", "zh-CN"]
-    }
-  ]
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      inLanguage: ["en", "zh-CN"],
+    },
+  ],
 };
 
 export default function RootLayout({

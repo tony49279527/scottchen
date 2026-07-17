@@ -330,11 +330,13 @@ export default function ZhChinaAbrasiveManufacturerPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Brand",
-                "@id": absoluteUrl("/zh#organization"),
-                "name": "SCOTTCHEN",
-                "url": absoluteUrl("/zh"),
-                "description": "以上海为协调基地的 B2B 磨料采购与 OEM 项目支持，范围包括抛光轮、砂纸片、百叶片、切割片、砂带和贴牌套装。",
+                "@type": "WebPage",
+                "@id": absoluteUrl("/zh/china-abrasive-manufacturer#webpage"),
+                url: absoluteUrl("/zh/china-abrasive-manufacturer"),
+                name: "中国磨料采购与上海 OEM 项目支持 | SCOTTCHEN",
+                about: { "@id": absoluteUrl("/#organization") },
+                isPartOf: { "@id": absoluteUrl("/#website") },
+                inLanguage: "zh-CN",
               },
               buildFaqPageSchema(faqs),
             ],

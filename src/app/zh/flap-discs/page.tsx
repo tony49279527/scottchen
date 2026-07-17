@@ -8,8 +8,9 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "百叶片采购与百叶轮批发支持 | SCOTTCHEN",
-  description: "T27/T29锆刚玉、陶瓷氧化铝百叶片OEM采购指南。按尺寸、粒度、底板、最高转速、样品、包装和数量书面报价。",
+  title: "百叶片采购与百叶轮批发 OEM 支持 | SCOTTCHEN",
+  description:
+    "T27/T29 锆刚玉与陶瓷氧化铝百叶片 OEM 采购指南。尺寸、粒度、底板、最高转速、样品、包装、来源与数量按书面报价确认。",
   path: "/zh/flap-discs",
   locale: "zh-CN",
   alternatePath: "/flap-discs",
@@ -359,7 +360,7 @@ export default function ZhFlapDiscsPage() {
                 "description": "T27/T29锆刚玉和陶瓷氧化铝百叶片OEM采购支持，按SKU、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/flap-discs"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@type": "Brand", "name": "SCOTTCHEN" },
+                "brand": { "@id": absoluteUrl("/#brand") },
                 "category": "百叶片与平面砂布轮",
                 "material": "锆刚玉、陶瓷、氧化铝，玻璃纤维网盖",
                 "additionalProperty": [
