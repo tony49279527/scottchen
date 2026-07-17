@@ -353,6 +353,30 @@ export default function ProductsOverview() {
       />
 
       {/* Persistent CTA Banner */}
+      <section className="border-t border-industry-slate-800 bg-industry-slate-950 py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">Keyword landing pages</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-industry-slate-400">
+            Use these intent pages for category RFQs; collection pages above remain the catalog navigation layer.
+          </p>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+            {[
+              ["/buffing-wheels", "Buffing Wheels"],
+              ["/sanding-discs", "Sanding Discs"],
+              ["/flap-discs", "Flap Discs"],
+              ["/sanding-belts", "Sanding Belts"],
+              ["/cutting-wheels", "Cutting Wheels"],
+              ["/abrasive-kits", "Abrasive Kits"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href} className="font-bold text-industry-orange hover:underline">
+                  {label} &rarr;
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <DecisionGuides />
       <CTASection />
     </div>

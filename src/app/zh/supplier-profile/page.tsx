@@ -11,9 +11,9 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "SCOTTCHEN B2B 供应商档案与采购尽调",
+  title: "SCOTTCHEN B2B 供应商档案与采购尽调清单",
   description:
-    "查看 SCOTTCHEN 已公开的 B2B 产品范围、贴牌合作流程、联系渠道、买家尽调清单，以及必须在报价中书面确认的商务条款。",
+    "查看 SCOTTCHEN 已公开的 B2B 产品范围、贴牌合作流程、联系渠道与买家尽调清单；证书、主体与案例仍以项目书面文件为准。",
   path: "/zh/supplier-profile",
   alternatePath: "/supplier-profile",
   locale: "zh-CN",

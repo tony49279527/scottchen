@@ -369,6 +369,7 @@ export default function SandingBeltsPage() {
                   <li><Link href="/resources/sanding-belt-rfq-guide" className="font-bold text-industry-orange hover:underline">Sanding Belt RFQ Guide</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>
+                  <li><Link href="/cutting-wheels" className="text-industry-orange hover:underline">Cutting Wheels</Link></li>
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Knife Sharpening Belt Kits</Link></li>
                   <li><Link href="/buffing-wheels" className="text-industry-orange hover:underline">Buffing Wheels</Link></li>
                   <li><Link href="/wholesale-abrasives" className="text-industry-orange hover:underline">Wholesale Abrasives Program</Link></li>

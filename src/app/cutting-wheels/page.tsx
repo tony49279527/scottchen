@@ -368,6 +368,7 @@ export default function CuttingWheelsPage() {
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/sanding-belts" className="text-industry-orange hover:underline">Sanding Belts</Link></li>
+                  <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Abrasive Kits</Link></li>
                   <li><Link href="/buffing-wheels" className="text-industry-orange hover:underline">Buffing Wheels</Link></li>
                   <li><Link href="/wholesale-abrasives" className="text-industry-orange hover:underline">Wholesale Abrasives Program</Link></li>
                 </ul>

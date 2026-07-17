@@ -5,8 +5,9 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM & 私有品牌抛光工具包定制方案 | SCOTTCHEN",
-  description: "提供私有品牌彩盒挂卡、买家提供的 FNSKU/UPC 条码贴标与仓库交付需求规划，用于表面抛磨抛光轮及砂纸套装项目。",
+  title: "OEM 与私有品牌抛光工具包定制支持 | SCOTTCHEN",
+  description:
+    "规划私有品牌彩盒挂卡、买家提供的 FNSKU/UPC 条码与仓库交付需求；刀模、来源、样品与商业条款按报价书面确认。",
   path: "/zh/oem-private-label",
   alternatePath: "/oem-private-label",
   locale: "zh-CN",

@@ -309,6 +309,7 @@ export default function AbrasiveKitsPage() {
                 "description": "Planning scenarios for private-label abrasive kits. Component source, BOM, compatibility, packaging, barcode scope, MOQ and timing require a dated quotation and approved samples.",
                 "url": absoluteUrl("/abrasive-kits"),
                 "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
+                "inLanguage": "en",
                 "isPartOf": { "@id": absoluteUrl("/#website") },
                 "about": { "@id": absoluteUrl("/#organization") }
               },

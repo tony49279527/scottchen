@@ -352,6 +352,30 @@ export default function ChineseProductsOverview() {
       />
 
       {/* Persistent CTA Banner */}
+      <section className="border-t border-industry-slate-800 bg-industry-slate-950 py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">关键词落地页</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-industry-slate-400">
+            品类询价请优先进入下列意图页；上方集合页继续承担目录导航。
+          </p>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+            {[
+              ["/zh/buffing-wheels", "抛光轮"],
+              ["/zh/sanding-discs", "砂纸片/砂碟"],
+              ["/zh/flap-discs", "百叶片"],
+              ["/zh/sanding-belts", "砂带"],
+              ["/zh/cutting-wheels", "切割片"],
+              ["/zh/abrasive-kits", "磨具套装"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href} className="font-bold text-industry-orange hover:underline">
+                  {label} &rarr;
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <CTASection />
     </div>
   );

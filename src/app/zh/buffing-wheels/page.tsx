@@ -348,6 +348,7 @@ export default function ZhBuffingWheelsPage() {
                   <li><Link href="/zh/cutting-wheels" className="text-industry-orange hover:underline">切割片/砂轮片</Link></li>
                   <li><Link href="/zh/abrasive-kits" className="text-industry-orange hover:underline">磨具套装组合</Link></li>
                   <li><Link href="/zh/wholesale-abrasives" className="text-industry-orange hover:underline">磨具批发合作</Link></li>
+                  <li><Link href="/zh/china-abrasive-manufacturer" className="text-industry-orange hover:underline">供应链核验</Link></li>
                 </ul>
               </div>
             </div>

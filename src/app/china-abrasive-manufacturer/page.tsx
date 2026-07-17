@@ -343,6 +343,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                 name: "China Abrasive Sourcing & OEM Support | SCOTTCHEN",
                 about: { "@id": absoluteUrl("/#organization") },
                 isPartOf: { "@id": absoluteUrl("/#website") },
+                inLanguage: "en",
               },
               buildFaqPageSchema(faqs),
             ],

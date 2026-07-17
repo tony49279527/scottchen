@@ -53,8 +53,10 @@ export default function ChineseHome() {
               </span>
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
                 抛光轮及磨料磨具采购
-                <span className="block text-industry-orange mt-2">B2B OEM 与贴牌项目支持</span>
               </h1>
+              <p className="text-2xl font-extrabold text-industry-orange">
+                B2B OEM 与贴牌项目支持
+              </p>
               <p className="text-lg text-industry-slate-300 leading-relaxed max-w-2xl">
                 为工具品牌、五金分销商和跨境卖家提供上海采购与项目支持；候选产品、包装、证据、起订量、标签和出运要求按 SKU 与书面报价确认。
               </p>
