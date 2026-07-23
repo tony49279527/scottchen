@@ -75,7 +75,6 @@ export default function AutomotivePolishingKitsPage() {
           "B2B sourcing and sample-approval support for configurable automotive polishing kits that combine polishing wheels, compounds, adapters, abrasives and retail packaging.",
         serviceType: "Private-label automotive polishing kit development",
         provider: { "@id": absoluteUrl("/#organization") },
-        areaServed: ["North America", "Europe", "Asia", "Australia"],
         audience: {
           "@type": "BusinessAudience",
           audienceType: "Automotive aftermarket brands, retailers and distributors",

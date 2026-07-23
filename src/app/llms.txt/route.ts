@@ -17,7 +17,7 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 
 - Brand: SCOTTCHEN
 - Public location scope: Shanghai, China
-- Buyer types served: tool brands, hardware distributors, industrial suppliers and online sellers
+- Intended buyer profiles: tool brands, hardware distributors, industrial suppliers and online sellers
 - Product scope: cotton buffing wheels, polishing wheels, sanding discs, flap discs, sanding belts, cutting wheels, sandpaper sheets, grinding accessories and mixed private-label kits
 - Project scope: product configuration, sample planning, packaging artwork, buyer-supplied barcode data, inspection requirements and shipping assumptions
 - Verification boundary: legal contracting entity, production location, beneficiary account, final MOQ, lead time, certificates and test reports must be confirmed in a written quotation, quality plan or contract

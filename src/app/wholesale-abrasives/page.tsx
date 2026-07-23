@@ -66,10 +66,10 @@ export default function WholesaleAbrasivesPage() {
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
-              Open Wholesale Account
+              Request Wholesale Quote
             </Link>
             <Link href="/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
-              Request Wholesale Catalog
+              Request Product Samples
             </Link>
           </div>
         </div>
@@ -121,8 +121,8 @@ export default function WholesaleAbrasivesPage() {
           </div>
 
           <div className="space-y-6">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Who We Serve</span>
-            <h2 className="text-2xl font-extrabold text-white">Wholesale Customers We Partner With</h2>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Intended Buyer Profiles</span>
+            <h2 className="text-2xl font-extrabold text-white">Buyer Profiles This Program Supports</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { title: "Distributors", desc: "Abrasives distributors, welding supply distributors, and industrial MRO suppliers serving regional and national markets." },
@@ -214,7 +214,7 @@ export default function WholesaleAbrasivesPage() {
                 <div className="grid grid-cols-1 gap-3">
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">LCL Shipments</h3>
-                    <p className="text-xs text-industry-slate-400 mt-1">Less than container load orders are consolidated at our forwarder's warehouse and shipped with other cargo, suitable for smaller trial orders or mixed product orders under 10 CBM.</p>
+                    <p className="text-xs text-industry-slate-400 mt-1">If LCL is requested, origin, consolidator or forwarder, storage, loading, cargo compatibility and charges are confirmed in the written shipping scenario. Suitability depends on volume, packaging and transport restrictions.</p>
                   </div>
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">FCL Containers</h3>
@@ -256,12 +256,12 @@ export default function WholesaleAbrasivesPage() {
 
           <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg space-y-5">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Get Started</span>
-            <h2 className="text-2xl font-extrabold text-white">How to Open a Wholesale Account</h2>
+            <h2 className="text-2xl font-extrabold text-white">How to Start a Wholesale RFQ</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
                 { step: "1. Submit Inquiry", desc: "Contact us via our wholesale inquiry form, email, or RFQ page with your company information, product interests, estimated volumes, and target market." },
-                { step: "2. Account Review", desc: "We review your business credentials and assign a dedicated sales representative who will work with you throughout the relationship." },
-                { step: "3. Quotation & Samples", desc: "Receive detailed wholesale pricing, request product samples for evaluation, and finalize specifications and packaging." },
+                { step: "2. Scope Review", desc: "We review the buyer entity, target SKUs, quantity, market and available files, then confirm the path to samples or quotation." },
+                { step: "3. Quotation & Sample Plan", desc: "We evaluate quotation and sample options, then confirm specifications, packaging and applicable charges in writing." },
                 { step: "4. Confirm Order Controls", desc: "Approve samples, sign the specification and artwork, confirm payment and Incoterms, then follow the written schedule for the identified production source through inspection and shipment." },
               ].map((s) => (
                 <div key={s.step} className="border-l-2 border-industry-orange pl-4">
@@ -272,7 +272,7 @@ export default function WholesaleAbrasivesPage() {
             </div>
             <div className="pt-4">
               <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
-                Apply for Wholesale Account
+                Submit Wholesale RFQ
               </Link>
             </div>
           </div>

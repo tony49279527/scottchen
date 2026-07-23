@@ -22,10 +22,10 @@ export default function ZhWholesaleAbrasivesPage() {
     { name: "百叶片/百叶轮", link: "/zh/flap-discs", desc: "T27平面型、T29钹型、锆刚玉/陶瓷/氧化铝百叶片" },
     { name: "环形砂带", link: "/zh/sanding-belts", desc: "手提、台式、窄锉刀、宽幅、制刀、碳化硅砂带，可定制尺寸" },
     { name: "树脂切割片", link: "/zh/cutting-wheels", desc: "金属、不锈钢INOX、超薄、钹型、铸铁、石材切割片" },
-    { name: "磨具套装", link: "/zh/abrasive-kits", desc: "抛光套装、砂纸套装、电钻配件套装，零售级包装" },
+    { name: "磨具套装", link: "/zh/abrasive-kits", desc: "抛光套装、砂纸套装、电钻配件套装，包装范围按报价确认" },
   ];
 
-  const customers = [
+  const buyerProfiles = [
     { title: "经销商与代理商", desc: "磨料磨具经销商、焊材焊割经销商、工业MRO供应商、面向区域/全国市场的分销合作伙伴。" },
     { title: "五金店与连锁店", desc: "独立五金零售店、五金连锁超市、家居建材卖场、汽配店销售零售包装磨具产品。" },
     { title: "电商卖家", desc: "淘宝、京东、拼多多、1688、抖音、快手、Amazon、Shopify、eBay等平台卖家需要自有品牌磨具。" },
@@ -59,9 +59,9 @@ export default function ZhWholesaleAbrasivesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="max-w-2xl">
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "磨具批发", href: "/zh/wholesale-abrasives" }]} />
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">批发合作 · 分销招募</span>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">批发采购 · 分销项目</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              磨具批发_磨料磨具批发供货_五金工具分销合作
+              磨具批发与五金分销采购支持
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               面向经销商、零售商、电商和工业买家的磨具批量采购支持。砂纸片、百叶片、切割片、砂带、抛光轮和套装按SKU、包装、检验、数量与贸易术语书面报价。
@@ -69,10 +69,10 @@ export default function ZhWholesaleAbrasivesPage() {
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
-              开通批发账户
+              提交批发询价
             </Link>
             <Link href="/zh/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
-              索取批发目录
+              申请产品样品
             </Link>
           </div>
         </div>
@@ -124,10 +124,10 @@ export default function ZhWholesaleAbrasivesPage() {
           </div>
 
           <div className="space-y-6">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">合作伙伴类型</span>
-            <h2 className="text-2xl font-extrabold text-white">我们的批发合作伙伴</h2>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">适用买家</span>
+            <h2 className="text-2xl font-extrabold text-white">本项目适用的买家类型</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {customers.map((cust) => (
+              {buyerProfiles.map((cust) => (
                 <div key={cust.title} className="glass-panel p-6 rounded-lg border border-industry-slate-800">
                   <h3 className="text-base font-bold text-industry-orange">{cust.title}</h3>
                   <p className="text-xs text-industry-slate-400 mt-2 leading-relaxed">{cust.desc}</p>
@@ -212,7 +212,7 @@ export default function ZhWholesaleAbrasivesPage() {
                 <div className="grid grid-cols-1 gap-3">
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">拼箱LCL发货</h3>
-                    <p className="text-xs text-industry-slate-400 mt-1">不足整柜的订单在合作货代仓库拼柜发运，适合试单或10CBM以下的小批量多品类混合订单。</p>
+                    <p className="text-xs text-industry-slate-400 mt-1">如采用拼箱，起运地、集运方或货代、仓储装载、货物兼容性与费用均以书面运输方案为准；是否适用取决于体积、包装和运输限制。</p>
                   </div>
                   <div className="glass-panel p-4 rounded border border-industry-slate-800">
                     <h3 className="text-sm font-bold text-white">整柜FCL发运</h3>
@@ -253,13 +253,13 @@ export default function ZhWholesaleAbrasivesPage() {
           </div>
 
           <div className="bg-industry-slate-950 border border-industry-slate-800 p-8 rounded-lg space-y-5">
-            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">开通合作</span>
-            <h2 className="text-2xl font-extrabold text-white">如何开通批发账户</h2>
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">启动采购</span>
+            <h2 className="text-2xl font-extrabold text-white">如何启动批发询价</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
                 { step: "1. 提交申请", desc: "通过批发询盘表、邮件或RFQ页面联系我们，提供公司信息、感兴趣的产品、预估用量和目标市场。" },
-                { step: "2. 资质审核", desc: "我们审核您的商业资质，指派专属销售代表全程对接合作。" },
-                { step: "3. 报价样品", desc: "获取详细批发报价，申请产品样品评估，最终确认规格和包装。" },
+                { step: "2. 范围核对", desc: "我们核对买方主体、目标 SKU、数量、市场和现有文件，再确认样品或报价路径。" },
+                { step: "3. 报价与样品方案", desc: "我们评估报价与样品选项，并以书面方式确认规格、包装和适用费用。" },
                 { step: "4. 确认订单控制", desc: "批准样品、规格和包装稿，确认付款与 Incoterms，再按已识别生产来源的书面排期推进检验与发运。" },
               ].map((s) => (
                 <div key={s.step} className="border-l-2 border-industry-orange pl-4">
@@ -270,7 +270,7 @@ export default function ZhWholesaleAbrasivesPage() {
             </div>
             <div className="pt-4">
               <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
-                申请批发账户
+                提交批发询价
               </Link>
             </div>
           </div>
