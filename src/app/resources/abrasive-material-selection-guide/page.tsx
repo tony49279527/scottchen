@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -242,11 +243,48 @@ export default function AbrasiveMaterialSelectionGuide() {
         </div>
       </section>
 
+      <section className="border-y border-industry-slate-800 bg-industry-slate-950 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">Frequently asked questions</h2>
+          <div className="mt-8 grid gap-5">
+            {faqs.map((faq) => (
+              <article key={faq.q} className="glass-panel rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white">{faq.q}</h3>
+                <p className="mt-3 leading-relaxed text-industry-slate-300">{faq.a}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageSchema(faqs)) }}
       />
       <CTASection />
     </div>
   );
 }
+
+const faqs = [
+  {
+    q: "How do I choose between aluminum oxide, zirconia and ceramic grain?",
+    a: "Aluminum oxide is the economical default for general carbon-steel and wood work, zirconia lasts longer under heavier pressure, and ceramic keeps cutting on stainless steel and heat-sensitive applications. The choice should be validated in a sample test on the actual workpiece, because backing, coat and tool conditions change the result as much as the grain itself.",
+  },
+  {
+    q: "Does a higher grit number always mean a better finish?",
+    a: "A higher grit number means finer abrasive particles and a finer scratch pattern, but the right finishing sequence depends on the substrate, the starting surface and the final requirement. Skipping grit steps or jumping straight to a very fine grit usually costs more time than it saves.",
+  },
+  {
+    q: "Why does the backing material matter as much as the grain?",
+    a: "The backing controls flexibility, tear resistance and how the product conforms to the workpiece. Paper backings suit flat hand and machine sanding, cloth backings handle contours and heavy stock removal, and film backings give the most consistent fine finish. Two products with identical grain can behave very differently on different backings.",
+  },
+  {
+    q: "What should I send a supplier to get a material recommendation?",
+    a: "Send the substrate and its hardness, the tool type and operating speed, the current product and its grit sequence, the target finish or stock-removal rate, and the constraints such as heat, loading or service life. Recommendations based on this data can then be verified against the same sample acceptance criteria for every candidate.",
+  },
+] as const;

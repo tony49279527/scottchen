@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export interface ProcurementGuideData {
@@ -15,6 +16,7 @@ export interface ProcurementGuideData {
     items: readonly string[];
   }>;
   supplierQuestions: readonly string[];
+  faqs?: ReadonlyArray<{ q: string; a: string }>;
   relatedLinks: ReadonlyArray<{ label: string; href: string }>;
 }
 
@@ -45,6 +47,7 @@ export default function ProcurementGuidePage({ data }: { data: ProcurementGuideD
           name: item,
         })),
       },
+      ...(data.faqs ? [buildFaqPageSchema(data.faqs)] : []),
     ],
   };
 
@@ -126,6 +129,24 @@ export default function ProcurementGuidePage({ data }: { data: ProcurementGuideD
           </ol>
         </div>
       </section>
+
+      {data.faqs && data.faqs.length > 0 && (
+        <section className="border-b border-industry-slate-800 bg-industry-slate-950 py-16">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-extrabold text-white">
+              {isZh ? "常见问题" : "Frequently asked questions"}
+            </h2>
+            <div className="mt-8 grid gap-5">
+              {data.faqs.map((faq) => (
+                <article key={faq.q} className="glass-panel rounded-xl p-6">
+                  <h3 className="text-lg font-bold text-white">{faq.q}</h3>
+                  <p className="mt-3 leading-relaxed text-industry-slate-300">{faq.a}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-industry-slate-900 py-12">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

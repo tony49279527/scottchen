@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -221,11 +222,48 @@ export default function ChineseAbrasiveMaterialSelectionGuide() {
         </div>
       </section>
 
+      <section className="border-y border-industry-slate-800 bg-industry-slate-950 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">常见问题</h2>
+          <div className="mt-8 grid gap-5">
+            {faqs.map((faq) => (
+              <article key={faq.q} className="glass-panel rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white">{faq.q}</h3>
+                <p className="mt-3 leading-relaxed text-industry-slate-300">{faq.a}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageSchema(faqs)) }}
       />
       <CTASection />
     </div>
   );
 }
+
+const faqs = [
+  {
+    q: "氧化铝、锆刚玉和陶瓷磨料应该如何选择？",
+    a: "氧化铝是一般碳钢和木材加工的经济默认选择，锆刚玉在较大压力下寿命更长，陶瓷磨料在不锈钢和对温度敏感的应用中能持续保持切削力。最终选择应通过实际工件上的样品测试验证，因为布基、植砂方式和工具条件对结果的影响不亚于磨料本身。",
+  },
+  {
+    q: "目数越高表面处理效果就越好吗？",
+    a: "目数越高代表磨料颗粒越细、划痕越细，但正确的打磨工序取决于基材、初始表面状态和最终要求。跳过渡目或直接使用很细的目数，通常比逐级打磨更费时间。",
+  },
+  {
+    q: "为什么背基材料和磨料同样重要？",
+    a: "背基决定柔软性、抗撕裂性和产品贴合工件的能力。纸基适合平面手工和机磨，布基能处理曲面和重负荷去料，薄膜基能提供最稳定的精细表面。磨料完全相同的两款产品，在不同背基上表现可能差异很大。",
+  },
+  {
+    q: "想让供应商给出选材建议，应该提供什么信息？",
+    a: "提供基材及硬度、工具类型和转速、现用产品及目数工序、目标表面效果或去料效率，以及温升、堵塞或寿命等限制条件。基于这些信息给出的建议，才能用相同的样品验收标准对每个候选方案进行验证。",
+  },
+] as const;

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -65,6 +66,25 @@ const sections = [
     ],
   },
 ];
+
+const faqs = [
+  {
+    q: "同一份询价单应该发给几家供应商？",
+    a: "通常发给两至四家报价真正可比的供应商即可。如果规格、包装和验货范围完全一致，更多的报价价值有限，因为真正的差异会体现在样品测试和各供应商对书面问题回答的精确程度上。",
+  },
+  {
+    q: "确认样能保证量产质量吗？",
+    a: "确认样本身不能。只有当样品被留样、贴标，并与书面规格一起写进采购订单时，它才真正锁定了产品配置。质量计划应写明量产产品与确认样一致，并定义出货前用哪些检查来证明。",
+  },
+  {
+    q: "验货应该安排在订单的哪个阶段？",
+    a: "价值最高的节点是依据确认样和书面验收标准进行的出货前检验。对于新供应商或新 SKU，在首批量产产品下线后增加一次过程检验，可以在纠正成本还很低的时候发现规格漂移。",
+  },
+  {
+    q: "付款前哪些商务条款必须落实到书面？",
+    a: "签约法律主体、收款账户、报价 SKU 规格、起订量、单价基准、交期、带指定地点的贸易术语、付款节点和缺陷处理流程，都应出现在注明日期的报价单或合同中。口头或聊天记录不能替代。",
+  },
+] as const;
 
 export default function ChineseAbrasiveSourcingChecklist() {
   const articleSchema = {
@@ -151,9 +171,27 @@ export default function ChineseAbrasiveSourcingChecklist() {
         </div>
       </section>
 
+      <section className="border-y border-industry-slate-800 bg-industry-slate-950 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">常见问题</h2>
+          <div className="mt-8 grid gap-5">
+            {faqs.map((faq) => (
+              <article key={faq.q} className="glass-panel rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white">{faq.q}</h3>
+                <p className="mt-3 leading-relaxed text-industry-slate-300">{faq.a}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageSchema(faqs)) }}
       />
       <CTASection />
     </div>

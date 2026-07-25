@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -136,6 +137,7 @@ export default function ChineseOemAbrasiveSupplierEvaluation() {
           url: absoluteUrl(item.scottchenPath),
         })),
       },
+      buildFaqPageSchema(faqs),
     ],
   };
 

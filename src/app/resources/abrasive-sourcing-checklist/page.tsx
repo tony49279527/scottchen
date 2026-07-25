@@ -2,6 +2,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
+import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata = createPageMetadata({
@@ -64,6 +65,25 @@ const sections = [
     ],
   },
 ];
+
+const faqs = [
+  {
+    q: "How many suppliers should receive the same RFQ?",
+    a: "Two to four suppliers with a genuinely comparable offer is usually enough. More quotes add little value if the specification, packaging and inspection scope are identical, because the differences that matter show up in the sample test and in how precisely each supplier answers the written questions.",
+  },
+  {
+    q: "Does an approved sample guarantee mass-production quality?",
+    a: "Not by itself. A sample only locks the configuration when it is retained, labeled and referenced in the purchase order together with the written specification. The quality plan should state that production units match the approved sample and define which checks prove it before shipment.",
+  },
+  {
+    q: "When should inspection happen during an order?",
+    a: "The highest-value checkpoint is pre-shipment inspection against the approved sample and the written acceptance criteria. For new suppliers or new SKUs, adding an in-process check after the first production units catches specification drift while correction is still cheap.",
+  },
+  {
+    q: "Which commercial terms must be written before any payment?",
+    a: "The legal contracting entity, beneficiary account, quoted SKU specification, MOQ, unit price basis, lead time, Incoterm with named place, payment milestones and defect-handling process should all appear in the dated quotation or contract. Verbal or chat confirmations are not a substitute.",
+  },
+] as const;
 
 export default function AbrasiveSourcingChecklist() {
   const articleSchema = {
@@ -151,9 +171,27 @@ export default function AbrasiveSourcingChecklist() {
         </div>
       </section>
 
+      <section className="border-y border-industry-slate-800 bg-industry-slate-950 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">Frequently asked questions</h2>
+          <div className="mt-8 grid gap-5">
+            {faqs.map((faq) => (
+              <article key={faq.q} className="glass-panel rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white">{faq.q}</h3>
+                <p className="mt-3 leading-relaxed text-industry-slate-300">{faq.a}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageSchema(faqs)) }}
       />
       <CTASection />
     </div>
