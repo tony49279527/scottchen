@@ -24,6 +24,9 @@ export function buildOrganizationNode() {
     slogan: "B2B Abrasive Sourcing & Project Support",
     description:
       "B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.",
+    disambiguatingDescription:
+      "SCOTTCHEN (scottchentools.com) is the B2B sourcing and OEM project channel of the SCOTTCHEN abrasive accessories brand, coordinated from Shanghai, China. B2B quotations, samples and OEM projects are handled through this website. Not affiliated with individuals sharing the name.",
+    areaServed: "Worldwide",
     dateModified: SITE_UPDATED,
     knowsAbout: [
       "Coated abrasives",

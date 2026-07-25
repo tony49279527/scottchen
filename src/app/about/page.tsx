@@ -111,6 +111,13 @@ export default function AboutPage() {
               Incoterms, certificate scope and test-report availability are confirmed in
               writing for each project.
             </p>
+            <p className="text-sm leading-relaxed text-industry-slate-300">
+              SCOTTCHEN (scottchentools.com) is the B2B sourcing and OEM project channel
+              of the SCOTTCHEN abrasive accessories brand, coordinated from Shanghai,
+              China. B2B quotations, samples and OEM projects are handled through this
+              website rather than through consumer retail marketplaces, and the brand is
+              not affiliated with any individual sharing a similar name.
+            </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/china-abrasive-manufacturer"

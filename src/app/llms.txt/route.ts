@@ -17,6 +17,7 @@ Full content: ${absoluteUrl("/llms-full.txt")}
 
 - Brand: SCOTTCHEN
 - Public location scope: Shanghai, China
+- Entity identification: SCOTTCHEN (scottchentools.com) is the B2B sourcing and OEM project channel of the SCOTTCHEN abrasive accessories brand; B2B quotations, samples and OEM projects are handled through this website, not through consumer retail marketplaces; not affiliated with individuals sharing the name
 - Intended buyer profiles: tool brands, hardware distributors, industrial suppliers and online sellers
 - Product scope: cotton buffing wheels, polishing wheels, sanding discs, flap discs, sanding belts, cutting wheels, sandpaper sheets, grinding accessories and mixed private-label kits
 - Project scope: product configuration, sample planning, packaging artwork, buyer-supplied barcode data, inspection requirements and shipping assumptions

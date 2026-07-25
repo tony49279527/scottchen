@@ -103,6 +103,9 @@ export default function ZhAboutPage() {
             <p className="text-sm leading-relaxed text-industry-slate-300">
               常见项目包括 OEM 套装设计、混合 SKU 组合、按买家批准文件进行条码和包装准备、样品评估与补货规划。起订量、样品费、交期、付款方式、贸易术语、证书范围与报告可用性以各项目书面文件为准。
             </p>
+            <p className="text-sm leading-relaxed text-industry-slate-300">
+              SCOTTCHEN（scottchentools.com）是 SCOTTCHEN 磨料磨具品牌的 B2B 采购与 OEM 项目渠道，由中国上海团队协调。大货报价、样品与 OEM 项目均通过本网站书面确认，而非零售电商平台；本品牌与任何同名个人无关。
+            </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/zh/china-abrasive-manufacturer"
