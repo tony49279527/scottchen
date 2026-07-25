@@ -352,6 +352,44 @@ export default function ProductsOverview() {
         }}
       />
 
+      {/* B2B Evidence & Compliance Directives Cross-Links */}
+      <section className="py-12 bg-industry-slate-900 border-t border-industry-slate-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <div>
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Buyer Due-Diligence & Verification</span>
+              <h2 className="text-2xl font-extrabold text-white mt-1">Quality, Evidence & Compliance Directives</h2>
+            </div>
+            <p className="text-xs text-industry-slate-400 mt-2 md:mt-0 max-w-md">
+              Review public compliance policies, quality inspection standards, and evidence manifests before submitting your RFQ.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/evidence-center" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">01 / Public Status</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">Evidence Center &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">Public entity facts, verified catalog assets and retained project files.</p>
+            </Link>
+            <Link href="/quality-control" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">02 / Quality Plan</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">Quality Control &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">Tolerance controls, fit testing, runout and batch inspection procedures.</p>
+            </Link>
+            <Link href="/packaging-private-label" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">03 / Packaging & OEM</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">Packaging Specs &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">Custom polybag, color box, barcode data and retail-ready packouts.</p>
+            </Link>
+            <Link href="/procurement-terms" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">04 / Commercial Scope</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">Procurement Terms &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">Incoterms, payment schedules, sample credit rules and lead times.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Persistent CTA Banner */}
       <section className="border-t border-industry-slate-800 bg-industry-slate-950 py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

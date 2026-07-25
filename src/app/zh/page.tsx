@@ -264,6 +264,19 @@ export default function ChineseHome() {
             </div>
 
           </div>
+
+          <div className="mt-10 p-6 rounded-lg bg-industry-slate-950/80 border border-industry-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 className="text-base font-bold text-white">寻找完整的磨料规格参数与定制组合方案？</h3>
+              <p className="text-xs text-industry-slate-400 mt-1">浏览全部产品线、材质选择、起订量指导与 SKU 级包装字段。</p>
+            </div>
+            <Link
+              href="/zh/products"
+              className="shrink-0 px-6 py-3 rounded bg-industry-orange/10 hover:bg-industry-orange/20 border border-industry-orange/30 text-xs font-extrabold uppercase tracking-wider text-industry-orange transition-colors"
+            >
+              浏览完整产品目录 &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 

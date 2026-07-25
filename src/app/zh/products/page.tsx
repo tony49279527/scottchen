@@ -351,6 +351,44 @@ export default function ChineseProductsOverview() {
         }}
       />
 
+      {/* B2B 证据与合规准则交叉导航 */}
+      <section className="py-12 bg-industry-slate-900 border-t border-industry-slate-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <div>
+              <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">买家尽职调查与验证指南</span>
+              <h2 className="text-2xl font-extrabold text-white mt-1">质量、证据与合规管理</h2>
+            </div>
+            <p className="text-xs text-industry-slate-400 mt-2 md:mt-0 max-w-md">
+              在提交 RFQ 之前，您可以审阅公开的合规政策、质检标准与实物证据清单。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/zh/evidence-center" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">01 / 公开主体信息</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">证据中心 &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">公开主体事实、验证目录资产与留存项目文件。</p>
+            </Link>
+            <Link href="/zh/quality-control" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">02 / 质量控制体系</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">质量控制 &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">公差控制、适配测试、偏心与批次检验标准流程。</p>
+            </Link>
+            <Link href="/zh/packaging-private-label" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">03 / 包装与 OEM 定制</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">包装规格 &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">定制塑料袋、彩盒、条码数据与零售就绪封箱规格。</p>
+            </Link>
+            <Link href="/zh/procurement-terms" className="glass-panel p-5 rounded-lg border border-industry-slate-800 hover:border-industry-orange/50 transition-all group">
+              <div className="text-xs font-mono text-industry-orange font-bold uppercase mb-1">04 / 商业与货运条款</div>
+              <div className="text-base font-bold text-white group-hover:text-industry-orange transition-colors">采购条款 &rarr;</div>
+              <p className="text-xs text-industry-slate-400 mt-2">贸易术语、付款计划、样品抵扣规则与生产交期。</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Persistent CTA Banner */}
       <section className="border-t border-industry-slate-800 bg-industry-slate-950 py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
