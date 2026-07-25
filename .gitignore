@@ -30,3 +30,8 @@ yarn-error.log*
 /out
 /dist
 .vercel
+
+# agent state and generated artifacts
+.claude/
+output/
+scottchen-gpt-site/
