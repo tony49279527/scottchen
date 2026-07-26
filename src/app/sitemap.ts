@@ -115,6 +115,24 @@ const localizedRoutes = [
     priority: 0.85,
     changefreq: "monthly" as const,
   },
+  {
+    en: "/alternatives/abrasive-kit-sourcing-alternatives",
+    zh: "/zh/alternatives/abrasive-kit-sourcing-alternatives",
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  },
+  {
+    en: "/compare/oem-vs-off-the-shelf-abrasive-kits",
+    zh: "/zh/compare/oem-vs-off-the-shelf-abrasive-kits",
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  },
+  {
+    en: "/solutions/automotive-polishing-kits",
+    zh: "/zh/solutions/automotive-polishing-kits",
+    priority: 0.85,
+    changefreq: "monthly" as const,
+  },
   { en: "/terms", zh: "/zh/terms", priority: 0.2, changefreq: "yearly" as const },
   { en: "/privacy", zh: "/zh/privacy", priority: 0.2, changefreq: "yearly" as const },
   { en: "/cookie-policy", zh: "/zh/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
@@ -122,24 +140,6 @@ const localizedRoutes = [
 
 const utilityRoutes = [
   { path: "/catalog.pdf", priority: 0.6, changefreq: "monthly" as const },
-] as const;
-
-const decisionRoutes = [
-  {
-    path: "/alternatives/abrasive-kit-sourcing-alternatives",
-    priority: 0.8,
-    changefreq: "monthly" as const,
-  },
-  {
-    path: "/compare/oem-vs-off-the-shelf-abrasive-kits",
-    priority: 0.8,
-    changefreq: "monthly" as const,
-  },
-  {
-    path: "/solutions/automotive-polishing-kits",
-    priority: 0.85,
-    changefreq: "monthly" as const,
-  },
 ] as const;
 
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
@@ -163,12 +163,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...localizedEntries,
-    ...decisionRoutes.map(({ path: p, priority, changefreq }) => ({
-      url: absoluteUrl(p),
-      lastModified: LAST_MODIFIED,
-      changeFrequency: changefreq,
-      priority,
-    })),
     ...utilityRoutes.map(({ path: p, priority, changefreq }) => ({
       url: absoluteUrl(p),
       lastModified: LAST_MODIFIED,

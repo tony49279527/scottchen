@@ -198,7 +198,7 @@ export default function OEMPrivateLabel() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/oem-abrasive-packaging-concept-v2.jpg"
+                  src="/images/oem-abrasive-packaging-concept-v2.webp"
                   alt="AI-generated unbranded private-label abrasive packaging concept"
                   className="object-cover w-full h-56 opacity-90"
                 />

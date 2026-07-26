@@ -334,7 +334,7 @@ export default function ChineseHome() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/qc-evidence-planning-concept-v2.jpg"
+                  src="/images/qc-evidence-planning-concept-v2.webp"
                   sizes="(min-width: 1024px) 36vw, 92vw"
                   quality={68}
                   alt="AI 生成的磨料磨具质量证据规划概念图"

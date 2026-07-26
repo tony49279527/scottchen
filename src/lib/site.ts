@@ -24,7 +24,7 @@ function resolveSiteUrl(): string {
 
 export const SITE_URL = resolveSiteUrl();
 export const SITE_EMAIL = "sales@scottchentools.com";
-export const SITE_UPDATED = "2026-07-25";
+export const SITE_UPDATED = "2026-07-26";
 export const PRODUCTION_DOMAIN = "www.scottchentools.com";
 
 export function absoluteUrl(path = "/") {
@@ -63,6 +63,9 @@ const localizedPaths = new Set([
   "/resources/flap-disc-rfq-guide",
   "/resources/sanding-belt-rfq-guide",
   "/resources/cutting-wheel-compliance-checklist",
+  "/alternatives/abrasive-kit-sourcing-alternatives",
+  "/compare/oem-vs-off-the-shelf-abrasive-kits",
+  "/solutions/automotive-polishing-kits",
   "/terms",
   "/privacy",
   "/cookie-policy",

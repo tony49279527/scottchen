@@ -12,6 +12,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Source private-label automotive polishing kits for wheel and metal restoration. Configure wheels, compounds, adapters, packaging and sample approval.",
   path: "/solutions/automotive-polishing-kits",
+  alternatePath: "/zh/solutions/automotive-polishing-kits",
 });
 
 const kitBlocks = [
@@ -104,6 +105,9 @@ export default function AutomotivePolishingKitsPage() {
             Build a wheel and metal polishing kit around a defined substrate, tool and
             finish sequence, then approve samples and packaging before production.
           </p>
+          <p className="mt-4 text-sm text-industry-slate-500">
+            Reviewed {SITE_UPDATED}. Finish results are approved only after buyer sample validation.
+          </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               Request a sample kit
@@ -146,7 +150,10 @@ export default function AutomotivePolishingKitsPage() {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/products/buffing-polishing-wheels" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
+            <Link
+              href="/products/buffing-polishing-wheels"
+              className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white"
+            >
               Review wheel options
             </Link>
             <Link href="/quality-control" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
@@ -154,6 +161,12 @@ export default function AutomotivePolishingKitsPage() {
             </Link>
             <Link href="/oem-private-label" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
               Review private-label workflow
+            </Link>
+            <Link
+              href="/packaging-private-label"
+              className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white"
+            >
+              Packaging approval path
             </Link>
           </div>
         </div>
@@ -170,10 +183,18 @@ export default function AutomotivePolishingKitsPage() {
               </p>
             </div>
             <ol className="space-y-4 text-sm text-industry-slate-300">
-              <li className="glass-panel rounded-lg p-5"><strong className="text-white">1. Product sample:</strong> verify fit, sequence and finish on the target part.</li>
-              <li className="glass-panel rounded-lg p-5"><strong className="text-white">2. Pack sample:</strong> verify quantities, labels, instructions and barcode data.</li>
-              <li className="glass-panel rounded-lg p-5"><strong className="text-white">3. Written quality plan:</strong> confirm inspection items, sampling and acceptance criteria.</li>
-              <li className="glass-panel rounded-lg p-5"><strong className="text-white">4. Written quotation:</strong> confirm MOQ, lead-time assumptions, Incoterms and exclusions.</li>
+              <li className="glass-panel rounded-lg p-5">
+                <strong className="text-white">1. Product sample:</strong> verify fit, sequence and finish on the target part.
+              </li>
+              <li className="glass-panel rounded-lg p-5">
+                <strong className="text-white">2. Pack sample:</strong> verify quantities, labels, instructions and barcode data.
+              </li>
+              <li className="glass-panel rounded-lg p-5">
+                <strong className="text-white">3. Written quality plan:</strong> confirm inspection items, sampling and acceptance criteria.
+              </li>
+              <li className="glass-panel rounded-lg p-5">
+                <strong className="text-white">4. Written quotation:</strong> confirm MOQ, lead-time assumptions, Incoterms and exclusions.
+              </li>
             </ol>
           </div>
         </div>

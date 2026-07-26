@@ -10,8 +10,9 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "OEM vs Off-the-Shelf Abrasive Kits for B2B | SCOTTCHEN",
   description:
-    "Compare OEM and off-the-shelf abrasive kits by MOQ, branding, assortment, validation and replenishment. Choose the right route for your B2B launch.",
+    "Compare OEM and off-the-shelf abrasive kits by MOQ, branding, assortment, validation, risk and replenishment. Choose the right route for your B2B launch.",
   path: "/compare/oem-vs-off-the-shelf-abrasive-kits",
+  alternatePath: "/zh/compare/oem-vs-off-the-shelf-abrasive-kits",
 });
 
 const comparison = [
@@ -21,7 +22,8 @@ const comparison = [
   ["MOQ", "Production MOQ quoted by SKU, packaging and quantity", "Often case or distributor minimum"],
   ["Validation", "Buyer approves product and packaging criteria before production", "Buyer tests the available stock item"],
   ["Replenishment", "Planned production against an approved specification", "Dependent on distributor or brand inventory"],
-  ["Unit pricing", "Quoted to configuration, volume and pack requirements", "Published or account pricing may be available"],
+  ["Unit pricing / total cost", "Quoted to configuration, volume, pack, inspection and Incoterms", "Published or account pricing may be available; landed cost still needs freight and duties"],
+  ["Key risk", "Longer approval cycle; unclear brief causes rework", "Assortment drift, stockouts, limited brand control"],
 ] as const;
 
 const faqs = [
@@ -82,12 +84,18 @@ export default function OemVsStockAbrasiveKitsPage() {
             Choose OEM for controlled branding and repeat assortments. Choose stock kits
             for faster, lower-volume validation when customization is not required.
           </p>
+          <p className="mt-4 text-sm text-industry-slate-500">
+            Reviewed {SITE_UPDATED}. Unit prices and MOQ are confirmed only in a dated written quotation.
+          </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               Request an OEM sample
             </Link>
             <Link href="/abrasive-kits" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
               Review kit capabilities
+            </Link>
+            <Link href="/oem-private-label" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
+              Private-label workflow
             </Link>
           </div>
         </div>
@@ -143,6 +151,45 @@ export default function OemVsStockAbrasiveKitsPage() {
       </section>
 
       <section className="bg-industry-slate-900 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-white">Conclusion conditions</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-industry-slate-400">
+            Use these conditions to decide which path to RFQ. Do not treat this page as a price list
+            or a guarantee of finish results.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <article className="glass-panel rounded-lg p-7">
+              <h3 className="text-lg font-bold text-industry-orange-light">OEM is the better next step if</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-industry-slate-300">
+                <li>You need a controlled assortment and private-label pack for repeat orders.</li>
+                <li>You can approve a sample and packaging specification before production.</li>
+                <li>You accept that MOQ, lead time and unit cost are quoted only after scope review.</li>
+              </ul>
+            </article>
+            <article className="glass-panel rounded-lg p-7">
+              <h3 className="text-lg font-bold text-industry-orange-light">Stock is the better next step if</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-industry-slate-300">
+                <li>An existing kit already matches the tool, substrate and finish target.</li>
+                <li>You need a small trial before committing to custom production.</li>
+                <li>Brand packaging control is optional for this launch stage.</li>
+              </ul>
+            </article>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/procurement-terms" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
+              Review procurement terms
+            </Link>
+            <Link href="/resources/oem-abrasive-supplier-evaluation" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
+              Supplier evaluation guide
+            </Link>
+            <Link href="/alternatives/abrasive-kit-sourcing-alternatives" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
+              Other sourcing alternatives
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-industry-slate-800 bg-industry-slate-950 py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-extrabold text-white">Frequently asked questions</h2>
           <div className="mt-8 space-y-5">

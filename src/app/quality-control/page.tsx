@@ -190,7 +190,7 @@ export default function QualityControl() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/qc-evidence-planning-concept-v2.jpg"
+                  src="/images/qc-evidence-planning-concept-v2.webp"
                   alt="AI-generated abrasive quality-evidence planning concept"
                   className="object-cover w-full h-56 opacity-90"
                 />

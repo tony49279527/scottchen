@@ -12,6 +12,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Compare OEM production sourcing, distributors, trading companies, contract packers and in-house assembly. Choose a sourcing model, then request a scoped quote.",
   path: "/alternatives/abrasive-kit-sourcing-alternatives",
+  alternatePath: "/zh/alternatives/abrasive-kit-sourcing-alternatives",
 });
 
 const models = [
@@ -112,12 +113,18 @@ export default function AbrasiveKitSourcingAlternativesPage() {
             SCOTTCHEN provides B2B sourcing and OEM project support; production source is
             confirmed per quoted SKU and is not inferred from this page.
           </p>
+          <p className="mt-4 text-sm text-industry-slate-500">
+            Reviewed {SITE_UPDATED}. Cost and MOQ figures are decision factors, not published price lists.
+          </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/contact" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               Request a scoped quote
             </Link>
             <Link href="/resources/abrasive-sourcing-checklist" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
               Open RFQ checklist
+            </Link>
+            <Link href="/compare/oem-vs-off-the-shelf-abrasive-kits" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
+              OEM vs stock comparison
             </Link>
           </div>
         </div>
@@ -134,8 +141,10 @@ export default function AbrasiveKitSourcingAlternativesPage() {
             <table className="min-w-[900px] w-full text-left text-sm">
               <thead className="bg-industry-slate-950 text-industry-slate-300">
                 <tr>
-                  {['Sourcing model', 'Pricing basis', 'Minimum', 'Buyer control', 'Best fit'].map((heading) => (
-                    <th key={heading} className="px-4 py-4 font-bold">{heading}</th>
+                  {["Sourcing model", "Pricing basis", "Minimum", "Buyer control", "Best fit"].map((heading) => (
+                    <th key={heading} className="px-4 py-4 font-bold">
+                      {heading}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -158,9 +167,18 @@ export default function AbrasiveKitSourcingAlternativesPage() {
       <section className="border-y border-industry-slate-800 bg-industry-slate-950 py-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
-            ["1. Define the decision", "Confirm whether the launch needs speed, private-label control, mixed-category consolidation or local assembly flexibility."],
-            ["2. Normalize the RFQ", "Give every candidate the same product list, target quantities, packaging files, acceptance criteria and destination assumptions."],
-            ["3. Verify before award", "Review samples, supplier identity, quality evidence, payment beneficiary and written commercial terms before a purchase order."],
+            [
+              "1. Define the decision",
+              "Confirm whether the launch needs speed, private-label control, mixed-category consolidation or local assembly flexibility.",
+            ],
+            [
+              "2. Normalize the RFQ",
+              "Give every candidate the same product list, target quantities, packaging files, acceptance criteria and destination assumptions.",
+            ],
+            [
+              "3. Verify before award",
+              "Review samples, supplier identity, quality evidence, payment beneficiary and written commercial terms before a purchase order.",
+            ],
           ].map(([title, body]) => (
             <article key={title} className="glass-panel rounded-lg p-6">
               <h2 className="text-lg font-bold text-white">{title}</h2>

@@ -188,7 +188,7 @@ export function EvidenceCenterPage({ locale }: { locale: Locale }) {
             <div className="sticky top-24 overflow-hidden rounded-xl border border-industry-slate-800 bg-industry-slate-950">
               <div className="relative">
                 <Image
-                  src="/images/qc-evidence-planning-concept-v2.jpg"
+                  src="/images/qc-evidence-planning-concept-v2.webp"
                   alt={zh ? "磨料产品证据规划的 AI 生成示意图" : "AI-generated concept visual of abrasive product evidence planning"}
                   width={1536}
                   height={1024}
@@ -399,7 +399,7 @@ export function PackagingPrivateLabelPage({ locale }: { locale: Locale }) {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
           <div className="lg:col-span-7">
             <div className="relative overflow-hidden rounded-xl border border-industry-slate-800 bg-industry-slate-950">
-              <Image src="/images/oem-abrasive-packaging-concept-v2.jpg" alt={zh ? "未印刷磨具套装包装的 AI 生成概念图" : "AI-generated concept of unprinted abrasive kit packaging"} width={1536} height={1024} sizes="(min-width: 1024px) 56vw, 92vw" className="h-auto w-full object-cover" priority />
+              <Image src="/images/oem-abrasive-packaging-concept-v2.webp" alt={zh ? "未印刷磨具套装包装的 AI 生成概念图" : "AI-generated concept of unprinted abrasive kit packaging"} width={1536} height={1024} sizes="(min-width: 1024px) 56vw, 92vw" className="h-auto w-full object-cover" priority />
               <div className="absolute inset-x-0 bottom-0 bg-industry-slate-950/90 px-4 py-3 text-[11px] font-bold text-white backdrop-blur-sm">{zh ? "AI 生成包装概念图 · 非真实订单、刀模、标签、条码或出货照片" : "AI-generated packaging concept · not a customer order, dieline, label, barcode or shipment photo"}</div>
             </div>
           </div>

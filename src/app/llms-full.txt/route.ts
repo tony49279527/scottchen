@@ -96,6 +96,7 @@ Trading companies, contract packers and in-house assembly are
 other models with different control and verification responsibilities.
 
 Full comparison: ${absoluteUrl("/alternatives/abrasive-kit-sourcing-alternatives")}
+Chinese: ${absoluteUrl("/zh/alternatives/abrasive-kit-sourcing-alternatives")}
 
 ### OEM vs off-the-shelf kits
 
@@ -103,6 +104,7 @@ OEM fits buyers that need controlled branding, assortment and repeat specificati
 Off-the-shelf kits fit faster validation when an existing configuration is acceptable.
 
 Full comparison: ${absoluteUrl("/compare/oem-vs-off-the-shelf-abrasive-kits")}
+Chinese: ${absoluteUrl("/zh/compare/oem-vs-off-the-shelf-abrasive-kits")}
 
 ### Automotive polishing kits
 
@@ -111,6 +113,7 @@ working area and cut-to-finish sequence. Product and packaging samples should be
 before production. The site does not claim one universal finish result.
 
 Industry solution: ${absoluteUrl("/solutions/automotive-polishing-kits")}
+Chinese: ${absoluteUrl("/zh/solutions/automotive-polishing-kits")}
 
 ## 5. Application planning
 

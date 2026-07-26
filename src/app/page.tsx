@@ -91,7 +91,7 @@ export default function Home() {
       desc: "Custom accessory configurations, buyer-supplied barcode data, instruction sheets, and marketplace-oriented polybag or color-box packaging.",
       link: "/oem-private-label",
       badge: "Concept Preview",
-      img: "/images/oem-abrasive-packaging-concept-v2.jpg",
+      img: "/images/oem-abrasive-packaging-concept-v2.webp",
       concept: true,
       ctaText: "Configure Custom Packaging Specs",
     },
@@ -424,7 +424,7 @@ export default function Home() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/oem-abrasive-packaging-concept-v2.jpg"
+                  src="/images/oem-abrasive-packaging-concept-v2.webp"
                   sizes="(min-width: 1024px) 36vw, 92vw"
                   quality={68}
                   alt="AI-generated unbranded private-label abrasive packaging concept"

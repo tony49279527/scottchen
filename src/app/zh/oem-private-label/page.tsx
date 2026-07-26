@@ -199,7 +199,7 @@ export default function ChineseOEMPrivateLabel() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/oem-abrasive-packaging-concept-v2.jpg"
+                  src="/images/oem-abrasive-packaging-concept-v2.webp"
                   alt="AI 生成的无品牌磨具私牌包装概念图"
                   className="object-cover w-full h-56 opacity-90"
                 />

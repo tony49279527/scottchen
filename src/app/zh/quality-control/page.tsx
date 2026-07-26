@@ -192,7 +192,7 @@ export default function ChineseQualityControl() {
                   height={1024}
                   loading="lazy"
                   decoding="async"
-                  src="/images/qc-evidence-planning-concept-v2.jpg"
+                  src="/images/qc-evidence-planning-concept-v2.webp"
                   alt="AI 生成的磨料磨具质量证据规划概念图"
                   className="object-cover w-full h-56 opacity-90"
                 />
