@@ -296,7 +296,7 @@ export default function SandingDiscsPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+                  <Link href="/contact?from=%2Fsanding-discs" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                     Discuss Your Sanding Disc OEM Project
                   </Link>
                 </div>
@@ -347,7 +347,7 @@ export default function SandingDiscsPage() {
                   <div><span className="text-industry-slate-500 block">Documentation:</span><span className="text-white font-bold">Confirmed for quoted SKU and market</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
-                  <Link href="/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
+                  <Link href="/sample-kit?from=%2Fsanding-discs" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
                     Request Sample Kit
                   </Link>
                 </div>
@@ -364,6 +364,20 @@ export default function SandingDiscsPage() {
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Sanding Disc Assortment Kits</Link></li>
                   <li><Link href="/buffing-wheels" className="text-industry-orange hover:underline">Buffing Wheels</Link></li>
                   <li><Link href="/wholesale-abrasives" className="text-industry-orange hover:underline">Wholesale Abrasives Program</Link></li>
+                </ul>
+              </div>
+
+              <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
+                <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
+                  Buyer Decision Guides
+                </h3>
+                <p className="text-xs leading-relaxed text-industry-slate-400">
+                  Use these guides to align material selection, supplier checks and RFQ inputs before evaluating a sanding-disc sample.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/resources/abrasive-material-selection-guide" className="font-bold text-industry-orange hover:underline">Abrasive Material Selection Guide</Link></li>
+                  <li><Link href="/resources/oem-abrasive-supplier-evaluation" className="text-industry-orange hover:underline">OEM Abrasive Supplier Evaluation</Link></li>
+                  <li><Link href="/resources/abrasive-sourcing-checklist" className="text-industry-orange hover:underline">Abrasive Sourcing Checklist</Link></li>
                 </ul>
               </div>
             </div>

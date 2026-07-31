@@ -287,7 +287,7 @@ export default function FlapDiscsPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+                  <Link href="/contact?from=%2Fflap-discs" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                     Request OEM Flap Disc Quote
                   </Link>
                 </div>
@@ -339,7 +339,7 @@ export default function FlapDiscsPage() {
                   <div><span className="text-industry-slate-500 block">Packaging:</span><span className="text-white font-bold">Shrink wrap, color boxes, bulk cartons</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
-                  <Link href="/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
+                  <Link href="/sample-kit?from=%2Fflap-discs" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
                     Request Sample Discs
                   </Link>
                 </div>
@@ -357,6 +357,20 @@ export default function FlapDiscsPage() {
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Abrasive Kits</Link></li>
                   <li><Link href="/buffing-wheels" className="text-industry-orange hover:underline">Buffing Wheels</Link></li>
                   <li><Link href="/wholesale-abrasives" className="text-industry-orange hover:underline">Wholesale Abrasives Program</Link></li>
+                </ul>
+              </div>
+
+              <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
+                <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
+                  Procurement Decision Guides
+                </h3>
+                <p className="text-xs leading-relaxed text-industry-slate-400">
+                  Confirm the product construction, supplier records and target-market inputs before comparing Type 27 or Type 29 samples.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/resources/flap-disc-rfq-guide" className="font-bold text-industry-orange hover:underline">Flap Disc RFQ Guide</Link></li>
+                  <li><Link href="/resources/oem-abrasive-supplier-evaluation" className="text-industry-orange hover:underline">OEM Abrasive Supplier Evaluation</Link></li>
+                  <li><Link href="/resources/abrasive-sourcing-checklist" className="text-industry-orange hover:underline">Abrasive Sourcing Checklist</Link></li>
                 </ul>
               </div>
             </div>

@@ -23,6 +23,33 @@ export default function WholesaleAbrasivesPage() {
     { name: "Abrasive Kits", link: "/abrasive-kits", desc: "Buffing, sanding, polishing and drill-accessory kit concepts quoted by BOM and packaging scope" },
   ];
 
+  const buyerPaths = [
+    {
+      buyer: "Distributor or MRO Supplier",
+      startingPoint: "Build a replenishable category range",
+      prepare: "Target product families, buyer segment, projected SKU mix and delivery region",
+      review: "SKU scope, pack format, replenishment assumptions and buyer-facing documents",
+    },
+    {
+      buyer: "Hardware or Retail Buyer",
+      startingPoint: "Prepare a retail-ready abrasive assortment",
+      prepare: "Target sizes and grits, pack count, retail channel, artwork and barcode owner",
+      review: "Approved artwork, warnings, labels, pack-out and channel acceptance inputs",
+    },
+    {
+      buyer: "Private-Label Seller",
+      startingPoint: "Compare a branded SKU or mixed-kit proposal",
+      prepare: "Product BOM, target market, branding files, quantities and launch requirements",
+      review: "Component sources, private-label scope, sample plan and written commercial terms",
+    },
+    {
+      buyer: "Industrial End User",
+      startingPoint: "Evaluate an abrasive against an application",
+      prepare: "Workpiece, tool or interface, current product, acceptance criteria and usage conditions",
+      review: "Exact SKU specification, representative sample and agreed evaluation method",
+    },
+  ];
+
   const faqs = [
     {
       q: "Who is eligible for a wholesale abrasive tools account?",
@@ -65,10 +92,10 @@ export default function WholesaleAbrasivesPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href="/contact?from=%2Fwholesale-abrasives" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               Request Wholesale Quote
             </Link>
-            <Link href="/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href="/sample-kit?from=%2Fwholesale-abrasives" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               Request Product Samples
             </Link>
           </div>
@@ -139,6 +166,36 @@ export default function WholesaleAbrasivesPage() {
           </div>
 
           <div className="space-y-6">
+            <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Choose a Starting Path</span>
+            <h2 className="text-2xl font-extrabold text-white">What to Prepare Before Requesting Wholesale Abrasives</h2>
+            <p className="max-w-3xl text-sm leading-relaxed text-industry-slate-300">
+              A wholesale inquiry is easier to compare when the buyer&apos;s intended channel and the product decision are visible from the start. Use the path below to prepare a scoped RFQ; the final source, availability and terms are confirmed for the quoted SKU.
+            </p>
+            <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
+              <table className="min-w-[880px] w-full divide-y divide-industry-slate-850 text-left text-sm">
+                <thead className="bg-industry-slate-900 text-xs uppercase tracking-wider text-industry-slate-400">
+                  <tr>
+                    <th className="px-5 py-4 font-semibold">Buyer type</th>
+                    <th className="px-5 py-4 font-semibold">Start with</th>
+                    <th className="px-5 py-4 font-semibold">Prepare for the RFQ</th>
+                    <th className="px-5 py-4 font-semibold">Confirm in writing</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-industry-slate-850 text-industry-slate-300">
+                  {buyerPaths.map((path) => (
+                    <tr key={path.buyer} className="align-top">
+                      <th className="px-5 py-5 font-bold text-white">{path.buyer}</th>
+                      <td className="px-5 py-5 leading-relaxed">{path.startingPoint}</td>
+                      <td className="px-5 py-5 leading-relaxed">{path.prepare}</td>
+                      <td className="px-5 py-5 leading-relaxed">{path.review}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="space-y-6">
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">Product Categories</span>
             <h2 className="text-2xl font-extrabold text-white">Wholesale Product Categories</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -152,6 +209,32 @@ export default function WholesaleAbrasivesPage() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {[
+              {
+                title: "Supplier Evaluation Guide",
+                desc: "Use a structured checklist to compare supplier identity, specification control, samples and written commitments.",
+                href: "/resources/oem-abrasive-supplier-evaluation",
+              },
+              {
+                title: "Abrasive Sourcing Checklist",
+                desc: "Prepare product, packaging, inspection and logistics inputs before asking suppliers to quote.",
+                href: "/resources/abrasive-sourcing-checklist",
+              },
+              {
+                title: "Material Selection Guide",
+                desc: "Review grain, backing and application questions before narrowing a product family or sample plan.",
+                href: "/resources/abrasive-material-selection-guide",
+              },
+            ].map((resource) => (
+              <Link key={resource.href} href={resource.href} className="glass-panel block rounded-lg border border-industry-slate-800 p-6 transition-colors hover:border-industry-orange">
+                <h3 className="text-base font-bold text-industry-orange">{resource.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-industry-slate-400">{resource.desc}</p>
+                <span className="mt-4 inline-flex text-xs font-bold text-white underline underline-offset-4">Open buyer guide</span>
+              </Link>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -271,7 +354,7 @@ export default function WholesaleAbrasivesPage() {
               ))}
             </div>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+              <Link href="/contact?from=%2Fwholesale-abrasives" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                 Submit Wholesale RFQ
               </Link>
             </div>
