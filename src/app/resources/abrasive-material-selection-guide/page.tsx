@@ -98,7 +98,7 @@ export default function AbrasiveMaterialSelectionGuide() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>Published by SCOTTCHEN sourcing team</span>
-            <span>Technical references reviewed 28 June 2026</span>
+            <span>Technical references reviewed {SITE_UPDATED}</span>
           </div>
         </div>
       </section>

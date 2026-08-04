@@ -98,7 +98,7 @@ export default function ChineseAbrasiveMaterialSelectionGuide() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>发布：SCOTTCHEN 采购内容团队</span>
-            <span>技术参考复核：2026 年 6 月 28 日</span>
+            <span>技术参考复核：{SITE_UPDATED}</span>
           </div>
         </div>
       </section>

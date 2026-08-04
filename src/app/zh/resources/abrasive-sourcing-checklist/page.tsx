@@ -125,7 +125,7 @@ export default function ChineseAbrasiveSourcingChecklist() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>SCOTTCHEN 采购团队发布</span>
-            <span>2026 年 6 月 28 日复核</span>
+            <span>复核日期：{SITE_UPDATED}</span>
           </div>
         </div>
       </section>
