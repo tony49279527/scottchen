@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
@@ -194,13 +195,15 @@ export default function ChineseOEMPrivateLabel() {
             <div className="lg:col-span-4 space-y-6">
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/oem-abrasive-packaging-concept-v2.webp"
                   alt="AI 生成的无品牌磨具私牌包装概念图"
+                  sizes="(min-width: 1024px) 40vw, 92vw"
+                  quality={68}
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />

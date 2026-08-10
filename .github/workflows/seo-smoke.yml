@@ -17,5 +17,10 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Run static SEO checks
+        run: node scripts/seo-static-check.mjs
+
       - name: Check production SEO basics
         run: node scripts/seo-smoke-check.mjs
+        env:
+          SEO_SMOKE_FETCH_TIMEOUT_MS: "20000"

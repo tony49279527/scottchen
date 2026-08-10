@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -47,6 +48,7 @@ const faqs = [
 ] as const;
 
 export default function ChineseOemVsStockAbrasiveKitsPage() {
+  const reviewedAt = pageDateForPath("/zh/compare/oem-vs-off-the-shelf-abrasive-kits") ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -57,7 +59,7 @@ export default function ChineseOemVsStockAbrasiveKitsPage() {
         name: "OEM 定制磨具套装 vs 现货套装对比",
         description: "面向 B2B 买家的 OEM 定制与现货磨具配件套装对比页。",
         inLanguage: "zh-CN",
-        dateModified: SITE_UPDATED,
+        dateModified: reviewedAt,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
       },
@@ -85,7 +87,7 @@ export default function ChineseOemVsStockAbrasiveKitsPage() {
             需要可控品牌与可重复组合时选 OEM；不需要定制、只需低量快速验证时选现货套装。
           </p>
           <p className="mt-4 text-sm text-industry-slate-500">
-            复核日期：{SITE_UPDATED}。单价与 MOQ 仅以注明日期的书面报价为准。
+            复核日期：{reviewedAt}。单价与 MOQ 仅以注明日期的书面报价为准。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/zh/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">

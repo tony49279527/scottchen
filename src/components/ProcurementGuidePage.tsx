@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export interface ProcurementGuideData {
   path: string;
   language: "en" | "zh-CN";
+  publishedAt?: string;
   eyebrow: string;
   title: string;
   intro: string;
@@ -22,6 +24,8 @@ export interface ProcurementGuideData {
 
 export default function ProcurementGuidePage({ data }: { data: ProcurementGuideData }) {
   const isZh = data.language === "zh-CN";
+  const publishedAt = data.publishedAt ?? SITE_UPDATED;
+  const reviewedAt = pageDateForPath(data.path) ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -32,8 +36,8 @@ export default function ProcurementGuidePage({ data }: { data: ProcurementGuideD
         description: data.intro,
         inLanguage: data.language,
         mainEntityOfPage: absoluteUrl(data.path),
-        datePublished: SITE_UPDATED,
-        dateModified: SITE_UPDATED,
+        datePublished: publishedAt,
+        dateModified: reviewedAt,
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") },
       },
@@ -73,7 +77,7 @@ export default function ProcurementGuidePage({ data }: { data: ProcurementGuideD
             {data.intro}
           </p>
           <div className="mt-6 text-xs text-industry-slate-400">
-            {isZh ? `复核日期：${SITE_UPDATED}` : `Reviewed ${SITE_UPDATED}`}
+            {isZh ? `复核日期：${reviewedAt}` : `Reviewed ${reviewedAt}`}
           </div>
         </div>
       </section>

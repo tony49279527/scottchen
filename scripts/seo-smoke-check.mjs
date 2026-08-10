@@ -138,6 +138,18 @@ function fetchUrlFor(canonicalUrl) {
   return new URL(`${parsed.pathname}${parsed.search}`, fetchOrigin).toString();
 }
 
+function counterpartPath(pathname, target) {
+  if (target === "zh") {
+    return pathname === "/" ? "/zh" : `/zh${pathname}`;
+  }
+
+  return pathname.replace(/^\/zh(?=\/|$)/, "") || "/";
+}
+
+function normalizeHref(href) {
+  return new URL(href, siteUrl).toString();
+}
+
 function getAttr(tag, attrName) {
   const match = tag.match(new RegExp(`${attrName}\\s*=\\s*("[^"]*"|'[^']*'|[^\\s>]+)`, "i"));
   if (!match) {
@@ -160,10 +172,12 @@ function extractMetadata(html) {
     decodeHtmlText(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "")
       .replace(/\s+/g, " ")
       .trim();
+  const htmlLang = (html.match(/<html\b[^>]*\blang\s*=\s*("[^"]*"|'[^']*')/i)?.[1] || "").replace(/['"]/g, "");
 
   let description = "";
   let canonical = "";
   let robotsNoindex = false;
+  const hreflangLinks = [];
 
   for (const metaMatch of html.matchAll(/<meta\b[^>]*>/gi)) {
     const tag = metaMatch[0];
@@ -182,12 +196,19 @@ function extractMetadata(html) {
     const tag = linkMatch[0];
     const rel = getAttr(tag, "rel");
     if (hasToken(rel, "canonical")) {
-      canonical = getAttr(tag, "href");
-      break;
+      if (!canonical) {
+        canonical = getAttr(tag, "href");
+      }
+    } else if (hasToken(rel, "alternate")) {
+      const hreflang = getAttr(tag, "hreflang").toLowerCase();
+      const href = getAttr(tag, "href");
+      if (hreflang && href) {
+        hreflangLinks.push({ hreflang, href });
+      }
     }
   }
 
-  return { title, description, canonical, robotsNoindex };
+  return { title, description, canonical, robotsNoindex, htmlLang, hreflangLinks };
 }
 
 function extractImageUrls(html, pageUrl) {
@@ -319,9 +340,39 @@ if (uniqueUrls.size !== urls.length) {
 }
 
 const issues = [];
+const sitemapLastmods = new Set();
+const missingLastmodUrls = [];
+
+for (const block of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+  const loc = decodeXmlText(block[1].match(/<loc>(.*?)<\/loc>/)?.[1]?.trim() || "");
+  const lastmod = decodeXmlText(block[1].match(/<lastmod>(.*?)<\/lastmod>/)?.[1]?.trim() || "");
+
+  if (loc && !lastmod) {
+    missingLastmodUrls.push(loc);
+  }
+  if (lastmod) {
+    sitemapLastmods.add(lastmod.slice(0, 10));
+  }
+}
+
+if (missingLastmodUrls.length) {
+  issues.push({
+    issue: "Sitemap URL missing lastmod",
+    urls: missingLastmodUrls,
+  });
+}
+
+if (sitemapLastmods.size < 2) {
+  issues.push({
+    issue: "Sitemap lastmod dates are not page-level",
+    uniqueLastmodDates: sitemapLastmods.size,
+  });
+}
+
 let htmlPageCount = 0;
 let checkedImageCount = 0;
 const assetCheckCache = new Map();
+const pageMetadata = new Map();
 
 for (const url of urls) {
   const fetchUrl = fetchUrlFor(url);
@@ -340,6 +391,7 @@ for (const url of urls) {
     htmlPageCount += 1;
     const html = await response.text();
     const metadata = extractMetadata(html);
+    pageMetadata.set(url, metadata);
     canonical = metadata.canonical;
     robotsNoindex = metadata.robotsNoindex;
 
@@ -385,7 +437,7 @@ for (const url of urls) {
     response.headers.get("location") ||
     (!ignoreFetchNoindexHeader && xRobotsTag.toLowerCase().includes("noindex")) ||
     robotsNoindex ||
-    (canonical && canonical !== url)
+    (canonical && normalizeHref(canonical) !== normalizeHref(url))
   ) {
     issues.push({
       url,
@@ -396,6 +448,60 @@ for (const url of urls) {
       xRobotsTag,
       canonical,
       robotsNoindex,
+    });
+  }
+}
+
+for (const [url, metadata] of pageMetadata) {
+  const pathname = new URL(url).pathname;
+  const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+  const expectedLang = isZh ? "zh-CN" : "en";
+  const enLink = metadata.hreflangLinks.find((link) => link.hreflang === "en");
+  const zhLink = metadata.hreflangLinks.find((link) => link.hreflang === "zh-cn");
+  const xDefaultLink = metadata.hreflangLinks.find((link) => link.hreflang === "x-default");
+  const expectedEnUrl = isZh ? normalizeHref(counterpartPath(pathname, "en")) : normalizeHref(url);
+  const expectedZhUrl = isZh ? normalizeHref(url) : normalizeHref(counterpartPath(pathname, "zh"));
+
+  if (metadata.htmlLang && metadata.htmlLang !== expectedLang) {
+    issues.push({
+      url,
+      issue: "html lang does not match URL locale",
+      expectedLang,
+      actualLang: metadata.htmlLang,
+    });
+  }
+
+  if (!enLink || !zhLink) {
+    issues.push({
+      url,
+      issue: "Missing reciprocal hreflang en/zh-CN links",
+    });
+  } else {
+    if (normalizeHref(enLink.href) !== expectedEnUrl) {
+      issues.push({
+        url,
+        issue: "hreflang en does not point to expected English URL",
+        expected: expectedEnUrl,
+        actual: normalizeHref(enLink.href),
+      });
+    }
+
+    if (normalizeHref(zhLink.href) !== expectedZhUrl) {
+      issues.push({
+        url,
+        issue: "hreflang zh-CN does not point to expected Chinese URL",
+        expected: expectedZhUrl,
+        actual: normalizeHref(zhLink.href),
+      });
+    }
+  }
+
+  if (!isZh && (!xDefaultLink || normalizeHref(xDefaultLink.href) !== expectedEnUrl)) {
+    issues.push({
+      url,
+      issue: "English page is missing x-default hreflang",
+      expected: expectedEnUrl,
+      actual: xDefaultLink ? normalizeHref(xDefaultLink.href) : "",
     });
   }
 }

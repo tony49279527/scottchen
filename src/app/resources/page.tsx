@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
@@ -88,7 +89,7 @@ export default function ResourcesHub() {
         description:
           "Buyer guides for abrasive supplier evaluation, RFQ preparation, material selection and SCOTTCHEN verification.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/resources") ?? SITE_UPDATED,
         publisher: { "@id": absoluteUrl("/#organization") },
       },
       {
@@ -129,7 +130,7 @@ export default function ResourcesHub() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>Maintained by SCOTTCHEN sourcing team</span>
-            <span>Reviewed {SITE_UPDATED}</span>
+            <span>Reviewed {pageDateForPath("/resources") ?? SITE_UPDATED}</span>
           </div>
         </div>
       </section>

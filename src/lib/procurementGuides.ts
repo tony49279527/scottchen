@@ -3,6 +3,7 @@ import type { ProcurementGuideData } from "@/components/ProcurementGuidePage";
 export const flapDiscGuide = {
   path: "/resources/flap-disc-rfq-guide",
   language: "en",
+  publishedAt: "2026-07-15",
   eyebrow: "Flap Disc RFQ Guide",
   title: "How to Write a Comparable Flap Disc RFQ",
   intro: "Define the disc construction, target material, operating limits, sample test and evidence needed so suppliers quote the same product rather than visually similar alternatives.",
@@ -46,6 +47,7 @@ export const flapDiscGuide = {
 export const flapDiscGuideZh = {
   path: "/zh/resources/flap-disc-rfq-guide",
   language: "zh-CN",
+  publishedAt: "2026-07-15",
   eyebrow: "百叶片 RFQ 指南",
   title: "如何编写可比较的百叶片询价单",
   intro: "写清百叶片结构、目标材料、使用限制、样品测试和证据要求，让不同供应商报价的是同一产品，而不是外观相似的替代品。",
@@ -73,6 +75,7 @@ export const flapDiscGuideZh = {
 export const sandingBeltGuide = {
   path: "/resources/sanding-belt-rfq-guide",
   language: "en",
+  publishedAt: "2026-07-15",
   eyebrow: "Sanding Belt RFQ Guide",
   title: "Sanding Belt RFQ Guide: Size, Joint, Grain and Sample Tests",
   intro: "Specify the machine, belt dimensions, grain, backing, joint and application before comparing sanding-belt samples, prices or lead times.",
@@ -100,6 +103,7 @@ export const sandingBeltGuide = {
 export const sandingBeltGuideZh = {
   path: "/zh/resources/sanding-belt-rfq-guide",
   language: "zh-CN",
+  publishedAt: "2026-07-15",
   eyebrow: "砂带 RFQ 指南",
   title: "砂带询价指南：尺寸、接头、磨料与样品测试",
   intro: "在比较砂带样品、价格或交期前，先写清设备、砂带尺寸、磨料、布基、接头和实际应用。",
@@ -127,6 +131,7 @@ export const sandingBeltGuideZh = {
 export const cuttingWheelChecklist = {
   path: "/resources/cutting-wheel-compliance-checklist",
   language: "en",
+  publishedAt: "2026-07-15",
   eyebrow: "Cut-Off Wheel Evidence Checklist",
   title: "Cutting Wheel Compliance and Safety Evidence Checklist",
   intro: "Use this buyer checklist to connect each quoted cut-off wheel SKU to the applicable market standard, labeled operating limits, test evidence, traceability and approved packaging.",
@@ -154,6 +159,7 @@ export const cuttingWheelChecklist = {
 export const cuttingWheelChecklistZh = {
   path: "/zh/resources/cutting-wheel-compliance-checklist",
   language: "zh-CN",
+  publishedAt: "2026-07-15",
   eyebrow: "切割片安全证据清单",
   title: "切割片合规与安全证据核验清单",
   intro: "把每个报价切割片SKU与目标市场标准、标签使用限制、测试报告、追溯和批准包装逐项对应。",

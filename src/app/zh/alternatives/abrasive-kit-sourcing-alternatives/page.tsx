@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -74,6 +75,7 @@ const faqs = [
 ] as const;
 
 export default function ChineseAbrasiveKitSourcingAlternativesPage() {
+  const reviewedAt = pageDateForPath("/zh/alternatives/abrasive-kit-sourcing-alternatives") ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -84,7 +86,7 @@ export default function ChineseAbrasiveKitSourcingAlternativesPage() {
         name: "磨具套装五种 B2B 采购路径对比",
         description: "面向买家的五种磨具配件套装采购模式对比。",
         inLanguage: "zh-CN",
-        dateModified: SITE_UPDATED,
+        dateModified: reviewedAt,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
       },
@@ -113,7 +115,7 @@ export default function ChineseAbrasiveKitSourcingAlternativesPage() {
             SCOTTCHEN 提供 B2B 采购与 OEM 项目支持；生产来源按报价 SKU 书面确认，不能从本页推断。
           </p>
           <p className="mt-4 text-sm text-industry-slate-500">
-            复核日期：{SITE_UPDATED}。成本与起订量是决策因素，不是公开价目。
+            复核日期：{reviewedAt}。成本与起订量是决策因素，不是公开价目。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/zh/contact" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">

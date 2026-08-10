@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -55,6 +56,7 @@ const faqs = [
 ] as const;
 
 export default function ChineseAutomotivePolishingKitsPage() {
+  const reviewedAt = pageDateForPath("/zh/solutions/automotive-polishing-kits") ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -65,7 +67,7 @@ export default function ChineseAutomotivePolishingKitsPage() {
         name: "汽车后市场贴牌抛光套装方案",
         description: "面向 B2B 的汽车轮毂与金属抛光贴牌套装方案页。",
         inLanguage: "zh-CN",
-        dateModified: SITE_UPDATED,
+        dateModified: reviewedAt,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
       },
@@ -106,7 +108,7 @@ export default function ChineseAutomotivePolishingKitsPage() {
             围绕明确的基材、工具与抛光顺序配置轮毂/金属抛光套装，量产前先批准样品与包装。
           </p>
           <p className="mt-4 text-sm text-industry-slate-500">
-            复核日期：{SITE_UPDATED}。抛光效果仅在买家样品验证后确认。
+            复核日期：{reviewedAt}。抛光效果仅在买家样品验证后确认。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/zh/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">

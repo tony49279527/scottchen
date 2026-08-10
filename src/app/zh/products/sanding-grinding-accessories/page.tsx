@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
@@ -330,13 +331,15 @@ export default function ChineseSandingGrindingAccessories() {
             <div className="lg:col-span-4 space-y-6">
               
               <div className="glass-panel rounded-lg overflow-hidden border border-industry-slate-800 shadow-xl relative">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/sanding_tools.webp"
                   alt="SCOTTCHEN 研磨砂纸配件"
+                  sizes="(min-width: 1024px) 40vw, 92vw"
+                  quality={68}
                   className="object-cover w-full h-56 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
@@ -509,13 +512,15 @@ export default function ChineseSandingGrindingAccessories() {
             ].map((prod) => (
               <div key={prod.asin} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                 <div className="h-40 w-full overflow-hidden relative bg-industry-slate-950 border-b border-industry-slate-850">
-                  <img
+                  <Image
                     width={1024}
                     height={1024}
                     loading="lazy"
                     decoding="async"
                     src={prod.img}
                     alt={prod.title}
+                    sizes="(min-width: 1024px) 20rem, (min-width: 768px) 46vw, 92vw"
+                    quality={68}
                     className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
                   />
                   <span className="absolute top-2 left-2 text-[9px] font-mono bg-industry-orange/20 text-industry-orange border border-industry-orange/30 px-1.5 py-0.5 rounded font-bold">

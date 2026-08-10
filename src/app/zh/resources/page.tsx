@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
@@ -88,7 +89,7 @@ export default function ChineseResourcesHub() {
         description:
           "面向磨料磨具供应商评估、RFQ 准备、选材和 SCOTTCHEN 采购核验的资源中心。",
         inLanguage: "zh-CN",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/zh/resources") ?? SITE_UPDATED,
         publisher: { "@id": absoluteUrl("/#organization") },
       },
       {
@@ -129,7 +130,7 @@ export default function ChineseResourcesHub() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>SCOTTCHEN 采购内容团队维护</span>
-            <span>复核日期：{SITE_UPDATED}</span>
+            <span>复核日期：{pageDateForPath("/zh/resources") ?? SITE_UPDATED}</span>
           </div>
         </div>
       </section>

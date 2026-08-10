@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -67,8 +68,8 @@ export default function ChineseAbrasiveMaterialSelectionGuide() {
     mainEntityOfPage: absoluteUrl("/zh/resources/abrasive-material-selection-guide"),
     author: { "@id": absoluteUrl("/#organization") },
     publisher: { "@id": absoluteUrl("/#organization") },
-    datePublished: SITE_UPDATED,
-    dateModified: SITE_UPDATED,
+    datePublished: "2026-06-29",
+    dateModified: pageDateForPath("/zh/resources/abrasive-material-selection-guide") ?? SITE_UPDATED,
     citation: sources.map((source) => source.href),
     about: ["涂附磨具", "FEPA P 目数", "贴牌采购", "条码质量"],
   };
@@ -98,7 +99,7 @@ export default function ChineseAbrasiveMaterialSelectionGuide() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>发布：SCOTTCHEN 采购内容团队</span>
-            <span>技术参考复核：{SITE_UPDATED}</span>
+            <span>技术参考复核：{pageDateForPath("/zh/resources/abrasive-material-selection-guide") ?? SITE_UPDATED}</span>
           </div>
         </div>
       </section>

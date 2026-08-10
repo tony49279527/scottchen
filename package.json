@@ -8,11 +8,12 @@
     "build": "next build",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "seo:smoke": "node scripts/seo-smoke-check.mjs",
+    "seo:static": "node scripts/seo-static-check.mjs",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^16.2.9",
+    "next": "^16.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

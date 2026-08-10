@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
@@ -46,7 +47,7 @@ export default function SupplierProfile() {
         description:
           "Published B2B scope, contact channel, verification boundary and buyer due-diligence checklist for SCOTTCHEN.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/supplier-profile") ?? SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
         mainEntity: { "@id": absoluteUrl("/#organization") },
@@ -130,7 +131,7 @@ export default function SupplierProfile() {
               that an original currently exists. Verify the written documents before PO placement.
             </p>
             <p className="mt-4 text-xs leading-relaxed text-industry-slate-400">
-              Last reviewed: {SITE_UPDATED}
+              Last reviewed: {pageDateForPath("/supplier-profile") ?? SITE_UPDATED}
             </p>
           </aside>
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RFQForm from "@/components/RFQForm";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
@@ -42,7 +43,7 @@ export default function ChineseContact() {
         description:
           "SCOTTCHEN 面向磨料、砂纸和抛光配件套装的 B2B 询价页面，覆盖贴牌包装、批发采购和 OEM 项目报价。",
         inLanguage: "zh-CN",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/zh/contact") ?? SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
         mainEntity: { "@id": absoluteUrl("/#organization") },

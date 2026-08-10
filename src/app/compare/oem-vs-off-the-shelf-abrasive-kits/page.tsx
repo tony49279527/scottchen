@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -46,6 +47,7 @@ const faqs = [
 ] as const;
 
 export default function OemVsStockAbrasiveKitsPage() {
+  const reviewedAt = pageDateForPath("/compare/oem-vs-off-the-shelf-abrasive-kits") ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -56,7 +58,7 @@ export default function OemVsStockAbrasiveKitsPage() {
         name: "OEM vs Off-the-Shelf Abrasive Kits for B2B",
         description: "A B2B comparison of custom OEM and stock abrasive accessory kits.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: reviewedAt,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
       },
@@ -85,7 +87,7 @@ export default function OemVsStockAbrasiveKitsPage() {
             for faster, lower-volume validation when customization is not required.
           </p>
           <p className="mt-4 text-sm text-industry-slate-500">
-            Reviewed {SITE_UPDATED}. Unit prices and MOQ are confirmed only in a dated written quotation.
+            Reviewed {reviewedAt}. Unit prices and MOQ are confirmed only in a dated written quotation.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">

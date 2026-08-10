@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -54,6 +55,7 @@ const faqs = [
 ] as const;
 
 export default function AutomotivePolishingKitsPage() {
+  const reviewedAt = pageDateForPath("/solutions/automotive-polishing-kits") ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -64,7 +66,7 @@ export default function AutomotivePolishingKitsPage() {
         name: "Automotive Polishing Kits for Aftermarket Brands",
         description: "A B2B private-label solution page for automotive wheel and metal polishing kits.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: reviewedAt,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
       },
@@ -106,7 +108,7 @@ export default function AutomotivePolishingKitsPage() {
             finish sequence, then approve samples and packaging before production.
           </p>
           <p className="mt-4 text-sm text-industry-slate-500">
-            Reviewed {SITE_UPDATED}. Finish results are approved only after buyer sample validation.
+            Reviewed {reviewedAt}. Finish results are approved only after buyer sample validation.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">

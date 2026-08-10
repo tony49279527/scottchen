@@ -119,7 +119,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                 width={1024}
                 height={768}
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                quality={70}
+                quality={72}
                 loading="lazy"
                 src="/images/qc-evidence-planning-concept-v2.webp"
                 alt="磨料质量证据规划概念示意图，非SCOTTCHEN或供应商工厂实拍"

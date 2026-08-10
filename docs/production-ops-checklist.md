@@ -112,5 +112,7 @@ Still useful:
 
 - Replace in-memory inquiry rate limiting with Cloud Armor, API Gateway, or shared storage if spam volume increases.
 - Add real company evidence: registered business name, public address, factory photos, test report samples, certificate numbers and valid dates.
-- Keep `SITE_UPDATED` current only when real content or machine-readable metadata changes.
+- Page-level dates live in `src/lib/pageDates.ts`; update only when real content or machine-readable metadata changes.
+- Keep noindex pages out of sitemap and `llms.txt` links scoped to sitemap or discovery files; `npm run seo:static` checks this.
+- Run `npm run seo:static` before deployment and `SEO_SMOKE_FETCH_TIMEOUT_MS=20000 npm run seo:smoke` after deployment.
 - Run `npm run indexnow` after future production content updates.

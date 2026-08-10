@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RFQForm from "@/components/RFQForm";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
@@ -41,7 +42,7 @@ export default function Contact() {
         description:
           "B2B RFQ page for OEM abrasive, sanding and polishing accessory kits, private-label packaging and wholesale sourcing requests.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/contact") ?? SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
         mainEntity: { "@id": absoluteUrl("/#organization") },

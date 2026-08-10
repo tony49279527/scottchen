@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -43,6 +44,7 @@ const homeFaqs = [
 ] as const;
 
 export default function Home() {
+  const dateModified = pageDateForPath("/") ?? SITE_UPDATED;
   const quoteHref = buildInquiryHref("/", "quote");
   const sampleHref = buildInquiryHref("/", "sample");
   const categories = [
@@ -187,22 +189,14 @@ export default function Home() {
                 </div>
                 
                 <div className="relative aspect-square w-full">
-                  {/* Hero column is hidden below lg; media-scoped preload + eager
-                      loading keep desktop LCP fast without mobile downloads. */}
-                  <link
-                    rel="preload"
-                    as="image"
-                    href="/images/hero_abrasives_kit.webp"
-                    media="(min-width: 1024px)"
-                  />
-                  <img
+                  <Image
                     width={1024}
                     height={1024}
-                    loading="eager"
                     fetchPriority="high"
-                    decoding="async"
                     src="/images/hero_abrasives_kit.webp"
                     alt="SCOTTCHEN Industrial Buffing and Sanding Kit Sourcing"
+                    sizes="(min-width: 1024px) 1024px, 92vw"
+                    quality={72}
                     className="object-cover w-full h-full opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
@@ -685,7 +679,7 @@ export default function Home() {
                 name: "OEM Abrasive, Sanding & Polishing Accessory Kits | SCOTTCHEN",
                 description:
                   "Shanghai-based B2B sourcing support for abrasive accessory kit RFQs, with source, evidence, packaging and commercial terms confirmed per quoted SKU.",
-                dateModified: SITE_UPDATED,
+                dateModified,
                 inLanguage: "en",
                 isPartOf: { "@id": absoluteUrl("/#website") },
                 about: { "@id": absoluteUrl("/#organization") },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
@@ -47,7 +48,7 @@ export default function ChineseSupplierProfile() {
         description:
           "SCOTTCHEN 的 B2B 范围、联系渠道、供应商核验边界和买家尽调清单。",
         inLanguage: "zh-CN",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/zh/supplier-profile") ?? SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
         mainEntity: { "@id": absoluteUrl("/#organization") },
@@ -127,7 +128,7 @@ export default function ChineseSupplierProfile() {
               SCOTTCHEN 是本站使用的产品品牌。正式尽调时，报价必须列明签约主体、生产地点与收款账户；任何证书或验货文件是否可提供，都要按准确 SKU 书面说明，本页不代表现有原件。下单前请核验实际文件、报价与合同。
             </p>
             <p className="mt-4 text-xs leading-relaxed text-industry-slate-400">
-              最近复核：{SITE_UPDATED}
+              最近复核：{pageDateForPath("/zh/supplier-profile") ?? SITE_UPDATED}
             </p>
           </aside>
         </div>

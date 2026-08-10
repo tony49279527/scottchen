@@ -317,7 +317,7 @@ export default function FlapDiscsPage() {
                   width={1024}
                   height={1024}
                   sizes="(min-width: 1024px) 33vw, 100vw"
-                  quality={70}
+                  quality={72}
                   loading="lazy"
                   src="/images/fiber_discs.webp"
                   alt="SCOTTCHEN flap disc sourcing and wholesale project support"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
@@ -83,13 +84,15 @@ export default function ApplicationsOverview() {
             
             <div className="lg:col-span-5 hidden lg:block">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
-                <img
+                <Image
                   width={1024}
                   height={1024}
                   loading="lazy"
                   decoding="async"
                   src="/images/applications_banner.webp"
                   alt="Industrial finishing application scenarios"
+                  sizes="(min-width: 1024px) 40vw, 92vw"
+                  quality={68}
                   className="object-cover w-full h-48 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />

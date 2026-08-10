@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -97,7 +98,7 @@ export default function ChineseAbrasiveSourcingChecklist() {
     author: { "@id": absoluteUrl("/#organization") },
     publisher: { "@id": absoluteUrl("/#organization") },
     datePublished: "2026-06-27",
-    dateModified: SITE_UPDATED,
+    dateModified: pageDateForPath("/zh/resources/abrasive-sourcing-checklist") ?? SITE_UPDATED,
   };
 
   return (
@@ -125,7 +126,7 @@ export default function ChineseAbrasiveSourcingChecklist() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>SCOTTCHEN 采购团队发布</span>
-            <span>复核日期：{SITE_UPDATED}</span>
+            <span>复核日期：{pageDateForPath("/zh/resources/abrasive-sourcing-checklist") ?? SITE_UPDATED}</span>
           </div>
         </div>
       </section>

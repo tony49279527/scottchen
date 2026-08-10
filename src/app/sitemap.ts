@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl, SITE_UPDATED, SITE_URL } from "@/lib/site";
-
-const LAST_MODIFIED = new Date(SITE_UPDATED);
+import { pageDateForPath } from "@/lib/pageDates";
+import { absoluteUrl, SITE_URL } from "@/lib/site";
 
 const localizedRoutes = [
   { en: "/", zh: "/zh", priority: 1.0, changefreq: "weekly" as const },
@@ -144,6 +143,11 @@ const utilityRoutes = [
 
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
 
+function lastModifiedFor(path: string): Date | undefined {
+  const date = pageDateForPath(path);
+  return date ? new Date(date) : undefined;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const localizedEntries = localizedRoutes.flatMap(({ en, zh, priority, changefreq }) => {
     const languages = {
@@ -154,7 +158,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return [en, zh].map((p) => ({
       url: sitemapUrl(p),
-      lastModified: LAST_MODIFIED,
+      lastModified: lastModifiedFor(p),
       changeFrequency: changefreq,
       priority,
       alternates: { languages },
@@ -165,7 +169,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localizedEntries,
     ...utilityRoutes.map(({ path: p, priority, changefreq }) => ({
       url: absoluteUrl(p),
-      lastModified: LAST_MODIFIED,
+      lastModified: lastModifiedFor(p),
       changeFrequency: changefreq,
       priority,
     })),

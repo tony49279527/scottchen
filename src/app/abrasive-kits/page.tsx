@@ -251,7 +251,7 @@ export default function AbrasiveKitsPage() {
                   width={1024}
                   height={1024}
                   sizes="(min-width: 1024px) 33vw, 100vw"
-                  quality={70}
+                  quality={72}
                   loading="lazy"
                   src="/images/hero_abrasives_kit.webp"
                   alt="SCOTTCHEN Abrasive Kits and Polishing Kits Wholesale"

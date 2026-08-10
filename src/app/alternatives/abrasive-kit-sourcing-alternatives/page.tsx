@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
@@ -73,6 +74,7 @@ const faqs = [
 ] as const;
 
 export default function AbrasiveKitSourcingAlternativesPage() {
+  const reviewedAt = pageDateForPath("/alternatives/abrasive-kit-sourcing-alternatives") ?? SITE_UPDATED;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -83,7 +85,7 @@ export default function AbrasiveKitSourcingAlternativesPage() {
         name: "Abrasive Kit Sourcing Alternatives for B2B",
         description: "A buyer comparison of five abrasive accessory kit sourcing models.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: reviewedAt,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
       },
@@ -114,7 +116,7 @@ export default function AbrasiveKitSourcingAlternativesPage() {
             confirmed per quoted SKU and is not inferred from this page.
           </p>
           <p className="mt-4 text-sm text-industry-slate-500">
-            Reviewed {SITE_UPDATED}. Cost and MOQ figures are decision factors, not published price lists.
+            Reviewed {reviewedAt}. Cost and MOQ figures are decision factors, not published price lists.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/contact" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">

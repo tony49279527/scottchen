@@ -75,15 +75,19 @@ UV_NO_PROGRESS=1 uv run --with reportlab --with pillow python scripts/build_cata
 
 Use `npm run typecheck` for a fast TypeScript pass.
 
+Run `npm run seo:static` before deployment to verify the sitemap/date model,
+EN/ZH language pairs, route files, distinct page-level dates, metadata lengths,
+metadata path/alternatePath consistency, noindex/sitemap boundaries, `llms.txt` link
+coverage, local images, and `next/image` attributes.
+
 Webhook payloads now include contact fields, inquiry fields, `utm_*`, `referrer`, `landingPage`, `locale`, `clientIp`, `userAgent`, `submittedAt`, `leadScore`, and `leadTier`. Backup webhook payloads also include `deliveryRole=backup` and `primaryDelivery`.
 
 Run `npm run indexnow` after a production content update to submit sitemap URLs
 to IndexNow. The hosted key file is available at
 `https://www.scottchentools.com/bba16f0343d10f111540909669eb16cc.txt`.
 
-Run `npm run seo:smoke` to verify production robots.txt, sitemap.xml,
-IndexNow key file, URL status codes, noindex state, and canonical consistency.
-GitHub Actions also runs this check daily.
+Run `SEO_SMOKE_FETCH_TIMEOUT_MS=20000 npm run seo:smoke` after deployment to verify production robots.txt, sitemap.xml, IndexNow key file, URL status codes, noindex state, canonical consistency, reciprocal hreflang, `html lang`, and sitemap `lastmod`.
+GitHub Actions runs the static SEO checks and production smoke check daily.
 
 ### Vercel deployment
 

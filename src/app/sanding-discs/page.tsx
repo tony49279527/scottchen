@@ -326,7 +326,7 @@ export default function SandingDiscsPage() {
                   width={1024}
                   height={1024}
                   sizes="(min-width: 1024px) 33vw, 100vw"
-                  quality={70}
+                  quality={72}
                   loading="lazy"
                   src="/images/sanding_screens.webp"
                   alt="SCOTTCHEN Sanding Discs Wholesale"

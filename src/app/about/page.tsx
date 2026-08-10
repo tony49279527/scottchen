@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
   absoluteUrl,
@@ -47,7 +48,7 @@ export default function AboutPage() {
         description:
           "Company overview for SCOTTCHEN, a Shanghai-based B2B abrasive sourcing and OEM project support team.",
         inLanguage: "en",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/about") ?? SITE_UPDATED,
         isPartOf: { "@id": absoluteUrl("/#website") },
         about: { "@id": absoluteUrl("/#organization") },
         mainEntity: { "@id": absoluteUrl("/#organization") },
@@ -145,7 +146,7 @@ export default function AboutPage() {
                 width={1024}
                 height={1024}
                 sizes="(min-width: 1024px) 36vw, 92vw"
-                quality={70}
+                quality={72}
                 loading="lazy"
                 src="/images/hero_abrasives_kit.webp"
                 alt="SCOTTCHEN abrasive accessory kit product photography"

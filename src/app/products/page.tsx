@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
@@ -219,13 +220,15 @@ export default function ProductsOverview() {
                   {familyGroup.items.map((item) => (
                     <div key={item.name} className="glass-panel rounded-lg overflow-hidden flex flex-col justify-between hover:border-industry-slate-700 transition-colors group">
                       <div className="relative h-48 w-full overflow-hidden border-b border-industry-slate-850 bg-industry-slate-950">
-                        <img
+                        <Image
                           width={1024}
                           height={1024}
                           loading="lazy"
                           decoding="async"
                           src={item.img}
                           alt={item.name}
+                          sizes="(min-width: 1024px) 40vw, 92vw"
+                          quality={68}
                           className="object-cover w-full h-full group-hover:scale-102 transition-transform duration-300 opacity-80"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 to-transparent opacity-60" />

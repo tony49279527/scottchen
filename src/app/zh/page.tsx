@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -39,6 +40,7 @@ const homeFaqs = [
 ] as const;
 
 export default function ChineseHome() {
+  const dateModified = pageDateForPath("/zh") ?? SITE_UPDATED;
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -432,7 +434,7 @@ export default function ChineseHome() {
                 name: "SCOTTCHEN 磨料磨具 B2B 采购与贴牌项目支持",
                 description:
                   "上海 B2B 磨料采购与贴牌项目支持；候选产品来源、证据、包装、条码范围和商业条款按 SKU 书面确认。",
-                dateModified: SITE_UPDATED,
+                dateModified,
                 inLanguage: "zh-CN",
                 isPartOf: { "@id": absoluteUrl("/#website") },
                 about: { "@id": absoluteUrl("/#organization") },

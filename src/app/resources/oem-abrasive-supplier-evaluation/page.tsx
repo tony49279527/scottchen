@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -135,7 +136,7 @@ export default function OemAbrasiveSupplierEvaluation() {
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") },
         datePublished: "2026-06-30",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/resources/oem-abrasive-supplier-evaluation") ?? SITE_UPDATED,
         about: [
           "OEM abrasive supplier evaluation",
           "Buffing wheel manufacturer due diligence",
@@ -187,7 +188,7 @@ export default function OemAbrasiveSupplierEvaluation() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>Published by SCOTTCHEN sourcing team</span>
-            <span>Reviewed {SITE_UPDATED}</span>
+            <span>Reviewed {pageDateForPath("/resources/oem-abrasive-supplier-evaluation") ?? SITE_UPDATED}</span>
           </div>
         </div>
       </section>

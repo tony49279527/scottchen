@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
@@ -121,7 +122,7 @@ export default function ChineseOemAbrasiveSupplierEvaluation() {
         author: { "@id": absoluteUrl("/#organization") },
         publisher: { "@id": absoluteUrl("/#organization") },
         datePublished: "2026-06-30",
-        dateModified: SITE_UPDATED,
+        dateModified: pageDateForPath("/zh/resources/oem-abrasive-supplier-evaluation") ?? SITE_UPDATED,
         about: ["OEM 磨料磨具供应商评估", "抛光轮厂家尽调", "贴牌砂纸套装采购", "B2B RFQ 清单"],
         mentions: decisionFactors.map((item) => item.factor),
       },
@@ -168,7 +169,7 @@ export default function ChineseOemAbrasiveSupplierEvaluation() {
           </p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-industry-slate-400">
             <span>SCOTTCHEN 采购内容团队发布</span>
-            <span>复核日期：{SITE_UPDATED}</span>
+            <span>复核日期：{pageDateForPath("/zh/resources/oem-abrasive-supplier-evaluation") ?? SITE_UPDATED}</span>
           </div>
         </div>
       </section>
