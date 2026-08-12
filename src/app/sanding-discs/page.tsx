@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Sanding Disc Wholesale & OEM Sourcing | SCOTTCHEN",
@@ -90,10 +91,10 @@ export default function SandingDiscsPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href={buildInquiryHref("/sanding-discs", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               Request Quote
             </Link>
-            <Link href="/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href={buildInquiryHref("/sanding-discs", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               Get Samples
             </Link>
           </div>
@@ -296,7 +297,7 @@ export default function SandingDiscsPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Link href="/contact?from=%2Fsanding-discs" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+                  <Link href={buildInquiryHref("/sanding-discs", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                     Discuss Your Sanding Disc OEM Project
                   </Link>
                 </div>
@@ -347,7 +348,7 @@ export default function SandingDiscsPage() {
                   <div><span className="text-industry-slate-500 block">Documentation:</span><span className="text-white font-bold">Confirmed for quoted SKU and market</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
-                  <Link href="/sample-kit?from=%2Fsanding-discs" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
+                  <Link href={buildInquiryHref("/sanding-discs", "sample")} className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
                     Request Sample Kit
                   </Link>
                 </div>

@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "工业棉布轮、气道抛光轮及抛光膏 OEM 采购 | SCOTTCHEN",
@@ -69,13 +70,13 @@ export default function ChineseBuffingPolishingWheels() {
 
             <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
               <Link
-                href="/zh/contact"
+                href={buildInquiryHref("/zh/products/buffing-polishing-wheels", "quote")}
                 className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
               >
                 获取抛光轮定制报价
               </Link>
               <Link
-                href="/zh/sample-kit"
+                href={buildInquiryHref("/zh/products/buffing-polishing-wheels", "sample")}
                 className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
               >
                 申请打样样品包
@@ -140,6 +141,12 @@ export default function ChineseBuffingPolishingWheels() {
             {/* Left Specification details */}
             <div className="lg:col-span-8 space-y-12">
               <div className="space-y-6">
+                <p className="text-sm leading-relaxed text-industry-slate-300">
+                  需要先按采购场景比较结构、样品和报价流程？
+                  <Link href="/zh/buffing-wheels" className="ml-1 font-bold text-industry-orange hover:underline">
+                    查看抛光轮采购指南
+                  </Link>
+                </p>
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
                   产品子类别及 B2B 核心参数
                 </h2>
@@ -341,7 +348,7 @@ export default function ChineseBuffingPolishingWheels() {
 
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link
-                    href="/zh/sample-kit"
+                    href={buildInquiryHref("/zh/products/buffing-polishing-wheels", "sample")}
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
                     在线申请打样物理样品

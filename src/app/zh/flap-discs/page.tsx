@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "百叶片采购与百叶轮批发 OEM 支持 | SCOTTCHEN",
@@ -103,10 +104,10 @@ export default function ZhFlapDiscsPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href={buildInquiryHref("/zh/flap-discs", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               获取报价
             </Link>
-            <Link href="/zh/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href={buildInquiryHref("/zh/flap-discs", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               申请样品
             </Link>
           </div>
@@ -270,7 +271,7 @@ export default function ZhFlapDiscsPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+                  <Link href={buildInquiryHref("/zh/flap-discs", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                     咨询百叶片OEM
                   </Link>
                 </div>
@@ -322,7 +323,7 @@ export default function ZhFlapDiscsPage() {
                   <div><span className="text-industry-slate-500 block">交货期：</span><span className="text-white font-bold">按规格、包装与数量书面报价</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
-                  <Link href="/zh/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
+                  <Link href={buildInquiryHref("/zh/flap-discs", "sample")} className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
                     申请样品测试
                   </Link>
                 </div>

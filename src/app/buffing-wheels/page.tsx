@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Buffing Wheel OEM Sourcing & Wholesale | SCOTTCHEN",
@@ -96,13 +97,13 @@ export default function BuffingWheelsPage() {
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              href="/contact"
+              href={buildInquiryHref("/buffing-wheels", "quote")}
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               Request Quote
             </Link>
             <Link
-              href="/sample-kit"
+              href={buildInquiryHref("/buffing-wheels", "sample")}
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               Get Samples
@@ -318,7 +319,7 @@ export default function BuffingWheelsPage() {
                 </div>
                 <div className="pt-2">
                   <Link
-                    href="/contact"
+                    href={buildInquiryHref("/buffing-wheels", "quote")}
                     className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                   >
                     Discuss Your OEM Project
@@ -387,7 +388,7 @@ export default function BuffingWheelsPage() {
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link
-                    href="/sample-kit"
+                    href={buildInquiryHref("/buffing-wheels", "sample")}
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
                     Request Sample Kit
@@ -400,6 +401,7 @@ export default function BuffingWheelsPage() {
                   Related Categories
                 </h3>
                 <ul className="space-y-2 text-sm">
+                  <li><Link href="/products/buffing-polishing-wheels" className="font-bold text-industry-orange hover:underline">Browse Buffing Wheel Product Specifications</Link></li>
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Buffing &amp; Polishing Kits</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>

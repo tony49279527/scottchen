@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Cotton Buffing Wheel Sourcing | SCOTTCHEN",
@@ -68,13 +69,13 @@ export default function BuffingPolishingWheels() {
 
             <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
               <Link
-                href="/contact"
+                href={buildInquiryHref("/products/buffing-polishing-wheels", "quote")}
                 className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
               >
                 Request Buffing Wheel Quote
               </Link>
               <Link
-                href="/sample-kit"
+                href={buildInquiryHref("/products/buffing-polishing-wheels", "sample")}
                 className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
               >
                 Get Sample Wheel Kit
@@ -167,13 +168,16 @@ export default function BuffingPolishingWheels() {
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
+            <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/buffing-wheels">
+              Open buffing wheel sourcing guide
+            </Link>
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/resources/oem-abrasive-supplier-evaluation">
               Evaluate supplier fit
             </Link>
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/resources/abrasive-sourcing-checklist">
               Open RFQ checklist
             </Link>
-            <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href="/sample-kit">
+            <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href={buildInquiryHref("/products/buffing-polishing-wheels", "sample")}>
               Request sample wheel kit
             </Link>
           </div>
@@ -389,7 +393,7 @@ export default function BuffingPolishingWheels() {
 
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link
-                    href="/sample-kit"
+                    href={buildInquiryHref("/products/buffing-polishing-wheels", "sample")}
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
                     Request Physical Sample Wheel

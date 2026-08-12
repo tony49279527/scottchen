@@ -5,6 +5,7 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "磨具批发与五金分销合作支持 | SCOTTCHEN",
@@ -68,10 +69,10 @@ export default function ZhWholesaleAbrasivesPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href={buildInquiryHref("/zh/wholesale-abrasives", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               提交批发询价
             </Link>
-            <Link href="/zh/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href={buildInquiryHref("/zh/wholesale-abrasives", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               申请产品样品
             </Link>
           </div>
@@ -269,7 +270,7 @@ export default function ZhWholesaleAbrasivesPage() {
               ))}
             </div>
             <div className="pt-4">
-              <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+              <Link href={buildInquiryHref("/zh/wholesale-abrasives", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                 提交批发询价
               </Link>
             </div>
