@@ -364,7 +364,7 @@ export default function ZhSandingDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
                 "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
                 "description": "植绒、背胶、钢纸和网格砂碟OEM采购支持，按磨料、背基、孔型、包装和数量书面报价。",

@@ -393,7 +393,7 @@ export default function SandingDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/sanding-discs#productgroup"),
                 "name": "SCOTTCHEN Sanding Discs",
                 "description": "Wholesale aluminum oxide, zirconia, silicon carbide, ceramic, and mesh sanding discs in hook-and-loop, PSA, fiber, and quick-change types.",

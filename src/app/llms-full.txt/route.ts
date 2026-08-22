@@ -175,6 +175,7 @@ Last content update: ${SITE_UPDATED}
     headers: {
       "Cache-Control": "public, max-age=3600, s-maxage=86400",
       "Content-Type": "text/plain; charset=utf-8",
+      "Vary": "Accept, Accept-Encoding",
     },
   });
 }

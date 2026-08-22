@@ -386,7 +386,7 @@ export default function FlapDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/flap-discs#productgroup"),
                 "name": "SCOTTCHEN Flap Discs",
                 "description": "OEM Type 27 and Type 29 flap discs in zirconia alumina, ceramic, and aluminum oxide on fiberglass backing plates.",

@@ -21,6 +21,11 @@ export function buildOrganizationNode() {
       height: 512,
     },
     image: absoluteUrl("/images/hero_abrasives_kit.webp"),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Shanghai",
+      addressCountry: "CN",
+    },
     slogan: "B2B Abrasive Sourcing & Project Support",
     description:
       "B2B sourcing and private-label support for abrasive, sanding and polishing accessory kits.",

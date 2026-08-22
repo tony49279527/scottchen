@@ -346,7 +346,7 @@ export default function ZhCuttingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
                 "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
                 "description": "金属、不锈钢和超薄树脂切割片OEM采购支持，按SKU、安全证据、包装和数量书面报价。",

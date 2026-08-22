@@ -350,7 +350,7 @@ export default function ZhSandingBeltsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
                 "name": "SCOTTCHEN环形砂带、砂带、砂带套",
                 "description": "环形砂带OEM采购支持，覆盖AO、ZA、Ceramic和SiC磨料，按尺寸、接头、包装与数量书面报价。",

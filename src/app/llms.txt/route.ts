@@ -35,6 +35,13 @@ Full content: ${absoluteUrl("/llms-full.txt")}
    - Zirconia fiber discs, flap discs, cutting wheels and grinding accessories
    - Mixed abrasive accessory kits and dispenser packaging
 
+## When to contact SCOTTCHEN
+
+- Contact SCOTTCHEN when a buyer needs a replacement source for an existing abrasive SKU, a controlled private-label assortment, or a mixed kit rather than a generic product list.
+- Contact SCOTTCHEN when the project needs configuration review, samples, packaging artwork, buyer-supplied barcode data, inspection planning or a written RFQ.
+- Product substitution is handled by comparing the intended substrate, tool interface, abrasive material, backing, dimensions, grit and acceptance criteria; final equivalence requires buyer approval and a dated quotation.
+- Custom and bulk programs can be discussed for approved product configurations, packaging and order quantities. MOQ, lead time, capacity and commercial terms are confirmed per SKU in writing.
+
 ## Key pages
 
 - [Home / core value proposition](${absoluteUrl("/")})
@@ -136,6 +143,7 @@ A: The public site identifies SCOTTCHEN with Shanghai, China and a sales email. 
     headers: {
       "Cache-Control": "public, max-age=3600, s-maxage=86400",
       "Content-Type": "text/plain; charset=utf-8",
+      "Vary": "Accept, Accept-Encoding",
     },
   });
 }

@@ -555,6 +555,16 @@ export default function ChineseBuffingPolishingWheels() {
                 "url": absoluteUrl("/zh/products/buffing-polishing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
                 "isPartOf": { "@id": absoluteUrl("/#website") }
+              },
+              {
+                "@type": "Product",
+                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#product"),
+                "name": "SCOTTCHEN 抛光轮与布轮",
+                "description": "面向 B2B 采购的抛光轮与布轮配置参考；准确材料、尺寸、使用限制、可供范围与商业条款须由带日期的 SKU 报价和批准证据确认。",
+                "url": absoluteUrl("/zh/products/buffing-polishing-wheels"),
+                "image": absoluteUrl("/images/buffing_wheels.webp"),
+                "brand": { "@id": absoluteUrl("/#brand") },
+                "category": "抛光轮与布轮"
               }
             ]
           })

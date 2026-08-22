@@ -387,7 +387,7 @@ export default function SandingBeltsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/sanding-belts#productgroup"),
                 "name": "SCOTTCHEN Sanding Belts & Abrasive Belts",
                 "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",

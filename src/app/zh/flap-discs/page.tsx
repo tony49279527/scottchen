@@ -355,7 +355,7 @@ export default function ZhFlapDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/zh/flap-discs#productgroup"),
                 "name": "SCOTTCHEN百叶片、百叶轮、平面砂布轮",
                 "description": "T27/T29锆刚玉和陶瓷氧化铝百叶片OEM采购支持，按SKU、包装和数量书面报价。",

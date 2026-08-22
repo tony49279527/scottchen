@@ -385,7 +385,7 @@ export default function CuttingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/cutting-wheels#productgroup"),
                 "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
                 "description": "B2B sourcing support for cut-off wheels for metal, stainless steel, cast iron and masonry; reinforcement and compliance evidence are confirmed per SKU.",

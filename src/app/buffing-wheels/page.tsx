@@ -423,7 +423,7 @@ export default function BuffingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/buffing-wheels#productgroup"),
                 "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
                 "description": "Shanghai B2B sourcing and OEM project support for cotton buffing wheels, spiral-stitched wheels, airway buffs, sisal-cotton constructions and polishing compounds, quoted by SKU.",

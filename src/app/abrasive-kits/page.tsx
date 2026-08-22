@@ -313,6 +313,16 @@ export default function AbrasiveKitsPage() {
                 "isPartOf": { "@id": absoluteUrl("/#website") },
                 "about": { "@id": absoluteUrl("/#organization") }
               },
+              {
+                "@type": "Product",
+                "@id": absoluteUrl("/abrasive-kits#product"),
+                "name": "SCOTTCHEN Private-Label Abrasive Kits",
+                "description": "Private-label abrasive and polishing kit sourcing concepts with component, packaging, sample and quotation controls confirmed per project.",
+                "url": absoluteUrl("/abrasive-kits"),
+                "image": absoluteUrl("/images/hero_abrasives_kit.webp"),
+                "brand": { "@id": absoluteUrl("/#brand") },
+                "category": "Private-label abrasive accessory kits"
+              },
               buildFaqPageSchema(faqs),
             ],
           }),

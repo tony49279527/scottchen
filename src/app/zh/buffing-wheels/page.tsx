@@ -365,7 +365,7 @@ export default function ZhBuffingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ProductGroup",
+                "@type": ["ProductGroup", "Product"],
                 "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
                 "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
                 "description": "上海抛光轮OEM采购支持，覆盖抛光布轮、麻布轮、气道轮、抛光磨头和抛光膏，按SKU书面报价。",

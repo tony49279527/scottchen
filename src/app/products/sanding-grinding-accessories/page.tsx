@@ -661,6 +661,16 @@ export default function SandingGrindingAccessories() {
                 "url": absoluteUrl("/products/sanding-grinding-accessories"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
                 "isPartOf": { "@id": absoluteUrl("/#website") }
+              },
+              {
+                "@type": "Product",
+                "@id": absoluteUrl("/products/sanding-grinding-accessories#product"),
+                "name": "SCOTTCHEN Sanding and Grinding Accessories",
+                "description": "Sanding and grinding accessory configurations for B2B sourcing; exact grain, backing, dimensions, operating limits, availability and commercial terms require a dated SKU quotation and approved evidence.",
+                "url": absoluteUrl("/products/sanding-grinding-accessories"),
+                "image": absoluteUrl("/images/sanding_tools.webp"),
+                "brand": { "@id": absoluteUrl("/#brand") },
+                "category": "Sanding and grinding accessories"
               }
             ]
           })

@@ -600,6 +600,16 @@ export default function BuffingPolishingWheels() {
                 "url": absoluteUrl("/products/buffing-polishing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
                 "isPartOf": { "@id": absoluteUrl("/#website") }
+              },
+              {
+                "@type": "Product",
+                "@id": absoluteUrl("/products/buffing-polishing-wheels#product"),
+                "name": "SCOTTCHEN Buffing and Polishing Wheels",
+                "description": "Buffing and polishing wheel configurations for B2B sourcing; exact materials, dimensions, operating limits, availability and commercial terms require a dated SKU quotation and approved evidence.",
+                "url": absoluteUrl("/products/buffing-polishing-wheels"),
+                "image": absoluteUrl("/images/buffing_wheels.webp"),
+                "brand": { "@id": absoluteUrl("/#brand") },
+                "category": "Buffing and polishing wheels"
               }
             ]
           })

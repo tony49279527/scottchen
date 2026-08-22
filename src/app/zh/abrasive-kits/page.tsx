@@ -330,6 +330,17 @@ export default function ZhAbrasiveKitsPage() {
                 isPartOf: { "@id": absoluteUrl("/#website") },
                 about: { "@id": absoluteUrl("/#organization") },
               },
+              {
+                "@type": "Product",
+                "@id": absoluteUrl("/zh/abrasive-kits#product"),
+                name: "SCOTTCHEN 贴牌磨具套装",
+                description:
+                  "用于 B2B 采购规划的贴牌磨具套装场景；组件、BOM、包装、条码范围、MOQ 与交期须由带日期的报价和批准样品确认。",
+                url: absoluteUrl("/zh/abrasive-kits"),
+                image: absoluteUrl("/images/hero_abrasives_kit.webp"),
+                brand: { "@id": absoluteUrl("/#brand") },
+                category: "贴牌磨具套装",
+              },
               buildFaqPageSchema(faqs),
             ],
           }),
