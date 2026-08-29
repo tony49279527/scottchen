@@ -300,7 +300,7 @@ export default function WholesaleAbrasivesPage() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-industry-slate-500 italic">
+              <p className="text-xs text-industry-slate-400 italic">
                 * No generic discount or lead-time promise is made here. Use the dated quotation and approved SKU scope as the commercial source of truth.
               </p>
             </div>
