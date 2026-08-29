@@ -7,6 +7,7 @@ import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Private-Label Abrasive & Polishing Kit Sourcing | SCOTTCHEN",
@@ -96,10 +97,10 @@ export default function AbrasiveKitsPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href={buildInquiryHref("/abrasive-kits", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               Request Quote
             </Link>
-            <Link href="/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href={buildInquiryHref("/abrasive-kits", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               Get Samples
             </Link>
           </div>
@@ -150,6 +151,35 @@ export default function AbrasiveKitsPage() {
                   <p>
                     Kit assembly, inspection and packaging should follow the buyer-approved bill of materials and pack specification. Before production, confirm component identity, quantities, visual checks, label data and carton marks in writing. Marketplace-related items such as buyer-supplied FNSKU labels or warning text can be scoped in the quotation, but current platform acceptance remains the buyer's responsibility.
                   </p>
+                </div>
+              </div>
+
+              <div className="border-y border-industry-slate-800 py-8">
+                <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">RFQ Translation</span>
+                <h2 className="mt-3 text-xl font-extrabold text-white tracking-wide">
+                  Turn an abrasive kit search into a buildable BOM
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-industry-slate-300">
+                  A generic abrasive kit request does not identify a compatible product. Define the workflow and tool, component and grit progression, and the packaging or label scope before comparing a kit quotation or sample.
+                </p>
+                <div className="mt-6 grid gap-5 md:grid-cols-3 text-sm">
+                  <div>
+                    <h3 className="font-bold text-industry-orange">1. Workflow and tool</h3>
+                    <p className="mt-2 leading-relaxed text-industry-slate-400">State the workpiece, substrate, tool interface and intended preparation, cutting or finishing sequence.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-industry-orange">2. Components and progression</h3>
+                    <p className="mt-2 leading-relaxed text-industry-slate-400">List candidate wheel, disc, belt, compound or accessory types, with grit, construction and exact component quantities.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-industry-orange">3. Pack and approval</h3>
+                    <p className="mt-2 leading-relaxed text-industry-slate-400">Specify pack format, buyer-supplied artwork or barcode data, sample checks and the written acceptance record.</p>
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link href="/products/buffing-polishing-wheels" className="text-sm font-bold text-industry-orange hover:underline">Review wheel specification fields</Link>
+                  <Link href="/products/sanding-grinding-accessories" className="text-sm font-bold text-industry-orange hover:underline">Review sanding specification fields</Link>
+                  <Link href="/wholesale-abrasives" className="text-sm font-bold text-industry-orange hover:underline">Review wholesale RFQ scope</Link>
                 </div>
               </div>
 
@@ -221,7 +251,7 @@ export default function AbrasiveKitsPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+                  <Link href={buildInquiryHref("/abrasive-kits", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                     Start Your Private Label Kit Project
                   </Link>
                 </div>
@@ -272,7 +302,7 @@ export default function AbrasiveKitsPage() {
                   <div><span className="text-industry-slate-500 block">Artwork:</span><span className="text-white font-bold">Owner, source, format and fees quoted per project</span></div>
                 </div>
                 <div className="pt-4 border-t border-industry-slate-850">
-                  <Link href="/sample-kit" className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
+                  <Link href={buildInquiryHref("/abrasive-kits", "sample")} className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs">
                     Request Sample Kit
                   </Link>
                 </div>

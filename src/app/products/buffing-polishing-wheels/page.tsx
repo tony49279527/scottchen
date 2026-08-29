@@ -65,6 +65,9 @@ export default function BuffingPolishingWheels() {
               <p className="mt-3 text-base text-industry-slate-400">
                 Sourcing inquiries for stitched or loose wheels, bench-machine and shank-mounted concepts, and compound bars.
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-industry-slate-500">
+                For a cotton buffing wheel RFQ, identify the construction, diameter, ply count, bore or shank, tool, substrate, compound and required pack format before comparing samples or terms.
+              </p>
             </div>
 
             <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
@@ -170,6 +173,9 @@ export default function BuffingPolishingWheels() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/buffing-wheels">
               Open buffing wheel sourcing guide
+            </Link>
+            <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/wholesale-abrasives">
+              Review wholesale sourcing
             </Link>
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/resources/oem-abrasive-supplier-evaluation">
               Evaluate supplier fit

@@ -5,10 +5,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM Sandpaper & Grinding Disc Sourcing | SCOTTCHEN",
-  description: "Source sandpaper sheets, sanding rolls, screens, grinding discs, sanding sticks and dispenser kits with SKU-level source, evidence and quoted terms.",
+  description: "Source sandpaper and grinding paper, sanding rolls, screens, discs, sticks and dispenser kits with SKU-level source, evidence and written terms.",
   path: "/products/sanding-grinding-accessories",
   alternatePath: "/zh/products/sanding-grinding-accessories",
 });
@@ -92,17 +93,20 @@ export default function SandingGrindingAccessories() {
               <p className="mt-3 text-base text-industry-slate-400">
                 Sourcing inquiries for sandpaper, grinding discs, mesh sheets, detail tools and private-label dispenser concepts.
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-industry-slate-500">
+                Buyers may use grinding paper, abrasive paper and sandpaper for different formats. An RFQ should resolve that wording into substrate, grit, backing, dimensions and tool or interface before sample review.
+              </p>
             </div>
 
             <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
               <Link
-                href="/contact"
+                href={buildInquiryHref("/products/sanding-grinding-accessories", "quote")}
                 className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
               >
                 Request Abrasives Quote
               </Link>
               <Link
-                href="/sample-kit"
+                href={buildInquiryHref("/products/sanding-grinding-accessories", "sample")}
                 className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
               >
                 Get Sample Abrasive Kit
@@ -171,7 +175,7 @@ export default function SandingGrindingAccessories() {
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-industry-slate-400">
                 These fields help buyers compare abrasive suppliers and define sample
-                tests for sandpaper, discs, mesh screens and detail tools.
+                tests for sandpaper, grinding paper, discs, mesh screens and detail tools.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
@@ -201,7 +205,13 @@ export default function SandingGrindingAccessories() {
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/resources/abrasive-material-selection-guide">
               Open material guide
             </Link>
-            <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href="/sample-kit">
+            <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/sanding-discs">
+              Compare sanding disc options
+            </Link>
+            <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/wholesale-abrasives">
+              Review wholesale sourcing
+            </Link>
+            <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href={buildInquiryHref("/products/sanding-grinding-accessories", "sample")}>
               Request sample abrasive kit
             </Link>
           </div>
@@ -419,7 +429,7 @@ export default function SandingGrindingAccessories() {
 
                 <div className="pt-4 border-t border-industry-slate-850">
                   <Link
-                    href="/sample-kit"
+                    href={buildInquiryHref("/products/sanding-grinding-accessories", "sample")}
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
                     Request Grit Sample Roll

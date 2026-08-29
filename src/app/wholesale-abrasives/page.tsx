@@ -8,7 +8,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Wholesale Abrasive Tools & Bulk Supplies | SCOTTCHEN",
-  description: "Wholesale abrasive tools and bulk sanding and polishing supplies for distributors, retailers and industrial buyers. Compare SKU scope, samples and quoted terms.",
+  description: "Abrasives wholesale and bulk sourcing for distributors, retailers and industrial buyers. Compare sanding and polishing SKUs, samples and written terms.",
   path: "/wholesale-abrasives",
   alternatePath: "/zh/wholesale-abrasives",
 });
@@ -139,6 +139,9 @@ export default function WholesaleAbrasivesPage() {
                 SCOTTCHEN supports wholesale abrasive sourcing for distributors, retailers, tool brands, e-commerce sellers and industrial buyers. The quotation identifies the product source, SKU specification, packaging, inspection scope, MOQ, lead-time milestones and commercial terms so buyers can compare offers on a like-for-like basis.
               </p>
               <p>
+                For an abrasives wholesale RFQ, identify the product family, intended channel, target market, packaging, quantity and whether sample approval is needed. These inputs keep a bulk request tied to a comparable product and quotation scope.
+              </p>
+              <p>
                 The sourcing workflow can be evaluated for distributors, retailers, industrial suppliers, e-commerce sellers and industrial end-users. Product source, channel packaging, barcode workflow, order quantity and delivery responsibilities are confirmed for the actual SKU rather than inferred from a buyer category.
               </p>
               <p>
@@ -209,6 +212,21 @@ export default function WholesaleAbrasivesPage() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Link href="/products/sanding-grinding-accessories" className="border border-industry-slate-800 p-6 transition-colors hover:border-industry-orange">
+              <h3 className="text-base font-bold text-industry-orange">Sanding and grinding specification catalog</h3>
+              <p className="mt-2 text-xs leading-relaxed text-industry-slate-400">
+                Compare substrate, grit, backing, dimensions and tool-interface fields before requesting a bulk sanding quotation.
+              </p>
+            </Link>
+            <Link href="/products/buffing-polishing-wheels" className="border border-industry-slate-800 p-6 transition-colors hover:border-industry-orange">
+              <h3 className="text-base font-bold text-industry-orange">Buffing and polishing wheel specification catalog</h3>
+              <p className="mt-2 text-xs leading-relaxed text-industry-slate-400">
+                Start a wheel RFQ with construction, size, bore or shank, tool fit, compound pairing and packaging requirements.
+              </p>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">

@@ -7,11 +7,12 @@ import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
 import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Automotive Polishing Kits for Aftermarket Brands | SCOTTCHEN",
   description:
-    "Source private-label automotive polishing kits for wheel and metal restoration. Configure wheels, compounds, adapters, packaging and sample approval.",
+    "Source private-label metal polishing kits for automotive restoration. Configure wheels, compounds, adapters, packaging and sample approval.",
   path: "/solutions/automotive-polishing-kits",
   alternatePath: "/zh/solutions/automotive-polishing-kits",
 });
@@ -107,14 +108,17 @@ export default function AutomotivePolishingKitsPage() {
             Build a wheel and metal polishing kit around a defined substrate, tool and
             finish sequence, then approve samples and packaging before production.
           </p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-industry-slate-400">
+            For metal polishing kits for automotive restoration, specify the part material, coating condition, tool interface, expected sequence and packaging scope. A generic kit request is not enough to validate compatibility.
+          </p>
           <p className="mt-4 text-sm text-industry-slate-500">
             Reviewed {reviewedAt}. Finish results are approved only after buyer sample validation.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/solutions/automotive-polishing-kits", "sample")} className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               Request a sample kit
             </Link>
-            <Link href="/contact" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/solutions/automotive-polishing-kits", "quote")} className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
               Get a written quote
             </Link>
           </div>
@@ -157,6 +161,12 @@ export default function AutomotivePolishingKitsPage() {
               className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white"
             >
               Review wheel options
+            </Link>
+            <Link href="/products/sanding-grinding-accessories" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
+              Review sanding options
+            </Link>
+            <Link href="/abrasive-kits" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
+              Review kit RFQ scope
             </Link>
             <Link href="/quality-control" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
               Plan acceptance checks
