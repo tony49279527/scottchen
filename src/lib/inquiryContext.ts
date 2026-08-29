@@ -49,7 +49,7 @@ const sourceRules: Array<{ pattern: RegExp; context: InquiryContext }> = [
   },
   {
     pattern: /\/products\/sanding-grinding-accessories$/,
-    context: { quoteCategory: "Sanding Discs", sampleCategories: ["Sanding Discs"] },
+    context: { quoteCategory: "", sampleCategories: [] },
   },
   {
     pattern: /\/flap-discs$/,
@@ -64,10 +64,17 @@ const sourceRules: Array<{ pattern: RegExp; context: InquiryContext }> = [
     context: { quoteCategory: "Cutting Wheels", sampleCategories: ["Cutting Wheels"] },
   },
   {
-    pattern: /\/(?:solutions\/automotive-polishing-kits|abrasive-kits)$/,
+    pattern: /\/solutions\/automotive-polishing-kits$/,
     context: {
       quoteCategory: "Polishing Kits",
-      sampleCategories: ["Buffing Wheels", "Compounds"],
+      sampleCategories: ["Buffing Wheels", "Compounds", "Sanding Discs"],
+    },
+  },
+  {
+    pattern: /\/abrasive-kits$/,
+    context: {
+      quoteCategory: "Custom Mixed Kits",
+      sampleCategories: ["Buffing Wheels", "Compounds", "Sanding Discs"],
     },
   },
   {

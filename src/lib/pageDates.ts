@@ -43,7 +43,7 @@ export const PAGE_LAST_MODIFIED: Record<string, string> = {
   "/zh/about": "2026-07-25",
   "/zh/products": "2026-07-25",
   "/zh/products/buffing-polishing-wheels": "2026-08-22",
-  "/zh/products/sanding-grinding-accessories": "2026-08-22",
+  "/zh/products/sanding-grinding-accessories": "2026-08-29",
   "/zh/buffing-wheels": "2026-08-22",
   "/zh/sanding-discs": "2026-08-22",
   "/zh/flap-discs": "2026-08-22",

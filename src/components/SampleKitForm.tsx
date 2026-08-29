@@ -528,7 +528,7 @@ export default function SampleKitForm() {
         {/* Expected annual purchase quantity */}
         <div>
           <label htmlFor="estimatedQuantity" className="block text-sm font-semibold text-industry-slate-300">
-            {isZh ? "年度大货意向采购量" : "Expected Annual Purchase Volume"} <span className="text-industry-orange">*</span>
+            {isZh ? "预估年度采购量（件、包或套）" : "Expected Annual Volume (units, packs or sets)"} <span className="text-industry-orange">*</span>
           </label>
           <select
             id="estimatedQuantity"
@@ -541,18 +541,18 @@ export default function SampleKitForm() {
           >
             {isZh ? (
               <>
-                <option value="">请选择年度柜量...</option>
-                <option value="Small Batch (<1000 Kits/Year)">小批量补充采购 (&lt;1000 套/年)</option>
-                <option value="Medium OEM (1000-5000 Kits/Year)">常规贴牌量 (1000-5000 套/年)</option>
-                <option value="High Volume Container (5000+ Kits/Year)">整柜集中大规模订柜 (5000 套以上/年)</option>
+                <option value="">请选择年度采购量...</option>
+                <option value="Small annual volume (under 1000 units, packs or sets)">小批量（少于 1,000 件、包或套/年）</option>
+                <option value="Medium annual volume (1000-5000 units, packs or sets)">中等采购量（1,000-5,000 件、包或套/年）</option>
+                <option value="High annual volume (5000+ units, packs or sets)">大批量（5,000 件、包或套以上/年）</option>
                 <option value="Testing Phase Sourcing">新项目前期研发评估 (暂不确定)</option>
               </>
             ) : (
               <>
                 <option value="">Select annual estimate...</option>
-                <option value="Small Batch (<1000 Kits/Year)">Small Batch (&lt;1000 Kits/Year)</option>
-                <option value="Medium OEM (1000-5000 Kits/Year)">Medium OEM (1000-5000 Kits/Year)</option>
-                <option value="High Volume Container (5000+ Kits/Year)">High Volume Container (5000+ Kits/Year)</option>
+                <option value="Small annual volume (under 1000 units, packs or sets)">Small annual volume (under 1,000 units, packs or sets)</option>
+                <option value="Medium annual volume (1000-5000 units, packs or sets)">Medium annual volume (1,000-5,000 units, packs or sets)</option>
+                <option value="High annual volume (5000+ units, packs or sets)">High annual volume (5,000+ units, packs or sets)</option>
                 <option value="Testing Phase Sourcing">Testing Phase Sourcing (Unsure yet)</option>
               </>
             )}

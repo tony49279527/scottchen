@@ -134,13 +134,13 @@ export default function SandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Full Grit Spectrum:</strong> Dry/wet sandpaper from coarse P60 to ultra-fine P2500, with dynamic latex paper or tear-resistant cloth backings.</span>
+                    <span className="text-industry-slate-200"><strong>Grit and backing brief:</strong> State the intended grit list, substrate, wet/dry use and requested backing. The exact range and material are confirmed by the quoted source and SKU.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Heavy Duty Discs:</strong> Vulcanized zirconia fiber grinding discs with 7/8&quot; bore holes and center star hubs for standard angle grinders.</span>
+                    <span className="text-industry-slate-200"><strong>Disc-specific RFQ:</strong> For a grinding disc, define the tool, guard, diameter, arbor, grain, backing and labeled operating limit before comparing samples or quotations.</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -148,7 +148,7 @@ export default function SandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>Open Mesh:</strong> Fiberglass screens with silicon carbide coating allow dust to pass through and can reduce loading under suitable operating conditions.</span>
+                    <span className="text-industry-slate-200"><strong>Mesh and extraction setup:</strong> Define the surface, holder, mesh construction, coating, dimensions and extraction arrangement; fit and working results are approved on the representative setup.</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -274,7 +274,7 @@ export default function SandingGrindingAccessories() {
               {/* Technical Specifications Table */}
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Abrasive Specification Table
+                  RFQ Specification Matrix - Confirm by Exact SKU
                 </h2>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
@@ -282,51 +282,54 @@ export default function SandingGrindingAccessories() {
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
                         <th className="px-4 py-3 font-semibold uppercase">Accessory Category</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Abrasive Grain</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Grit Standard Scope</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Backing Type</th>
-                        <th className="px-4 py-3 font-semibold uppercase">MOQ Basis</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Buyer Must Define</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Source Must Confirm</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Sample / Approval Focus</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Quote Basis</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3 font-bold">Sanding Sheets</td>
-                        <td className="px-4 py-3">Silicon Carbide / Aluminum Oxide</td>
-                        <td className="px-4 py-3">P60 to P2500</td>
-                        <td className="px-4 py-3">C-wt / J-wt Latex Paper</td>
-                        <td className="px-4 py-3">Quoted per SKU</td>
+                        <td className="px-4 py-3 font-bold">Sanding Sheets &amp; Rolls</td>
+                        <td className="px-4 py-3">Substrate, process, wet/dry use, dimensions and grit list</td>
+                        <td className="px-4 py-3">Grain, backing, dimensions and labeled use boundary</td>
+                        <td className="px-4 py-3">Working sample, pack format and written acceptance record</td>
+                        <td className="px-4 py-3">SKU, pack configuration and quantity</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">Zirconia Fiber Discs</td>
-                        <td className="px-4 py-3">Zirconia Alumina</td>
-                        <td className="px-4 py-3">P36 to P120</td>
-                        <td className="px-4 py-3">0.8mm Vulcanized Fiber</td>
-                        <td className="px-4 py-3">Quoted per SKU</td>
+                        <td className="px-4 py-3 font-bold">Fiber &amp; Grinding Discs</td>
+                        <td className="px-4 py-3">Tool, guard, diameter, arbor, substrate and removal target</td>
+                        <td className="px-4 py-3">Construction, grain, backing and labeled operating limit</td>
+                        <td className="px-4 py-3">Fit, use boundary and source evidence against the target tool</td>
+                        <td className="px-4 py-3">SKU, packaging and quantity</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-bold">Drywall Sanding Screen</td>
-                        <td className="px-4 py-3">Silicon Carbide double-coat</td>
-                        <td className="px-4 py-3">P80 to P240</td>
-                        <td className="px-4 py-3">Fiberglass Open Mesh</td>
-                        <td className="px-4 py-3">Quoted per SKU</td>
+                        <td className="px-4 py-3 font-bold">Mesh Sheets &amp; Screens</td>
+                        <td className="px-4 py-3">Surface, holder, extraction layout, dimensions and target grit</td>
+                        <td className="px-4 py-3">Mesh, coating, dimensions and stated compatibility</td>
+                        <td className="px-4 py-3">Holder fit, extraction setup and representative work result</td>
+                        <td className="px-4 py-3">SKU, pack count and quantity</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">Detail Sanding sticks</td>
-                        <td className="px-4 py-3">Aluminum Oxide belts</td>
-                        <td className="px-4 py-3">P80 to P400</td>
-                        <td className="px-4 py-3">Resilient plastic stick</td>
-                        <td className="px-4 py-3">Quoted per SKU</td>
+                        <td className="px-4 py-3 font-bold">Detail Sanding Tools</td>
+                        <td className="px-4 py-3">Access space, workpiece, abrasive size, grit progression and pack concept</td>
+                        <td className="px-4 py-3">Tool construction, replacement abrasive and fit boundary</td>
+                        <td className="px-4 py-3">Handle, tension or interface fit and approved sample identity</td>
+                        <td className="px-4 py-3">SKU, pack format and quantity</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-bold">Diamond Grinders</td>
-                        <td className="px-4 py-3">Electroplated Diamond</td>
-                        <td className="px-4 py-3">P50 to P3000</td>
-                        <td className="px-4 py-3">Flexible backing or Steel core</td>
-                        <td className="px-4 py-3">Quoted per SKU</td>
+                        <td className="px-4 py-3 font-bold">Diamond &amp; Specialty Abrasives</td>
+                        <td className="px-4 py-3">Substrate, process, tool, speed, cooling method and finish target</td>
+                        <td className="px-4 py-3">Construction, dimensions, operating limit, warnings and evidence scope</td>
+                        <td className="px-4 py-3">Sample result, source identity and written use boundary</td>
+                        <td className="px-4 py-3">SKU, source, packaging and quantity</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <p className="text-xs leading-relaxed text-industry-slate-400">
+                  Need to define a disc diameter, attachment or hole pattern? Use the <Link href="/sanding-discs" className="font-bold text-industry-orange hover:underline">sanding disc sourcing guide</Link>. For a multi-category private-label project, start with the <Link href="/abrasive-kits" className="font-bold text-industry-orange hover:underline">abrasive kit RFQ scope</Link>.
+                </p>
               </div>
 
               {/* Backing evidence fields */}
@@ -414,16 +417,16 @@ export default function SandingGrindingAccessories() {
                     <span className="text-white font-bold">Quoted by SKU, packaging and quantity</span>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block">Custom Grits combo:</span>
-                    <span className="text-white font-bold">Allowed in 5-grit retail assortments</span>
+                    <span className="text-industry-slate-500 block">Requested grit mix:</span>
+                    <span className="text-white font-bold">Grit list, pack count and assortment feasibility are confirmed by the quoted SKU and packaging scope.</span>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block">Antislip backing:</span>
-                    <span className="text-white font-bold leading-normal">Optional velcro hook & loop backing on sandpaper sheets.</span>
+                    <span className="text-industry-slate-500 block">Backing and attachment:</span>
+                    <span className="text-white font-bold leading-normal">Requested backing, attachment type, pad or holder fit and use boundary are confirmed with the approved SKU.</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">Shipping terms:</span>
-                    <span className="text-white font-bold leading-normal">FOB, CIF or door-to-door options scoped per quotation.</span>
+                    <span className="text-white font-bold leading-normal">The Incoterms rule, named place, delivery responsibilities and exclusions are stated in the written quotation.</span>
                   </div>
                 </div>
 
@@ -432,7 +435,7 @@ export default function SandingGrindingAccessories() {
                     href={buildInquiryHref("/products/sanding-grinding-accessories", "sample")}
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
-                    Request Grit Sample Roll
+                    Request an Abrasive Sample Brief
                   </Link>
                 </div>
               </div>
@@ -440,7 +443,7 @@ export default function SandingGrindingAccessories() {
               {/* Substrate list */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  Substrate Compatibility
+                  Substrates to Define in an RFQ
                 </h3>
                 <div className="flex flex-wrap gap-2 text-xs font-mono">
                   {["Hardwood / Softwood", "Drywall Plaster", "Carbon Steel", "High-Alloy Welds", "Fiberglass", "Ceramic / Porcelain", "Marble / Tile", "Gemstones / Glass"].map((sub) => (

@@ -132,13 +132,13 @@ export default function ChineseSandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>全目数覆盖:</strong> 干湿两用砂纸目数涵盖粗磨 P60 至超细镜面 P2500，可定制乳胶纸基或高强度抗撕扯布基底。</span>
+                    <span className="text-industry-slate-200"><strong>粒度与背基需求:</strong> 在询价中写明粒度清单、底材、干湿用途与所需背基；准确范围和材料由报价来源按具体 SKU 确认。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>重载金属抛磨碟:</strong> 锆刚玉硫化纤维钢纸砂碟可选 7/8&quot; 圆孔或星型中心孔；装配、最高转速与工具兼容性须按批准规格确认。</span>
+                    <span className="text-industry-slate-200"><strong>磨片专项询价:</strong> 对磨片需明确工具、护罩、直径、孔径、磨粒、背基与标注的使用限值，再比较样品或报价。</span>
                   </li>
                 </ul>
                 <ul className="space-y-2.5">
@@ -146,7 +146,7 @@ export default function ChineseSandingGrindingAccessories() {
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-industry-slate-200"><strong>开放式网格:</strong> 玻纤双面涂覆碳化硅，开放结构有助于排出石膏粉尘并减少堵塞；实际集尘效果取决于设备和工况。</span>
+                    <span className="text-industry-slate-200"><strong>网格与集尘配置:</strong> 明确表面、底托、网格结构、涂层、尺寸与集尘配置；贴合和实际工况结果以代表性样品为准。</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-industry-orange mr-2 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -217,7 +217,7 @@ export default function ChineseSandingGrindingAccessories() {
               {/* Technical Specifications Table */}
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  磨料与砂纸规格对照表
+                  RFQ 规格矩阵 — 按准确 SKU 确认
                 </h2>
                 
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
@@ -225,51 +225,54 @@ export default function ChineseSandingGrindingAccessories() {
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
                         <th className="px-4 py-3 font-semibold uppercase">耗材产品类别</th>
-                        <th className="px-4 py-3 font-semibold uppercase">研磨材质</th>
-                        <th className="px-4 py-3 font-semibold uppercase">目数规格范围</th>
-                        <th className="px-4 py-3 font-semibold uppercase">背基基材</th>
-                        <th className="px-4 py-3 font-semibold uppercase">起订量依据</th>
+                        <th className="px-4 py-3 font-semibold uppercase">买家需明确</th>
+                        <th className="px-4 py-3 font-semibold uppercase">来源需确认</th>
+                        <th className="px-4 py-3 font-semibold uppercase">样品/批准重点</th>
+                        <th className="px-4 py-3 font-semibold uppercase">报价依据</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3 font-bold">干湿两用砂纸张</td>
-                        <td className="px-4 py-3">碳化硅 / 棕刚玉</td>
-                        <td className="px-4 py-3">P60 至 P2500</td>
-                        <td className="px-4 py-3">C-wt / J-wt 乳胶防水纸</td>
-                        <td className="px-4 py-3">按SKU报价</td>
+                        <td className="px-4 py-3 font-bold">砂纸张与砂卷</td>
+                        <td className="px-4 py-3">底材、工序、干湿用途、尺寸与粒度清单</td>
+                        <td className="px-4 py-3">磨粒、背基、尺寸与标注的使用边界</td>
+                        <td className="px-4 py-3">工作样品、包装格式与书面验收记录</td>
+                        <td className="px-4 py-3">SKU、包装组合与数量</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">锆刚玉纤维磨片</td>
-                        <td className="px-4 py-3">锆刚玉磨料</td>
-                        <td className="px-4 py-3">P36 至 P120</td>
-                        <td className="px-4 py-3">0.8mm 厚硫化纤维板</td>
-                        <td className="px-4 py-3">按SKU报价</td>
+                        <td className="px-4 py-3 font-bold">纤维砂碟与磨片</td>
+                        <td className="px-4 py-3">工具、护罩、直径、孔径、底材与去除目标</td>
+                        <td className="px-4 py-3">结构、磨粒、背基与标注的使用限值</td>
+                        <td className="px-4 py-3">对目标工具的装配、使用边界与来源资料</td>
+                        <td className="px-4 py-3">SKU、包装与数量</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-bold">镂空墙面网格砂网</td>
-                        <td className="px-4 py-3">碳化硅双面涂层</td>
-                        <td className="px-4 py-3">P80 至 P240</td>
-                        <td className="px-4 py-3">高拉力玻璃纤维网格</td>
-                        <td className="px-4 py-3">按SKU报价</td>
+                        <td className="px-4 py-3 font-bold">网格砂片与砂网</td>
+                        <td className="px-4 py-3">表面、底托、集尘布局、尺寸与目标粒度</td>
+                        <td className="px-4 py-3">网格、涂层、尺寸与书面适配边界</td>
+                        <td className="px-4 py-3">底托匹配、集尘配置与代表性工况结果</td>
+                        <td className="px-4 py-3">SKU、包装数量与采购量</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3 font-bold">塑料精细打磨棒</td>
-                        <td className="px-4 py-3">棕刚玉软带</td>
-                        <td className="px-4 py-3">P80 至 P400</td>
-                        <td className="px-4 py-3">弹性 ABS 打磨杆及柔性带</td>
-                        <td className="px-4 py-3">按SKU报价</td>
+                        <td className="px-4 py-3 font-bold">细节打磨工具</td>
+                        <td className="px-4 py-3">可达空间、工件、耗材尺寸、粒度进程与包装概念</td>
+                        <td className="px-4 py-3">工具结构、替换耗材与匹配边界</td>
+                        <td className="px-4 py-3">手柄、张力或接口匹配与批准样品身份</td>
+                        <td className="px-4 py-3">SKU、包装格式与数量</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-bold">金刚石研磨盘</td>
-                        <td className="px-4 py-3">电镀高硬度金刚石</td>
-                        <td className="px-4 py-3">P50 至 P3000</td>
-                        <td className="px-4 py-3">拉扣自粘背胶 / 钢制核心</td>
-                        <td className="px-4 py-3">按SKU报价</td>
+                        <td className="px-4 py-3 font-bold">金刚石与特殊磨料</td>
+                        <td className="px-4 py-3">底材、工序、工具、转速、冷却方式与表面目标</td>
+                        <td className="px-4 py-3">结构、尺寸、使用限值、警示与证据范围</td>
+                        <td className="px-4 py-3">样品结果、来源身份与书面使用边界</td>
+                        <td className="px-4 py-3">SKU、来源、包装与数量</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <p className="text-xs leading-relaxed text-industry-slate-400">
+                  如需明确砂碟直径、安装方式或孔型，请查看 <Link href="/zh/sanding-discs" className="font-bold text-industry-orange hover:underline">砂碟采购指南</Link>。多品类贴牌项目请先使用 <Link href="/zh/abrasive-kits" className="font-bold text-industry-orange hover:underline">磨料套装 RFQ 范围</Link>。
+                </p>
               </div>
 
               {/* Tensile Strength & Fracturing Specifications Table */}
@@ -357,12 +360,12 @@ export default function ChineseSandingGrindingAccessories() {
                     <span className="text-white font-bold">按材料、样品、包装、生产、验货和出运节点书面确认</span>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block">混合装分配:</span>
-                    <span className="text-white font-bold">支持4-5种目数组合装于印刷盒</span>
+                    <span className="text-industry-slate-500 block">所需粒度组合:</span>
+                    <span className="text-white font-bold">粒度清单、包装数量和组合可行性由报价 SKU 与包装范围确认。</span>
                   </div>
                   <div>
-                    <span className="text-industry-slate-500 block">自粘防滑机制:</span>
-                    <span className="text-white font-bold leading-normal">可选自粘或拉扣背基；粘接强度、底盘适配和最高转速按规格确认。</span>
+                    <span className="text-industry-slate-500 block">背基与安装方式:</span>
+                    <span className="text-white font-bold leading-normal">所需背基、安装方式、底托或夹具匹配及使用边界，均按批准 SKU 确认。</span>
                   </div>
                   <div>
                     <span className="text-industry-slate-500 block">交货港口与贸易术语:</span>
@@ -375,7 +378,7 @@ export default function ChineseSandingGrindingAccessories() {
                     href="/zh/sample-kit"
                     className="w-full inline-flex justify-center items-center rounded border border-industry-orange text-industry-orange font-bold uppercase tracking-wider py-3 hover:bg-industry-orange hover:text-white transition-all text-xs"
                   >
-                    申请大货目数样品
+                    申请磨料样品需求评估
                   </Link>
                 </div>
               </div>
@@ -383,7 +386,7 @@ export default function ChineseSandingGrindingAccessories() {
               {/* Substrate list */}
               <div className="glass-panel p-6 rounded-lg border border-industry-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider border-b border-industry-slate-800 pb-2">
-                  打磨底材兼容性
+                  RFQ 中应明确的打磨底材
                 </h3>
                 <div className="flex flex-wrap gap-2 text-xs font-mono">
                   {["实木 / 软木板", "墙面抹灰石膏", "高硬度碳钢", "合金钢焊缝", "玻璃纤维", "精细瓷砖", "大理石 / 花岗岩", "水晶宝石 / 玻璃"].map((sub) => (

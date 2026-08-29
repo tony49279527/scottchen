@@ -444,7 +444,7 @@ export default function RFQForm() {
         {/* Estimated Volume */}
         <div>
           <label htmlFor="quantity" className="block text-sm font-semibold text-industry-slate-300">
-            {isZh ? "预估采购数量" : "Target Batch Quantity"} <span className="text-industry-orange">*</span>
+            {isZh ? "预估采购量（件、包或套）" : "Target Order Volume (units, packs or sets)"} <span className="text-industry-orange">*</span>
           </label>
           <select
             id="quantity"
@@ -457,22 +457,22 @@ export default function RFQForm() {
           >
             {isZh ? (
               <>
-                <option value="">请选择数量区间...</option>
-                <option value="Trial Batch (100-500 Kits)">试销测试批次 (100-500 套)</option>
-                <option value="Small Batch OEM (500-2000 Kits)">常规 OEM 贴牌批次 (500-2000 套)</option>
-                <option value="Container Wholesale (2000-5000 Kits)">整柜/大货批发批次 (2000-5000 套)</option>
-                <option value="High Volume Industrial (5000+ Kits)">工业级大宗集中采购 (5000 套以上)</option>
-                <option value="Sample Evaluation Only">仅用于样品物理评估 (后续订货)</option>
+                <option value="">请选择采购量区间...</option>
+                <option value="Trial or evaluation (under 500 units, packs or sets)">测试或评估（少于 500 件、包或套）</option>
+                <option value="Initial order (500-2000 units, packs or sets)">首批订单（500-2,000 件、包或套）</option>
+                <option value="Bulk or replenishment (2000-5000 units, packs or sets)">批量或补货（2,000-5,000 件、包或套）</option>
+                <option value="High Volume (5000+ units, packs or sets)">大批量（5,000 件、包或套以上）</option>
+                <option value="Sample evaluation only">仅样品评估（暂未确定订单量）</option>
                 <option value="Not Sure Yet">暂不确定，希望先获得建议</option>
               </>
             ) : (
               <>
                 <option value="">Select order volume range...</option>
-                <option value="Trial Batch (100-500 Kits)">Trial Batch (100-500 Kits)</option>
-                <option value="Small Batch OEM (500-2000 Kits)">Small Batch OEM (500-2000 Kits)</option>
-                <option value="Container Wholesale (2000-5000 Kits)">Container Wholesale (2000-5000 Kits)</option>
-                <option value="High Volume Industrial (5000+ Kits)">High Volume Industrial (5000+ Kits)</option>
-                <option value="Sample Evaluation Only">Sample Evaluation Only (Testing first)</option>
+                <option value="Trial or evaluation (under 500 units, packs or sets)">Trial or evaluation (under 500 units, packs or sets)</option>
+                <option value="Initial order (500-2000 units, packs or sets)">Initial order (500-2,000 units, packs or sets)</option>
+                <option value="Bulk or replenishment (2000-5000 units, packs or sets)">Bulk or replenishment (2,000-5,000 units, packs or sets)</option>
+                <option value="High Volume (5000+ units, packs or sets)">High volume (5,000+ units, packs or sets)</option>
+                <option value="Sample evaluation only">Sample evaluation only (no order volume yet)</option>
                 <option value="Not Sure Yet">Not Sure Yet (Need guidance)</option>
               </>
             )}
