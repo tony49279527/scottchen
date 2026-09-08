@@ -20,7 +20,7 @@ export default function SandingDiscsPage() {
     {
       name: "Hook & Loop Sanding Discs",
       desc: "Hook-and-loop backed sanding discs are designed for quick changes on random orbital sanders and dual-action polishers. RFQs can cover aluminum oxide, zirconia alumina, ceramic or other quoted grain options with paper, film or cloth backing. The exact production source, grain, backing, attachment bond and application suitability must be confirmed for the quoted SKU and approved sample.",
-      features: ["Reference diameters to quote: 4.5\", 5\", 6\", 7\", 9\"", "Grit range confirmed for the quoted SKU", "Paper, polyester film or cloth backing as specified", "Hole pattern matched to the approved pad drawing"],
+      features: ["Disc diameter and pad or arbor interface confirmed by SKU", "Grit range confirmed for the quoted SKU", "Paper, polyester film or cloth backing as specified", "Hole pattern matched to the approved pad drawing"],
     },
     {
       name: "PSA (Sticky / Self-Adhesive) Sanding Discs",
@@ -35,7 +35,7 @@ export default function SandingDiscsPage() {
     {
       name: "Quick-Change / Roll-Lock Discs",
       desc: "Compact discs can use threaded or twist-lock backing to connect to a matching holder on die grinders and pneumatic tools. Interface type, dimensions, holder fit, grain, backing, labeled operating limit and application suitability must be confirmed for the quoted SKU and approved sample.",
-      features: ["Reference diameters to quote: 2\", 3\", 4\"", "Type R, Type S or Type TS interface as specified", "Grain or non-woven construction documented per SKU", "Holder fit verified with the buyer's tool setup"],
+      features: ["Disc diameter and holder interface confirmed by SKU", "Type R, Type S or Type TS interface as specified", "Grain or non-woven construction documented per SKU", "Holder fit verified with the buyer's tool setup"],
     },
     {
       name: "Mesh Anti-Clog Net Sanding Discs",
@@ -76,6 +76,17 @@ export default function SandingDiscsPage() {
     },
   ];
 
+  const rfqFields = [
+    ["Diameter & tool interface", "Disc diameter, sander or pad details, arbor where applicable, and attachment interface."],
+    ["Grain & grit", "Target removal or finish stage, grit designation and grain requirement."],
+    ["Backing & attachment", "Backing construction, hook-and-loop, PSA, fiber or other required interface."],
+    ["Hole pattern", "Pad drawing, extraction layout and any required die-cutting details."],
+    ["Workpiece & application", "Substrate, current process, tool settings and acceptance criteria."],
+    ["Packaging", "Pack count, channel requirements, artwork, labels and barcode owner."],
+    ["Sample plan", "Representative tool and substrate, comparison method and approval record."],
+    ["Quote scope", "Quantity scenarios, destination, timing and commercial assumptions."],
+  ] as const;
+
   return (
     <div className="flex flex-col min-h-screen">
       <section className="bg-industry-slate-950 border-b border-industry-slate-800 py-16">
@@ -97,6 +108,34 @@ export default function SandingDiscsPage() {
             <Link href={buildInquiryHref("/sanding-discs", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               Get Samples
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-industry-slate-850 bg-industry-slate-950 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-industry-orange-light">Selection Checklist</span>
+              <h2 className="mt-3 text-2xl font-extrabold text-white">Start a Sanding Disc RFQ With the Required Selection Fields</h2>
+              <p className="mt-3 text-sm leading-relaxed text-industry-slate-400">
+                These are buyer input fields, not published standard configurations. The proposed source, suitability, availability and commercial terms are confirmed only for a dated SKU quotation and approved sample.
+              </p>
+            </div>
+            <Link
+              href={buildInquiryHref("/sanding-discs", "quote")}
+              className="inline-flex shrink-0 justify-center rounded border border-industry-orange px-5 py-3 text-sm font-bold text-industry-orange hover:bg-industry-orange hover:text-white"
+            >
+              Send Sanding Disc RFQ
+            </Link>
+          </div>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {rfqFields.map(([label, detail]) => (
+              <div key={label} className="border border-industry-slate-800 p-4">
+                <h3 className="text-sm font-bold text-white">{label}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-industry-slate-400">{detail}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -170,62 +209,6 @@ export default function SandingDiscsPage() {
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  Common RFQ Reference Configurations
-                </h2>
-                <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
-                  <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
-                    <thead className="bg-industry-slate-900 text-industry-slate-400">
-                      <tr>
-                        <th className="px-4 py-3 font-semibold uppercase">Diameter</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Grit Range</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Backing Type</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Material</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Attachment</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-industry-slate-850 text-white">
-                      <tr>
-                        <td className="px-4 py-3">4.5\" (115mm)</td>
-                        <td className="px-4 py-3">P36 - P120</td>
-                        <td className="px-4 py-3">Vulcanized Fiber</td>
-                        <td className="px-4 py-3">Zirconia / Ceramic</td>
-                        <td className="px-4 py-3">7/8\" Arbor</td>
-                      </tr>
-                      <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">5\" (125mm)</td>
-                        <td className="px-4 py-3">P40 - P3000</td>
-                        <td className="px-4 py-3">C/D/E-weight Paper / Film</td>
-                        <td className="px-4 py-3">A/O, Zirconia, SiC, Ceramic</td>
-                        <td className="px-4 py-3">Hook &amp; Loop / PSA</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-3">6\" (150mm)</td>
-                        <td className="px-4 py-3">P40 - P3000</td>
-                        <td className="px-4 py-3">C/D/E-weight Paper / Film / Mesh</td>
-                        <td className="px-4 py-3">A/O, Ceramic, Mesh</td>
-                        <td className="px-4 py-3">Hook &amp; Loop (multi-hole)</td>
-                      </tr>
-                      <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">7\" (180mm)</td>
-                        <td className="px-4 py-3">P24 - P220</td>
-                        <td className="px-4 py-3">Vulcanized Fiber / Cloth</td>
-                        <td className="px-4 py-3">Zirconia / Ceramic</td>
-                        <td className="px-4 py-3">7/8\" Arbor</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-3">9\" (225mm)</td>
-                        <td className="px-4 py-3">P40 - P240</td>
-                        <td className="px-4 py-3">D/E-weight Paper / Cloth</td>
-                        <td className="px-4 py-3">Aluminum Oxide / SiC</td>
-                        <td className="px-4 py-3">Hook &amp; Loop / PSA</td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
 

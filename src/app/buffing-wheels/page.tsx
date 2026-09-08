@@ -186,67 +186,54 @@ export default function BuffingWheelsPage() {
 
               <div className="space-y-4">
                 <h2 className="text-xl font-extrabold text-white tracking-wide border-b border-industry-slate-800 pb-2">
-                  RFQ Specification Examples
+                  Wholesale RFQ Comparison Matrix
                 </h2>
                 <div className="overflow-x-auto rounded border border-industry-slate-800 bg-industry-slate-950">
                   <table className="min-w-full divide-y divide-industry-slate-850 text-left text-xs font-mono">
                     <thead className="bg-industry-slate-900 text-industry-slate-400">
                       <tr>
-                        <th className="px-4 py-3 font-semibold uppercase">Diameter</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Ply Count</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Arbor Hole</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Rated Speed</th>
-                        <th className="px-4 py-3 font-semibold uppercase">Material</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Procurement field</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Buyer should provide</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Confirm in quotation</th>
+                        <th className="px-4 py-3 font-semibold uppercase">Approve before order</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-industry-slate-850 text-white">
                       <tr>
-                        <td className="px-4 py-3">3\" (75mm)</td>
-                        <td className="px-4 py-3">30 / 40 Ply</td>
-                        <td className="px-4 py-3">1/4\" Hex Shank</td>
-                        <td className="px-4 py-3">Confirm by SKU</td>
-                        <td className="px-4 py-3">Cotton / Shank-mounted</td>
+                        <th className="px-4 py-3 text-left">Wheel construction</th>
+                        <td className="px-4 py-3">Workpiece, target process and desired cut or finish</td>
+                        <td className="px-4 py-3">Proposed source, construction and inspection scope</td>
+                        <td className="px-4 py-3">Approved sample and SKU record</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">4\" (100mm)</td>
-                        <td className="px-4 py-3">30 / 40 Ply</td>
-                        <td className="px-4 py-3">3/8\", 1/2\"</td>
-                        <td className="px-4 py-3">Confirm by SKU</td>
-                        <td className="px-4 py-3">Cotton Muslin</td>
+                        <th className="px-4 py-3 text-left">Tool fit</th>
+                        <td className="px-4 py-3">Machine, bore or shank, guard and operating data</td>
+                        <td className="px-4 py-3">Compatibility basis, label evidence and test scope</td>
+                        <td className="px-4 py-3">Fit and safe-use checks</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3">6\" (150mm)</td>
-                        <td className="px-4 py-3">40 / 50 / 60 Ply</td>
-                        <td className="px-4 py-3">1/2\", 5/8\"</td>
-                        <td className="px-4 py-3">Confirm by SKU</td>
-                        <td className="px-4 py-3">Cotton / Sisal-Cotton</td>
+                        <th className="px-4 py-3 text-left">Compound pairing</th>
+                        <td className="px-4 py-3">Substrate and finish target</td>
+                        <td className="px-4 py-3">Formula or source evidence and pack requirements</td>
+                        <td className="px-4 py-3">Representative workpiece test</td>
                       </tr>
                       <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">8\" (200mm)</td>
-                        <td className="px-4 py-3">40 / 50 / 60 Ply</td>
-                        <td className="px-4 py-3">5/8\", 3/4\", 1\"</td>
-                        <td className="px-4 py-3">Confirm by SKU</td>
-                        <td className="px-4 py-3">Cotton / Airway</td>
+                        <th className="px-4 py-3 text-left">Packaging</th>
+                        <td className="px-4 py-3">Channel, artwork, labels, barcode owner and quantity</td>
+                        <td className="px-4 py-3">Materials, pack-out and approval route</td>
+                        <td className="px-4 py-3">Approved packaging specification</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3">10\" (250mm)</td>
-                        <td className="px-4 py-3">50 / 60 / 80 Ply</td>
-                        <td className="px-4 py-3">5/8\", 3/4\", 1\"</td>
-                        <td className="px-4 py-3">Confirm by SKU</td>
-                        <td className="px-4 py-3">Cotton / Sisal / Airway</td>
-                      </tr>
-                      <tr className="bg-industry-slate-900/40">
-                        <td className="px-4 py-3">12\" (300mm)</td>
-                        <td className="px-4 py-3">60 / 80 Ply</td>
-                        <td className="px-4 py-3">1\", 1-1/4\"</td>
-                        <td className="px-4 py-3">Confirm by SKU</td>
-                        <td className="px-4 py-3">Airway / Steel-center</td>
+                        <th className="px-4 py-3 text-left">Commercial terms</th>
+                        <td className="px-4 py-3">Quantity, destination and target timing</td>
+                        <td className="px-4 py-3">MOQ, milestones, Incoterms and exclusions</td>
+                        <td className="px-4 py-3">Dated quotation or contract</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <p className="text-xs text-industry-slate-500 leading-relaxed">
-                  Dimensions, ply counts, bores and materials above are common RFQ examples, not a stock or performance commitment. The quoted production source must confirm the final construction, rated speed, marking, test method and supporting evidence for each SKU before buyer approval.
+                  This is a comparison checklist, not a stock catalog or performance commitment. The quoted production source must confirm the final construction, operating information, test method and supporting evidence for each SKU before buyer approval.
                 </p>
               </div>
 
@@ -401,7 +388,7 @@ export default function BuffingWheelsPage() {
                   Related Categories
                 </h3>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/products/buffing-polishing-wheels" className="font-bold text-industry-orange hover:underline">Browse Buffing Wheel Product Specifications</Link></li>
+                  <li><Link href="/products/buffing-polishing-wheels" className="font-bold text-industry-orange hover:underline">Cotton buffing wheel specifications</Link></li>
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Buffing &amp; Polishing Kits</Link></li>
                   <li><Link href="/sanding-discs" className="text-industry-orange hover:underline">Sanding Discs</Link></li>
                   <li><Link href="/flap-discs" className="text-industry-orange hover:underline">Flap Discs</Link></li>

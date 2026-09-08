@@ -166,7 +166,7 @@ export default function AutomotivePolishingKitsPage() {
               Review sanding options
             </Link>
             <Link href="/abrasive-kits" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
-              Review kit RFQ scope
+              Review abrasive kit specifications
             </Link>
             <Link href="/quality-control" className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white">
               Plan acceptance checks

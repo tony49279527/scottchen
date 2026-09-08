@@ -9,8 +9,8 @@ import { absoluteUrl } from "@/lib/site";
 import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Cotton Buffing Wheel Sourcing | SCOTTCHEN",
-  description: "Source cotton buffing wheels, spiral-stitched pads, flannel wheels, drill buffers and compound kits with SKU-level source and quoted terms.",
+  title: "Cotton Buffing Wheel Specifications & Sourcing | SCOTTCHEN",
+  description: "Compare cotton buffing wheel construction, tool fit and approval fields. Exact source and terms are quoted by SKU.",
   path: "/products/buffing-polishing-wheels",
   alternatePath: "/zh/products/buffing-polishing-wheels",
 });
@@ -60,7 +60,7 @@ export default function BuffingPolishingWheels() {
             <div className="max-w-2xl">
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS & OEM OPTIONS</span>
               <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-                Buffing & Polishing Wheels
+                Cotton Buffing Wheel Specifications & Sourcing
               </h1>
               <p className="mt-3 text-base text-industry-slate-400">
                 Sourcing inquiries for stitched or loose wheels, bench-machine and shank-mounted concepts, and compound bars.
@@ -172,7 +172,7 @@ export default function BuffingPolishingWheels() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/buffing-wheels">
-              Open buffing wheel sourcing guide
+              Wholesale and OEM procurement
             </Link>
             <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white hover:border-industry-orange" href="/wholesale-abrasives">
               Review wholesale sourcing
