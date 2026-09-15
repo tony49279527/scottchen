@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import BackButton from "@/components/BackButton";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | SCOTTCHEN",
+  description: "The requested SCOTTCHEN page could not be found.",
+  alternates: {
+    canonical: null,
+    languages: {
+      en: null,
+      "zh-CN": null,
+      "x-default": null,
+    },
+  },
+  robots: {
+    index: false,
+    follow: true,
+    noarchive: true,
+  },
+};
 
 export default function NotFound() {
   return (
