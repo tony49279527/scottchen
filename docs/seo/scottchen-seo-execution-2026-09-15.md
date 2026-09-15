@@ -25,3 +25,7 @@ The previous target-page experiment remains unchanged so its later 28-day Search
 ## Measurement boundary
 
 The expected improvement is clearer entity interpretation and better inquiry-source attribution. Ranking, AI citation or lead-quality impact requires a later observation window; this release does not claim those outcomes.
+
+## Follow-up conversion attribution batch
+
+The English and Chinese cutting-wheel and sanding-belt pages still used plain first-viewport and mid-page links to the quote and sample forms. Those links depended on client-side session storage to retain the source page. They now use the existing server-rendered inquiry-link helper, so the source page and product category survive direct navigation and no-JavaScript browsing. Visible copy, metadata and product claims were unchanged, preserving the existing search-intent baseline.
