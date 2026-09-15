@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -192,13 +193,13 @@ export default function ApplicationsOverview() {
 
                 <div className="mt-8 flex items-center justify-between border-t border-industry-slate-850 pt-4">
                   <Link
-                    href="/contact"
+                    href={buildInquiryHref("/applications", "quote")}
                     className="text-xs font-bold text-industry-orange hover:text-industry-orange-light uppercase tracking-wider transition-colors"
                   >
                     Request Application Quote &rarr;
                   </Link>
                   <Link
-                    href="/sample-kit"
+                    href={buildInquiryHref("/applications", "sample")}
                     className="text-xs font-bold text-white bg-industry-slate-850 hover:bg-industry-slate-800 px-4 py-2 rounded transition-colors"
                   >
                     Request Sample Kit

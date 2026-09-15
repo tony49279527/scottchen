@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -90,7 +91,7 @@ export default function ChineseOemVsStockAbrasiveKitsPage() {
             复核日期：{reviewedAt}。单价与 MOQ 仅以注明日期的书面报价为准。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/zh/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/zh/compare/oem-vs-off-the-shelf-abrasive-kits", "sample")} className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               申请 OEM 样品
             </Link>
             <Link href="/zh/abrasive-kits" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">

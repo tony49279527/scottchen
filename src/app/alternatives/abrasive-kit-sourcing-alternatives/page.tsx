@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -119,7 +120,7 @@ export default function AbrasiveKitSourcingAlternativesPage() {
             Reviewed {reviewedAt}. Cost and MOQ figures are decision factors, not published price lists.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/contact" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/alternatives/abrasive-kit-sourcing-alternatives", "quote")} className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               Request a scoped quote
             </Link>
             <Link href="/resources/abrasive-sourcing-checklist" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">

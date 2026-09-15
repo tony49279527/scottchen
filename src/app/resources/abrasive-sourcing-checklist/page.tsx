@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -165,7 +166,7 @@ export default function AbrasiveSourcingChecklist() {
             <Link href="/quality-control" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
               Review quality controls →
             </Link>
-            <Link href="/sample-kit" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
+            <Link href={buildInquiryHref("/resources/abrasive-sourcing-checklist", "sample")} className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
               Plan a sample request →
             </Link>
           </div>

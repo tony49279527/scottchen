@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -118,7 +119,7 @@ export default function ChineseAbrasiveKitSourcingAlternativesPage() {
             复核日期：{reviewedAt}。成本与起订量是决策因素，不是公开价目。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/zh/contact" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/zh/alternatives/abrasive-kit-sourcing-alternatives", "quote")} className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               提交范围明确的询价
             </Link>
             <Link

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
@@ -267,7 +268,7 @@ export default function ProductsOverview() {
                             Open RFQ Detail &rarr;
                           </Link>
                           <Link
-                            href="/contact"
+                            href={buildInquiryHref("/products", "quote")}
                             className="text-xs font-bold text-white bg-industry-slate-800 hover:bg-industry-slate-700 px-4 py-2 rounded transition-colors"
                           >
                             Request Spec Quote

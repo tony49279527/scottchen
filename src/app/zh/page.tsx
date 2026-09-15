@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -76,13 +77,13 @@ export default function ChineseHome() {
               
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/zh/contact"
+                  href={buildInquiryHref("/zh", "quote")}
                   className="inline-flex justify-center items-center rounded bg-industry-orange-cta px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-orange-hover hover:scale-[1.02] text-center shadow-lg shadow-industry-orange/20"
                 >
                   获取定制询价
                 </Link>
                 <Link
-                  href="/zh/sample-kit"
+                  href={buildInquiryHref("/zh", "sample")}
                   className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800/80 px-8 py-4 text-sm font-extrabold uppercase tracking-wider text-white transition-all-custom hover:bg-industry-slate-750 text-center"
                 >
                   申领样品包

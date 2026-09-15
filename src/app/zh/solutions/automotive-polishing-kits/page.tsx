@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -111,10 +112,10 @@ export default function ChineseAutomotivePolishingKitsPage() {
             复核日期：{reviewedAt}。抛光效果仅在买家样品验证后确认。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href="/zh/sample-kit" className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/zh/solutions/automotive-polishing-kits", "sample")} className="rounded bg-industry-orange-cta px-6 py-3 text-sm font-bold text-white">
               申请样品套装
             </Link>
-            <Link href="/zh/contact" className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
+            <Link href={buildInquiryHref("/zh/solutions/automotive-polishing-kits", "quote")} className="rounded border border-industry-slate-700 px-6 py-3 text-sm font-bold text-white">
               获取书面报价
             </Link>
           </div>

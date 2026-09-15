@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -68,13 +69,13 @@ export default function ChineseQualityControl() {
           
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              href="/zh/contact"
+              href={buildInquiryHref("/zh/quality-control", "quote")}
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               申请确认质检范围
             </Link>
             <Link
-              href="/zh/sample-kit"
+              href={buildInquiryHref("/zh/quality-control", "sample")}
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               申请测试样品包
@@ -251,7 +252,7 @@ export default function ChineseQualityControl() {
                   在询价中定义来源、SKU、样品内容与测试方法，再在您的车间对批准样品进行适配和质量评估；网站不承诺标准现货样品包。
                 </p>
                 <Link
-                  href="/zh/sample-kit"
+                  href={buildInquiryHref("/zh/quality-control", "sample")}
                   className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                 >
                   配置测试样品包

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
@@ -121,7 +122,7 @@ export default function ZhAboutPage() {
                 供应商尽调档案
               </Link>
               <Link
-                href="/zh/contact"
+                href={buildInquiryHref("/zh/about", "quote")}
                 className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white"
               >
                 联系销售

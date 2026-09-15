@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -165,7 +166,7 @@ export default function ChineseAbrasiveSourcingChecklist() {
             <Link href="/zh/quality-control" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
               查看质量控制 →
             </Link>
-            <Link href="/zh/sample-kit" className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
+            <Link href={buildInquiryHref("/zh/resources/abrasive-sourcing-checklist", "sample")} className="rounded-lg border border-industry-slate-700 p-5 font-bold text-white hover:border-industry-orange">
               规划样品申请 →
             </Link>
           </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
@@ -266,7 +267,7 @@ export default function ChineseProductsOverview() {
                             打开 RFQ 详情 &rarr;
                           </Link>
                           <Link
-                            href="/zh/contact"
+                            href={buildInquiryHref("/zh/products", "quote")}
                             className="text-xs font-bold text-white bg-industry-slate-800 hover:bg-industry-slate-700 px-4 py-2 rounded transition-colors"
                           >
                             获取批量定制报价

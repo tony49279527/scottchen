@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -214,7 +215,7 @@ export default function OemAbrasiveSupplierEvaluation() {
               retail packaging for tool brands and distributors.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href="/contact">
+              <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href={buildInquiryHref("/resources/oem-abrasive-supplier-evaluation", "quote")}>
                 Submit an RFQ
               </Link>
               <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white" href="/supplier-profile">

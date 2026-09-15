@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import DecisionGuides from "@/components/DecisionGuides";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -72,13 +73,13 @@ export default function OEMPrivateLabel() {
           
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              href="/contact"
+              href={buildInquiryHref("/oem-private-label", "quote")}
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               Discuss Custom Packaging
             </Link>
             <Link
-              href="/sample-kit"
+              href={buildInquiryHref("/oem-private-label", "sample")}
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               Order Sample Pack
@@ -255,7 +256,7 @@ export default function OEMPrivateLabel() {
                   Send the pack format and dimensions. The written response will state whether a CAD dieline exists, who owns it, any setup charge and what approval sample is available.
                 </p>
                 <Link
-                  href="/contact"
+                  href={buildInquiryHref("/oem-private-label", "quote")}
                   className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                 >
                   Send OEM Requirements

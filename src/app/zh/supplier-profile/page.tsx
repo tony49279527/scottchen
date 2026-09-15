@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import {
@@ -143,7 +144,7 @@ export default function ChineseSupplierProfile() {
                 买家可要求项目报价覆盖产品配置、混装套装、贴牌包装、条码位置、检验范围及物流假设。
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href="/zh/contact">
+                <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href={buildInquiryHref("/zh/supplier-profile", "quote")}>
                   提交询价
                 </Link>
                 <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white" href="/zh/products">

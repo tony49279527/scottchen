@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -189,7 +190,7 @@ export default function ChineseOemAbrasiveSupplierEvaluation() {
               SCOTTCHEN 聚焦 B2B 磨料、砂纸与抛光配件套装：棉布抛光轮、密缝与松缝布轮、抛光膏套装、干湿砂纸、砂纸卷、石膏板砂网、锆刚玉纤维砂碟、细节打磨工具，以及面向工具品牌和渠道商的贴牌零售包装。
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href="/zh/contact">
+              <Link className="rounded bg-industry-orange-cta px-5 py-3 text-sm font-bold text-white" href={buildInquiryHref("/zh/resources/oem-abrasive-supplier-evaluation", "quote")}>
                 提交 RFQ 询盘
               </Link>
               <Link className="rounded border border-industry-slate-700 px-5 py-3 text-sm font-bold text-white" href="/zh/supplier-profile">

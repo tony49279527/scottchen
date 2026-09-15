@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -73,13 +74,13 @@ export default function ChineseOEMPrivateLabel() {
           
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
-              href="/zh/contact"
+              href={buildInquiryHref("/zh/oem-private-label", "quote")}
               className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center"
             >
               讨论定制包装方案
             </Link>
             <Link
-              href="/zh/sample-kit"
+              href={buildInquiryHref("/zh/oem-private-label", "sample")}
               className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center"
             >
               申领首批样品包
@@ -256,7 +257,7 @@ export default function ChineseOEMPrivateLabel() {
                   提交包装形式与尺寸要求；书面回复会说明是否已有 CAD 刀模、权利与责任方、开版费以及可提供的批准样品。
                 </p>
                 <Link
-                  href="/zh/contact"
+                  href={buildInquiryHref("/zh/oem-private-label", "quote")}
                   className="w-full inline-flex justify-center items-center rounded bg-industry-orange py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover"
                 >
                   发送贴牌配置需求
