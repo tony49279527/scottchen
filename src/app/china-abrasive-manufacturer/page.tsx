@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "China Abrasive Sourcing & OEM Support | SCOTTCHEN",
@@ -66,10 +67,10 @@ export default function ChinaAbrasiveManufacturerPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href={buildInquiryHref("/china-abrasive-manufacturer", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               Request Sourcing Quote
             </Link>
-            <Link href="/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href={buildInquiryHref("/china-abrasive-manufacturer", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               Order Sample Kit
             </Link>
           </div>
@@ -98,6 +99,33 @@ export default function ChinaAbrasiveManufacturerPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-industry-slate-800 bg-industry-slate-950 py-12">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-industry-orange">Entity &amp; Source Clarity</span>
+            <h2 className="mt-3 text-2xl font-extrabold text-white">Is SCOTTCHEN a manufacturer or a sourcing partner?</h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-industry-slate-300">
+              SCOTTCHEN is the brand and B2B project channel used for Shanghai-based abrasive sourcing and OEM coordination. The website does not claim that every listed product is made by one SCOTTCHEN-owned factory. Each quotation should identify the legal contracting entity, responsible production source, production location and exact SKU scope before a buyer approves samples or places an order.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm font-bold">
+              <Link href="/supplier-profile" className="text-industry-orange hover:underline">Review the supplier profile</Link>
+              <Link href="/evidence-center" className="text-industry-orange hover:underline">Check available evidence</Link>
+              <Link href={buildInquiryHref("/china-abrasive-manufacturer", "quote")} className="text-industry-orange hover:underline">Submit a source-specific RFQ</Link>
+            </div>
+          </div>
+          <dl className="grid gap-4 text-sm sm:grid-cols-2 lg:grid-cols-1">
+            <div className="border-l-2 border-industry-orange pl-4">
+              <dt className="font-bold text-white">Published role</dt>
+              <dd className="mt-1 leading-relaxed text-industry-slate-400">B2B sourcing, sample planning, OEM coordination and written quotation support.</dd>
+            </div>
+            <div className="border-l-2 border-industry-slate-700 pl-4">
+              <dt className="font-bold text-white">Confirm per quotation</dt>
+              <dd className="mt-1 leading-relaxed text-industry-slate-400">Contracting entity, production source, location, specification, evidence and commercial terms.</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -141,7 +169,7 @@ export default function ChinaAbrasiveManufacturerPage() {
                   be supplied and verified for the quoted source and SKU.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-1">
-                  <Link href="/contact" className="text-[11px] font-bold text-industry-orange hover:underline">
+                  <Link href={buildInquiryHref("/china-abrasive-manufacturer", "quote")} className="text-[11px] font-bold text-industry-orange hover:underline">
                     Request an evidence plan →
                   </Link>
                   <Link href="/about" className="text-[11px] font-bold text-industry-slate-300 hover:text-white hover:underline">
@@ -305,7 +333,7 @@ export default function ChinaAbrasiveManufacturerPage() {
               ))}
             </div>
             <div className="pt-4">
-              <Link href="/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+              <Link href={buildInquiryHref("/china-abrasive-manufacturer", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                 Send Your RFQ Today
               </Link>
             </div>

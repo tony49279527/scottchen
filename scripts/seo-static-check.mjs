@@ -1,5 +1,5 @@
 import { access, readFile, readdir } from "node:fs/promises";
-import { join } from "node:path";
+import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = fileURLToPath(new URL("../", import.meta.url));
@@ -78,17 +78,21 @@ let metadataCallCount = 0;
 const localImagePaths = new Set();
 const noIndexPaths = new Set();
 
+function projectRelativePath(file) {
+  return relative(projectRoot, file).split(sep).join("/");
+}
+
 for (const root of tsxRoots) {
   const files = await listTsxFiles(join(projectRoot, root));
   tsxFileCount += files.length;
-  pageFileCount += files.filter((file) => file.endsWith("/page.tsx")).length;
+  pageFileCount += files.filter((file) => projectRelativePath(file).endsWith("/page.tsx")).length;
 
   for (const file of files) {
     const source = await readFile(file, "utf8");
 
     if (/<img(?:\s|>)/.test(source)) {
       issues.push({
-        file: file.replace(projectRoot, ""),
+        file: projectRelativePath(file),
         issue: "Native <img> tag found; use next/image.",
       });
     }
@@ -100,7 +104,7 @@ for (const root of tsxRoots) {
       for (const required of ["alt", "sizes", "width", "height"]) {
         if (!attrValue(tag, required)) {
           issues.push({
-            file: file.replace(projectRoot, ""),
+            file: projectRelativePath(file),
             issue: `Image is missing required attribute ${required}.`,
           });
         }
@@ -109,7 +113,7 @@ for (const root of tsxRoots) {
       const quality = attrValue(tag, "quality");
       if (quality && !allowedQualities.has(Number(quality))) {
         issues.push({
-          file: file.replace(projectRoot, ""),
+          file: projectRelativePath(file),
           issue: `Image quality ${quality} is not in next.config.mjs allowlist.`,
         });
       }
@@ -117,7 +121,7 @@ for (const root of tsxRoots) {
       const sizes = attrValue(tag, "sizes");
       if (sizes && hasInvalidSizes(sizes)) {
         issues.push({
-          file: file.replace(projectRoot, ""),
+          file: projectRelativePath(file),
           issue: `Invalid sizes attribute: ${sizes}`,
         });
       }
@@ -125,7 +129,7 @@ for (const root of tsxRoots) {
 
     if (/datePublished:\s*(SITE_UPDATED|reviewedAt)\b/.test(source)) {
       issues.push({
-        file: file.replace(projectRoot, ""),
+        file: projectRelativePath(file),
         issue: "Article datePublished reuses SITE_UPDATED or reviewedAt instead of a real publication date.",
       });
     }
@@ -141,7 +145,8 @@ for (const root of tsxRoots) {
       const description = block.match(/description:\s*"((?:[^"\\]|\\.)*)"/)?.[1];
       const metadataPath = block.match(/path:\s*"((?:[^"\\]|\\.)*)"/)?.[1];
       const alternatePath = block.match(/alternatePath:\s*"((?:[^"\\]|\\.)*)"/)?.[1];
-      const relativeRoute = (file.split("src/app/")[1] ?? "").replace(/\/page\.tsx$/, "").replace(/^page\.tsx$/, "");
+      const appPath = projectRelativePath(file).replace(/^src\/app\//, "");
+      const relativeRoute = appPath.replace(/\/page\.tsx$/, "").replace(/^page\.tsx$/, "");
       const expectedRoute = relativeRoute ? `/${relativeRoute}` : "/";
       const expectedAlternatePath = expectedRoute === "/" ? "/zh" : expectedRoute === "/zh" ? "/" : expectedRoute.startsWith("/zh/") ? expectedRoute.slice(3) : `/zh${expectedRoute}`;
       if (/noIndex:\s*true\b/.test(block)) {
@@ -150,19 +155,19 @@ for (const root of tsxRoots) {
 
       if (title === undefined || description === undefined) {
         issues.push({
-          file: file.replace(projectRoot, ""),
+          file: projectRelativePath(file),
           issue: "createPageMetadata call must define literal title and description strings.",
         });
       } else {
         if ([...title].length > MAX_TITLE_LENGTH) {
           issues.push({
-            file: file.replace(projectRoot, ""),
+            file: projectRelativePath(file),
             issue: `Title length ${[...title].length} exceeds ${MAX_TITLE_LENGTH}: ${title}`,
           });
         }
         if ([...description].length > MAX_DESCRIPTION_LENGTH) {
           issues.push({
-            file: file.replace(projectRoot, ""),
+            file: projectRelativePath(file),
             issue: `Description length ${[...description].length} exceeds ${MAX_DESCRIPTION_LENGTH}: ${description}`,
           });
         }
@@ -170,13 +175,13 @@ for (const root of tsxRoots) {
 
       if (metadataPath !== undefined && metadataPath !== expectedRoute) {
         issues.push({
-          file: file.replace(projectRoot, ""),
+          file: projectRelativePath(file),
           issue: `Metadata path ${metadataPath} does not match route file path ${expectedRoute}.`,
         });
       }
       if (alternatePath !== expectedAlternatePath) {
         issues.push({
-          file: file.replace(projectRoot, ""),
+          file: projectRelativePath(file),
           issue: `Metadata alternatePath ${alternatePath} does not match language counterpart ${expectedAlternatePath}.`,
         });
       }
@@ -302,7 +307,7 @@ for (const { en, zh } of languagePairs) {
     await access(enFile);
   } catch {
     issues.push({
-      issue: `English route file does not exist: ${enFile.replace(projectRoot, "")}`,
+      issue: `English route file does not exist: ${projectRelativePath(enFile)}`,
     });
   }
 
@@ -310,7 +315,7 @@ for (const { en, zh } of languagePairs) {
     await access(zhFile);
   } catch {
     issues.push({
-      issue: `Chinese route file does not exist: ${zhFile.replace(projectRoot, "")}`,
+      issue: `Chinese route file does not exist: ${projectRelativePath(zhFile)}`,
     });
   }
 }

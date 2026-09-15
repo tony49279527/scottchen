@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import { createPageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
+import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "中国磨料采购与上海 OEM 项目支持 | SCOTTCHEN",
@@ -61,10 +62,10 @@ export default function ZhChinaAbrasiveManufacturerPage() {
             </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
+            <Link href={buildInquiryHref("/zh/china-abrasive-manufacturer", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-orange-hover hover:scale-[1.02] text-center">
               获取采购报价
             </Link>
-            <Link href="/zh/sample-kit" className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
+            <Link href={buildInquiryHref("/zh/china-abrasive-manufacturer", "sample")} className="inline-flex justify-center items-center rounded border border-industry-slate-700 bg-industry-slate-800 px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-industry-slate-750 text-center">
               索取样品
             </Link>
           </div>
@@ -93,6 +94,33 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-industry-slate-800 bg-industry-slate-950 py-12">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-industry-orange">主体与生产来源说明</span>
+            <h2 className="mt-3 text-2xl font-extrabold text-white">SCOTTCHEN 是生产商还是采购协调方？</h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-industry-slate-300">
+              SCOTTCHEN 是用于上海磨料磨具采购与 OEM 项目协调的品牌和 B2B 业务渠道。官网不声明全部产品都由同一家 SCOTTCHEN 自有工厂生产。买家批准样品或下单前，每份报价都应明确签约主体、实际生产来源、生产地点和具体 SKU 范围。
+            </p>
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm font-bold">
+              <Link href="/zh/supplier-profile" className="text-industry-orange hover:underline">查看供应商说明</Link>
+              <Link href="/zh/evidence-center" className="text-industry-orange hover:underline">核对现有证据</Link>
+              <Link href={buildInquiryHref("/zh/china-abrasive-manufacturer", "quote")} className="text-industry-orange hover:underline">提交指定来源的询价</Link>
+            </div>
+          </div>
+          <dl className="grid gap-4 text-sm sm:grid-cols-2 lg:grid-cols-1">
+            <div className="border-l-2 border-industry-orange pl-4">
+              <dt className="font-bold text-white">官网公开角色</dt>
+              <dd className="mt-1 leading-relaxed text-industry-slate-400">B2B 采购、样品规划、OEM 项目协调和书面报价支持。</dd>
+            </div>
+            <div className="border-l-2 border-industry-slate-700 pl-4">
+              <dt className="font-bold text-white">每份报价需确认</dt>
+              <dd className="mt-1 leading-relaxed text-industry-slate-400">签约主体、生产来源、地点、规格、证据和商务条款。</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -134,7 +162,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
                   该图仅说明文件与检验规划流程。法律主体文件、设施证据、证书、测试报告和检验记录必须针对报价来源与 SKU 实际提供并核验。
                 </p>
                 <div className="flex flex-wrap gap-3 pt-1">
-                  <Link href="/zh/contact" className="text-[11px] font-bold text-industry-orange hover:underline">
+                  <Link href={buildInquiryHref("/zh/china-abrasive-manufacturer", "quote")} className="text-[11px] font-bold text-industry-orange hover:underline">
                     申请证据计划 →
                   </Link>
                   <Link href="/zh/about" className="text-[11px] font-bold text-industry-slate-300 hover:text-white hover:underline">
@@ -298,7 +326,7 @@ export default function ZhChinaAbrasiveManufacturerPage() {
               ))}
             </div>
             <div className="pt-4">
-              <Link href="/zh/contact" className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
+              <Link href={buildInquiryHref("/zh/china-abrasive-manufacturer", "quote")} className="inline-flex justify-center items-center rounded bg-industry-orange px-8 py-3 text-sm font-bold uppercase tracking-wider text-white hover:bg-industry-orange-hover">
                 立即发送询价
               </Link>
             </div>
