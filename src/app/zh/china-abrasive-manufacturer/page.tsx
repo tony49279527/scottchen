@@ -10,7 +10,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "中国磨料采购与上海 OEM 项目支持 | SCOTTCHEN",
-  description: "SCOTTCHEN 提供上海 B2B 磨料采购与 OEM 项目支持；签约主体、生产来源、标准、证书和报告按报价 SKU 书面确认。",
+  description: "磨料磨具 B2B 采购与 OEM 项目支持：签约主体、生产来源、标准、证书和报告按报价 SKU 书面确认，上海项目渠道对接，不承诺具体认证。",
   path: "/zh/china-abrasive-manufacturer",
   locale: "zh-CN",
   alternatePath: "/china-abrasive-manufacturer",

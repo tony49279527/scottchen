@@ -9,7 +9,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "工业棉布轮、气道抛光轮及抛光膏 OEM 采购 | SCOTTCHEN",
-  description: "布轮、台式机轮、带柄布轮及抛光膏的 OEM 采购询价；来源、SKU、结构、工具适配、样品和商业条款按项目确认。",
+  description: "抛光轮 OEM 采购询价：布轮、台式机轮、带柄布轮及抛光膏。来源、SKU、结构、工具适配、样品和商业条款按项目报价书面确认。",
   path: "/zh/products/buffing-polishing-wheels",
   alternatePath: "/products/buffing-polishing-wheels",
   locale: "zh-CN",
@@ -556,16 +556,6 @@ export default function ChineseBuffingPolishingWheels() {
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
                 "isPartOf": { "@id": absoluteUrl("/#website") }
               },
-              {
-                "@type": "Product",
-                "@id": absoluteUrl("/zh/products/buffing-polishing-wheels#product"),
-                "name": "SCOTTCHEN 抛光轮与布轮",
-                "description": "面向 B2B 采购的抛光轮与布轮配置参考；准确材料、尺寸、使用限制、可供范围与商业条款须由带日期的 SKU 报价和批准证据确认。",
-                "url": absoluteUrl("/zh/products/buffing-polishing-wheels"),
-                "image": absoluteUrl("/images/buffing_wheels.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "抛光轮与布轮"
-              }
             ]
           })
         }}

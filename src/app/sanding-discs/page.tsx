@@ -376,19 +376,14 @@ export default function SandingDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/sanding-discs#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/sanding-discs#catalog"),
                 "name": "SCOTTCHEN Sanding Discs",
                 "description": "Wholesale aluminum oxide, zirconia, silicon carbide, ceramic, and mesh sanding discs in hook-and-loop, PSA, fiber, and quick-change types.",
                 "url": absoluteUrl("/sanding-discs"),
                 "image": absoluteUrl("/images/sanding_screens.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "Sanding discs and sandpaper discs",
-                "material": "Grain and backing documented for each quoted SKU",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by SKU, grit, packaging and order quantity" },
-                  { "@type": "PropertyValue", "name": "Attachment types", "value": "Hook-and-loop, PSA, fiber, quick-change" }
-                ],
+                "inLanguage": "en",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

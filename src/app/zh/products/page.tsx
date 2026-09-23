@@ -10,7 +10,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "OEM 磨料磨具产品目录 — 抛光轮、砂纸片、百叶片 | SCOTTCHEN",
   description:
-    "比较抛光轮、砂碟、百叶片、砂带、切割片与贴牌套装类别；规格控制、生产来源、证据边界与商业条款按报价 SKU 确认。",
+    "磨料磨具产品类别比较：抛光轮、砂碟、百叶片、砂带、切割片与贴牌套装。规格控制、生产来源、证据边界与商业条款按报价 SKU 书面确认。",
   path: "/zh/products",
   alternatePath: "/products",
   locale: "zh-CN",

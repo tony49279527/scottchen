@@ -11,7 +11,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 export const metadata: Metadata = createPageMetadata({
   title: "砂带采购与环形砂带批发 OEM 支持 | SCOTTCHEN",
   description:
-    "上海砂带 B2B 采购与 OEM 项目支持：尺寸、磨料、布基、接头、生产来源、样品与商业条款按报价 SKU 书面确认。",
+    "砂带 B2B 采购与 OEM 项目支持：尺寸、磨料、布基、接头、生产来源、样品与商业条款按报价 SKU 书面确认，上海项目渠道对接。",
   path: "/zh/sanding-belts",
   locale: "zh-CN",
   alternatePath: "/sanding-belts",
@@ -351,19 +351,14 @@ export default function ZhSandingBeltsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/zh/sanding-belts#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/sanding-belts#catalog"),
                 "name": "SCOTTCHEN环形砂带、砂带、砂带套",
                 "description": "环形砂带OEM采购支持，覆盖AO、ZA、Ceramic和SiC磨料，按尺寸、接头、包装与数量书面报价。",
                 "url": absoluteUrl("/zh/sanding-belts"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "环形砂带与砂带套",
-                "material": "氧化铝、锆刚玉、陶瓷、碳化硅",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、磨料、布基、接头、包装和订单数量报价" },
-                  { "@type": "PropertyValue", "name": "非标尺寸", "value": "按确认图纸裁切宽度与周长" }
-                ],
+                "inLanguage": "zh",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

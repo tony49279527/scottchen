@@ -388,19 +388,14 @@ export default function SandingBeltsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/sanding-belts#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/sanding-belts#catalog"),
                 "name": "SCOTTCHEN Sanding Belts & Abrasive Belts",
                 "description": "Wholesale sanding belts in aluminum oxide, zirconia, ceramic, and silicon carbide for knife making, woodworking, metal fabrication, glass, and stone.",
                 "url": absoluteUrl("/sanding-belts"),
                 "image": absoluteUrl("/images/sanding_tools.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "Sanding belts and abrasive belts",
-                "material": "Aluminum oxide, zirconia, ceramic, silicon carbide",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, grain, backing, joint and quantity" },
-                  { "@type": "PropertyValue", "name": "Custom sizing", "value": "Width and circumference cut to approved drawing" }
-                ],
+                "inLanguage": "en",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

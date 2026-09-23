@@ -10,7 +10,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "切割片采购与树脂切割片批发支持 | SCOTTCHEN",
-  description: "金属与不锈钢树脂切割片 OEM 采购指南，覆盖 1.0-1.6mm 超薄规格、额定转速、安全文件、样品验证与逐项报价。",
+  description: "树脂切割片 OEM 采购：金属与不锈钢超薄规格、额定转速与安全文件。样品验证后逐项报价，上海 B2B 项目支持，条款按报价 SKU 书面确认。",
   path: "/zh/cutting-wheels",
   locale: "zh-CN",
   alternatePath: "/cutting-wheels",
@@ -347,19 +347,14 @@ export default function ZhCuttingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/zh/cutting-wheels#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/cutting-wheels#catalog"),
                 "name": "SCOTTCHEN树脂切割片、金属不锈钢切割片",
                 "description": "金属、不锈钢和超薄树脂切割片OEM采购支持，按SKU、安全证据、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/cutting-wheels"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "树脂切割片",
-                "material": "树脂结合剂磨料；配方与增强结构按SKU确认",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、配方、标签、包装和订单数量书面确认" },
-                  { "@type": "PropertyValue", "name": "增强结构", "value": "以批准SKU规格与安全文件为准" }
-                ],
+                "inLanguage": "zh",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

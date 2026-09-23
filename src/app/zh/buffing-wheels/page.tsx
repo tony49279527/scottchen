@@ -11,7 +11,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 export const metadata: Metadata = createPageMetadata({
   title: "抛光轮 OEM 采购与抛光布轮批发支持 | SCOTTCHEN",
   description:
-    "上海抛光轮 OEM 采购与批发支持：棉布轮、麻布轮、气道轮与抛光膏组合。规格、包装、样品、生产来源与商业条款按报价 SKU 书面确认。",
+    "抛光轮批发与 OEM 定制：棉布轮、麻布轮、气道风冷轮、抛光膏组合。上海 B2B 采购支持，规格、包装、样品与交期按报价 SKU 书面确认。",
   path: "/zh/buffing-wheels",
   locale: "zh-CN",
   alternatePath: "/buffing-wheels",
@@ -365,20 +365,14 @@ export default function ZhBuffingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/zh/buffing-wheels#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/buffing-wheels#catalog"),
                 "name": "SCOTTCHEN抛光轮、抛光布轮、麻布轮、气道轮",
                 "description": "上海抛光轮OEM采购支持，覆盖抛光布轮、麻布轮、气道轮、抛光磨头和抛光膏，按SKU书面报价。",
                 "url": absoluteUrl("/zh/buffing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "棉布抛光轮与抛光配件",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按SKU、包装和订单数量书面确认" },
-                  { "@type": "PropertyValue", "name": "交期依据", "value": "按规格、样品批准和订单数量书面确认" },
-                  { "@type": "PropertyValue", "name": "贸易条款", "value": "报价注明 Incoterms 规则与指定地点" },
-                  { "@type": "PropertyValue", "name": "付款方式", "value": "以形式发票和合同为准" },
-                ],
+                "inLanguage": "zh",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

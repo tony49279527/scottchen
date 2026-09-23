@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "申请表面打磨与抛光轮样品测试包 | SCOTTCHEN",
-  description: "五金工具品牌商、渠道分销商或跨境电商卖家可申请抛光轮、锆刚玉纤维砂碟及防堵塞砂网样品，以评估结构、底基和磨料粒度。",
+  description: "磨料磨具样品申请：抛光轮、锆刚玉纤维砂碟及防堵塞砂网，用于评估结构、底基和磨料粒度。样品范围与费用按报价 SKU 书面确认。",
   path: "/zh/sample-kit",
   alternatePath: "/sample-kit",
   locale: "zh-CN",

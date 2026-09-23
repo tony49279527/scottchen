@@ -180,19 +180,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* Right Graphic/Schematic Column */}
-            <div className="lg:col-span-5 hidden lg:block">
+            {/* Right Graphic/Schematic Column — visible on mobile, text panel desktop-only */}
+            <div className="lg:col-span-5">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
                 <div className="absolute top-4 right-4 z-10 flex items-center space-x-2 bg-industry-slate-950/85 backdrop-blur px-3 py-1 rounded border border-industry-slate-800">
                   <div className="h-2 w-2 rounded-full bg-green-500 animate-ping" />
                   <span className="text-[10px] text-industry-slate-300 font-mono tracking-wider">RFQ SCOPE CHECKED</span>
                 </div>
                 
-                <div className="relative aspect-square w-full">
+                <div className="relative w-full h-72 sm:h-96 lg:aspect-square lg:h-auto">
                   <Image
                     width={1024}
                     height={1024}
-                    fetchPriority="high"
+                    priority
                     src="/images/hero_abrasives_kit.webp"
                     alt="SCOTTCHEN Industrial Buffing and Sanding Kit Sourcing"
                     sizes="(min-width: 1024px) 1024px, 92vw"
@@ -202,7 +202,8 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-industry-slate-950 via-transparent to-transparent" />
                 </div>
                 
-                <div className="p-6 bg-industry-slate-950/90 border-t border-industry-slate-850">
+                {/* Text panel: desktop-only to keep mobile fold compact */}
+                <div className="p-6 bg-industry-slate-950/90 border-t border-industry-slate-850 hidden lg:block">
                   <h2 className="text-sm font-bold text-white uppercase tracking-wider mb-2">RFQ Kit Planning Concept</h2>
                   <p className="text-xs text-industry-slate-400 leading-relaxed">
                     Proposed wheel, sanding and compound combinations; component and packaging availability is confirmed only in the written quotation.

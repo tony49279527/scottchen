@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = createPageMetadata({
   title: "索取 OEM / 磨料磨具批发大货报价 | SCOTTCHEN",
-  description: "联系 SCOTTCHEN 获取磨料磨具 B2B 采购与 OEM 项目支持，包括按 SKU 确认的生产来源、证据、报价排期、包装和物流假设。",
+  description: "联系 SCOTTCHEN 获取磨料磨具 B2B 采购与 OEM 项目支持：按 SKU 确认的生产来源、证据、报价排期、包装与物流假设，均以书面报价为准。",
   path: "/zh/contact",
   alternatePath: "/contact",
   locale: "zh-CN",

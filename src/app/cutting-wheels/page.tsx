@@ -386,19 +386,14 @@ export default function CuttingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/cutting-wheels#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/cutting-wheels#catalog"),
                 "name": "SCOTTCHEN Cutting Wheels & Cut-Off Discs",
                 "description": "B2B sourcing support for cut-off wheels for metal, stainless steel, cast iron and masonry; reinforcement and compliance evidence are confirmed per SKU.",
                 "url": absoluteUrl("/cutting-wheels"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "Cutting wheels and cut-off discs",
-                "material": "Resin-bonded abrasive; formulation and reinforcement confirmed per SKU",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, formulation, label, packaging and quantity" },
-                  { "@type": "PropertyValue", "name": "Reinforcement", "value": "Confirmed in the approved SKU specification" }
-                ],
+                "inLanguage": "en",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

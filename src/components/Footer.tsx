@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="pt-2 text-xs text-industry-slate-500 font-mono">
-              Process: Grind &bull; Sand &bull; Finish &bull; Polish
+              {p("Process: Grind • Sand • Finish • Polish", "流程：打磨 • 砂光 • 精修 • 抛光")}
             </div>
           </div>
 

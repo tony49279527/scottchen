@@ -410,20 +410,14 @@ export default function BuffingWheelsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/buffing-wheels#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/buffing-wheels#catalog"),
                 "name": "SCOTTCHEN Buffing Wheels & Polishing Wheels",
                 "description": "Shanghai B2B sourcing and OEM project support for cotton buffing wheels, spiral-stitched wheels, airway buffs, sisal-cotton constructions and polishing compounds, quoted by SKU.",
                 "url": absoluteUrl("/buffing-wheels"),
                 "image": absoluteUrl("/images/buffing_wheels.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "Cotton buffing wheels and polishing accessories",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by wheel construction, size, packaging and quantity" },
-                  { "@type": "PropertyValue", "name": "Lead-time basis", "value": "Quoted after specification, packaging and sample approval" },
-                  { "@type": "PropertyValue", "name": "Shipping terms", "value": "Incoterms rule and named place stated in quotation" },
-                  { "@type": "PropertyValue", "name": "Payment terms", "value": "Method and milestones stated in quotation or contract" }
-                ],
+                "inLanguage": "en",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

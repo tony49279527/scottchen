@@ -12,7 +12,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "OEM 定制磨具套装 vs 现货套装对比 | SCOTTCHEN",
   description:
-    "从 MOQ、品牌包装、组合控制、验证、风险与补货稳定性对比 OEM 定制与现货磨具套装，帮助 B2B 买家选择合适路径。",
+    "OEM 定制与现货磨具套装对比：MOQ、品牌包装、组合控制、验证、风险与补货稳定性。具体差异与条款按报价 SKU 书面确认，助买家选路径。",
   path: "/zh/compare/oem-vs-off-the-shelf-abrasive-kits",
   alternatePath: "/compare/oem-vs-off-the-shelf-abrasive-kits",
   locale: "zh-CN",

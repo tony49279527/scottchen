@@ -11,7 +11,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 export const metadata: Metadata = createPageMetadata({
   title: "砂纸片批发与砂碟 OEM 采购支持 | SCOTTCHEN",
   description:
-    "植绒砂纸片、背胶砂纸、钢纸磨片与网砂的 OEM 采购支持。磨料、背基、孔型、粒度、包装、样品、来源与数量按书面报价确认。",
+    "砂纸片 OEM 采购：植绒砂纸、背胶砂碟、钢纸磨片、网格砂网。磨料、背基、孔型、粒度与包装按书面报价确认，支持贴牌。",
   path: "/zh/sanding-discs",
   locale: "zh-CN",
   alternatePath: "/sanding-discs",
@@ -364,19 +364,14 @@ export default function ZhSandingDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/zh/sanding-discs#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/sanding-discs#catalog"),
                 "name": "SCOTTCHEN砂纸片、砂碟、圆形砂纸盘",
                 "description": "植绒、背胶、钢纸和网格砂碟OEM采购支持，按磨料、背基、孔型、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/sanding-discs"),
                 "image": absoluteUrl("/images/sanding_screens.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "砂纸片与砂碟",
-                "material": "磨料与背基按报价SKU和材料文件确认",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按SKU、粒度、包装和订单数量书面确认" },
-                  { "@type": "PropertyValue", "name": "背基/连接方式", "value": "植绒、背胶、钢纸、快换" }
-                ],
+                "inLanguage": "zh",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

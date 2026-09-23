@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "感谢您的询盘 | SCOTTCHEN",
-  description: "您的 SCOTTCHEN B2B 询盘已成功提交。",
+  description: "您的 SCOTTCHEN B2B 询盘已成功提交。我们将按您提供的 SKU 与需求核对信息，后续生产来源、报价与条款均以书面确认。",
   path: "/zh/thank-you",
   alternatePath: "/thank-you",
   locale: "zh-CN",

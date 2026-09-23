@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "关于 SCOTTCHEN | 上海磨料采购与 OEM 项目支持",
   description:
-    "SCOTTCHEN 提供上海 B2B 磨料采购与 OEM 项目支持；生产主体、场地、文件、商务条款和适用 SKU 证据均需书面确认。",
+    "SCOTTCHEN 提供上海 B2B 磨料磨具采购与 OEM 项目支持。生产主体、场地、文件、商务条款与适用 SKU 证据均需按报价 SKU 书面确认。",
   path: "/zh/about",
   alternatePath: "/about",
   locale: "zh-CN",

@@ -11,7 +11,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 export const metadata: Metadata = createPageMetadata({
   title: "百叶片采购与百叶轮批发 OEM 支持 | SCOTTCHEN",
   description:
-    "T27/T29 锆刚玉与陶瓷氧化铝百叶片 OEM 采购指南。尺寸、粒度、底板、最高转速、样品、包装、来源与数量按书面报价确认。",
+    "百叶片 OEM 采购：T27/T29 锆刚玉与陶瓷氧化铝。尺寸、粒度、底板、最高转速、样品、包装、来源与数量按书面报价确认。",
   path: "/zh/flap-discs",
   locale: "zh-CN",
   alternatePath: "/flap-discs",
@@ -355,19 +355,14 @@ export default function ZhFlapDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/zh/flap-discs#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/zh/flap-discs#catalog"),
                 "name": "SCOTTCHEN百叶片、百叶轮、平面砂布轮",
                 "description": "T27/T29锆刚玉和陶瓷氧化铝百叶片OEM采购支持，按SKU、包装和数量书面报价。",
                 "url": absoluteUrl("/zh/flap-discs"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "百叶片与平面砂布轮",
-                "material": "锆刚玉、陶瓷、氧化铝，玻璃纤维网盖",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "形状", "value": "T27 平面 / T29 锥面" },
-                  { "@type": "PropertyValue", "name": "起订量依据", "value": "按尺寸、粒度、结构、包装和订单数量报价" }
-                ],
+                "inLanguage": "zh",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],

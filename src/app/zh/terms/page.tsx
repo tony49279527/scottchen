@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "网站与B2B询盘条款 | SCOTTCHEN",
   description:
-    "了解 SCOTTCHEN B2B 网站、询价、样品申请、MOQ、包装、质量验收与项目合同确认相关条款。",
+    "了解 SCOTTCHEN B2B 网站、询价、样品申请、MOQ、包装、质量验收与项目合同确认相关条款，具体权利义务以书面合同与报价为准。",
   path: "/zh/terms",
   alternatePath: "/terms",
   locale: "zh-CN",

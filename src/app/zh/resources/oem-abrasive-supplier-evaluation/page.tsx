@@ -11,7 +11,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "如何评估 OEM 磨料磨具供应商 | SCOTTCHEN",
   description:
-    "面向 B2B 采购的 OEM 磨料磨具供应商评估指南，覆盖产品范围、RFQ 参数、样品、质检证据、包装、交期、起订量与核验问题。",
+    "OEM 磨料供应商评估指南：覆盖产品范围、RFQ 参数、样品、质检证据、包装、交期、起订量与核验问题，具体条款按报价 SKU 书面确认。",
   path: "/zh/resources/oem-abrasive-supplier-evaluation",
   alternatePath: "/resources/oem-abrasive-supplier-evaluation",
   locale: "zh-CN",

@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
   title: "OEM 砂纸、砂带与锆刚玉砂碟配件系列 | SCOTTCHEN",
-  description: "批量采购砂纸张、网格砂网、纤维砂碟、细节打磨棒及砂卷盒装；生产来源、规格、证据和商业条款按SKU报价。",
+  description: "砂磨配件批量采购：砂纸张、网格砂网、纤维砂碟、细节打磨棒及砂卷盒装。生产来源、规格、证据和商业条款按 SKU 报价书面确认。",
   path: "/zh/products/sanding-grinding-accessories",
   alternatePath: "/products/sanding-grinding-accessories",
   locale: "zh-CN",
@@ -618,16 +618,6 @@ export default function ChineseSandingGrindingAccessories() {
                 "image": absoluteUrl("/images/sanding_tools.webp"),
                 "isPartOf": { "@id": absoluteUrl("/#website") }
               },
-              {
-                "@type": "Product",
-                "@id": absoluteUrl("/zh/products/sanding-grinding-accessories#product"),
-                "name": "SCOTTCHEN 研磨与打磨配件",
-                "description": "面向 B2B 采购的研磨与打磨配件配置参考；准确磨粒、背基、尺寸、使用限制、可供范围与商业条款须由带日期的 SKU 报价和批准证据确认。",
-                "url": absoluteUrl("/zh/products/sanding-grinding-accessories"),
-                "image": absoluteUrl("/images/sanding_tools.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "研磨与打磨配件"
-              }
             ]
           })
         }}

@@ -11,7 +11,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "SCOTTCHEN 磨料磨具 B2B 采购与 OEM 贴牌项目支持",
   description:
-    "上海 B2B 磨料、砂纸与抛光配件采购及贴牌项目支持。生产来源、证据边界、包装流程与商业条款均按报价 SKU 书面确认。",
+    "SCOTTCHEN 磨料磨具 B2B 采购与 OEM 贴牌：抛光轮、砂纸片、百叶片、砂带、切割片。上海项目支持，规格包装样品与条款按报价 SKU 书面确认。",
   path: "/zh",
   alternatePath: "/",
   locale: "zh-CN",
@@ -128,8 +128,7 @@ export default function ChineseHome() {
                 <Image
                   width={1024}
                   height={1024}
-                  loading="eager"
-                  fetchPriority="high"
+                  priority
                   decoding="async"
                   src="/images/hero_abrasives_kit.webp"
                   sizes="(min-width: 1024px) 40vw, 92vw"

@@ -11,7 +11,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 export const metadata: Metadata = createPageMetadata({
   title: "磨具套装批发与 OEM 贴牌采购支持 | SCOTTCHEN",
   description:
-    "抛光轮、砂纸、磨头与 DIY 磨具套装的 OEM/贴牌采购支持。按 BOM、包装、样品、平台标签与订单数量书面报价，不以网页数字作承诺。",
+    "磨具套装 OEM 贴牌采购：抛光轮、砂纸、磨头与 DIY 套装组合。按 BOM、包装、样品与平台标签书面报价，具体数量与条款以报价 SKU 书面确认为准。",
   path: "/zh/abrasive-kits",
   locale: "zh-CN",
   alternatePath: "/abrasive-kits",
@@ -330,17 +330,6 @@ export default function ZhAbrasiveKitsPage() {
                 inLanguage: "zh-CN",
                 isPartOf: { "@id": absoluteUrl("/#website") },
                 about: { "@id": absoluteUrl("/#organization") },
-              },
-              {
-                "@type": "Product",
-                "@id": absoluteUrl("/zh/abrasive-kits#product"),
-                name: "SCOTTCHEN 贴牌磨具套装",
-                description:
-                  "用于 B2B 采购规划的贴牌磨具套装场景；组件、BOM、包装、条码范围、MOQ 与交期须由带日期的报价和批准样品确认。",
-                url: absoluteUrl("/zh/abrasive-kits"),
-                image: absoluteUrl("/images/hero_abrasives_kit.webp"),
-                brand: { "@id": absoluteUrl("/#brand") },
-                category: "贴牌磨具套装",
               },
               buildFaqPageSchema(faqs),
             ],

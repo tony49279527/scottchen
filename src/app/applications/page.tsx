@@ -83,7 +83,7 @@ export default function ApplicationsOverview() {
               </p>
             </div>
             
-            <div className="lg:col-span-5 hidden lg:block">
+            <div className="lg:col-span-5">
               <div className="glass-panel rounded-xl overflow-hidden border border-industry-slate-800 shadow-2xl relative">
                 <Image
                   width={1024}

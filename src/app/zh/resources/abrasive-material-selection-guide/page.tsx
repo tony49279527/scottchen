@@ -10,7 +10,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "磨料、背基与砂纸目数选型指南 | SCOTTCHEN",
   description:
-    "面向 B2B 采购的磨料选型指南，覆盖磨粒、背基、FEPA P 目数、样品验收、GS1 条码质量与 Incoterms 报价要求。",
+    "磨料选型指南：覆盖磨粒、背基、FEPA P 目数、样品验收、GS1 条码质量与 Incoterms 报价要求，具体参数按报价 SKU 书面确认。",
   path: "/zh/resources/abrasive-material-selection-guide",
   alternatePath: "/resources/abrasive-material-selection-guide",
   locale: "zh-CN",

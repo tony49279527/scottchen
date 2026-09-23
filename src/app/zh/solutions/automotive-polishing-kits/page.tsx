@@ -12,7 +12,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "汽车后市场贴牌抛光套装方案 | SCOTTCHEN",
   description:
-    "为汽车后市场品牌配置轮毂与金属抛光贴牌套装：轮型、抛光膏、转接件、包装与样品审批路径说明。",
+    "汽车抛光贴牌套装配置：轮毂与金属抛光套装的轮型、抛光膏、转接件、包装与样品审批路径，组合与条款按报价 SKU 书面确认。",
   path: "/zh/solutions/automotive-polishing-kits",
   alternatePath: "/solutions/automotive-polishing-kits",
   locale: "zh-CN",

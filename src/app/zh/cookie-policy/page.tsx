@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Cookie政策 | SCOTTCHEN",
   description:
-    "了解 SCOTTCHEN 网站如何使用本地存储、主题偏好和同意后的 Google Analytics 网站分析。",
+    "了解 SCOTTCHEN 网站如何使用本地存储、主题偏好与同意后的 Google Analytics 网站分析，数据用途与范围以本政策说明为准。",
   path: "/zh/cookie-policy",
   alternatePath: "/cookie-policy",
   locale: "zh-CN",

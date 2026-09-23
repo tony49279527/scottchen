@@ -12,7 +12,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "磨具套装五种 B2B 采购路径对比 | SCOTTCHEN",
   description:
-    "对比 OEM 生产、经销商、贸易商、代工包装与自有组装五种磨具套装采购模式，选定路径后再发范围明确的询价。",
+    "磨具套装采购模式对比：OEM 生产、经销商、贸易商、代工包装与自有组装。选定路径后再发范围明确的询价，商务条款按报价 SKU 书面确认。",
   path: "/zh/alternatives/abrasive-kit-sourcing-alternatives",
   alternatePath: "/alternatives/abrasive-kit-sourcing-alternatives",
   locale: "zh-CN",

@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "隐私政策 | SCOTTCHEN",
   description:
-    "了解 SCOTTCHEN 如何收集、使用、保护和管理 B2B 询盘、样品申请、网站分析与商务沟通信息。",
+    "了解 SCOTTCHEN 如何收集、使用、保护和管理 B2B 询盘、样品申请、网站分析与商务沟通信息，具体范围以本隐私政策说明为准。",
   path: "/zh/privacy",
   alternatePath: "/privacy",
   locale: "zh-CN",

@@ -386,19 +386,14 @@ export default function FlapDiscsPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": ["ProductGroup", "Product"],
-                "@id": absoluteUrl("/flap-discs#productgroup"),
+                "@type": "CollectionPage",
+                "@id": absoluteUrl("/flap-discs#catalog"),
                 "name": "SCOTTCHEN Flap Discs",
                 "description": "OEM Type 27 and Type 29 flap discs in zirconia alumina, ceramic, and aluminum oxide on fiberglass backing plates.",
                 "url": absoluteUrl("/flap-discs"),
                 "image": absoluteUrl("/images/fiber_discs.webp"),
-                "brand": { "@id": absoluteUrl("/#brand") },
-                "category": "Flap discs and abrasive flap wheels",
-                "material": "Zirconia alumina, ceramic, aluminum oxide on fiberglass backing",
-                "additionalProperty": [
-                  { "@type": "PropertyValue", "name": "Shapes", "value": "Type 27 flat and Type 29 conical" },
-                  { "@type": "PropertyValue", "name": "MOQ basis", "value": "Quoted by size, grit, construction, packaging and quantity" }
-                ],
+                "inLanguage": "en",
+                "isPartOf": { "@id": absoluteUrl("/#website") }
               },
               buildFaqPageSchema(faqs),
             ],
