@@ -98,12 +98,14 @@ export function normalizeInquirySource(source?: string | null): string {
 export function buildInquiryHref(pathname: string, destination: InquiryDestination): string {
   const sourcePath = normalizeInquirySource(pathname) || "/";
   const isZh = sourcePath === "/zh" || sourcePath.startsWith("/zh/");
-  const destinationPath = destination === "quote"
+  // NOTE (2026-09-26, v2.1 audit P1): internal links must not carry tracking
+  // query params (?from=...). Attribution and category pre-fill now come from
+  // sessionStorage (AttributionTracker) + document.referrer, see inquiryClient.
+  // The `from` param reader in getInquirySourcePage() is kept only as a
+  // backward-compatible fallback for old indexed/shared URLs.
+  return destination === "quote"
     ? (isZh ? "/zh/contact" : "/contact")
     : (isZh ? "/zh/sample-kit" : "/sample-kit");
-  const params = new URLSearchParams({ from: sourcePath });
-
-  return `${destinationPath}?${params.toString()}`;
 }
 
 export function inferInquiryContext(source?: string | null): InquiryContext {

@@ -97,7 +97,7 @@ export default function ZhFlapDiscsPage() {
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "百叶片", href: "/zh/flap-discs" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B采购 · 百叶片OEM支持</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              百叶片采购_百叶轮批发_平面砂布轮OEM项目支持
+              百叶片采购 · 百叶轮批发 · 平面砂布轮OEM项目支持
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               T27/T29锆刚玉和陶瓷百叶片OEM采购支持。尺寸、粒度、底板、最高转速、适用市场文件、包装、起订量和交期按具体SKU书面确认。

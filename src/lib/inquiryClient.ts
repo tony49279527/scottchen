@@ -37,13 +37,28 @@ export function getInquirySourcePage(): string {
     return "";
   }
 
+  // Legacy explicit param (?from=...): no longer generated on internal links
+  // (see buildInquiryHref), kept as first fallback for old indexed/shared URLs.
   const explicitSource = new URLSearchParams(window.location.search).get("from");
   const recentSource = sessionStorage.getItem(INQUIRY_SOURCE_KEY);
   const stored = readStoredAttribution();
 
+  // Same-origin referrer fallback: covers direct landings on /contact where
+  // sessionStorage has no recent source (e.g. new tab from a category page).
+  let referrerSource = "";
+  try {
+    const ref = new URL(document.referrer, window.location.origin);
+    if (ref.origin === window.location.origin) {
+      referrerSource = ref.pathname;
+    }
+  } catch {
+    // ignore malformed referrer
+  }
+
   return (
     normalizeInquirySource(explicitSource) ||
     normalizeInquirySource(recentSource) ||
+    normalizeInquirySource(referrerSource) ||
     normalizeInquirySource(stored?.landingPage)
   );
 }

@@ -90,7 +90,7 @@ export default function ZhCuttingWheelsPage() {
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "切割片", href: "/zh/cutting-wheels" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B采购 · 安全证据核验</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              树脂切割片采购_不锈钢切割片批发_OEM项目支持
+              树脂切割片采购 · 不锈钢切割片批发 · OEM项目支持
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               面向金属、不锈钢 INOX、超薄、钹型、铸铁与石材应用的树脂切割片 OEM 采购。直径、厚度、配方、增强结构、额定转速、安全文件和 MOQ 均按具体 SKU 核验与报价。

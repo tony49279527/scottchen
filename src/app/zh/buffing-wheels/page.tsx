@@ -102,7 +102,7 @@ export default function ZhBuffingWheelsPage() {
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "抛光轮", href: "/zh/buffing-wheels" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">B2B采购 · OEM项目</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              抛光轮 OEM 采购_抛光布轮批发
+              抛光轮 OEM 采购 · 抛光布轮批发
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               SCOTTCHEN为抛光布轮、麻布轮、气道轮、带柄抛光磨头和抛光膏项目提供OEM采购支持。起订量、生产来源、质量文件、包装和交期按具体SKU书面确认。

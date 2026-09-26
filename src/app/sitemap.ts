@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { execSync } from "node:child_process";
 import { pageDateForPath } from "@/lib/pageDates";
 import { absoluteUrl, SITE_URL } from "@/lib/site";
 
@@ -144,8 +145,43 @@ const utilityRoutes = [
 const sitemapUrl = (path: string) => (path === "/" ? SITE_URL : absoluteUrl(path));
 
 function lastModifiedFor(path: string): Date | undefined {
-  const date = pageDateForPath(path);
-  return date ? new Date(date) : undefined;
+  // v2.1 audit P3 #10: derive lastmod at build time so deploys refresh it
+  // automatically. Takes the later of (a) the page file's last git commit
+  // date and (b) the curated PAGE_LAST_MODIFIED record; falls back to the
+  // manual record when git history is unavailable.
+  const manual = (pageDateForPath(path) ?? "").slice(0, 10);
+  const gitDate = gitLastModified(pageFileForPath(path));
+  const best = [manual, gitDate].filter(Boolean).sort().pop();
+  return best ? new Date(best) : undefined;
+}
+
+// Map a sitemap route path to its page source file for git date lookup.
+function pageFileForPath(path: string): string {
+  if (path === "/catalog.pdf") return "public/catalog.pdf";
+  const clean = path === "/" ? "" : path.replace(/\/$/, "");
+  return `src/app${clean}/page.tsx`;
+}
+
+const gitDateCache = new Map<string, string>();
+
+function gitLastModified(file: string): string {
+  const cached = gitDateCache.get(file);
+  if (cached !== undefined) return cached;
+  let date = "";
+  try {
+    date = execSync(`git log -1 --format=%cI -- ${JSON.stringify(file)}`, {
+      cwd: process.cwd(),
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+      timeout: 10000,
+    })
+      .trim()
+      .slice(0, 10);
+  } catch {
+    date = "";
+  }
+  gitDateCache.set(file, date);
+  return date;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

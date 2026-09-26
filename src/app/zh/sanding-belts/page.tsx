@@ -91,7 +91,7 @@ export default function ZhSandingBeltsPage() {
             <Breadcrumbs items={[{ label: "首页", href: "/zh" }, { label: "砂带", href: "/zh/sanding-belts" }]} />
             <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">上海B2B采购 · 砂带OEM支持</span>
             <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-              环形砂带采购_砂带批发_非标OEM项目支持
+              环形砂带采购 · 砂带批发 · 非标OEM项目支持
             </h1>
             <p className="mt-3 text-base text-industry-slate-400">
               环形砂带OEM采购支持，覆盖手提、台式、窄幅、宽幅和2×72等应用。尺寸、磨料、布基、接头、粒度、包装、起订量和交期按SKU书面确认。
