@@ -136,6 +136,7 @@ const localizedRoutes = [
   { en: "/terms", zh: "/zh/terms", priority: 0.2, changefreq: "yearly" as const },
   { en: "/privacy", zh: "/zh/privacy", priority: 0.2, changefreq: "yearly" as const },
   { en: "/cookie-policy", zh: "/zh/cookie-policy", priority: 0.2, changefreq: "yearly" as const },
+  { en: "/changelog", zh: "/zh/changelog", priority: 0.5, changefreq: "monthly" as const },
 ] as const;
 
 const utilityRoutes = [

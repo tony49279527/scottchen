@@ -37,6 +37,7 @@ export const PAGE_LAST_MODIFIED: Record<string, string> = {
   "/terms": "2026-07-15",
   "/privacy": "2026-07-15",
   "/cookie-policy": "2026-07-07",
+  "/changelog": "2026-09-28",
   "/catalog.pdf": "2026-07-15",
   // Chinese mirrors use their own route history so EN-only updates do not mark ZH as changed.
   "/zh": "2026-09-15",
