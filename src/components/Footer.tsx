@@ -283,6 +283,9 @@ export default function Footer() {
             <Link href={isZh ? "/zh/cookie-policy" : "/cookie-policy"} className="hover:text-white transition-colors">
               {isZh ? "Cookie政策" : "Cookies"}
             </Link>
+            <Link href={isZh ? "/zh/changelog" : "/changelog"} className="hover:text-white transition-colors">
+              {isZh ? "更新日志" : "Changelog"}
+            </Link>
           </div>
         </div>
       </div>

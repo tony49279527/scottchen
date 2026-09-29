@@ -94,6 +94,13 @@ export default function BuffingWheelsPage() {
             <p className="mt-3 text-base text-industry-slate-400">
               Shanghai-based B2B sourcing and OEM project support for cotton buffing wheels, spiral-stitched wheels, airway buffs and polishing compounds. The proposed production source, specification, inspection scope, evidence, MOQ and terms are confirmed for each quoted SKU.
             </p>
+            <p className="mt-3 text-sm text-industry-slate-500">
+              Need detailed specifications? See{" "}
+              <Link href="/products/buffing-polishing-wheels" className="text-industry-orange hover:underline">
+                cotton buffing wheel specifications
+              </Link>
+              .
+            </p>
           </div>
           <div className="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link

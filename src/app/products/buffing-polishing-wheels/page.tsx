@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Cotton Buffing Wheel Specifications & Sourcing | SCOTTCHEN",
+  title: "Cotton Buffing Wheel Specifications | SCOTTCHEN",
   description: "Compare cotton buffing wheel construction, tool fit and approval fields. Exact source and terms are quoted by SKU.",
   path: "/products/buffing-polishing-wheels",
   alternatePath: "/zh/products/buffing-polishing-wheels",
@@ -67,6 +67,13 @@ export default function BuffingPolishingWheels() {
               </p>
               <p className="mt-3 text-sm leading-relaxed text-industry-slate-500">
                 For a cotton buffing wheel RFQ, identify the construction, diameter, ply count, bore or shank, tool, substrate, compound and required pack format before comparing samples or terms.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-industry-slate-500">
+                Looking for OEM/wholesale sourcing? See{" "}
+                <Link href="/buffing-wheels" className="text-industry-orange hover:underline">
+                  buffing wheel OEM sourcing &amp; wholesale
+                </Link>
+                .
               </p>
             </div>
 
