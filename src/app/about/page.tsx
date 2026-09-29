@@ -140,6 +140,18 @@ export default function AboutPage() {
                 Contact sales
               </Link>
             </div>
+            <p className="pt-1 text-sm text-industry-slate-400">
+              Connect with SCOTTCHEN on{" "}
+              <a
+                href="https://www.linkedin.com/company/scottchen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-industry-orange hover:underline"
+              >
+                LinkedIn
+              </a>
+              .
+            </p>
           </div>
           <div className="lg:col-span-5">
             <div className="glass-panel overflow-hidden rounded-xl border border-industry-slate-800">

@@ -13,6 +13,7 @@ export function buildOrganizationNode() {
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
+    sameAs: ["https://www.linkedin.com/company/scottchen/"],
     email: SITE_EMAIL,
     logo: {
       "@type": "ImageObject",
