@@ -264,7 +264,12 @@ export default function AbrasiveMaterialSelectionGuide() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageSchema(faqs)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            ...buildFaqPageSchema(faqs),
+          }),
+        }}
       />
       <CTASection />
     </div>
