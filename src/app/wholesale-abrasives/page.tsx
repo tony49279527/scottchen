@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildFaqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Wholesale Abrasive Suppliers & Bulk Abrasives Sourcing | SCOTTCHEN",
+  title: "Wholesale Abrasive Suppliers & Bulk Sourcing | SCOTTCHEN",
   description: "Abrasives wholesale and bulk sourcing for distributors, retailers and industrial buyers. Compare sanding and polishing SKUs, samples and written terms.",
   path: "/wholesale-abrasives",
   alternatePath: "/zh/wholesale-abrasives",

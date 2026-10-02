@@ -9,7 +9,7 @@ import { buildFaqPageSchema } from "@/lib/schema";
 import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Mesh Sanding Disc Wholesale & OEM Sourcing for B2B | SCOTTCHEN",
+  title: "Mesh Sanding Disc Wholesale & OEM Sourcing | SCOTTCHEN",
   description: "OEM aluminum oxide, zirconia and silicon carbide sanding disc sourcing. Compare backing, attachment, grit, sample plans, packaging and quoted MOQ.",
   path: "/sanding-discs",
   alternatePath: "/zh/sanding-discs",
