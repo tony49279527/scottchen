@@ -69,6 +69,7 @@ const localizedPaths = new Set([
   "/terms",
   "/privacy",
   "/cookie-policy",
+  "/changelog",
   "/thank-you",
 ]);
 

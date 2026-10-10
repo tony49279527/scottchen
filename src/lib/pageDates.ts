@@ -77,6 +77,7 @@ export const PAGE_LAST_MODIFIED: Record<string, string> = {
   "/zh/terms": "2026-07-15",
   "/zh/privacy": "2026-07-07",
   "/zh/cookie-policy": "2026-07-07",
+  "/zh/changelog": "2026-09-28",
 } as const;
 
 export function pageDateForPath(path: string): string | undefined {
