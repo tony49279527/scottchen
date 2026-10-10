@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import AbrasiveMaterialSelector from "@/components/AbrasiveMaterialSelector";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -112,6 +113,8 @@ export default function ChineseAbrasiveMaterialSelectionGuide() {
               不要只凭目数批准磨料产品。可比较的规格至少应包含底材、工序、磨粒、背基、涂层或结合方式、尺寸、工具接口、工作限制、包装及双方同意的样品测试。
             </p>
           </div>
+
+          <AbrasiveMaterialSelector locale="zh" />
 
           <div className="mt-10 overflow-x-auto rounded-xl border border-industry-slate-800">
             <table className="min-w-full divide-y divide-industry-slate-800 text-left text-sm">

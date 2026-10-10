@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
+import AbrasiveMaterialSelector from "@/components/AbrasiveMaterialSelector";
 import { pageDateForPath } from "@/lib/pageDates";
 import { createPageMetadata } from "@/lib/seo";
 import { buildFaqPageSchema } from "@/lib/schema";
@@ -114,6 +115,8 @@ export default function AbrasiveMaterialSelectionGuide() {
               tool interface, operating limit, packaging and an agreed sample test.
             </p>
           </div>
+
+          <AbrasiveMaterialSelector locale="en" />
 
           <div className="mt-10 overflow-x-auto rounded-xl border border-industry-slate-800">
             <table className="min-w-full divide-y divide-industry-slate-800 text-left text-sm">
