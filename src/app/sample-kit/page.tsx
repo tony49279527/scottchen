@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Request a Surface Finishing Sample Kit | SCOTTCHEN",
-  description: "Request a surface finishing sample kit for your tool brand, hardware distribution channel, or online retail store to evaluate quality, ply count, and grits.",
+  description: "Request a finishing sample kit for your tool brand, hardware distribution channel, or online retail store to evaluate quality, ply count, and grits.",
   path: "/sample-kit",
   alternatePath: "/zh/sample-kit",
 });

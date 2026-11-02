@@ -12,7 +12,7 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 export const metadata: Metadata = createPageMetadata({
   title: "Abrasive Kit Sourcing Alternatives for B2B | SCOTTCHEN",
   description:
-    "Compare OEM production sourcing, distributors, trading companies, contract packers and in-house assembly. Choose a sourcing model, then request a scoped quote.",
+    "Compare OEM sourcing, distributors, trading companies, contract packers and in-house assembly. Choose a sourcing model, then request a scoped quote.",
   path: "/alternatives/abrasive-kit-sourcing-alternatives",
   alternatePath: "/zh/alternatives/abrasive-kit-sourcing-alternatives",
 });
