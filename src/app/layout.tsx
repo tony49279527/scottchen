@@ -84,14 +84,14 @@ const corporateSchema = {
       url: SITE_URL,
       name: `${SITE_NAME} - OEM Abrasive Sourcing Support`,
       description:
-        "B2B abrasive, sanding and polishing accessory sourcing site with English and Simplified Chinese buyer resources.",
+        "B2B abrasive, sanding and polishing accessory sourcing site.",
       about: {
         "@id": `${SITE_URL}/#organization`,
       },
       publisher: {
         "@id": `${SITE_URL}/#organization`,
       },
-      inLanguage: ["en", "zh-CN"],
+      inLanguage: ["en"],
     },
   ],
 };

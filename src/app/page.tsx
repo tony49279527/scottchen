@@ -11,7 +11,7 @@ import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Abrasive Supplier for OEM & Wholesale Buyers | SCOTTCHEN",
-  description: "Shanghai-based B2B sourcing and support for abrasive, sanding and polishing kits. Production source, evidence and commercial terms are confirmed by SKU.",
+  description: "OEM & wholesale abrasive supplier for sanding, buffing and cutting consumables — spec sheets, MOQ and private label by SKU.",
   path: "/",
 });
 
