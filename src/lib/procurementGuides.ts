@@ -97,6 +97,7 @@ export const sandingBeltGuide = {
     { label: "Material selection guide", href: "/resources/abrasive-material-selection-guide" },
     { label: "Request samples", href: "/sample-kit" },
     { label: "Submit an RFQ", href: "/contact" },
+    { label: "Sanding disc wholesale & OEM sourcing", href: "/sanding-discs" },
   ],
 } satisfies ProcurementGuideData;
 

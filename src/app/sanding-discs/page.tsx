@@ -347,6 +347,7 @@ export default function SandingDiscsPage() {
                   <li><Link href="/abrasive-kits" className="text-industry-orange hover:underline">Sanding Disc Assortment Kits</Link></li>
                   <li><Link href="/buffing-wheels" className="text-industry-orange hover:underline">Buffing Wheels</Link></li>
                   <li><Link href="/wholesale-abrasives" className="text-industry-orange hover:underline">Wholesale Abrasives Program</Link></li>
+                  <li><Link href="/products/sanding-grinding-accessories" className="text-industry-orange hover:underline">Sanding & Grinding Accessories</Link></li>
                 </ul>
               </div>
 

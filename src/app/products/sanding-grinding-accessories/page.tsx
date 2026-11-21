@@ -8,7 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Sandpaper & Grinding Disc Sourcing | SCOTTCHEN",
+  title: "Sanding & Grinding Accessory Specs & Selection | SCOTTCHEN",
   description: "Source sandpaper and grinding paper, sanding rolls, screens, discs, sticks and dispenser kits with SKU-level source, evidence and written terms.",
   path: "/products/sanding-grinding-accessories",
 });
@@ -87,7 +87,7 @@ export default function SandingGrindingAccessories() {
             <div className="max-w-2xl">
               <span className="text-xs font-bold tracking-widest text-industry-orange uppercase">SPECIFICATIONS & OEM OPTIONS</span>
               <h1 className="text-3xl font-extrabold text-white mt-3 sm:text-4xl">
-                Sanding & Grinding Accessories
+                Sanding & Grinding Accessories: Specs & Selection Guide
               </h1>
               <p className="mt-3 text-base text-industry-slate-400">
                 Sourcing inquiries for sandpaper, grinding discs, mesh sheets, detail tools and private-label dispenser concepts.
