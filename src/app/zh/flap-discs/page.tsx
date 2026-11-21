@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
     "百叶片 OEM 采购：T27/T29 锆刚玉与陶瓷氧化铝。尺寸、粒度、底板、最高转速、样品、包装、来源与数量按书面报价确认。",
   path: "/zh/flap-discs",
   locale: "zh-CN",
-  alternatePath: "/flap-discs",
+  noIndex: true,
 });
 
 export default function ZhFlapDiscsPage() {

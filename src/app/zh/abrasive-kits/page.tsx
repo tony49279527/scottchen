@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
     "磨具套装 OEM 贴牌采购：抛光轮、砂纸、磨头与 DIY 套装组合。按 BOM、包装、样品与平台标签书面报价，具体数量与条款以报价 SKU 书面确认为准。",
   path: "/zh/abrasive-kits",
   locale: "zh-CN",
-  alternatePath: "/abrasive-kits",
+  noIndex: true,
 });
 
 export default function ZhAbrasiveKitsPage() {

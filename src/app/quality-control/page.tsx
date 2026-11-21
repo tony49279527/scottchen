@@ -10,7 +10,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Abrasive Product Quality Control Planning | SCOTTCHEN",
   description: "Plan SKU-level abrasive product checks for ply count, stitching, bore dimensions, operating limits, barcode data and pre-shipment evidence.",
   path: "/quality-control",
-  alternatePath: "/zh/quality-control",
 });
 
 export default function QualityControl() {

@@ -7,8 +7,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "磨具套装贴牌包装规划：刀模、警告语、说明书、条码数据、版稿批准与装箱证据，明确区分概念图与可接受的生产证明，按报价确认。",
   path: "/zh/packaging-private-label",
-  alternatePath: "/packaging-private-label",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function Page() {

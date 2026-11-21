@@ -11,8 +11,8 @@ export const metadata: Metadata = createPageMetadata({
   title: "OEM 砂纸、砂带与锆刚玉砂碟配件系列 | SCOTTCHEN",
   description: "砂磨配件批量采购：砂纸张、网格砂网、纤维砂碟、细节打磨棒及砂卷盒装。生产来源、规格、证据和商业条款按 SKU 报价书面确认。",
   path: "/zh/products/sanding-grinding-accessories",
-  alternatePath: "/products/sanding-grinding-accessories",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseSandingGrindingAccessories() {

@@ -12,7 +12,6 @@ export const metadata = createPageMetadata({
   description:
     "A practical RFQ checklist for buffing wheels, sandpaper, grinding discs and private label kits: specifications, samples, QC, packaging and shipping.",
   path: "/resources/abrasive-sourcing-checklist",
-  alternatePath: "/zh/resources/abrasive-sourcing-checklist",
 });
 
 const sections = [

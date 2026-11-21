@@ -14,8 +14,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "OEM 定制与现货磨具套装对比：MOQ、品牌包装、组合控制、验证、风险与补货稳定性。具体差异与条款按报价 SKU 书面确认，助买家选路径。",
   path: "/zh/compare/oem-vs-off-the-shelf-abrasive-kits",
-  alternatePath: "/compare/oem-vs-off-the-shelf-abrasive-kits",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const comparison = [

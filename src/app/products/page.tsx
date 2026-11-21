@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "OEM Abrasive Products Catalog | SCOTTCHEN",
   description: "Compare abrasive product families, specification controls and packaging options. MOQ, production source, evidence and terms are quoted by SKU.",
   path: "/products",
-  alternatePath: "/zh/products",
 });
 
 export default function ProductsOverview() {

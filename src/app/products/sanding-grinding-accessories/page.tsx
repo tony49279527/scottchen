@@ -11,7 +11,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "OEM Sandpaper & Grinding Disc Sourcing | SCOTTCHEN",
   description: "Source sandpaper and grinding paper, sanding rolls, screens, discs, sticks and dispenser kits with SKU-level source, evidence and written terms.",
   path: "/products/sanding-grinding-accessories",
-  alternatePath: "/zh/products/sanding-grinding-accessories",
 });
 
 export default function SandingGrindingAccessories() {

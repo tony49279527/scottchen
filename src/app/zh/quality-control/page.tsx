@@ -11,8 +11,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "磨料磨具质量控制约定：层数、缝线、中心孔、工作限制、条码与出货前证据检查，具体检验范围以报价 SKU 书面质量计划为准。",
   path: "/zh/quality-control",
-  alternatePath: "/quality-control",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseQualityControl() {

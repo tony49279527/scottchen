@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
     "磨料磨具批发与渠道补货：面向五金分销的 B2B 采购与 OEM 项目支持。生产来源、包装、起订量、交期、付款与贸易术语按 SKU 书面确认。",
   path: "/zh/wholesale-abrasives",
   locale: "zh-CN",
-  alternatePath: "/wholesale-abrasives",
+  noIndex: true,
 });
 
 export default function ZhWholesaleAbrasivesPage() {

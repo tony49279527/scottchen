@@ -13,8 +13,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "SCOTTCHEN 磨料磨具 B2B 采购与 OEM 贴牌：抛光轮、砂纸片、百叶片、砂带、切割片。上海项目支持，规格包装样品与条款按报价 SKU 书面确认。",
   path: "/zh",
-  alternatePath: "/",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const homeFaqs = [

@@ -17,7 +17,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Review SCOTTCHEN's B2B product scope, private-label workflow, contact channels and the buyer verification checklist for RFQ preparation.",
   path: "/supplier-profile",
-  alternatePath: "/zh/supplier-profile",
 });
 
 const facts = [

@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
     "抛光轮批发与 OEM 定制：棉布轮、麻布轮、气道风冷轮、抛光膏组合。上海 B2B 采购支持，规格、包装、样品与交期按报价 SKU 书面确认。",
   path: "/zh/buffing-wheels",
   locale: "zh-CN",
-  alternatePath: "/buffing-wheels",
+  noIndex: true,
 });
 
 export default function ZhBuffingWheelsPage() {

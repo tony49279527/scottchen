@@ -11,8 +11,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "磨料磨具私有品牌贴牌规划：彩盒挂卡、买家 FNSKU/UPC 条码与仓库交付需求。刀模、来源、样品与商业条款按报价书面确认。",
   path: "/zh/oem-private-label",
-  alternatePath: "/oem-private-label",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseOEMPrivateLabel() {

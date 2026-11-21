@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
     "砂纸片 OEM 采购：植绒砂纸、背胶砂碟、钢纸磨片、网格砂网。磨料、背基、孔型、粒度与包装按书面报价确认，支持贴牌。",
   path: "/zh/sanding-discs",
   locale: "zh-CN",
-  alternatePath: "/sanding-discs",
+  noIndex: true,
 });
 
 export default function ZhSandingDiscsPage() {

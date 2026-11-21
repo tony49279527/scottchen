@@ -14,8 +14,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "磨具套装采购模式对比：OEM 生产、经销商、贸易商、代工包装与自有组装。选定路径后再发范围明确的询价，商务条款按报价 SKU 书面确认。",
   path: "/zh/alternatives/abrasive-kit-sourcing-alternatives",
-  alternatePath: "/alternatives/abrasive-kit-sourcing-alternatives",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const models = [

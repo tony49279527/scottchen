@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
   description: "树脂切割片 OEM 采购：金属与不锈钢超薄规格、额定转速与安全文件。样品验证后逐项报价，上海 B2B 项目支持，条款按报价 SKU 书面确认。",
   path: "/zh/cutting-wheels",
   locale: "zh-CN",
-  alternatePath: "/cutting-wheels",
+  noIndex: true,
 });
 
 export default function ZhCuttingWheelsPage() {

@@ -12,8 +12,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "磨料磨具产品类别比较：抛光轮、砂碟、百叶片、砂带、切割片与贴牌套装。规格控制、生产来源、证据边界与商业条款按报价 SKU 书面确认。",
   path: "/zh/products",
-  alternatePath: "/products",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseProductsOverview() {

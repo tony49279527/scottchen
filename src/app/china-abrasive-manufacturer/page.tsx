@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "China Abrasive Manufacturer & OEM Support | SCOTTCHEN",
   description: "Shanghai B2B abrasive sourcing and OEM support. Entity, production source, standards, certificates and reports are confirmed per quoted SKU.",
   path: "/china-abrasive-manufacturer",
-  alternatePath: "/zh/china-abrasive-manufacturer",
 });
 
 export default function ChinaAbrasiveManufacturerPage() {

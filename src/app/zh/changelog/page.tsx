@@ -8,7 +8,7 @@ export const metadata: Metadata = createPageMetadata({
   description: "SCOTTCHEN 官网实质性变更的日期记录：SEO 修复、页面更新与政策变更。",
   path: "/zh/changelog",
   locale: "zh-CN",
-  alternatePath: "/changelog",
+  noIndex: true,
 });
 
 const entries = [

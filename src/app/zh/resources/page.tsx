@@ -11,8 +11,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "磨料磨具资源中心：供应商评估、RFQ 清单、磨粒背基选型、样品计划与贴牌包装核验。面向进口商与渠道采购，均按书面范围确认。",
   path: "/zh/resources",
-  alternatePath: "/resources",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const resources = [

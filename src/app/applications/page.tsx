@@ -11,7 +11,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Surface Finishing Application Scenarios | SCOTTCHEN",
   description: "Compare surface-finishing accessory configurations for metalworking, woodworking, automotive restoration, jewelry and drywall workflows.",
   path: "/applications",
-  alternatePath: "/zh/applications",
 });
 
 export default function ApplicationsOverview() {

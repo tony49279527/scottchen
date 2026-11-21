@@ -7,7 +7,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Thank You for Your Inquiry | SCOTTCHEN",
   description: "Your SCOTTCHEN B2B inquiry has been received.",
   path: "/thank-you",
-  alternatePath: "/zh/thank-you",
   noIndex: true,
 });
 

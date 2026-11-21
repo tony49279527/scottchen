@@ -13,7 +13,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "A B2B buyer's guide to abrasive grain, backing, FEPA P-grit, sample approval, barcode quality and Incoterms for comparable sandpaper and polishing RFQs.",
   path: "/resources/abrasive-material-selection-guide",
-  alternatePath: "/zh/resources/abrasive-material-selection-guide",
 });
 
 const sources = [

@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
     "砂带 B2B 采购与 OEM 项目支持：尺寸、磨料、布基、接头、生产来源、样品与商业条款按报价 SKU 书面确认，上海项目渠道对接。",
   path: "/zh/sanding-belts",
   locale: "zh-CN",
-  alternatePath: "/sanding-belts",
+  noIndex: true,
 });
 
 export default function ZhSandingBeltsPage() {

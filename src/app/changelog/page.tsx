@@ -8,7 +8,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Dated record of substantive changes to the SCOTTCHEN website: SEO fixes, page updates and policy changes.",
   path: "/changelog",
-  alternatePath: "/zh/changelog",
 });
 
 const entries = [

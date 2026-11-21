@@ -10,10 +10,9 @@ import { absoluteUrl, SITE_UPDATED } from "@/lib/site";
 import { buildInquiryHref } from "@/lib/inquiryContext";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "OEM Abrasive Kit Sourcing & Private Label | SCOTTCHEN",
+  title: "Abrasive Supplier for OEM & Wholesale Buyers | SCOTTCHEN",
   description: "Shanghai-based B2B sourcing and support for abrasive, sanding and polishing kits. Production source, evidence and commercial terms are confirmed by SKU.",
   path: "/",
-  alternatePath: "/zh",
 });
 
 const homeFaqs = [

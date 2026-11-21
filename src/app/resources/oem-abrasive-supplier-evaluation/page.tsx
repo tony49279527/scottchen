@@ -13,7 +13,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "A B2B buyer guide to evaluating OEM abrasive suppliers: product scope, RFQ data, samples, QC evidence, packaging, lead time and MOQ questions.",
   path: "/resources/oem-abrasive-supplier-evaluation",
-  alternatePath: "/zh/resources/oem-abrasive-supplier-evaluation",
 });
 
 const decisionFactors = [

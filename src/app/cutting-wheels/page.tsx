@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Cutting Disc & Cut-Off Wheel Sourcing | SCOTTCHEN",
   description: "China OEM cut-off wheel sourcing for metal and stainless steel in 4.5 to 9 inch sizes. Compare specifications, safety documents, samples and quoted MOQ.",
   path: "/cutting-wheels",
-  alternatePath: "/zh/cutting-wheels",
 });
 
 export default function CuttingWheelsPage() {

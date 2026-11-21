@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Buyer guides for evaluating abrasive suppliers, writing comparable RFQs, selecting grains and backing, and planning samples and packaging checks.",
   path: "/resources",
-  alternatePath: "/zh/resources",
 });
 
 const resources = [

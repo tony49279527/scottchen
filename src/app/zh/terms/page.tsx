@@ -7,8 +7,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "了解 SCOTTCHEN B2B 网站、询价、样品申请、MOQ、包装、质量验收与项目合同确认相关条款，具体权利义务以书面合同与报价为准。",
   path: "/zh/terms",
-  alternatePath: "/terms",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseTermsPage() {

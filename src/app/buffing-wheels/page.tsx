@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Buffing Wheel OEM Sourcing & Wholesale | SCOTTCHEN",
   description: "Compare cotton buffing and polishing wheel specifications, samples, packaging and quotation controls. Production source and evidence are confirmed by SKU.",
   path: "/buffing-wheels",
-  alternatePath: "/zh/buffing-wheels",
 });
 
 export default function BuffingWheelsPage() {

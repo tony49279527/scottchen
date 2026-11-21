@@ -186,21 +186,14 @@ function gitLastModified(file: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const localizedEntries = localizedRoutes.flatMap(({ en, zh, priority, changefreq }) => {
-    const languages = {
-      en: sitemapUrl(en),
-      "zh-CN": sitemapUrl(zh),
-      "x-default": sitemapUrl(en),
-    };
-
-    return [en, zh].map((p) => ({
-      url: sitemapUrl(p),
-      lastModified: lastModifiedFor(p),
-      changeFrequency: changefreq,
-      priority,
-      alternates: { languages },
-    }));
-  });
+  // 2026-11-22: /zh/ pages are noindex and excluded from the sitemap;
+  // only English URLs are listed, with no hreflang alternates.
+  const localizedEntries = localizedRoutes.map(({ en, priority, changefreq }) => ({
+    url: sitemapUrl(en),
+    lastModified: lastModifiedFor(en),
+    changeFrequency: changefreq,
+    priority,
+  }));
 
   return [
     ...localizedEntries,

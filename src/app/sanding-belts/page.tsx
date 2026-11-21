@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Sanding Belt Sourcing & OEM Project Support | SCOTTCHEN",
   description: "Sanding-belt sourcing for knife making, woodworking and metal fabrication. Sizes, materials, joints, source and terms are confirmed per SKU.",
   path: "/sanding-belts",
-  alternatePath: "/zh/sanding-belts",
 });
 
 export default function SandingBeltsPage() {

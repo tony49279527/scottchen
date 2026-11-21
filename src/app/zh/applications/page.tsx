@@ -10,8 +10,8 @@ export const metadata: Metadata = createPageMetadata({
   title: "磨具抛光工具包应用场景工作流 | SCOTTCHEN",
   description: "磨料磨具应用配置采购：金属研磨去毛刺、木工抛光、汽车轮毂镜面还原、珠宝模型打磨等。材质与底材适配方案按报价 SKU 书面确认，支持 B2B 搭配。",
   path: "/zh/applications",
-  alternatePath: "/applications",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseApplicationsOverview() {

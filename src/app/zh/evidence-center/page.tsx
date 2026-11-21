@@ -7,8 +7,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "SCOTTCHEN 证据状态说明：法律主体、生产地点、证书、测试、包装与案例资料的公开、项目级、缺失与示意状态，避免把概念图当成证据。",
   path: "/zh/evidence-center",
-  alternatePath: "/evidence-center",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function Page() {

@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Flap Disc Sourcing | Type 27 & 29 Wholesale | SCOTTCHEN",
   description: "OEM flap disc sourcing in China. Compare Type 27 and 29 zirconia or ceramic flap disc specifications, samples, packaging and quoted MOQ.",
   path: "/flap-discs",
-  alternatePath: "/zh/flap-discs",
 });
 
 export default function FlapDiscsPage() {

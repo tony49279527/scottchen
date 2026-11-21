@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
     languages: {
       "en": SITE_URL,
-      "zh-CN": absoluteUrl("/zh"),
       "x-default": SITE_URL,
     },
   },

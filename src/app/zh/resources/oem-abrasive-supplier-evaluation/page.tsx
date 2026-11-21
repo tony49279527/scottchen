@@ -13,8 +13,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "OEM 磨料供应商评估指南：覆盖产品范围、RFQ 参数、样品、质检证据、包装、交期、起订量与核验问题，具体条款按报价 SKU 书面确认。",
   path: "/zh/resources/oem-abrasive-supplier-evaluation",
-  alternatePath: "/resources/oem-abrasive-supplier-evaluation",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const decisionFactors = [

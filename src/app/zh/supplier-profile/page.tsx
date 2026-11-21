@@ -17,8 +17,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "SCOTTCHEN 供应商概况：已公开的 B2B 产品范围、贴牌合作流程、联系渠道与买家尽调清单；证书、主体与案例仍以项目书面文件为准。",
   path: "/zh/supplier-profile",
-  alternatePath: "/supplier-profile",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const facts = [

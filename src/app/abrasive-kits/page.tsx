@@ -13,7 +13,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Private-Label Abrasive & Polishing Kit Sourcing | SCOTTCHEN",
   description: "OEM private-label abrasive kits: buffing wheel kits, sanding disc kits and compound sets. Compare BOM, packaging, samples and quoted minimums.",
   path: "/abrasive-kits",
-  alternatePath: "/zh/abrasive-kits",
 });
 
 export default function AbrasiveKitsPage() {

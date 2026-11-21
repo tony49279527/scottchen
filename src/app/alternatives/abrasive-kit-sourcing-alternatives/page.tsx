@@ -14,7 +14,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Compare OEM sourcing, distributors, trading companies, contract packers and in-house assembly. Choose a sourcing model, then request a scoped quote.",
   path: "/alternatives/abrasive-kit-sourcing-alternatives",
-  alternatePath: "/zh/alternatives/abrasive-kit-sourcing-alternatives",
 });
 
 const models = [

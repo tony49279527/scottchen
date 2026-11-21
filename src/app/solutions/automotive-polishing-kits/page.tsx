@@ -14,7 +14,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Source private-label metal polishing kits for automotive restoration. Configure wheels, compounds, adapters, packaging and sample approval.",
   path: "/solutions/automotive-polishing-kits",
-  alternatePath: "/zh/solutions/automotive-polishing-kits",
 });
 
 const kitBlocks = [

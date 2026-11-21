@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Mesh Sanding Disc Wholesale & OEM Sourcing | SCOTTCHEN",
   description: "OEM aluminum oxide, zirconia and silicon carbide sanding disc sourcing. Compare backing, attachment, grit, sample plans, packaging and quoted MOQ.",
   path: "/sanding-discs",
-  alternatePath: "/zh/sanding-discs",
 });
 
 export default function SandingDiscsPage() {

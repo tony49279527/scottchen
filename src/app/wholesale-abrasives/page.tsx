@@ -11,7 +11,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Wholesale Abrasive Suppliers & Bulk Sourcing | SCOTTCHEN",
   description: "Abrasives wholesale and bulk sourcing for distributors, retailers and industrial buyers. Compare sanding and polishing SKUs, samples and written terms.",
   path: "/wholesale-abrasives",
-  alternatePath: "/zh/wholesale-abrasives",
 });
 
 export default function WholesaleAbrasivesPage() {

@@ -12,8 +12,8 @@ export const metadata = createPageMetadata({
   description:
     "磨料磨具 RFQ 清单：面向进口商、工具品牌与渠道采购，覆盖抛光轮、砂纸、磨片与贴牌套装的规格、样品、质检、包装与交付确认边界。",
   path: "/zh/resources/abrasive-sourcing-checklist",
-  alternatePath: "/resources/abrasive-sourcing-checklist",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const sections = [

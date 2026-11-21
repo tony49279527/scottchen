@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Request an OEM / Wholesale Quote | SCOTTCHEN",
   description: "Contact SCOTTCHEN for B2B sourcing and OEM project support, including SKU-level source, evidence, quoted milestones, packaging and shipping assumptions.",
   path: "/contact",
-  alternatePath: "/zh/contact",
 });
 
 const rfqSpecificationItems = [

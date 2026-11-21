@@ -11,7 +11,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "OEM & Private Label Surface Finishing Kits | SCOTTCHEN",
   description: "Plan custom branding, retail packaging, buyer-supplied barcode labeling and warehouse-delivery requirements for industrial tool accessory kits.",
   path: "/oem-private-label",
-  alternatePath: "/zh/oem-private-label",
 });
 
 export default function OEMPrivateLabel() {

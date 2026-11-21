@@ -14,8 +14,8 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "汽车抛光贴牌套装配置：轮毂与金属抛光套装的轮型、抛光膏、转接件、包装与样品审批路径，组合与条款按报价 SKU 书面确认。",
   path: "/zh/solutions/automotive-polishing-kits",
-  alternatePath: "/solutions/automotive-polishing-kits",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 const kitBlocks = [

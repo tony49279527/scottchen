@@ -11,8 +11,8 @@ export const metadata: Metadata = createPageMetadata({
   title: "工业棉布轮、气道抛光轮及抛光膏 OEM 采购 | SCOTTCHEN",
   description: "抛光轮 OEM 采购询价：布轮、台式机轮、带柄布轮及抛光膏。来源、SKU、结构、工具适配、样品和商业条款按项目报价书面确认。",
   path: "/zh/products/buffing-polishing-wheels",
-  alternatePath: "/products/buffing-polishing-wheels",
   locale: "zh-CN",
+  noIndex: true,
 });
 
 export default function ChineseBuffingPolishingWheels() {

@@ -14,7 +14,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Compare OEM and off-the-shelf abrasive kits by MOQ, branding, assortment, validation, risk and replenishment. Choose the right route for your B2B launch.",
   path: "/compare/oem-vs-off-the-shelf-abrasive-kits",
-  alternatePath: "/zh/compare/oem-vs-off-the-shelf-abrasive-kits",
 });
 
 const comparison = [

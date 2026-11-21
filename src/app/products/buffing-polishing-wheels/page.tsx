@@ -12,7 +12,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Cotton Buffing Wheel Specifications | SCOTTCHEN",
   description: "Compare cotton buffing wheel construction, tool fit and approval fields. Exact source and terms are quoted by SKU.",
   path: "/products/buffing-polishing-wheels",
-  alternatePath: "/zh/products/buffing-polishing-wheels",
 });
 
 export default function BuffingPolishingWheels() {

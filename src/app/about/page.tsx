@@ -18,7 +18,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Shanghai-based B2B abrasive sourcing and OEM support. Production source, documents, terms and evidence are confirmed by SKU in writing.",
   path: "/about",
-  alternatePath: "/zh/about",
 });
 
 const highlights = [
